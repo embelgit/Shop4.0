@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.ProductDetailsBean" 
+    table="product_details" schema="shop"
+    >
+    
+    	<id name="prodctId" type="java.lang.Long" column="pk_product_id">
+			<generator class="increment" />
+		</id>
+
+		<property
+		name="fk_cat_id"
+		type="java.lang.Long"
+		column="fk_cat_id"
+		/>
+		
+		<property
+		name="fk_subCat_id"
+		type="java.lang.Long"
+		column="fk_subCat_id"
+		/>
+		
+		<property
+		name="fk_shop_id"
+		type="java.lang.Long"
+		column="fk_shop_id"
+		/>
+		
+		<property
+		name="fkTaxId"
+		type="java.lang.Long"
+		column="fk_tax_id"
+		/>
+ 		
+		<property 
+		name="taxPercentage" 
+		type="java.lang.Double" 
+		column="tax_percentage"
+		 />
+		
+			<property 
+		name="mrp" 
+		type="java.lang.Double" 
+		column="mrp"
+		length="10" />
+		
+		<!-- <property
+		name="fk_supplier_id"
+		type="java.lang.Long"
+		column="fk_supplier_id"
+		not-null="true"
+		update="false"
+		insert="false"
+		length="20"/> -->
+		
+		<!-- <property
+		name="fk_unit_id"
+		type="java.lang.Long"
+		column="fk_unit_id"
+		not-null="true"
+		update="false"
+		insert="false"
+		length="20"/> -->
+		
+		<property
+		name="fk_unit_id"
+		type="java.lang.Long"
+		column="fk_unit_id"
+		/>		
+		
+		<property 
+		name="productName" 
+		type="java.lang.String" 
+		column="product_name"
+		/>
+		
+		<property 
+		name="buyunit" 
+		type="java.lang.String" 
+		column="buyunit"
+		/>
+		
+		<property 
+		name="saleunit" 
+		type="java.lang.String" 
+		column="saleunit"
+		/>
+		
+		<property 
+		name="unitvalue" 
+		type="java.lang.Double" 
+		column="unitvalue"
+		 />
+		
+		<!-- <property 
+		name="catname" 
+		type="java.lang.String" 
+		column="cat_name"
+		/>
+		<property 
+		name="subcatname" 
+		type="java.lang.String" 
+		column="sub_cat_name"
+		/>	 -->
+		
+		<property 
+		name="hsn" 
+		type="java.lang.String" 
+		column="hsn"
+		/>
+
+
+	    <property 
+		name="manufacturingCompany" 
+		type="java.lang.String" 
+		column="manufacturing_company"
+		/> 		
+			
+		<property 
+		name="buyPrice" 
+		type="java.lang.Double" 
+		column="buy_price"
+		 />
+		
+		<property 
+		name="salePrice" 
+		type="java.lang.Double" 
+		column="sale_price"
+		 />
+		
+		<property 
+		name="sale_price_ex_tax" 
+		type="java.lang.Double" 
+		column="sale_price_ex_tax"/>
+		  
+		  		
+		<property 
+		name="weight" 
+		type="java.lang.Double" 
+		column="weight" />
+		
+		<property 
+		name="sgst" 
+		type="java.lang.Double" 
+		column="sgst"/>
+		
+		<property 
+		name="cgst" 
+		type="java.lang.Double" 
+		column="cgst"/>
+		
+		<property
+		name="userid"
+		type="java.lang.Long"
+		column="userID"/>
+		
+		<property 
+		name="username" 
+		type="java.lang.String" 
+		column="userName"
+		/>
+		
+		<property 
+		name="shopname" 
+		type="java.lang.String" 
+		column="shopName"
+		/>
+		  
+		<property 
+		name="description" 
+		type="java.lang.String" 
+		column="description"
+		/> 		
+		
+		
+
+
+
+   
+   
+ <!-- ORM Mapping   	 -->
+	<!-- <many-to-one
+        	name="MeasuringUnitsBean"
+        	class="com.Fertilizer.hibernate.MeasuringUnitsBean"
+       	 	not-null="true"
+     	 	cascade="all"
+    >
+    <column name="fk_unit_id"  />
+    </many-to-one>	-->
+    
+		<!-- <many-to-one
+        name="CategoryDetailsBean"
+        class="com.Fertilizer.hibernate.CategoryDetailsBean"
+        not-null="true"
+      cascade="all"
+    >
+    <column name="fk_cat_id"  />
+   </many-to-one>		 -->
+	<!-- <many-to-one
+        name="taxCreationBean"
+        class="com.Fertilizer.hibernate.TaxCreationBean"
+        not-null="true"
+	    cascade="all"
+    >
+    <column name="fk_tax_id"  />
+    </many-to-one> -->
+		
+		</class>
+    </hibernate-mapping>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.creditnotebean" table="creditnotegeneration"
+		schema="shop">
+
+		<id name="pk_creditnote_id" type="java.lang.Long" column="pk_creditnote_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="txId" type="java.lang.Long" column="transaction_no" />
+		
+		<property name="partyname" type="java.lang.String" column="party_name" />
+
+		<property name="description" type="java.lang.String" column="description" />
+
+		<property name="amount" type="java.lang.Double" column="amount" />
+		
+		<property name="insertDate" type="java.util.Date" column="insert_date" />
+		
+		<property name="fkuserid" type="java.lang.Long"	column="fk_user_id" />
+
+        <property name="fkshopid" type="java.lang.Long"	column="fk_shop_id" />		
+
+		<property name="shopName" type="java.lang.String" column="shop_name" length="255"/>
+		
+		<property name="userName" type="java.lang.String" column="user_name" length="255"/>
+		
+		
+				<property 
+		name="chequeNum" 
+		type="java.lang.String" 
+		column="cheque_num"
+		length="20"/>
+		
+		<property 
+		name="cardNum" 
+		type="java.lang.Long" 
+		column="card_num"
+		length="20"/>
+		
+		<property 
+		name="accNum" 
+		type="java.lang.Long" 
+		column="acc_num"
+		length="20"/>
+
+		<property 
+		name="paymentMode" 
+		type="java.lang.String" 
+		column="payment_mode"
+		length="20" />
+			
+		<property 
+		name="nameOnCheck" 
+		type="java.lang.String" 
+		column="name_on_check"
+		length="128" />
+		
+		<property 
+		name="bankName" 
+		type="java.lang.String" 
+		column="bank_name"
+		length="128" />
+		
+
+	</class>
+</hibernate-mapping>

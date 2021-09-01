@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+  <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.SaleReturnBean" 
+    table="sale_return" schema="shop">
+    
+    	<id name="pkSaleReturnId" type="java.lang.Long" column="pk_sale_return_id">
+			<generator class="increment" />
+		</id>
+
+		<property
+		name="fkFertilizerBillId"
+		type="java.lang.Long"
+		column="fk_fertilizer_bill_id"
+		length="20"/>
+		
+		<property
+		name="fkSeedBillId"
+		type="java.lang.Long"
+		column="fk_seed_bill_id"
+		length="20"/>
+		
+		<property
+		name="barcodeNo"
+		type="java.lang.Long"
+		column="barcode_No"
+		length="20"/>
+		
+		<property 
+		name="BillNo"
+		type="java.lang.Long"
+		column="bill_number"
+		length="20"/>
+		
+		<property 
+		name="productName" 
+		type="java.lang.String" 
+		column="product_name"
+		length="128" />
+		
+		<property 
+		name="company" 
+		type="java.lang.String" 
+		column="company"
+		length="128" />
+		
+		<property 
+		name="weight" 
+		type="java.lang.Double" 
+		column="weight"
+		length="20" />
+		
+		<property 
+		name="salePrice" 
+		type="java.lang.Double" 
+		column="sale_price"
+		length="20" />
+		
+		<property 
+		name="mrp" 
+		type="java.lang.Double" 
+		column="mrp"
+		length="20" />
+		
+		<property
+		name="availableQuantity"
+		type="java.lang.Double"
+		column="availabe_quantity"
+		length="20"/>
+		
+		<property
+		name="returnQuantity"
+		type="java.lang.Double"
+		column="return_quantity"
+		length="20"/>
+		
+		<property 
+		name="taxPercentage" 
+		type="java.lang.Double" 
+		column="tax_percenntage"
+		length="20" />
+		
+		<property 
+		name="ReturnAmount" 
+		type="java.lang.Double" 
+		column="return_amount"
+		length="20" />
+		
+		<property 
+		name="unitname" 
+		type="java.lang.String" 
+		column="unit_Name"
+		length="128" />
+		
+		<property 
+		name="hsn" 
+		type="java.lang.String" 
+		column="hsn"
+		length="128" />
+		
+		<property 
+		name="previousReturnAmt" 
+		type="java.lang.Double" 
+		column="previousTotal_amount"
+		length="20" />
+		
+		<property 
+		name="customerName" 
+		type="java.lang.String" 
+		column="customerName"
+		length="128" />
+		
+		<property 
+		name="batchNumber" 
+		type="java.lang.String" 
+		column="batch_number"
+		length="128" />
+		
+		<property 
+		name="grosstotal" 
+		type="java.lang.Double" 
+		column="gross_total"
+		length="20" />
+		
+		<property
+        name="returnDate"
+        type="java.sql.Date"
+        column="returnDate" />
+        
+        <property
+		name="fkuserid"
+		type="java.lang.Long"
+		column="fk_user_id" />
+
+        <property
+		name="fkshopid"
+		type="java.lang.Long"
+		column="fk_shop_id" />		
+
+		<property
+		name="shopName"
+		type="java.lang.String"
+		column="shop_name"
+		length="255"/>
+		
+		<property
+		name="userName"
+		type="java.lang.String"
+		column="user_name"
+		length="255"/>
+	 
+	</class>
+ </hibernate-mapping>

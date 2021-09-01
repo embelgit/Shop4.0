@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.PartnerDetailsBeanH" table="partnerDetails" schema="shop">
+    
+    	<id name="pkPartnerId" type="java.lang.Long" column="pkPartnerId">
+			<generator class="increment" />
+		</id>
+
+
+		<property 
+		name="partnerName" 
+		type="java.lang.String" 
+		column="partnerName"
+		length="128" />
+		
+		<property 
+		name="contactNo" 
+		type="java.lang.Long" 
+		column="contactNo"
+		length="20"/>		
+			
+		<property 
+		name="address" 
+		type="java.lang.String" 
+		column="address"
+		length="128" />
+
+		<property 
+		name="city" 
+		type="java.lang.String" 
+		column="city" 
+		length="128" />
+		
+		<property 
+		name="emailId" 
+		type="java.lang.String" 
+		column="emailId"
+		length="128" />
+		
+		<property 
+		name="alternateContactNo" 
+		type="java.lang.Long" 
+		column="alternateContactNo"
+		length="20"/>
+		
+		<property 
+		name="fkshopid" 
+		type="java.lang.Long" 
+		column="fk_shop_id"
+		length="20"/>	
+		
+		<property 
+		name="fkuserid" 
+		type="java.lang.Long" 
+		column="fk_user_id"
+		length="20"/>	
+		
+		<property 
+		name="shopName" 
+		type="java.lang.String" 
+		column="shop_name"
+		length="128" />
+		
+		<property 
+		name="userName" 
+		type="java.lang.String" 
+		column="user_name"
+		length="128" />
+		
+		</class>
+    </hibernate-mapping>

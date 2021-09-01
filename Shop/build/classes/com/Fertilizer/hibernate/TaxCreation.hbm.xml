@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.TaxCreationBean" 
+    table="tax_details" schema="shop"
+    >
+    
+    	<id name="txId" type="java.lang.Long" column="pk_tax_id">
+			<generator class="increment" />
+		</id>
+
+
+		<property 
+		name="taxType" 
+		type="java.lang.String" 
+		column="tax_name"
+		length="128" />
+
+		
+		<property 
+		name="taxPercentage" 
+		type="java.lang.Double" 
+		column="percentage" />
+		
+		<property 
+		name="sgst" 
+		type="java.lang.Double" 
+		column="sgst"  />
+		
+		<property 
+		name="cgst" 
+		type="java.lang.Double" 
+		column="cgst" />
+	
+		<property 
+		name="fkshopid" 
+		type="java.lang.Long" 
+		column="fk_shop_id" />
+		
+		<property 
+		name="fkuserid" 
+		type="java.lang.Long" 
+		column="fk_user_id" />
+		
+		<property 
+		name="shopName" 
+		type="java.lang.String" 
+		column="shop_name" />
+		
+		<property 
+		name="userName" 
+		type="java.lang.String" 
+		column="user_name" />		
+		
+			
+		</class>
+    </hibernate-mapping>

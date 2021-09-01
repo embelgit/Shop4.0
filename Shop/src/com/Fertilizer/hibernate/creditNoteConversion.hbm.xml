@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.CreditNoteConversionBean" table="creditnoteconversion"
+		   schema="shop">
+
+		<id name="pk_cr_conversion_no" type="java.lang.Long" column="pk_Cr_Conversion_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="fk_supplier_id" type="java.lang.Long" column="fk_supplier_id" />
+		
+		<property name="bill_no" type="java.lang.Long" column="bill_no" />
+
+		<property name="crConversionNo" type="java.lang.String" column="cr_conversion_No" />
+
+		<property name="crcongrosstotal" type="java.lang.Double" column="cr_Congross_Total" />
+		
+		 <property name="fkProductId" type="java.lang.Long" column="fk_product_id" />
+		
+		<property name="fkcategoryId" type="java.lang.Long" column="fk_category_id" />
+		
+		<property name="supplierName" type="java.lang.String" column="supplier_name" />
+		
+		<property name="productName" type="java.lang.String" column="product_name" />
+		
+		<property name="categoryName" type="java.lang.String" column="category_name" />
+		
+		<property name="companyName" type="java.lang.String" column="company_name" />
+		
+		<property name="batchno" type="java.lang.String" column="batch_No" />
+		
+		<property name="weight" type="java.lang.Double" column="weight" />
+		
+		<property name="buy_price" type="java.lang.Double" column="buy_price" />
+		
+		<property name="sale_price" type="java.lang.Double" column="sale_price" />
+		
+		<property name="mrp" type="java.lang.Double" column="mrp" />
+		
+		<property name="taxpercentage" type="java.lang.Double" column="tax_percentage" />
+		
+		<property name="quantity" type="java.lang.Long" column="quantity" />
+		
+		<property name="retunQuantity" type="java.lang.Long" column="return_quantity" />
+		
+		<property name="price" type="java.lang.Double" column="price" />
+		
+		<property name="conversiontotal" type="java.lang.Double" column="conversion_total" />
+		
+		<property name="barcodeNo" type="java.lang.Long" column="barcode_No" />
+		
+		<property name="purchaseDate" type="java.util.Date" column="purchase_date" />
+		
+		<property name="userId" type="java.lang.Long" column="user_id" />
+				
+		<property name="username" type="java.lang.String" column="user_name" />
+		
+		<property name="shopId" type="java.lang.Long" column="shop_id" />
+		
+		<property name="shopName" type="java.lang.String" column="shop_name" />
+		
+		<property name="transNoForCreditConversion" type="java.lang.Long" column="trans_No_Credit_Conversion" />
+		
+		<property name="fkGoodRecId" type="java.lang.Long" column="fk_good_receive_id" />
+		
+		<property name="pkPurchasereturnId" type="java.lang.Long" column="fk_purchase_return_Id" />
+
+	</class>
+</hibernate-mapping>

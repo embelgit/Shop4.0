@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.billcancelbean" 
+    table="bill_cancel" schema="shop"
+    >
+    
+    	<id name="pkBillId" type="java.lang.Long" column="pk_Bill_Id">
+			<generator class="increment" />
+		</id>
+
+		
+		<property
+		name="fk_shop_id"
+		type="java.lang.Long"
+		column="fk_shop_id"
+		length="20"/>
+			
+		
+		<property 
+		name="billNo"
+		type="java.lang.Long"
+		column="bill_no"
+		length="20"/>
+
+
+		<property 
+		name="cust_type"
+		type="java.lang.String"
+		column="cust_type"
+		/>
+
+		
+		<property
+		name="grossTotal"
+		type="java.lang.Double"
+		column="gross_total"
+		length="20"/>
+
+		 <property
+        name="insertDate"
+        type="java.sql.Date"
+        column="insert_date"
+    	/>
+   
+        <property
+        name="saleDate"
+        type="java.sql.Date"
+        column="saleDate"
+    	/>
+        	
+   		
+		
+		<property
+		name="userid"
+		type="java.lang.Long"
+		column="user_id"
+		length="20"/>
+		
+		<property 
+		name="username"
+		type="java.lang.String"
+		column="user_name"
+		length="20"/>
+		
+		<property 
+		name="shopName"
+		type="java.lang.String"
+		column="shop_name"
+		length="20"/>
+		
+		<property 
+		name="billType"
+		type="java.lang.String"
+		column="bill_Type"
+		length="20"/>
+		
+		
+		</class>
+    </hibernate-mapping>

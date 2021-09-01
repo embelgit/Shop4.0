@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.AccessControlBean" table="access_control_details"	schema="shop">
+
+		<id name="pk_Access_Control_id" type="java.lang.Long" column="pk_access_id">
+			<generator class="increment" />
+		</id>
+		
+		<property 
+		name="userId" 
+		type="java.lang.Long" 
+		column="user_id"
+		not-null="true" 
+		length="128" 
+		/>
+
+		<property 
+		name="empName" 
+		type="java.lang.String" 
+		column="employee_name"
+		not-null="true" 
+		length="128" 
+		/>
+
+		<property
+		 name="userName" 
+		 type="java.lang.String" 
+		 column="username"
+		 not-null="true" 
+		 length="128" 
+		 />
+
+		<property 
+		name="password" 
+		type="java.lang.String" 
+		column="password"
+		not-null="true" 
+		length="128" 
+		/>
+
+		<property 
+		name="type"  
+		type="java.lang.String"  
+		column="type"
+		not-null="true" 
+		length="20" 
+		/>
+
+		<property 
+		name="shopId"  
+		type="java.lang.Long" 
+		column="shop_id"
+		length="20" 
+		/>
+		
+		<property 
+		name="shopName"  
+		type="java.lang.String"  
+		column="shop_name"
+		length="20" 
+		/>
+
+		 <property
+        name="emailID"
+        type="java.lang.String"
+        column="emailID"
+        length="255"
+        />
+        
+        <property
+        name="email_pass"
+        type="java.lang.String"
+        column="email_pass"
+        length="255"
+        />
+        
+
+	</class>
+</hibernate-mapping>

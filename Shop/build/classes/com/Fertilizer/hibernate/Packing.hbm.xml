@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.PackingHibernate" table="Packing"
+    >
+    
+    	<id name="pkpaackid" type="java.lang.Long" column="pk_pack_id">
+			<generator class="increment" />
+		</id>
+		
+		<property
+        name="catID"
+        type="java.lang.Long"
+        column="FkCatId"
+        not-null="true"
+        /> 
+        
+        <property
+        name="subCatId"
+        type="java.lang.Long"
+        column="FkSubCatId"        
+        />         
+        
+        
+        <property
+        name="fk_shop_id"
+        type="java.lang.Long"
+        column="fk_shop_id"        
+        /> 
+        
+        <property
+        name="productName"
+        type="java.lang.String"
+        column="ProductName"      
+        /> 
+                
+        
+        <property
+        name="weight"
+        type="java.lang.Double"
+        column="Weight"       
+        /> 
+        
+        <property
+        name="quantity"
+        type="java.lang.Double"
+        column="Quantity"
+        not-null="true"     
+        />         
+        
+        
+         <!-- <property
+        name="packquantityKG"
+        type="java.lang.Double"
+        column="packquantityinKG"
+        not-null="true"     
+        />  -->        
+        
+        
+        <property
+        name="date"
+        type="java.sql.Date"
+        column="date"
+        />
+        
+        <property
+        name="unit"
+        type="java.lang.String"
+        column="unit"
+        length="20"
+        />
+                
+        <property
+        name="productId"
+        type="java.lang.Long"
+        column="productId"/>
+        
+        
+                
+        <property
+		name="fkuserid"
+		type="java.lang.Long"
+		column="fk_user_id"	/>
+		
+		<property
+		name="shopName"
+		type="java.lang.String"
+		column="shop_name"
+		length="255"/>
+		
+		<property
+		name="userName"
+		type="java.lang.String"
+		column="user_name"
+		length="255"/>
+        
+		</class>
+    </hibernate-mapping>

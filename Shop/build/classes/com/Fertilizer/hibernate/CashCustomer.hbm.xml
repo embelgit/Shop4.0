@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.cashCustomerHibernate" 
+    table="cash_customer_details" schema="shop"
+    >
+    
+    	<id name="custId" type="java.lang.Long" column="pk_customer_id">
+			<generator class="increment" />
+		</id>
+
+		<property 
+		name="firstName" 
+		type="java.lang.String" 
+		column="first_name"
+		length="128" />
+
+		<property 
+		name="middleName" 
+		type="java.lang.String" 
+		column="middle_name"
+		length="128" />
+			
+
+		<property 
+		name="lastName" 
+		type="java.lang.String" 
+		column="last_name" 
+		length="128" />
+		
+		<property 
+		name="firmname" 
+		type="java.lang.String" 
+		column="firmname" 
+		length="128" />
+		
+		<property 
+		name="address" 
+		type="java.lang.String" 
+		column="address"
+		length="128" />
+
+		<property 
+		name="contactNo" 
+		type="java.lang.Long" 
+		column="contact_no"
+		length="20"/>
+
+		<property 
+		name="aadhar" 
+		type="java.lang.Long" 
+		column="aadhar_no"
+		length="20"/>
+
+		<property 
+		name="emailId" 
+		type="java.lang.String" 
+		column="email_id"		 
+		length="128" />
+			
+		<property 
+		name="zipCode" 
+		type="java.lang.Long" 
+		column="pin_code"
+		length="20">
+		</property>
+		
+		<property 
+		name="gstno" 
+		type="java.lang.String" 
+		column="gst_number"  />
+		
+		<property 
+		name="fkshopid" 
+		type="java.lang.Long" 
+		column="fk_shop_id" 
+		length="20">
+		</property>
+		
+		<property 
+		name="fkuserid" 
+		type="java.lang.Long" 
+		column="fk_user_id" 
+		length="20">
+		</property>
+		
+		<property 
+		name="shopName" 
+		type="java.lang.String" 
+		column="shop_name">
+		</property>
+		
+		<property 
+		name="userName" 
+		type="java.lang.String" 
+		column="user_name">
+		</property>
+		
+		</class>
+    </hibernate-mapping>

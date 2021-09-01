@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.EditGoodsReceiveBean" 
+           table="goods_receive" schema="shop">
+    
+    	<id name="pk_goods_rec_id" type="java.lang.Long" column="pk_goods_receive_id">
+			<generator class="increment" />
+		</id>
+		
+		<property
+		name="SupplierId"
+		type="java.lang.Long"
+		column="fk_supplier_id"
+		not-null="true"
+		update="false"
+		insert="false"
+		length="20"/>
+		
+		<property
+		name="productID"
+		type="java.lang.Long"
+		column="fk_product_id"
+		not-null="true"
+		update="false"
+		insert="false"
+		length="20"/>
+		
+		<!-- <property
+		name="fkGodownId"
+		type="java.lang.Long"
+		column="fkgodownid"
+		not-null="true"
+		update="false"
+		insert="false"
+		length="20"/> -->
+		
+		<property
+		name="catId"
+		type="java.lang.Long"
+		column="fkCategoryId"
+		not-null="true"
+		update="false"
+		insert="false"
+		length="20"/> 
+		
+		<property
+		name="fk_subCat_id"
+		type="java.lang.Long"
+		column="fk_subCat_id"
+		/>
+		
+		<property
+		name="fk_shop_id"
+		type="java.lang.Long"
+		column="fk_shop_id"
+		/>
+		
+		<property
+		name="dcNum"
+		type="java.lang.Long"
+		column="dc_number"
+		length="20"/>
+		
+		
+		<property
+		name="igst1"
+		type="java.lang.Double"
+		column="iGstPercentage"
+		/>
+		
+		<property 
+		name="productName" 
+		type="java.lang.String" 
+		column="product_name"
+		not-null="true" 
+		length="128" />
+		
+		<property 
+		name="manufacturer" 
+		type="java.lang.String" 
+		column="company_Name"
+		not-null="true" 
+		length="128" />
+			
+			
+		<property 
+		name="buyPrice" 
+		type="java.lang.Double" 
+		column="buy_price"
+		not-null="true" 
+		length="20" />
+		
+		<property 
+		name="taxAmount" 
+		type="java.lang.Double" 
+		column="Tax_Amount"
+		 />
+		
+		<property 
+		name="returnAmount" 
+		type="java.lang.Double" 
+		column="return_amount"
+		length="20" />
+		
+		<property 
+		name="Total" 
+		type="java.lang.Double" 
+		column="Per_Product_Total"
+		length="20" />
+		
+		<property 
+		name="totalAfterReturn" 
+		type="java.lang.Double" 
+		column="total_after_return"
+		length="20" />
+		
+		
+		<property 
+		name="mrp" 
+		type="java.lang.Double" 
+		column="mrp"
+		
+		length="20" />
+		
+		<property 
+		name="discPercentage" 
+		type="java.lang.Double" 
+		column="discount_percentage"
+		length="64" />
+		
+		<property 
+		name="discAmount" 
+		type="java.lang.Double" 
+		column="discount_amount"
+		length="64" />
+		
+		<property 
+		name="fkExpenseId" 
+		type="java.lang.Long" 
+		column="fk_expense_id"
+		not-null="true"
+		update="false"
+		insert="false"
+		length="20" />
+		
+		<property 
+		name="salePrice" 
+		type="java.lang.Double" 
+		column="sale_price"
+		not-null="true" 
+		length="20" />
+		
+		<property 
+		name="weight" 
+		type="java.lang.Double" 
+		column="weight"
+		not-null="true" 
+		length="20" />
+		
+		<property 
+		name="weightAftShortMinus" 
+		type="java.lang.Double" 
+		column="weight_aft_short_minus"
+		length="20" />
+		
+		<property 
+		name="totalAmount" 
+		type="java.lang.Double" 
+		column="total_amount"
+		length="20" />
+		
+		<property 
+		name="taxPercentage" 
+		type="java.lang.Double" 
+		column="tax_percentage"
+		length="20" />
+		
+		<property
+		name="quantity"
+		type="java.lang.Double"
+		column="quantity"
+		length="20"/>
+		
+		<property
+		name="dupQuantity"
+		type="java.lang.Double"
+		column="dupQuantity"
+		length="20"/>
+		
+		<property
+		name="expenses"
+		type="java.lang.Double"
+		column="expenses"
+		length="20"/>
+		
+		<property
+		name="grossTotal"
+		type="java.lang.Double"
+		column="gross_total"
+		length="20"/>
+	
+		
+		<property
+		name="billPaymentPending"
+		type="java.lang.Double"
+		column="bill_payment_pending"
+		/>
+	
+		<property
+		name="billType"
+		type="java.lang.String"
+		column="billType"
+		length="20"/>
+		
+		
+		<property
+		name="billNum"
+		type="java.lang.String"
+		column="bill_number"
+		length="128"/>
+		
+		 <property
+        name="expireDate"
+        type="java.sql.Date"
+        column="expiry_date"      
+    	/>
+   
+        <property
+        name="insertDate"
+        type="java.sql.Date"
+        column="insertDate"
+      
+    	/>
+    	 <property
+        name="purchaseDate"
+        type="java.sql.Date"
+        column="purchaseDate"
+      
+    	/>
+    	<!--  <property
+        name="dueDate"
+        type="java.sql.Date"
+        column="dueDate"
+      
+    	/> -->
+    	
+    	<property
+		name="barcodeNo"
+		type="java.lang.Long"
+		column="barcodeNo"
+		/>
+   
+       <property
+		name="unitName"
+		type="java.lang.String"
+		column="unit"
+		length="20"/>
+		
+		
+		<property
+		name="transExpenseInclTax"
+		type="java.lang.Double"
+		column="transExpenseIncTax"
+		/>
+		
+		<property
+		name="transExpenseTaxAmt"
+		type="java.lang.Double"
+		column="transExpense_Tax_Amt"
+		/>
+		
+		<property
+		name="hamaliExpenseInclTax"
+		type="java.lang.Double"
+		column="hamaliExpenseIncTax"
+		/>
+		
+		<property
+		name="hamaliExpenseTaxAmt"
+		type="java.lang.Double"
+		column="hamaliExpense_Tax_Amt"
+		/>
+		
+		<property
+		name="expenseTaxPerc"
+		type="java.lang.Integer"
+		column="expenseTaxPerc"
+		/>
+		
+	   <property
+		name="batchNo"
+		type="java.lang.String"
+		column="batch_no"
+		length="20"/>
+		
+		<property 
+		name="stockPerEntry" 
+		type="java.lang.Double" 
+		column="stockPerEntry"
+		length="20" />
+		
+		<property 
+		name="cgst" 
+		type="java.lang.Double" 
+		column="cgst"
+		length="20" />
+		
+		<property 
+		name="sgst" 
+		type="java.lang.Double" 
+		column="sgst"
+		length="20" />
+		
+		<property
+		name="bookingID"
+		type="java.lang.Long"
+		column="booking_ID"	/>
+		
+		<property 
+		name="Discount" 
+		type="java.lang.Double" 
+		column="disc_perc_per_product" />
+		
+		<property 
+		name="DiscountAmount" 
+		type="java.lang.Double" 
+		column="disc_amt_per_product" />
+		
+		<property 
+		name="TotalExTax" 
+		type="java.lang.Double" 
+		column="total_excl_tax_per_product" />
+		
+		<property 
+		name="buyPriceEx" 
+		type="java.lang.Double" 
+		column="buy_price_excl_tax" />
+			
+		</class>
+		</hibernate-mapping>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.shopDetailsBean" 
+    table="shop_details" schema="shop"
+    >
+    
+    	<id name="shopId" type="java.lang.Long" column="pk_shop_id">
+			<generator class="increment" />
+		</id>
+
+
+		<property 
+		name="shopName" 
+		type="java.lang.String" 
+		column="shop_name"
+		not-null="true" />
+		
+		<property 
+		name="contactNumber" 
+		type="java.lang.Long" 
+		column="contactNo"
+		not-null="true" />
+		
+		<property 
+		name="gstNo" 
+		type="java.lang.String" 
+		column="gstNo"
+		not-null="true" />
+		
+		<property 
+		name="address" 
+		type="java.lang.String" 
+		column="address"
+		not-null="true" />		
+		
+		<!-- <property 
+		name="subcategoryName" 
+		type="java.lang.String" 
+		column="sub_cat_name"
+		not-null="true" 
+		length="128" /> -->
+		
+		<property 
+		name="wholesalelicno" 
+		type="java.lang.String" 
+		column="Lic_No_wholesale"
+		not-null="true" />
+		
+		<property 
+		name="shoplicno" 
+		type="java.lang.String" 
+		column="Lic_No_shop"
+		not-null="true" />
+		
+		<property 
+		name="footershopname" 
+		type="java.lang.String" 
+		column="footer_shop_name"
+		not-null="true" />
+		
+		<property 
+		name="shopId" 
+		type="java.lang.Long" 
+		column="shop_id"
+		not-null="true" />
+		
+		</class>
+    </hibernate-mapping>

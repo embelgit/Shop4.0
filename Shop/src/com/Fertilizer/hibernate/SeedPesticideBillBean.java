@@ -1,0 +1,339 @@
+package com.Fertilizer.hibernate;
+
+import java.util.Date;
+
+public class SeedPesticideBillBean {
+	
+	private Long pkfertilizerBillId;
+	private String customerName;
+	private String customerHiddenName;
+	private Long fkCreditCustomerId;
+	private String village;
+	private Long contact;
+	private Long aadhar;
+	private Double transExpense;
+	private Double hamaliExpense;
+	private Double total;
+	private Double grossTotal;
+	private Double totalAfterSaleReturn;
+	private Double returnAmount;
+	private String paymentMode;
+	private String nameOnCheck;
+	private String checkNo;
+	private Long cardNo;
+	private String accNo;
+	private String bankName;
+	
+	private Long catId;
+	private Long supplierId;
+	private Long fkGoodsReceive;
+	private Long barcode;
+	private String productName;
+	private String company;
+	private Double salePrice;
+	private Double mrp;
+	private Long quantity;
+	private Double totalInGrid;
+	private Double taxPercentage;
+	private Double weight;
+	private Long billNo;
+	private Date insertDate;
+	private String expiryDate;
+	private Long pkSeedPesticideBillId;
+	private String batchNumber;
+	private Long returnQuantity;
+	private Long quantityAfterReturn;
+
+	
+	public SeedPesticideBillBean() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public SeedPesticideBillBean(Long pkfertilizerBillId, String customerName,
+			String customerHiddenName, Long fkCreditCustomerId, String village,
+			Long contact, Long aadhar, Double transExpense,
+			Double hamaliExpense, Double total, Double grossTotal,
+			Double totalAfterSaleReturn, Double returnAmount,
+			String paymentMode, String nameOnCheck, String checkNo,
+			Long cardNo, String accNo, String bankName, Long catId,
+			Long supplierId, Long fkGoodsReceive, Long barcode,
+			String productName, String company, Double salePrice, Double mrp,
+			Long quantity, Double totalInGrid, Double taxPercentage,
+			Double weight, Long billNo, Date insertDate, String expiryDate,
+			Long pkSeedPesticideBillId, String batchNumber,
+			Long returnQuantity, Long quantityAfterReturn) {
+		super();
+		this.pkfertilizerBillId = pkfertilizerBillId;
+		this.customerName = customerName;
+		this.customerHiddenName = customerHiddenName;
+		this.fkCreditCustomerId = fkCreditCustomerId;
+		this.village = village;
+		this.contact = contact;
+		this.aadhar = aadhar;
+		this.transExpense = transExpense;
+		this.hamaliExpense = hamaliExpense;
+		this.total = total;
+		this.grossTotal = grossTotal;
+		this.totalAfterSaleReturn = totalAfterSaleReturn;
+		this.returnAmount = returnAmount;
+		this.paymentMode = paymentMode;
+		this.nameOnCheck = nameOnCheck;
+		this.checkNo = checkNo;
+		this.cardNo = cardNo;
+		this.accNo = accNo;
+		this.bankName = bankName;
+		this.catId = catId;
+		this.supplierId = supplierId;
+		this.fkGoodsReceive = fkGoodsReceive;
+		this.barcode = barcode;
+		this.productName = productName;
+		this.company = company;
+		this.salePrice = salePrice;
+		this.mrp = mrp;
+		this.quantity = quantity;
+		this.totalInGrid = totalInGrid;
+		this.taxPercentage = taxPercentage;
+		this.weight = weight;
+		this.billNo = billNo;
+		this.insertDate = insertDate;
+		this.expiryDate = expiryDate;
+		this.pkSeedPesticideBillId = pkSeedPesticideBillId;
+		this.batchNumber = batchNumber;
+		this.returnQuantity = returnQuantity;
+		this.quantityAfterReturn = quantityAfterReturn;
+	}
+	public Long getQuantityAfterReturn() {
+		return quantityAfterReturn;
+	}
+	public void setQuantityAfterReturn(Long quantityAfterReturn) {
+		this.quantityAfterReturn = quantityAfterReturn;
+	}
+	public Long getReturnQuantity() {
+		return returnQuantity;
+	}
+	public void setReturnQuantity(Long returnQuantity) {
+		this.returnQuantity = returnQuantity;
+	}
+	public Double getTotalAfterSaleReturn() {
+		return totalAfterSaleReturn;
+	}
+	public void setTotalAfterSaleReturn(Double totalAfterSaleReturn) {
+		this.totalAfterSaleReturn = totalAfterSaleReturn;
+	}
+	public Double getReturnAmount() {
+		return returnAmount;
+	}
+	public void setReturnAmount(Double returnAmount) {
+		this.returnAmount = returnAmount;
+	}
+	public String getBatchNumber() {
+		return batchNumber;
+	}
+	public void setBatchNumber(String batchNumber) {
+		this.batchNumber = batchNumber;
+	}
+	public String getCheckNo() {
+		return checkNo;
+	}
+	public void setCheckNo(String checkNo) {
+		this.checkNo = checkNo;
+	}
+	public Long getPkfertilizerBillId() {
+		return pkfertilizerBillId;
+	}
+	public void setPkfertilizerBillId(Long pkfertilizerBillId) {
+		this.pkfertilizerBillId = pkfertilizerBillId;
+	}
+	public String getCustomerName() {
+		return customerName;
+	}
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+	public String getCustomerHiddenName() {
+		return customerHiddenName;
+	}
+	public void setCustomerHiddenName(String customerHiddenName) {
+		this.customerHiddenName = customerHiddenName;
+	}
+	public Long getFkCreditCustomerId() {
+		return fkCreditCustomerId;
+	}
+	public void setFkCreditCustomerId(Long fkCreditCustomerId) {
+		this.fkCreditCustomerId = fkCreditCustomerId;
+	}
+	public String getVillage() {
+		return village;
+	}
+	public void setVillage(String village) {
+		this.village = village;
+	}
+	public Long getContact() {
+		return contact;
+	}
+	public void setContact(Long contact) {
+		this.contact = contact;
+	}
+	public Long getAadhar() {
+		return aadhar;
+	}
+	public void setAadhar(Long aadhar) {
+		this.aadhar = aadhar;
+	}
+	public Double getTransExpense() {
+		return transExpense;
+	}
+	public void setTransExpense(Double transExpense) {
+		this.transExpense = transExpense;
+	}
+	public Double getHamaliExpense() {
+		return hamaliExpense;
+	}
+	public void setHamaliExpense(Double hamaliExpense) {
+		this.hamaliExpense = hamaliExpense;
+	}
+	public Double getTotal() {
+		return total;
+	}
+	public void setTotal(Double total) {
+		this.total = total;
+	}
+	public Double getGrossTotal() {
+		return grossTotal;
+	}
+	public void setGrossTotal(Double grossTotal) {
+		this.grossTotal = grossTotal;
+	}
+	public String getPaymentMode() {
+		return paymentMode;
+	}
+	public void setPaymentMode(String paymentMode) {
+		this.paymentMode = paymentMode;
+	}
+	public String getNameOnCheck() {
+		return nameOnCheck;
+	}
+	public void setNameOnCheck(String nameOnCheck) {
+		this.nameOnCheck = nameOnCheck;
+	}
+
+	public Long getCardNo() {
+		return cardNo;
+	}
+	public void setCardNo(Long cardNo) {
+		this.cardNo = cardNo;
+	}
+	public String getAccNo() {
+		return accNo;
+	}
+	public void setAccNo(String accNo) {
+		this.accNo = accNo;
+	}
+	public String getBankName() {
+		return bankName;
+	}
+	public void setBankName(String bankName) {
+		this.bankName = bankName;
+	}
+	public Long getCatId() {
+		return catId;
+	}
+	public void setCatId(Long catId) {
+		this.catId = catId;
+	}
+	public Long getSupplierId() {
+		return supplierId;
+	}
+	public void setSupplierId(Long supplierId) {
+		this.supplierId = supplierId;
+	}
+	public Long getFkGoodsReceive() {
+		return fkGoodsReceive;
+	}
+	public void setFkGoodsReceive(Long fkGoodsReceive) {
+		this.fkGoodsReceive = fkGoodsReceive;
+	}
+	public Long getBarcode() {
+		return barcode;
+	}
+	public void setBarcode(Long barcode) {
+		this.barcode = barcode;
+	}
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	public Double getSalePrice() {
+		return salePrice;
+	}
+	public void setSalePrice(Double salePrice) {
+		this.salePrice = salePrice;
+	}
+	public Double getMrp() {
+		return mrp;
+	}
+	public void setMrp(Double mrp) {
+		this.mrp = mrp;
+	}
+	public Long getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(Long quantity) {
+		this.quantity = quantity;
+	}
+	public Double getTotalInGrid() {
+		return totalInGrid;
+	}
+	public void setTotalInGrid(Double totalInGrid) {
+		this.totalInGrid = totalInGrid;
+	}
+	public Double getTaxPercentage() {
+		return taxPercentage;
+	}
+	public void setTaxPercentage(Double taxPercentage) {
+		this.taxPercentage = taxPercentage;
+	}
+	public Double getWeight() {
+		return weight;
+	}
+	public void setWeight(Double weight) {
+		this.weight = weight;
+	}
+	public Long getBillNo() {
+		return billNo;
+	}
+	public void setBillNo(Long billNo) {
+		this.billNo = billNo;
+	}
+	public Date getInsertDate() {
+		return insertDate;
+	}
+	public void setInsertDate(Date insertDate) {
+		this.insertDate = insertDate;
+	}
+	public String getExpiryDate() {
+		return expiryDate;
+	}
+	public void setExpiryDate(String expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+	public Long getPkSeedPesticideBillId() {
+		return pkSeedPesticideBillId;
+	}
+	public void setPkSeedPesticideBillId(Long pkSeedPesticideBillId) {
+		this.pkSeedPesticideBillId = pkSeedPesticideBillId;
+	}
+	
+	
+}
+
+	
+	

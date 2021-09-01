@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.SupplierDetailsBean" 
+    table="supplier_details" schema="shop"
+    >
+    
+    	<id name="supId" type="java.lang.Long" column="pk_supplier_id">
+			<generator class="increment" />
+		</id>
+
+
+		<property 
+		name="dealerName" 
+		type="java.lang.String" 
+		column="supplier_name"
+		not-null="true" 
+		length="128" />
+
+		<property 
+		name="personName" 
+		type="java.lang.String" 
+		column="contact_person_name"
+		not-null="true" 
+		length="128" />
+			
+		<property 
+		name="address" 
+		type="java.lang.String" 
+		column="address"
+		not-null="true" 
+		length="128" />
+
+		<property 
+		name="city" 
+		type="java.lang.String" 
+		column="city"
+		not-null="true" 
+		length="128" />
+		
+		<property 
+		name="emailId" 
+		type="java.lang.String" 
+		column="email_id"
+		not-null="true" 
+		length="128" />
+
+		<property 
+		name="contactNo" 
+		type="java.lang.Long" 
+		column="contact_no"
+		not-null="true" 
+		length="20"/>
+		
+		<property 
+		name="landline" 
+		type="java.lang.Long" 
+		column="alternate_no"
+		not-null="true" 
+		length="20"/>
+
+		<property 
+		name="tinNo" 
+		type="java.lang.String" 
+		column="tin_no" 
+		not-null="true" 
+		length="20">
+		</property>
+		
+		
+				<property 
+		name="accNo" 
+		type="java.lang.String" 
+		column="account_no"
+		 />
+				<property 
+		name="accName" 
+		type="java.lang.String" 
+		column="bank_detail"
+	/>
+				<property 
+		name="ifsc" 
+		type="java.lang.String" 
+		column="ifsc_code"
+		/>
+		
+		<property 
+		name="upi_id" 
+		type="java.lang.String" 
+		column="upi_ID"
+		 />
+		
+				<property 
+		name="opening_bal" 
+		type="java.lang.Double" 
+		column="opening_balance"
+		 />
+		 
+		<property 
+		name="fkshopid" 
+		type="java.lang.Long" 
+		column="fk_shop_id"
+		length="20"/>
+		
+		<property 
+		name="fkuserid" 
+		type="java.lang.Long" 
+		column="fk_user_id"
+		length="20"/>
+		
+		<property 
+		name="shopName" 
+		type="java.lang.String" 
+		column="shop_name">
+		</property>
+		
+		<property 
+		name="userName" 
+		type="java.lang.String" 
+		column="user_name">
+		</property>
+		
+		</class>
+    </hibernate-mapping>

@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.productTransferHibernate" 
+    table="productTransfer" schema="shop"
+    >
+    
+    	<id name="pkproductTxid" type="java.lang.Long" column="pk_productTx_id">
+			<generator class="increment" />
+		</id>
+
+		
+		<property
+		name="StockId"
+		type="java.lang.Long"
+		column="StockId"
+		/>
+		
+		<property
+		name="subCategoryId"
+		type="java.lang.Long"
+		column="subCategoryId"
+		/>
+		
+		 <property
+		name="categoryID"
+		type="java.lang.Long"
+		column="categoryID"
+		/> 
+				
+		<property
+		name="productId"
+		type="java.lang.Long"
+		column="productId"
+		/> 
+		
+		<property
+		name="productName"
+		type="java.lang.String"
+		column="productName"
+		/>
+
+		<property
+		name="QuantityTx"
+		type="java.lang.Double"
+		column="QuantityTx"
+		/>
+				
+		<!-- <property
+		name="fk_shop_id"
+		type="java.lang.Long"
+		column="fk_shop_id"
+		/> -->
+		
+		<!-- <property
+		name="dcNum"
+		type="java.lang.Long"
+		column="dc_number"
+		length="20"/>
+		 -->
+		
+
+		
+		<property 
+		name="companyName" 
+		type="java.lang.String" 
+		column="companyName"
+		/>
+		
+		<property 
+		name="unit" 
+		type="java.lang.String" 
+		column="unit"
+		 />
+			
+			
+		<property 
+		name="ware_shopname" 
+		type="java.lang.String" 
+		column="warehouse_shopname"
+		 />
+		
+		<property 
+		name="wareshop_id" 
+		type="java.lang.Long" 
+		column="warehouseshop_id"
+		 />
+		
+		<property 
+		name="stock" 
+		type="java.lang.Double" 
+		column="stock"
+		 />
+		
+		<property 
+		name="shopnametoTx" 
+		type="java.lang.String" 
+		column="shopnametoTx"
+		 />
+		
+		<property 
+		name="shop_idtoTx" 
+		type="java.lang.Long" 
+		column="shop_idtoTx"
+		/>
+		
+		
+				<property
+		name="date"
+		type="java.sql.Date"
+		column="date"	/>
+				
+		<property
+		name="fkuserid"
+		type="java.lang.Long"
+		column="fk_user_id"	/>
+		
+		<property
+		name="userName"
+		type="java.lang.String"
+		column="user_name"
+		length="255"/>
+				
+             <!-- ORM Mapping -->
+ 
+
+
+		
+		</class>
+    </hibernate-mapping>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-05-24T19:36:35 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="66b9fe41-ef09-4304-992b-57f1e1bd272c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="Y2F0ZWdvcmllcyAsMTUsMTUsNWQwMTExNDctYTMyMS00MDJkLWFmN2QtNmM4Y2FmMzhhNjgxOw=="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="My Driver = MySQL"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT fertilizer.categories.pk_cat_id ,
+ fertilizer.categories.cat_name 
+FROM categories]]>
+	</queryString>
+	<field name="pk_cat_id" class="java.lang.Long"/>
+	<field name="cat_name" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="86" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="0" width="100" height="30" uuid="f1a7306b-d12d-4cca-b4ed-cf54b7000108"/>
+				<textFieldExpression><![CDATA[$F{pk_cat_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="100" height="30" uuid="fb22a0d5-0d12-4830-aaa5-3c151b95f41e"/>
+				<textFieldExpression><![CDATA[$F{cat_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="50" width="100" height="30" uuid="4d25f51f-ba64-483b-8346-34707857605d"/>
+				<textFieldExpression><![CDATA[$F{pk_cat_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="50" width="100" height="30" uuid="86fd405a-0c61-46ad-a96d-8e80242722bf"/>
+				<textFieldExpression><![CDATA[$F{cat_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.BankPaymentBean" 
+           table="bank_payment" schema="shop">
+    
+    	<id name="pkBankPaymentId" type="java.lang.Long" column="pk_bank_payment_id">
+			<generator class="increment" />
+		</id>
+		
+		<property 
+		name="fkbankdetailId" 
+		type="java.lang.Long" 
+		column="fk_bank_detail_id"/>
+
+		<property 
+		name="bankName" 
+		type="java.lang.String" 
+		column="bank_name"/>
+		
+		<property
+        name="insertDate"
+        type="java.sql.Date"
+        column="insert_date"/>
+
+		<property 
+		name="accountNumber" 
+		type="java.lang.Long" 
+		column="account_number"
+		length="128" />
+		
+		<property 
+		name="ifscCode" 
+		type="java.lang.String" 
+		column="ifsc_code"/>
+		
+		<property 
+		name="accountantName" 
+		type="java.lang.String" 
+		column="accountant_name"/>
+		
+		<property 
+		name="contactNumber" 
+		type="java.lang.Long" 
+		column="contact_number"/>
+		
+		<property 
+		name="creditAmt" 
+		type="java.lang.Double" 
+		column="credit_amt"/>
+		
+		<property 
+		name="DebitAmt" 
+		type="java.lang.Double" 
+		column="debit_amt"/>
+		
+		<property 
+		name="transNoForBank" 
+		type="java.lang.Long" 
+		column="trans_No_Bank"/>
+							
+		<property 
+		name="fkshopid" 
+		type="java.lang.Long" 
+		column="fk_shop_id" 
+		length="20">
+		</property>
+		
+		<property 
+		name="fkuserid" 
+		type="java.lang.Long" 
+		column="fk_user_id" 
+		length="20">
+		</property>
+		
+		<property 
+		name="shopName" 
+		type="java.lang.String" 
+		column="shop_name">
+		</property>
+		
+		<property 
+		name="userName" 
+		type="java.lang.String" 
+		column="user_name">
+		</property>
+		
+		
+						<property 
+		name="chequeNum" 
+		type="java.lang.String" 
+		column="cheque_num"
+		length="20"/>
+		
+		<property 
+		name="cardNum" 
+		type="java.lang.Long" 
+		column="card_num"
+		length="20"/>
+		
+		<property 
+		name="accNum" 
+		type="java.lang.Long" 
+		column="acc_num"
+		length="20"/>
+
+		<property 
+		name="paymentMode" 
+		type="java.lang.String" 
+		column="payment_mode"
+		length="20" />
+			
+		<property 
+		name="nameOnCheck" 
+		type="java.lang.String" 
+		column="name_on_check"
+		length="128" />
+		
+
+		<property 
+		name="bankNamepay" 
+		type="java.lang.String" 
+		column="bank_namepay"
+		length="128" />
+		
+		</class>
+    </hibernate-mapping>

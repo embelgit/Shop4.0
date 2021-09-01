@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.Stock" table="Stock_Detail"
+    >
+    
+    	<id name="PkStockId" type="java.lang.Long" column="PkStockId">
+			<generator class="increment" />
+		</id>
+		
+		<property
+        name="catID"
+        type="java.lang.Long"
+        column="FkCatId"
+        not-null="true"
+        /> 
+        
+        <property
+        name="subCatId"
+        type="java.lang.Long"
+        column="FkSubCatId"        
+        />         
+        
+        <property
+        name="totalKgLtrPieceQuantity"
+        type="java.lang.Double"
+        column="total_kg_ltr_piece_stock"
+        />         
+        
+        <property
+        name="fk_shop_id"
+        type="java.lang.Long"
+        column="fk_shop_id"        
+        /> 
+        
+        <property
+        name="productName"
+        type="java.lang.String"
+        column="ProductName"      
+        /> 
+        
+         <!--  <property
+        name="batchNum"
+        type="java.lang.String"
+        column="batch_number"
+       
+        />  -->
+        
+        <property
+        name="companyName"
+        type="java.lang.String"
+        column="CompanyName"
+        length="255"
+        />
+        
+        
+        <property
+        name="weight"
+        type="java.lang.Double"
+        column="Weight"       
+        /> 
+        
+        <property
+        name="quantity"
+        type="java.lang.Double"
+        column="avail_Quantity"
+        not-null="true"
+       
+        />         
+        
+        <property
+        name="UpdateDate"
+        type="java.sql.Date"
+        column="UpdateDate"
+        length="19"
+        />
+        
+        <property
+        name="unit"
+        type="java.lang.String"
+        column="unit"
+        length="20"
+        />
+                
+        <property
+        name="productId"
+        type="java.lang.Long"
+        column="productId"/>
+        
+        
+ <!--        		<property
+		name="packunit"
+		type="java.lang.String"
+		column="packed_unit"
+		length="255"/> -->
+        
+        		<property
+		name="pack_type"
+		type="java.lang.String"
+		column="packing_type"
+		length="255"/>
+		
+<!--         <property
+        name="packquantity"
+        type="java.lang.Double"
+        column="packed_quantity"
+       /> -->
+        
+        
+        <property
+		name="fkuserid"
+		type="java.lang.Long"
+		column="fk_user_id"	/>
+		
+		<property
+		name="shopName"
+		type="java.lang.String"
+		column="shop_name"
+		length="255"/>
+		
+		<property
+		name="userName"
+		type="java.lang.String"
+		column="user_name"
+		length="255"/>
+        
+		</class>
+    </hibernate-mapping>

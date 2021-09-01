@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.PartnerTransactionBeanH" table="PartnerTransactions" schema="shop">
+    
+    	<id name="pk_partner_Transactions_id" type="java.lang.Long" column="pk_partner_Transactions_id">
+			<generator class="increment" />
+		</id>
+
+		<property
+		name="fk_partner_detail_id"
+		type="java.lang.Long"
+		column="fk_partner_detail_id"
+		not-null="true"
+		update="false"/>			
+
+		<property 
+		name="accountantName" 
+		type="java.lang.String" 
+		column="accountant_name"
+		/>
+		
+		<property 
+		name="partnerName" 
+		type="java.lang.String" 
+		column="partnerName"
+		/>
+			
+		<property 
+		name="creditPT" 
+		type="java.lang.Double" 
+		column="credit"
+		length="20" />
+		
+		<property 
+		name="debitPT" 
+		type="java.lang.Double" 
+		column="debit"
+		length="20" />
+		
+		<property 
+		name="totalAmount" 
+		type="java.lang.Double" 
+		column="total_amount"
+		length="20"/>
+		
+		<property
+        name="insertDatePT"
+        type="java.sql.Date"
+        column="insert_date"
+      	/>
+   
+        <property 
+		name="transactoin_No_partner_Transactions" 
+		type="java.lang.Long" 
+		column="transactoin_No_partner_Transactions"
+		/>
+		
+		<property
+		name="fkuserid"
+		type="java.lang.Long"
+		column="fk_user_id" />
+
+        <property
+		name="fkshopid"
+		type="java.lang.Long"
+		column="fk_shop_id" />		
+
+				<property 
+		name="chequeNum" 
+		type="java.lang.String" 
+		column="cheque_num"
+		length="20"/>
+		
+		<property 
+		name="cardNum" 
+		type="java.lang.Long" 
+		column="card_num"
+		length="20"/>
+		
+		<property 
+		name="accNum" 
+		type="java.lang.Long" 
+		column="acc_num"
+		length="20"/>
+
+		<property 
+		name="paymentMode" 
+		type="java.lang.String" 
+		column="payment_mode"
+		length="20" />
+			
+		<property 
+		name="nameOnCheck" 
+		type="java.lang.String" 
+		column="name_on_check"
+		length="128" />
+		
+		<property 
+		name="bankName" 
+		type="java.lang.String" 
+		column="bank_name"
+		length="128" />
+
+		<property
+		name="shopName"
+		type="java.lang.String"
+		column="shop_name"
+		length="255"/>
+		
+		<property
+		name="userName"
+		type="java.lang.String"
+		column="user_name"
+		length="255"/>
+		
+	</class>
+  </hibernate-mapping>

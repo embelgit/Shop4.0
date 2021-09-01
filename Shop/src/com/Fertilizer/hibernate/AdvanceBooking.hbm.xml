@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.Fertilizer.hibernate.AdvanceBookingBean" table="advance_booking" schema="shop">
+
+		<id name="pk_Adv_Booking_id" type="java.lang.Long" column="pk_adv_book_id">
+			<generator class="increment" />
+		</id>
+		
+		<property 
+		name="supplierID" 
+		type="java.lang.Long" 
+		column="fk_supplier_id"
+		length="128" 
+		/>
+		
+		<property 
+		name="catID" 
+		type="java.lang.Long" 
+		column="fk_cat_id"
+		length="128" 
+		/>
+		
+		<property 
+		name="subcatID" 
+		type="java.lang.Long" 
+		column="fk_subcat_id"
+		length="128" 
+		/>
+		
+		<property 
+		name="prodID" 
+		type="java.lang.Long" 
+		column="fk_product_id"
+		length="128" 
+		/>
+
+		<property 
+		name="supplierName" 
+		type="java.lang.String" 
+		column="supplier_name"
+		length="128" 
+		/>
+
+		<property
+		 name="emailID" 
+		 type="java.lang.String" 
+		 column="email_ID"
+		 length="128" 
+		 />
+
+		<property 
+		name="prodName" 
+		type="java.lang.String" 
+		column="product_name"
+		length="128" 
+		/>
+
+		<property 
+		name="catName"  
+		type="java.lang.String"  
+		column="cat_name"
+		length="20" 
+		/>
+		
+		<property 
+		name="subcatName"  
+		type="java.lang.String"  
+		column="subcat_name"
+		length="20" 
+		/>
+		
+		<property 
+		name="company"  
+		type="java.lang.String"  
+		column="company"
+		length="20" 
+		/>
+		
+		<property 
+		name="hsnNO"  
+		type="java.lang.String"  
+		column="hsn"
+		length="20" 
+		/>
+		
+		<property 
+		name="packing"  
+		type="java.lang.Double"  
+		column="packing"
+		length="20" 
+		/>
+
+		<property 
+		name="unit"  
+		type="java.lang.String"  
+		column="unit"
+		length="20" 
+		/>
+		
+		<property 
+		name="quantity"  
+		type="java.lang.Long"  
+		column="quantity"
+		length="20" 
+		/>
+		
+		<property 
+		name="totalQtyperProd"  
+		type="java.lang.Double"  
+		column="total_amt_per_prod"
+		length="20" 
+		/>
+		
+		<property 
+		name="totalQty"  
+		type="java.lang.Double"  
+		column="grossTotal"
+		length="20" 
+		/>
+		
+		<property 
+		name="bookingNo" 
+		type="java.lang.Long" 
+		column="booking_no"
+		length="128" 
+		/>
+
+		<property 
+		name="purchaseBillNo" 
+		type="java.lang.String" 
+		column="purchaseBillNo"
+		length="128" 
+		/>
+		
+		<property 
+		name="buyPrice" 
+		type="java.lang.Double" 
+		column="buy_price"
+		length="20" />
+		
+		<property 
+		name="buyPriceEx" 
+		type="java.lang.Double" 
+		column="buy_price_excl_tax"
+		length="20" />
+		
+		<property 
+		name="discount" 
+		type="java.lang.Double" 
+		column="discount_percentage"
+		length="64" />
+		
+		<property 
+		name="discountAmount" 
+		type="java.lang.Double" 
+		column="discount_amount"
+		length="64" />
+		
+		<property 
+		name="TotalExTax" 
+		type="java.lang.Double" 
+		column="total_excl_amt"
+		length="64" />
+		
+		<property 
+		name="cgst" 
+		type="java.lang.Double" 
+		column="cgst"
+		length="20" />
+		
+		<property 
+		name="sgst" 
+		type="java.lang.Double" 
+		column="sgst"
+		length="20" />
+		
+		<property
+		name="iGstPercentage"
+		type="java.lang.Double"
+		column="iGstPercentage"
+		/>
+	
+	    <property 
+		name="fkuserid" 
+		type="java.lang.Long" 
+		column="fk_user_id"
+		length="128" 
+		/>
+		
+		<property 
+		name="fkshopid" 
+		type="java.lang.Long" 
+		column="fk_shop_id"
+		length="128" 
+		/>
+		
+		<property 
+		name="shopName" 
+		type="java.lang.String" 
+		column="shop_name"
+		length="128" 
+		/>
+
+        <property 
+		name="userName" 
+		type="java.lang.String" 
+		column="user_name"
+		length="128" 
+		/>
+		
+		<property
+        name="podate"
+        type="java.sql.Date"
+        column="purchaseDate"      
+    	/>
+
+	</class>
+</hibernate-mapping>

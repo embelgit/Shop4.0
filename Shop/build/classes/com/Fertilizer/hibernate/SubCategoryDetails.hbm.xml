@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.SubCategoryDetailsBean" 
+    table="sub_categories" schema="shop">
+    
+    	<id name="subcatId" type="java.lang.Long" column="pk_subcat_id">
+			<generator class="increment" />
+		</id>
+
+		<property 
+		name="fk_cat_id" 
+		type="java.lang.Long" 
+		column="fk_cat_id"
+		not-null="true" 
+		insert="false"
+		update="false"
+		length="128" />
+		
+		<property 
+		name="subcategoryName" 
+		type="java.lang.String" 
+		column="sub_cat_name" />
+		
+		<property 
+		name="fkshopid" 
+		type="java.lang.Long" 
+		column="fk_shop_id" />
+		
+		<property 
+		name="fkuserid" 
+		type="java.lang.Long" 
+		column="fk_user_id"
+		length="128" />
+		
+		<property 
+		name="shopName" 
+		type="java.lang.String" 
+		column="shop_name"
+		length="128" />
+		
+		<property 
+		name="userName" 
+		type="java.lang.String" 
+		column="user_name"
+		length="128" />
+		
+	<many-to-one name="CategoryDetailsBean"
+        		class="com.Fertilizer.hibernate.CategoryDetailsBean"
+                not-null="true"
+                cascade="all"
+      >
+	
+	  <column name="fk_cat_id"  />
+	
+	</many-to-one>
+		
+		</class>
+    </hibernate-mapping>

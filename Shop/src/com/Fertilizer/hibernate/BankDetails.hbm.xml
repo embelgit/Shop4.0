@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.BankDetailsBean" 
+           table="bank_details" schema="shop">
+    
+    	<id name="pkbankdetailsID" type="java.lang.Long" column="pk_bank_details_id">
+			<generator class="increment" />
+		</id>
+
+		<property 
+		name="bankName" 
+		type="java.lang.String" 
+		column="bank_name"
+		length="128" />
+
+		<property 
+		name="accountNo" 
+		type="java.lang.Long" 
+		column="account_no"
+		length="128" />
+			
+
+		<property 
+		name="ifscCode" 
+		type="java.lang.String" 
+		column="ifsc_code" 
+		length="128" />
+		
+		<property 
+		name="branchName" 
+		type="java.lang.String" 
+		column="branch_name"
+		length="128" />
+
+		<property 
+		name="accountHolderName" 
+		type="java.lang.String" 
+		column="account_holder_name"
+		length="20"/>
+
+		<property 
+		name="contactNo" 
+		type="java.lang.Long" 
+		column="contact_no"
+		length="20"/>
+
+		<property 
+		name="address" 
+		type="java.lang.String" 
+		column="address"		 
+		length="128" />
+					
+		<property 
+		name="fkshopid" 
+		type="java.lang.Long" 
+		column="fk_shop_id" 
+		length="20">
+		</property>
+		
+		<property 
+		name="fkuserid" 
+		type="java.lang.Long" 
+		column="fk_user_id" 
+		length="20">
+		</property>
+		
+		<property 
+		name="shopName" 
+		type="java.lang.String" 
+		column="shop_name">
+		</property>
+		
+		<property 
+		name="userName" 
+		type="java.lang.String" 
+		column="user_name">
+		</property>
+		
+		</class>
+    </hibernate-mapping>

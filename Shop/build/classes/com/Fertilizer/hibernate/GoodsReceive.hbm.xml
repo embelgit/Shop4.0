@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.GoodsReceiveBean" 
+    table="goods_receive" schema="shop"
+    >
+    
+    	<id name="pkGoodsReceiveId" type="java.lang.Long" column="pk_goods_receive_id">
+			<generator class="increment" />
+		</id>
+
+		
+		<property
+		name="supplier"
+		type="java.lang.Long"
+		column="fk_supplier_id"
+		not-null="true"
+		update="false"
+		insert="false"
+		length="20"/>
+		
+		<property
+		name="pkPOId"
+		type="java.lang.Long"
+		column="fk_product_id"
+		not-null="true"
+		update="false"
+		insert="false"
+		length="20"/>
+		
+		<!-- <property
+		name="fkGodownId"
+		type="java.lang.Long"
+		column="fkgodownid"
+		not-null="true"
+		update="false"
+		insert="false"
+		length="20"/> -->
+		
+		<property
+		name="fkCategoryId"
+		type="java.lang.Long"
+		column="fkCategoryId"
+		not-null="true"
+		update="false"
+		insert="false"
+		length="20"/> 
+		
+		<property
+		name="fk_subCat_id"
+		type="java.lang.Long"
+		column="fk_subCat_id"
+		/>
+		
+		<property
+		name="fk_shop_id"
+		type="java.lang.Long"
+		column="fk_shop_id"
+		/>
+		
+		<property
+		name="dcNum"
+		type="java.lang.Long"
+		column="dc_number"
+		length="20"/>
+		
+		
+		<property
+		name="iGstPercentage"
+		type="java.lang.Double"
+		column="iGstPercentage"
+		/>
+		
+		<property 
+		name="productName" 
+		type="java.lang.String" 
+		column="product_name"
+		not-null="true" 
+		length="128" />
+		
+		<property 
+		name="companyName" 
+		type="java.lang.String" 
+		column="company_Name"
+		not-null="true" 
+		length="128" />
+			
+			
+		<property 
+		name="buyPrice" 
+		type="java.lang.Double" 
+		column="buy_price"
+		not-null="true" 
+		length="20" />
+		
+		<property 
+		name="taxAmount" 
+		type="java.lang.Double" 
+		column="Tax_Amount"
+		 />
+		
+		<property 
+		name="returnAmount" 
+		type="java.lang.Double" 
+		column="return_amount"
+		length="20" />
+		
+		<property 
+		name="perProductTotal" 
+		type="java.lang.Double" 
+		column="Per_Product_Total"
+		length="20" />
+		
+		<property 
+		name="totalAfterReturn" 
+		type="java.lang.Double" 
+		column="total_after_return"
+		length="20" />
+		
+		
+		<property 
+		name="mrp" 
+		type="java.lang.Double" 
+		column="mrp"
+		
+		length="20" />
+		
+		<property 
+		name="discount" 
+		type="java.lang.Double" 
+		column="discount_percentage"
+		length="64" />
+		
+		<property 
+		name="discountAmount" 
+		type="java.lang.Double" 
+		column="discount_amount"
+		length="64" />
+		
+		<property 
+		name="fkExpenseId" 
+		type="java.lang.Long" 
+		column="fk_expense_id"
+		not-null="true"
+		update="false"
+		insert="false"
+		length="20" />
+		
+		<property 
+		name="salePrice" 
+		type="java.lang.Double" 
+		column="sale_price"
+		not-null="true" 
+		length="20" />
+		
+		<property 
+		name="weight" 
+		type="java.lang.Double" 
+		column="weight"
+		not-null="true" 
+		length="20" />
+		
+		<property 
+		name="weightAftShortMinus" 
+		type="java.lang.Double" 
+		column="weight_aft_short_minus"
+		length="20" />
+		
+		<property 
+		name="totalAmount" 
+		type="java.lang.Double" 
+		column="total_amount"
+		length="20" />
+		
+		<property 
+		name="taxPercentage" 
+		type="java.lang.Double" 
+		column="tax_percentage"
+		length="20" />
+		
+		<property
+		name="quantity"
+		type="java.lang.Double"
+		column="quantity"
+		length="20"/>
+		
+		<property
+		name="dupQuantity"
+		type="java.lang.Double"
+		column="dupQuantity"
+		length="20"/>
+		
+		<property
+		name="expenses"
+		type="java.lang.Double"
+		column="expenses"
+		length="20"/>
+		
+		<property
+		name="grossTotal"
+		type="java.lang.Double"
+		column="gross_total"
+		length="20"/>
+	
+		
+		<property
+		name="billPaymentPending"
+		type="java.lang.Double"
+		column="bill_payment_pending"
+		/>
+	
+		<property
+		name="billType"
+		type="java.lang.String"
+		column="billType"
+		length="20"/>
+		
+		
+		<property
+		name="billNum"
+		type="java.lang.String"
+		column="bill_number"
+		length="128"/>
+		
+		 <property
+        name="expiryDate"
+        type="java.sql.Date"
+        column="expiry_date"      
+    	/>
+   
+        <property
+        name="insertDate"
+        type="java.sql.Date"
+        column="insertDate"
+      
+    	/>
+    	 <property
+        name="purchaseDate"
+        type="java.sql.Date"
+        column="purchaseDate"
+      
+    	/>
+    	<!--  <property
+        name="dueDate"
+        type="java.sql.Date"
+        column="dueDate"
+      
+    	/> -->
+    	
+    	<property
+		name="barcodeNo"
+		type="java.lang.Long"
+		column="barcodeNo"
+		/>
+   
+       <property
+		name="unit"
+		type="java.lang.String"
+		column="unit"
+		length="20"/>
+		
+		
+		<property
+		name="transExpenseIncTax"
+		type="java.lang.Double"
+		column="transExpenseIncTax"
+		/>
+		
+		<property
+		name="transExpenceTaxAmt"
+		type="java.lang.Double"
+		column="transExpense_Tax_Amt"
+		/>
+		
+		<property
+		name="hamaliExpenseIncTax"
+		type="java.lang.Double"
+		column="hamaliExpenseIncTax"
+		/>
+		
+		<property
+		name="hamaliExpenceTaxAmt"
+		type="java.lang.Double"
+		column="hamaliExpense_Tax_Amt"
+		/>
+		
+		<property
+		name="expenseTaxPerc"
+		type="java.lang.Integer"
+		column="expenseTaxPerc"
+		/>
+		
+	   <property
+		name="batchNo"
+		type="java.lang.String"
+		column="batch_no"
+		length="255"/>
+		
+		<property 
+		name="stockPerEntry" 
+		type="java.lang.Double" 
+		column="stockPerEntry"
+		length="20" />
+		
+		<property 
+		name="cgst" 
+		type="java.lang.Double" 
+		column="cgst"
+		length="20" />
+		
+		<property 
+		name="sgst" 
+		type="java.lang.Double" 
+		column="sgst"
+		length="20" />
+		
+		<property
+		name="bookingID"
+		type="java.lang.Long"
+		column="booking_ID"	/>
+		
+		<property 
+		name="discPercPerProduct" 
+		type="java.lang.Double" 
+		column="disc_perc_per_product" />
+		
+		<property 
+		name="discAmtPerProduct" 
+		type="java.lang.Double" 
+		column="disc_amt_per_product" />
+		
+		<property 
+		name="totalExclTaxperProduct" 
+		type="java.lang.Double" 
+		column="total_excl_tax_per_product" />
+		
+		<property 
+		name="buyPriceEx" 
+		type="java.lang.Double" 
+		column="buy_price_excl_tax" />
+		
+		
+		<property 
+		name="barcode_id" 
+		type="java.lang.String" 
+		column="barcode_ID" 
+		length="255" />
+		
+		<property
+		name="fkuserid"
+		type="java.lang.Long"
+		column="fk_user_id"	/>
+		
+		<property
+		name="shopName"
+		type="java.lang.String"
+		column="shop_name"
+		length="255"/>
+		
+		<property
+		name="userName"
+		type="java.lang.String"
+		column="user_name"
+		length="255"/>
+				
+		<property 
+		name="gstno" 
+		type="java.lang.String" 
+		column="gst_no"
+		 
+		length="128" />		
+				
+             <!-- ORM Mapping -->
+ 
+    <many-to-one
+        name="supplierDetailsBean"
+        class="com.Fertilizer.hibernate.SupplierDetailsBean"
+        not-null="true"
+      cascade="all"
+    >
+    	    <column name="fk_supplier_id"  />
+    </many-to-one> 
+		
+    <many-to-one
+        name="expenseDetailForBillingAndGoodsReceiveBean"
+        class="com.Fertilizer.hibernate.ExpenseDetailForBillingAndGoodsReceiveBean"
+        not-null="true"
+        cascade="all"
+    >
+    	    <column name="fk_expense_id"  />
+    </many-to-one> 
+		
+	<many-to-one
+        name="productDetailsBean"
+        class="com.Fertilizer.hibernate.ProductDetailsBean"
+        not-null="true"
+      cascade="all"
+    >
+    	    <column name="fk_product_id"  />
+    </many-to-one> 
+		
+		<many-to-one
+        name="categoryDetailsBean"
+        class="com.Fertilizer.hibernate.CategoryDetailsBean"
+        not-null="true"
+      cascade="all"
+    >
+    	    <column name="fkCategoryId"  />
+    </many-to-one> 
+		
+		<many-to-one
+        name="godownEntry"
+        class="com.Fertilizer.hibernate.GodownEntry"
+        not-null="true"
+      cascade="all"
+    >
+    	    <column name="fkgodownid"  />
+    </many-to-one> 
+		
+		</class>
+    </hibernate-mapping>
