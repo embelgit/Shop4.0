@@ -105,8 +105,9 @@ public class productTransferHelper {
 		
 		String username = (String) session1.getAttribute("user");
 		String userid = (String) session1.getAttribute("userid");
-	//	String shopid = (String) session1.getAttribute("shopid");
+		//String shopid = (String) session1.getAttribute("shopid");
 		String shopName = (String) session1.getAttribute("shopName");
+		String shop_idtoTx = (String) session1.getAttribute("shop_idtoTx");
 		
 		String ShopNameWithoutId1 = shopName.substring(4);
 		String Shopid = shopName.substring(3);
@@ -115,6 +116,8 @@ public class productTransferHelper {
 		
 		bean.setUserName(username);
 		bean.setFkuserid(Long.parseLong(userid));
+		
+		bean.setShop_idtoTx(Long.parseLong(shop_idtoTx));
 		
 		Date date = new Date();
 		bean.setDate(date);

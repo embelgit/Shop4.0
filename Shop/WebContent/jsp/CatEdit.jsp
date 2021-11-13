@@ -94,10 +94,11 @@
            		 <div class="form-group row" style="padding-top:3%">
 		            <div class="col-md-6 text-center col-md-offset-3">
 		            <!--  "customerDetails()" function is implemented in customerDetails.js  -->
-	           		   		 
-	           		 <input type="button" id="save" name="save" style="font-size: 25;height: 53px; width: 128;" class="btn  btn-success " onclick="EditcatDetails()" value="Update">
-	           		 <input id="reset" name="reset" style="font-size: 25;height: 53px; width: 128;" class="btn  btn-danger " type="reset"  onclick="reset()" value="Cancel">
-	           		 <input style=" font-size: 25;height: 53px; width: 128;" type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="back()" /> 
+	           		  
+	           		 <input type="button" id="save" name="btn" style=" height: 53px; width: 128;font-size: 25" class="btn  btn-success " onclick="EditcatDetails()" value="Update">
+	           		 <input id="save" name="btn" style="font-size: 25;height: 53px; width: 128;" class="btn  btn-danger " type="reset"  onclick="reset()" value="Cancel">
+	           		 <input style=" font-size: 25;height: 53px; width: 128;" type="button" id="listBtn"  name="btn" class="btn btn-primary" onclick="back()" value="Back"/> 
+	           		 
            		
 	           		<!--  <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="addUnit()"><h4> Submit</h4></button>
               	<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->

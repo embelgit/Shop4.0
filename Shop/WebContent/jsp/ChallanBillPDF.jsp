@@ -225,8 +225,6 @@ try {
 		  else if(ShopId == 2)
 		 { 
 		
-		
-		
 		        table_cell = new PdfPCell(new Phrase("Bill Cash/Credit Memorandum", Normalfont11));
 				table_cell.setBorder(table_cell.NO_BORDER);
 				table.addCell(table_cell);

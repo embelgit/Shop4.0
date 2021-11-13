@@ -30,7 +30,7 @@ function editSubcat()
 
 </script>
 
-<script type="text/javascript">
+<!--  <script type="text/javascript">
 function checkForDuplicateCategoryEntry(){
           			<%
           			CategoryDetailsDao dao = new CategoryDetailsDao();
@@ -64,7 +64,7 @@ function checkForDuplicateCategoryEntry(){
 
 
 
-</style>
+</style>-->
 <script type="text/javascript">	
  
 function checkForDuplicateSubCategoryEntry(){
@@ -139,7 +139,7 @@ function checkForDuplicateSubCategoryEntry(){
 					        	   SubCategoryDetailsBean cat=(SubCategoryDetailsBean)cList.get(i);
 							%>
 		
-							<option data-value="<%=cat.getSubcatId()%>" value="<%=cat.getSubcategoryName()%>">
+							<option data-value="<%=cat.getSubcatId()%>" r ,vvalue="<%=cat.getSubcategoryName()%>">
 							<%
 				      			}
 				    		%>

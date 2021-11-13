@@ -1,5 +1,5 @@
 /*
- * Name : Meghraj Menkudle 
+ * Name : Sonal Bharti
  * Date : 21/05/2017 
  * Method Name : expensePaymentValidation()
  * Reason : Credit Customer Validation in cashBook
@@ -53,24 +53,10 @@ function expensePaymentValidation() {
 //Adding expense detail
 function addExpenseDetails(){
 	
+	var expenseName = $('#expenseName').val();
 	var expenseType = $('#expensetype').val();
-	/*
-	if(expenseType == "select")
-	{
-		var msg="Please Select Expenditure Type";
-		var dialog = bootbox.dialog({
-			//title: "Embel Technologies Says :",
-		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
-		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-		    closeButton: false
-		});
-		
-		setTimeout(function() {
-			dialog.modal('hide');
-		}, 1500);
-		
-		return false;
-	}*/
+
+	
 	if(document.expenseDetails.expenseName.value == "")
 	{
 		var msg="Please Enter Expense Name";
@@ -87,8 +73,27 @@ function addExpenseDetails(){
 		
 		return false;
 	}	
-	addExpense();
-	var letterNumber = /^[a-zA-Z0-9, ]+$/;
+
+	
+		var expenseType = $('#expensetype').val();
+	
+	if(expenseType == "select")
+	{
+		var msg="Please Select Expenditure Type";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	addExpense();
+	
 /*	if(document.expenseDetails.expenseName.value.match(letterNumber))
 	{
 		addExpense();

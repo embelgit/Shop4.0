@@ -205,7 +205,7 @@ function addingGoodsReceive()
 	}
 	var letterNumber = /^[a-zA-Z0-9/\, ]+$/;
 	if (document.goodsReceiveForm.billNum.value.match(letterNumber)) {
-		/*if (document.goodsReceiveForm.fk_cat_id.value == "")
+		if (document.goodsReceiveForm.fk_cat_id.value == "")
 		{
 			var msg="Please Select Product Category";
 			var dialog = bootbox.dialog({
@@ -220,8 +220,8 @@ function addingGoodsReceive()
 			}, 1500);
 			return false;
 			
-		}*/
-		/*if (document.goodsReceiveForm.subCat.value == "") {			
+		}
+		if (document.goodsReceiveForm.subCat.value == "") {			
 			
 			var msg="Please Select Sub Category Name";
 			var dialog = bootbox.dialog({
@@ -235,9 +235,9 @@ function addingGoodsReceive()
 				dialog.modal('hide');
 			}, 1500);
 			return false;
-		}*/
+		}
 		
-		/*if (document.goodsReceiveForm.proName.value == "")
+		if (document.goodsReceiveForm.proName.value == "")
 		{
 			var msg="Please Select Product Name";
 			var dialog = bootbox.dialog({
@@ -251,11 +251,13 @@ function addingGoodsReceive()
 				dialog.modal('hide');
 			}, 1500);
 			return false;
-		}*/
+		}
 		
 		
 		
-		/*
+
+
+						/*
 		 * if(document.goodsReceiveForm.dcNum.value == "") { alert("Please Enter
 		 * DC Number"); return false; }
 		 */

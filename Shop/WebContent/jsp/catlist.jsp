@@ -122,7 +122,8 @@
 				<tr>
 				<td class="align"><%=sr.getSrNo()%></td>
 				<td class="align"><%=sr.getCategoryName()%></td>
-					<td class="align"><i class="glyphicon glyphicon-trash" style="font-size:27px;margin-left:50px" id="<%=sr.getCatId()%>,<%=sr.getCategoryName()%>" onclick="delcat1(this.id);return false;"></i></td>														
+					<td class="align"><i class="glyphicon glyphicon-trash" style="font-size:27px;margin-left:50px" id="<%=sr.getCatId()%>,<%=sr.getCategoryName()%>" 
+					                onclick="delcat1(this.id);return false;"></i></td>														
 				</tr>
 	
 				<%

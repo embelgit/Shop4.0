@@ -41,9 +41,11 @@ function normalCustFertilzerBillCOPY()
 				location.reload(true);
 //				window.open("COPYnormalCustomerBillPdf.jsp");
 //				window.open("billcopypdf1.jsp");
-				window.open("AutoBillpdf.jsp");
+//				window.open("AutoBillpdf.jsp");
 				
 				//window.open("newPDF.jsp");
+				window.open("NewPdf1.jsp");
+				//window.open("TrinityEnterprisesBillPdf.jsp");
 				document.getElementById("btn").disabled = false;
 			}).error(function(jqXHR, textStatus, errorThrown) {
 		if (textStatus === "timeout") {
@@ -100,8 +102,10 @@ function creditCustFertilzerBillCOPY()
 				/* location.reload(true);*/
 	//			window.open("COPYCreditCustomerBillPdf.jsp");
 //				window.open("creditbillcopy.jsp");
-				window.open("AutoBillpdf.jsp");
+			//	window.open("AutoBillpdf.jsp");
 				//window.open("newPDF.jsp");
+				window.open("NewPdf1.jsp");
+				//window.open("TrinityEnterprisesBillPdf.jsp");
 				document.getElementById("btn").disabled = false;
 			}).error(function(jqXHR, textStatus, errorThrown) {
 		if (textStatus === "timeout") {
@@ -284,7 +288,7 @@ function getAllcreditbill(){
 		params["date"] =date;
 		
 		
-		params["methodName"] = "getbillcopycreditbill";
+		params["methodName"] = "getbillcopycreditbill";      
 
 		$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
 				{

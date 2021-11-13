@@ -4785,6 +4785,15 @@ function saleReturnReportBetweenTwoDate(){
 	var startDate = $("#StartDate1").val();
 	var endDate = $("#EndDate1").val();
 	
+	if(startDate=="" || startDate==null || startDate==undefined){
+		alert("Please enter start date ");
+		return false;
+	}
+	if(endDate=="" || endDate==null || endDate==undefined){
+		alert("Please enter end date ");
+		return false;
+	}
+	
 	//alert("First Date--------"+startDate);
 	//alert("second Date--------"+endDate);
 	
@@ -5853,7 +5862,7 @@ function saleReportBetweenTwoDatesAsPeruser()
 		}
 	else
 		{
-			var msg="Please Select Shop Name";
+			var msg="Please Select User Name";
 			var dialog = bootbox.dialog({
 		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 		    closeButton: false

@@ -11883,8 +11883,12 @@ function fertilizerBilling()
 //		window.open("GSTBillPDF.jsp");
 
 //		window.open("NewbillPDF1.jsp");
-		window.open("AutoBillpdf.jsp");
-//		window.open("newPDF.jsp");
+		//window.open("AutoBillpdf.jsp");
+	//window.open("newPDF.jsp");
+	window.open("NewPdf1.jsp");
+	
+	//window.open("TrinityEnterprisesBillPdf.jsp");
+	
 		location.reload();
 		document.getElementById("billingCashbtn").disabled = false;	
 		
@@ -12855,15 +12859,18 @@ function fertilizerBillForCredit()
 //		window.open("GSTBillPDF.jsp");
 
 //		window.open("NewbillPDF1.jsp");		
-		window.open("AutoBillpdf.jsp");
+//		window.open("");
+  //      window.open("TrinityEnterprisesBillPdf.jsp");
 		
 		/*if((firstPaidAmtCreditCustomer != "0" || firstPaidAmtCreditCustomer != "" || firstPaidAmtCreditCustomer != null || firstPaidAmtCreditCustomer != undefined) && Number(firstPaidAmtCreditCustomer) > 0)
 		{
 		//		window.open("newPDF.jsp");
-			window.open("creditNoteForCustomerPDF.jsp");
+		//	window.open("creditNoteForCustomerPDF.jsp");
+		window.open("TrinityEnterprisesBillPdf.jsp");
 		}*/
 		
-		//window.open("newPDF.jsp");		
+		//window.open("newPDF.jsp");	
+		window.open("NewPdf1.jsp");	
 		location.reload();
 		document.getElementById("billingCreditBtn").disabled = false;
 	}
@@ -16271,10 +16278,12 @@ var firmName = $('#CfirmName').val();
 //		window.open("NonGSTBillPDF.jsp");
 
 //		window.open("NewbillPDF1.jsp");	
-		window.open("AutoBillpdf.jsp");	
+		//window.open("AutoBillpdf.jsp");	
 //		window.open("ReliablePDF.jsp");	
 
 		//window.open("newPDF.jsp");
+		window.open("NewPdf1.jsp");
+		//window.open("TrinityEnterprisesBillPdf.jsp");
 		location.reload();
 		document.getElementById("billingCashbtn").disabled = false;	
 		

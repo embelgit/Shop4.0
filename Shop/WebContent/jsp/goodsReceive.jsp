@@ -785,7 +785,7 @@ function clearfeild() {
 			</div>
 		
 		<div class="row form-group">
-		 <label class="col-md-2 control-label" for="fk_cat_id">Product Category</label>  
+		 <label class="col-md-2 control-label" for="fk_cat_id">Product Category<sup>*</sup></label>  
 		       <div id="categoryrefresh">
            			 <div class="col-md-3">
 						<div class="input-group">
@@ -827,7 +827,7 @@ function clearfeild() {
 		        <%}%> 
 		        <%if(abc.equals("english"))
 		        {%>
-		        Product Sub-Category
+		        Product Sub-Category<sup>*</sup>
 		        <%}%></label>  
 		         <div id="subcategoryrefresh">
            			 <div class="col-md-3">
@@ -852,7 +852,7 @@ function clearfeild() {
 							
 				<div class="row form-group">
 				   <div id="productrefresh">
-					<label class="col-md-2 control-label" for="proName">Product Name</label>  
+					<label class="col-md-2 control-label" for="proName">Product Name<sup>*</sup></label>  
 					        <div class="col-md-3">
 								<div class="input-group">
 									<span class="input-group-addon">
@@ -860,8 +860,8 @@ function clearfeild() {
 									</span>
 																		
 									<input list="product_drop" class="form-control input-md" id="proName" placeholder=" Product Name" name="proName"   
-									       onchange="productDetailInGrid();getAllShopName();clearGridSelect();clearfeild()">
-									
+									       onchange="productDetailInGrid();getAllShopName()">
+									<!-- ;clearGridSelect();clearfeild() -->
 									<datalist id="product_drop"></datalist>
 									
 									<span class="input-group-addon">

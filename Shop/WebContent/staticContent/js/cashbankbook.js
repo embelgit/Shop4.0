@@ -1,10 +1,39 @@
 //Adding supplier Payment
 function supplierPayment() {
 	
+	
+	var supplier = $("#supplier").val();
+	var billNo = $("#billNo").val();
 	var balanceAmount = $("#balanceAmount").val();
 	var supPay = $("#supPay").val();
 	var paymentType = $('#paymentType').val();
 	var paymentMode = $('#paymentMode').val();
+	
+	if (document.spmt.supplier.value == "") {
+		var msg = "Please Select Supplier Name";
+		var dialog = bootbox.dialog({
+			message : '<p class="text-center">'
+					+ msg.fontcolor("red").fontsize(5) + '</p>',
+			closeButton : false
+		});
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		return false;
+	}
+
+	if (document.spmt.billNo.value == "") {
+		var msg = "Please Select Bill Number";
+		var dialog = bootbox.dialog({
+			message : '<p class="text-center">'
+					+ msg.fontcolor("red").fontsize(5) + '</p>',
+			closeButton : false
+		});
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		return false;
+	}
 
 	if (supPay != "" || supPay != undefined || supPay != null) {
 		var checkSupPay = /^[0-9]+\.?[0-9]*$/;
@@ -39,31 +68,7 @@ function supplierPayment() {
 		return false;
 	}
 
-	if (document.spmt.supplier.value == "") {
-		var msg = "Please Select Supplier Name";
-		var dialog = bootbox.dialog({
-			message : '<p class="text-center">'
-					+ msg.fontcolor("red").fontsize(5) + '</p>',
-			closeButton : false
-		});
-		setTimeout(function() {
-			dialog.modal('hide');
-		}, 1500);
-		return false;
-	}
-
-	if (document.spmt.billNo.value == "") {
-		var msg = "Please Select Bill Number";
-		var dialog = bootbox.dialog({
-			message : '<p class="text-center">'
-					+ msg.fontcolor("red").fontsize(5) + '</p>',
-			closeButton : false
-		});
-		setTimeout(function() {
-			dialog.modal('hide');
-		}, 1500);
-		return false;
-	}
+	
 	if (document.spmt.paymentMode.value != "selected") {
 		if (document.spmt.paymentType.value != "selected") {
 		} else {
@@ -177,7 +182,7 @@ function sup() {
 }
 
 /*
- * Name : Meghraj Menkudle Date : 21/05/2017 Method Name :
+ * Name : Sonal Bharti Date : 06/10/2021 Method Name :
  * customerPaymentValidation() Reason : Credit Customer Validation in cashBook
  */
 
@@ -419,7 +424,7 @@ function customerPayment() {
 }
 
 /*
- * Name : Meghraj Menkudle Date : 21/05/2017 Method Name : EmployeeValidation()
+ * Name : Sonal Bharti Date :07/10/2021 Method Name : EmployeeValidation()
  * Reason : Employee Details Validation in cashBook
  */
 
@@ -2747,7 +2752,7 @@ function getCreditCustomerReportNameWiseValidation() {
 	if (customername != "") {
 		getCreditCustomerReportNameWise();
 	} else {
-		var msg = "Please Select Customee Name";
+		var msg = "Please Select Customer Name";
 		var dialog = bootbox.dialog({
 			message : '<p class="text-center">'
 					+ msg.fontcolor("red").fontsize(5) + '</p>',
@@ -7677,7 +7682,7 @@ function partnerWiseReport()
 
 						if (catmap == "" || catmap == null)
 						{
-							alert("No data available");
+							alert("Select Partner Name");
 							return false;
 						}
 
@@ -8439,6 +8444,24 @@ function addBankTransactions()
 	});
 }
 
+function bankNameWiseReport1() {
+	var bankName = $("#bankName").val();
+	if (bankName != "") {
+		bankNameWiseReport();
+	} else {
+		var msg = "Please Select Bank Name";
+		var dialog = bootbox.dialog({
+			message : '<p class="text-center">'
+					+ msg.fontcolor("red").fontsize(5) + '</p>',
+			closeButton : false
+		});
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		return false;
+	}
+}
+
 function bankNameWiseReport()
 {
 	var params = {};
@@ -8467,7 +8490,8 @@ function bankNameWiseReport()
 
 						if (catmap == "" || catmap == null)
 						{
-							alert("no data available ");
+							alert("No Data  Available for\nBank Name = "
+									+ bankName);
 							return false;
 						}
 

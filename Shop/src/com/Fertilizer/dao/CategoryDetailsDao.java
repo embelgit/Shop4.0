@@ -462,18 +462,8 @@ public List getsubCatDetails(){
 	System.out.println("result - "+Arrays.toString(o));
 	k++;
 	p.setCategoryName(o[0].toString());
-	if(o[1]==null)
-	{
-		
-	p.setSubcategoryName("NA");
-		
-	}
-	else
-	{
 		p.setSubcategoryName(o[1].toString());
-	}
-	//p.setSubCategoryName(o[1].toString());
-    p.setSubcatId(Long.parseLong(o[2].toString()));
+	p.setCategoryName(o[2].toString());
 	p.setSrNo(k);
 	catList.add(p);
 
@@ -487,6 +477,44 @@ hbu.closeSession(session);
 }
 return catList;
 }
-		
+	
+public List getsubCatDetails1(){
+	
+	HibernateUtility hbu=null;
+	Session session=null;
+	List<SubCategoryDetailsBean>catList=null;
+	Long k = 0l; 
+	try{
+	hbu = HibernateUtility.getInstance();
+	session = hbu.getHibernateSession();
+
+	Query query=session.createSQLQuery("SELECT pk_subcat_id, cat_name,sub_cat_name from sub_categories");
+	//Query query = session.createQuery("from PurchaseBill2");
+	List<Object[]> list = query.list();
+
+
+	catList= new ArrayList<SubCategoryDetailsBean>(0);
+
+
+for (Object[] o : list)
+{	
+	SubCategoryDetailsBean p = new SubCategoryDetailsBean();
+	k++;
+	p.setPk_subcat_id(Long.parseLong(o[0].toString()));
+	p.setCategoryName(o[1].toString());
+	p.setShopName(o[2].toString());
+	p.setSrNo(k);
+	
+	catList.add(p);
+
+}}catch(RuntimeException e){	
+
+}
+finally{
+
+hbu.closeSession(session);	
+}
+return catList;
+}
 			
 }

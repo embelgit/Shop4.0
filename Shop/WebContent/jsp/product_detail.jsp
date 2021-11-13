@@ -139,8 +139,6 @@ function addMeasuringUnit1()
 function checkForDuplicateProductEntry(){
 	
     var prodName = document.getElementById("productName").value;
-	var manucomp = document.getElementById("manufacturingCompany").value;
-	var packing = document.getElementById("weight").value;
 	
 	<%
 		  ProductDetailsDao dao = new ProductDetailsDao();
@@ -680,26 +678,9 @@ function caldis(){
 							<span class="input-group-addon"> 
 							<i class="	glyphicon glyphicon-list-alt"></i>
 							</span>
-
-							<%-- <%
-								ProductDetailsDao productdao = new ProductDetailsDao();
-								List productList = productdao.getAllProductDetails();
-							%> --%>
 							<input list="productName_drop" id="productName" placeholder="Product Name" 
-							       class="form-control" onblur="checkForDuplicateProductEntry()"> 
-							<%-- <datalist id="productName_drop">
-								<%
-									for (int i = 0; i < productList.size(); i++) {
-										ProductDetailsBean productbean = (ProductDetailsBean) productList.get(i);
-								%>
-
-								<option data-value="<%=productbean.getProdctId()%>"
-									value="<%=productbean.getProductName()%> <%=productbean.getWeight()%>">
-									<%
-										}
-									%>
-								
-							</datalist> --%>
+							       class="form-control" onchange="checkForDuplicateProductEntry()"> 
+							
 						</div>
 					</div>
 
@@ -713,7 +694,7 @@ function caldis(){
  	if (abc.equals("english")) {
  %>Manufacturing Company<%
  	}
- %>
+ %><sup>*</sup>
 					</label>
 					<div class="col-md-3">
 						<div class="input-group">
@@ -725,7 +706,7 @@ function caldis(){
 								ProductDetailsDao productdao1 = new ProductDetailsDao();
 								List productList1 = productdao1.getAllProductDetails();
 							%> --%>
-							<input list="manufacturingCompany_drop" placeholder="Manufacturing Company" id="manufacturingCompany"
+							<input list="manufacturingCompany_drop" placeholder="- Company" id="manufacturingCompany"
 								   class="form-control" onblur="checkForDuplicateProductEntry()" onchange="checkForDuplicateProductEntry();">
 							<%-- <datalist id="manufacturingCompany_drop">
 								<%
@@ -900,7 +881,7 @@ function caldis(){
            	
 
 				<div class="row form-group">
-					<label class="col-md-2 control-label" style="text-align: right"	for="fk_tax_id">Tax Name</label>
+					<label class="col-md-2 control-label" style="text-align: right"	for="fk_tax_id">Tax Name:<sup>*</sup></label>
 					<div id="taxtypefresh">
 					<div class="col-md-3" style="width: 286px;">
 						<div class="input-group" style="width: 100%;">
@@ -969,7 +950,7 @@ function caldis(){
 						<div class="input-group">
 							<span class="input-group-addon"> % </span> <input id="sgst"
 								name="sgst" placeholder="SGST %" class="form-control input-md"
-								type="text" readonly="readonly">
+								type="text">
 						</div>
 					</div>
 
@@ -989,7 +970,7 @@ function caldis(){
 						<div class="input-group">
 							<span class="input-group-addon"> % </span> <input id="cgst"
 								name="cgst" placeholder="CGST %" class="form-control input-md" 
-								type="text" readonly="readonly" >
+								type="text"  >
 						</div>
 					</div>
 
@@ -1016,7 +997,7 @@ function caldis(){
 						<div class="input-group">
 							<span class="input-group-addon"> Rs </span> <input id="mrp"
 								name="mrp" value="0" class="form-control input-md"
-								type="text" readonly="readonly">
+								type="text">
 						</div>
 					</div>
 
@@ -1030,7 +1011,7 @@ function caldis(){
  	if (abc.equals("english")) {
  %>Buy Price(Incl Tax)<%
  	}
- %>
+ %><sup>*</sup>
 					</label>
 
 					<div class="col-md-3">
@@ -1093,7 +1074,7 @@ function caldis(){
  	if (abc.equals("english")) {
  %>S.P(Excl Tax)<%
  	}
- %>
+ %><sup>*</sup>
 </label>
 					<div class="col-md-3">
 						<div class="input-group">
@@ -1111,7 +1092,7 @@ function caldis(){
  	if (abc.equals("english")) {
  %>Sale Price/Unit(Incl Tax)<%
  	}
- %>
+ %><sup>*</sup>
 </label>
 					<div class="col-md-3">
 						<div class="input-group">
@@ -1445,7 +1426,7 @@ function caldis(){
             			</div>
             		</div>
             		
-            		<label class="col-md-2 control-label" for="sgst">SGST<sup>*</sup></label>  
+            		<label class="col-md-2 control-label" for="sgst">SGST</label>  
             		<div class="col-md-3">
             			<div class="input-group">
 							<span class="input-group-addon">
@@ -1458,7 +1439,7 @@ function caldis(){
 					</div>
 			
 				<div class="row form-group" style="padding-top:6%;">
-           				<label class="col-md-2 control-label" for="cgst">CGST<sup>*</sup></label>  
+           				<label class="col-md-2 control-label" for="cgst">CGST</label>  
 		           	 <div class="col-md-3" style="padding-left: 24px;">
             			<div class="input-group">
 							<span class="input-group-addon">

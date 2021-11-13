@@ -84,7 +84,7 @@ ExpenditureDetailsDao dao2 = new ExpenditureDetailsDao();
 			</div>
 			
 			 <div class="row form-group">
-           		<label class="col-md-2 control-label" for="expenseType">Expenditure Type</label>  
+           		<label class="col-md-2 control-label" for="expenseType">Expenditure Type<sup>*</sup></label>  
            	 		<div class="col-md-3">
 						<div class="input-group">
 							<span class="input-group-addon">

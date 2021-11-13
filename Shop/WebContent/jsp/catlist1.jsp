@@ -14,13 +14,14 @@
     <script src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
 	<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
-		<script type="text/javascript" src="/Shop/staticContent/js/categoryDetails.js"></script>
+	<script type="text/javascript" src="/Shop/staticContent/js/categoryDetails.js"></script>
+	
 	
 	
 <html>
 	<head>
 	
-		<title>Category List</title>
+		<title>Sub Category List</title>
 		
   		
   		<script type="text/javascript">
@@ -28,13 +29,15 @@
   			{
   				window.location = "categoryDetails.jsp" ;
   			}
+  			
   			function del()
   			{
   				window.location = "delsubcat.jsp" ;
   			}
   			
   		</script>
-	<style>
+		
+<style>
 .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
  {
     border-radius:23px;
@@ -43,6 +46,8 @@
 
 </style>
 	</head>
+
+	
 
 	<script type="text/javascript"> 
 		$(document).ready(function () {
@@ -66,7 +71,7 @@
 		
 		<div class="row">
 				    <div align="center" style="margin-top:70px">
-				  		<h2 class="form-name style_heading">Category List</h2>
+				  		<h2 class="form-name style_heading">Sub Category List</h2>
 				  	</div>
 				 	
 			     <div class="row">
@@ -81,9 +86,8 @@
 	
 	CategoryDetailsDao dao = new CategoryDetailsDao();
 	List list12=dao.getsubCatDetails();
-
-	%>
 	
+	%>
 	<div class="container">
 	<div class="row">
 	
@@ -98,8 +102,8 @@
 	<div id="demo_jui">
 		<table id="list" class="display" border="1">
 			<thead>
-				<tr>                
-				<th>Sr No.</th>
+				<tr>
+					<th>Sr No.</th>
 					<th>Category Name</th>
 					<th>SubCategory Name</th>
 					<th>Delete SubCategory</th>
@@ -108,9 +112,8 @@
 			
 			<tbody>
    				<%
-					for(int i=0;i<list12.size();i++){
-						SubCategoryDetailsBean sr=(SubCategoryDetailsBean)list12.get(i);
-						
+   				for(int i=0;i<list12.size();i++){
+					SubCategoryDetailsBean sr=(SubCategoryDetailsBean)list12.get(i);
 						
 				%>
 				
@@ -118,7 +121,12 @@
 				<td class="align"><%=sr.getSrNo()%></td>
 				<td class="align"><%=sr.getCategoryName()%></td>
 				<td class="align"><%=sr.getSubcategoryName()%></td>
-<td class="align"><i class="glyphicon glyphicon-trash" style="font-size:27px;margin-left:50px" id="<%=sr.getSubcatId()%>,<%=sr.getSubcategoryName()%>" onclick="delsubcat1(this.id);return false;"></i></td>																			
+<td class="align"><i class="glyphicon glyphicon-trash" style="font-size:27px;margin-left:50px" 
+                      id="<%=sr.getSubcatId()%>,
+					 <%=sr.getCategoryName()%>
+					 <%=sr.getSubcategoryName()%>" 
+					 onclick="delsubcat1(this.id);return false;"></i></td>	
+					 																				
 				</tr>
 	
 				<%
@@ -132,7 +140,8 @@
 	
 	<div class="wrapper" align="center" style="padding-top:2%">
 		<input type="button" style="width: 128px; height: 53px; font-size: 25px" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
-<!-- 		<input type="button" style="width: 128px; height: 53px; font-size: 25px" value="Delete" id="listBtn" class="btn btn-primary" onclick="del()" /> 		 -->
+<!-- 		<input type="button" style="wid
+<!-- 				<input type="button" style="width: 128px; height: 53px; font-size: 25px" value="Delete" id="listBtn" class="btn btn-success" onclick="del()" />  -->
 	</div>
 	
 </body>

@@ -81,7 +81,7 @@ public class LogoutController extends HttpServlet {
 	{
 		    LogoutController bb = new LogoutController();
 		    Date date = new Date();
-	        bb.tbBackup("shop","root","root","E:/dumpbackup/shop.sql");
+	        bb.tbBackup("shop","root","root","D:/dumpbackup/shop.sql");
 	}
 }
 

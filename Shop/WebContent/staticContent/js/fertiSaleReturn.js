@@ -1581,7 +1581,7 @@ function getProductDetailsByBillNo(){
 													var tax_percentage= rowData['taxPercentage'];
 													var returnQuantity = rowData['returnQuantity'];
 													var quantity = rowData['quantity'];
-													var buy_price= rowData['buyPrice'];
+													var buy_price= rowData['salePrice'];
 													var returnTotal= rowData['returnTotal'];
 													var total = rowData['total'];
 													

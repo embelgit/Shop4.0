@@ -123,7 +123,7 @@
            		 
            		 
            	<div class="row form-group">
-           		<label class="col-md-2 control-label" for="unitName">New SI Unit<sup>*</sup></label>  
+           		<label class="col-md-2 control-label" for="unitName">New SI Unit</label>  
            	 		<div class="col-md-3">
             			<div class="input-group">
 							<span class="input-group-addon">
@@ -137,7 +137,7 @@
             			</div>
            		 	</div>
            		 	
-           		 	<label class="col-md-3 control-label" for="unitDescription">New SI Unit Description<sup>*</sup></label>  
+           		 	<label class="col-md-3 control-label" for="unitDescription">New SI Unit Description</label>  
            	 		<div class="col-md-3">
             			<div class="input-group">
 							<span class="input-group-addon">

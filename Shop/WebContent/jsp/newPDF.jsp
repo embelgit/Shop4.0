@@ -214,6 +214,23 @@ System.out.print(":::::::::::::::::BillNO:- "+billno+":::::::::: "+": email - ::
 		Font Normalfont14 = new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL, BaseColor.BLACK);
 		Font ufont14 = new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.UNDERLINE, BaseColor.BLACK);
 
+		
+		// Shop Logo start
+				Image image1;
+				if (onlyShopName.equalsIgnoreCase("De Gras Agro Industries LLP")) {
+					image1 = Image.getInstance("C:/a.png");
+					image1.scaleToFit(200f, 600f);
+					Image imageCenter = Image.getInstance(image1);
+					imageCenter.setAlignment(Image.ALIGN_CENTER);
+					document.add(imageCenter);
+				} else {
+					image1 = Image.getInstance("C:/a.png");
+					image1.scaleToFit(150f, 450f);
+					Image imageCenter = Image.getInstance(image1);
+					imageCenter.setAlignment(Image.ALIGN_CENTER);
+					document.add(imageCenter);
+				}
+				// End	logo
 		//Header Containt Table
 
 		/* image1.scaleToFit(300f, 500f);
@@ -277,13 +294,13 @@ System.out.print(":::::::::::::::::BillNO:- "+billno+":::::::::: "+": email - ::
 
 		PdfPCell headerTable_cell22;
 
-//		headerTable_cell22 = new PdfPCell(new Phrase(""+onlyShopName, font13Bold));
-		headerTable_cell22 = new PdfPCell(new Phrase("Reliable Mart",font12Bold));		
-		headerTable_cell22.setHorizontalAlignment(Element.ALIGN_CENTER);
+/*		headerTable_cell22 = new PdfPCell(new Phrase(""+onlyShopName, font13Bold));
+		//headerTable_cell22 = new PdfPCell(new Phrase("Trinity Enterprises",font12Bold));		
+		//headerTable_cell22.setHorizontalAlignment(Element.ALIGN_CENTER);
 		headerTable_cell22.setPaddingBottom(1);
 		headerTable_cell22.setPaddingTop(8);
 		headerTable_cell22.setBorder(Rectangle.NO_BORDER);
-		headertable22.addCell(headerTable_cell22);
+		headertable22.addCell(headerTable_cell22);*/
 		
 		
 
@@ -299,7 +316,7 @@ System.out.print(":::::::::::::::::BillNO:- "+billno+":::::::::: "+": email - ::
 		headerTable_cell22.setBorder(Rectangle.NO_BORDER);
 		headertable22.addCell(headerTable_cell22); */
 
- 		headerTable_cell22 = new PdfPCell(new Phrase("Committed for Best Quality \nPhone No. 7558528876 / 9970045216 \nRees Bhatwadi, near URC society, \nTaluka - Khalapur, Dist- Raigad 410222", font8));
+ 		headerTable_cell22 = new PdfPCell(new Phrase("Committed for Best Quality \nPhone No. 9552220444 \nSHOP NO.3, NECO Garden, Viman Nagar \nPUNE - 411014", font8));
 		headerTable_cell22.setHorizontalAlignment(Element.ALIGN_CENTER);
 		headerTable_cell22.setPaddingBottom(4);
 		headerTable_cell22.setBorder(Rectangle.NO_BORDER);
@@ -780,7 +797,7 @@ System.out.print(":::::::::::::::::BillNO:- "+billno+":::::::::: "+": email - ::
 			footerTable3.addCell(footerTable_cell3);
 
 			
-			footerTable_cell3 = new PdfPCell(new Phrase("Call for free Home Delivery : 7558528876 / 9970045216", font8Bold));
+			footerTable_cell3 = new PdfPCell(new Phrase("Call for free Home Delivery : 9552220444", font8Bold));
 			footerTable_cell3.setHorizontalAlignment(Element.ALIGN_LEFT);
 	//		footerTable_cell3.setBorder(Rectangle.TOP);
 			footerTable_cell3.setBorder(Rectangle.BOTTOM);

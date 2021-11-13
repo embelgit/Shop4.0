@@ -698,7 +698,7 @@ top: 25%;}
               				<input id="contactNo2" name="contactNo2" placeholder="Contact No" class="form-control input-md" type="text" maxlength="10">
             			</div>
             		</div>
-			<label class="col-md-2 control-label" for="saleDate">Quotataion Date</label>  
+			<label class="col-md-2 control-label" for="saleDate">Quotation Date</label>  
           					  <div class="col-md-3">
 								<div class="input-group">
 									<span class="input-group-addon">

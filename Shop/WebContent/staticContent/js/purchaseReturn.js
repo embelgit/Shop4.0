@@ -102,6 +102,8 @@ function fetchDataForCreditNoteConversion(){
 
 		$.each(jsonData,function(i, v) 
 				{ 
+				
+
 			$("#jqGridCrCon").jqGrid({
 
 					datatype : "local",
@@ -567,9 +569,10 @@ function CrNoteConvertion(){
 		//alert(data);
 		if(document.creditNote)
 		{
-			window.location.reload();
-			document.getElementById("btn").disabled = false;
 			window.open("CreditNoteConversionPDF.jsp");
+			//window.location.reload();
+			document.getElementById("btn").disabled = false;
+			
 		}	
 	         /* var msg="Data Added Sucessfully";
 				var dialog = bootbox.dialog({
@@ -814,6 +817,7 @@ function fetchDataForPurchase() {
 							var quantity = rowData['dupQuantity'];   //return qty
 							var availablequantity = rowData['available_quanty'];  // available qty
 							var buy_price= rowData['buy_price'];
+							var sale_price= rowData['sale_price'];
 							var total = rowData['total'];
 							var tax_percentage= rowData['tax_percentage'];
 							var total= rowData['total'];
@@ -855,16 +859,17 @@ function fetchDataForPurchase() {
 					       	  }
 							*/
 									
-						 var total=0;
-					     total=Number(buy_price)*Number(quantity);
+							 var total=0;
+							 total=Number(quantity) * Number(sale_price);
+						     
 						 $("#jqGrid").jqGrid("setCell", rowId, "total", total);
 						
 						  var checkbuyPrice= /^[0-9]+\.?[0-9]*$/;
-						  if(buy_price.match(checkbuyPrice))
+						  if(price.match(checkbuyPrice))
 					      {
 					      	  if(quantity !=0)
 					      	  {   
-					      		  BpwTax = (buy_price/(1+(tax_percentage/100)));
+					      		  BpwTax = (price/(1+(tax_percentage/100)));
 					      		  taxAmount1 = (BpwTax*(tax_percentage/100));
 					      		  taxAmount = taxAmount1 * quantity;
 					      		  $("#jqGrid").jqGrid("setCell", rowId, "taxAmount",  taxAmount.toFixed(2));

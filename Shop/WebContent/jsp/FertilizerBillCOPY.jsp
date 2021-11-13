@@ -97,7 +97,7 @@
 <!-- 						<div class="row form-group" style="margin-top: 30px;" align="center"> -->
 							
 								<!-- <div class="col-md-5 col-md-offset-3"> -->
-									<label class="col-md-4 control-label"> Bill Number :</label> 
+									<label class="col-md-4 control-label"> Bill Number :<sup>*</sup></label> 
 								<!-- </div>	 -->
 								<div class="col-md-3">
 								<div class="input-group">
@@ -176,7 +176,7 @@
 						
 <!-- 						<div class="row" style="margin-top: 30px;"> -->
 					<!-- 			<div class="col-md-3 col-md-offset-3"> -->
-									<label class=" col-md-4 control-label"> Bill Number :</label> 
+									<label class=" col-md-4 control-label"> Bill Number :<sup>*</sup></label> 
 					<!-- 			</div> -->	
 								<div class="col-md-3">
 									<div class="input-group">

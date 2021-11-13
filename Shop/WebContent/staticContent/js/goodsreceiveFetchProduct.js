@@ -6036,7 +6036,7 @@
 			}, 1500);
 			return false;
 		}
-		if (document.goodsReceiveForm.mailid.value == "")
+		/*if (document.goodsReceiveForm.mailid.value == "")
 		{
 			var msg="Please Enter Email ID";
 			var dialog = bootbox.dialog({
@@ -6068,7 +6068,21 @@
 			}, 1500);
 			
 			return false;	
-		}
+		}*/
+		/*if (document.goodsReceiveForm.proName1.value == "")
+		{		
+			var msg="Please Select All Product Name";
+			var dialog = bootbox.dialog({
+						   
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			return false;
+		}*/
 		
 		addAdvanvceBooking();
 	}

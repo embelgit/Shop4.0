@@ -48,7 +48,8 @@ public class Mailer {
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 			message.setSubject("shop database backup By Embel Technologies Pvt Ltd");
 			message.setText("DATABASE BACKUP OF [Industry Name]");
-			String filename = "E:/dumpbackup/shop.sql";// change accordingly
+			//String filename = "E:/dumpbackup/shop.sql";// change accordingly
+			String filename = "D:/dumpbackup/shop.sql";// change accordingly
 				
 			DataSource source = new FileDataSource(filename);
 			message.setDataHandler(new DataHandler(source));

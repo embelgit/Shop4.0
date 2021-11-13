@@ -8,6 +8,8 @@
 <%@page import="com.Fertilizer.utility.PropertiesHelper"%>
 <%@page contentType="text/html; charset=utf-8" language="java" %>
 
+
+
 <%-- <%
    String abc = "english";
 %> --%>
@@ -31,6 +33,23 @@
 <meta name="description" content="" />
    
     <title>Login Page</title>
+    
+    
+       <script type="text/javascript" src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
+     <!--  <script type="text/javascript" src="/Shop/staticContent/js/jquery-1.11.1.min.js"></script> -->
+	 <link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
+     <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css">
+    
+     
+     <link rel="stylesheet" href="/Shop/staticContent/y_css/jquery-ui.css">
+     <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.css">
+     <script type="text/javascript" src="/Shop/staticContent/js/jquery.min.js"></script>
+     <!-- <script type="text/javascript" src="/Shop/staticContent/js/jquery-ui-min.js"></script> -->
+     
+      <script type="text/javascript" src="/Shop/staticContent/js/jquery-ui.min.js"></script>
+     <script type="text/javascript" src="/Shop/staticContent/js/jquery-ui.js"></script>
+     <script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
+     <script type="text/javascript" src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
     
 <script src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
 <script src="/Shop/staticContent/js/logout.js"></script>

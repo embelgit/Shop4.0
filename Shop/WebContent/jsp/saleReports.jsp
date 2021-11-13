@@ -219,7 +219,7 @@
 											</div>
 										</div>
 
-										<label class="col-md-3 control-label" for=""> Enter	Date:<sup>*</sup>
+										<label class="col-md-3 control-label" for=""> Enter	Date:
 										</label>
 										<div class="col-md-3">
 											<div class="input-group">

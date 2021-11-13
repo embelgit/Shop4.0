@@ -15,8 +15,8 @@ public class AutoDatabaseBackupJob {
 		try {
 			System.out.println("auto backup file");
 			//f = new File("F:/databackup/cloth.sql");
-			f = new File("E:/dumpbackup/shop.sql");
-			//f = new File("D:/databackup/cloth.sql");
+			f = new File("D:/dumpbackup/shop.sql");
+		     //f = new File("D:/dumpbackup/cloth.sql");
 		} catch (Exception ex) {
 			LoggerFactory.getLogger(getClass()).error(ex.getMessage());
 		}

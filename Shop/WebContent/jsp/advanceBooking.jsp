@@ -289,10 +289,10 @@ function mypopup()
 	window.location = "popUpcategoryDetails.jsp";
 }
 
-function clearGridSelect()
+<!-- function clearGridSelect()
 {
 	document.getElementById("proName").value = "";	
-}
+}-->
 </script>
 		<%
 	  		HttpSession session1 = request.getSession();
@@ -706,7 +706,7 @@ function hamaliExpenseAddingToGross()
 				</div>
 			</div>
            	
-        	      <label class="col-md-3 control-label" for="billNum" ><b>Supplier Email Id</b></label>  
+        	      <label class="col-md-3 control-label" for="billNum" ><b>Supplier Email Id:</b></label>  
 			           	 <div class="col-md-3">
 							<div class="input-group">
 								<span class="input-group-addon">
@@ -792,7 +792,7 @@ function hamaliExpenseAddingToGross()
 									</span>
 																		
 									<input list="product_drop" class="form-control input-md" id="proName" placeholder=" Product Name" name="proName"   
-									       onchange="advBookingproductDetailInGrid();clearGridSelect()">
+									       onchange="advBookingproductDetailInGrid();">
 									
 									<datalist id="product_drop"></datalist>
 									

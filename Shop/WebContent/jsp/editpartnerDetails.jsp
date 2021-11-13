@@ -42,7 +42,7 @@ function Back()
           <fieldset>
           
          
-           				 <label class="col-md-2 control-label" for="partner"> Partner Name</label>  
+           				 <label class="col-md-2 control-label" for="partner"> Partner Name<sup>*</sup></label>  
           					  <div class="col-md-3" style="margin-left: -4px;">
 								<div class="input-group" style="margin-left: -6px;">
 									<span class="input-group-addon">

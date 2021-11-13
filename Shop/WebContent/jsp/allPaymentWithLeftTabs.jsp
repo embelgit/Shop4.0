@@ -543,7 +543,7 @@ function creditlist(){
 		 					List trIdListCust = data2.getCustPayLastTransactionNo();
 		 					for(int i=0;i<trIdListCust.size();i++)
 		 					{
-		 						CustomerPaymentBean st = (CustomerPaymentBean)trIdListCust.get(i);
+		 						CustomerPaymentBean st = (CustomerPaymentBean)trIdListCust.get(i); 
 		 						transactionIdCust = st.getTransNoForCustomer();
 		 						transactionIdCust++;
 		 						System.out.println("transactionIdCust ====> 12313213 "+transactionIdCust);

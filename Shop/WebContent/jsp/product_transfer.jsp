@@ -61,19 +61,7 @@ function mypopup(url)
 } 
 </script>
  
- <script type="text/javascript">
-	var profiles = {
-		windowCenter : {
-			height : 550,
-			width : 660,
-			status : 1,
-			center : 1
-		},
-	};
-	$(function() {
-		$(".popupwindow").popupwindow(profiles);
-	});
-</script>
+ 
 <script type="text/javascript">
 
 	function supplierDetailsDivAction(a)
@@ -856,7 +844,7 @@ function hamaliExpenseAddingToGross()
 					<div align="center" style="padding-right: 120px;">
 		            	            																	<!-- good receive -->	
 		            	            																			
-		            <input type="button" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-success button-height-width" id="save" name="btn" value="Submit" onclick="addproducttx()">
+		            <input type="button" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-success button-height-width" id="save" name="btn" value="Submit" onclick="addproducttx1()">
 		            <input type="button" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-danger  button-height-width"  id="save" name="btn" value="Cancel" onclick="location.reload()">
 					<input style="height: 53px; width: 128; font-size: 25" type="button" value=" List"  id="listBtn" class="btn btn-primary" onclick="productlist()" /> 
 		         </div>

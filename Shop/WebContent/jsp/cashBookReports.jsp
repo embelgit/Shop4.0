@@ -398,7 +398,7 @@
 									<div class="row form-group" style="padding-top: 30px">
 
 										<label class="col-md-2 col-md-offset-3 control-label"
-											for="supplier">Supplier Name</label>
+											for="supplier">Supplier Name<sup>*</sup></label>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon"> <i
@@ -511,7 +511,7 @@
 
 									<div class="row form-group" style="padding-top: 30px">
 										<label class="col-md-3 control-label" for="supplier">Supplier
-											Name</label>
+											Name<sup>*</sup></label>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon"> <i
@@ -548,7 +548,7 @@
 										</div>
 
 										<label class="col-md-2 control-label" for="bill_no">
-											Bill No </label>
+											Bill No <sup>*</sup></label>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon"> No </span> <select
@@ -727,7 +727,7 @@
 								<fieldset>
 									<div class="row form-group" style="padding-top: 30px">
 										<label class="col-md-3 control-label" for="supplier">Supplier
-											Name</label>
+											Name<sup>*</sup></label>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon"> <i
@@ -1143,7 +1143,7 @@
 								<fieldset>
 									<div class="row form-group" style="padding-top: 30px">
 										<label class="col-md-2 col-md-offset-3 control-label"
-											for="customerName">Customer Name</label>
+											for="customerName">Customer Name<sup>*</sup></label>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon"> <i
@@ -1250,7 +1250,7 @@
 
 									<div class="row form-group" style="padding-top: 30px">
 										<label class="col-md-3 control-label" for="customerName">Customer
-											Name</label>
+											Name<sup>*</sup></label>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon"> <i
@@ -1287,7 +1287,7 @@
 
 
 										<label class="col-md-2 control-label" for="bill_no">
-											Bill No </label>
+											Bill No <sup>*</sup> </label>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon"> No </span> <select
@@ -1466,7 +1466,7 @@
 								<fieldset>
 									<div class="row form-group" style="padding-top: 30px">
 										<label class="col-md-3 control-label" for="customerName">Customer
-											Name</label>
+											Name <sup>*</sup></label>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon"> <i
@@ -2885,7 +2885,7 @@
 												<input type="button" id="btn" name="save"
 													style="height: 38px; width: 121px; font-size: 18"
 													class="btn  btn-success "
-													onclick="bankNameWiseReport()"
+													onclick="bankNameWiseReport1()"
 													value="Search" />
 											</div>
 										</div>

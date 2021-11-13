@@ -3,14 +3,32 @@ package com.Fertilizer.hibernate;
 public class SubCategoryDetailsBean {
 	
 	private Long fk_cat_id;
+	private Long pk_subcat_id;
 	private Long subcatId;
+	private long catId;
 	private String subcategoryName;
 	private String categoryName;
 	private Long fkshopid;
+	public long getCatId() {
+		return catId;
+	}
+
+	public void setCatId(long catId) {
+		this.catId = catId;
+	}
+
 	private Long fkuserid;
 	private String shopName;
 	private String userName;
 	
+	public Long getPk_subcat_id() {
+		return pk_subcat_id;
+	}
+
+	public void setPk_subcat_id(Long pk_subcat_id) {
+		this.pk_subcat_id = pk_subcat_id;
+	}
+
 	private Long srNo;
 	
 	//for mapping

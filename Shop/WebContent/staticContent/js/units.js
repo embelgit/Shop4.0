@@ -305,6 +305,12 @@ function updateMeasuringUnit()
 	var unitName2= $('#unitName2').val();
 	var unitDescription= $('#unitDescription').val();
 	
+	if(document.munits.unitName.value == "")
+	{
+	alert("Please Select SI Unit.");
+		return false;
+	}
+	
 	params["unitId"] = unitId;
 	
 	params["oldUnitName"] = oldUnitName;

@@ -175,9 +175,11 @@ function creditnote()
 		//alert(data);
 		if(document.creditnote)
 		{
-			window.location.reload();
-			document.getElementById("save").disabled = false;
 			window.open("CreditNoteGenerationPDF.jsp");
+			document.getElementById("save").disabled = false;
+			//window.location.reload();
+			
+			
 		}	
 	}
 	).error(function(jqXHR, textStatus, errorThrown){

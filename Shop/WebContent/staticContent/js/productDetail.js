@@ -241,7 +241,21 @@ function productDetails()
 		
 		return false;
 	}
-	
+	if(document.prd.buyPrice.value == "")
+	{
+			var msg="Enter Buy Price(Incl Tax)";
+			var dialog = bootbox.dialog({
+				//title: "Embel Technologies Says :",
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+		
+			return false;
+	}
 	if(document.prd.productName.value == "")
 	{
 			var msg="Enter Product Name";
@@ -257,28 +271,33 @@ function productDetails()
 		
 			return false;
 	}
-		
-/*	if(document.prd.buyPrice.value == "")
-	{
-		var msg="Please Enter Buy Price";
-		var dialog = bootbox.dialog({
-			//title: "Embel Technologies Says :",
-		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-		    closeButton: false
-		});
-		
-		setTimeout(function() {
-			dialog.modal('hide');
-		}, 1500);
 	
-		return false;
+	
+	
+	if(document.prd.spwithoutgst.value == "")
+	{
+			var msg="Enter S.P(Excl Tax)";
+			var dialog = bootbox.dialog({
+				//title: "Embel Technologies Says :",
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+		
+			return false;
 	}
 	
-	if(document.prd.salePrice.value == "")
+	//var letterNumber = /^[a-zA-Z0-9\\.;,:()' ]{0,100}$/;
+	//if(document.prd.productName.value.match(letterNumber))
+	//{ 
+	if(document.prd.mrp.value == "" )
 	{
-		var msg="Please Enter Sale Price";
+		var msg="Please Enter M.R.P";
 		var dialog = bootbox.dialog({
-			//title: "Embel Technologies Says :",
+			
 		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 		    closeButton: false
 		});
@@ -286,14 +305,48 @@ function productDetails()
 		setTimeout(function() {
 			dialog.modal('hide');
 		}, 1500);
-	
-		return false;
-	}*/
-			 
-	var letterNumber = /^[a-zA-Z0-9\\.;,:()' ]{0,100}$/;
-	//if(document.prd.productName.value.match(letterNumber))
-	//{   
-		/*if(document.prd.manufacturingCompany.value == "")
+		
+    	return false;
+	}else{
+		
+		//var checkmrp=  /^[-+]?[0-9]+\.[0-9]+$/;  with decimal point 
+		var checkmrp = /^[0-9]+\.?[0-9]*$/;
+		if(document.prd.mrp.value.match(checkmrp))
+		{
+			
+		}
+		else{
+			
+			var msg="Please Enter Valid M.R.P";
+			var dialog = bootbox.dialog({
+				
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);									
+		 
+			return false;
+		}
+	}
+	if(document.prd.taxPercentage.value == "" )
+	{
+		var msg="Please Select Tax Type";
+		var dialog = bootbox.dialog({
+			
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+    	return false;
+	}
+		if(document.prd.manufacturingCompany.value == "")
 		{
 			var msg="Enter Manufacturing Company";
 			var dialog = bootbox.dialog({
@@ -308,7 +361,7 @@ function productDetails()
 			
 			return false;
 		}
-		*/
+		
 		
 		/*if(document.prd.hsn.value == "")
 		{
@@ -373,60 +426,8 @@ function productDetails()
 	    	return false;
 		}*/
 		
-		/*if(document.prd.mrp.value == "" )
-		{
-			var msg="Please Enter M.R.P";
-			var dialog = bootbox.dialog({
-				
-			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-			    closeButton: false
-			});
 			
-			setTimeout(function() {
-				dialog.modal('hide');
-			}, 1500);
-			
-	    	return false;
-		}else{
-			
-			//var checkmrp=  /^[-+]?[0-9]+\.[0-9]+$/;  with decimal point 
-			var checkmrp = /^[0-9]+\.?[0-9]*$/;
-			if(document.prd.mrp.value.match(checkmrp))
-			{
-				
-			}
-			else{
-				
-				var msg="Please Enter Valid M.R.P";
-				var dialog = bootbox.dialog({
-					
-				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-				    closeButton: false
-				});
-				
-				setTimeout(function() {
-					dialog.modal('hide');
-				}, 1500);									
-			 
-				return false;
-			}
-		}*/	
-			
-		/*if(document.prd.taxPercentage.value == "" )
-		{
-			var msg="Please Select Tax Type";
-			var dialog = bootbox.dialog({
-				
-			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-			    closeButton: false
-			});
-			
-			setTimeout(function() {
-				dialog.modal('hide');
-			}, 1500);
-			
-	    	return false;
-		}*/
+		
 
 		/*if(document.prd.weight.value == "")
 		{

@@ -88,6 +88,38 @@ function calculateTax1()
 		
       return false;
 	 }
+	
+	 if(document.txc.cgst.value == "")
+		{
+				var msg="Enter CGST";
+				var dialog = bootbox.dialog({
+					//title: "Embel Technologies Says :",
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);
+			
+				return false;
+		}
+			
+		if(document.txc.sgst.value == "")
+		{
+			var msg="Please Enter SGST";
+			var dialog = bootbox.dialog({
+				//title: "Embel Technologies Says :",
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+		
+			return false;
+		}
 	 var letterNumber = /^[a-zA-Z0-9, ]+$/;
 	 //if(taxType.match(letterNumber))
 	// {
@@ -149,6 +181,8 @@ function calculateTax1()
 		 
 				return false;
 			}*/
+		 
+		
 		}
   
   function txCreation(){
