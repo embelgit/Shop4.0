@@ -447,24 +447,63 @@ function editEmployee(){
 		
 	if(document.empd1.firstName.value == "")
 	{
-		alert("Enter Employee First Name.");
+		var msg="Enter Employee First Name.";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
 		return false;
+		/*alert("Enter Employee First Name.");
+		return false;*/
 	}	
 	var letterNumber = /^[a-zA-Z, ]+$/;
 	if(document.empd1.firstName.value.match(letterNumber))
 	{
 		if(document.empd1.middleName.value == "")
 		{
-			alert("Enter Employee Middle Name.");
+			var msg="Enter Employee Middle Name.";
+			var dialog = bootbox.dialog({
+				//title: "Embel Technologies Says :",
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			
 			return false;
+			/*alert("Enter Employee Middle Name.");
+			return false;*/
 		}	
 		var letterNumber = /^[a-zA-Z, ]+$/;
 		if(document.empd1.middleName.value.match(letterNumber))
 		{
 			if(document.empd1.lastName.value == "")
 			{
-				alert("Enter Employee Last Name.");
+				var msg="Enter Employee Last Name.";
+				var dialog = bootbox.dialog({
+					//title: "Embel Technologies Says :",
+			   	 	message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+			    	message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    	closeButton: false
+				});
+			
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);
+			
 				return false;
+				/*alert("Enter Employee Last Name.");
+				return false;*/
 			}	
 			var letterNumber = /^[a-zA-Z, ]+$/;
 			if(document.empd1.lastName.value.match(letterNumber))
@@ -477,42 +516,105 @@ function editEmployee(){
 	   	        	 
 	   	        		 if ( document.empd1.salary.value == "" )
 	   	        		 {
-				         
-				  	       alert("Please Enter Salary.");
-				          return false;
+				         	var msg="Please Enter Salary.";
+							var dialog = bootbox.dialog({
+								//title: "Embel Technologies Says :",
+							    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+							    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+							    closeButton: false
+							});
+							
+							setTimeout(function() {
+								dialog.modal('hide');
+							}, 1500);
+							
+							return false;
+				  	      /* alert("Please Enter Salary.");
+				          return false;*/
 	   	        		 }
 	   	        		 var letterNumber = /^[0-9]+$/;
 	   	        		 if(document.empd1.salary.value.match(letterNumber))
 	   	        		 {
 	   	        			 if ( document.empd1.contactNo.value == "" )
 	   	        			 {
-					  	       alert("Please Enter Contact Number");
-					  	       return false;
+								var msg="Please Enter Contact Number";
+								var dialog = bootbox.dialog({
+									//title: "Embel Technologies Says :",
+								    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+								    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+								    closeButton: false
+								});
+								
+								setTimeout(function() {
+									dialog.modal('hide');
+								}, 1500);
+								
+								return false;
+					  	       /*alert("Please Enter Contact Number");
+					  	       return false;*/
 	   	        			 }
 	   	        			 var letterNumber = /^[0-9]{10}$/;
 	   	        			 if(document.empd1.contactNo.value.match(letterNumber))
 	   	        			 {
 	   	        				if(document.empd1.address.value == "")
 	   	        				{
-	   	        					alert("Please Enter Employee Address.");
-	   	        					return false;
+									var msg="Please Enter Employee Address.";
+									var dialog = bootbox.dialog({
+										//title: "Embel Technologies Says :",
+									    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+									    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+									    closeButton: false
+									});
+									
+									setTimeout(function() {
+										dialog.modal('hide');
+									}, 1500);
+									
+									return false;
+	   	        					/*alert("Please Enter Employee Address.");
+	   	        					return false;*/
 	   	        				}	
 	   	        				var letterNumber = /^[a-zA-Z0-9, ]+$/;
 	   	        				if(document.empd1.address.value.match(letterNumber))
 	   	        				{
 	   	        					if ( document.empd1.zipCode.value == "" )
 								    {
-								         
-								  	      alert("Please Enter Zip Code");
-								          return false;
+								        var msg="Please Enter Zip Code";
+										var dialog = bootbox.dialog({
+											//title: "Embel Technologies Says :",
+										    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+										    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+										    closeButton: false
+										});
+										
+										setTimeout(function() {
+											dialog.modal('hide');
+										}, 1500);
+										
+										return false;
+								  	      /*alert("Please Enter Zip Code");
+								          return false;*/
 								    }
 									var letterNumber = /^[0-9]{6}$/;
 									if(document.empd1.zipCode.value.match(letterNumber))
 									{	
 										if(document.empd1.adhaarNumber.value == "")
 										{
-											alert("Please Enter Adhaar Number");
+											var msg="Please Enter Adhaar Number";
+											var dialog = bootbox.dialog({
+												//title: "Embel Technologies Says :",
+											    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+											    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+											    closeButton: false
+											});
+											
+											setTimeout(function() {
+												dialog.modal('hide');
+											}, 1500);
+											
 											return false;
+											/*alert("Please Enter Adhaar Number");
+											return false;*/
 										}
 										var letterNumber = /^[0-9]{12}$/;
 										if(document.empd1.adhaarNumber.value.match(letterNumber))
@@ -522,63 +624,179 @@ function editEmployee(){
 										}
 										else
 										{
-											alert("Please Enter Valid 12 Digit Adhaar Number");
+											var msg="Please Enter Valid 12 Digit Adhaar Number";
+											var dialog = bootbox.dialog({
+												//title: "Embel Technologies Says :",
+											    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+											    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+											    closeButton: false
+											});
+											
+											setTimeout(function() {
+												dialog.modal('hide');
+											}, 1500);
+											/*alert("Please Enter Valid 12 Digit Adhaar Number");*/
 										}		
 										
 										}
 									else
 										{
-												alert("Enter 6 digit Numbers Only in zip code..!!");
-												return false;
+											var msg="Enter 6 digit Numbers Only in zip code..!";
+											var dialog = bootbox.dialog({
+												//title: "Embel Technologies Says :",
+											    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+											    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+											    closeButton: false
+											});
+											
+											setTimeout(function() {
+												dialog.modal('hide');
+											}, 1500);
+											
+											return false;
+												/*alert("Enter 6 digit Numbers Only in zip code..!!");
+												return false;*/
 											}
 										}
 									
 	   	        				else
 									{
-										alert("Enter Alphabates Only in address..!!");
+										var msg="Enter Alphabates Only in address..!";
+										var dialog = bootbox.dialog({
+											//title: "Embel Technologies Says :",
+										    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+										    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+										    closeButton: false
+										});
+										
+										setTimeout(function() {
+											dialog.modal('hide');
+										}, 1500);
+										
 										return false;
+										/*alert("Enter Alphabates Only in address..!!");
+										return false;*/
 									}	
 								}
 										
 	   	        			 else
 								{
-									alert("Enter 10 digit Numbers Only in contact number..!!");
+									var msg="Enter 10 digit Numbers Only in contact number..!";
+									var dialog = bootbox.dialog({
+										//title: "Embel Technologies Says :",
+									    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+									    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+									    closeButton: false
+									});
+									
+									setTimeout(function() {
+										dialog.modal('hide');
+									}, 1500);
+									
 									return false;
+									/*alert("Enter 10 digit Numbers Only in contact number..!!");
+									return false;*/
 									}	
 								}
 										
 	   	        		 else
 							{
-								alert("Enter Numbers Only in salary..!!");
+								var msg="Enter Numbers Only in salary..!";
+								var dialog = bootbox.dialog({
+									//title: "Embel Technologies Says :",
+								    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+								    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+								    closeButton: false
+								});
+								
+								setTimeout(function() {
+									dialog.modal('hide');
+								}, 1500);
+								
 								return false;
+								/*alert("Enter Numbers Only in salary..!!");
+								return false;*/
 							}
 						}
 										
 	   	        	 else
 						{
-							alert("Enter a Valid email adress..!!");
+							var msg="Enter a Valid email adress..!";
+							var dialog = bootbox.dialog({
+								//title: "Embel Technologies Says :",
+							    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+							    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+							    closeButton: false
+							});
+							
+							setTimeout(function() {
+								dialog.modal('hide');
+							}, 1500);
+							
 							return false;
+							/*alert("Enter a Valid email adress..!!");
+							return false;*/
 						}
 					}
 																
 			else
 				{
-					alert("Enter Alphabets Only in last name..!!");
+					var msg="Enter Alphabets Only in last name..!";
+					var dialog = bootbox.dialog({
+						//title: "Embel Technologies Says :",
+					    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+					    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+					    closeButton: false
+					});
+					
+					setTimeout(function() {
+						dialog.modal('hide');
+					}, 1500);
+					
 					return false;
+
+					/*alert("Enter Alphabets Only in last name..!!");
+					return false;*/
 				}
 			}
 																
 		else
 			{
-				alert("Enter Alphabets Only in middle name..!!");
+				var msg="Enter Alphabets Only in middle name..!";
+				var dialog = bootbox.dialog({
+					//title: "Embel Technologies Says :",
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);
+				
 				return false;
+				/*alert("Enter Alphabets Only in middle name..!!");
+				return false;*/
 			}
 		}
 												
 	else
 		{
-			alert("Enter Alphabets Only in first name..!!");
+			var msg="Enter Alphabets Only in first name..!";
+			var dialog = bootbox.dialog({
+				//title: "Embel Technologies Says :",
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			
 			return false;
+			/*alert("Enter Alphabets Only in first name..!!");
+			return false;*/
 		}
 	
 }

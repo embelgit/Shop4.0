@@ -1,11 +1,41 @@
 function normalCustFertilzerBillCOPYValidate()
 {
 	var BillNo = $("#BillNo").val();
+	var fDate = $("#fDate").val();
 	
+	if(fDate == "")
+	{		
+		var msg="Please Enter Normal Customer Name";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+
+	}
 	if(BillNo == "")
 	{		
-		alert("Please Enter Normal Customer Bill Number");
+		var msg="Please Enter Normal Customer Bill Number";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
 		return false;
+
 	}
 	else
 	{
@@ -59,16 +89,46 @@ function normalCustFertilzerBillCOPY()
 function creditCustFertilzerBillCOPYValidate()
 {
 	var CreditBillNo = $("#CreditBillNo").val();
+	var cDate = $("#cDate").val();
 	
+	if(cDate == "")
+	{		
+		var msg="Please Enter Credit Customer Name";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+
+	}
 	if(CreditBillNo == "")
-		{
-			alert("Please Enter Credit Customer Bill Number");
-			return false;
-		}
+	{		
+		var msg="Please Enter Credit Customer Bill Number";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+
+	}
 	else
-		{
-			creditCustFertilzerBillCOPY();
-		}
+	{
+		creditCustFertilzerBillCOPY();
+	}
 }
 
 function creditCustFertilzerBillCOPY()

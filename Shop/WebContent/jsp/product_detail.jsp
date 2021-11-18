@@ -1426,7 +1426,7 @@ function caldis(){
             			</div>
             		</div>
             		
-            		<label class="col-md-2 control-label" for="sgst">SGST</label>  
+            		<label class="col-md-2 control-label" for="sgst">SGST<sup>*</sup></label>  
             		<div class="col-md-3">
             			<div class="input-group">
 							<span class="input-group-addon">
@@ -1439,7 +1439,7 @@ function caldis(){
 					</div>
 			
 				<div class="row form-group" style="padding-top:6%;">
-           				<label class="col-md-2 control-label" for="cgst">CGST</label>  
+           				<label class="col-md-2 control-label" for="cgst">CGST<sup>*</sup></label>  
 		           	 <div class="col-md-3" style="padding-left: 24px;">
             			<div class="input-group">
 							<span class="input-group-addon">

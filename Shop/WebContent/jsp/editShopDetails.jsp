@@ -9,6 +9,8 @@
 <head> 
 	<meta charset="utf-8">
 	<script type="text/javascript" src="/Shop/staticContent/js/shopdetails.js"></script>
+	<script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
 	<script type="text/javascript">
 	
   			function Back()

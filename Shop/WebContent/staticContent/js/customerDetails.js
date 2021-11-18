@@ -27,7 +27,7 @@ function customerDetails()
 		
 		return false;
 	}
-	/*
+	
 	if(LName == "")
 	{
 		var msg="Please Enter Last Name";
@@ -43,8 +43,8 @@ function customerDetails()
 		}, 1500);
 		
 		return false;
-	}*/
-	/*
+	}
+	
 	if(contactno == "")
 	{
 		var msg="Please Enter Contact Number";
@@ -82,7 +82,7 @@ function customerDetails()
 			return false;
 		}
 		
-	}*/
+	}
 	    custDetails();	
 }						   	        	 
 

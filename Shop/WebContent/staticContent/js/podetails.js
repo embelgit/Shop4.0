@@ -1082,7 +1082,8 @@
 	{
 		var fisDatePO = $("#fisDatePO").val();
 		var endDatePO = $("#endDatePO").val();
-		var fkSupplierIdPO = $("#fkSupplierIdPO").val(); 
+		var fkSupplierIdPO = $("#fkSupplierIdPO").val();
+		var POno = $("#POno").val(); 
 		
 		if(fisDatePO != null && fisDatePO != "")
 			{
@@ -1090,7 +1091,22 @@
 					{
 						if(fkSupplierIdPO != null && fkSupplierIdPO != "")
 							{
-							purchaseOrderReports();
+								if(POno != null && POno != "")
+								{
+									purchaseOrderReports();
+								}
+								else
+								{
+									var msg="Please Select PO No.";
+									var dialog = bootbox.dialog({
+								    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+								    closeButton: false
+									});			
+									setTimeout(function() {
+										dialog.modal('hide');
+									}, 1500);
+									return false;
+								}		
 							}
 						else
 							{

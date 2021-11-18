@@ -729,41 +729,7 @@ function productDetails1(){
 		
 			return false;
 	}
-	/*if(document.prd.buyPrice.value == "")
-	{
-		var msg="Please Enter Buy Price";
-		var dialog = bootbox.dialog({
-			//title: "Embel Technologies Says :",
-		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-		    closeButton: false
-		});
-		
-		setTimeout(function() {
-			dialog.modal('hide');
-		}, 1500);
-	
-		return false;
-	}
-	if(document.prd.salePrice.value == "")
-	{
-		var msg="Please Enter Sale Price";
-		var dialog = bootbox.dialog({
-			//title: "Embel Technologies Says :",
-		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-		    closeButton: false
-		});
-		
-		setTimeout(function() {
-			dialog.modal('hide');
-		}, 1500);
-	
-		return false;
-	}
-			 
-	var letterNumber = /^[a-zA-Z0-9\\.;,:()' ]{0,100}$/;
-	//if(document.prd.productName.value.match(letterNumber))
-	//{   
-		if(document.prd.manufacturingCompany.value == "")
+			if(document.prd.manufacturingCompany.value == "")
 		{
 			var msg="Enter Manufacturing Company";
 			var dialog = bootbox.dialog({
@@ -778,95 +744,7 @@ function productDetails1(){
 			
 			return false;
 		}
-		
-		if(document.prd.hsn.value == "")
-		{
-			var msg="Enter HSN Code";
-			var dialog = bootbox.dialog({
-				
-			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-			    closeButton: false
-			});
-			
-			setTimeout(function() {
-				dialog.modal('hide');
-			}, 1500);
-			
-			return false;
-		}	
-			
-		if(fk_unit_id == "" )
-		{
-			var msg="Please Enter Unit";
-			var dialog = bootbox.dialog({
-				
-			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-			    closeButton: false
-			});
-			
-			setTimeout(function() {
-				dialog.modal('hide');
-			}, 1500);
-			
-	    	return false;
-		}
-		
-		if(document.prd.mrp.value == "" )
-		{
-			var msg="Please Enter M.R.P";
-			var dialog = bootbox.dialog({
-				
-			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-			    closeButton: false
-			});
-			
-			setTimeout(function() {
-				dialog.modal('hide');
-			}, 1500);
-			
-	    	return false;
-		}else{
-			
-			//var checkmrp=  /^[-+]?[0-9]+\.[0-9]+$/;  with decimal point 
-			var checkmrp = /^[0-9]+\.?[0-9]*$/;
-			if(document.prd.mrp.value.match(checkmrp))
-			{
-				
-			}
-			else{
-				
-				var msg="Please Enter Valid M.R.P";
-				var dialog = bootbox.dialog({
-					
-				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-				    closeButton: false
-				});
-				
-				setTimeout(function() {
-					dialog.modal('hide');
-				}, 1500);									
-			 
-				return false;
-			}
-		}	
-			
-		if(document.prd.taxPercentage.value == "" )
-		{
-			var msg="Please Select Tax Type";
-			var dialog = bootbox.dialog({
-				
-			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-			    closeButton: false
-			});
-			
-			setTimeout(function() {
-				dialog.modal('hide');
-			}, 1500);
-			
-	    	return false;
-		}
-
-		if(document.prd.weight.value == "")
+	/*			if(document.prd.weight.value == "")
 		{
 				var msg="Please Select Packing";
 				var dialog = bootbox.dialog({
@@ -934,8 +812,160 @@ function productDetails1(){
 					 
 						return false;
     				}
-				 				 
-				 if(document.prd.fk_shop_id.value == "")
+		if(fk_unit_id == "" )
+		{
+			var msg="Please Enter Unit";
+			var dialog = bootbox.dialog({
+				
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			
+	    	return false;
+		}*/
+		if(document.prd.fk_tax_id.value == "" )
+		{
+			var msg="Please Select Tax Type";
+			var dialog = bootbox.dialog({
+				
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			
+	    	return false;
+		}
+		/*if(document.prd.taxPercentage.value == "" )
+		{
+			var msg="Please Enter Tax Percentage";
+			var dialog = bootbox.dialog({
+				
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			
+	    	return false;
+		}		
+		if(document.prd.mrp.value == "" )
+		{
+			var msg="Please Enter M.R.P";
+			var dialog = bootbox.dialog({
+				
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			
+	    	return false;
+		}else{
+			
+			//var checkmrp=  /^[-+]?[0-9]+\.[0-9]+$/;  with decimal point 
+			var checkmrp = /^[0-9]+\.?[0-9]*$/;
+			if(document.prd.mrp.value.match(checkmrp))
+			{
+				
+			}
+			else{
+				
+				var msg="Please Enter Valid M.R.P";
+				var dialog = bootbox.dialog({
+					
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);									
+			 
+				return false;
+			}
+		}	*/
+	if(document.prd.buyPrice.value == "")
+	{
+		var msg="Please Enter Buy Price";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+	
+		return false;
+	}
+	if(document.prd.spwithoutgst.value == "")
+	{
+			var msg="Enter S.P(Excl Tax)";
+			var dialog = bootbox.dialog({
+				//title: "Embel Technologies Says :",
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+		
+			return false;
+	}
+	if(document.prd.salePrice.value == "")
+	{
+		var msg="Please Enter Sale Price";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+	
+		return false;
+	}
+			 
+	//var letterNumber = /^[a-zA-Z0-9\\.;,:()' ]{0,100}$/;
+	//if(document.prd.productName.value.match(letterNumber))
+	//{   
+
+		
+		/*if(document.prd.hsn.value == "")
+		{
+			var msg="Enter HSN Code";
+			var dialog = bootbox.dialog({
+				
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			
+			return false;
+		}	*/
+			
+		
+			
+			 				 
+			/*	 if(document.prd.fk_shop_id.value == "")
 					{
 					 	var msg="Please Select Shop Name";
 						var dialog = bootbox.dialog({
@@ -949,8 +979,8 @@ function productDetails1(){
 						}, 1500);
 					 
 						return false;
-					}*/
-				 
+					}
+*/				 
 				        prdctDetails1();
 		      //}
 }

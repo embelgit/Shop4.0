@@ -1122,7 +1122,7 @@
 												<span class="input-group-addon"> <i
 													class="glyphicon glyphicon-usd"></i>
 												</span> <select class="form-control" id="paymentModeId4">
-													<option value="selected">-Select Type--</option>
+													<option value="">-Select Type--</option>
 													<option value="cash">Cash</option>
 													<option value="cheque">Cheque</option>
 													<option value="card">Card</option>

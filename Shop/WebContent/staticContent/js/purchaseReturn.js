@@ -1315,7 +1315,18 @@ function supplierWisePurchaseReturnReportValidate()
 				}
 				else
 				{
-					alert("Please Select Supplier Name");
+					var msg="Please Select Supplier Name";
+					var dialog = bootbox.dialog({
+						//title: "Embel Technologies Says :",
+					    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+					    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+					    closeButton: false
+					});
+					
+					setTimeout(function() {
+						dialog.modal('hide');
+					}, 1500);
+					/*alert("Please Select Supplier Name");*/
 				}
 			/*}
 			else

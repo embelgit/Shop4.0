@@ -37,6 +37,10 @@
 <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.print.min.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"> 
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
+
+<script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
+<script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
+
 <!-- <link rel="stylesheet" href="https://code.jquery.com/jquery-3.5.1.js">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js">  -->
 

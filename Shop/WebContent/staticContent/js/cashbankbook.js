@@ -7682,7 +7682,15 @@ function partnerWiseReport()
 
 						if (catmap == "" || catmap == null)
 						{
-							alert("Select Partner Name");
+							var msg="Select Partner Name";
+							var dialog = bootbox.dialog({
+						    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+						    closeButton: false
+							});			
+							setTimeout(function() {
+								dialog.modal('hide');
+							}, 1500);
+							//alert("Select Partner Name");
 							return false;
 						}
 

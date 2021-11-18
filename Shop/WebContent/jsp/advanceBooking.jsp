@@ -1180,7 +1180,7 @@ function hamaliExpenseAddingToGross()
  	if (abc.equals("english")) {
  %>Product Name<%
  	}
- %> <sup>*</sup>
+ %><sup>*</sup>
 					</label>
 					<div class="col-md-3">
 						<div class="input-group">
@@ -1202,7 +1202,7 @@ function hamaliExpenseAddingToGross()
  	if (abc.equals("english")) {
  %>Manufacturing Company<%
  	}
- %>
+ %><sup>*</sup>
 					</label>
 					<div class="col-md-3">
 						<div class="input-group">
@@ -1284,7 +1284,7 @@ function hamaliExpenseAddingToGross()
 				</div>
 
 				<div class="row form-group">
-					<label class="col-md-2 control-label" style="text-align: right"	for="fk_tax_id">Tax Name</label>
+					<label class="col-md-2 control-label" style="text-align: right"	for="fk_tax_id">Tax Name<sup>*</sup></label>
 					<div class="col-md-3" style="width: 292px;">
 						<div class="input-group" style="width: 100%;">
 							<span class="input-group-addon"> 
@@ -1405,7 +1405,7 @@ function hamaliExpenseAddingToGross()
 <%	} %> <%
  	if (abc.equals("english")) {
  %>Buy Price(Incl Tax)<%
- 	} %>
+ 	} %><sup>*</sup>
 	</label>
 
 					<div class="col-md-3">
@@ -1425,7 +1425,7 @@ function hamaliExpenseAddingToGross()
  %><%=PropertiesHelper.marathiProperties.getProperty("spwithoutgst")%>
 	<%	}%> <%
  	if (abc.equals("english")) {
- %>S.P(Excl Tax)<%	}%>
+ %>S.P(Excl Tax)<%	}%><sup>*</sup>
  </label>
 					<div class="col-md-3">
 						<div class="input-group">
@@ -1443,7 +1443,7 @@ function hamaliExpenseAddingToGross()
  %><%=PropertiesHelper.marathiProperties.getProperty("salePrice")%>
 	<% } %> <%
  	if (abc.equals("english")) {
- %>Sale Price/Unit(Incl Tax)<% } %>
+ %>Sale Price/Unit(Incl Tax)<% } %><sup>*</sup>
 	</label>
 	                <div class="col-md-3">
 						<div class="input-group">

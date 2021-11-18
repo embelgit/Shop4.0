@@ -3601,10 +3601,24 @@ parseFloat(pageTotal).toFixed(2)
 function creditCustomerSaleReportBillAndNameWiseValidation()
 {
 	var creditCustBillAndName = document.creditCustomerSaleReportSingleDateForm.creditCustBillId.value;
+	var fDateCrteditCustSingleDate = document.creditCustomerSaleReportSingleDateForm.fDateCrteditCustSingleDate.value;
 	
 	if(creditCustBillAndName == "")
 	{
 		var msg="Please Select Credit Customer Name";
+		var dialog = bootbox.dialog({
+	    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+	    closeButton: false
+		});			
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		return false;
+	}
+	
+	if(fDateCrteditCustSingleDate == "")
+	{
+		var msg="Please Select Date";
 		var dialog = bootbox.dialog({
 	    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 	    closeButton: false
@@ -4516,7 +4530,7 @@ function rangeAndPaymentModeWiseValidation()
 	
 	if(fisDateForPay4 == "")
 	{
-		var msg="Please select First Date";
+		var msg="Please Select First Date";
 		var dialog = bootbox.dialog({
 	    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 	    closeButton: false
@@ -4529,7 +4543,7 @@ function rangeAndPaymentModeWiseValidation()
 	
 	if(endDateForPay4 == "")
 	{
-		var msg="Please select Second Date";
+		var msg="Please Select Second Date";
 		var dialog = bootbox.dialog({
 	    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 	    closeButton: false
@@ -4541,7 +4555,7 @@ function rangeAndPaymentModeWiseValidation()
 	}
 	if(paymentModeId4 == "")
 	{
-		var msg="Please select Payment Mode";
+		var msg="Please Select Payment Mode";
 		var dialog = bootbox.dialog({
 	    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 	    closeButton: false
@@ -4785,12 +4799,29 @@ function saleReturnReportBetweenTwoDate(){
 	var startDate = $("#StartDate1").val();
 	var endDate = $("#EndDate1").val();
 	
-	if(startDate=="" || startDate==null || startDate==undefined){
-		alert("Please enter start date ");
+	if(startDate=="" || startDate==null){
+		var msg="Please Enter Start Date";
+		var dialog = bootbox.dialog({
+	    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+	    closeButton: false
+		});			
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+
+		//alert("Please enter start date ");
 		return false;
 	}
-	if(endDate=="" || endDate==null || endDate==undefined){
-		alert("Please enter end date ");
+	if(endDate=="" || endDate==null){
+		var msg="Please Enter End Date";
+		var dialog = bootbox.dialog({
+	    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+	    closeButton: false
+		});			
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		//alert("Please enter end date ");
 		return false;
 	}
 	
@@ -4924,11 +4955,29 @@ function billReportBetweenTwoDate(){
 	var endDate = $("#EndDate10").val();
 
 	if(startDate=="" || startDate==null || startDate==undefined){
-		alert("Please enter start date ");
+		var msg="Please Enter Start Date";
+		var dialog = bootbox.dialog({
+	    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+	    closeButton: false
+		});			
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+
+		//alert("Please enter start date ");
 		return false;
 	}
 	if(endDate=="" || endDate==null || endDate==undefined){
-		alert("Please enter end date ");
+		var msg="Please Enter End Date";
+		var dialog = bootbox.dialog({
+	    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+	    closeButton: false
+		});			
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		//alert("Please enter end date ");
 		return false;
 	}
 	billReportBetweenTwoDate1();

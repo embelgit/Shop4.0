@@ -21,6 +21,11 @@
 <link href="/Shop/staticContent/css/button.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
 <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css">
+
+<script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
+<script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
+
+
 <style>
 .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
  {

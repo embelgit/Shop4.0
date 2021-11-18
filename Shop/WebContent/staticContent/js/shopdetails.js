@@ -334,51 +334,168 @@ function updateshopDetails(){
 	
 	if(document.shop1.shop.value == "")
 	{
-		alert("Please Select Shop Name.");
+		var msg="Please Select Shop Name";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
 		return false;
+		/*alert("Please Select Shop Name.");
+		return false;*/
 	}
 	if(document.shop1.shopName.value == "")
 	{
-		alert("Enter Shop Name.");
+		var msg="Enter Shop Name";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
 		return false;
+		/*alert("Enter Shop Name.");
+		return false;*/
 	}
 	if(document.shop1.contactNumber.value == "")
 	{
-		alert("Enter Contact No.");
+		var msg="Enter Contact No.";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
 		return false;
+		/*alert("Enter Contact No.");
+		return false;*/
 	}else{
 		 var contactNumber = /^[0-9]{10}$/;
 		 if(document.shop1.contactNumber.value.match(contactNumber))
 			 { }
 		 else{
-			    alert("Enter 10 digit Numbers Only in Contact No..!!");
+				var msg="Enter 10 digit Numbers Only in Contact No.";
+				var dialog = bootbox.dialog({
+					//title: "Embel Technologies Says :",
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);
+				
 				return false;
+			    /*alert("Enter 10 digit Numbers Only in Contact No..!!");
+				return false;*/
 		 }	
 	}
 	if(document.shop1.gstNo.value == "")
 	{
-		alert("Enter Shop GST No.");
+		var msg="Enter Shop GST No.";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
 		return false;
+		/*alert("Enter Shop GST No.");
+		return false;*/
 	}
 	if(document.shop1.address.value == "")
 	{
-		alert("Enter Shop Address ");
+		var msg="Enter Shop Address";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
 		return false;
+		/*alert("Enter Shop Address ");
+		return false;*/
 	}
 	if(document.shop1.wholesaleNo.value == "")
 	{
-		alert("Enter Shop Wholesale Lic No ");
+		var msg="Enter Shop Wholesale Lic No";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
 		return false;
+		/*alert("Enter Shop Wholesale Lic No ");
+		return false;*/
 	}
 	if(document.shop1.shopLicNo.value == "")
 	{
-		alert("Enter Shop Lic No ");
+		var msg="Enter Shop Lic No";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
 		return false;
+		/*alert("Enter Shop Lic No ");
+		return false;*/
 	}
 	if(document.shop1.footername.value == "")
 	{
-		alert("Enter Shop Footer Name ");
+		var msg="Enter Shop Footer Name";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
 		return false;
+		/*alert("Enter Shop Footer Name ");
+		return false;*/
 	}
 		
 	updtshopDetails();	
