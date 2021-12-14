@@ -461,11 +461,13 @@ public List getsubCatDetails(){
 	SubCategoryDetailsBean p = new SubCategoryDetailsBean();
 	System.out.println("result - "+Arrays.toString(o));
 	k++;
+	p.setFk_cat_id(Long.parseLong(o[2].toString()));
 	p.setCategoryName(o[0].toString());
 		p.setSubcategoryName(o[1].toString());
-	p.setCategoryName(o[2].toString());
+	
 	p.setSrNo(k);
 	catList.add(p);
+
 
 }}
 	catch(RuntimeException e){	

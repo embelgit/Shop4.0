@@ -122,12 +122,13 @@
 				<td class="align"><%=sr.getCategoryName()%></td>
 				<td class="align"><%=sr.getSubcategoryName()%></td>
 <td class="align"><i class="glyphicon glyphicon-trash" style="font-size:27px;margin-left:50px" 
-                      id="<%=sr.getSubcatId()%>,
-					 <%=sr.getCategoryName()%>
+                   id="<%=sr.getSubcatId()%>					
+                    <%=sr.getCategoryName()%>,
 					 <%=sr.getSubcategoryName()%>" 
 					 onclick="delsubcat1(this.id);return false;"></i></td>	
-					 																				
+					 																			
 				</tr>
+	
 	
 				<%
 					}
