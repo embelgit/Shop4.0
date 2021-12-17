@@ -93,7 +93,7 @@
             	<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 my-auto">
                 	<div class="login-panel panel panel-default">
                     	<div class="panel-heading">
-                        	<h3 class="panel-title" style="font-weight: bold;"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("please") %> :<%}%> <%if(abc.equals("english")){%>Please Login<%}%></h3>
+                        	<h3 class="panel-title" style="font-weight: bold;"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("please") %> :<%}%> <%if(abc.equals("english")){%>Please Login :<%}%></h3>
           				</div>
                     	<div class="panel-body">
                         	<form action="Login" method="post" id="loginId">

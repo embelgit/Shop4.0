@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.login-background {
+	background-image: url('/Shop/staticContent/images/uow221830.jpg');
+	background-size: cover;
+	background-repeat: norepeat;
+}
+.login-form {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	flex-direction: column;
+}
+h3.panel-title {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    font-weight: 800 !important;
+    margin: 10px 0;
+}
+.login-panel {
+    margin-top: 0%;
+    border: none;
+}
+.panel-body {
+    padding: 25px;
+}
+.form-control {
+    /* display: block; */
+    width: 100%;
+    height: 36px;
+    padding: 4px 12px;
+    border-radius: 8px;
+    border: 1px solid #df8222;
+    font-size: 16px;
+    /* line-height: 1.42857143; */
+    color: #555;
+    box-shadow: none !important;
+    background-color: #fff;
+    background-image: none;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    /* transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; */
+}
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #e59011;
+    border-color: #eb7c0a;
+}
+.form-group {
+    margin-bottom: 12px;
+}
+.wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    margin: 5px;
+    padding: 7px 14px;
+    width: 35%;
+}
