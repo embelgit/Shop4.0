@@ -28,32 +28,32 @@
 
 
 <head>
-
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
    
     <title>Login Page</title>
     
     
-       <script type="text/javascript" src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
+     <script type="text/javascript" src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
      <!--  <script type="text/javascript" src="/Shop/staticContent/js/jquery-1.11.1.min.js"></script> -->
 	 <link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
      <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css">
-    
-     
+        
      <link rel="stylesheet" href="/Shop/staticContent/y_css/jquery-ui.css">
      <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.css">
      <script type="text/javascript" src="/Shop/staticContent/js/jquery.min.js"></script>
      <!-- <script type="text/javascript" src="/Shop/staticContent/js/jquery-ui-min.js"></script> -->
      
-      <script type="text/javascript" src="/Shop/staticContent/js/jquery-ui.min.js"></script>
+     <script type="text/javascript" src="/Shop/staticContent/js/jquery-ui.min.js"></script>
      <script type="text/javascript" src="/Shop/staticContent/js/jquery-ui.js"></script>
      <script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
      <script type="text/javascript" src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
     
-<script src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
-<script src="/Shop/staticContent/js/logout.js"></script>
-<script src="/Shop/staticContent/js/authentication.js"></script>
+	<script src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
+	<script src="/Shop/staticContent/js/logout.js"></script>
+	<script src="/Shop/staticContent/js/authentication.js"></script>
 
 
     <!-- Bootstrap Core CSS -->
@@ -79,38 +79,42 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="/Shop/staticContent/js/sb-admin-2.js"></script>
+	
+	<link href="/Shop/staticContent/css/login.css" rel="stylesheet" type="text/css">
+<style>
 
+</style>
 </head>
 
-<body background="/Shop/staticContent/images/uow221830.jpg">
+<body class="login-background">
 	<div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="login-panel panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title" style="font-weight: bold;"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("please") %> :<%}%> <%if(abc.equals("english")){%>Please Login :<%}%></h3>
-                                                                            
-                    </div>
-                    <div class="panel-body">
-                        <form action="Login" method="post" id="loginId">
-                            <div>
-                                <div class="form-group">
-									<label><span class="glyphicon glyphicon-user"></span><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("user_name")%>:<%}%> <%if(abc.equals("english")){%>User Name :<%}%></label>
-                                    <input class="form-control" placeholder="Username" name="uname" id="uname" type="text" autofocus onchange="getShopNameForLogin()">
-                                </div>
-                                <div class="form-group">
-									<label><span class="glyphicon glyphicon-eye-open"></span><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("password")%>:<%}%> <%if(abc.equals("english")){%>Password :<%}%></label>
-                                    <input class="form-control" placeholder="Password" name="pass" id="pass" type="password">
-                                </div>
-                               <div class="form-group">
-									<label><span class="fa fa-user"></span><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("user_name")%>:<%}%> <%if(abc.equals("english")){%>Shop Name :<%}%></label>
+		<div class="login-form">
+        	<div class="row">
+            	<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 my-auto">
+                	<div class="login-panel panel panel-default">
+                    	<div class="panel-heading">
+                        	<h3 class="panel-title" style="font-weight: bold;"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("please") %> :<%}%> <%if(abc.equals("english")){%>Please Login<%}%></h3>
+          				</div>
+                    	<div class="panel-body">
+                        	<form action="Login" method="post" id="loginId">
+                            	<div>
+	                                <div class="form-group">
+										<label><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("user_name")%>:<%}%> <%if(abc.equals("english")){%>User Name :<%}%></label>
+	                                    <input class="form-control" placeholder="Username" name="uname" id="uname" type="text" autofocus onchange="getShopNameForLogin()">
+	                                </div>
+	                                <div class="form-group">
+										<label><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("password")%>:<%}%> <%if(abc.equals("english")){%>Password :<%}%></label>
+	                                    <input class="form-control" placeholder="Password" name="pass" id="pass" type="password">
+	                                </div>
+                               		<div class="form-group">
+										<label><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("user_name")%>:<%}%> <%if(abc.equals("english")){%>Shop Name :<%}%></label>
                              <%-- <%
 								shopDetailsDao dao1 = new shopDetailsDao();
            						List shop = dao1.getAllShop();
 							  %> --%>
 							
-				    		<input id="shopName" name="shopName" list="shopname_drop" placeholder="Shop Name" class="form-control">
-				    		<datalist id="shopname_drop"></datalist>
+							    		<input id="shopName" name="shopName" list="shopname_drop" placeholder="Shop Name" class="form-control">
+							    		<datalist id="shopname_drop"></datalist>
 							<%-- <select id="shopName" style="width: 100%;background: #faffbd;color: black;" class="form-control">
 							<%
 					           for(int i=0;i<shop.size();i++)
@@ -122,35 +126,39 @@
 				      			}
 				    		%>
 						    </select> --%>
-						</div>
-                                </div>
+								</div>							
+                             </div>
                               
                                 <!-- Change this to a button or input when using this as a form -->
-                                <div class="wrapper">
-	                                <button type="button" onclick="login()" class="btn btn-md btn-lg btn-success"><span class="glyphicon glyphicon-ok-circle"></span><%if(abc.equals("marathi")){%> <%=PropertiesHelper.marathiProperties.getProperty("login")%><%}%> <%if(abc.equals("english")){%>Login<%}%></button>
-	                                <button type="reset"  class="btn btn-md btn-lg btn-danger"> <span class="glyphicon glyphicon-remove-circle"></span><%if(abc.equals("marathi")){%> <%=PropertiesHelper.marathiProperties.getProperty("Reset")%><%}%> <%if(abc.equals("english")){%>Reset<%}%></button>
-	                            </div>
+	                                <div class="wrapper">
+		                                <button type="button" onclick="login()" class="btn btn-md btn-lg btn-success"><%if(abc.equals("marathi")){%> <%=PropertiesHelper.marathiProperties.getProperty("login")%><%}%> <%if(abc.equals("english")){%>Login<%}%></button>
+		                                <button type="reset"  class="btn btn-md btn-lg btn-danger"><%if(abc.equals("marathi")){%> <%=PropertiesHelper.marathiProperties.getProperty("Reset")%><%}%> <%if(abc.equals("english")){%>Reset<%}%></button>
+		                            </div>
 	                            <!-- <div class="form-group">
 	                            <a href="/Fertilizer/jsp/userDetails.jsp">New User Registration</a>
 	                            </div>  -->
+                            </form>
                             </div>
-                        </form>
+                        	
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" style="float: right;">
-            	<div class="col-md-2">
-            		<label>Select language:</label>
-            	</div>
-            	<div class="col-md-2">
-            		<select class="selectpicker" id="language" name="language" data-style="btn-primary" onchange="language()">
-            		    <option value="select">Select Language</option>
- 						<option value="marathi">Marathi</option>
- 						<option value="english">English</option>
-					</select>
-            	</div>
-            </div>
-        </div>
+            <div class="row">
+	            <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 my-auto">	 
+	            	<div class="form-group">           	
+	            		<!-- <label>Select language:</label> -->	            	
+	            		<select class="selectpicker form-control" id="language" name="language" data-style="btn-primary" onchange="language()">
+		            	    <option value="select">Select Language</option>
+		 					<option value="marathi">Marathi</option>
+		 					<option value="english">English</option>
+						</select>
+					</div>	            	
+	            </div>
+	         </div>
+    
+    
+    	</div>
+	</div>
     
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>
