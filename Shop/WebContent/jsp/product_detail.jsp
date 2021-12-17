@@ -842,6 +842,7 @@ function caldis(){
 				<option value="Pieces">Pieces</option>
 				<option value="Quintal">Quintal</option>
 				<option value="Rolls">Rolls</option>
+				<option value="Feet">Feet</option>
 				<option value="Square Feet">Square Feet</option>
 				<option value="Square Meters">Square Meters</option>
 				<option value="Barrel">Barrel</option>
