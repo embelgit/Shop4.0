@@ -49,7 +49,7 @@
     <script type="text/javascript" src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
 
 <script type="text/javascript" src="/Shop/staticContent/js/producttransfer.js"></script>
-
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 	
 <script type="text/javascript">
 function mypopup(url)
 {
@@ -116,34 +116,31 @@ function getpack(){
 	 }
 </script>
 
-<style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
-</style>
-
 </head>
 
 <body onload="getProductName();">
+<div class="container-fluid">
+
 <div class="row header_margin_top">
 	<div align="center">
 		<h2 class="form-name style_heading">Packing</h2>
 	</div>
-
 </div>
-<div class="row">
-	<div class="col-sm-offset-1 col-md-10">
-		<hr style="border-top-color: #c1b1b1;">
+
+<div class="row" align="center">
+	<div class="hr-width">
+		<hr class="style-one">
 	</div>
 </div>
 
 <!-- <div class="container col-sm-offset-2" 	style ="padding-right: 128px"  > -->
 
 	  <div class="">
-	  <div class="col-md-10 col-md-offset-1"> 
+	  <div class="container"> 
 	<form class="form-horizontal" method="post" action="" name="pk">
 		<fieldset>
+			<div class="shopform-margin">
+			
 			<div class="row form-group">
 				<div class="col-md-6">
 					<%@include file="commons/clock.jsp"%>
@@ -151,15 +148,17 @@ function getpack(){
 			</div>
 			
 			
- 	       <div class="row form-group">
-                 <div id="productrefresh">
-		        										  
-					  <label class="col-md-2 control-label" for="proName">All Product Name<sup>*</sup></label>  
-          					  <div class="col-md-8">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-list-alt"></i>
-									</span>
+ 	       <div class="row">
+ 	       		<div class="form-group">
+                	<div id="productrefresh">
+		        		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">									  
+					  		<label class="control-label" for="proName">All Product Name<sup>*</sup></label>  
+          				</div>	
+          				<div class="col-lg-8 col-md-8 col-sm-8">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="	glyphicon glyphicon-list-alt"></i>
+								</span>
 											
 									<%
 								ProductDetailsHelper cdh = new ProductDetailsHelper();
@@ -167,13 +166,13 @@ function getpack(){
 							  
 							
 							%>
-							<input list="product_drop1" id="proName1" placeholder="All Product Name" class="form-control" onchange="productDetailstock()">
-						    <datalist id="product_drop1">
+								<input list="product_drop1" id="proName1" placeholder="All Product Name" class="form-control" onchange="productDetailstock()">
+						    	<datalist id="product_drop1">
 							<%
 					           for(int i=0;i<pdList.size();i++){
 					        	   ProductDetailsBean cat=(ProductDetailsBean)pdList.get(i);
 							%>		
-							<option data-value="<%=cat.getCatname()%>"
+									<option data-value="<%=cat.getCatname()%>"
 							        value="<%=cat.getCatname()%> :::>>> <%=cat.getSubcatname()%> :::>>> <%=cat.getProductName()%> :::>>> <%=cat.getWeight()%>"
 						            myvalue ="<%=cat.getProductName()%>"
 						            myvalue1="<%=cat.getFk_cat_id()%>"
@@ -186,68 +185,70 @@ function getpack(){
 				      			}
 				    		%>
 			             
-            			   </datalist>						
+            			   		</datalist>						
+							</div>
 						</div>
-					</div>
-			    </div>
-        	  </div> 
+			    	</div>
+        	  	</div>
+        	 </div> 
 
-		 <div class="row form-group">
-					  <label class="col-md-2 control-label" for="proName">Weight<sup>*</sup></label>  
-           			 <div class="col-md-3">
+		 	<div class="row">
+				<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="proName">Weight<sup>*</sup></label>  
+           			</div>
+           			<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="	glyphicon glyphicon-hand-right"></i>
 							</span>
-
-				<input type="text" id="weight"  class="form-control" placeholder="Weight">		
-						
-						
-            			</div>
-           </div>
-  					  <label class="col-md-2 control-label" for="proName">Packing Unit<sup>*</sup></label>  
-           			 <div class="col-md-3">
+							<input type="text" id="weight"  class="form-control" placeholder="Weight">		
+						</div>
+           			</div>
+  					<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+  						<label class="control-label" for="proName">Packing Unit<sup>*</sup></label>  
+           			</div>
+           			<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="	glyphicon glyphicon-hand-right"></i>
 							</span>
-						
-						<select class="form-control" id="packunit">
-				<option value="Grams">Grams</option>
-				<option value="Kilograms">Kilograms</option>
-				<option value="Litre">Litre</option>				
-				<option value="Millitre">Millitre</option>
-											
-						</select>
+							<select class="form-control" id="packunit">
+								<option value="Grams">Grams</option>
+								<option value="Kilograms">Kilograms</option>
+								<option value="Litre">Litre</option>				
+								<option value="Millitre">Millitre</option>
+							</select>
             			</div>
-           </div>
-              	
-          </div>
+           			</div>
+          		</div>
+          	</div>
           
-          <div class="row form-group">
-					  <label class="col-md-2 control-label" for="proName">Packing Quantity<sup>*</sup></label>  
-           			 <div class="col-md-3">
+          <div class="row">
+				<div class="form-group">	
+					 <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					 	<label class="control-label" for="proName">Packing Quantity<sup>*</sup></label>  
+           			 </div>
+           			 <div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="	glyphicon glyphicon-hand-right"></i>
 							</span>
-							
-						<input type="text" id="packing" placeholder="Quantity to pack" class="form-control" onchange="getpack()">
-				 	
-               		</div>
-              	</div>
-              	 <label class="col-md-2 control-label" for="proName">Packed Kg<sup>*</sup></label>  
-           			 <div class="col-md-3">
+							<input type="text" id="packing" placeholder="Quantity to pack" class="form-control" onchange="getpack()">
+				 		</div>
+              		</div>
+              	 	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+              	 		<label class="control-label" for="proName">Packed Kg<sup>*</sup></label>  
+           			</div>
+           			<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="	glyphicon glyphicon-hand-right"></i>
 							</span>
-							
-						<input type="text" id="packquan" placeholder="Quantity to pack" class="form-control" readonly="readonly">
-				 	
-               		</div>
-              	</div>
-				
+							<input type="text" id="packquan" placeholder="Quantity to pack" class="form-control" readonly="readonly">
+				 		</div>
+              		</div>
+				</div>
            </div>
               	
               	
@@ -304,23 +305,21 @@ function getpack(){
 					</div>
 				</div> -->
 		
-		
-				<div class="row form-group">
-				<div align="center" style="padding-right: 120px;padding-top: 25px;">
-					
-					<input type="button" id="billingCreditBtn" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-success button-height-width" name="btn" onclick="addpacking()" value="Submit">
-		           	<input type="reset"  id="save" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-danger  button-height-width" name="btn" type="reset" onclick="reset()" value="Cancel">	  
-					<input style="height: 53px; width: 128; font-size: 25" type="button" value=" List"  id="listBtn" class="btn btn-primary" onclick="productlist()" /> 
-              			 
-				</div>
-			</div>	
-		
-		
-		
+			</div>
 		</fieldset>
 	</form>
+		
+				<div class="row buttons-margin" align="center">
+					<input type="button" id="billingCreditBtn" class="btn btn-success button-height-width" name="btn" onclick="addpacking()" value="Submit">
+		           	<input type="reset" id="save" class="btn btn-large btn-danger button-height-width" name="btn" type="reset" onclick="reset()" value="Cancel">	  
+					<input type="button" value="List" id="listBtn" class="btn btn-primary" onclick="productlist()" /> 
+              	</div>	
+		
+		
+		
+		
 </div></div>
 
-
+</div>
 <jsp:include page="commons/footer.jsp"></jsp:include>
 </body>

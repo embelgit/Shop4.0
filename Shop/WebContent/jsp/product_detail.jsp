@@ -533,17 +533,11 @@ function caldis(){
 	}
 }
 </script>
-
-<style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
-</style>
-
 </head>
 
 <body>
+<div class="container-fluid">
+
 	<div class="row header_margin_top">
 		<div align="center">
 			<h2 class="form-name style_heading">
@@ -563,12 +557,12 @@ function caldis(){
 
 	</div>
 
-	<div class="row">
-		<div class="col-sm-offset-1 col-md-10">
-			<hr style="border-top-color: #c1b1b1;">
+	<div class="row" align="center">
+		<div class="hr-width">
+			<hr class="style-one">
 		</div>
 	</div>
-	<div class="container col-sm-offset-1">
+	<div class="container">
 		<form class="form-horizontal" method="post" action="prds" name="prd" id="prd">
 			<!-- Value of 'name' attribute is used in  productDetail.js  -->
 			<fieldset>
@@ -1496,5 +1490,5 @@ function caldis(){
 <!-- ==================================================== END Tax DETAILS POP UP ================================================================ -->
 	
 <jsp:include page="commons/footer.jsp"></jsp:include>
-
+</div>
 </body>

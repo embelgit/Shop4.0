@@ -8,6 +8,7 @@
 <script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/taxCreation.js"></script>
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 <script type="text/javascript">
 function taxlist()
 	 {
@@ -58,41 +59,40 @@ function taxlist()
 	}	  
 </script>
 
-<style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
 
-
-</style>
 </head>
+<body>
+<div class="container-fluid">
  <div class="row header_margin_top">
 			    <div align="center">
 			  		<h2 class="form-name style_heading">Tax Details</h2>
 			  	</div>
 			 
     </div>
-     <div class="row">
-		     <div class="col-sm-offset-2 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+    <div class="row">
+		<div class="hr-width">
+			<hr class="style-one">
+		</div>	
     </div>
-<div class="container col-sm-offset-2" >
+<div class="container" >
         <form class="form-horizontal" method="post" action="" name="txc"><!-- Value of 'name' attribute is used in  taxCreation.js  -->
           <fieldset>
+          <div class="shopform-margin">
           		<div class="row form-group">
            	 		<div class="col-md-6">
               			<%@include file="commons/clock.jsp" %>
            		 	</div>
 				</div>
-				 <div class="row form-group">
-           				<label class="col-md-2 control-label" for="taxType">Tax Name<sup>*</sup></label>  
-		           	 <div class="col-md-3">
-            			<div class="input-group">
-							<span class="input-group-addon">
-								<i class="	glyphicon glyphicon-list-alt"></i>
-							</span>
+				<div class="row">
+					<div class="form-group">
+           				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+           					<label class="control-label" for="taxType">Tax Name<sup>*</sup></label>  
+		           	 	</div>
+		           	 	<div class="col-lg-3 col-md-3 col-sm-8">
+            				<div class="input-group">
+								<span class="input-group-addon">
+									<i class="	glyphicon glyphicon-list-alt"></i>
+								</span>
               				
 							<!-- Following code is to get categories from "categories" table of "fertilizer" DB -->
 							<!-- getAllMainCat() is implemented in  CategoryDetailsDao with return type List-->
@@ -101,91 +101,89 @@ function taxlist()
            						List cList =cdd.getAllTax(request);
 							
 							%>
-							<input list="tax_drop" id="taxType" onkeypress="return disableSpaceKey()" placeholder="Tax Name" onchange="checkForDuplicateTaxTypeEntry()" class="form-control">
-							<datalist id="tax_drop">
+								<input list="tax_drop" id="taxType" onkeypress="return disableSpaceKey()" placeholder="Tax Name" onchange="checkForDuplicateTaxTypeEntry()" class="form-control">
+								<datalist id="tax_drop">
 							<%
 					           for(int i=0;i<cList.size();i++){
 					        	   TaxCreationBean cat=(TaxCreationBean)cList.get(i);
 							%>
 		
-							<option data-value="<%=cat.getTxId()%>" value="<%=cat.getTaxType()%>">
+									<option data-value="<%=cat.getTxId()%>" value="<%=cat.getTaxType()%>">
 							<%
 				      			}
 				    		%>
 			              	
-            			</datalist>
-            			</div>
-            		</div>
-            		
-            		<label class="col-md-2 control-label" for="taxPercentage">SGST<sup>*</sup></label>  
-            		<div class="col-md-3">
-            			<div class="input-group">
-							<span class="input-group-addon">
-								%
-							</span>
-              											
-							<input type="text" id="sgst" placeholder="SGST" class="form-control" onchange="calculateTax()">
-							
-            			</div>
-					</div>
-
-            	
+            					</datalist>
+            				</div>
+            			</div>          		
+	            		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+	            			<label class="control-label" for="taxPercentage">SGST<sup>*</sup></label>  
+	            		</div>
+	            		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+	            			<div class="input-group">
+								<span class="input-group-addon">
+									<span class="percentage glyphicon">%</span>
+								</span>
+	              				<input type="text" id="sgst" placeholder="SGST" class="form-control" onchange="calculateTax()">
+							</div>
+						</div>
+					</div>            	
 				</div>
 				
-				<div class="row form-group">
-           				<label class="col-md-2 control-label" for="taxType">CGST<sup>*</sup></label>  
-		           	 <div class="col-md-3">
-            			<div class="input-group">
-							<span class="input-group-addon">
-								%
-							</span>
-              											
-							<input type="text" id="cgst" placeholder="CGST" class="form-control" onchange="calculateTax()">
-							
+				<div class="row">
+           			<div class=" form-group">	
+           				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+           					<label class="control-label" for="taxType">CGST<sup>*</sup></label>  
+		           	 	</div>
+			           	<div class="col-lg-3 col-md-3 col-sm-8">
+	            			<div class="input-group">
+								<span class="input-group-addon">
+									<span class="percentage glyphicon">%</span>
+								</span>
+	              				<input type="text" id="cgst" placeholder="CGST" class="form-control" onchange="calculateTax()">
+							</div>
+	            		</div>
+				        <div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+				           	<label class="control-label" for="taxPercentage">GST %<sup>*</sup></label>  
             			</div>
-            		</div>
-
-            	<label class="col-md-2 control-label" for="taxPercentage">GST %<sup>*</sup></label>  
-            		<div class="col-md-3">
-            			<div class="input-group">
-							<span class="input-group-addon">
-								%
-							</span>
+            			<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+            				<div class="input-group">
+								<span class="input-group-addon">
+									<span class="percentage glyphicon">%</span>
+								</span>
 							<%
 							TaxCreationDao dao = new TaxCreationDao();
            						List taxPerList =dao.getAllTax(request);
 							
 							%>
-							<input list="tax_per_drop" id="taxPercentage" placeholder="GST %" class="form-control">
-							<datalist id="tax_per_drop">
+								<input list="tax_per_drop" id="taxPercentage" placeholder="GST %" class="form-control">
+								<datalist id="tax_per_drop">
 							<%
 					           for(int i=0;i<taxPerList.size();i++){
 					        	   TaxCreationBean bean =(TaxCreationBean)taxPerList.get(i);
 							%>
 		
-							<option data-value="<%=bean.getTxId()%>" value="<%=bean.getTaxPercentage()%>">
+									<option data-value="<%=bean.getTxId()%>" value="<%=bean.getTaxPercentage()%>">
 							<%
 				      			}
 				    		%>
-			              	
-            			</datalist>
-            			</div>
+			              		</datalist>
+            				</div>
+						</div>
 					</div>
 				</div>
-				
-				
-				<div class="form-group row" style="padding-top:2%">
-           			<div class="col-12 col-sm-6 col-md-6 text-center col-md-offset-2">
-           			
-						<input style="height: 53px; width: 128;font-size: 25" type="button" id="save"    class="btn  btn-success" name="btn"  onclick=" return addtax() " value="Submit">
-						<input style="height: 53px; width: 128;font-size: 25" type="reset"  id="reset"   class="btn  btn-danger"  name="btn"   onclick="reset()" value="Cancel">
-						<input style="height: 53px; width: 128;font-size: 25" type="button" id="listBtn" class="btn btn-primary" onclick="taxlist()" value="List" /> 
-	              		<input style="height: 53px; width: 128;font-size: 25" type="button" id="listBtn" class="btn btn-primary" onclick="editTax()" value="Edit" /> 
-
-            		</div>
-          		</div>
-			</fieldset>
-		</form>
+			</div>
+		</fieldset>
+		</form>		
+				<div class="row" style="padding-top:2%" align="center">          			
+					<input type="button" id="save" class="btn btn-success" name="btn" onclick="return addtax()" value="Submit">
+					<input type="reset"  id="reset" class="btn btn-danger" name="btn" onclick="reset()" value="Cancel">
+					<input type="button" id="listBtn" class="btn btn-primary" onclick="taxlist()" value="List" /> 
+	              	<input type="button" id="listBtn" class="btn btn-primary" onclick="editTax()" value="Edit" /> 
+         		</div>
+			
 	</div>
+</div>
+</body>
 	
 <jsp:include page="commons/footer.jsp"></jsp:include>

@@ -20,33 +20,32 @@
   			
   			
   		</script>
-  		
- <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
-</style>
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 		
+</head>
+<body>
+<div class="container-fluid">
 
-	</head>
   	<div class="row header_margin_top">
 			    <div align="center">
 			  		<h2 class="form-name style_heading">Edit Shop Details</h2>
 			  	</div>
 			 
     </div>
-     <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+	<div class="row" align="center">
+		<div class="hr-width">
+			<hr class="style-one">
+		</div>	
     </div>
-      <div class="container col-sm-offset-2" >
+      <div class="container">
         <form class="form-horizontal" method="post" action="" name="shop1">
           <fieldset>
-       			 <div class="row form-group">
-    	     	
-           				 <label class="col-md-2 control-label" for="shop">Shop Name</label>  
-          					  <div class="col-md-3">
+       		<div class="shopform-margin">
+       			<div class="row">
+    	     		<div class="form-group">
+           					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+           				 		<label class="control-label" for="shop">Shop Name</label>  
+          					</div>
+          					<div class="col-lg-3 col-md-3 col-sm-8">
 								<div class="input-group">
 									<span class="input-group-addon">
 										<i class="glyphicon glyphicon-list-alt"></i>
@@ -57,35 +56,41 @@
            						List mList =eedd.getAllMainShop();
 							
 							%>
-						<input list="shop_drop" id="shop" placeholder="Select Shop Name" class="form-control" onchange="getShopDetails()">
-				<datalist id="shop_drop">
+									<input list="shop_drop" id="shop" placeholder="Select Shop Name" class="form-control" onchange="getShopDetails()">
+									<datalist id="shop_drop">
 							
 							<%
 					           for(int i=0;i<mList.size();i++){
 					        	   shopDetailsBean detailsBean =(shopDetailsBean)mList.get(i);
 							%>
 		
-						<option data-value="<%=detailsBean.getShopId()%>"><%=detailsBean.getShopName()%> </option>
+										<option data-value="<%=detailsBean.getShopId()%>"><%=detailsBean.getShopName()%> </option>
 							<%
 				      			}
 				    		%>
-						</datalist> 
-					</div>
-           		</div>	
+									</datalist> 
+								</div>
+           					</div>
+           					<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+           						<label class="control-label" for="shopName">Shop Name<sup>*</sup></label>  
+		           	 		</div>
+		           	 		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-list-alt"></i>
+									</span>
+              						<input id="shopName" name="shopName" placeholder="Shop Name" class="form-control input-md" type="text" >
+            					</div>
+            				</div>	
+           			</div>
            		</div>
-       		<div class="row form-group">
-           		<label class="col-md-2 control-label" for="shopName">Shop Name<sup>*</sup></label>  
-		           	 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-list-alt"></i>
-							</span>
-              				<input id="shopName" name="shopName" placeholder="Shop Name" class="form-control input-md" type="text" >
-            			</div>
+       		
+       		<div class="row">
+           		<div class="form-group">	
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="contactNumber"> Contact Number<sup>*</sup></label>  
             		</div>
-
-            	<label class="col-md-2 control-label" for="contactNumber"> Contact Number<sup>*</sup></label>  
-            		<div class="col-md-3">
+            		<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-earphone"></i>
@@ -93,21 +98,26 @@
               					<input id="contactNumber" name="contactNumber" placeholder="Contact Number" class="form-control input-md" type="text" maxlength="10">
             			</div>
 					</div>
-			</div>
-			
-			 <div class="row form-group">
-				<label class="col-md-2 control-label" for="gstNo">GST No<sup>*</sup></label>  
-           	 		<div class="col-md-3">
+					<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+						<label class="control-label" for="gstNo">GST No<sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 						<div class="input-group">
 							<span class="input-group-addon">
-								No
+								<span class="glyphicon nogyphicon">No</span>
 							</span>
               				<input id="gstNo" name="gstNo" placeholder="GST No" class="form-control input-md" type="text" >
             			</div>
-            		</div>
-	
-	           <label class="col-md-2 control-label" for="address">Address<sup>*</sup></label>  
-           	 	<div class="col-md-3">
+            		</div>	
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					<label class="control-label" for="address">Address<sup>*</sup></label>  
+           	 	</div>
+           	 	<div class="col-lg-3 col-md-3 col-sm-8">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="glyphicon glyphicon-map-marker"></i>
@@ -115,55 +125,62 @@
               			<input id="address"  name="address" placeholder="Address" class="form-control input-md" type="text" >
             		</div>
             	</div>
-			</div>
-           
-           <div class="row form-group">
-           	<label class="col-md-2 control-label" for="wholesaleNo">Wholesale Lic No</label>  
-           		<div class="col-md-3">
+            	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+            		<label class="control-label" for="wholesaleNo">Wholesale Lic No</label>  
+           		</div>
+           		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">
 						<span class="input-group-addon">
-							No
+							<span class="glyphicon nogyphicon">No</span>
 						</span>
               			<input id="wholesaleNo" name="wholesaleNo " placeholder="Wholesale Lic No" class="form-control input-md" type="text" >
             		</div>
-				</div>
-			
-			<label class="col-md-2 control-label" for="shopLicNo">Shop Lic No</label>  
-           	 	<div class="col-md-3">
+				</div>            	
+            	</div>
+			</div>
+           
+           <div class="row">
+           		<div class="form-group">
+           		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+           			<label class="control-label" for="shopLicNo">Shop Lic No</label>  
+           	 	</div>
+           	 	<div class="col-lg-3 col-md-3 col-sm-8">
 					<div class="input-group">
 						<span class="input-group-addon">
-							No
+							<span class="glyphicon nogyphicon">No</span>
 						</span>
               			<input id="shopLicNo" name="shopLicNo" placeholder="Shop Lic No" class="form-control input-md" type="text" >
             		</div>
             	</div>
-			</div>
-
-			<div class="row form-group">
-           		<label class="col-md-2 control-label" for="footername">Footer Shop Name<sup>*</sup></label>  
-           	 		<div class="col-md-3">
+            	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+            		<label class="control-label" for="footername">Footer Shop Name<sup>*</sup></label>  
+           	 	</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-list-alt"></i>
 							</span>
               				<input id="footername" name="footername" placeholder="Footer Shop Name" class="form-control input-md" type="text" >
             			</div>
-            		</div>          
-			</div>
-								
- 			<div class="form-group row" style="padding-top:2%">
-            	<div class="col-md-10 text-center">
-            	
-            	  	<input style="height: 53px; width: 128; font-size: 25" type="button" id="save"    class="btn btn-large btn-success" name="btn1" onclick="updateshopDetails()" value="Submit">
-		            <input style="height: 53px; width: 128; font-size: 25" type="reset"  id="save1"   class="btn btn-large btn-danger"  name="btn2" onclick="reset()" value="Cancel">
-		     	    <input style="height: 53px; width: 128; font-size: 25" type="button" id="listBtn" class="btn btn-primary"           name="btn3" onclick="Back()" value="Back" />
-		     	                	
+            		</div>            	
             	</div>
-          	</div>
+			</div>
 
-
-		</fieldset>
+		</div>
+	</fieldset>
       </form>
+											
+ 			<div class="row buttons-margin" align="center">
+            	<input type="button" id="save" class="btn btn-large btn-success" name="btn1" onclick="updateshopDetails()" value="Submit">
+		        <input type="reset" id="save1" class="btn btn-large btn-danger" name="btn2" onclick="reset()" value="Cancel">
+		     	<input type="button" id="listBtn" class="btn btn-primary" name="btn3" onclick="Back()" value="Back" />
+		    </div>
+
+
+		
     </div>
+
+</div>
+</body>
     
 <jsp:include page="commons/footer.jsp"></jsp:include>

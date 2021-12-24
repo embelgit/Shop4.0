@@ -40,7 +40,7 @@
      <script type="text/javascript" src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>     
 	 <script type="text/javascript" src="/Shop/staticContent/js/quotationBilling.js"></script>
 	 <script type="text/javascript" src="/Shop/staticContent/js/customerDetails.js"></script>
-	 
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">	 
 		  	
 <script type="text/javascript">
     function mypopup(url)
@@ -549,9 +549,8 @@ function clearGridSelect()
 
 
 <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
+.container-fluid {
+	overflow: hidden;
 }
 .btn-mm {
     transition: all 0.2s ease;
@@ -589,20 +588,24 @@ top: 25%;}
  <body onload="pageLoad();getProductName();getProductNameForCredit();"> 
 <!-- <body onload="pageLoad();"> -->
 <br>
+<div class="container-fluid">
+
 	<div class="row">
-	<div class="col-10 col-md-6 col-lg-6 col-lg-offset-3">
-	<div class="row header_margin_top">
-			    <div align="center">
-					<h2 class="form-name style_heading">Quotation</h2>  		
-			  	</div>
+		<div class="row header_margin_top">
+		    <div align="center">
+				<h2 class="form-name style_heading">Quotation</h2>  		
+		  	</div>
+    	</div>
     </div>
-    </div>
-    </div>
- 	<p align="right"  style="font-size: 20px; padding-right: 150px" >Quotation No : <%=qNo%></p>
-    <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+ 	
+ 	<div align="right">
+ 		<h3 class="quotationno">Quotation No : <%=qNo%></h3>
+ 	</div>
+ 
+    <div class="row" align="center">
+		<div class="hr-width">
+			<hr class="style-one">
+		</div>	
     </div>
 	
 	<!-- <div class="container col-md-offset-5 " id="my_styles" >
@@ -620,40 +623,47 @@ top: 25%;}
 	              	
 		<!-------------------------------------------------------  CODE FOR CASH CUSTOMER  ---------------------------------------------->
 		
-     <div id="CashCustDetail" style="padding-top:2%">
+     <div id="CashCustDetail">
        <form class="form-horizontal" method="post" action="" name="fertiBill">
 			<fieldset>
-			
-         <div class="row form-group">
-			<label class="col-md-3 control-label" for="customerName">Customer Name<sup>*</sup></label>  
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
-							</span>
-           		 			  <input id="customerName" name="customerName" placeholder="Customer Name" class="form-control input-md" type="text" >
-           		 		</div>
-					</div>
-
-           	 <label class="col-md-2 control-label" for="village">Address </label>
-           	 	<div class="col-md-3">
+		<div class="shopform-margin">	
+        <div class="row">
+			<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">		
+					<label class="control-label" for="customerName">Customer Name<sup>*</sup></label>  
+           		</div>	
+           		<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-user"></i>
+						</span>
+           			  	<input id="customerName" name="customerName" placeholder="Customer Name" class="form-control input-md" type="text" >
+           		 	</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+				  	 <label class="control-label" for="village">Address </label>
+           	 	</div>
+           	 	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="glyphicon glyphicon-map-marker"></i>
 						</span>
-         	   			  <input id="village" name="village" placeholder="Address" class="form-control input-md ac_district"  type="text">
+         	   			<input id="village" name="village" placeholder="Address" class="form-control input-md ac_district"  type="text">
           		  	</div>
 				</div>
           </div>
-	  
-	  
-	  <div class="row form-group">
-			<label class="col-md-3 control-label" for="creditCustomerName"> Shop Name</label>  
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
-							</span>
+      </div>
+	  	  
+	  <div class="row">
+			<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					<label class="control-label" for="creditCustomerName"> Shop Name</label>  
+           		</div>
+           		<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-user"></i>
+						</span>
 									
 							<%
 								shopDetailsDao dao1 = new shopDetailsDao();
@@ -661,9 +671,9 @@ top: 25%;}
 							
 							%>
 							
-							<input id="shopId" name="shopId" value="<%=shopId%>" type="hidden" class="form-control" >
-							<input type="text" id="shopName" name="shopName" value="<%=shopName1%>" readonly="readonly" list="shop_drop1" class="form-control">
-						    <datalist id="shop_drop1">
+						<input id="shopId" name="shopId" value="<%=shopId%>" type="hidden" class="form-control" >
+						<input type="text" id="shopName" name="shopName" value="<%=shopName1%>" readonly="readonly" list="shop_drop1" class="form-control">
+					    <datalist id="shop_drop1">
 							
 							<%
 					           for(int i=0;i<shop.size();i++){
@@ -674,78 +684,87 @@ top: 25%;}
 				      			}
 				    		%>
 						</datalist>
-						</div>
 					</div>
-
-           	 <label class="col-md-2 control-label" for="gstNo">GST No</label>
-           	 	<div class="col-md-3">
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+				   	 <label class="control-label" for="gstNo">GST No</label>
+           	 	</div>
+           	 	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">
 						<span class="input-group-addon">
-							No
+							<span class="glyphicon nogyphicon">No</span>
 						</span>
-         	   			  <input id="gstNo" name="gstNo"  placeholder="GST No" class="form-control input-md ac_district"  type="text">
+         	   			<input id="gstNo" name="gstNo"  placeholder="GST No" class="form-control input-md ac_district"  type="text">
           		  	</div>
 				</div>
          </div>
+     </div>
          
-	      <div class="row form-group">
-			<label class="col-md-3 control-label" for="contactNo">Contact No.</label>  
-           	 		<div class="col-md-3">
+	 <div class="row">
+		<div class="form-group">
+			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+				<label class="control-label" for="contactNo">Contact No.</label>  
+           	</div>
+           	<div class="col-lg-3 col-md-3 col-sm-8">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-earphone"></i>
+					</span>
+            		<input id="contactNo2" name="contactNo2" placeholder="Contact No" class="form-control input-md" type="text" maxlength="10">
+            	</div>
+            </div>
+			<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+				<label class="control-label" for="saleDate">Quotation Date</label>  
+          	</div>				
+          	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-calendar"></i>
+					</span>									
+	        	  	<input type="date" id="saleDate" name="saleDate" value="<%=todayDate%>" placeholder="sale Date" class="form-control input-md">
+				</div>
+			</div>
+		</div>
+	</div>
+			
+			<div class="row">
+              	<div class="form-group">
+              		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+              			<label class="control-label" for="productName">Barcode No:</label>  
+					</div>
+            		<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-earphone"></i>
+								<span class="glyphicon nogyphicon">No</span>
+							</span>           
+						    <input type="text" id="barcodeNo" name="barcodeNo" placeholder="Enter Barcode No" class="form-control input-md" onchange="getProductsInQuotationBilling()">
+									 <!-- getProductDetailsByBarcodeNo() -->
+						</div>
+        			</div>  
+        	  		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+        	  		   	<label class="control-label" for="productName">Email ID:</label>  
+					</div>
+            		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">No</span>
 							</span>
-              				<input id="contactNo2" name="contactNo2" placeholder="Contact No" class="form-control input-md" type="text" maxlength="10">
-            			</div>
-            		</div>
-			<label class="col-md-2 control-label" for="saleDate">Quotation Date</label>  
-          					  <div class="col-md-3">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-calendar"></i>
-									</span>									
-	              					  <input type="date" id="saleDate" name="saleDate" value="<%=todayDate%>" placeholder="sale Date" class="form-control input-md">
-								</div>
-							</div>
-			</div>
-			
-			<div class="row form-group">
-              	<label class="col-md-3 control-label" for="productName">Barcode No:</label>  
-
-            			<div class="col-md-3">
-							<div class="input-group">
-									<span class="input-group-addon">
-										No
-									</span>           
-									 <input type="text" id="barcodeNo" name="barcodeNo" placeholder="Enter Barcode No" class="form-control input-md" onchange="getProductsInQuotationBilling()">
-									 <!-- getProductDetailsByBarcodeNo() -->            				</div>
-        			  </div>  
+						    <input type="text" id="email" name="email" placeholder="Enter Email" class="form-control input-md">
+          				</div>
+    			  	</div>
+    			</div>
+        	</div>  
         	  
-
-              	<label class="col-md-2 control-label" for="productName">Email ID:</label>  
-
-            			<div class="col-md-3">
-							<div class="input-group">
-									<span class="input-group-addon">
-										No
-									</span>
-									 <input type="text" id="email" name="email" placeholder="Enter Email" class="form-control input-md">
-
-						
-            				</div>
-        			  </div>  </div>
-        	  
-        	  
-        	 
-			
-        	 <div class="row form-group">
-              	<label class="col-md-3 control-label" for="productName">Product Name<sup>*</sup></label>  
-
-            			<div class="col-md-8">
-							<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-list-alt"></i>
-									</span>
+        	<div class="row">
+              	<div class="form-group">
+              		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+              			<label class="control-label" for="productName">Product Name<sup>*</sup></label>  
+					</div>
+            		<div class="col-lg-8 col-md-8 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-list-alt"></i>
+							</span>
 									
 							<%
 							    ProductDetailsDao cdd = new ProductDetailsDao();
@@ -769,9 +788,10 @@ top: 25%;}
             			</datalist>
 									
 						<!-- <select class="form-control" id="proName" name="proName" onchange="getProductDetailsByProductName()"></select> -->
-            				</div>
-            			</div>
-        	  </div>  
+            		</div>
+            	</div>
+        	</div>
+        </div>  
         	           
           <div class="table-responsive row" align="center" style="margin-left: 25px; width:1340px">
 				<table id="list4" ></table>
@@ -782,25 +802,25 @@ top: 25%;}
           
           </div>
           
-           	<div class="row form-group" >
-					<div class="col-md-3 control-label">
-	           				<label for="paymentMode">Payment Mode</label>  
+		<div class="row">
+			<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+					<label class="control-label" for="paymentMode">Payment Mode</label>  
+	           	</div>	
+	           	<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-usd"></i>
+						</span>
+	           			<select class="form-control" id="paymentMode">
+							<option value="cash">Cash</option>
+							<option value="cheque">Cheque</option>
+							<option value="card">Card</option>
+							<option value="neft">NEFT</option>
+							<option value="UPI Payment">UPI Payment</option>									
+						</select>	
 	           		</div>
-	           		
-	           		<div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-										<i class="glyphicon glyphicon-usd"></i>
-								</span>
-	           					<select class="form-control" id="paymentMode">
-										<option value="cash">Cash</option>
-										<option value="cheque">Cheque</option>
-										<option value="card">Card</option>
-										<option value="neft">NEFT</option>
-											<option value="UPI Payment">UPI Payment</option>									
-								</select>	
-	           				</div>
-						</div>
+				</div>
 	 <!-- <script>
 		
 		$(document).ready(function(){
@@ -845,7 +865,8 @@ top: 25%;}
 	   }).change();
 		});	
 		</script> -->					
-</div> 
+		</div>
+	</div> 
          <!--  	<div class="row form-group" >
 
             					<div id="cheque_no" >
@@ -880,100 +901,117 @@ top: 25%;}
 											</div>
 											 -->
           
-         <div class="row form-group">
-          <label class="col-md-3 control-label"  for="gstForExpence" ><b>GST for Expense :</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									%
-								</span>
-								<select class="form-control" id="gstForExpense" onchange="changeDisAndHamaliCash()">
-										<option value="0">--Select Type--</option>
-										<option value="5">5 %</option>
-										<option value="12">12 %</option>
-										<option value="18">18 %</option>
-										<option value="28">28 %</option>
-								</select>
-	            			</div> 
-	            		</div>
-          	    <label class="col-md-2 col-md-offset-6 control-label"  for="total" ><b>Total</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="totalWithExpense" placeholder="Total" readonly="readonly" class="form-control input-md" type="text" onchange="changeDisAndHamali();">
-	            			</div>
-	            		</div>
+         <div class="row">
+         	<div class="form-group">
+         		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+         			<label class="control-label" for="gstForExpence" ><b>GST for Expense :</b></label>  
+			    </div>
+			    <div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon percentage">%</span>
+						</span>
+						<select class="form-control" id="gstForExpense" onchange="changeDisAndHamaliCash()">
+							<option value="0">--Select Type--</option>
+							<option value="5">5 %</option>
+							<option value="12">12 %</option>
+							<option value="18">18 %</option>
+							<option value="28">28 %</option>
+						</select>
+	            	</div> 
+	            </div>
+          	    <div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+          	    	<label class="control-label" for="total" ><b>Total</b></label>  
+			    </div>
+			    <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="totalWithExpense" placeholder="Total" readonly="readonly" class="form-control input-md" type="text" onchange="changeDisAndHamali();">
+	            	</div>
+	            </div>
           	</div>
+       </div>
           	
-          		<div class="row form-group">
-				 <label class="col-md-2 col-md-offset-6 control-label" for="discount" ><b>Discount</b></label>  
-			           	<div class="col-sm-1">
-							<div class="input-group" style="margin-right: -70px;">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input  id="discountAmount" name="discountAmount" placeholder="Disc Amt"  class="form-control input-md" type="text" onchange="discountCalculation()">
-	            			</div>
+          	<div class="row">
+				<div class="form-group">
+					<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">	
+						<label class="control-label" for="discount" ><b>Discount</b></label>  
+			       </div>  	
+			       <div class="col-lg-2 col-md-2 col-sm-4">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">Rs</span>
+							</span>
+	              			<input  id="discountAmount" name="discountAmount" placeholder="Disc Amt"  class="form-control input-md" type="text" onchange="discountCalculation()">
 	            		</div>
-	            		
-	            		<label class="col-md-1 control-label" for="discount" ><b></b></label>  
-	            		 <div class="col-sm-1">
-							<div class="input-group" style="margin-left: -70px;">
-								<span class="input-group-addon">
-									%
-								</span>
-	              				<input id="discount" name="discount" placeholder="Disc %" style=" width: 117px;" class="form-control input-md" type="text" readonly="readonly"/>
-	            			</div>
+	            	</div>		
+	            	<label class="control-label" for="discount" ><b></b></label>  
+	            	<div class="col-lg-2 col-md-2 col-sm-4">
+						<div class="input-group">
+							<span class="input-group-addon">
+								 <span class="glyphicon percentage">%</span>
+							</span>
+	              			<input id="discount" name="discount" placeholder="Disc %" class="form-control input-md" type="text" readonly="readonly"/>
 	            		</div>
 	            	</div>
+	            </div>
+	         </div>
 	            	
-					<div class="row form-group" >
-					<label class="col-md-2 col-md-offset-6 control-label"  for="hamaliExpence" ><b>Labour Expenses</b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group" > 
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="hamaliExpence2" name="hamaliExpence2" style=" width: 112px;" placeholder="Lab Exp" class="form-control input-md" type="text" onchange="hamaliExpenseAddingToGross()"/>
-	            			</div>
+			<div class="row">
+				<div class="form-group">	
+					<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+						<label class="control-label"  for="hamaliExpence" ><b>Labour Expenses</b></label>  
+			        </div>   	
+			        <div class="col-lg-2 col-md-2 col-sm-4">
+						<div class="input-group" > 
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">Rs</span>
+							</span>
+	              			<input id="hamaliExpence2" name="hamaliExpence2" placeholder="Lab Exp" class="form-control input-md" type="text" onchange="hamaliExpenseAddingToGross()"/>
 	            		</div>
-	            		<label  class="col-md-1" for="hamaliExpence" ><b></b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group" style="margin-left: -70;">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="hamaliExpence" name="hamaliExpence" placeholder="GST Amt" class="form-control input-md" type="text" readonly="readonly">
-	            			</div>
+	            	</div>
+	            	<label class="control-label" for="hamaliExpence" ><b></b></label>  
+			        <div class="col-lg-2 col-md-2 col-sm-4">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">Rs</span>
+							</span>
+	              			<input id="hamaliExpence" name="hamaliExpence" placeholder="GST Amt" class="form-control input-md" type="text" readonly="readonly">
 	            		</div>
-					</div>
+	            	</div>
+				</div>
+			</div>
                   	
-          		<div class="row form-group">
-					<label class="col-md-offset-6 col-md-2 control-label"  for="grossTotal"><h4><b>Gross Total</b></h4></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input readonly="readonly" id="grossTotal" name="grossTotal" placeholder="Gross Total" class="form-control input-md" type="text" style="font-size: 25px;  height: 55px;">
-	            			</div>
+          	<div class="row">
+				<div class="form-group">
+					<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+						<label class="control-label"  for="grossTotal"><h4><b>Gross Total</b></h4></label>  
+			        </div>   	
+			        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">Rs</span>
+							</span>
+	              			<input readonly="readonly" id="grossTotal" name="grossTotal" placeholder="Gross Total" class="form-control input-md" type="text" style="font-size: 25px;  height: 55px;">
 	            		</div>
+	            	</div>
             	</div>
+            </div>
      	
-     		<div class="row form-group buttons_margin_top ">
-					<div align="center">
-						  
-						<input type="button" id="billingCashbtn" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-success button-height-width" name="billingCashbtn" onclick="quotationBillingVal()" value="Print Bill">
-           				<input type="reset" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-danger  button-height-width" id="save" name="btn" onclick="cancle()" value="Cancel">
-						<input type="button" id="btn" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock ">	
-						
-					</div>
-			</div>	
-				</fieldset>
+     	</div>
+     	</fieldset>
 				</form>
+     	
+     		<div class="row buttons-margin" align="center">
+				<input type="button" id="billingCashbtn" class="btn btn-large btn-success button-height-width" name="billingCashbtn" onclick="quotationBillingVal()" value="Print Bill">
+           		<input type="reset" class="btn btn-large btn-danger button-height-width" id="save" name="btn" onclick="cancle()" value="Cancel">
+				<input type="button" id="btn" class="btn btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock ">	
+			</div>	
+			
+				
        </div>
-
+</div>
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>

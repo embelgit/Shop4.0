@@ -35,7 +35,7 @@
     
      <script type="text/javascript" src="/Shop/staticContent/js/fertiSaleReturn.js"></script>
      
-     
+ <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">   
      
      <script type="text/javascript">
      function cancle(){
@@ -90,27 +90,26 @@
 		  	String todayDate = simpleDateFormat.format(new Date());
 		  	System.out.println(todayDate);
 	  	%>
-     
-     <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
+<style>
+.container-fluid {
+	overflow: hidden;
 }
+</style>     
 
-
-</style>
 </head>
-	<body onload="pageLoad();">
-	  <div class="row header_margin_top">
-				    <div align="center">
-				  		<h2 class="form-name style_heading">Sale Return</h2>
-				  	</div>
-			 
-    </div>
-     <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+<body onload="pageLoad();">
+<div class="container-fluid">
+	
+	<div class="row header_margin_top">
+		<div align="center">
+			<h2 class="form-name style_heading">Sale Return</h2>
+		</div>
+	</div>
+    
+    <div class="row" align="center">
+		<div class="hr-width">
+			<hr class="style-one">
+		</div>	
     </div>
     
   	<div style="float: none;"></div>
@@ -119,8 +118,8 @@
 	<div id="home">
   		 <form class="form-horizontal" method="post" action="">
          	 <fieldset>
-         	 <div class="container col-sm-offset-2" >
-                 <div class="row form-group">
+         	 <div class="container">
+             	<div class="row form-group">
            	 		<div class="col-md-6">
               			<%@include file="commons/clock.jsp" %>
            		 	</div>
@@ -177,69 +176,73 @@
 <div id="CashCustDetail" style="padding-top:2%">
   
      <form class="form-horizontal" method="post" action="" name="fertiBill">
-			<fieldset>
-				
-			 <div class="row form-group">
-			<label class="col-md-3 control-label" for="customerType">Customer Type<sup>*</sup></label>  
-           			 <div class="col-md-3">
+			<!-- <fieldset> -->
+			<div class="shopform-margin">	
+			<div class="row">
+				<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="customerType">Customer Type<sup>*</sup></label>  
+           			</div>
+           			<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
 							</span>
-							
-							     <select class="form-control" id="customerType" onchange="getAllcustomerName()">
-							     
-										<option value="selected">--Select Customer Type--</option>
-										<option value="cash">Cash</option>
-										<option value="credit">Credit</option>
-										
-								</select> 
+							<select class="form-control" id="customerType" onchange="getAllcustomerName()">
+								<option value="selected">--Select Customer Type--</option>
+								<option value="cash">Cash</option>
+								<option value="credit">Credit</option>
+							</select> 
            		 		</div>
 					</div>	
-				
-                 <div class="row form-group">
-           			 <label class="col-md-2 control-label" for="billNo">Bill No</label>  
-            			<div class="col-md-3">
-							<div class="input-group " ">
-								<span class="input-group-addon">
-										No
-								</span>
-								
-								<input list="billno_drop"  placeholder="Select Bill No" class="form-control input-md"
+					<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+                 		<label class="control-label" for="billNo">Bill No</label>  
+            		</div>	
+            		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">No</span>
+							</span>
+							<input list="billno_drop"  placeholder="Select Bill No" class="form-control input-md"
 								       id='billNo' name="billNo" onchange="getProductDetailsByBillNo()">
-							    <datalist id="billno_drop"></datalist>
-							
-            				</div>
-            			</div>
-         		  </div>
-         		  
+						    <datalist id="billno_drop"></datalist>
+						</div>
+            		</div>
+         		 </div>
+         	</div>
+         	 
          		<div class="table-responsive row" align="center" style="margin-left: 20px;" >
 				   <table id="jqGrid"></table>
 				   <div id="jqGridPager"></div>
 		  		</div>
 		  		
-                   <div class="row form-group" style="padding-top: 3%">
-					
-					<label class=" col-md-3 col-md-offset-5 control-label" for="grossTotal"><h4><b>Gross Total</b></h4></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input readonly="readonly" id="grossTotal" name="grossTotal" placeholder="Gross Total" class="form-control input-md" type="text" style="font-size: 25px;  height: 55px;">
-	            			</div>
+            <div class="row">
+				<div class="form-group">	
+					<div class="col-lg-offset-6 col-md-offset-6 col-lg-2 col-md-2 col-sm-4">
+						<label class="control-label" for="grossTotal">Gross Total</label>  
+			        </div>   	
+			        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">Rs</span>
+							</span>
+	              			<input readonly="readonly" id="grossTotal" name="grossTotal" placeholder="Gross Total" class="form-control input-md" type="text" style="font-size: 25px;  height: 55px;">
 	            		</div>
+	            	</div>
             	</div>
-         		  
-         		  <div class="form-group row" style="padding-top:2%">
-            		<div class="col-md-6 col-md-offset-3  text-center">
-              			<input type="button" id="save" name="save" style=" height: 53px; width: 128px; font-size: 25" class="btn btn-success" value="Submit" onclick="saleReturnVal()">
-			            <input type="button" id="btn1" name="btn1" style=" height: 53px; width: 128px; font-size: 25" class="btn btn-danger " value="Cancel" onclick="cancle()">
-	          	  	</div>
-         		 </div>         
-         		  </div> 
-         		  </fieldset>
+         	</div>
+         	
+         </div>
+         <!--  </fieldset> -->
          		  </form>
+         		  
+         		<div class="row buttons-margin" align="center">
+            		<input type="button" id="save" name="save" class="btn btn-success" value="Submit" onclick="saleReturnVal()">
+			        <input type="button" id="btn1" name="btn1" class="btn btn-danger" value="Cancel" onclick="cancle()">
+	          	</div>         
+         		 
+         		  </div> 
+         		 
          		  </div>
          		  
          	<!--------------------------------------------- Credit customer ------------------------------------------------------>
@@ -308,7 +311,7 @@
          	 </fieldset>
           </form>
           </div> --%>	
-		
-	</body>
-	</div>
+          
+</div>		
+</body>	
 <jsp:include page="commons/footer.jsp"></jsp:include>

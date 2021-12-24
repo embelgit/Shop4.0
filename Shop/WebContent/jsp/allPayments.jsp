@@ -24,7 +24,7 @@
       <link rel="stylesheet" href="/Shop/staticContent/css/bootstrap-select.css"> 
       <link rel="stylesheet" href="/Shop/staticContent/css/bootstrap-select.min.css"> 
       <link rel="stylesheet" href="/Shop/staticContent/css/bootstrapForSelect.min.css"> 
-    
+    	<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 </head>
 
  <div class="container col-sm-offset-2" style="float: left">

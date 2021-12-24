@@ -147,29 +147,27 @@ function uvalue(){
 	}
 }
 </script>
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 
-
-<style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
-</style>
 </head>
-<div class="row header_margin_top">
-			    <div align="center">
-			  		<h2 class="form-name style_heading">Measuring Units</h2>
-			  	</div>
-			 
-    </div>
-     <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
-    </div>
-	<div class="container col-sm-offset-2" >
+<body>
+<div class="container-fluid">
+	<div class="row header_margin_top">
+		<div align="center">
+			<h2 class="form-name style_heading">Measuring Units</h2>
+		</div>
+	</div>
+	
+     <div class="row" align="center">
+	    <div class="hr-width">
+			<hr class="style-one">
+		</div>	
+     </div>
+	
+	 <div class="container">
         <form class="form-horizontal" method="post" action="" name="munits">               <!-- Value of 'name' attribute is used in customerDetails.js  -->
           <fieldset>
+           <div class="shopform-margin">
 			<div class="row form-group">
            	 		<div class="col-md-6">
               			<%@include file="commons/clock.jsp" %>
@@ -234,12 +232,15 @@ function uvalue(){
            		 </div> --%>
            		  
            		 
-            	<div class="row form-group">
-           		<label class="col-md-2 control-label" for="unitName">Primary Unit<sup>*</sup></label>  
-           	 		<div class="col-md-3">
+            	<div class="row">
+            		<div class="form-group">
+           			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+           				<label class="control-label" for="unitName">Primary Unit<sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8">
             			<div class="input-group">
 							<span class="input-group-addon">
-								<i class="	glyphicon glyphicon-list-alt"></i>
+								<i class="glyphicon glyphicon-list-alt"></i>
 							</span>
               				
 							
@@ -274,6 +275,8 @@ function uvalue(){
 				</select>
             			</div>
            		 	</div>
+           		 </div>
+           		</div>
            		 	<div style="display: none;">
            		 	<label class="col-md-2 control-label" for="unitDescription">Secondary Unit<sup>*</sup></label>  
            	 		<div class="col-md-3">
@@ -311,7 +314,7 @@ function uvalue(){
 				
            		 	</div>
            		 </div></div>
-           		 </div>
+           		
             		 
            		 
            		 <div class="row form-group" style="display: none;">
@@ -339,22 +342,21 @@ function uvalue(){
            		 	</div>
            		 </div>
            	
-           		 <div class="form-group row">
-		            <div class="col-md-6 text-center col-md-offset-2" style="padding-top:2%" >
+           			</div>
+           		</fieldset>
+          </form>
+           		 <div class="row buttons-margin" align="center">		            
 		            <!--  "customerDetails()" function is implemented in customerDetails.js  -->
 	           		   		 
-	           		 <input type="button" id="save"    style="font-size: 25;width: 128px;height: 53px;" class="btn btn-success" name="save" onclick="addMeasuringUnit1()" value="Submit">
-	           		 <input type="reset"  id="reset"   style="font-size: 25;width: 128px;height: 53px;" class="btn  btn-danger" name="btn" onclick="reset()" value="Cancel">
-	           		 <input type="button" id="listBtn" style="font-size: 25;width: 128px;height: 53px;" class="btn btn-primary" onclick="unitlist()" value="List" /> 
-              		 <input type="button" id="listBtn" style="font-size: 25;width: 128px;height: 53px;" class="btn btn-primary" onclick="editUnit()" value="Edit" />
-              		
-              		
-	           		<!--  <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="addUnit()"><h4> Submit</h4></button>
+	           		 <input type="button" id="save" class="btn btn-success" name="save" onclick="addMeasuringUnit1()" value="Submit">
+	           		 <input type="reset" id="reset" class="btn btn-danger" name="btn" onclick="reset()" value="Cancel">
+	           		 <input type="button" id="listBtn" class="btn btn-primary" onclick="unitlist()" value="List" /> 
+              		 <input type="button" id="listBtn" class="btn btn-primary" onclick="editUnit()" value="Edit" />
+              			<!--  <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="addUnit()"><h4> Submit</h4></button>
               	<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->
-	           		 
-	           		 </div>
-         		</div>
-           	</fieldset>
-          </form>
+	           	</div>
+           
          </div>
+</div>
+</body>
        <%@include file="commons/footer.jsp" %>

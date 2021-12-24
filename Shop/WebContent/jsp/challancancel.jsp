@@ -35,7 +35,7 @@
     
      <script type="text/javascript" src="/Shop/staticContent/js/fertiSaleReturn.js"></script>
      
-     
+ <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">    
      
      <script type="text/javascript">
      function cancle(){
@@ -90,34 +90,31 @@
 		  	String todayDate = simpleDateFormat.format(new Date());
 		  	System.out.println(todayDate);
 	  	%>
-     
-     <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
-
-
-</style>
+ 
+<style>
+.container-fluid {
+    overflow: hidden;
+}	
+</style>    
 </head>
 	<body onload="pageLoad();">
-	  <div class="row header_margin_top">
-				    <div align="center">
-				  		<h2 class="form-name style_heading">Challan	Cancel</h2>
-				  	</div>
-			 
-    </div>
-     <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+<div class="container-fluid">
+	<div class="row header_margin_top">
+	    <div align="center">
+	  		<h2 class="form-name style_heading">Challan	Cancel</h2>
+	  	</div>
+	</div>
+    <div class="row" align="center">
+		<div class="hr-width">
+			<hr class="style-one">
+		</div>	
     </div>
     
   	<div style="float: none;"></div>
 
                                            
 	<div id="home">
-         	 <div class="container col-sm-offset-2" >
+         	 <div class="container">
 <!--   		 <form class="form-horizontal" method="post" action="">
          	 <fieldset> -->
 
@@ -134,14 +131,17 @@
            
 				<!------------------------------------------------ Sale Return -------------------------------------------------->
 				
-<div id="CashCustDetail" style="padding-top:2%">
+<div id="CashCustDetail">
   
      <form class="form-horizontal" method="post" action="" name="fertiBill">
 			<fieldset>
-				
-			  <div class="row form-group">
-			<label class="col-md-5 control-label" for="customerType" style="margin-left: 180px;">Challan No<sup>*</sup></label>  
-           			 <div class="col-md-3">
+		<div class="shopform-margin">	
+			 <div class="row">
+			  	<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="customerType">Challan No<sup>*</sup></label>  
+           			</div>
+           			<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
@@ -155,40 +155,39 @@
 							                                                                                     
 							                                                                                     <!-- onchange="getProductBillNo()"  -->
 							                                                                                                     
-				         <datalist id="billno_drop">
+				         	<datalist id="billno_drop">
 							<%
 					           for(int i=0;i<cust.size();i++){
 					        	   challanBeanH bean =(challanBeanH)cust.get(i);
 							%>
-							<option data-value="<%=bean.getBillNo()%>"><%=bean.getBillNo()%></option>
+								<option data-value="<%=bean.getBillNo()%>"><%=bean.getBillNo()%></option>
 							<%
 				      			}
 				    		%>
-						</datalist>
+							</datalist>
 
-           		 		</div>
-					</div>	
+           		 			</div>
+						</div>	
+					</div>
+				</div>
 				
-                
-         		  </div>
+         </div>
+         </fieldset>
+         		  </form>	
          		  
-		  		
-         		  
-         		  <div class="form-group row" style="padding-top:2%">
-            		<div class="col-md-6 col-md-offset-3  text-center">
-              			<input type="button" id="save" name="save" style=" height: 53px; width: 128px; font-size: 25" class="btn btn-success" value="Submit" onclick="billchallanVal()">
-			            <input type="button" id="btn1" name="btn1" style=" height: 53px; width: 128px; font-size: 25" class="btn btn-danger " value="Cancel" onclick="cancle()">
-	          	  	</div>
-         		 </div>         
+		  		<div class="row buttons-margin" align="center">
+            		<input type="button" id="save" name="save" class="btn btn-success" value="Submit" onclick="billchallanVal()">
+			        <input type="button" id="btn1" name="btn1" class="btn btn-danger" value="Cancel" onclick="cancle()">
+	          	</div>         
+         		
          		 <!--  </div>  -->
-         		  </fieldset>
-         		  </form>
+         		  
          		  </div>
          		  </div>
          		  
          	<!--------------------------------------------- Credit customer ------------------------------------------------------>
          		  
-
+</div>
 	</body>
 	
 <jsp:include page="commons/footer.jsp"></jsp:include>

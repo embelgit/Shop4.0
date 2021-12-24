@@ -19,16 +19,16 @@
 /* heading style */
 .style_heading{
 	
-	background: #ecbf69;
+	/* background: #ecbf69;
     border-radius: 10px;
-    width: 415px;
+    width: 415px; */
     padding: 10px;
    /*  text-shadow: 0px 2px 30px #00000000; */
     font-weight: 1000;
    /*  box-shadow: 0px 3px 3px #00000038; */
     font-family: sans-serif;
     color: #ffffff;
-    margin-top: 35px;
+    margin-top: 25px;
 			  }	
 
 	 		   

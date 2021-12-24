@@ -4,9 +4,12 @@
 	box-sizing: border-box;
 }
 .login-background {
-	background-image: url('/Shop/staticContent/images/uow221830.jpg');
-	background-size: cover;
-	background-repeat: norepeat;
+    background-image: url(/Shop/staticContent/images/background2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    background-position: center;
+    /* opacity: 0.8; */
 }
 .login-form {
 	display: flex;
@@ -62,4 +65,25 @@ h3.panel-title {
     margin: 5px;
     padding: 7px 14px;
     width: 35%;
+    outline: none !important;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    /* border: 1px solid transparent; */
+    border-radius: 12px;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+
+@media screen and (max-width: 480px) {
+.footer h4 {
+    font-size: 16px;
+}
 }

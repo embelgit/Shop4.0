@@ -71,7 +71,7 @@
   	 <script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
    	 <script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
      <script type="text/javascript" src="/Shop/staticContent/js/userDetails.js"></script>
-
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 	<script type="text/javascript">
           		 function userlist()
           		 {
@@ -81,22 +81,17 @@
           			 window.location = "editUserDetails.jsp";
 				}
 	</script>
-	 <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
+</head>
+<body>
+<div class="container-fluid">
 
 
-</style>
-	</head>
- <div class="row header_margin_top">
-			    <div align="center">
-			  		<h2 class="form-name style_heading">User Details</h2>
-			  	</div>
-			  	<div>
-			  	
-			  	       <%
+	<div class="row header_margin_top">
+		<div align="center">
+			<h2 class="form-name style_heading">User Details</h2>
+		</div>
+		<div>
+		  	       <%
 								Long Userid = 1l;
 						%>
 						<%
@@ -114,34 +109,38 @@
 							}  
 						%>
 						
-						<div align="right">
-								<h3 style="color: red; padding-right: 138px;">
+			<div align="right">
+				<h3 class="userid">
 								User ID ::
 								<%
 									out.println(Userid);
-								%>
-								</h3>
-						</div>
-				
-					</div>
-			 
+							%>
+				</h3>
+			</div>
+		</div>
+	</div>
+    
+	<div class="row" align="center">
+		<div class="hr-width">
+			<hr class="style-one">
+		</div>	
     </div>
-     <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
-    </div>
-      <div class="container col-sm-offset-2" >
+    
+    <div class="container">
         <form class="form-horizontal" method="post" action="" name="usd"><!-- Value of 'name' attribute is used in userDetails.js  -->
           <fieldset>
+          	<div class="shopform-margin">
           		<div class="row form-group">
            	 		<div class="col-md-6">
               			<%@include file="commons/clock.jsp" %>
            		 	</div>
 				</div>
-			 <div class="row form-group">
-           		<label class="col-md-2 control-label" for="firstName">First Name<sup>*</sup></label>  
-		           	 <div class="col-md-3">
+			<div class="row">
+				<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4"> 		
+           				<label class="control-label" for="firstName">First Name<sup>*</sup></label>  
+		           	</div> 
+		           	<div class="col-lg-3 col-md-3 col-sm-8">
             			<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
@@ -153,23 +152,24 @@
 							
 							%>
 							<input list="firstName_drop" id="firstName" placeholder="First Name" class="form-control">
-				<datalist id="firstName_drop">
+							<datalist id="firstName_drop">
 							<%
 					           for(int i=0;i<cList11.size();i++){
 					        	   UserDetailsBean cat11=(UserDetailsBean)cList11.get(i);
 							%>
 		
-							<option data-value="<%=cat11.getUsrId()%>" value="<%=cat11.getFirstName()%>">
+								<option data-value="<%=cat11.getUsrId()%>" value="<%=cat11.getFirstName()%>">
 							<%
 				      			}
 				    		%>
 			              	
-            			</datalist>
+            				</datalist>
             			</div>
             		</div>
-
-				<label class="col-md-2 control-label" for="lastName">Last Name<sup>*</sup></label>  
-           	 		<div class="col-md-3">
+            		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+						<label class="control-label" for="lastName">Last Name<sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
             			<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
@@ -181,20 +181,21 @@
 							
 							%>
 							<input list="lastName_drop" id="lastName" placeholder="Last Name" class="form-control">
-				<datalist id="lastName_drop">
+							<datalist id="lastName_drop">
 							<%
 					           for(int i=0;i<cList1.size();i++){
 					        	   UserDetailsBean cat1=(UserDetailsBean)cList1.get(i);
 							%>
 		
-							<option data-value="<%=cat1.getUsrId()%>" value="<%=cat1.getLastName()%>">
+								<option data-value="<%=cat1.getUsrId()%>" value="<%=cat1.getLastName()%>">
 							<%
 				      			}
 				    		%>
 			              	
-            			</datalist>
+            				</datalist>
             			</div>
             		</div>
+				
 				
             	<!-- <label class="col-md-2 control-label" for="middleName"> Middle Name<sup>*</sup></label>  
             		<div class="col-md-3">
@@ -206,11 +207,14 @@
             			</div>
 					</div> -->
 			</div>
+		</div>
 			
-			 <div class="row form-group">
-
-	           <label class="col-md-2 control-label" for="contactNo">Contact No.<sup>*</sup></label>  
-           	 		<div class="col-md-3">
+			<div class="row">
+	        	<div class="form-group">	
+	        		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+	        			<label class="control-label" for="contactNo">Contact No.<sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-earphone"></i>
@@ -218,23 +222,27 @@
               				<input id="contactNo" name="contactNo" placeholder="10 digit Contact No." class="form-control input-md" type="text" maxlength="10">
             			</div>
             		</div>
-            	
-            	<label class="col-md-2 control-label" for="address1">Address <sup>*</sup></label>  
-	            <div class="col-md-3">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-map-marker"></i>
-						</span>
-              			<input id="address1" name="address1 " placeholder="Address Line 1" class="form-control input-md" type="text" >
-            		</div>
+            	   	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+            	   		<label class="control-label" for="address1">Address <sup>*</sup></label>  
+	            	</div>
+	            	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-map-marker"></i>
+							</span>
+	              			<input id="address1" name="address1 " placeholder="Address Line 1" class="form-control input-md" type="text" >
+            			</div>
+					</div>
 				</div>
 			</div>
 		
 		
-			<div class="row form-group">
-				
-				<label class="col-md-2 control-label" for="city">User Name<sup>*</sup></label>  
-		            <div class="col-md-3">
+			<div class="row">
+				<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="city">User Name<sup>*</sup></label>  
+		            </div>
+		            <div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
@@ -242,9 +250,10 @@
 	              			<input id="userName" name="userName " placeholder="User Name" class="form-control input-md" type="text" autofocus onchange="return ChooseContact();" >
 	            		</div>
 					</div>
-				
-				<label class="col-md-2 control-label" for="pan">Password<sup>*</sup></label>  
-           			 <div class="col-md-3">
+					<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+						<label class="control-label" for="pan">Password<sup>*</sup></label>  
+           			</div>
+           			<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 						<div class="input-group">
 							<span class="input-group-addon">
 							<i class="glyphicon glyphicon-hand-right"></i>
@@ -252,41 +261,47 @@
               				<input id="password" name="password" placeholder="Password" class="form-control input-md" type="text" >
             			</div>
             		</div>
-			
+            	</div>			
 			</div>
 		
 			
-			<div class="row form-group">
-			<label class="col-md-2 control-label" for="pan">Re-Password<sup>*</sup></label>  
-           			 <div class="col-md-3">
+			<div class="row">
+				<div class="form-group">	
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="pan">Re-Password<sup>*</sup></label>  
+           			</div>
+           			<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
-						<i class="glyphicon glyphicon-hand-right"></i>
+								<i class="glyphicon glyphicon-hand-right"></i>
 							</span>
               				<input id="password2" name="password2" placeholder="Re-Enter Password" class="form-control input-md" type="text" autofocus  onchange="validatePassword()">
             			</div>
             		</div>
-            		
-            	<label class="col-md-2 control-label" for="city">City<sup>*</sup></label>  
-	            <div class="col-md-3">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-map-marker"></i>
-						</span>
-              			<input id="city" name="city" placeholder="City" class="form-control input-md" type="text" >
-            		</div>
-				</div>
-				
-			</div>
-			
-		
-			
-			<div class="row form-group">
-				<label class="col-md-2 control-label" for="pan">PAN No.<sup>*</sup></label>  
-           			 <div class="col-md-3">
+            		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+            			<label class="control-label" for="city">City<sup>*</sup></label>  
+	            	</div>
+	            	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 						<div class="input-group">
 							<span class="input-group-addon">
-							No
+								<i class="glyphicon glyphicon-map-marker"></i>
+							</span>
+	              			<input id="city" name="city" placeholder="City" class="form-control input-md" type="text" >
+	            		</div>
+					</div>
+				</div>
+			</div>
+		
+			
+			<div class="row">
+				<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="pan">PAN No.<sup>*</sup></label>  
+           			</div>	 
+           			 <div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">No</span>
 							</span>
               				<input id="pan" name="pan" placeholder="PAN Number" class="form-control input-md" type="text" required="">
             			</div>
@@ -307,23 +322,22 @@
             		</div>
 				</div> -->
 			
+				</div>
 			</div>
 			
-			
-			 
- 			<div class="form-group row" style="padding-top:2%">
-            	<div class="col-md-10 text-center">
-            		 <!--  userDetails() function is implemented in  userDetails.js -->
-            		 
-            		 <input style="font-size: 25;width: 128px; height: 53px;" type="button" id="btn"      class="btn btn-success" name="btn" onclick="return regUserDetails();" value="Submit"/>
-		             <input style="font-size: 25;width: 128px; height: 53px;" type="reset"  id="save"     class="btn btn-danger"  name="btn" onclick="reset()" value="Cancel"/>
-            	     <input style="font-size: 25;width: 128px; height: 53px;" type="button" id="listBtn"  class="btn btn-primary" name="btn" onclick="userlist()" value="List"/>
-            	     <input style="font-size: 25;width: 128px; height: 53px;" type="button" id="listBtn1" class="btn btn-primary" name="btn" onclick="editUser()" value="Edit" />
-            	
-        	    </div>
-          	</div>
+			</div>
 		</fieldset>
-      </form>
+      </form>	
+			 
+ 				<div class="row buttons-margin" align="center">
+            	 <!--  userDetails() function is implemented in  userDetails.js -->
+            		 <input type="button" id="btn" class="btn btn-success" name="btn" onclick="return regUserDetails();" value="Submit"/>
+		             <input type="reset" id="save" class="btn btn-danger" name="btn" onclick="reset()" value="Cancel"/>
+            	     <input type="button" id="listBtn" class="btn btn-primary" name="btn" onclick="userlist()" value="List"/>
+            	     <input type="button" id="listBtn1" class="btn btn-primary" name="btn" onclick="editUser()" value="Edit" />
+               	</div>
+               	
+		
     </div>
     
    <%--  <%@include file="commons/newFooter.jsp" %> --%>
@@ -338,5 +352,6 @@
           }
     
     	%>
-    
+</div>
+</body>    
 <jsp:include page="commons/footer.jsp"></jsp:include>

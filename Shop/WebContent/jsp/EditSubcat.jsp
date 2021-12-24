@@ -22,37 +22,36 @@
           		
 <script type="text/javascript" src="/Shop/staticContent/js/subcategory.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/productDetail.js"></script>
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 
-<style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
-
-
-</style>
 </head>
-<div class="row header_margin_top">
-			    <div align="center">
-			  		<h2 class="form-name style_heading">Edit SubCategory Details</h2>
-			  	</div>
-			 
+<body>
+<div class="container-fluid">
+	<div class="row header_margin_top">
+		<div align="center">
+			<h2 class="form-name style_heading">Edit SubCategory Details</h2>
+		</div>
+	</div>
+    
+    <div class="row" align="center">
+		<div class="hr-width">
+			<hr class="style-one">
+		</div>	
     </div>
-     <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
-    </div>
-	<div class="container col-sm-offset-" >
+    
+	<div class="container">
         <form class="form-horizontal" method="post" action="" name="subcat">       <!-- Value of 'name' attribute is used in customerDetails.js  -->
           <fieldset>
+			<div class="shopform-margin">
 			<div class="row form-group">
            	 		<div class="col-md-6">
               			<%@include file="commons/clock.jsp" %>
            		 	</div>
 			</div>
-			 <div class="row form-group">
-           		<label class="col-md-3  control-label" for="categoryName">
+			 <div class="row">
+			 	<div class="form-group">
+           		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+           		<label class="control-label" for="categoryName">
            		<%if(abc.equals("marathi"))
            		{%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> 
            		<%}%>
@@ -61,7 +60,8 @@
            		 {%>Category Name<%}%>
            		 
            		 <sup>*</sup></label>  
-           	 		<div class="col-md-3">
+           		 </div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-list-alt"></i>
@@ -86,17 +86,16 @@
             				</datalist>
 				</div>
 				</div>
-				
-				<label class=" col-md-3  control-label" for="categoryName">
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+				<label class="control-label" for="categoryName">
 				<%if(abc.equals("marathi"))
 				{%><%=PropertiesHelper.marathiProperties.getProperty("fk_cat_id") %> 
 				<%}%>
 				 <%if(abc.equals("english"))
 					 
-				 {%>Sub Category Name<%}%>
-				 
-				 <sup>*</sup></label>
-					<div class="col-md-3">
+				 {%>Sub Category Name<%}%><sup>*</sup></label>
+				 </div>
+					<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 						<div class="input-group">
 							<span class="input-group-addon">
 							 <i class="glyphicon glyphicon-list-alt"></i>
@@ -108,9 +107,9 @@
 					</div>
 					
 					
-					
+					</div>
            		 </div>
-            <div>
+            <div class="row">
            		 <%-- <label class=" col-md-3  control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Sub Category Name<%}%><sup>*</sup></label> --%>  
            	 		
            		 	<!-- <div class="col-md-3">
@@ -124,9 +123,11 @@
 						</div>
 					</div> -->
            		 	
-           		 	<div class="row form-group">
-           		<label class="col-md-3 control-label" for="unitName">New SubCategory Name<sup>*</sup></label>  
-           	 		<div class="col-md-3">
+           		 	<div class="form-group">
+           		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+           		<label class="control-label" for="unitName">New SubCategory Name<sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8">
             			<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-list-alt"></i>
@@ -138,20 +139,24 @@
            		 	</div>
            		 </div> 
            	 </div>
-           		 
-           		 <div class="form-group row" style="padding-top:2%">
-		            <div class="col-md-6 text-center col-md-offset-3">
+        
+        </div>
+          	</fieldset>
+          </form>   		 
+           		 <div class="row" style="padding-top:2%" align="center">
+		            
 		            <!--  "customerDetails()" function is implemented in customerDetails.js  -->
 	           		   		 
-	           		 <input type="button" id="save" name="btn" style=" height: 53px; width: 128;font-size: 25" class="btn btn-success" onclick="subcategoryd()" value="Update">
-	           		 <input id="save" name="btn" style=" height: 53px; width: 128;font-size: 25" class="btn  btn-danger " type="reset"  onclick="reset()" value="Cancel">
-	           		 <input style=" height: 53px; width: 128; font-size: 25" type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="back()" /> 
+	           		 <input type="button" id="save" name="btn" class="btn btn-success" onclick="subcategoryd()" value="Update">
+	           		 <input id="save" name="btn" class="btn btn-danger" type="reset"  onclick="reset()" value="Cancel">
+	           		 <input type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="back()" /> 
            		
 	           		<!--  <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="addUnit()"><h4> Submit</h4></button>
               	          <button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->
-	           	   </div>
+	           	   
          		</div>
-           	</fieldset>
-          </form>
+         
          </div>
+</div>
+</body>
        <%@include file="commons/footer.jsp" %>

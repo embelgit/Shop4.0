@@ -13,7 +13,7 @@
 <script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
 
 <script type="text/javascript" src="/Shop/staticContent/js/shopdetails.js"></script>
-
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 <%-- <script>
 function checkForDuplicateShopEntry(){
 		<%
@@ -51,14 +51,10 @@ function checkForDuplicateShopEntry(){
 				}
 </script>
 
-<style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
-</style>
-
 </head>
+<body>
+<div class="container-fluid">
+
 		 	<div class="row header_margin_top">
 			    <div align="center">
 			  		<h2 class="form-name style_heading"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("categoryDetails") %> <%}%> <%if(abc.equals("english")){%>Shop Details<%}%> </h2>
@@ -82,7 +78,7 @@ function checkForDuplicateShopEntry(){
 						%>
 			  	
 			 			<div align="right">
-								<h3 style="color: red; padding-right: 138px;">
+								<h3 class="userid">
 									Shop ID ::
 								<%
 									out.println(shopid);
@@ -90,96 +86,113 @@ function checkForDuplicateShopEntry(){
 								</h3>
 						</div>
     </div>
-     <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+    <div class="row" align="center">
+		<div class="hr-width">
+			<hr class="style-one">
+		</div>	
     </div>
-    <div>
-</div>
- 	 
+    
+  	 
  	 <!--------------------------------------------------------- Shop by RK -------------------------------------------------------------->
  	 
  	 <div id="shopDetail">
- 	 <form class="form-horizontal" method="post" action="" name="catd">
-			 <div class="row form-group" >
-           		<label class="col-md-3 col-sm-offset-0 control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Shop Name<%}%><sup>*</sup></label>  
-           	 		<div class="col-md-3">
+ 	 	<form class="form-horizontal" method="post" action="" name="catd">
+			<div class="shopform-margin">
+			 <div class="row">
+           		<div class="form-group">	
+           			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+           				<label class="control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Shop Name<%}%><sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-list-alt"></i>
 							</span>
-              					<input id="shopName" name="shopName" placeholder="Shop Name" class="form-control input-md" type="text" autofocus >
+              				<input id="shopName" name="shopName" placeholder="Shop Name" class="form-control input-md" type="text" autofocus >
             			</div>
-            			</div>
-            			
-            	<label class="col-md-2 col-sm-offset-0  control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Contact Number<%}%><sup>*</sup></label>  
-           	 		<div class="col-md-3">
+            		</div>
+            		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+            			<label class="control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Contact Number<%}%><sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
             			<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-earphone"></i>
 							</span>
-              					<input id="contactNumber" name="contactNumber" placeholder="Contact Number" class="form-control input-md" type="text" >
+              				<input id="contactNumber" name="contactNumber" placeholder="Contact Number" class="form-control input-md" type="text" >
             			</div>
-            			
-           		 	</div>
+            		</div>
 				</div>
+			</div>
 				
-				 <div class="row form-group" >
-           		<label class="col-md-3 col-sm-offset-0 control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>GST No<%}%><sup>*</sup></label>  
-           	 		<div class="col-md-3">
+			<div class="row">
+           		<div class="form-group">	
+           			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+           				<label class="control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>GST No<%}%><sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
-								No
+								<span class="glyphicon nogyphicon">No</span>
 							</span>
-              					<input id="gstNo" name="gstNo" placeholder="GST Number" class="form-control input-md" type="text" >
+              				<input id="gstNo" name="gstNo" placeholder="GST Number" class="form-control input-md" type="text" >
             			</div>
-            			</div>
-            			
-            	<label class="col-md-2 col-sm-offset-0  control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Address<%}%><sup>*</sup></label>  
-           	 		<div class="col-md-3">
+            		</div>
+            		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+            			<label class="control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Address<%}%><sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
             			<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-map-marker"></i>
 							</span>
-              					<input id="address" name="address" placeholder="Address" class="form-control input-md" type="text">
+              				<input id="address" name="address" placeholder="Address" class="form-control input-md" type="text">
             			</div>            			
            		 	</div>
 				</div>
+			</div>
 				
-				<div class="row form-group" >
-           		<label class="col-md-3 col-sm-offset-0 control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Wholesale Lic No<%}%><sup>*</sup></label>  
-           	 		<div class="col-md-3">
+			<div class="row">
+           		<div class="form-group">
+           			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+           				<label class="control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Wholesale Lic No<%}%><sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
-								No
+								<span class="glyphicon nogyphicon">No</span>
 							</span>
-              					<input id="wholesalelicno" name="wholesalelicno" placeholder="Wholesale Lic No" class="form-control input-md" type="text" >
+              				<input id="wholesalelicno" name="wholesalelicno" placeholder="Wholesale Lic No" class="form-control input-md" type="text" >
             			</div>
-            			</div>
-            			
-            	<label class="col-md-2 col-sm-offset-0  control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Shop Lic No<%}%><sup>*</sup></label>  
-           	 		<div class="col-md-3">
+            		</div>
+            		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+            			<label class="control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Shop Lic No<%}%><sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
             			<div class="input-group">
 							<span class="input-group-addon">
-								No
+								<span class="glyphicon nogyphicon">No</span>
 							</span>
-              					<input id="shoplicno" name="shoplicno" placeholder="Shop Lic No" class="form-control input-md" type="text">
+              				<input id="shoplicno" name="shoplicno" placeholder="Shop Lic No" class="form-control input-md" type="text">
              					<!-- <textarea id="address" name="address" placeholder="Address" class="form-control input-md" maxlength="500"></textarea> -->
             			</div>            			
            		 	</div>
 				</div>
+			</div>
 				
-				<div class="row form-group" >
-           		<label class="col-md-3 col-sm-offset-0 control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Footer Shop Name<%}%><sup>*</sup></label>  
-           	 		<div class="col-md-3">
+			<div class="row">
+           		<div class="form-group">	
+           			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+           				<label class="control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Footer Shop Name<%}%><sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-list-alt"></i>
 							</span>
-              					<input id="footershopname" name="footershopname" placeholder="Footer Shop Name" class="form-control input-md" type="text" >
+              				<input id="footershopname" name="footershopname" placeholder="Footer Shop Name" class="form-control input-md" type="text" >
             			</div>
-            			</div>
+            		</div>
             			
             	<%-- <label class="col-md-2 col-sm-offset-0  control-label" for="categoryName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Shop Lic No<%}%><sup>*</sup></label>  
            	 		<div class="col-md-3">
@@ -192,21 +205,22 @@ function checkForDuplicateShopEntry(){
             			</div>            			
            		 	</div> --%>
 				</div>
+			</div>
+		
+		</div>
+		</form>		
 				
-				
-				<div class="form-group row" style="padding-top:2%">
-		            <div class="col-md-10 col-sm-offset-1 text-center">
-		          		           	 
-		           	<input style="height: 53px; width: 128; font-size: 25" type="button" id="save"     class="btn btn-large btn-success" name="btn" onclick="shopDetails()" value="Submit">
-		            <input style="height: 53px; width: 128; font-size: 25" type="reset"  id="save1"    class="btn btn-large btn-danger"  name="btn" onclick="reset()" value="Cancel">
-		     	    <input style="height: 53px; width: 128; font-size: 25" type="button" id="listBtn"  class="btn btn-primary"           name="btn" onclick="shoplist()" value="List" />
-		     	    <input style="height: 53px; width: 128; font-size: 25" type="button" id="listBtn1" class="btn btn-primary"           name="btn" onclick="editShop()" value="Edit" />
-		     	   
-		     	   </div>
-              </div>
-         </form>
+				<div class="row buttons-margin" align="center">
+		            <input type="button" id="save" class="btn btn-large btn-success" name="btn" onclick="shopDetails()" value="Submit">
+		            <input type="reset" id="save1" class="btn btn-large btn-danger" name="btn" onclick="reset()" value="Cancel">
+		     	    <input type="button" id="listBtn" class="btn btn-primary" name="btn" onclick="shoplist()" value="List" />
+		     	    <input type="button" id="listBtn1" class="btn btn-primary" name="btn" onclick="editShop()" value="Edit" />
+		     	</div>
+       
          </div>
        
      </div>
-     </div>
+   
+
+ </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>

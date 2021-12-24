@@ -51,7 +51,7 @@
     <script type="text/javascript" src="/Shop/staticContent/js/supplierDetailsUnused.js"></script>
     <script type="text/javascript" src="/Shop/staticContent/js/productDetail.js"></script>
     <script type="text/javascript" src="/Shop/staticContent/js/categoryDetails.js"></script>
-    
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">    
 <script type="text/javascript">
 function mypopup(url)
 {
@@ -622,18 +622,19 @@ function hamaliExpenseAddingToGross()
 		
 </script>
 <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
+.container-fluid {
+	overflow: hidden;
 }
 </style>
 </head>
 <body>
+<div class="container-fluid">
+
 <div class="row header_margin_top">
-			    <div align="center">
-			  		<h2 class="form-name style_heading">Purchase Order</h2>
-			  	</div>			 
-    </div>
+    <div align="center">
+  		<h2 class="form-name style_heading">Purchase Order</h2>
+  	</div>			 
+</div>
     
              <%
 				 	Long advbookingId = 1l;
@@ -649,42 +650,47 @@ function hamaliExpenseAddingToGross()
 					}       
 		     %> 
 					  		
-			  		 <div align="right">
-								<h3 style="color: red; position: absolute; right: 120px; top: 108px;">
-								PO No ::
+		   <div align="right">
+				<h3 class="userid">
+							PO No ::
 								<%
 									out.println(advbookingId);
 								%>
-								</h3>
-					</div>
+				</h3>
+			</div>
    
-     <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+	<div class="row" align="center">
+		<div class="hr-width">
+			<hr class="style-one">
+		</div>	
     </div>     
   
 	  <div class="">
-	  <div class="col-md-10 col-md-offset-1"> 
+	  <div class=""> 
         <form class="form-horizontal" method="post" action="" name="goodsReceiveForm" id="goodsReceiveForm">
           <!-- Value of 'name' attribute is used in  supplierDetails.js  --><fieldset>
+       		<fieldset>
+       		<div class="shopform-margin">	
+       			
        			<div class="row form-group">
            	 		<div class="col-md-6">
               			<%@include file="commons/clock.jsp" %>
            		 	</div>
 				</div>
 				
-        	       <div class="row form-group">
-        	        <label class="col-md-2 control-label" for="supplier">Supplier Name<sup>*</sup></label> 
-	                      <div id="supplierfresh">
-          					  <div class="col-md-3">
-								<div class="input-group" id="goodrrrr">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-user"></i>
-									</span>
-							
-							<input list="sup_drop" id="supplier" placeholder="Supplier Name" class="form-control" onclick="<!-- autoRefresh_div(); -->callSupplier()" onchange="getSuppliermailID()">
-				            <datalist id="sup_drop">
+        	       	<div class="row">
+        	       		<div class="form-group">
+        	       			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+        	       				<label class="control-label" for="supplier">Supplier Name<sup>*</sup></label> 
+	                      	</div>
+	                      	<div id="supplierfresh">
+          					  	<div class="col-lg-3 col-md-3 col-sm-8">
+									<div class="input-group" id="goodrrrr">
+										<span class="input-group-addon">
+											<i class="glyphicon glyphicon-user"></i>
+										</span>
+										<input list="sup_drop" id="supplier" placeholder="Supplier Name" class="form-control" onclick="<!-- autoRefresh_div(); -->callSupplier()" onchange="getSuppliermailID()">
+				            			<datalist id="sup_drop">
 							
 							<%
 					           for(int i=0;i<sList.size();i++)
@@ -692,67 +698,72 @@ function hamaliExpenseAddingToGross()
 					        	   SupplierDetailsBean sup =(SupplierDetailsBean)sList.get(i);
 							%>
 		
-							<option data-value="<%=sup.getSupId()%>" value="<%=sup.getDealerName() %>">
+											<option data-value="<%=sup.getSupId()%>" value="<%=sup.getDealerName() %>">
 							<%
 				      			}
 				    		%>
-						</datalist>
-						<span class="input-group-addon">
-									<button type="button" onclick="supplierDetailsDivAction(1)">
-										 <span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
-									</button>
-							</span>
-					</div>
-				</div>
-			</div>
-           	
-        	      <label class="col-md-3 control-label" for="billNum" ><b>Supplier Email Id:</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-							<i class="glyphicon glyphicon-envelope"></i>
-						</span>
-	              				<input id="mailid" name="mailid" placeholder="Enter Mail ID" class="form-control input-md" type="text">
+										</datalist>
+										<span class="input-group-addon">
+											<button type="button" onclick="supplierDetailsDivAction(1)">
+												<span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
+											</button>
+										</span>
+									</div>
+								</div>
+							</div>
+           					<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+        	      				<label class="control-label" for="billNum" ><b>Supplier Email Id:</b></label>  
+			           	 	</div>
+			           	 	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-envelope"></i>
+									</span>
+	              					<input id="mailid" name="mailid" placeholder="Enter Mail ID" class="form-control input-md" type="text">
+	            				</div>
 	            			</div>
-	            		</div>
-            	</div>
+            			</div>
+            		</div>
 		
-		<div class="row form-group">
-		 <label class="col-md-2 control-label" for="fk_cat_id">Product Category</label>  
-		       <div id="categoryrefresh">
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="	glyphicon glyphicon-list-alt"></i>
-							</span>
+					<div class="row">
+						<div class="form-group">
+		 					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+		 						<label class="control-label" for="fk_cat_id">Product Category</label>  
+		       				</div>
+		       				<div id="categoryrefresh">
+           			 			<div class="col-lg-3 col-md-3 col-sm-8">
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="	glyphicon glyphicon-list-alt"></i>
+										</span>
               				
 							<%
 							    CategoryDetailsDao cdd = new CategoryDetailsDao();
            						List cList =cdd.getAllMainCat(request);
 							
 							%>
-							<input list="cat_drop" id="fk_cat_id" placeholder="Product Category"  class="form-control" onchange="getAllSubCat()">
-						<datalist id="cat_drop">
+										<input list="cat_drop" id="fk_cat_id" placeholder="Product Category"  class="form-control" onchange="getAllSubCat()">
+										<datalist id="cat_drop">
 							<%
 					           for(int i=0;i<cList.size();i++){
 					        	   CategoryDetailsBean cat=(CategoryDetailsBean)cList.get(i);
 							%>		
-							<option data-value="<%=cat.getCatId()%>" value="<%=cat.getCategoryName()%>">
+											<option data-value="<%=cat.getCatId()%>" value="<%=cat.getCategoryName()%>">
 							<%
 				      			}
 				    		%>
 			             
-            			</datalist>
-             			     <span class="input-group-addon">
-									<button type="button" onclick="catDetailsDivAction(1)">
-										 <span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
-									</button>
-					     	</span>
-            			</div>
-            		</div>
-            	</div>
-		
-		        <label class="col-md-3 control-label" for="subCat">
+            							</datalist>
+             			     			<span class="input-group-addon">
+											<button type="button" onclick="catDetailsDivAction(1)">
+												 <span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
+											</button>
+					     				</span>
+            						</div>
+            					</div>
+            				</div>
+							<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+		        				<label class="control-label" for="subCat">
 		        <%if(abc.equals("marathi"))
 		        {%>
 		       		 <%=PropertiesHelper.marathiProperties.getProperty("productCat") %>
@@ -760,56 +771,58 @@ function hamaliExpenseAddingToGross()
 		        <%if(abc.equals("english"))
 		        {%>
 		        Product Sub-Category
-		        <%}%></label>  
-		         <div id="subcategoryrefresh">
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="	glyphicon glyphicon-list-alt"></i>
-							</span>
+		        <%}%></label>
+		        			</div>  
+		         			<div id="subcategoryrefresh">
+           			 			<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="glyphicon glyphicon-list-alt"></i>
+										</span>
 							<!-- 	<select class="form-control input-md" id='subCat'  name="subCat"  onchange="getProductName()" onchange="Location.reload()"></select> -->	
-							 <input list="subcategory_drop" class="form-control input-md" placeholder=" Product Sub-Category"
-								    id="subCat" name="subCat"  onchange="getProductName()" onchange="Location.reload()">
-							<datalist id="subcategory_drop">
-							</datalist>		
-							 <span class="input-group-addon">
-									<button type="button" onclick="subcatDetailsDivAction(1)">
-										 <span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
-									</button>
-					     	</span>					
-               			</div>
-              		</div>
-         		</div>
-           </div>
+							 			<input list="subcategory_drop" class="form-control input-md" placeholder=" Product Sub-Category"
+								    			id="subCat" name="subCat"  onchange="getProductName()" onchange="Location.reload()">
+										<datalist id="subcategory_drop">
+										</datalist>		
+							 			<span class="input-group-addon">
+											<button type="button" onclick="subcatDetailsDivAction(1)">
+										 		<span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
+											</button>
+					     				</span>					
+               						</div>
+              					</div>
+         					</div>
+           				</div>
+           			</div>
 							
-				<div class="row form-group">
-				   <div id="productrefresh">
-					<label class="col-md-2 control-label" for="proName">Product Name</label>  
-					        <div class="col-md-3">
+				<div class="row">
+				   	<div class="form-group">		
+				   		<div id="productrefresh">
+				   			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+								<label class="control-label" for="proName">Product Name</label>  
+					        </div>
+					        <div class="col-lg-3 col-md-3 col-sm-8">
 								<div class="input-group">
 									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-list-alt"></i>
-									</span>
-																		
+										<i class="glyphicon glyphicon-list-alt"></i>
+									</span>																		
 									<input list="product_drop" class="form-control input-md" id="proName" placeholder=" Product Name" name="proName"   
 									       onchange="advBookingproductDetailInGrid();">
-									
 									<datalist id="product_drop"></datalist>
-									
 									<span class="input-group-addon">
-									     <button type="button" onclick="productDetailsDivAction(1);">
+									    <button type="button" onclick="productDetailsDivAction(1);">
 										    <span class="glyphicon glyphicon-plus" style="color: #393836;"></span>
 									    </button>
-							       </span>
-							
+							       	</span>
 								</div>
 							</div>
-											  
-					  <label class="col-md-3 control-label" for="proName">All Product Name<sup>*</sup></label>  
-          					  <div class="col-md-3">
+						  	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+						  		<label class="control-label" for="proName">All Product Name<sup>*</sup></label>  
+          					</div>  
+          					<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 								<div class="input-group">
 									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-list-alt"></i>
+										<i class="glyphicon glyphicon-list-alt"></i>
 									</span>
 											
 									<%
@@ -817,13 +830,13 @@ function hamaliExpenseAddingToGross()
            					   List pdList =cdh.getAllMainProdInfo(request);
 							
 							%>
-							<input list="product_drop1" id="proName1" placeholder="All Product Name" class="form-control" onchange="advBookingproductDetailInGrid()">
-						    <datalist id="product_drop1">
+								<input list="product_drop1" id="proName1" placeholder="All Product Name" class="form-control" onchange="advBookingproductDetailInGrid()">
+						    	<datalist id="product_drop1">
 							<%
 					           for(int i=0;i<pdList.size();i++){
 					        	   ProductDetailsBean cat=(ProductDetailsBean)pdList.get(i);
 							%>		
-							<option data-value="<%=cat.getCatname()%>"
+									<option data-value="<%=cat.getCatname()%>"
 							        value="<%=cat.getCatname()%> :::>>> <%=cat.getSubcatname()%> :::>>> <%=cat.getProductName()%> :::>>> <%=cat.getWeight()%>"
 						            myvalue ="<%=cat.getProductName()%>"
 						            myvalue1="<%=cat.getFk_cat_id()%>"
@@ -836,10 +849,11 @@ function hamaliExpenseAddingToGross()
 				      			}
 				    		%>
 			             
-            			   </datalist>						
+            			   		</datalist>						
+							</div>
 						</div>
-					</div>
-			    </div>	
+			    	</div>	
+				</div>
 			</div>				
 					
 									
@@ -854,33 +868,38 @@ function hamaliExpenseAddingToGross()
 					
 					</div>
 					
-					<label class="col-md-2 control-label"  for="total" ><b>Gross Total</b></label>  
-			           	 <div class="col-md-3" style="padding-left: 5px;">
+				<div class="row">
+					<div class="form-group">
+						<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+							<label class="control-label"  for="total" >Gross Total</label>  
+			           	</div> 
+			           	<div class="col-lg-3 col-md-3 col-sm-8">
 							<div class="input-group">
 								<span class="input-group-addon">
-									No
+									<span class="glyphicon nogyphicon">No</span>
 								</span>
 	              				<input readonly="readonly" id="total" name="total" placeholder="Gross Total"  class="form-control input-md" type="text">
-	              				
-	            			</div>
+	              			</div>
 	            		</div>
-	            		
+	            	</div>
+	            </div>	
+	            	
 	            		<div class="col-md-3">
 							<div class="input-group">
 								<input id="podate" value="<%=todayDate%>" name="podate" class="form-control input-md" type="hidden">
 	              			</div>
 	            		</div>
-											
-			<div class="form-group row" style="padding-top:6%">
-		         <div class="col-md-12 text-center" >
-		            	            
-		            <input type="button" style="height:53px; width:128px;font-size: 25" class="btn btn-success" id="save" name="btn" value="Submit" onclick="addingAdvanvceBooking()">
-		            <input type="button" style="height:53px; width:128px;font-size: 25" class="btn btn-danger"  id="save" name="btn" value="Cancel" onclick="location.reload()">
-		              
-		         </div>
-		   </div> 
+			
+			</div>
 		</fieldset>
 	</form>
+											
+			<div class="row buttons-margin" align='center'>
+		         <input type="button" class="btn btn-success" id="save" name="btn" value="Submit" onclick="addingAdvanvceBooking()">
+		         <input type="button" class="btn btn-danger" id="save" name="btn" value="Cancel" onclick="location.reload()">
+		    </div> 
+		
+		
 	</div>
 </div>
 	
@@ -1538,6 +1557,7 @@ function hamaliExpenseAddingToGross()
 				
  <!-- ==================================================== END PRODUCT DETAILS POP UP ============================================================== -->	
 
+</div>
 <jsp:include page="commons/footer.jsp"></jsp:include>
 
 

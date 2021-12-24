@@ -7,6 +7,7 @@
   <script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
  <script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
  <script type="text/javascript" src="/Shop/staticContent/js/partnerDetails.js"></script>
+ <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
  <script type="text/javascript">
  	
 function supplierlist()
@@ -17,148 +18,162 @@ function Back()
 {
 	window.location = "partnerDetails.jsp" ;
 }
-</script>
-          		
- <style>
-	.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- 	{
-    	border-radius:23px;
-	}
-</style>
+</script>          		
+ 
 </head>
+<body>
+<div class="container-fluid">
    <div class="row header_margin_top">
 			    <div align="center">
 			  		<h2 class="form-name style_heading"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("supplierdetails") %> <%}%> <%if(abc.equals("english")){%>Edit Partner Details<%}%></h2>
 			  	</div>
 			 
     </div>
-     <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+    <div class="row" align="center">
+	     <div class="hr-width">
+	  		<hr class="style-one">
+	     </div>	
     </div>
-      <div class="container col-sm-offset-1" >
+    <div class="container">
         <form class="form-horizontal" method="post" action="" name="partnm"><!-- Value of 'name' attribute is used in  supplierDetails.js  -->
           <fieldset>
-          
-         
-           				 <label class="col-md-2 control-label" for="partner"> Partner Name<sup>*</sup></label>  
-          					  <div class="col-md-3" style="margin-left: -4px;">
-								<div class="input-group" style="margin-left: -6px;">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-user"></i>
-									</span>
+          		<div class="shopform-margin">
+          		
+	          		<div class="row form-group">
+	           	 		<div class="col-md-6">
+	              			<%@include file="commons/clock.jsp" %>
+	           		 	</div>
+					</div>
+          		
+          		      <div class="row">
+          		      		<div class="form-group">   
+           				 		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+           				 			<label class="control-label" for="partner"> Partner Name<sup>*</sup></label>  
+          					  	</div>
+          					  	<div class="col-lg-3 col-md-3 col-sm-8">
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="glyphicon glyphicon-user"></i>
+										</span>
 								<%
 								partnerDetailsDao sdd = new partnerDetailsDao();
            						List sList =sdd.getAllPartner(request);
 						       	%>
 							
-							<input list="part_drop" id="selectpartner" placeholder="Select Partner Name" onchange="getPartnerDetails()" class="form-control">
-				        <datalist id="part_drop">
+										<input list="part_drop" id="selectpartner" placeholder="Select Partner Name" onchange="getPartnerDetails()" class="form-control">
+				        				<datalist id="part_drop">
 							
 							<%
 					           for(int i=0;i<sList.size();i++){
 					        	   PartnerDetailsBeanH sup =(PartnerDetailsBeanH)sList.get(i);
 							%>
 		
-							<option data-value="<%=sup.getPkPartnerId()%>" value="<%=sup.getPartnerName() %>">
+											<option data-value="<%=sup.getPkPartnerId()%>" value="<%=sup.getPartnerName() %>">
 							<%
 				      			}
 				    		%>
-						</datalist>           	
-					</div>
-           		</div>
+										</datalist>           	
+									</div>
+           						</div>
+           						<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+           							<label class="control-label" for="partnerName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("dealerName") %> <%}%> <%if(abc.equals("english")){%>Partner Name<%}%></label>  
+			            		</div>
+			            		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+			            			<div class="input-group">
+										<span class="input-group-addon">
+											<i class="glyphicon glyphicon-user"></i>
+										</span>
+										<input type="text" id="partnerName" name="partnerName" placeholder="Partner Name" class="form-control input-md ">
+							   		</div>
+			            		</div>
+           					</div>
+           				</div>
            
           
-       			<div class="row form-group">
-           	 		<div class="col-md-6">
-              			<%@include file="commons/clock.jsp" %>
-           		 	</div>
-				</div>
-        	<div class="row form-group">
-            	<label class="col-md-2 control-label" for="partnerName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("dealerName") %> <%}%> <%if(abc.equals("english")){%>Partner Name<%}%></label>  
-            		<div class="col-md-3">
-            				<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
-							</span>
-							 <input type="text" id="partnerName" name="partnerName" placeholder="Partner Name" class="form-control input-md ">
-				   			</div>
+       			
+				
+        	<div class="row">
+            	<div class="form-group">
+            		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+            			<label class="control-label" for="contactNo"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("contactNumber") %> <%}%> <%if(abc.equals("english")){%>Contact Number<%}%></label>
             		</div>
-            		
-            		<label class="col-md-2 control-label" for="contactNo"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("contactNumber") %> <%}%> <%if(abc.equals("english")){%>Contact Number<%}%></label>
-            		<div class="col-md-3">
+            		<div class="col-lg-3 col-md-3 col-sm-8">
     					<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-phone"></i>
 							</span>
-             				 <input id="contactNo" type="text" maxlength="10" name="contactNo" placeholder="Contact Number" class="form-control input-md ">
+             				<input id="contactNo" type="text" maxlength="10" name="contactNo" placeholder="Contact Number" class="form-control input-md ">
            				</div>
-					</div>            
-          </div>
-         
-          <div class="row form-group">
-            	
-            
-              	<label class="col-md-2 control-label" for="landline"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("AlternateNumber") %> <%}%> <%if(abc.equals("english")){%>Alternate Number<%}%></label>
-            		<div class="col-md-3">
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+						<label class="control-label" for="landline"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("AlternateNumber") %> <%}%> <%if(abc.equals("english")){%>Alternate Number<%}%></label>
+            		</div>
+            		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-earphone"></i>
 							</span>
               				<input id="alternateNo" name="alternateNo" placeholder="Alternate No" class="form-control input-md " maxlength="10" type="text"  >
             			</div> 
-            		</div>
-            		
-            	<label class="col-md-2 control-label" for="emailId"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("email") %> <%}%> <%if(abc.equals("english")){%>Email Id<%}%></label>
-            	<div class="col-md-3">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-envelope"></i>
-						</span>
-              			<input id="emailId" name="emailId" placeholder="Email ID" class="form-control input-md " type="text">
-            		</div>
-            	</div>
-            		
+            		</div>		            
+          		</div>
           	</div>
-
+         
+          	<div class="row">
+          		<div class="form-group">  	
+            		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+              			<label class="control-label" for="emailId"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("email") %> <%}%> <%if(abc.equals("english")){%>Email Id<%}%></label>
+	            	</div>
+	            	<div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-envelope"></i>
+							</span>
+	              			<input id="emailId" name="emailId" placeholder="Email ID" class="form-control input-md " type="text">
+	            		</div>
+	            	</div>
+	            	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+	           			<label class="control-label" for="city"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("city") %> <%}%> <%if(abc.equals("english")){%>City<%}%></label>
+	           		</div>
+	           		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-map-marker"></i>
+							</span>
+	 			            <input id="city" name="city" placeholder="City" class="form-control input-md " type="text">
+	            		</div>
+					</div>
+	            </div>	            		
+          	</div>
         
-          <div class="row form-group">
-            
-
-           <label class="col-md-2 control-label" for="city"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("city") %> <%}%> <%if(abc.equals("english")){%>City<%}%></label>
-           		<div class="col-md-3">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-map-marker"></i>
-						</span>
- 			            <input id="city" name="city" placeholder="City" class="form-control input-md " type="text">
-            		</div>
-				</div>
-          
-            	
-           	 <label class="col-md-2 control-label" for="address"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("address") %> <%}%> <%if(abc.equals("english")){%>Address<%}%></label>
-           		<div class="col-md-3">
-					<div class="input-group">
-						<span class="input-group-addon">
-						<i class="glyphicon glyphicon-map-marker"></i>
-						</span>
- 			            <input id="address" name="address" placeholder="Address" class="form-control input-md " type="text">
-            		</div>
-				</div>
-          	</div>
-
-          <div class="form-group row">
-            <div class="col-md-9 text-center col-md-offset-1" style="padding-top:2%">
-       
-                <input style=" height: 53px; width: 128px; font-size: 25" type="button" value="Update" id="save" name="btn" class="btn btn-large btn-success" onclick="updatePartnerDetailsV()" /> 
-                <input style=" height: 53px; width: 128px; font-size: 25" type="button" value="Cancel" id="save" name="btn" class="btn btn-large btn-danger" onclick="reset()" /> 
-                <input style=" height: 53px; width: 128px; font-size: 25" type="button" value="Back"  id="listBtn" class="btn btn-primary" onclick="Back()" /> 
-              	
-            </div>
-          </div>
-         </fieldset>
+          	<div class="row">
+            	<div class="form-group">   
+                   	<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+                   	 	<label class="control-label" for="address"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("address") %> <%}%> <%if(abc.equals("english")){%>Address<%}%></label>
+		           	</div>	
+		           	<div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-map-marker"></i>
+							</span>
+		 			        <input id="address" name="address" placeholder="Address" class="form-control input-md " type="text">
+		            	</div>
+					</div>
+          		</div>
+        	</div>
+          	
+		</div>
+</fieldset>
        </form>
+       
+          <div class="row buttons-margin" align="center">                  
+              <input type="button" value="Update" id="save" name="btn" class="btn btn-large btn-success" onclick="updatePartnerDetailsV()" /> 
+              <input type="button" value="Cancel" id="save" name="btn" class="btn btn-large btn-danger" onclick="reset()" /> 
+              <input type="button" value="Back"  id="listBtn" class="btn btn-primary" onclick="Back()" /> 
+          </div>
+          
+         
     </div>
-    
+</div>
+</body>   
 <jsp:include page="commons/footer.jsp"></jsp:include>

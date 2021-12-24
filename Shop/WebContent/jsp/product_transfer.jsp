@@ -49,7 +49,7 @@
     
     <script type="text/javascript" src="/Shop/staticContent/js/producttransfer.js"></script>
     <script type="text/javascript" src="/Shop/staticContent/js/categoryDetails.js"></script>
-    
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">     
 <script type="text/javascript">
 function mypopup(url)
 {
@@ -691,29 +691,26 @@ function hamaliExpenseAddingToGross()
 	 }
 </script>
 
-<style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
-</style>
 </head>
 <body>
+<div class="container-fluid">
 <div class="row header_margin_top">
 			    <div align="center">
 			  		<h2 class="form-name style_heading">Transfer to Store</h2>
 			  	</div>			 
     </div>
    
-     <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+    <div class="row" align="center">
+	    <div class="hr-width">
+	  		<hr class="style-one">
+	    </div>	
     </div>     
   
 	  <div class="">
-	  <div class="col-md-10 col-md-offset-1"> 
+	  <div class="container"> 
         <form class="form-horizontal" method="post" action="" name="goodsReceiveForm" id="goodsReceiveForm">
+         	<fieldset>
+         	<div class="shopform-margin">
           <!-- Value of 'name' attribute is used in  supplierDetails.js  --><fieldset>
        			<div class="row form-group">
            	 		<div class="col-md-6">
@@ -723,15 +720,17 @@ function hamaliExpenseAddingToGross()
 				
         	      
 							
-				<div class="row form-group">
+			<div class="row">
+				<div class="form-group">
 				   <div id="productrefresh">
-		        										  
-					  <label class="col-md-2 control-label" for="proName">All Product Name<sup>*</sup></label>  
-          					  <div class="col-md-3">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-list-alt"></i>
-									</span>
+		        		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">								  
+					  		<label class="control-label" for="proName">All Product Name<sup>*</sup></label>  
+          				</div>
+          				<div class="col-lg-3 col-md-3 col-sm-8">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="	glyphicon glyphicon-list-alt"></i>
+								</span>
 											
 									<%
 							   ProductDetailsHelper cdh = new ProductDetailsHelper();
@@ -762,10 +761,10 @@ function hamaliExpenseAddingToGross()
 						</div>
 					</div>
 			    </div>	
-			    
-			    
-			    <label class="col-md-3 control-label" for="creditSalePrice"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("shopName") %> <%}%> <%if(abc.equals("english")){%>Shop Name<%}%><sup>*</sup></label>  
-       			<div class="col-md-3">
+			    <div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+			        <label class="control-label" for="creditSalePrice"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("shopName") %> <%}%> <%if(abc.equals("english")){%>Shop Name<%}%><sup>*</sup></label>  
+       			</div>
+       			<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="	glyphicon glyphicon-user"></i>
@@ -797,7 +796,9 @@ function hamaliExpenseAddingToGross()
         			</div>
 			  </div>
 			    
-			</div>				
+			</div>
+		</div>	
+							
 			
 				<div class="row form-group" style="display: none;">
 				   <div id="productrefresh">
@@ -818,7 +819,7 @@ function hamaliExpenseAddingToGross()
        			<div class="col-md-3">
 					<div class="input-group">
 						<span class="input-group-addon">
-							<i class="	glyphicon glyphicon-user"></i>
+							<i class="glyphicon glyphicon-user"></i>
 						</span>
 														
 				<input type="text" id="shop_id" name="shop_id"  value="<%=shopId%>" readonly="readonly" list="shopidList" class="form-control" >	
@@ -826,7 +827,8 @@ function hamaliExpenseAddingToGross()
         			</div>
 			  </div>
 			  
-			</div>		</div>			
+			</div>		</div>	
+					
 	<div class="row" style="margin-left: -170px;" >
 		<div class="table-responsive " style="width:1350px;" > 
 			<table id="jqGrid" ></table>
@@ -837,20 +839,18 @@ function hamaliExpenseAddingToGross()
 					<div class="row row form-group">
 					
 					</div>
-							
-
 		
-			<div class="row form-group buttons_margin_top">
-					<div align="center" style="padding-right: 120px;">
-		            	            																	<!-- good receive -->	
-		            	            																			
-		            <input type="button" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-success button-height-width" id="save" name="btn" value="Submit" onclick="addproducttx1()">
-		            <input type="button" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-danger  button-height-width"  id="save" name="btn" value="Cancel" onclick="location.reload()">
-					<input style="height: 53px; width: 128; font-size: 25" type="button" value=" List"  id="listBtn" class="btn btn-primary" onclick="productlist()" /> 
-		         </div>
-		   </div> 
-		</fieldset>
+		</div>					
+	</fieldset>
 	</form>
+		
+			<div class="row buttons-margin" align="center">
+													<!-- good receive -->	
+		        <input type="button" class="btn btn-large btn-success button-height-width" id="save" name="btn" value="Submit" onclick="addproducttx1()">
+		        <input type="button" class="btn btn-large btn-danger button-height-width" id="save" name="btn" value="Cancel" onclick="location.reload()">
+				<input type="button" value=" List" id="listBtn" class="btn btn-primary" onclick="productlist()" /> 
+		    </div> 
+	
 	</div>
 </div>
 	
@@ -876,6 +876,7 @@ function hamaliExpenseAddingToGross()
 				
  <!-- ==================================================== END PRODUCT DETAILS POP UP ============================================================== -->	
 
+</div>
 <jsp:include page="commons/footer.jsp"></jsp:include>
 
 

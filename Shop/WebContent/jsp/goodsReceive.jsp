@@ -50,7 +50,7 @@
     <script type="text/javascript" src="/Shop/staticContent/js/supplierDetailsUnused.js"></script>
     <script type="text/javascript" src="/Shop/staticContent/js/productDetail.js"></script>
     <script type="text/javascript" src="/Shop/staticContent/js/categoryDetails.js"></script>
-    
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">       
 <script type="text/javascript">
 function mypopup(url)
 {
@@ -709,46 +709,51 @@ function clearfeild() {
 	
 </script>
 <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
+.container-fluid {
+	overflow: hidden;
 }
 </style>
 </head>
 <body>
-<div class="row header_margin_top">
-			    <div align="center">
-			  		<h2 class="form-name style_heading">Goods Receive</h2>
-			  	</div>			 
+<div class="container-fluid">
+	<div class="row header_margin_top">
+		<div align="center">
+			<h2 class="form-name style_heading">Goods Receive</h2>
+		</div>			 
     </div>
    
-     <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+	<div class="row" align="center">
+		<div class="hr-width">
+			<hr class="style-one">
+		</div>	
     </div>     
   
 	  <div class="">
-	  <div class="col-md-10 col-md-offset-1"> 
+	  <div class=""> 
         <form class="form-horizontal" method="post" action="" name="goodsReceiveForm" id="goodsReceiveForm">
-          <!-- Value of 'name' attribute is used in  supplierDetails.js  --><fieldset>
+          <!-- Value of 'name' attribute is used in  supplierDetails.js  -->
+          <fieldset>
+          <div class="shopform-margin">
+          
        			<div class="row form-group">
            	 		<div class="col-md-6">
               			<%@include file="commons/clock.jsp" %>
            		 	</div>
 				</div>
 				
-        	       <div class="row form-group">
-        	        <label class="col-md-2 control-label" for="supplier">Supplier Name<sup>*</sup></label> 
-	                      <div id="supplierfresh">
-          					  <div class="col-md-3">
+        	    <div class="row">
+        	        <div class="form-group">	
+        	        	<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+        	        		<label class="control-label" for="supplier">Supplier Name<sup>*</sup></label> 
+	                    </div>
+	                    <div id="supplierfresh">
+          					<div class="col-lg-3 col-md-3 col-sm-8">
 								<div class="input-group" id="goodrrrr">
 									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-user"></i>
+										<i class="glyphicon glyphicon-user"></i>
 									</span>
-							
-							<input list="sup_drop" id="supplier" placeholder="Supplier Name" class="form-control" onclick="callSupplier()" onchange="getPOnumber();getgstnumber()">
-				            <datalist id="sup_drop">
+									<input list="sup_drop" id="supplier" placeholder="Supplier Name" class="form-control" onclick="callSupplier()" onchange="getPOnumber();getgstnumber()">
+				            		<datalist id="sup_drop">
 							
 							<%
 					           for(int i=0;i<sList.size();i++)
@@ -756,38 +761,41 @@ function clearfeild() {
 					        	   SupplierDetailsBean sup =(SupplierDetailsBean)sList.get(i);
 							%>
 		
-							<option data-value="<%=sup.getSupId()%>" value="<%=sup.getDealerName() %>">
+										<option data-value="<%=sup.getSupId()%>" value="<%=sup.getDealerName() %>">
 							<%
 				      			}
 				    		%>
-						</datalist>
-						<span class="input-group-addon">
-									<button type="button" onclick="supplierDetailsDivAction(1)">
-										 <span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
-									</button>
-							</span>
-					</div>
-				</div>
-			</div>
-           	
-        	      <label class="col-md-3 control-label" for="billNum" ><b>Bill Number<sup>*</sup></b></label>  
-			           	 <div class="col-md-3">
+									</datalist>
+									<span class="input-group-addon">
+										<button type="button" onclick="supplierDetailsDivAction(1)">
+											<span class="glyphicon glyphicon-plus" style="color: #393836;"></span>
+										</button>
+									</span>
+								</div>
+							</div>
+						</div>
+           				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+        	     			<label class="control-label" for="billNum"><b>Bill Number<sup>*</sup></b></label>  
+			           	</div>
+			           	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 							<div class="input-group">
 								<span class="input-group-addon">
-									No
+									<span class="glyphicon nogyphicon">No</span>
 								</span>
 	              				<input id="billNum" name="billNum" placeholder="Enter Bill Number" class="form-control input-md" 
 	              				       onchange="checkForDuplicateBillNoEntry()" type="text">
 	            			</div>
 	            		</div>
-           						 
-           		
-			</div>
+           			</div>			 
+           		</div>
 		
-		<div class="row form-group">
-		 <label class="col-md-2 control-label" for="fk_cat_id">Product Category<sup>*</sup></label>  
-		       <div id="categoryrefresh">
-           			 <div class="col-md-3">
+		<div class="row">
+		 	<div class="form-group">
+		 		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+		 			<label class="control-label" for="fk_cat_id">Product Category<sup>*</sup></label>  
+		       	</div>
+		       	<div id="categoryrefresh">
+           			<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="	glyphicon glyphicon-list-alt"></i>
@@ -800,27 +808,27 @@ function clearfeild() {
 							%>
 							<input list="cat_drop" id="fk_cat_id" placeholder="Product Category"  class="form-control"
 								   onchange="getAllSubCat()">
-						<datalist id="cat_drop">
+							<datalist id="cat_drop">
 							<%
 					           for(int i=0;i<cList.size();i++){
 					        	   CategoryDetailsBean cat=(CategoryDetailsBean)cList.get(i);
 							%>		
-							<option data-value="<%=cat.getCatId()%>" value="<%=cat.getCategoryName()%>">
+								<option data-value="<%=cat.getCatId()%>" value="<%=cat.getCategoryName()%>">
 							<%
 				      			}
 				    		%>
 			             
-            			</datalist>
-             			     <span class="input-group-addon">
-									<button type="button" onclick="catDetailsDivAction(1)">
-										 <span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
-									</button>
+            				</datalist>
+             			    <span class="input-group-addon">
+								<button type="button" onclick="catDetailsDivAction(1)">
+									 <span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
+								</button>
 					     	</span>
             			</div>
             		</div>
             	</div>
-		
-		        <label class="col-md-3 control-label" for="subCat">
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+		        	<label class="control-label" for="subCat">
 		        <%if(abc.equals("marathi"))
 		        {%>
 		       		 <%=PropertiesHelper.marathiProperties.getProperty("productCat") %>
@@ -828,9 +836,10 @@ function clearfeild() {
 		        <%if(abc.equals("english"))
 		        {%>
 		        Product Sub-Category<sup>*</sup>
-		        <%}%></label>  
-		         <div id="subcategoryrefresh">
-           			 <div class="col-md-3">
+		        <%}%></label>
+		        </div>  
+		        <div id="subcategoryrefresh">
+           			 <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="	glyphicon glyphicon-list-alt"></i>
@@ -840,58 +849,60 @@ function clearfeild() {
 								    id="subCat" name="subCat"  onchange="getProductName()" onchange="Location.reload()">
 							<datalist id="subcategory_drop">
 							</datalist>		
-							 <span class="input-group-addon">
-									<button type="button" onclick="subcatDetailsDivAction(1)">
-										 <span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
-									</button>
+							<span class="input-group-addon">
+								<button type="button" onclick="subcatDetailsDivAction(1)">
+									 <span class="glyphicon glyphicon-plus" style="color: #393836;"></span>
+								</button>
 					     	</span>					
                			</div>
               		</div>
          		</div>
            </div>
+      </div>
 							
-				<div class="row form-group">
-				   <div id="productrefresh">
-					<label class="col-md-2 control-label" for="proName">Product Name<sup>*</sup></label>  
-					        <div class="col-md-3">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-list-alt"></i>
-									</span>
-																		
-									<input list="product_drop" class="form-control input-md" id="proName" placeholder=" Product Name" name="proName"   
+			<div class="row">
+				<div class="form-group">	   
+				   	<div id="productrefresh">
+						<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+							<label class="control-label" for="proName">Product Name<sup>*</sup></label>  
+					    </div>
+					    <div class="col-lg-3 col-md-3 col-sm-8">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="	glyphicon glyphicon-list-alt"></i>
+								</span>
+								<input list="product_drop" class="form-control input-md" id="proName" placeholder=" Product Name" name="proName"   
 									       onchange="productDetailInGrid();getAllShopName()">
 									<!-- ;clearGridSelect();clearfeild() -->
-									<datalist id="product_drop"></datalist>
-									
-									<span class="input-group-addon">
-									     <button type="button" onclick="productDetailsDivAction(1);">
-										    <span class="glyphicon glyphicon-plus" style="color: #393836;"></span>
-									    </button>
-							       </span>
-							
-								</div>
+								<datalist id="product_drop"></datalist>
+								<span class="input-group-addon">
+							    	<button type="button" onclick="productDetailsDivAction(1);">
+									    <span class="glyphicon glyphicon-plus" style="color: #393836;"></span>
+								    </button>
+							    </span>
 							</div>
-											  
-					  <label class="col-md-3 control-label" for="proName">All Product Name<sup>*</sup></label>  
-          					  <div class="col-md-3">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-list-alt"></i>
-									</span>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+							<label class="control-label" for="proName">All Product Name<sup>*</sup></label>  
+          				</div>	  
+          				<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="	glyphicon glyphicon-list-alt"></i>
+								</span>
 											
 									<%
 							   ProductDetailsHelper cdh = new ProductDetailsHelper();
            					   List pdList =cdh.getAllMainProdInfo(request);
 							
 							%>
-							<input list="product_drop1" id="proName1" placeholder="All Product Name" class="form-control" onchange="productDetailInGrid()">
-						    <datalist id="product_drop1">
+								<input list="product_drop1" id="proName1" placeholder="All Product Name" class="form-control" onchange="productDetailInGrid()">
+						    	<datalist id="product_drop1">
 							<%
 					           for(int i=0;i<pdList.size();i++){
 					        	   ProductDetailsBean cat=(ProductDetailsBean)pdList.get(i);
 							%>		
-							<option data-value="<%=cat.getCatname()%>"
+									<option data-value="<%=cat.getCatname()%>"
 							        value="<%=cat.getCatname()%> :::>>> <%=cat.getSubcatname()%> :::>>> <%=cat.getProductName()%> :::>>> <%=cat.getWeight()%> :::>>> <%=cat.getProdctId()%>"
 						            myvalue ="<%=cat.getProductName()%>"
 						            myvalue1="<%=cat.getFk_cat_id()%>"
@@ -904,40 +915,46 @@ function clearfeild() {
 				      			}
 				    		%>
 			             
-            			   </datalist>						
+            			   		</datalist>						
+							</div>
+						</div>
+			    	</div>	
+				</div>	
+			</div>	
+							
+			<div class="row">
+				<div class="form-group">	  			
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="purchaseDate">Purchase  Date<sup>*</sup></label>  
+          			</div>		  
+          			<div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-calendar"></i>
+							</span>
+	              			<input type="date"  id="purchaseDate" name="purchaseDate" value="<%=todayDate%>" placeholder="Purchase Date" class="form-control input-md">
 						</div>
 					</div>
-			    </div>	
-			</div>				
-					<div class="row form-group">
-				  			
-						<label class="col-md-2 control-label" for="purchaseDate">Purchase  Date<sup>*</sup></label>  
-          					  <div class="col-md-3">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-calendar"></i>
-									</span>
-	              					  <input type="date"  id="purchaseDate" name="purchaseDate" value="<%=todayDate%>" placeholder="Purchase Date" class="form-control input-md">
-								
-								</div>
-							</div>
-							<label class="col-md-3 control-label" for="booking" ><b>PO No</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									No
-								</span>
+					<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+						<label class="control-label" for="booking" ><b>PO No</b></label>  
+			        </div>
+			        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">No</span>
+							</span>
 <!-- 	              				<input id="booking" name="booking" placeholder="PO No" class="form-control input-md" type="text" 
 	              				       onchange="productDetailInGridasperPO();productDetailnonGridasperPO()" > checkBookingno() 
 	              				<datalist id="booking_drop"></datalist> -->
 	              				
-	              				<select id="booking" name="booking" placeholder="PO No" class="form-control input-md"
+	              			<select id="booking" name="booking" placeholder="PO No" class="form-control input-md"
 	              				onchange="productDetailInGridasperPO();productDetailnonGridasperPO()" >
 	              				
-	              				</select>
-	            			</div>
+	              			</select>
 	            		</div>
-					</div>	
+	            	</div>
+				</div>
+			</div>	
 									
 	<div class="row" style="margin-left: -170px;" >
 		<div class="table-responsive " style="width:1350px;" > 
@@ -950,148 +967,171 @@ function clearfeild() {
 					
 					</div>
 							
-				<div class="row form-group">
-				<label class="col-md-2  control-label"  for="gstForExpence" ><b>GST for Expense :</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									%
-								</span>
-								<select class="form-control" id="gstForExpense2" onchange="changeExtraValuesDisTransHamaliToZero()" >
-										<option value="0">--Select Type--</option>
-										<option value="5">5 %</option>
-										<option value="12">12 %</option>
-										<option value="18">18 %</option>
-										<option value="28">28 %</option>
-								</select>
-	            			</div>
+			<div class="row">
+				<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="gstForExpence"><b>GST for Expense :</b></label>  
+			        </div>   	
+			        <div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon percentage">%</span>
+							</span>
+							<select class="form-control" id="gstForExpense2" onchange="changeExtraValuesDisTransHamaliToZero()" >
+								<option value="0">--Select Type--</option>
+								<option value="5">5 %</option>
+								<option value="12">12 %</option>
+								<option value="18">18 %</option>
+								<option value="28">28 %</option>
+							</select>
 	            		</div>
-	            	
-				<label class="col-md-3 control-label"  for="total" ><b>Gst No</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									NO
-								</span>
-	              				<input  id="gstno" name="gstno" placeholder="Gst No"  class="form-control input-md" type="text" >
-	              				
-	            			</div>
-	            		</div>
-					</div>			
+	            	</div>
+	            	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+						<label class="control-label" for="total"><b>Gst No</b></label>  
+			        </div>   	
+			        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">No</span>
+							</span>
+	              			<input  id="gstno" name="gstno" placeholder="Gst No"  class="form-control input-md" type="text" >
+	              		</div>
+	            	</div>
+				</div>
+			</div>			
 				
-				<div class="row form-group">
-				<label class="col-md-2 control-label" for="creditSalePrice"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("shopName") %> <%}%> <%if(abc.equals("english")){%>Shop Name<%}%><sup>*</sup></label>  
-       			<div class="col-md-3">
+			<div class="row">
+				<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="creditSalePrice"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("shopName") %> <%}%> <%if(abc.equals("english")){%>Shop Name<%}%><sup>*</sup></label>  
+       				</div>
+       				<div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="	glyphicon glyphicon-user"></i>
+							</span>
+							<input type="text" id="shopId" name="shopId" value="<%=shopName1%>" readonly="readonly" list="shop_drop1" class="form-control" >
+							<input type="hidden" id="shopName" name="shopName" value="<%=shopId%>" readonly="readonly" class="form-control">
+			            </div>
+			  		</div>
+			  	  	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+			  	  		<label class="control-label"  for="total" ><b>Total</b></label>  
+			        </div>   	
+			        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">Rs</span>
+							</span>
+	              			<input readonly="readonly" id="total" name="total" placeholder="Total"  class="form-control input-md" type="text" onchange="changeExtraValuesDisTransHamaliToZero();" >
+	              			<input id="duptotal" name="total" type="hidden" class="form-control input-md" onchange="changeExtraValuesDisTransHamaliToZero();" >
+	            		</div>
+	            	</div>
+	            </div>
+	       </div>     
+	            
+	        <div class="row">
+				<div class="form-group">	
+					<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">	
+						<label class="control-label" for="discount" ><b>Discount</b></label>  
+			    	</div>
+			    	<div class="col-lg-2 col-md-2 col-sm-4">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon percentage">%</span>
+							</span>
+	              			<input id="discount" name="discount" placeholder="Discount" class="form-control input-md" type="text" onchange="discountCalculation()">
+	            		</div>
+	            	</div>
+	            	<label class="control-label" for="discount" ><b></b></label>  
+			        <div class="col-lg-2 col-md-2 col-sm-4">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">Rs</span>
+							</span>
+	              			<input  id="discountAmount" name="discountAmount" placeholder="Discount Amt" class="form-control input-md" type="text" onchange="discountCalculation()" readonly="readonly">
+	            		</div>
+	            	</div>
+	            </div>
+			</div>
+				
+		<div class="row">
+			<div class="form-group">		
+				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+					<label class="control-label" for="transExpence"><b>Transport Expenses </b></label>  
+			    </div>    
+			    <div class="col-lg-2 col-md-2 col-sm-4">
 					<div class="input-group">
 						<span class="input-group-addon">
-							<i class="	glyphicon glyphicon-user"></i>
+							<span class="glyphicon nogyphicon">Rs</span>
 						</span>
-														
-				<input type="text" id="shopId" name="shopId" value="<%=shopName1%>" readonly="readonly" list="shop_drop1" class="form-control" >
-				<input type="hidden" id="shopName" name="shopName" value="<%=shopId%>" readonly="readonly" class="form-control">
-			             							
-        			</div>
-			  </div>
-			  
-			  <label class="col-md-3 control-label"  for="total" ><b>Total</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input readonly="readonly" id="total" name="total" placeholder="Total"  class="form-control input-md" type="text" onchange="changeExtraValuesDisTransHamaliToZero();" >
-	              				<input id="duptotal" name="total" type="hidden" class="form-control input-md" onchange="changeExtraValuesDisTransHamaliToZero();" >
-	            			</div>
-	            		</div>
-	            		</div>
-	            		<div class="row form-group">
-				<label class="col-md-3 col-md-offset-5 control-label" for="discount" ><b>Discount</b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group">
-								<span class="input-group-addon">
-									%
-								</span>
-	              				<input id="discount" name="discount" placeholder="Discount" style=" width: 120;" class="form-control input-md" type="text" onchange="discountCalculation()">
-	            			</div>
-	            		</div>
-	            		
-	            		<label class="col-md-2 control-label" for="discount" ><b></b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group" style="margin-left: -90;">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input  id="discountAmount" name="discountAmount" placeholder="Discount Amt" class="form-control input-md" type="text" onchange="discountCalculation()" readonly="readonly">
-	            			</div>
-	            		</div>
-	            		</div>
-				
-				<div class="row form-group ">
-				
-				<label class="col-md-3 col-md-offset-5 control-label"  for="transExpence"><b>Transport Expenses </b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="transExpence3" name="transExpence3" value="0" placeholder="Transportation Expenses" style=" width: 120;" class="form-control input-md" type="text" onchange="transExpenseAddingToGrossTotal()" >
-	            			</div>
-	            		</div>
-
-				<label class="col-md-2 control-label"  for="transExpence" ><b></b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group" style="margin-left: -90;">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="transExpence" name="transExpence" placeholder="GST Amt" class="form-control input-md"  type="text" readonly="readonly"><!-- onblur="transExpenseAddingToGrossTotal()"> -->
-	            			</div>
-	            		</div>
-					</div>
-					<div class="row form-group ">
-					<label class="col-md-3 col-md-offset-5 control-label"  for="hamaliExpence" ><b>Labour Expenses </b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="hamaliExpence3" name="hamaliExpence3" value="0" placeholder="Labour Expenses" style=" width: 120;" class="form-control input-md" type="text"  onchange="hamaliExpenseAddingToGross()">
-	            			</div>
-	            		</div>
-					<label class="col-md-2  control-label"  for="hamaliExpence" ><b></b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group" style="margin-left: -90;">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="hamaliExpence" name="hamaliExpence" placeholder="GST Amt" class="form-control input-md"  type="text" readonly="readonly"> <!-- onblur="hamaliExpenseAddingToGross()"> -->
-	            			</div>
-	            		</div>
-					</div>
+	            		<input id="transExpence3" name="transExpence3" value="0" placeholder="Transportation Expenses" class="form-control input-md" type="text" onchange="transExpenseAddingToGrossTotal()" >
+	            	</div>
+	            </div>
+				<label class="control-label" for="transExpence" ><b></b></label>  
+			    <div class="col-lg-2 col-md-2 col-sm-4">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="transExpence" name="transExpence" placeholder="GST Amt" class="form-control input-md"  type="text" readonly="readonly"><!-- onblur="transExpenseAddingToGrossTotal()"> -->
+	            	</div>
+	            </div>
+			</div>
+		</div>
+			
+		<div class="row">
+			<div class="form-group">
+				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+					<label class="control-label" for="hamaliExpence"><b>Labour Expenses </b></label>  
+			    </div>       	 
+			    <div class="col-lg-2 col-md-2 col-sm-4">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="hamaliExpence3" name="hamaliExpence3" value="0" placeholder="Labour Expenses" class="form-control input-md" type="text"  onchange="hamaliExpenseAddingToGross()">
+	            	</div>
+	            </div>
+				<label class="control-label" for="hamaliExpence"><b></b></label>  
+			    <div class="col-lg-2 col-md-2 col-sm-4">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="hamaliExpence" name="hamaliExpence" placeholder="GST Amt" class="form-control input-md"  type="text" readonly="readonly"> <!-- onblur="hamaliExpenseAddingToGross()"> -->
+	            	</div>
+	            </div>
+			</div>
+		</div>
 			 				
-				<div class="row form-group" >
-					<label class=" col-md-3 col-md-offset-5 control-label"  for="grossTotal"><h4><b>Gross Total</b></h4></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input readonly="readonly" id="grossTotal" name="grossTotal" placeholder="Gross Total" class="form-control input-md" type="text" style="font-size: 25px;  height: 55px;">
-	            			</div>
-	            		</div>
-            	</div>
-		
-			<div class="form-group row" style="padding-top:2%">
-		         <div class="col-md-10 text-center">
-		            	            																	<!-- good receive -->	
-		            	            																			
-		            <input type="button" style="height:53px; width:128px;font-size: 15" class="btn btn-success" id="save" name="btn" value="Barcode&Submit" onclick="addingGoodsReceive()">
-		            <input type="button" style="height:53px; width:128px;font-size: 25" class="btn btn-danger"  id="save" name="btn" value="Cancel" onclick="location.reload()">
-		            <input type="button" style="height:53px; width:128px;font-size: 25" class="btn btn-primary" id="listBtn" name="btn" value="Edit" onclick="editgoodreceive()" /> 
-		         </div>
-		   </div> 
+		<div class="row">
+			<div class="form-group">
+				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+					<label class="control-label" for="grossTotal"><h4><b>Gross Total</b></h4></label>  
+			    </div>
+			    <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input readonly="readonly" id="grossTotal" name="grossTotal" placeholder="Gross Total" class="form-control input-md" type="text" style="font-size: 25px;  height: 55px;">
+	            	</div>
+	            </div>
+            </div>
+        </div>
+	
+			</div>
 		</fieldset>
-	</form>
+	</form>	
+	
+		<div class="row buttons-margin" align="center">
+			<!-- good receive -->	
+		    <input type="button" class="btn goodsreceive btn-success" id="save" name="btn" value="Barcode&Submit" onclick="addingGoodsReceive()">
+		    <input type="button" class="btn goodsreceive btn-danger" id="save" name="btn" value="Cancel" onclick="location.reload()">
+		    <input type="button" class="btn goodsreceive btn-primary" id="listBtn" name="btn" value="Edit" onclick="editgoodreceive()" /> 
+		</div> 
+		
+		
 	</div>
 </div>
 	
@@ -1817,6 +1857,7 @@ function clearfeild() {
 				
  <!-- ==================================================== END PRODUCT DETAILS POP UP ============================================================== -->	
 
+</div>
 <jsp:include page="commons/footer.jsp"></jsp:include>
 
 

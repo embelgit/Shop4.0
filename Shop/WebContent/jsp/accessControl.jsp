@@ -65,12 +65,7 @@
     		%>
 		}
 </script>
-<style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
-</style>
+
 <meta charset="utf-8">
 <head>
 
@@ -82,32 +77,38 @@
 		 window.location = '/Shop/jsp/login.jsp';
 	}
 	</script>
-	</head>
- 
- 		<div class="row header_margin_top">
-			    <div align="center">
-			  		<h2 class="form-name style_heading"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("categoryDetails") %> <%}%> <%if(abc.equals("english")){%>Access Control<%}%> </h2>
-				</div>
- 		</div>
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
+</head>
+<body>
+<div class="container-fluid">
 
-     <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+	<div class="row header_margin_top">
+	    <div align="center">
+	  		<h2 class="form-name style_heading"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("categoryDetails") %> <%}%> <%if(abc.equals("english")){%>Access Control<%}%> </h2>
+		</div>
+	</div>
+
+    <div class="row" align="center">
+	    <div class="hr-width">
+	  		<hr class="style-one">
+	    </div>	
     </div>
     
-      <div class="container col-sm-offset-2" >
-        <form class="form-horizontal" method="post" action="" name="usd">                                                                             <!-- Value of 'name' attribute is used in userDetails.js  -->
-          <fieldset>
+    <div class="container">
+    	<form class="form-horizontal" method="post" action="" name="usd">                                                                             <!-- Value of 'name' attribute is used in userDetails.js  -->
+        	<fieldset>
           		<div class="row form-group">
            	 		<div class="col-md-6">
               			<%@include file="commons/clock.jsp" %>
            		 	</div>
 				</div>
 		
-			 <div class="row form-group">
-			    <label class="col-md-2 control-label" for="firstName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Employee Name<%}%><sup>*</sup></label>
-           		  	 <div class="col-md-3">
+			 <div class="row">
+			    <div class="form-group">	
+			    	<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+			    		<label class="control-label" for="firstName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Employee Name<%}%><sup>*</sup></label>
+           		  	</div>
+           		  	<div class="col-lg-3 col-md-3 col-sm-8">
             			<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
@@ -119,28 +120,24 @@
 							
 							%>
 							<input list="EmpName_drop" id="EmpName" placeholder="Select Employee Name" class="form-control" onchange="getUserDetails()">
-						<datalist id="EmpName_drop">
+							<datalist id="EmpName_drop">
 							<%
 					           for(int i=0;i<cList11.size();i++){
 					        	   UserDetailsBean cat11=(UserDetailsBean)cList11.get(i);
 							%>
 		
-							<option data-value="<%=cat11.getUsrId()%>" value="<%=cat11.getUsrId()%>,<%=cat11.getFirstName()%> <%=cat11.getLastName()%>">
+								<option data-value="<%=cat11.getUsrId()%>" value="<%=cat11.getUsrId()%>,<%=cat11.getFirstName()%> <%=cat11.getLastName()%>">
 							<%
 				      			}
 				    		%>
 			              	
-            			</datalist>
+            				</datalist>
             			</div>
             		</div>
-
-			</div>
-			
-	
-		
-			<div class="row form-group">
-			    <label class="col-md-2 control-label" for="city"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>User Name<%}%><sup>*</sup></label>
-				   <div class="col-md-3">
+            		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+			    		<label class="control-label" for="city"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>User Name<%}%><sup>*</sup></label>
+				   	</div>
+				   	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
@@ -148,9 +145,15 @@
 	              			<input id="userName" name="userName " placeholder="User Name" class="form-control input-md" type="text" autofocus onchange="return ChooseContact();" readonly="readonly" >
 	            		</div>
 					</div>
+				</div>
+			</div>
 					
-				<label class="col-md-2 control-label" for="pan"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Password<%}%><sup>*</sup></label>
-           			 <div class="col-md-3">
+			<div class="row">
+			    <div class="form-group">
+			    	<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="pan"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Password<%}%><sup>*</sup></label>
+           			</div>
+           			<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-lock"></i>
@@ -158,29 +161,32 @@
               				<input id="password" name="password" placeholder="Password" class="form-control input-md" type="text" readonly="readonly">
             			</div>
             		</div>
-			</div>
-			
-			
-			<div class="row form-group">
-            		
-            	 <label class="col-md-2 control-label" for="city"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Type<%}%><sup>*</sup></label>	
-	               <div class="col-md-3">
-					<div class="input-group">
-						<span class="input-group-addon">
+            		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+            			<label class="control-label" for="city"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Type<%}%><sup>*</sup></label>	
+	               </div>
+	               	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
-						</span>
-              			 <select class="form-control" id="type">
-										<option value="selected">--Select Type--</option>
-										<option value="admin">Admin</option>
-										<option value="deo">DEO</option>
-										<option value="finance">Accountant</option>
-										<option value="salesman">Salesman</option>
+							</span>
+              			 	<select class="form-control" id="type">
+								<option value="selected">--Select Type--</option>
+								<option value="admin">Admin</option>
+								<option value="deo">DEO</option>
+								<option value="finance">Accountant</option>
+								<option value="salesman">Salesman</option>
 							</select>
-            		</div>
-				</div>
-				    
-				    <label class="col-md-2 control-label" for="shopname"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Shop Name<%}%><sup>*</sup></label>
-           			 <div class="col-md-3">
+            			</div>
+					</div>
+            	</div>
+			</div>
+						
+			<div class="row">
+            	<div class="form-group">
+            		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+				    	<label class="control-label" for="shopname"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("catName") %> <%}%> <%if(abc.equals("english")){%>Shop Name<%}%><sup>*</sup></label>
+           			 </div>
+           			 <div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 							<i
@@ -211,13 +217,10 @@
             			
             			</div>
             		</div>
-				
-			</div>
-			
-			 <div class="row form-group">
-
-	           <label class="col-md-2 control-label" for="contactNo">Email ID<sup>*</sup></label>  
-           	 		<div class="col-md-3">
+            		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+	           			<label class="control-label" for="contactNo">Email ID<sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-earphone"></i>
@@ -225,27 +228,34 @@
               				<input id="email" name="email" placeholder="Email ID" class="form-control input-md" type="email">
             			</div>
             		</div>
-            	
-            	<label class="col-md-2 control-label" for="address1">Email Password<sup>*</sup></label>  
-	            <div class="col-md-3">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-map-marker"></i>
-						</span>
-              			<input id="pass" name="pass" placeholder="Password" class="form-control input-md" type="password" >
-            		</div>
 				</div>
 			</div>
 			
- 			<div class="form-group row">
-            	<div class="col-md-10 text-center">
+			
+			<div class="row">
+				<div class="form-group">
+	           		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+            	   		<label class="control-label" for="address1">Email Password<sup>*</sup></label>  
+	            	</div>
+	            	<div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-map-marker"></i>
+							</span>
+              				<input id="pass" name="pass" placeholder="Password" class="form-control input-md" type="password" >
+            			</div>
+					</div>
+				</div>
+			</div>
+			
+ 				<div class="row buttons-margin" align="center">
+            	
             		 <!--  userDetails() function is implemented in  userDetails.js -->
             		 
-            		 <input type="button" id="btn"  style="height: 53px; width: 128; font-size: 25" class="btn btn-large btn-success" name="btn"  onclick="AddAccessControlDetails()" value="Submit">
-		             <input type="reset"  id="save" style="height: 53px; width: 128; font-size: 25" class="btn btn-large btn-danger"  name="btn"  onclick="reset()" value="Cancel" >
-        	   		 <input type="button" id="btn1" style="height: 53px; width: 128; font-size: 25" class="btn btn-large btn-success" name="btn1" onclick="openLogin()" value="Login">
+            		 <input type="button" id="btn" class="btn btn-large btn-success" name="btn"  onclick="AddAccessControlDetails()" value="Submit">
+		             <input type="reset"  id="save" class="btn btn-large btn-danger"  name="btn"  onclick="reset()" value="Cancel" >
+        	   		 <input type="button" id="btn1" class="btn btn-large btn-success" name="btn1" onclick="openLogin()" value="Login">
         	    </div>
-          	</div>
 		</fieldset>
       </form>
     </div>
@@ -257,4 +267,7 @@
     	
             }
     	%>
+    	
+</div>
+</body>
 <jsp:include page="commons/footer.jsp"></jsp:include>

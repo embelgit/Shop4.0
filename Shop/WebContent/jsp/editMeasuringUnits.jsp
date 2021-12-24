@@ -61,40 +61,41 @@
 <script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
           		
 <script type="text/javascript" src="/Shop/staticContent/js/units.js"></script>
-<style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
-
-
-</style>
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 </head>
+<body>
+<div class="container-fluid">
 <div class="row header_margin_top">
 			    <div align="center">
 			  		<h2 class="form-name style_heading">Measuring Units</h2>
 			  	</div>
 			 
     </div>
-     <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+    
+    <div class="row" align="center">
+		<div class="hr-width">
+			<hr class="style-one">
+		</div>	
     </div>
-	<div class="container col-sm-offset-2" >
+	
+	<div class="container">
         <form class="form-horizontal" method="post" action="" name="munits"><!-- Value of 'name' attribute is used in customerDetails.js  -->
           <fieldset>
+          <div class="shopform-margin">
 			<div class="row form-group">
            	 		<div class="col-md-6">
               			<%@include file="commons/clock.jsp" %>
            		 	</div>
 			</div>
-			 <div class="row form-group">
-           		<label class="col-md-2 control-label" for="unitName">SI Unit<sup>*</sup></label>  
-           	 		<div class="col-md-3">
+			 <div class="row">
+           		<div class="form-group">
+           			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+           				<label class="control-label" for="unitName">SI Unit<sup>*</sup></label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8">
             			<div class="input-group">
 							<span class="input-group-addon">
-								<i class="	glyphicon glyphicon-list-alt"></i>
+								<i class="glyphicon glyphicon-list-alt"></i>
 							</span>
               				
 							<%
@@ -118,13 +119,11 @@
             			</datalist>
             			</div>
            		 	</div>
-
-           		 </div>
-           		 
-           		 
-           	<div class="row form-group">
-           		<label class="col-md-2 control-label" for="unitName">New SI Unit</label>  
-           	 		<div class="col-md-3">
+           		 	
+           		 	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+	           			<label class="control-label" for="unitName">New SI Unit</label>  
+	           	 	</div>	
+           	 		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
             			<div class="input-group">
 							<span class="input-group-addon">
 								<i class="	glyphicon glyphicon-list-alt"></i>
@@ -136,12 +135,19 @@
 							
             			</div>
            		 	</div>
-           		 	
-           		 	<label class="col-md-3 control-label" for="unitDescription">New SI Unit Description</label>  
-           	 		<div class="col-md-3">
+           		 </div>
+       		 </div>
+           		 
+           		 
+           	<div class="row">
+	           	<div class="form-group">	           		
+           		 	<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+           		 		<label class="control-label" for="unitDescription">New SI Unit Description</label>  
+           	 		</div>
+           	 		<div class="col-lg-3 col-md-3 col-sm-8">
             			<div class="input-group">
 							<span class="input-group-addon">
-								<i class="	glyphicon glyphicon-list-alt"></i>
+								<i class="glyphicon glyphicon-list-alt"></i>
 							</span>
               				
               				<input id="unitDescription" name="unitDescription" placeholder="New SI Unit Description" class="form-control">
@@ -149,19 +155,19 @@
 			    			</div>
            		 	</div>
            		 </div>
+           		 </div>
            		 
-           		 
-           		 
-           		 <div class="form-group row">
-		            <div class="col-md-6 text-center col-md-offset-2" style="padding-top:2%">
-			       	           		   		 
-		           		 <input style="width: 128px;height: 53px;font-size: 25" type="button" id="save"    name="btn"  class="btn btn-success" value="Update" onclick="updateMeasuringUnit()" >
-		           		 <input style="width: 128px;height: 53px;font-size: 25" type="reset"  id="save"    name="btn"  class="btn  btn-danger" value="Cancel" onclick="reset()" >
-		           		 <input style="width: 128px;height: 53px;font-size: 25" type="button" id="listBtn" name="btn"  class="btn btn-primary" value="Back"   onclick="back()" /> 
-	              		  
-	           		</div>
-         		</div>
+           		 </div>
            	</fieldset>
-          </form>
+          </form>	 
+           		 
+           		 <div class="row buttons-margin" align="center">		       	           		   		 
+		           	<input type="button" id="save" name="btn" class="btn btn-success" value="Update" onclick="updateMeasuringUnit()">
+		           	<input type="reset" id="save" name="btn" class="btn btn-danger" value="Cancel" onclick="reset()">
+		           	<input type="button" id="listBtn" name="btn" class="btn btn-primary" value="Back" onclick="back()"/> 
+	        	</div>
+           	
          </div>
+</div>
+</body>
        <%@include file="commons/footer.jsp" %>

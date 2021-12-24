@@ -17,6 +17,7 @@
 <script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/productDetail.js"></script>
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
   <script type="text/javascript">
   			function Back()
   			{
@@ -108,19 +109,11 @@ function salePriceWithoutTax11()
 		
 	}
 }
-
 </script>
-		
- 	<style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
-
-
-</style>
 </head>
- <div class="row header_margin_top">
+<body>
+<div class="container-fluid">
+<div class="row header_margin_top">
 			    <div align="center">
 			  		<h2 class="form-name style_heading"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("productDetails") %> <%}%> 
 			  		<%if(abc.equals("english")){%>Edit Product Details<%}%></h2>
@@ -128,74 +121,90 @@ function salePriceWithoutTax11()
 			 
     </div>
  
- 	 <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+ 	<div class="row" align="center">
+		<div class="hr-width">
+			<hr class="style-one">
+		</div>	
     </div>
     
- 	<div class="container col-sm-offset-1">
+ 	<div class="container">
         <form class="form-horizontal" method="post" action="" name="prd1">                             <!-- Value of 'name' attribute is used in  productDetail.js  -->
           <fieldset>
-          
-			 	<div class="row form-group">
-			
-			  <label class="col-md-2 control-label" for="fk_product_id">Product Name<sup>*</sup></label>  
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="	glyphicon glyphicon-list-alt"></i>
-							</span>
+           <div class="shopform-margin">
+			 	<div class="row">
+			 		<div class="form-group">
+						<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+							<label class="control-label" for="fk_product_id">Product Name<sup>*</sup></label>  
+           			 	</div>
+           			 	<div class="col-lg-3 col-md-3 col-sm-8">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="glyphicon glyphicon-list-alt"></i>
+								</span>
               											
 							<%
 								ProductDetailsDao cdd = new ProductDetailsDao();
            						List cList =cdd.getAllProductForEdit(request);							
 							%>
-							<input list="pro_drop" id="fk_product_id" class="form-control" placeholder="Select Product Name" onchange="getAllProductDetails()">
-							<datalist id="pro_drop">
+								<input list="pro_drop" id="fk_product_id" class="form-control" placeholder="Select Product Name" onchange="getAllProductDetails()">
+								<datalist id="pro_drop">
 							<%
 					           for(int i=0;i<cList.size();i++){
 					        	   ProductDetailsBean cat=(ProductDetailsBean)cList.get(i);
 							%>
 		
-							<option data-value="<%=cat.getProdctId()%>" value="<%=cat.getProductName()%> <%=cat.getWeight()%>">
+									<option data-value="<%=cat.getProdctId()%>" value="<%=cat.getProductName()%> <%=cat.getWeight()%>">
 							<%
 				      			}
 				    		%>
 			              	
-            			</datalist>
-            			</div>
-            		</div>          
-			     
-			</div> 	
-			 	
-			 <div class="row form-group">
-			 
-            		<label class="col-md-2 control-label" for="productName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("company") %> <%}%> 
+            					</datalist>
+            				</div>
+            			</div>          
+			    		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+			    			<label class="control-label" for="productName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("company") %> <%}%> 
             		<%if(abc.equals("english")){%>New Product Name<%}%><sup>*</sup></label>  
-			           	 <div class="col-md-3">
+			           	 </div>
+			           	 <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 							<div class="input-group">
 								<span class="input-group-addon">
 									<i class="	glyphicon glyphicon-list-alt"></i>
 								</span>
 			              		<!-- <input id="productName" name="productName" placeholder="productName" class="form-control input-md" type="text" > -->
 			              		 <input id="productname1" name="productname1" placeholder="Product Name" class="form-control input-md" type="text">
-			              		
-			            	</div>
+			              	</div>
 			            </div>
-						 
-						 <label class="col-md-3 control-label" for="manufacturingCompany"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("company") %> <%}%> 
+			     	</div>
+				</div> 	
+			 	
+			<div class="row">
+				<div class="form-group"> 						 
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="manufacturingCompany"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("company") %> <%}%> 
 						 <%if(abc.equals("english")){%>Manufacturing company<%}%><sup>*</sup></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									<i class="	glyphicon glyphicon-list-alt"></i>
-								</span>
-			              		<input id="manufacturingCompany" name="manufacturingCompany" placeholder="Manufacturing company" class="form-control input-md" type="text" >
-			            	</div>
-			            </div>
-			 			   
-						</div>
+			        </div>
+			        <div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="	glyphicon glyphicon-list-alt"></i>
+							</span>
+			           		<input id="manufacturingCompany" name="manufacturingCompany" placeholder="Manufacturing company" class="form-control input-md" type="text" >
+			           	</div>
+			        </div>
+			        <div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+			        	<label class="control-label" for="weight"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("weight") %> <%}%>
+             				<%if(abc.equals("english")){%>Packing<%}%><sup>*</sup></label>  
+            		</div>
+            		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-hand-right"></i>
+							</span>
+             			 	<input id="weight" name="weight" placeholder="Packing" class="form-control input-md" type="text" readonly="readonly">
+            			</div>
+					</div>
+			    </div>
+			 </div>
            
 		<%--
 		
@@ -246,25 +255,17 @@ function salePriceWithoutTax11()
 			
 			--%>
 			
-			<div class="row form-group">
-            <label class="col-md-2 control-label" for="weight"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("weight") %> <%}%>
-             <%if(abc.equals("english")){%>Packing<%}%><sup>*</sup></label>  
-            	<div class="col-md-3">
+		<div class="row">
+        	<div class="form-group">    
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					<label class="control-label" for="Unit"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("unit") %> <%}%> 
+						<%if(abc.equals("english")){%>Unit<%}%><sup>*</sup></label>  
+            	</div>	
+            	<div class="col-lg-3 col-md-3 col-sm-8">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="	glyphicon glyphicon-hand-right"></i>
 						</span>
-             			 <input id="weight" name="weight" placeholder="Packing" class="form-control input-md" type="text" readonly="readonly">
-            		</div>
-				</div>
-				
-				<label class="col-md-3 control-label" for="Unit"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("unit") %> <%}%> 
-				<%if(abc.equals("english")){%>Unit<%}%><sup>*</sup></label>  
-            				<div class="col-md-3">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-hand-right"></i>
-									</span>
 									
 							
 										
@@ -285,41 +286,44 @@ function salePriceWithoutTax11()
 							%>
 							
 							<input list="unit_drop" id="fk_unit_id"  placeholder="Unit"  class="form-control">
-				        <datalist id="unit_drop">
+				        	<datalist id="unit_drop">
 						
-							<option data-value="<%=bean.getPkUnitId()%>" 
+								<option data-value="<%=bean.getPkUnitId()%>" 
 							        value="<%=bean.getUnitName() %>">
 							<%
 				      			}
 				    		%>
-						</datalist>           	
+							</datalist>           	
 					</div>
            		</div>
 			</div>
+		</div>			
 			
-			
-			
-			
-			<div class="row form-group">
-				 <label class="col-md-2 control-label" for="existedTax">Existing Tax Name</label>  
-	            	<div class="col-md-3">
+			<div class="row">
+				<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+				 		<label class="control-label" for="existedTax">Existing Tax Name</label>  
+	            	</div>
+	            	<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="	glyphicon glyphicon-list-alt"></i>
 							</span>
-	             			 <input readonly="readonly" id="existedTax" name="existedTax"  placeholder="Existed Tax"  class="form-control input-md" type="text" >
+	             			<input readonly="readonly" id="existedTax" name="existedTax"  placeholder="Existed Tax"  class="form-control input-md" type="text" >
 	            		</div>
-					</div>
-					
-					<label class="col-md-3 control-label" for="existedTaxPercentage">Existing GST</label>
-						<div class="col-md-3">
+					</div>					
+					<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+						<label class="control-label" for="existedTaxPercentage">Existing GST</label>
+					</div>	
+					<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 						<div class="input-group">
 							<span class="input-group-addon">
-								%
+								<span class="glyphicon percentage">%</span>
 							</span>
-	             			 <input readonly="readonly" id="existedTaxPercentage"   placeholder="Existed GST %" name="existedTaxPercentage"  class="form-control input-md" type="text" >
+	             		 	<input readonly="readonly" id="existedTaxPercentage"   placeholder="Existed GST %" name="existedTaxPercentage"  class="form-control input-md" type="text" >
 	            		</div>
-	            		</div>
+	            	</div>
+				</div>
 			</div>
 			<%-- <div>
 			
@@ -346,9 +350,12 @@ function salePriceWithoutTax11()
 			
 		
 			
-		<div class="row form-group">
-         	<label class="col-md-2 control-label" for="fk_tax_id">New Tax Name<sup>*</sup></label>
-         		<div class="col-md-3">
+		<div class="row">
+         	<div class="form-group">	
+         		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+         			<label class="control-label" for="fk_tax_id">New Tax Name<sup>*</sup></label>
+         		</div>
+         		<div class="col-lg-3 col-md-3 col-sm-8">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="	glyphicon glyphicon-list-alt"></i>
@@ -369,7 +376,7 @@ function salePriceWithoutTax11()
 					        	   TaxCreationBean tax=(TaxCreationBean)tList.get(i);
 							%>
 		
-						<option value="<%=tax.getTxId()%>" myid="<%=tax.getTaxPercentage()%>"><%=tax.getTaxType() %> </option>
+							<option value="<%=tax.getTxId()%>" myid="<%=tax.getTaxPercentage()%>"><%=tax.getTaxType() %> </option>
 							<%
 				      			}
 				    		%>
@@ -377,20 +384,25 @@ function salePriceWithoutTax11()
             			</select> 
             		</div>
             	</div>   
-         		<label class="col-md-3 control-label" for="existedTaxPercentage">New GST</label>
-         	 <div class="col-md-3" >
-				<div class="input-group">
+         		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+         			<label class="control-label" for="existedTaxPercentage">New GST</label>
+         	 	</div>
+         	 	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
 						<span class="input-group-addon">
-							%
+							<span class="glyphicon percentage">%</span>
 						</span>
-           		 	<input id="taxPercentage" name="taxPercentage" placeholder="GST %" readonly="readonly" class="form-control input-md" type="text" >
-           		</div>
+           		 		<input id="taxPercentage" name="taxPercentage" placeholder="GST %" readonly="readonly" class="form-control input-md" type="text" >
+           			</div>
+				</div>
 			</div>
 		</div> 
 		
 		
-		<div class="row form-group">
-  <label class="col-md-2 control-label" for="sgst"> 
+		<div class="row">
+			<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+  					<label class="control-label" for="sgst"> 
   <%
  	if (abc.equals("marathi")) {
   %>
@@ -404,16 +416,18 @@ function salePriceWithoutTax11()
  	}
  %><sup>*</sup>
 </label>
-
-					<div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon"> % </span> <input id="sgst"
-								name="sgst" placeholder="SGST %" class="form-control input-md"
-								type="text" onchange="calculateTax()">
-						</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							 <span class="glyphicon percentage">%</span>
+						</span>
+						<input id="sgst" name="sgst" placeholder="SGST %" class="form-control input-md" type="text" onchange="calculateTax()">
 					</div>
-
-	<label class="col-md-3 control-label" for="cgst"> <%
+				</div>
+				
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+	<label class="control-label" for="cgst"> <%
  	if (abc.equals("marathi")) {
  %><%=PropertiesHelper.marathiProperties.getProperty("cgst")%>
 						<%
@@ -424,107 +438,119 @@ function salePriceWithoutTax11()
  	}
  %><sup>*</sup>
 					</label>
-
-					<div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon"> % </span> <input id="cgst"
-								name="cgst" placeholder="CGST %" class="form-control input-md" 
-								type="text" onchange="calculateTax()">
-						</div>
-					</div>
-
-
-</div>
-		
-		
-		<div class="row form-group">
-
-				<label class="col-md-2 control-label" for="mrp">
-					<%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("") %>
-					<%}%> <%if(abc.equals("english")){%>M.R.P <sub>*</sub><%}%>
-				</label>
-				
-				<div class="col-md-3">
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">
-						<span class="input-group-addon"> Rs </span> <input id="mrp"
-							name="mrp" placeholder="MRP" class="form-control input-md"
-							type="text" onblur="salePriceWithoutTax()" readonly="readonly">
+						<span class="input-group-addon">
+							<span class="glyphicon percentage">%</span>
+						</span>
+						<input id="cgst" name="cgst" placeholder="CGST %" class="form-control input-md" type="text" onchange="calculateTax()">
 					</div>
 				</div>
-				
-		
-			
-		<label class="col-md-3 control-label" for="buyPrice">
-					<%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("buyPrice") %>
-					<%}%> <%if(abc.equals("english")){%>Buy Price(Incl Tax)<sup>*</sup><%}%>
-				</label>
-				
-				<div class="col-md-3">
-					<div class="input-group">
-						<span class="input-group-addon"> Rs </span> <input id="buyPrice"
-							name="buyPrice" placeholder="Buy Price(Incl Tax)"
-							class="form-control input-md" type="text" > <!-- onchange="salePriceWithoutTax11()" -->
-					</div>
-				</div>
-				
-		
 			</div>
+		</div>
 		
-		 <div class="row form-group">
-		        <label class="col-md-2 control-label" for="spwithoutgst">
+		
+		<div class="row">
+			<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					<label class="control-label" for="mrp">
+						<%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("") %>
+						<%}%> <%if(abc.equals("english")){%>M.R.P <sub>*</sub><%}%>
+					</label>
+				</div>				
+				<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							 <span class="glyphicon nogyphicon">Rs</span>
+						</span>
+						<input id="mrp" name="mrp" placeholder="MRP" class="form-control input-md" type="text" onblur="salePriceWithoutTax()" readonly="readonly">
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+					<label class="control-label" for="buyPrice">
+						<%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("buyPrice") %>
+						<%}%> <%if(abc.equals("english")){%>Buy Price(Incl Tax)<sup>*</sup><%}%>
+					</label>
+				</div>				
+				<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							 <span class="glyphicon nogyphicon">Rs</span>
+						</span>
+						<input id="buyPrice" name="buyPrice" placeholder="Buy Price(Incl Tax)" class="form-control input-md" type="text" > <!-- onchange="salePriceWithoutTax11()" -->
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="form-group"> 
+		        <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+		        	<label class="control-label" for="spwithoutgst">
 					<%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("spwithoutgst") %>
 					<%}%> <%if(abc.equals("english")){%>S.P(Excl Tax)<%}%>
-				</label>
-							
-				<div class="col-md-3">
+					</label>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-8">
 					<div class="input-group">
-						<span class="input-group-addon"> Rs </span> <input
-							id="spwithoutgst" name="spwithoutgst"
-							placeholder="Sale Price(Excl Tax)" class="form-control input-md"
+						<span class="input-group-addon">
+							 <span class="glyphicon nogyphicon">Rs</span>
+						</span>
+						<input id="spwithoutgst" name="spwithoutgst" placeholder="Sale Price(Excl Tax)" class="form-control input-md"
 							type="text" onchange="salePriceWithTax()">
 							<!-- onchange="salePriceWithoutTax();salePriceWithTax()" -->
 					</div>
 				</div>
-				
-				<label class="col-md-3 control-label" for="salePrice">
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+					<label class="control-label" for="salePrice">
 					<%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("salePrice") %>
 					<%}%> <%if(abc.equals("english")){%>Sale Price/Unit(Incl Tax)<sub>*</sub><%}%>
-				</label>
-				<div class="col-md-3">
+					</label>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">
-						<span class="input-group-addon"> Rs </span> <input id="salePrice"
-							name="salePrice" placeholder="Sale Price per Unit(Incl Tax)"
-							class="form-control input-md" type="text"
+						<span class="input-group-addon">
+							 <span class="glyphicon nogyphicon">Rs</span>
+						</span>
+						<input id="salePrice" name="salePrice" placeholder="Sale Price per Unit(Incl Tax)" class="form-control input-md" type="text"
 							onchange="salePriceWithoutTax()" readonly="readonly">
 					</div>
 				</div> 
-				
+			</div>	
 		</div>
 			
-		<div class="row form-group">
-				 <label class="col-md-2 control-label" for="existedTax">Existed HSN</label>  
-	            	<div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								No
-							</span>
-	             			 <input readonly="readonly" id="existedHsn" name="existedHsn" placeholder="Existed HSN No" class="form-control input-md" type="text" >
-	            		</div>
-					</div>
-					
-					<label class="col-md-3 control-label" for="existedTaxPercentage">New HSN</label>
-						<div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								No
-							</span>
-	             			 <input id="newHsn" name="newHsn" placeholder="New HSN No" class="form-control input-md" type="text" >
-	            		</div>
-	            		</div>
+		<div class="row">
+			<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					<label class="control-label" for="existedTax">Existed HSN</label>  
+	            </div>	
+	            <div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">No</span>
+						</span>
+	            		<input readonly="readonly" id="existedHsn" name="existedHsn" placeholder="Existed HSN No" class="form-control input-md" type="text" >
+	            	</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+					<label class="control-label" for="existedTaxPercentage">New HSN</label>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">No</span>
+						</span>
+	            	 	<input id="newHsn" name="newHsn" placeholder="New HSN No" class="form-control input-md" type="text" >
+	            	</div>
+	            </div>
 			</div>
+		</div>
 	
-	<div class="row form-group">
-<label class="col-md-2 control-label" for="productdescription">
+	<div class="row">
+		<div class="form-group">	
+			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+				<label class="control-label" for="productdescription">
 	<%
 		if (abc.equals("marathi")) {
 	%><%=PropertiesHelper.marathiProperties.getProperty("description")%>
@@ -535,27 +561,31 @@ function salePriceWithoutTax11()
  %>Description<%
  	}
  %>	</label>
-			<div class="col-md-3">
+ 			</div>
+			<div class="col-lg-3 col-md-3 col-sm-8">
 				<div class="input-group">
 					<span class="input-group-addon">
-					<i class="	glyphicon glyphicon-list-alt"></i>
-					</span>
-				
+						<i class="glyphicon glyphicon-list-alt"></i>
+					</span>				
 					<input type="text" placeholder="Description" id="description" class="form-control">
-					
 				</div>
 			</div> 
-		</div>   	
-	
-		<div class="form-group row" style="padding-top:2%">
-            <div class="col-md-10 col-sm-offset-1 text-center">
-           		<input style="width: 128px; height: 53px; font-size: 25" type="button" value="Update" id="save"    name="btn" class="btn  btn-success" onclick="updateProductDetails()" /> 
-             	<input style="width: 128px; height: 53px; font-size: 25" type="reset"  value="Cancel" id="save"    name="btn" class="btn  btn-danger"  onclick="reset()" /> 
-           		<input style="width: 128px; height: 53px; font-size: 25" type="button" value="Back"   id="listBtn" name="btn" class="btn btn-primary"  onclick="Back()" /> 
-            </div>
+		</div>
+	</div>   	
+
+</div>
+</fieldset>
+       </form>	
+	</div>
+		
+		<div class="row buttons-margin" align="center">            
+           		<input type="button" value="Update" id="save" name="btn" class="btn btn-success"onclick="updateProductDetails()" /> 
+             	<input type="reset" value="Cancel" id="save" name="btn" class="btn btn-danger" onclick="reset()" /> 
+           		<input type="button" value="Back" id="listBtn" name="btn" class="btn btn-primary" onclick="Back()" />            
           </div>
-		</fieldset>
-       </form>
-     </div>
+		
+     
  
+ </div>
+ </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>
