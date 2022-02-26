@@ -12,6 +12,7 @@
 <script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/categoryDetails.js"></script>
 <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
+
 <script>
 function catlist()
 {
@@ -27,7 +28,6 @@ function editSubcat()
 {
 	 window.location = "EditSubcat.jsp";
 }
-
 
 </script>
 

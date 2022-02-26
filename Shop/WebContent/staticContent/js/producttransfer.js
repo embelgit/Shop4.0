@@ -544,6 +544,7 @@ for (i = 0; i < list.options.length; ++i) {
 		}
 		
 		addproducttx1();
+		/*addproducttx();*/
 	}
 	
 	function addproducttx1()
@@ -717,22 +718,90 @@ for (i = 0; i < list.options.length; ++i) {
 		var packunit = $('#packunit').val();
 		var packquantity = $('#packing').val();
 		
-		if(proName=="" || proName==null || proName==undefined){
+		/*if(proName=="" || proName==null || proName==undefined){
 			alert("Please select product Name");
 			return false;
-		}
-		if(weight=="" || weight==null || weight==undefined){
+		}*/
+			if(proName=="" || proName==null || proName==undefined)
+	{
+		var msg="Please select product Name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+		
+		
+		/*if(weight=="" || weight==null || weight==undefined){
 			alert("Please Enter Weight of Product");
 			return false;
-		}
-		if(packunit=="" || packunit==null || packunit==undefined){
+		}*/
+		if(weight=="" || weight==null || weight==undefined)
+	{
+		var msg="Please Enter Weight of Product";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+		
+		/*if(packunit=="" || packunit==null || packunit==undefined){
 			alert("Please select unit for packing");
 			return false;
-		}
-		if(packquantity=="" || packquantity==null || packquantity==undefined){
+		}*/
+		if(packunit=="" || packunit==null || packunit==undefined)
+	{
+		var msg="Please select unit for packing";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+		
+		/*if(packquantity=="" || packquantity==null || packquantity==undefined){
 			alert("Please enter packing quantity");
 			return false;
-		}
+		}*/
+			if(packquantity=="" || packquantity==null || packquantity==undefined)
+	{
+		var msg="Please enter packing quantity";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
 		
 		addpacking1();
 	}

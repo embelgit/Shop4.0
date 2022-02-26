@@ -45,6 +45,10 @@
 	 <script type="text/javascript" src="/Shop/staticContent/js/fertilizerBill.js"></script>
 	 <script type="text/javascript" src="/Shop/staticContent/js/customerDetails.js"></script>
 	 
+	<!--  <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> -->
+	 
+	 
+	 
 		  	
 <script type="text/javascript">
     function mypopup(url)
@@ -625,14 +629,24 @@ position: relative;
 top: 25%;}
 
 
+.container-fluid {
+	overflow: hidden;
+}
+
 </style>
+
 </head>
 	
  <body onload="pageLoad();getProductName();getProductNameForCredit();"> 
 <!-- <body onload="pageLoad();"> -->
+<div class="container-fluid">
+
+
 <br>
+
+
 	<div class="row">
-	<div class="col-10 col-md-6 col-lg-6 col-lg-offset-3">
+    <div class="col-10 col-md-6 col-lg-6 col-lg-offset-3">
 	<div class="row header_margin_top">
 			    <div align="center">
 					<h2 class="form-name style_heading">GST Billing</h2>  		
@@ -669,9 +683,12 @@ top: 25%;}
 			<fieldset>
 
 
-         <div class="row form-group">
-			<label class="col-md-3 control-label" for="customerName">Firm Name</label>  
-           			 <div class="col-md-3">
+
+           			
+
+            <div class="row form-group">
+			 <label class="col-md-3 control-label" for="customerName">Firm Name</label>
+           			  <div class="col-md-3">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
@@ -1105,15 +1122,20 @@ top: 25%;}
             	</div>
      	
      	
-     		<div class="row form-group buttons_margin_top" style="margin-bottom: 50px;">
-					<div align="center">
+     		 <div class="row form-group buttons_margin_top" style="margin-bottom: 50px;"> 
+					<div align="center"> 
 						  
-						<input type="button" id="billingCashbtn" style="font-size: 20px;width: 150px;height: 54px;" class="btn btn-large btn-success button-height-width" name="billingCashbtn" onclick="fertilizerBill()" value="Save&Print Bill">
-           				<input type="reset" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-danger  button-height-width" id="save" name="btn" onclick="cancle()" value="Cancel">
-						<input type="button" id="btn" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock ">	
-		 	    <input   id="save" name="btn" style="width: 128px; height: 53px;font-size: 25" class="btn  btn-primary "  type="button"  onclick="pay()" value="Payment">        		            				
-					</div>
-			</div>	
+						<input type="button" id="billingCashbtn" style=" width: 150px; height: 40px; font-size: 18px; font-weight: 600; outline: none !important; border-radius: 10px;" class="btn btn-large btn-success button-height-width" name="billingCashbtn" onclick="fertilizerBill()" value="Save&Print Bill">
+           				<input type="reset" style=" width: 120px; height: 40px; font-size: 18px; font-weight: 600; outline: none !important; border-radius: 10px;" class="btn btn-large btn-danger  button-height-width" id="save" name="btn" onclick="cancle()" value="Cancel">
+						<input type="button" id="btn" style=" width: 120px; height: 40px; font-size: 18px; font-weight: 600; outline: none !important; border-radius: 10px;" class="btn btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock ">
+						<!-- <input type="button" id="btn" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock "> -->	
+		 	            <input   id="save" name="btn" style=" width: 120px; height: 40px; font-size: 18px; font-weight: 600; outline: none !important; border-radius: 10px;" class="btn  btn-primary "  type="button"  onclick="pay()" value="Payment"> 
+		 	    <!-- <input   id="save" name="btn" style=" width: 120px; height: 40px; font-size: 18px; font-weight: 600; outline: none !important; border-radius: 10px;" class="btn  btn-primary "  type="button"  onclick="pay()" value="Payment">  -->
+		 	    
+		 	             	
+		 	             			            				
+				</div>
+			</div>	 
 				</fieldset>
 				</form>
        </div>
@@ -1125,7 +1147,7 @@ top: 25%;}
 			<fieldset>
 			          
 			                  <div class="row form-group">
-			<label class="col-md-3 control-label" for="customerName">Firm Name</label>  
+			<label class="col-md-3 control-label" for="customerName">Firm Name <sup>*</sup></label>  
            			 <div class="col-md-3">
 						<div class="input-group">
 							<span class="input-group-addon">
@@ -1718,7 +1740,7 @@ top: 25%;}
         </div>
   </form>
 </div>
-
+</div>
 <!-- ====================================================== END CUSTOMER DETAILS POP UP ================================================================ -->	
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>

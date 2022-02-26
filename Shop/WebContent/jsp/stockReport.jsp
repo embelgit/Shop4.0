@@ -41,6 +41,8 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"> 
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
 
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
+
 <script type="text/javascript">
 function openBilling() {
 		 window.location = '/Shop/jsp/allBilling.jsp';
@@ -71,10 +73,12 @@ function openBilling() {
 }
 
 
+
 </style>
 </head>
 
 <body onload="getProductName()">
+<div class="container-fluid">
 <div class="container col-md-offset-1" style="float: left"> 
  		
  		<div class="row">
@@ -82,9 +86,9 @@ function openBilling() {
 				  <h2 class="form-name style_heading">Stock Reports</h2>
 			</div>
 				 	
-			 <div class="row">
-				<div class="col-sm-offset-1 col-md-10">
-						<hr style="border-top-color:#c1b1b1;">
+			 <div class="row" align="center">
+				<div class="hr-width">
+						<hr class="style-one">
 				</div>	
 			  </div>
 		</div>
@@ -548,6 +552,8 @@ function openBilling() {
 			</form>
     	</div>
     </div>
+  </div>
+  
   </div>
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>

@@ -279,11 +279,30 @@ function supplierDetailValidate()
 function supplierValidate()
 {	
 	var dealerName = $("#dealerName").val();
-	if(dealerName=="" ||dealerName==null ||dealerName==undefined )
+/*	if(dealerName=="" ||dealerName==null ||dealerName==undefined )
 	{
 			alert("Please enter supplier name");
 			return false;
-	}
+	}*/
+		if(dealerName=="" ||dealerName==null ||dealerName==undefined )
+	{
+		var msg="Please enter supplier name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+	
+	
+	
 	supDetails();
 }
 function supDetails(){
@@ -471,12 +490,29 @@ function updateSupplierDetails()
 {
 	var contactNo = $("#contactNo").val();
 	var contactNoLength = contactNo.length;
-		
-	if(document.spld1.supplier.value == "")
+	
+/*	if(document.spld1.supplier.value == "")
 	{
-		alert("Please Select Supplier Name");
+		alert("Please Select  Supplier Name");
 		return false;
-	}
+	}*/
+	
+		if(document.spld1.supplier.value == "")
+	{
+		var msg="Please Select  Supplier Name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
 	
 	/*if(document.spld1.contactNo.value == "")
 	{

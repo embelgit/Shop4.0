@@ -529,12 +529,16 @@ input[type="radio"] + div>span {
 position: relative;
 top: 25%;}
 
+.container-fluid {
+	overflow: hidden;
+	}
 
 </style>
 </head>
 	
  <body onload="pageLoad();getProductName();getProductNameForCredit();"> 
 <!-- <body onload="pageLoad();"> -->
+<div class="container-fluid">
 <br>
 	<div class="row">
 	<div class="col-10 col-md-6 col-lg-6 col-lg-offset-3">
@@ -1213,5 +1217,6 @@ top: 25%;}
 </div>
 
 <!-- ====================================================== END CUSTOMER DETAILS POP UP ================================================================ -->
+</div>
  </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>

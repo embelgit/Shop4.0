@@ -245,10 +245,15 @@ function updateCustomerDetailsValidation()
 	var creditCustomer = $('#creditCustomer').val();
     var lastName=  $('#lastName').val();
     var contactNo=  $('#contactNo').val();
-    
-  	if(creditCustomer == "")
+   
+/*  	if(creditCustomer == "")
 	{
-		/*var msg="Please Select Customer Name ";
+		
+		alert("Please Select Customer Name");
+		return false;
+	}*/
+	
+	/*var msg="Please Select Customer Name ";
 		var dialog = bootbox.dialog({
 	    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 	    closeButton: false
@@ -260,10 +265,25 @@ function updateCustomerDetailsValidation()
 		}, 1500);
 		
 		return false;*/
+	
+	if(creditCustomer == "")
+	{
+		var msg="Please Select Customer Name";
 		
-		alert("Please Select Customer Name");
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
 		return false;
-	}
+	}	
+	
+	
 	/*
 	if(lastName== "")
 	{		

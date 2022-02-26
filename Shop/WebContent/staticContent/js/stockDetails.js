@@ -189,6 +189,7 @@ function StockDetailsReportAsPerCatValidate()
 			}, 1500);
 			return false;
 		}	
+		StockDetailsReportAsPerCat();
 }
 
 function StockDetailsReportAsPerCat()
@@ -382,7 +383,7 @@ function StockDetailsReportAsPerShopValidate()
 		}
 	else
 		{
-			var msg="Plaese Select Shop";
+			var msg="Plaese Select Shop Name";
 			var dialog = bootbox.dialog({
 		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 		    closeButton: false
@@ -551,7 +552,8 @@ function StockDetailsReportAsPerProductNameValidate()
 		}
 		else
 		{
-			var msg="Please Select Product";
+			/*var msg="Please Select Product";*/ 
+			var msg="Please Select Category";
 			var dialog = bootbox.dialog({
 		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 		    closeButton: false

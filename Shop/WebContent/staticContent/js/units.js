@@ -1,10 +1,10 @@
 function addMeasuringUnit1()
 {	
-	document.munits.save.disabled =false;
+	/*document.munits.save.disabled =false;*/
 	
 //	var checkUnitName = document.munits.unitName.value;
 	
-	if (document.munits.unitName.value == "")
+/*	if (document.munits.unitName.value == "")
 	{
 		
 		var msg="Please Select Unit";
@@ -21,7 +21,26 @@ function addMeasuringUnit1()
 		}, 1500);
 		
 		return false;
-	}
+	}*/
+		if(document.munits.unitName.value == "")
+	{
+		var msg="Please Select Unit";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+	
+	
+	
 	/*
 	if (document.munits.unitDescription.value == "")
 	{
@@ -305,12 +324,29 @@ function updateMeasuringUnit()
 	var unitName2= $('#unitName2').val();
 	var unitDescription= $('#unitDescription').val();
 	
-	if(document.munits.unitName.value == "")
+	/*if(document.munits.unitName.value == "")
 	{
 	alert("Please Select SI Unit.");
 		return false;
-	}
+	}*/
 	
+			if(document.munits.unitName.value == "")
+	{
+		var msg="Please Select SI Unit.";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+			
 	params["unitId"] = unitId;
 	
 	params["oldUnitName"] = oldUnitName;

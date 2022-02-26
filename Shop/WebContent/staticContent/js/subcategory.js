@@ -92,23 +92,79 @@ function subcate(){
 
 function subcategoryd(){
 	
-	if ( document.subcat.fk_cat_id.value == "" )
+	/*if ( document.subcat.fk_cat_id.value == "" )
     {
    	      alert("Please Select Category Name.");
           return false;
-    }
+    }*/
+    
+    	if(document.subcat.fk_cat_id.value == "")
+	{
+		var msg="Please Select Category Name.";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+    
+    
+    
+    
 
-    if ( document.subcat.subCat.value == "" )
+   /* if ( document.subcat.subCat.value == "" )
     {
          alert("Please Enter Sub Category Name.");
          return false;
-    }
-     
-    if ( document.subcat.subcatname.value == "" )
+    }*/
+    	if(document.subcat.subCat.value == "")
+	{
+		var msg="Please Enter Sub Category Name.";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+    
+    
+  /*  if ( document.subcat.subcatname.value == "" )
   	{
   	     alert("Please Enter New Sub Category Name.");
          return false;
 	}
+	*/
+		if(document.subcat.subcatname.value == "")
+	{
+		var msg="Please Enter New Sub Category Name.";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+	
      
     /*var letterNumber =  /^[A-Za-z\d\s]+$/;
 	if(document.subcat.subcatname.value.match(letterNumber))   

@@ -7,13 +7,30 @@ function partnerDetailsV(){
 	var emailId = $('#emailId').val();
 	var city = $('#city').val();
 	var address = $('#address').val();
-	
+	/*
 	if(partnerName == "" || partnerName==null || partnerName==undefined)
 	{
 		alert("Please Enter Partner Name");
 //		document.getElementById("save").disabled = false;
 		return false;
-	}
+	}*/
+		if(partnerName == "" || partnerName==null || partnerName==undefined)
+	{
+		var msg="Please Enter Partner Name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+	
 	if(contactNo=="" || contactNo==null || contactNo==undefined)
 	{
 		contactNo = 0;
@@ -222,12 +239,30 @@ function updatePartnerDetailsV(){
 	var city = $('#city').val();
 	var address = $('#address').val();
 	
-	if(selectpartner == "" || selectpartner==null || selectpartner=="undefined")
+	/*if(selectpartner == "" || selectpartner==null || selectpartner=="undefined")
 	{
 		alert("Please Select Partner Name");
 		document.getElementById("save").disabled = false;
 		return false;
-	}
+	}*/
+		if(selectpartner == "" || selectpartner==null || selectpartner=="undefined")
+	{
+		var msg="Please Select Partner Name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+	
+	
 	if(partnerName == "" || partnerName==null || partnerName=="undefined")
 	{
 		alert("Please Enter Partner Name");

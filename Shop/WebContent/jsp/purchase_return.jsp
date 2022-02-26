@@ -179,6 +179,7 @@
             <div class="row buttons-margin" align="center">
             	<input type="button" id="btn" class="btn btn-success" name="btn" onclick="purchaseReturnTable(); returntPurchase(); returntMinusFromStockPurchase();" value="Submit">
             	<input type="button" id="btn1" class="btn btn-danger" name="btn1" value="Cancel" onclick="cancle()">
+            	
            	</div>
 		
 		 </div>

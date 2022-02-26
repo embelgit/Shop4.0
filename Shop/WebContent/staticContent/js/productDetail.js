@@ -241,6 +241,7 @@ function productDetails()
 		
 		return false;
 	}
+	
 	if(document.prd.buyPrice.value == "")
 	{
 			var msg="Enter Buy Price(Incl Tax)";
@@ -256,6 +257,7 @@ function productDetails()
 		
 			return false;
 	}
+		
 	if(document.prd.productName.value == "")
 	{
 			var msg="Enter Product Name";
@@ -1355,6 +1357,22 @@ $('#example1').dataTable().fnAddData(mydata);
 				return false;
 			}	
 			
+			if(document.prd1.existedTax.value == "")
+			{
+				var msg="Please Enter existedTax Name";
+				var dialog = bootbox.dialog({
+					//title: "Embel Technologies Says :",
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);									
+			 
+				return false;
+			}	
+			
 			if(document.prd1.buyPrice.value == "")
 			{
 				var msg="Please Enter Buy Price";
@@ -1370,8 +1388,38 @@ $('#example1').dataTable().fnAddData(mydata);
 			
 				return false;
 			}
+			if(document.prd1.newHsn.value == "")
+			{
+				var msg="Please Enter New HSN ";
+				var dialog = bootbox.dialog({
+					//title: "Embel Technologies Says :",
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);
+			
+				return false;
+			}
 			
 			if(document.prd1.salePrice.value == "")
+			{
+				var msg="Please Enter Sale Price";
+				var dialog = bootbox.dialog({
+					//title: "Embel Technologies Says :",
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);
+			
+				return false;
+			}
+			if(document.prd1.spwithoutgst.value == "")
 			{
 				var msg="Please Enter Sale Price";
 				var dialog = bootbox.dialog({

@@ -499,20 +499,63 @@ function catlist1()
 
 ////////category details edit/////////////
      function EditcatDetails(){
-    	 document.catd.save.disabled =true;
+    	 /*document.catd.save.disabled =true;*/
 		
-		if (document.catd.categoryName.value == "" )
+		/*if (document.catd.categoryName.value == "" )
 		 {
 			alert("Please Enter Category Name");
 			return false;
-		 }
+		 }*/
+		 
 		//var letterNumber = /^[a-zA-Z0-9]*$/;
 		
-		 if ( document.catd.catname.value == "" )
+		/* if ( document.catd.catname.value == "" )
 		 {
 		      alert("Please Enter NewCategory Name");
 		      return false;
-		 }
+		 }*/
+		 
+		 
+		 
+		 
+	if(document.catd.categoryName.value == "")
+	{
+		var msg="Please Enter Category Name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+	
+	
+	if(document.catd.catname.value == "")
+	{
+		var msg="Please Enter New Category Name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+
+
+		 
+		 
 			
 		/* var letterNumber = /^[A-Za-z\d\s]+$/;
 		 if(document.catd.catname.value.match(letterNumber) )
@@ -578,9 +621,13 @@ function updateCategoryDetails()
 		 	    		if(textStatus==="timeout") {
 		 	    			$(loaderObj).hide();
 		 	    			$(loaderObj).find('#errorDiv').show();
-		 	    		}
+		 	    	id	}
 		 	    	});	
 }
+
+
+
+
 
 function delcat1(id){
 	
@@ -589,11 +636,14 @@ var splitText = id.split(",");
 	var id = splitText[0];
 	var name= splitText[1];
 	
-	  var r = confirm("Do You want to delete "+name);
+	var r="Do You want to delete "+name;
+
+	
+	 var r = confirm("Do You want to delete "+name);
+	 
+	
 	  if (r == true) {
-		  
-
-
+		
 	var params={};
 	
 		
@@ -604,7 +654,12 @@ var splitText = id.split(",");
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
 		 	{
 					alert(data);
+	
+					
 					location.reload();
+						
+			
+					
 	
 	//	 				document.getElementById("save").disabled=false; 
 		 				 			}

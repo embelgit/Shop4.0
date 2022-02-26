@@ -20,6 +20,7 @@
 	<script type="text/javascript" src="/Shop/staticContent/js/supplier.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 
 		
 <html>
 	<head>
@@ -40,13 +41,17 @@
   			
   		</script>
 		 
-<style>
+<!-- <style>
 .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
  {
     border-radius:23px;
 }
+</style> -->
 
-
+<style>
+.container-fluid {
+	overflow: hidden;
+}
 </style>
           		
 	</head>
@@ -70,7 +75,7 @@
 	</script>
 
 <body id="dt_example" style="min-height:300px;">
-		
+		<div class="container-fluid">
 		
 		
 		<div class="row">
@@ -78,9 +83,9 @@
 				  		<h2 class="form-name style_heading">Credit Customer List</h2>
 				  	</div>
 				 	
-			     <div class="row">
-					     <div class="col-sm-offset-1 col-md-10">
-							  		<hr style="border-top-color:#c1b1b1;">
+			     <div class="row" align="center">
+					     <div class="hr-width">
+							  		<hr class="style-one">
 					     </div>	
 			   		 </div>
 		</div>
@@ -92,7 +97,7 @@
 	<div class="container">
 	<div class="row">
 	
-	<div id="date">
+	<div id="date" align="right">
 		<label id="demo"></label>
 		<script>
 			var date = new Date();
@@ -147,13 +152,13 @@
 	</div>
 	</div>
 	</div>
-	<div class="wrapper" align="center" style="padding-top:2%">
-		<input type="button" style="width: 128px; height: 53px; font-size: 25px" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
+	<div class="row buttons-margin" align="center">
+		<input type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
 		<!-- <input type="button" style="width: 128px; height: 53px; font-size: 25px" value="Delete " id="delCust" class="btn btn-large btn-danger button-height-width" onclick="deletCustomer()" />  -->
 	</div>
 	
 	<%-- <%@include file="commons/newFooter.jsp" %> --%>
-	
+	</div>
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>
 

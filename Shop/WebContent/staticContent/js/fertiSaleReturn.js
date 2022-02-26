@@ -7,6 +7,26 @@ function saleReturnVal(){
 		alert("Please Select Customer Type");
 		return false;
 	}
+	
+/*	if(document.catd.categoryName.value == "")*/
+/*	if(Customertype == "selected")
+	{
+		var msg="Please Enter Category Name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	*/
+	
+
 	if(Billno == ""){
 		alert("Please Select Bill No");
 		return false;
@@ -97,16 +117,30 @@ function saleReturn(){
 	
 	params["count"] = count;
 	
-    params["methodName"] = "returnSale";
+   params["methodName"] = "returnSale";
+    
+    
 	
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
  	    	{
  				alert(data);
- 				//returntMinusFromStockPurchase();
  				location.reload();
- 				document.getElementById("save").disabled = false; 				
- 	    	}
- 	    	).error(function(jqXHR, textStatus, errorThrown){
+ 		/*		var msg=data;
+		var dialog = bootbox.dialog({
+	    message: '<p class="text-center">'+msg.fontcolor("green").fontsize(5)+'</p>',
+	    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+			location.reload();
+		}, 1500);*/
+		/*document.catd.btn.disabled =false;*/
+ 				
+ 				//returntMinusFromStockPurchase();
+ 				document.getElementById("save").disabled = false;
+ 				 				
+ 	    	}).error(function(jqXHR, textStatus, errorThrown){
  	    		if(textStatus==="timeout") {
  	    			$(loaderObj).hide();
  	    			$(loaderObj).find('#errorDiv').show();
@@ -2170,12 +2204,28 @@ function billReturnVal(){
 		return false;
 	}
 	
+	/*if(document.catd.categoryName.value == "")*/
+	/*if((billNo == "" || billNo ==null || billNo==undefined) && (billNoo == "" || billNoo ==null || billNoo==undefined))
+	{
+		var msg="Please Select Bill No";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}*/
+	
 	if((billNo != "" && billNoo != "" )){
 		alert("Please Select Any one Bill No");
 		return false;
 	}
-	
-	
 	
 	billReturnVal1();
 }
@@ -2202,13 +2252,27 @@ function billReturnVal1(){
     
 	
     params["methodName"] = "billreturn";
+   /* params["methodName"] = "billReturnVal1";*/
 	
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
  	    	{
  				alert(data);
- 				//returntMinusFromStockPurchase();
  				location.reload();
- //				document.getElementById("save").disabled = false; 				
+ 				//returntMinusFromStockPurchase();
+ 		/*		var msg=data;
+		var dialog = bootbox.dialog({
+	    message: '<p class="text-center">'+msg.fontcolor("green").fontsize(5)+'</p>',
+	    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+			location.reload();
+		}, 1500);
+ 				*/
+ 				
+ 				
+ //		document.getElementById("save").disabled = false; 				
  	    	}
  	    	).error(function(jqXHR, textStatus, errorThrown){
  	    		if(textStatus==="timeout") {

@@ -182,6 +182,123 @@ h3.quotationno {
 }
 /*---------------------------------------------------- Footer Css Ends Here ----------------------------------------------------*/
 
+/*---------------------------------------------------- DataTable Css Starts Here ----------------------------------------------------*/
+#demo_jui {
+    margin: 0 15px;
+}
+.dataTables_wrapper {
+    /* background: linear-gradient(45deg, orange, transparent); */
+    background: linear-gradient(45deg, #f55555, #fccf31);
+    border-radius: 10px;
+    text-align: center;
+}
+.dataTables_scrollBody {
+    background: linear-gradient(45deg, orange, transparent) !important;
+}
+.dataTables_wrapper thead {
+    color: #2779aa;
+    background: #d7ebf9 url(images/ui-bg_glass_80_d7ebf9_1x400.png) 50% 50% repeat-x;
+}
+.dataTables_scrollHeadInner {
+    width: 100% !important;
+}
+table.table.table-bordered.table-striped.table-condensed.cf.dataTable.no-footer {
+    width: 100% !important;
+}
+.dataTables_wrapper .dataTables_info {
+    clear: both;
+    /* float: left; */
+    padding-top: 0px;
+    color: #fff !important;
+    font-size: 16px !important;
+    font-weight: 600;
+    margin: 10px;
+}
+.dataTables_filter label {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+.dataTables_filter input {
+    padding: 7px;
+    border-radius: 18px;
+    outline: none;
+    border: none;
+    color: #000;
+    padding-left: 15px;
+}
+.dataTables_length {
+    margin-top: 10px;
+}
+.dataTables_wrapper .dataTables_filter {
+    padding-right: 0%;
+}
+.dataTables_filter {
+	padding: 10px;
+	margin-right: 10px;
+}
+.dataTables_wrapper .ui-toolbar {
+    padding: 0px;
+}
+.fg-button {
+    color: #fff !important;
+    background: none !important;
+    padding: 5px;
+    opacity: 1 !important;
+    font-size: 16px;
+}
+.dataTables_length {
+    color: #fff !important;
+    padding: 5px;
+    font-size: 16px;
+}
+.fg-toolbar.ui-toolbar.ui-widget-header.ui-helper-clearfix.ui-corner-tl.ui-corner-tr {
+    background: linear-gradient(45deg, #f55555, #fccf31);
+}
+.fg-toolbar.ui-toolbar.ui-widget-header.ui-helper-clearfix.ui-corner-bl.ui-corner-br {
+    background: linear-gradient(45deg, #f55555, #fccf31);
+}
+.dataTables_length select {
+    color: #000;
+    border-radius: 5px;
+    padding: 2px;
+    outline: none;
+    border: none;
+}
+.dataTables_wrapper .dataTables_paginate {
+    padding-top: 0px !important;
+}
+table.dataTable.no-footer {
+    border: none;   
+}
+tbody {
+    text-align: center;
+}
+.dataTables_wrapper thead tr th {
+    text-align: center;
+}
+.dataTables_wrapper tr td {
+    font-size: 18px;
+    font-weight: 600;
+}
+tr.odd {
+    background-color: #fff !important;
+}
+tr.even {
+    background-color: #e2dede !important;
+}
+td.sorting_1 {
+    background: none !important;
+}
+tbody tr:hover {
+    background: linear-gradient(45deg, #f48731, #d8e015);
+    color: #fff;
+}
+.glyphicon-trash {
+    font-size: 18px;
+}
+/*---------------------------------------------------- DataTable Css Ends Here ----------------------------------------------------*/
+
 /*---------------------------------------------------- Media Query Css Starts Here ----------------------------------------------------*/
 
 /*-------------------------------------------------- 1180px to 993px Starts Here ------------------------*/

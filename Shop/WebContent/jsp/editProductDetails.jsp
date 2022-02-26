@@ -302,7 +302,7 @@ function salePriceWithoutTax11()
 			<div class="row">
 				<div class="form-group">
 					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
-				 		<label class="control-label" for="existedTax">Existing Tax Name</label>  
+				 		<label class="control-label" for="existedTax">Existing Tax Name <sup>*</sup></label>  
 	            	</div>
 	            	<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
@@ -489,7 +489,7 @@ function salePriceWithoutTax11()
 		        <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
 		        	<label class="control-label" for="spwithoutgst">
 					<%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("spwithoutgst") %>
-					<%}%> <%if(abc.equals("english")){%>S.P(Excl Tax)<%}%>
+					<%}%> <%if(abc.equals("english")){%>S.P(Excl Tax)<sub>*</sub><%}%>
 					</label>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-8">
@@ -534,7 +534,7 @@ function salePriceWithoutTax11()
 	            	</div>
 				</div>
 				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
-					<label class="control-label" for="existedTaxPercentage">New HSN</label>
+					<label class="control-label" for="existedTaxPercentage">New HSN<sup>*</sup></label>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">

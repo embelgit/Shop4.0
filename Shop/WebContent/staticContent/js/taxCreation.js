@@ -400,27 +400,130 @@ function txCreation1(){
 
 function editTax(){
 	
-	if ( document.txc.taxType1.value == "" )
+	/*if ( document.txc.taxType1.value == "" )
 	 {
 		alert("Please Enter Tax Type");
 		return false;
-	 }
+	 }*/
+	 if(document.txc.taxType1.value == "")
+	{
+		var msg="Please Enter Tax Type";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+	
+		 if(document.txc.sgst.value == "")
+	{
+		var msg="Please Enter SGST ";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+	
+			 if(document.txc.cgst.value == "")
+	{
+		var msg="Please Enter CGST ";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+	 
 	 var letterNumber = /^[a-zA-Z0-9, ]+$/;
 	
-	 if ( document.txc.taxName.value == "" )
+	/* if ( document.txc.taxName.value == "" )
 	 {
 	      alert("Please Enter NewTax Name");
 	      return false;
-		 }
+		 }*/
+		  if(document.txc.taxName.value == "")
+	{
+		var msg="Please Enter NewTax Name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+		 
+		 
 	
-	if ( document.txc.taxPercentage.value == "" )
+	/*if ( document.txc.taxPercentage.value == "" )
 	 {
       alert("Please Enter Tax Percentage");
       return false;
-	 }
+	 }*/
+	 		  if(document.txc.taxPercentage.value == "")
+	{
+		var msg="Please Enter Tax Percentage";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+	 
+	 
 	 var letterNumber = /^\d+(\.\d+)?$/;
+	  		  if(document.txc.taxPercentage.value.match(letterNumber) )
+	{
+		var msg="Please Enter Tax Percentage";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
 
-	 if(document.txc.taxPercentage.value.match(letterNumber) )
+	/* if(document.txc.taxPercentage.value.match(letterNumber) )
 	 {
 		 edittxCreation();
 	 }
@@ -429,7 +532,11 @@ function editTax(){
 	 {
 		alert("Enter Number Only in percentage field..!!");
 		return false;
-	 }
+	 }*/
+	 
+	 edittxCreation();
+	
+	  
 }
 
 

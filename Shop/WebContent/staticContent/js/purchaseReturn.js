@@ -1083,7 +1083,7 @@ function purchaseReturnTable(){
 
 	$.post('/Shop/jsp/utility/controller.jsp', params, function(data) {
 		
-       	//alert(data);
+       	alert(data);
 		location.reload();
 		// returntMinusFromStockPurchase();
 	}).error(function(jqXHR, textStatus, errorThrown) {

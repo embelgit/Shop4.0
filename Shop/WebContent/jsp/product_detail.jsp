@@ -38,6 +38,7 @@
 <script type="text/javascript" src="/Shop/staticContent/js/categoryDetails.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/units.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/taxCreation.js"></script>
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 
 
 <script type="text/javascript">
 function mypopup(url)
@@ -719,6 +720,21 @@ function caldis(){
 					</div>
 				</div>
 
+<%-- <label class="col-md-3 control-label" for="productdescription" style="text-align: left;">
+	<%
+		if (abc.equals("marathi")) {
+	%><%=PropertiesHelper.marathiProperties.getProperty("description")%>
+	<%
+		}
+	%> <%
+ if (abc.equals("english")) {
+ %>Image<%
+ 	}
+ %>	</label> --%>
+
+
+<!-- <label class="col-md-2 control-label" for="weight" style="text-align: left;"> -->
+
 <label class="col-md-2 control-label" style="margin-left: -3px;" for="weight">
 <%
 	if (abc.equals("marathi")) {%><%=PropertiesHelper.marathiProperties.getProperty("weight")%><%}%> <%
@@ -729,11 +745,16 @@ function caldis(){
 </label>
 				<div class="col-md-3">
 						<div class="input-group" style="margin-left: -8px;">
-							<span class="input-group-addon"> <i
-							class="	glyphicon glyphicon-hand-right"></i>
+						<!-- <div class="col-md-2">
+						<div class="input-group"> -->
+							<span class="input-group-addon"> 
+							<i class="	glyphicon glyphicon-hand-right"></i>
 						</span>
 
 							<input type="text" id="weight" name="weight" placeholder="Weight" class="form-control" value="1" readonly="readonly" onchange="checkForDuplicateProductEntry()" >
+							
+							
+							
 <%-- 							<%
 								ProductDetailsDao productdao2 = new ProductDetailsDao();
 								List productList2 = productdao2.getAllProductDetails(request);
@@ -876,7 +897,7 @@ function caldis(){
            	
 
 				<div class="row form-group">
-					<label class="col-md-2 control-label" style="text-align: right"	for="fk_tax_id">Tax Name:<sup>*</sup></label>
+					<label class="col-md-2 control-label" style="text-align; right"	for="fk_tax_id">Tax Name:<sup>*</sup></label>
 					<div id="taxtypefresh">
 					<div class="col-md-3" style="width: 286px;">
 						<div class="input-group" style="width: 100%;">
@@ -1021,7 +1042,8 @@ function caldis(){
 				</div>
 
 <div class="row form-group">
-<label class="col-md-2 control-label" style="text-align: right" for="dis">
+<!-- <label class="col-md-2 control-label" style="text-align: right" for="dis"> -->
+<label class="col-md-2 control-label" style="text-align: left" for="dis">
 <%
 	if (abc.equals("marathi")) {%><%=PropertiesHelper.marathiProperties.getProperty("discount")%><%}%> <%
  	if (abc.equals("english")) {
@@ -1102,7 +1124,7 @@ function caldis(){
 
 
 				<div class="row form-group">
-					<label class="col-md-2 control-label" style="text-align: right;"
+					<label class="col-md-2 control-label" style="text-align: left;"
 						for="hsn">
 						<%
 							if (abc.equals("marathi")) {
@@ -1123,7 +1145,7 @@ function caldis(){
 						</div>
 					</div>
 					
-					<label class="col-md-3 control-label" style="text-align: right;"
+					<label class="col-md-3 control-label" style="text-align: left;"
 						for="creditSalePrice">
 						<%
 							if (abc.equals("marathi")) {
@@ -1172,7 +1194,7 @@ function caldis(){
 					
 					
 					
-	<label class="col-md-3 control-label" for="productdescription" style="text-align: right;">
+	<label class="col-md-3 control-label" for="productdescription" style="text-align: left;">
 	<%
 		if (abc.equals("marathi")) {
 	%><%=PropertiesHelper.marathiProperties.getProperty("description")%>

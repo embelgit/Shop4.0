@@ -13164,7 +13164,6 @@ function getChallanNo()
 }
 
 
-
 function challanBillingV()
 {
 	if (document.creditFertiBill1.creditCustomer.value == "" )

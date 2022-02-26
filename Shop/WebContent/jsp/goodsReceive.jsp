@@ -1027,11 +1027,40 @@ function clearfeild() {
 	            		</div>
 	            	</div>
 	            </div>
-	       </div>     
+	       </div>  
+	       
+	       <!-- new row add -->
+	       
+	       	<div class="row">
+				<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+							<label class="control-label" for="discount" ><b>Discount</b></label>    
+       				</div>
+       				<div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon percentage">%</span>
+							</span>
+	              			<input id="discount" name="discount" placeholder="Discount" class="form-control input-md" type="text" onchange="discountCalculation()">
+	            		</div>
+			  		</div>
+			  	  	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+			  	  		<label class="control-label"  for="discount" ><b>Discount Amt</b></label>  
+			        </div>   	
+			        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">Rs</span>
+							</span>
+	              			<input  id="discountAmount" name="discountAmount" placeholder="Discount Amt" class="form-control input-md" type="text" onchange="discountCalculation()" readonly="readonly">
+	            		</div>
+	            	</div>
+	            </div>
+	       </div>    
 	            
-	        <div class="row">
+	      <!--   <div class="row">
 				<div class="form-group">	
-					<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">	
+					 <div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
 						<label class="control-label" for="discount" ><b>Discount</b></label>  
 			    	</div>
 			    	<div class="col-lg-2 col-md-2 col-sm-4">
@@ -1042,6 +1071,8 @@ function clearfeild() {
 	              			<input id="discount" name="discount" placeholder="Discount" class="form-control input-md" type="text" onchange="discountCalculation()">
 	            		</div>
 	            	</div>
+	            	
+	            	
 	            	<label class="control-label" for="discount" ><b></b></label>  
 			        <div class="col-lg-2 col-md-2 col-sm-4">
 						<div class="input-group">
@@ -1052,9 +1083,37 @@ function clearfeild() {
 	            		</div>
 	            	</div>
 	            </div>
-			</div>
+			</div> -->
+			
+			   	<div class="row">
+				<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+							<label class="control-label" for="transExpence"><b>Transport Expenses </b></label>    
+       				</div>
+       				<div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon percentage">Rs</span>
+							</span>
+	              			<input id="transExpence3" name="transExpence3" value="0" placeholder="Transportation Expenses" class="form-control input-md" type="text" onchange="transExpenseAddingToGrossTotal()" >
+	            		</div>
+			  		</div>
+			  	  	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+			  	  		<label class="control-label" for="transExpence" ><b>GST Amt</b></label>   
+			        </div>   	
+			        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="transExpence" name="transExpence" placeholder="GST Amt" class="form-control input-md"  type="text" readonly="readonly">
+	            		
+	            	</div>
+	            	</div>
+	            </div>
+	       </div> 
 				
-		<div class="row">
+		<!-- <div class="row">
 			<div class="form-group">		
 				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
 					<label class="control-label" for="transExpence"><b>Transport Expenses </b></label>  
@@ -1073,13 +1132,42 @@ function clearfeild() {
 						<span class="input-group-addon">
 							<span class="glyphicon nogyphicon">Rs</span>
 						</span>
-	            		<input id="transExpence" name="transExpence" placeholder="GST Amt" class="form-control input-md"  type="text" readonly="readonly"><!-- onblur="transExpenseAddingToGrossTotal()"> -->
+	            		<input id="transExpence" name="transExpence" placeholder="GST Amt" class="form-control input-md"  type="text" readonly="readonly">
+	            		
+	            		onblur="transExpenseAddingToGrossTotal()">
 	            	</div>
 	            </div>
 			</div>
-		</div>
+		</div> -->
+		
+			    <div class="row">
+				<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+							<label class="control-label" for="hamaliExpence"><b>Labour Expenses </b></label>      
+       				</div>
+       				<div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon percentage">Rs</span>
+							</span>
+	              			<input id="hamaliExpence3" name="hamaliExpence3" value="0" placeholder="Labour Expenses" class="form-control input-md" type="text"  onchange="hamaliExpenseAddingToGross()">
+	            		</div>
+			  		</div>
+			  	  	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+			  	  		<label class="control-label"  for="hamaliExpence" ><b>GST Amt</b></label>  
+			        </div>   	
+			        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="hamaliExpence" name="hamaliExpence" placeholder="GST Amt" class="form-control input-md"  type="text" readonly="readonly">
+	            	</div>
+	            	</div>
+	            </div>
+	       </div>  
 			
-		<div class="row">
+		<!-- <div class="row">
 			<div class="form-group">
 				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
 					<label class="control-label" for="hamaliExpence"><b>Labour Expenses </b></label>  
@@ -1098,14 +1186,30 @@ function clearfeild() {
 						<span class="input-group-addon">
 							<span class="glyphicon nogyphicon">Rs</span>
 						</span>
-	            		<input id="hamaliExpence" name="hamaliExpence" placeholder="GST Amt" class="form-control input-md"  type="text" readonly="readonly"> <!-- onblur="hamaliExpenseAddingToGross()"> -->
+	            		<input id="hamaliExpence" name="hamaliExpence" placeholder="GST Amt" class="form-control input-md"  type="text" readonly="readonly">
+	            		 onblur="hamaliExpenseAddingToGross()">
 	            	</div>
 	            </div>
 			</div>
-		</div>
+		</div> -->
 			 				
 		<div class="row">
-			<div class="form-group">
+		
+		<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+							<label class="control-label" for="grossTotal"><h4><b>Gross Total</b></h4></label>       
+       				</div>
+       				<div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">Rs</span>
+							</span>
+	              			<input readonly="readonly" id="grossTotal" name="grossTotal" placeholder="Gross Total" class="form-control input-md" type="text" style="font-size: 25px;  height: 55px;">
+	            		</div>
+			  		</div>
+		</div>
+		
+			<!-- <div class="form-group">
 				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
 					<label class="control-label" for="grossTotal"><h4><b>Gross Total</b></h4></label>  
 			    </div>
@@ -1117,9 +1221,10 @@ function clearfeild() {
 	            		<input readonly="readonly" id="grossTotal" name="grossTotal" placeholder="Gross Total" class="form-control input-md" type="text" style="font-size: 25px;  height: 55px;">
 	            	</div>
 	            </div>
-            </div>
+            </div> -->
+            
         </div>
-	
+	 
 			</div>
 		</fieldset>
 	</form>	
