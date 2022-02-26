@@ -408,7 +408,6 @@ function buyPriceWithTax()
 	var  buyPrice=document.getElementById("buyPrice").value;
 	
     if(salePrice ==""){
-		
 		return false;
 	}else{				
 		
