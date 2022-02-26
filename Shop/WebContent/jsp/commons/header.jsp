@@ -534,7 +534,7 @@ nav {
 </head>
             	
 <body style="margin-bottom:125px;height: 981px;">
-<img alt="" src="/Shop/staticContent/images/company-logo.png" style="width: 400px;height: auto;position: fixed;right: 8px;top: 46%;left: 39%;opacity: 0.3;z-index: -1;"/>
+<img alt="" src="/Shop/staticContent/images/company-logo.png" class="embelbackgroundimg"/>
 <nav class="navbar navbar-fixed-top"> 
 <a id="resp-menu" class="responsive-menu" href="#"><i class="fa fa-reorder"></i><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("menu") %> <%}%> <%if(abc.equals("english")){%>Menu<%}%>  </a>
   <ul class="menu">

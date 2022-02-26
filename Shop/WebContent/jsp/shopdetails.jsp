@@ -50,7 +50,11 @@ function checkForDuplicateShopEntry(){
           			 window.location = "editShopDetails.jsp";
 				}
 </script>
-
+<style>
+.container-fluid {
+	overflow: hidden;
+}
+</style>
 </head>
 <body>
 <div class="container-fluid">

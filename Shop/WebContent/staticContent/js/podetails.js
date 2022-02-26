@@ -1012,7 +1012,8 @@
 		    	    	
 		    	destroy: true,
 		        searching: true,
-		        
+		        scrollX: true,
+		        scrollY: 300,
 		      
 		columns: [
 		          					

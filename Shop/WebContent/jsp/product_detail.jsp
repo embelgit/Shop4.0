@@ -38,7 +38,7 @@
 <script type="text/javascript" src="/Shop/staticContent/js/categoryDetails.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/units.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/taxCreation.js"></script>
-
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 <script type="text/javascript">
 function mypopup(url)
 {
@@ -1195,15 +1195,13 @@ function caldis(){
 					</div> 
 					</div>   			
     			
-				<div class="form-group row" style="padding-top:2%">
-					<div align="center">
-					
-						<input style="height: 53px; width: 128; font-size: 25" type="button" value="Submit" id="save1"   class="btn btn-large btn-success" name="save1" onclick="productDetails()" /> 
-						<input style="height: 53px; width: 128; font-size: 25" type="reset"  value="Cancel" id="save"    class="btn btn-large btn-danger"  name="btn" onclick="reset()" /> 
-						<input style="height: 53px; width: 128; font-size: 25" type="button" value=" List"  id="listBtn" class="btn btn-primary" onclick="productlist()" /> 
-						<input style="height: 53px; width: 128; font-size: 25" type="button" value="Edit"   id="listBtn" class="btn btn-primary" onclick="editProduct()" />
-					</div>
+				<div class="row buttons-margin" align="center">
+					<input type="button" value="Submit" id="save1" class="btn btn-large btn-success" name="save1" onclick="productDetails()" /> 
+					<input type="reset" value="Cancel" id="save" class="btn btn-large btn-danger" name="btn" onclick="reset()" /> 
+					<input type="button" value=" List" id="listBtn" class="btn btn-primary" onclick="productlist()" /> 
+					<input type="button" value="Edit" id="listBtn" class="btn btn-primary" onclick="editProduct()" />
 				</div>
+				
             </fieldset>
 		</form>
 	</div>

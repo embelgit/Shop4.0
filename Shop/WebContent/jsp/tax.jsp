@@ -63,17 +63,18 @@ function taxlist()
 </head>
 <body>
 <div class="container-fluid">
- <div class="row header_margin_top">
-			    <div align="center">
-			  		<h2 class="form-name style_heading">Tax Details</h2>
-			  	</div>
-			 
-    </div>
-    <div class="row">
+	<div class="row header_margin_top">
+		<div align="center">
+			<h2 class="form-name style_heading">Tax Details</h2>
+		</div>
+	</div>
+    
+    <div class="row" align="center">
 		<div class="hr-width">
 			<hr class="style-one">
 		</div>	
     </div>
+    
 <div class="container" >
         <form class="form-horizontal" method="post" action="" name="txc"><!-- Value of 'name' attribute is used in  taxCreation.js  -->
           <fieldset>

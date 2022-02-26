@@ -558,9 +558,9 @@ function alll()
 			    	    	
 			    	destroy: true,
 			        searching: true,
-			        "scrollY": 400,
-			        "scrollX": false,
-			        "paging":   false,
+			        "scrollY": 300,
+			        "scrollX": true,
+			        "paging": false,
 		        
 		      
 		columns: [
@@ -724,8 +724,8 @@ function allReportBetweenTwoDates1()
 		    	    	
 		    	destroy: true,
 		        searching: true,
-		        "scrollY": 650,
-		        "scrollX": false,
+		        "scrollY": 300,
+		        "scrollX": true,
 		        "paging":   false,
 		        
 		      
@@ -4011,7 +4011,8 @@ function creditCustomerSaleReportBillAndNameWise()
 		    	    	
 		    	destroy: true,
 		        searching: true,
-		        
+		        scrollX: true,
+		        scrollY: 300,
 		      
 		columns: [
 		       			
@@ -5174,7 +5175,7 @@ function allReportsss()
 			 
 
 			    "bProcessing": true,
-			    "sAutoWidth": false,
+			    "sAutoWidth": true,
 			    "bDestroy":true,
 			    "sPaginationType": "bootstrap", // full_numbers
 			    "iDisplayStart ": 10,
@@ -5182,7 +5183,8 @@ function allReportsss()
 			    "bPaginate": false, //hide pagination
 			    //"bFilter": false, //hide Search bar
 			    "bInfo": true, // hide showing entries
-			 
+			 	"scrollX": true,
+			 	"scrollY": 300,
 			 
 			 fnRowCallback : function(nRow, aData, iDisplayIndex){
 	                $("th:first", nRow).html(iDisplayIndex +1);
@@ -5230,8 +5232,8 @@ function allReportsss()
 		    	
 		    	destroy: true,
 		        searching: false,
-		        "scrollY": 300,
-		        "scrollX": true,
+		        /*"scrollY": 300,
+		        "scrollX": true,*/
 		        "paging":   false,
 		        
 		      
@@ -5391,8 +5393,8 @@ function allReportForSingleDate1()
 		    	    	
 		    	destroy: true,
 		        searching: true,
-		        "scrollY": 500,
-		        "scrollX": false,
+		        "scrollY": 300,
+		        "scrollX": true,
 		        "paging":   false,
 		        
 		      
@@ -5549,8 +5551,7 @@ function packingReportBetweenTwoDates1()
 			    "bPaginate": false, //hide pagination
 			    //"bFilter": false, //hide Search bar
 			    "bInfo": true, // hide showing entries
-			 
-			 
+			 			 
 			 fnRowCallback : function(nRow, aData, iDisplayIndex){
 	                $("th:first", nRow).html(iDisplayIndex +1);
 	               return nRow;
@@ -5596,8 +5597,8 @@ function packingReportBetweenTwoDates1()
 		    	    	
 		    	destroy: true,
 		        searching: true,
-		        "scrollY": 400,
-		        "scrollX": false,
+		        "scrollY": 300,
+		        "scrollX": true,
 		        "paging":   false,
 		        
 		      
@@ -5745,7 +5746,8 @@ function producttxReportBetweenTwoDates1()
 			    "bPaginate": false, //hide pagination
 			    //"bFilter": false, //hide Search bar
 			    "bInfo": true, // hide showing entries
-			 
+			 	"scrollX": true,
+			 	"scrollY": 300,
 			 
 			 fnRowCallback : function(nRow, aData, iDisplayIndex){
 	                $("th:first", nRow).html(iDisplayIndex +1);

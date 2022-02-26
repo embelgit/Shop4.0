@@ -40,53 +40,55 @@
 <script type="text/javascript" src="/Shop/staticContent/js/buttom.js"></script>
 <script src="/Shop/staticContent/js/jquery.min.js"></script>
 <script src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
-<script src="/Shop/staticContent/js/jquery.dataTables.js"
-	type="text/javascript"></script>
+<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
 
-<link href="/Shop/WebContent/staticContent/css/dataTa.css"
-	rel="stylesheet" type="text/css" media="all" />
-<link href="/Shop/staticContent/css/dataTables.jqueryui.min.css"
-	rel="stylesheet" type="text/css" media="all">
-<link href="/Shop/staticContent/css/select.css" rel="stylesheet"
-	type="text/css" media="all">
-<link href="/Shop/staticContent/css/button.css" rel="stylesheet"
-	type="text/css" media="all">
+<link href="/Shop/WebContent/staticContent/css/dataTa.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/Shop/staticContent/css/dataTables.jqueryui.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="/Shop/staticContent/css/select.css" rel="stylesheet" type="text/css" media="all">
+<link href="/Shop/staticContent/css/button.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
 <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css">
 <script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
-<script type="text/javascript"
-	src="/Shop/staticContent/js/bootbox.min.js"></script>
+<script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
+
 <!-- For datatable to pdf,print,excel etc conversion -->
-<script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
-<script type="text/javascript"
-	src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript"
-	src="https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>
-<script type="text/javascript"
-	src="//cdn.datatables.net/buttons/1.3.1/js/buttons.flash.min.js"></script>
-<script type="text/javascript"
-	src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-<script type="text/javascript"
-	src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/pdfmake.min.js"></script>
 
-<script type="text/javascript"
-	src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/vfs_fonts.js"></script>
-<script type="text/javascript"
-	src="//cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"></script>
-<script type="text/javascript"
-	src="//cdn.datatables.net/buttons/1.3.1/js/buttons.print.min.js"></script>
-<link rel="stylesheet"
-	href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
-<link rel="stylesheet"
-	href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.flash.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script type="text/javascript" src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/pdfmake.min.js"></script>
+
+<script type="text/javascript" src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/vfs_fonts.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.print.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css"> -->
+
+
+<link href="/Shop/WebContent/staticContent/css/dataTa.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/Shop/staticContent/css/dataTables.jqueryui.min.css"  rel="stylesheet" type="text/css" media="all">
+	<link rel="stylesheet" href="/Shop/staticContent/css/tabDemo.css">
+ 	<link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css">
+    
+    <script src="/Shop/staticContent/js/jquery.min.js"></script>
+    <script src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
+	<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>	
+
+
+
 <script src="/Shop/staticContent/js/cashbankbook.js"></script>
-<style>
-.btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning,
-	.btn-danger {
-	border-radius: 23px;
-}
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
+<style>
+.container-fluid {
+	overflow: hidden;
+}
 .pagination {
     float: right !important;
 }
@@ -103,33 +105,37 @@
     font-size: 16px;
 }
 </style>
-</head>
 
-<div class="row" style="min-height: 300px;">
+<script>
+$('#supplierNameWiseTable').DataTable( {
+    "scrollY": 300,
+    "scrollX": true
+} );	
+</script>
+
+</head>
+<div class="container-fluid">
+
+<div class="row">
 	<div class="col-md-12">
 		<h3>Left Tabs</h3>
 		<hr />
 		<div class="col-md-2">
 			<ul class="nav nav-tabs tabs-left">
-				<li class="active"><a href="#home" data-toggle="tab"
-					style="border-radius: 23px;">Supplier Payment Reports</a></li>
-				<li><a href="#profile" data-toggle="tab"
-					style="border-radius: 23px;">Customer Payment Reports</a></li>
-				<li><a href="#messages" data-toggle="tab"
-					style="border-radius: 23px;">Employee Payment Reports</a></li>
-				<li><a href="#settings" data-toggle="tab"
-					style="border-radius: 23px;">Expenditure Payment Reports</a></li>
-				<li><a href="#PartnersTransaction" data-toggle="tab"
-					style="border-radius: 23px;">Partners Payment Reports</a></li>
-				<li><a href="#BankTransaction" data-toggle="tab"
-					style="border-radius: 23px;">Bank Payment Reports</a></li>
+				<li class="active"><a href="#home" data-toggle="tab">Supplier Payment Reports</a></li>
+				<li><a href="#profile" data-toggle="tab">Customer Payment Reports</a></li>
+				<li><a href="#messages" data-toggle="tab">Employee Payment Reports</a></li>
+				<li><a href="#settings" data-toggle="tab">Expenditure Payment Reports</a></li>
+				<li><a href="#PartnersTransaction" data-toggle="tab">Partners Payment Reports</a></li>
+				<li><a href="#BankTransaction" data-toggle="tab">Bank Payment Reports</a></li>
 			</ul>
 		</div>
-		<div class="col-xs-9">
+		
+		<div class="col-md-9">
 			<!-- Tab panes -->
 			<div class="tab-content">
 
-				<!---------- 	supplier Payment reports -------------->
+<!-------------------------------------------------- Supplier Payment Reports Starts Here -------------------------------------------------->
 
 				<div class="tab-pane active" id="home">
 					<div class="row">
@@ -137,35 +143,29 @@
 							<h2 class="form-name style_heading">Supplier Payment Reports</h2>
 						</div>
 
-						<div class="row">
-							<div class="col-sm-offset-1 col-md-10">
-								<hr style="border-top-color: #c1b1b1;">
+						<div class="row" align="center">
+							<div class="hr-style">
+								<hr class="style-one">
 							</div>
 						</div>
 					</div>
 
 					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#AllSupplier"
-							style="border-radius: 23px;"><h4>All Supplier's</h4></a></li>
-						<li><a data-toggle="tab" href="#supplierNAme"
-							style="border-radius: 23px;"><h4>Supplier Name Wise</h4></a></li>
-						<li><a data-toggle="tab" href="#supplierBillWise"
-							style="border-radius: 23px;"><h4>Bill Number Wise</h4></a></li>
-						<li><a data-toggle="tab" href="#supplierSingleDate"
-							style="border-radius: 23px;"><h4>Datewise</h4></a></li>
-						<li><a data-toggle="tab" href="#supplierBetweenTwoDate"
-							style="border-radius: 23px;"><h4>Range</h4></a></li>
-						<li><a data-toggle="tab" href="#supplierpaymentmode"
-							style="border-radius: 23px;"><h4>Payment Mode</h4></a></li>
+						<li class="active"><a data-toggle="tab" href="#AllSupplier">All Supplier's</a></li>
+						<li><a data-toggle="tab" href="#supplierNAme">Supplier Name Wise</a></li>
+						<li><a data-toggle="tab" href="#supplierBillWise">Bill Number Wise</a></li>
+						<li><a data-toggle="tab" href="#supplierSingleDate">Datewise</a></li>
+						<li><a data-toggle="tab" href="#supplierBetweenTwoDate">Range</a></li>
+						<li><a data-toggle="tab" href="#supplierpaymentmode">Payment Mode</a></li>
 					</ul>
 
-					<div class="tab-content" style="float: left">
+					<div class="tab-content">
 					
-	<!--------------------------------------------------------------- ALL Supplier -------------------------------------------------------->
+<!-------------------------------------------------- Supplier Payment [ ALL Supplier ] Starts Here -------------------------------------------------->
 	
 						<div id="AllSupplier" class="tab-pane fade in active"
 							style="padding-top: 3%">
-							<div id="report" style="text-align: center">
+							<div id="" align="right">
 								<label id="demo"></label>
 								<script>
 									var date = new Date();
@@ -382,28 +382,28 @@
 								</table>
 							</div>
 						</div>
+<!-------------------------------------------------- Supplier Payment [ ALL Supplier ] Ends Here -------------------------------------------------->
 
-			<!--------------------------------------------- Supplier Name Wise -------------------------------------------------->
-						
-						<div id="supplierNAme" class="tab-pane ">
+<!-------------------------------------------------- Supplier Payment [ Supplier Name ] Starts Here -------------------------------------------------->
+					<div id="supplierNAme" class="tab-pane">
 							<!-- div class="row">
 								<div class="col-sm-offset-1 col-md-10">
 									<hr style="border-top-color: #c1b1b1;">
 								</div>
 							</div> -->
-							<form class="form-horizontal" method="post" action=""
-								name="supReportBill">
+							<form class="form-horizontal" method="post" action="" name="supReportBill">
 								<fieldset>
-
-									<div class="row form-group" style="padding-top: 30px">
-
-										<label class="col-md-2 col-md-offset-3 control-label"
-											for="supplier">Supplier Name<sup>*</sup></label>
-										<div class="col-md-3">
-											<div class="input-group">
-												<span class="input-group-addon"> <i
-													class="	glyphicon glyphicon-user"></i>
-												</span>
+								<div class="shopform-margin">
+									<div class="row" style="padding-top: 30px">
+										<div class="form-group">
+											<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+												<label class="control-label" for="supplier">Supplier Name<sup>*</sup></label>
+											</div>
+											<div class="col-lg-3 col-md-3 col-sm-8">
+												<div class="input-group">
+													<span class="input-group-addon">
+														<i class="glyphicon glyphicon-user"></i>
+													</span>
 
 
 
@@ -415,36 +415,35 @@
 													List sList88 = sdd88.getAllSupplier(request);
 												%>
 
-												<input list="sup_drop7" id="supplier7" class="form-control"
-													placeholder="Supplier Name">
-												<datalist id="sup_drop7">
+													<input list="sup_drop7" id="supplier7" class="form-control" placeholder="Supplier Name">
+													<datalist id="sup_drop7">
 
 													<%
 														for (int i = 0; i < sList88.size(); i++) {
 															SupplierDetailsBean sup88 = (SupplierDetailsBean) sList88.get(i);
 													%>
 
-													<option data-value="<%=sup88.getSupId()%>"
+														<option data-value="<%=sup88.getSupId()%>"
 														value="<%=sup88.getDealerName()%>">
 														<%
 															}
 														%>
 													
-												</datalist>
+													</datalist>
+												</div>
+											</div>
+											<div class="col-lg-3 col-md-3 col-sm-8" align="center">
+												<input type="button" id="btn" name="save" class="btn btn-success" onclick="getSupNameWiseReportValidation()" value="Search" />
 											</div>
 										</div>
 									</div>
-									<div class="row" style="padding-top: 2%">
-										<div class="col-md-3 col-md-offset-5 ">
-											<div class="input-group">
-												<input type="button" id="btn" name="save"
-													class="btn  btn-success "
-													style="height: 38px; width: 121px; font-size: 18"
-													onclick="getSupNameWiseReportValidation()" value="Search" />
-											</div>
-										</div>
+								</div>
+								
+									<div class="row buttons-margin" align="center">
+										
 									</div>
- 							<div class="container"> 
+									
+ 							<div class=""> 
 <!-- 								<div class="table-responsive" align="center" style="padding-top:2%"> -->
 										<table
 											class="table table-bordered table-striped table-condensed cf"
@@ -472,32 +471,33 @@
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="/* margin-top:-10px; */ margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
 						</div>
-						
-		<!-------------------------------------------------------- Bill number wise ----------------------------------------------------------------->
+<!-------------------------------------------------- Supplier Payment [ Supplier Name ] Ends Here -------------------------------------------------->						
+
+<!-------------------------------------------------- Supplier Payment [ Bill Number Wise ] Starts Here -------------------------------------------------->
 						
 						<div id="supplierBillWise" class="tab-pane ">
 							<!-- <div class="row">
@@ -505,8 +505,7 @@
 									<hr style="border-top-color: #c1b1b1;">
 								</div>
 							</div> -->
-							<form class="form-horizontal" method="post" action=""
-								name="supReportBill">
+							<form class="form-horizontal" method="post" action="" name="supReportBill">
 								<fieldset>
 
 									<div class="row form-group" style="padding-top: 30px">
@@ -557,16 +556,10 @@
 											</div>
 										</div>
 									</div>
-									<div class="row form-group" style="padding-top: 2%">
-										<div class="col-md-3 col-md-offset-5">
-											<div class="input-group">
-												<input type="button" id="btn" name="save"
-													class="btn btn-success "
-													style="height: 38px; width: 121px; font-size: 18"
-													onclick="getBillWiseReportvalidation()" value="Search" />
-											</div>
-										</div>
+									<div class="row buttons-margin" align="center">
+										<input type="button" id="btn" name="save" class="btn btn-success" onclick="getBillWiseReportvalidation()" value="Search" />
 									</div>
+								
 																<div class="container">
 <!-- 									<div class="table-responsive" style="Padding-top: 2%"> -->
 										<table
@@ -595,34 +588,34 @@
 												</tr> -->
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
 
 						</div>
+<!-------------------------------------------------- Supplier Payment [ Bill Number Wise ] Ends Here -------------------------------------------------->
 
-
-		<!---------------------------------------------------------- Date Wise ----------------------------------------------------------->
+<!-------------------------------------------------- Supplier Payment [ Date Wise ] Starts Here -------------------------------------------------->
 		
 						<div id="supplierSingleDate" class="tab-pane">
 							<!-- <div class="row">
@@ -648,16 +641,10 @@
 										</div>
 									</div>
 
-									<div class="row" style="padding-top: 2%">
-										<div class="col-md-3 col-md-offset-5">
-											<div class="input-group">
-												<input type="button" id="btn" name="save"
-													class="btn btn-success "
-													style="height: 38px; width: 121px; font-size: 18"
-													onclick="supplierReportForSingleDate()" value="Search" />
-											</div>
-										</div>
+									<div class="row buttons-margin" align="center">
+										<input type="button" id="btn" name="save" class="btn btn-success" onclick="supplierReportForSingleDate()" value="Search" />
 									</div>
+									
 									<div class="container">
 <!-- 									<div class="table-responsive" style="Padding-top: 3%"> -->
 										<table
@@ -685,33 +672,34 @@
 												</tr>
 											</tfoot> -->
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
 
 						</div>
+<!-------------------------------------------------- Supplier Payment [ Date Wise ] Ends Here -------------------------------------------------->
 
-		<!------------------------------------------------ Range Wise Between Two Dates  ---------------------------------------------->
+<!-------------------------------------------------- Supplier Payment [ Range Wise ] Starts Here -------------------------------------------------->
 		
 						<div id="supplierBetweenTwoDate" class="tab-pane fade">
 
@@ -788,17 +776,11 @@
 										</div>
 									</div>
 
-									<div class="row form-group buttons_margin_top ">
-										<div align="center">
-
-											<input type="button" id="btn" name="save"
-												class="btn btn-success"
-												style="height: 38px; width: 121px; font-size: 18"
-												onclick="getSupplierDetailsBetweenTwoDatesValidation()"
+									<div class="row buttons-margin" align="center">
+										<input type="button" id="btn" name="save" class="btn btn-success" onclick="getSupplierDetailsBetweenTwoDatesValidation()"
 												value="Search" />
-
-										</div>
 									</div>
+	
 									<div class="container">
 <!-- 									<div class="table-responsive" style="padding-top: 2%"> -->
 										<table
@@ -828,34 +810,35 @@
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
 
 
 						</div>
+<!-------------------------------------------------- Supplier Payment [ Range Wise ] Ends Here -------------------------------------------------->
 						
-						<!-- payment mode -->
+<!-------------------------------------------------- Supplier Payment [ Payment Mode ] Starts Here -------------------------------------------------->
 												<div id="supplierpaymentmode" class="tab-pane fade">
 
 
@@ -908,17 +891,11 @@
 										</div>
 									</div>
 
-									<div class="row form-group buttons_margin_top ">
-										<div align="center">
-
-											<input type="button" id="btn" name="save"
-												class="btn btn-success"
-												style="height: 38px; width: 121px; font-size: 18"
-												onclick="getSupplierDetailspaymode()"
+									<div class="row buttons-margin" align="center">
+										<input type="button" id="btn" name="save" class="btn btn-success" onclick="getSupplierDetailspaymode()"
 												value="Search" />
-
-										</div>
 									</div>
+									
 													<div class="container">
 <!-- 									<div class="table-responsive" style="padding-top: 2%"> -->
 										<table
@@ -948,41 +925,42 @@
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
 
 
 						</div>
-						
+<!-------------------------------------------------- Supplier Payment [ Payment Mode ] Ends Here -------------------------------------------------->						
 						
 					</div>
 
 				</div>
 
+<!-------------------------------------------------- Supplier Payment Reports Ends Here -------------------------------------------------->
 
-				<!------------------------------------------------ Customer Payment Reports ----------------------------------------------->
-
+<!-------------------------------------------------- Customer Payment Reports Starts Here -------------------------------------------------->
+				
 				<div class="tab-pane" id="profile">
 					<div class="row">
 						<div align="center">
@@ -990,29 +968,23 @@
 								Reports</h2>
 						</div>
 
-						<div class="row">
-							<div class="col-sm-offset-1 col-md-10">
-								<hr style="border-top-color: #c1b1b1;">
+						<div class="row" align="center">
+							<div class="hr-width">
+								<hr class="style-one">
 							</div>
 						</div>
 					</div>
 
 					<ul class="nav nav-tabs">
 						<!--  <li class="active"><a data-toggle="tab" href="#AllCustomer"><h4 style="color:blue">All Customer's</h4></a></li> -->
-						<li class="active"><a data-toggle="tab"
-							href="#customerNameWise" style="border-radius: 23px;"><h4>Customer
-									Name wise</h4></a></li>
-						<li><a data-toggle="tab" href="#customerBillWise"
-							style="border-radius: 23px;"><h4>Bill Number Wise</h4></a></li>
-						<li><a data-toggle="tab" href="#customerSingleDate"
-							style="border-radius: 23px;"><h4>Datewise</h4></a></li>
-						<li><a data-toggle="tab" href="#customerBetweenTwoDate"
-							style="border-radius: 23px;"><h4>Range</h4></a></li>
-					<li><a data-toggle="tab" href="#paymentBetweenTwoDate"
-							style="border-radius: 23px;"><h4>Payment Mode</h4></a></li>
+						<li class="active"><a data-toggle="tab"	href="#customerNameWise">Customer Name wise</a></li>
+						<li><a data-toggle="tab" href="#customerBillWise">Bill Number Wise</a></li>
+						<li><a data-toggle="tab" href="#customerSingleDate">Datewise</a></li>
+						<li><a data-toggle="tab" href="#customerBetweenTwoDate">Range</a></li>
+					<li><a data-toggle="tab" href="#paymentBetweenTwoDate">Payment Mode</a></li>
 					</ul>
 
-					<div class="tab-content" style="float: left">
+					<div class="tab-content">
 
 						<%-- <div id="AllCustomer" class="tab-pane fade in active">
     	<div id="report" style="text-align: center">
@@ -1130,61 +1102,56 @@
 	</div>
  </div> --%>
 
-
-						<!-- 	Customer Name wise -->
+<!-------------------------------------------------- Customer Payment [ Customer Name Wise ] Starts Here -------------------------------------------------->
+				
 						<div id="customerNameWise" class="tab-pane fade in active">
 							<!-- <div class="row">
 								<div class="col-sm-offset-1 col-md-10">
 									<hr style="border-top-color: #c1b1b1;">
 								</div>
 							</div> -->
-							<form class="form-horizontal" method="post" action=""
-								name="supReportBill">
+							<form class="form-horizontal" method="post" action="" name="supReportBill">
 								<fieldset>
-									<div class="row form-group" style="padding-top: 30px">
-										<label class="col-md-2 col-md-offset-3 control-label"
-											for="customerName">Customer Name<sup>*</sup></label>
-										<div class="col-md-3">
-											<div class="input-group">
-												<span class="input-group-addon"> <i
-													class="glyphicon glyphicon-user"></i>
-												</span>
-
-												<%
-													CustomerDetailsDao custdao1 = new CustomerDetailsDao();
-													List custList2 = custdao1.getAllCustomer(request);
-												%>
-												<input list="cust_drop5" id="creditCustomer5"
-													placeholder="Customer Name" class="form-control">
-												<datalist id="cust_drop5">
-
+									<div class="row">
+										<div class="form-group">
+											<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+												<label class="control-label" for="customerName">Customer Name<sup>*</sup></label>
+											</div>
+											<div class="col-lg-3 col-md-3 col-sm-8">
+												<div class="input-group">
+													<span class="input-group-addon">
+														<i class="glyphicon glyphicon-user"></i>
+													</span>
+	
 													<%
-														for (int i = 0; i < custList2.size(); i++) {
-															CustomerDetailsBean cust2 = (CustomerDetailsBean) custList2.get(i);
+														CustomerDetailsDao custdao1 = new CustomerDetailsDao();
+														List custList2 = custdao1.getAllCustomer(request);
 													%>
-
-													<option data-value="<%=cust2.getCustId()%>"><%=cust2.getFirstName()%>
-														<%=cust2.getLastName()%>
-													</option>
-													<%
-														}
-													%>
-												</datalist>
+													<input list="cust_drop5" id="creditCustomer5" placeholder="Customer Name" class="form-control">
+													<datalist id="cust_drop5">
+	
+														<%
+															for (int i = 0; i < custList2.size(); i++) {
+																CustomerDetailsBean cust2 = (CustomerDetailsBean) custList2.get(i);
+														%>
+	
+														<option data-value="<%=cust2.getCustId()%>"><%=cust2.getFirstName()%>
+															<%=cust2.getLastName()%>
+														</option>
+														<%
+															}
+														%>
+													</datalist>
+												</div>
 											</div>
 										</div>
 									</div>
-									<div class="row" style="padding-top: 2%">
-										<div class="col-md-3 col-md-offset-5">
-											<div class="input-group">
-												<input type="button" id="btn" name="save"
-													class="btn  btn-success "
-													style="height: 38px; width: 121px; font-size: 18"
-													onclick="getCreditCustomerReportNameWiseValidation()"
+									<div class="row buttons-margin" align="center">
+										<input type="button" id="btn" name="save" class="btn btn-success" onclick="getCreditCustomerReportNameWiseValidation()"
 													value="Search" />
-											</div>
-										</div>
 									</div>
-									<div class="table-responsive" style="padding-top: 3%">
+									
+									<div class="" style="padding-top: 3%">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="customerNameWiseData2" class="display">
@@ -1211,33 +1178,34 @@
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
 						</div>
+<!-------------------------------------------------- Customer Payment [ Customer Name Wise ] Ends Here -------------------------------------------------->
 
-
-						<!-- Customer Bill number wise -->
+<!-------------------------------------------------- Customer Payment [ Bill Number Wise ] Starts Here -------------------------------------------------->
+					
 						<div id="customerBillWise" class="tab-pane">
 							<!-- <div class="row">
 								<div class="col-sm-offset-1 col-md-10">
@@ -1296,19 +1264,12 @@
 											</div>
 										</div>
 
-										<div class="row ">
-											<div class="col-md-3  col-md-offset-5"
-												style="padding-top: 3%">
-												<div class="input-group">
-													<input type="button" id="btn" name="save"
-														class="btn  btn-success "
-														style="height: 38px; width: 121px; font-size: 18"
-														onclick="getBillWiseCreditReportValidation()"
+										<div class="row" align="center">
+											<input type="button" id="btn" name="save" class="btn btn-success" onclick="getBillWiseCreditReportValidation()"
 														value="Search" />
-												</div>
-											</div>
 										</div>
-										<div class="table-responsive" style="padding-top: 3%">
+										
+										<div class="" style="padding-top: 3%">
 											<table
 												class="table table-bordered table-striped table-condensed cf"
 												id="customerNameWiseData" class="display">
@@ -1334,34 +1295,34 @@
 													</tr>
 												</tfoot>
 											</table>
-											<div class="pagination-page">
+											<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 										</div>
 								</fieldset>
 							</form>
 
 						</div>
+<!-------------------------------------------------- Customer Payment [ Bill Number Wise ] Ends Here -------------------------------------------------->
 
-
-						<!--    for single date -->
+<!-------------------------------------------------- Customer Payment [ Date Wise ] Starts Here -------------------------------------------------->
 						<div id="customerSingleDate" class="tab-pane">
 							<!-- <div class="row">
 								<div class="col-sm-offset-1 col-md-10">
@@ -1387,17 +1348,12 @@
 									</div>
 
 									<div class="row" style="padding-top: 2%">
-										<div class="col-md-3 col-md-offset-5">
-											<div class="input-group">
-												<input type="button" id="btn" name="save"
-													style="height: 38px; width: 121px; font-size: 18"
-													class="btn  btn-success "
+										<input type="button" id="btn" name="save" class="btn btn-success"
 													onclick="creditCustReportForSingleDateValidate()"
 													value="Search" />
-											</div>
-										</div>
 									</div>
-									<div class="table-responsive" style="padding-top: 3%">
+									
+									<div class="" style="padding-top: 3%">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="customerSingleDatetable" class="display">
@@ -1425,33 +1381,34 @@
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
 
 						</div>
+<!-------------------------------------------------- Customer Payment [ Date Wise ] Ends Here -------------------------------------------------->
 
-						<!------ 	Between Two Dates  ----->
+<!-------------------------------------------------- Customer Payment [ Range Wise ] Starts Here -------------------------------------------------->
 						<div id="customerBetweenTwoDate" class="tab-pane fade">
 
 							<!-- <div class="row">
@@ -1522,18 +1479,12 @@
 										</div>
 									</div>
 
-									<div class="row form-group " style="padding-top: 2%">
-										<div align="center">
-
-											<input type="button" id="btn" name="save"
-												class="btn  btn-success "
-												style="height: 38px; width: 121px; font-size: 18"
-												onclick="getCreditCustomerDetailsBetweenTwoDatesValidate()"
-												value="Search" />
-
-										</div>
+									<div class="row" align="center">
+										<input type="button" id="btn" name="save" class="btn btn-success" 
+												onclick="getCreditCustomerDetailsBetweenTwoDatesValidate()"	value="Search" />
 									</div>
-									<div class="table-responsive" style="padding-top: 2%">
+									
+									<div class="" style="padding-top: 2%">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="customerBetweenTwoDates" class="display">
@@ -1561,35 +1512,35 @@
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
 
 
 						</div>
+<!-------------------------------------------------- Customer Payment [ Range Wise ] Ends Here -------------------------------------------------->						
 						
-						<!-- payment mode -->
-						
+<!-------------------------------------------------- Customer Payment [ Payment Mode ] Starts Here -------------------------------------------------->						
 												<div id="paymentBetweenTwoDate" class="tab-pane fade">
 
 							<!-- <div class="row">
@@ -1647,18 +1598,13 @@
 										</div>
 									</div>
 
-									<div class="row form-group " style="padding-top: 2%">
-										<div align="center">
-
-											<input type="button" id="btn" name="save"
-												class="btn  btn-success "
-												style="height: 38px; width: 121px; font-size: 18"
+									<div class="row" align="center">
+										<input type="button" id="btn" name="save" class="btn btn-success"
 												onclick="getpayDetailsBetweenTwoDatesValidate()"
 												value="Search" />
-
-										</div>
 									</div>
-									<div class="table-responsive" style="padding-top: 2%">
+					
+									<div class="" style="padding-top: 2%">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="paymentBetweenTwoDates" class="display">
@@ -1686,64 +1632,63 @@
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
 
 
 						</div>
-						
+<!-------------------------------------------------- Customer Payment [ Payment Mode ] Ends Here -------------------------------------------------->						
 					</div>
 
 				</div>
+<!-------------------------------------------------- Customer Payment Reports Ends Here -------------------------------------------------->
 
-				<!----- 	Employee Payment reports ------>
+<!-------------------------------------------------- Employee Payment Reports Starts Here -------------------------------------------------->
+				
 				<div class="tab-pane" id="messages">
 					<div class="row">
 						<div align="center">
 							<h2 class="form-name style_heading">Employee Payment Reports</h2>
 						</div>
 
-						<div class="row">
-							<div class="col-sm-offset-1 col-md-10">
-								<hr style="border-top-color: #c1b1b1;">
+						<div class="row" align="center">
+							<div class="hr-width">
+								<hr class="style-one">
 							</div>
 						</div>
 					</div>
 
 					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab"
-							href="#employeeSingleDate" style="border-radius: 23px;"><h4>Datewise</h4></a></li>
-						<li><a data-toggle="tab" href="#empBetweenTwoDate"
-							style="border-radius: 23px;"><h4>Range</h4></a></li>
-				<li><a data-toggle="tab" href="#emppaymode"
-							style="border-radius: 23px;"><h4>Payment Mode</h4></a></li>
-
+						<li class="active"><a data-toggle="tab" href="#employeeSingleDate">Datewise</a></li>
+						<li><a data-toggle="tab" href="#empBetweenTwoDate">Range</a></li>
+						<li><a data-toggle="tab" href="#emppaymode">Payment Mode</a></li>
 					</ul>
 
 					<div class="tab-content" style="float: left">
 
-						<!--    for single date -->
+<!-------------------------------------------------- Employee Payment Reports [ Single DateWise ] Starts Here -------------------------------------------------->
+				
 						<div id="employeeSingleDate" class="tab-pane fade in active">
 							<!-- <div class="row">
 								<div class="col-sm-offset-1 col-md-10">
@@ -1769,16 +1714,11 @@
 									</div>
 
 									<div class="row" style="padding-top: 2%">
-										<div class="col-md-3 col-md-offset-5">
-											<div class="input-group">
-												<input type="button" id="btn" name="save"
-													class="btn btn-success " style="height: 38px; width: 121px; font-size: 18"
-													onclick="employeePaymentReportForSingleDateValidate()"
-													value="Search" />
-											</div>
-										</div>
+										<input type="button" id="btn" name="save" class="btn btn-success"
+													onclick="employeePaymentReportForSingleDateValidate()" value="Search" />
 									</div>
-									<div class="table-responsive" style="padding-top: 3%">
+									
+									<div class="" style="padding-top: 3%">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="employeeSingleDatetable" class="display">
@@ -1805,33 +1745,35 @@
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
 						</div>
+<!-------------------------------------------------- Employee Payment Reports [ Single DateWise ] Ends Here -------------------------------------------------->
 
 
-						<!-------- 	Between Two Days	 -------->
+<!-------------------------------------------------- Employee Payment Reports [ Between Two Days Range Wise ] Starts Here -------------------------------------------------->
+				
 						<div id="empBetweenTwoDate" class="tab-pane">
 
 							<!-- <div class="row">
@@ -1903,18 +1845,12 @@
 										</div>
 									</div>
 
-									<div class="row form-group buttons_margin_top ">
-										<div align="center">
-
-											<input type="button" id="btn" name="save"
-												class="btn btn-success "
-												style="height: 38px; width: 121px; font-size: 18"
-												onclick="getEmpPaymentDetailsBetTwoDaysValidate()"
-												value="Search" />
-
-										</div>
+									<div class="row" align="center">
+										<input type="button" id="btn" name="save" class="btn btn-success"
+												onclick="getEmpPaymentDetailsBetTwoDaysValidate()" value="Search" />
 									</div>
-									<div class="table-responsive" style="padding-top: 2%">
+
+									<div class="" style="padding-top: 2%">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="empBetweenTwoDates" class="display">
@@ -1940,32 +1876,35 @@
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
 						</div>
+<!-------------------------------------------------- Employee Payment Reports [ Between Two Days Range Wise ] Ends Here -------------------------------------------------->						
+					
+					
+<!-------------------------------------------------- Employee Payment Reports [ Payment Mode Wise ] Starts Here -------------------------------------------------->					
 						
-						<!-- payment mode -->
 												<div id="emppaymode" class="tab-pane">
 
 
@@ -2018,18 +1957,12 @@
 										</div>
 									</div>
 
-									<div class="row form-group buttons_margin_top ">
-										<div align="center">
-
-											<input type="button" id="btn" name="save"
-												class="btn btn-success "
-												style="height: 38px; width: 121px; font-size: 18"
-												onclick="getEmpPaymentmodeValidate()"
+									<div class="row" align="center">
+										<input type="button" id="btn" name="save" class="btn btn-success" onclick="getEmpPaymentmodeValidate()"
 												value="Search" />
-
-										</div>
 									</div>
-									<div class="table-responsive" style="padding-top: 2%">
+									
+									<div class="" style="padding-top: 2%">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="emppaymodes" class="display">
@@ -2055,36 +1988,37 @@
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
 						</div>
+<!-------------------------------------------------- Employee Payment Reports [ Payment Mode Wise ] Ends Here -------------------------------------------------->
 						
 					</div>
 				</div>
-
-				<!---------- Expenditure Payment Reports ------->
-
+<!-------------------------------------------------- Employee Payment Reports Ends Here -------------------------------------------------->
+			
+<!-------------------------------------------------- Expenditure Payment Reports Starts Here -------------------------------------------------->
 				<div class="tab-pane" id="settings">
 					<div class="row">
 						<div align="center">
@@ -2092,29 +2026,24 @@
 								Reports</h2>
 						</div>
 
-						<div class="row">
-							<div class="col-sm-offset-1 col-md-10">
-								<hr style="border-top-color: #c1b1b1;">
+						<div class="row" align="center">
+							<div class="hr-width">
+								<hr class="style-one">
 							</div>
 						</div>
 					</div>
 
 					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab"
-							href="#expenseSingleDate" style="border-radius: 23px;"><h4>Datewise</h4></a></li>
-						<li><a data-toggle="tab" href="#expenseBetweenTwoDate"
-							style="border-radius: 23px;"><h4>Range</h4></a></li>
-						<li><a data-toggle="tab" href="#expenseBetweenTwoDateAsPerExpense"
-							style="border-radius: 23px;"><h4>Expenditure Name Wise</h4></a></li>
-						<li><a data-toggle="tab" href="#expenseBetweenType"
-							style="border-radius: 23px;"><h4>Expenditure Type Wise</h4></a></li>
-						<li><a data-toggle="tab" href="#paymodeType"
-							style="border-radius: 23px;"><h4>Payment Mode</h4></a></li>
+						<li class="active"><a data-toggle="tab" href="#expenseSingleDate">Datewise</a></li>
+						<li><a data-toggle="tab" href="#expenseBetweenTwoDate">>Range</a></li>
+						<li><a data-toggle="tab" href="#expenseBetweenTwoDateAsPerExpense">Expenditure Name Wise</a></li>
+						<li><a data-toggle="tab" href="#expenseBetweenType">Expenditure Type Wise</a></li>
+						<li><a data-toggle="tab" href="#paymodeType">Payment Mode</a></li>
 					</ul>
 
 					<div class="tab-content" style="float: left">
 
-						<!-------------------------------------- DateWise ------------------------------------->
+<!-------------------------------------------------- Expenditure Payment Reports [ DateWise ] Starts Here -------------------------------------------------->
 
 						<div id="expenseSingleDate" class="tab-pane fade in active">
 							<!-- <div class="row">
@@ -2200,8 +2129,9 @@
 								</fieldset>
 							</form>
 						</div>
-
-					<!-------------------------------------- RangeWise ------------------------------------->
+<!-------------------------------------------------- Expenditure Payment Reports [ DateWise ] Ends Here -------------------------------------------------->
+						
+<!-------------------------------------------------- Expenditure Payment Reports [ Range Wise ] Starts Here -------------------------------------------------->
 
 						<div id="expenseBetweenTwoDate" class="tab-pane">
 
@@ -2299,10 +2229,12 @@
 								</fieldset>
 							</form>
 						</div>
+						
+<!-------------------------------------------------- Expenditure Payment Reports [ Range Wise ] Ends Here -------------------------------------------------->
 
-
-						<!------------------------------------ Expenditure Name Between Two Dates ------------------------------->
-
+						
+<!-------------------------------------------------- Expenditure Payment Reports [ Expenditure Name Between Two Dates ] Starts Here -------------------------------------------------->
+						
 						<div id="expenseBetweenTwoDateAsPerExpense" class="tab-pane">
 							<!-- <div class="row">
 								<div class="col-sm-offset-1 col-md-10">
@@ -2440,9 +2372,9 @@
 								</fieldset>
 							</form>
 						</div>
+<!-------------------------------------------------- Expenditure Payment Reports [ Expenditure Name Between Two Dates ] Ends Here -------------------------------------------------->						
 						
-						<!------------------------------------ Expenditure Type Wise ------------------------------->
-
+<!-------------------------------------------------- Expenditure Payment Reports [ Expenditure Type Wise ] Starts Here -------------------------------------------------->
 						<div id="expenseBetweenType" class="tab-pane">
 							<!-- <div class="row">
 								<div class="col-sm-offset-1 col-md-10">
@@ -2560,8 +2492,9 @@
 								</fieldset>
 							</form>
 						</div>
-						
-						<!-- pay moed -->
+<!-------------------------------------------------- Expenditure Payment Reports [ Expenditure Type Wise ] Ends Here -------------------------------------------------->				
+		
+<!-------------------------------------------------- Expenditure Payment Reports [ Payment Mode ] Starts Here -------------------------------------------------->
 						
 												<div id="paymodeType" class="tab-pane">
 							<!-- <div class="row">
@@ -2678,12 +2611,13 @@
 								</fieldset>
 							</form>
 						</div>
-						
+<!-------------------------------------------------- Expenditure Payment Reports [ Payment Mode ] Ends Here -------------------------------------------------->						
 						
 					</div>
 				</div>
+<!-------------------------------------------------- Expenditure Payment Reports Ends Here -------------------------------------------------->
 							
-<!-------------------------------------------------------- Partner Transaction Report ----------------------------------------->
+<!-------------------------------------------------- Partner Transaction Report Starts Here -------------------------------------------------->
 
 				<div class="tab-pane" id="PartnersTransaction">
 					<div class="row">
@@ -2691,15 +2625,15 @@
 							<h2 class="form-name style_heading">Partner Payment Reports</h2>
 						</div>
 
-						<div class="row">
-							<div class="col-sm-offset-1 col-md-10">
-								<hr style="border-top-color: #c1b1b1;">
+						<div class="row" align="center">
+							<div class="hr-width">
+								<hr class="style-one">
 							</div>
 						</div>
 					</div>
 
 					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#partnerWiseReport" style="border-radius: 23px;"><h4>Partner Wise Report</h4></a></li>
+						<li class="active"><a data-toggle="tab" href="#partnerWiseReport"><Partner Wise Report</a></li>
 					</ul>
 
 					<div class="tab-content" style="float: left">
@@ -2815,7 +2749,9 @@
 						</div>
 					</div>
 				</div>
-<!-------------------------------------------------------- Bank Transaction Report ----------------------------------------->
+<!-------------------------------------------------- Partner Transaction Report Ends Here -------------------------------------------------->				
+				
+<!-------------------------------------------------- Bank Transaction Report Starts Here -------------------------------------------------->
 				
 				<div class="tab-pane" id="BankTransaction">
 					<div class="row">
@@ -2823,15 +2759,15 @@
 							<h2 class="form-name style_heading">Bank Payment Reports</h2>
 						</div>
 
-						<div class="row">
-							<div class="col-sm-offset-1 col-md-10">
-								<hr style="border-top-color: #c1b1b1;">
+						<div class="row" align="center">
+							<div class="hr-width">
+								<hr class="style-one">
 							</div>
 						</div>
 					</div>
 
 					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#bankWiseReport" style="border-radius: 23px;"><h4>Bank Name Wise Report</h4></a></li>
+						<li class="active"><a data-toggle="tab" href="#bankWiseReport">Bank Name Wise Report</a></li>
 					</ul>
 
 					<div class="tab-content" style="float: left">
@@ -2940,14 +2876,14 @@
 						</div>
 					</div>
 				</div>
-				
-<!-------------------------------------------------------- /Bank Transaction Report ----------------------------------------->
+<!-------------------------------------------------- Bank Transaction Report Ends Here -------------------------------------------------->				
+
 				
 			</div>
 		</div>
 	</div>
 </div>
-
+</div>
 <jsp:include page="commons/footer.jsp"></jsp:include>
 
 
