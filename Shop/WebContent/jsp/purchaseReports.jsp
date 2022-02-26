@@ -9,7 +9,7 @@
 <%@include file="commons/header.jsp"%>
 <%@page import="java.util.List"%>
 <head>
-<script src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
+<!-- <script src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/selectjj.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/buttom.js"></script>
 <script src="/Shop/staticContent/js/jquery.min.js"></script>
@@ -21,7 +21,7 @@
 <link href="/Shop/staticContent/css/select.css" rel="stylesheet" type="text/css" media="all">
 <link href="/Shop/staticContent/css/button.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
-<link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css">
+<link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css"> -->
 
 <!-- For datatable to pdf,print,excel etc conversion -->
  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.js"></script> 
@@ -61,16 +61,30 @@
 <script type="text/javascript" src="/Shop/staticContent/js/goodsReceive.js"></script>
  <script type="text/javascript" src="/Shop/staticContent/js/podetails.js"></script>
  <script type="text/javascript" src="/Shop/staticContent/js/purchaseReturn.js"></script>
- 
+
+
+<link href="/Shop/WebContent/staticContent/css/dataTa.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/Shop/staticContent/css/dataTables.jqueryui.min.css"  rel="stylesheet" type="text/css" media="all">
+	<link rel="stylesheet" href="/Shop/staticContent/css/tabDemo.css">
+ 	<link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css">
+    
+    <script src="/Shop/staticContent/js/jquery.min.js"></script>
+    <script src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
+	<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>	
+
+
+
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 
  
  <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
+.container-fluid {
+	overflow: hidden;
 }
-.pagination {
+/* .pagination {
     float: right !important;
-   /*  margin-top: -11px; */
+   
 }
 .pagination a{
    color: #333333;
@@ -83,44 +97,46 @@
 .pagination span{
     font-weight: 700;
     font-size: 16px;
-}
+} */
 
 
 </style>
 </head>
 <body>
 
- <div class="container"> 
+ <div class="container-fluid"> 
  		
  		<div class="row">
 			<div align="center" style="margin-top: 75px">
 				  <h2 class="form-name style_heading">Purchase Reports</h2>
 			</div>
 				 	
-			 <div class="row">
-				<div class="col-sm-offset-1 col-md-10">
-						<hr style="border-top-color:#c1b1b1;">
+			 <div class="row" align="center">
+				<div class="hr-width">
+					<hr class="style-one">
 				</div>	
-			  </div>
+			 </div>
 		</div>
-
+	
+	<div class="reppurchase">
 		<ul class="nav nav-tabs">
-	    <li class="active"><a data-toggle="tab" href="#home" style="border-radius:23px"><h4>Datewise</h4></a></li>
-	    <li><a data-toggle="tab" href="#twoDates" style="border-radius:23px"><h4>Range Wise</h4></a></li>
-	     <li><a data-toggle="tab" href="#pro" style="border-radius:23px"><h4>Product Detail Wise</h4></a></li>
-	    <li><a data-toggle="tab" href="#sup"style="border-radius:23px"><h4>Supplier Name Wise</h4></a></li>
-	    <li><a data-toggle="tab" href="#shp" style="border-radius:23px"><h4>Shop Name Wise</h4></a></li>
-	    <!-- <li><a data-toggle="tab" href="#cat"><h4 style="color:blue">Category Wise</h4></a></li> -->
-	    <li><a data-toggle="tab" href="#gst" style="border-radius:23px"><h4>GST Wise</h4></a></li>
-	    <li><a data-toggle="tab" href="#rangeWise2Dates"style="border-radius:23px"><h4>Bill Wise</h4></a></li>
- 	    <li><a data-toggle="tab" href="#purchaseReturn" style="border-radius:23px"><h4>Purchase Return</h4></a></li> 
- 	    <li><a data-toggle="tab" href="#purchaseOrder" style="border-radius:23px"><h4>Purchase Order</h4></a></li> 
- 	 </ul>
+	    	<li class="active"><a data-toggle="tab" href="#home">Datewise</a></li>
+		    <li><a data-toggle="tab" href="#twoDates">Range Wise</a></li>
+		    <li><a data-toggle="tab" href="#pro">Product Detail Wise</a></li>
+		    <li><a data-toggle="tab" href="#sup">Supplier Name Wise</a></li>
+		    <li><a data-toggle="tab" href="#shp">Shop Name Wise</a></li>
+		    <!-- <li><a data-toggle="tab" href="#cat"><h4 style="color:blue">Category Wise</h4></a></li> -->
+		    <li><a data-toggle="tab" href="#gst">GST Wise</a></li>
+		    <li><a data-toggle="tab" href="#rangeWise2Dates">Bill Wise</a></li>
+	 	    <li><a data-toggle="tab" href="#purchaseReturn">Purchase Return</a></li> 
+	 	    <li><a data-toggle="tab" href="#purchaseOrder">Purchase Order</a></li> 
+ 		</ul>
+ 	</div>
  
- 	<div class="tab-content" style="float: left">
-   
-						    <!--------------------------------------- 1. SINGLE DATE WISE  ------------------------------------------->
-   
+ 	<div class="tab-content">
+ 
+<!-------------------------------------------------- Date Wise Starts Here -------------------------------------------------->   
+  
     	<div id="home" class="tab-pane fade in active">
  <!--    	<script>
     	$('#purchase1').DataTable( {
@@ -139,35 +155,35 @@
 </script> -->
     	<div class="row"></div>
     	
- 			<form class="" method="post" action="" name="">
+ 			<form class="form-horizontal" method="post" action="" name="">
  			
 				<fieldset>
-				
-					<div class="row form-group" style="margin-top: 20px">
-						<label class="col-md-2 col-md-offset-3 control-label" for="">Enter Date:<sup>*</sup>
-						</label>
-						
-						<div class="col-md-3">
+				<div class="shopform-margin">    
+				<div class="row">
+					<div class="form-group">		
+						<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+							<label class="control-label" for="">Enter Date:<sup>*</sup></label>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-8">
 							<div class="input-group">
-								<span class="input-group-addon"> <i
-									class="glyphicon glyphicon-calendar"></i>
+								<span class="input-group-addon">
+									<i class="glyphicon glyphicon-calendar"></i>
 								</span>
-								 <input type="date" id="fDate" name="fDate" placeholder="Start Date"  class="form-control " type="text">
-							</div>
-						</div>
-						</div>
-			
-							<div class="row form-group" style="padding-top:2%">
-						<div class="col-md-3  col-md-offset-5">
-							<div class="input-group">
-								<input type="button" id="btn" name="save" class="btn  btn-success " style="height: 38px; width: 121px;font-size: 18"
-									   onclick="purchaseReportForSingleDateValidate()" value="Search" />
+								<input type="date" id="fDate" name="fDate" placeholder="Start Date" class="form-control" type="text">
 							</div>
 						</div>
 					</div>
-					<div class="container">
-					<div class="table-responsive" align="center" style="padding-top:2%">
-					<table class= "table table-bordered table-striped table-condensed  cf" id="purchase1" class="display " >
+				</div>
+				</div>
+				   
+				<div class="row buttons-margin" align="center">
+					<input type="button" id="btn" name="save" class="btn btn-success"
+									   onclick="purchaseReportForSingleDateValidate()" value="Search" />
+				</div>
+					
+					<div class="">
+					<div class="" style="padding-top:2%">
+					<table class="table table-bordered table-striped table-condensed  cf" id="purchase1" class="display " >
 						<thead>
 							<tr >
 								<th>Bill Number</th>
@@ -208,69 +224,73 @@
                      <span id="page">1</span>
                      <a href="#" id="next" style="padding: 0 17px;">Next</a>
                     </div>  -->
-                    <div class="pagination-page" >
+                    <!-- <div class="pagination-page" >
                     <nav aria-label="...">
                         <ul class="pagination" style="margin-top: -10px;">
                             <li class="page-item disabled">
                                <a class="page-link" href="#">Previous</a>
                              </li>
-                             <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                              <li class="page-item">
                                 <span class="page-link">
                                     1
                                 <span class="sr-only">(current)</span>
                                 </span>
                              </li>
-                            <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                              <li class="page-item">
                                 <a class="page-link" href="#">Next</a>
                              </li>
                          </ul>
                    </nav>
-                   </div>
+                   </div> -->
 				</div>	
 				</div>			
 				</fieldset>
 			</form>
  		</div>
- 		
-				 <!---------------------------- 2.BETWEEN TWO DATE	------------------------------>
- 		
- 		<div id="twoDates" class="tab-pane " class="table-responsive">
+<!-------------------------------------------------- Date Wise Ends Here --------------------------------------------------> 	
+	
+<!-------------------------------------------------- Range Wise Starts Here -------------------------------------------------->
+ 		<div id="twoDates" class="tab-pane" class="table-responsive">
  		<div class="row"></div>
  				<form class="form-horizontal" method="post" action="" name="fertiBill">
 					<fieldset>
-				         <div class="row form-group" style="margin-top: 20px">
-							<label class="col-md-3 control-label" for=""> Start Purchase Date:<sup>*</sup></label>  
-				           			 <div class="col-md-3">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="glyphicon glyphicon-calendar"></i>
-											</span>
-				           		 			  <input type="date" id="fisDate2" placeholder="Start Date" class="form-control input-md" type="text" >
-				           		 		</div>
-									</div>
-				
-				           	 <label class="col-md-3 control-label" for="">End Purchase Date:<sup>*</sup></label>
-				           	 	<div class="col-md-3">
+					<div class="shopform-margin">	
+				        <div class="row">
+							<div class="form-group">
+								<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+									<label class="control-label" for=""> Start Purchase Date:<sup>*</sup></label>  
+				           		</div>
+				           		<div class="col-lg-3 col-md-3 col-sm-8">
 									<div class="input-group">
 										<span class="input-group-addon">
 											<i class="glyphicon glyphicon-calendar"></i>
 										</span>
-				         	   			  <input type="date" id="endDate2" placeholder="End Date" class="form-control input-md ac_district"  type="text">
+				           			  	<input type="date" id="fisDate2" placeholder="Start Date" class="form-control input-md" type="text" >
+				           		 	</div>
+								</div>
+								<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+								  	 <label class="control-label" for="">End Purchase Date:<sup>*</sup></label>
+				           	 	</div>
+				           	 	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="glyphicon glyphicon-calendar"></i>
+										</span>
+				         	   			 <input type="date" id="endDate2" placeholder="End Date" class="form-control input-md ac_district"  type="text">
 				          		  	</div>
 								</div>
-				          </div>
-					  
-				      		 <div class="row form-group buttons_margin_top " style="padding-bottom:2%">
-									<div align="center">
-												  
-										<input type="button"  id="btn" name="save" class="btn  btn-success " style="height: 38px; width: 121px;font-size: 20"
-										       onclick="purchaseReportBetweenTwoDatesValidate()" value="Search"/>
-									</div>
-							</div >	
-							<div class="container">
-						<table class= "table table-bordered table-striped table-condensed  cf" id="purchaseRange" class="display" 
+				          	</div>
+					  	</div>
+				   	</div>
+				      		
+				      	<div class="row buttons-margin" align="center">
+							<input type="button" id="btn" name="save" class="btn btn-success" onclick="purchaseReportBetweenTwoDatesValidate()" value="Search"/>
+						</div >	
+						
+					<div class="">
+						<table class="table table-bordered table-striped table-condensed  cf" id="purchaseRange" class="display" 
 						>
 						<thead>
 							<tr>
@@ -304,68 +324,70 @@
 							</tr>
 						</tfoot>
 					</table>
-					 <div class="pagination-page" >
+					<!--  <div class="pagination-page" >
                     <nav aria-label="...">
                         <ul class="pagination" style="margin-top: -10px;">
                             <li class="page-item disabled">
                                <a class="page-link" href="#">Previous</a>
                              </li>
-                             <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                              <li class="page-item">
                                 <span class="page-link">
                                     1
                                 <span class="sr-only">(current)</span>
                                 </span>
                              </li>
-                            <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                              <li class="page-item">
                                 <a class="page-link" href="#">Next</a>
                              </li>
                          </ul>
                    </nav>
-                   </div>
+                   </div> -->
 					</div>
 				</fieldset>
 				</form>
  		</div>
- 		
+<!-------------------------------------------------- Range Wise Ends Here --------------------------------------------------> 		
  		
 			<!----------------------------------	Between Two Dates	------------------------------------->
  		
- 		<div id="GSTSummary" class="tab-pane " class="table-responsive">
+ 		<div id="GSTSummary" class="tab-pane" class="table-responsive">
  		<div class="row"></div>
  				<form class="form-horizontal" method="post" action="" name="fertiBill">
 					<fieldset>
-				         <div class="row form-group" style="margin-top: 20px">
-							<label class="col-md-2 control-label" for=""> Start Purchase Date:<sup>*</sup></label>  
-				           			 <div class="col-md-3">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="glyphicon glyphicon-calendar"></i>
-											</span>
-				           		 			  <input type="date" id="fisDate3" placeholder="Start Date" class="form-control input-md" type="text" >
-				           		 		</div>
-									</div>
-				
-				           	 <label class="col-md-3 control-label" for="">End Purchase Date:<sup>*</sup></label>
-				           	 	<div class="col-md-3">
+				         <div class="row">
+							<div class="form-group">	
+								<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+									<label class="control-label" for=""> Start Purchase Date:<sup>*</sup></label>  
+				           		</div>
+				           		<div class="col-lg-3 col-md-3 col-sm-8">
 									<div class="input-group">
 										<span class="input-group-addon">
 											<i class="glyphicon glyphicon-calendar"></i>
 										</span>
-				         	   			  <input type="date" id="endDate3" placeholder="End Date" class="form-control input-md ac_district"  type="text">
+				           			  	<input type="date" id="fisDate3" placeholder="Start Date" class="form-control input-md" type="text" >
+				           		 	</div>
+								</div>
+								<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+				           	 		<label class="control-label" for="">End Purchase Date:<sup>*</sup></label>
+				           	 	</div>
+				           	 	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="glyphicon glyphicon-calendar"></i>
+										</span>
+				         	   			<input type="date" id="endDate3" placeholder="End Date" class="form-control input-md ac_district"  type="text">
 				          		  	</div>
 								</div>
-				          </div>
-					  
-				      		 <div class="row form-group buttons_margin_top ">
-									<div align="center">
-												  
-										<input type="button"  id="btn" name="save" style="height: 38px; width: 121px;font-size: 20" class="btn  btn-success "onclick="GSTSummaryReportBetweenTwoDates()" value="Search"/>
-												     									
-									</div>
-							</div >	
-						<table class= "table table-bordered table-striped table-condensed cf" id="GSTSummaryRange" class="display"
+				          	</div>
+					  	</div>
+					  	
+				      	<div class="row buttons-margin" align="center">
+							<input type="button" id="btn" name="save" class="btn btn-success" onclick="GSTSummaryReportBetweenTwoDates()" value="Search"/>
+						</div>
+							
+						<table class="table table-bordered table-striped table-condensed cf" id="GSTSummaryRange" class="display"
 						 >
 						<thead>
 							<tr>
@@ -388,44 +410,48 @@
 							</tr>
 						</tfoot>
 					</table>
-					 <div class="pagination-page">
-					  <!-- style="margin-top:-10px; -->
+					 <!-- <div class="pagination-page">
+					  style="margin-top:-10px;
                     <nav aria-label="...">
                         <ul class="pagination">
                             <li class="page-item disabled">
                                <a class="page-link" href="#">Previous</a>
                              </li>
-                             <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                              <li class="page-item">
                                 <span class="page-link">
                                     1
                                 <span class="sr-only">(current)</span>
                                 </span>
                              </li>
-                            <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                              <li class="page-item">
                                 <a class="page-link" href="#">Next</a>
                              </li>
                          </ul>
                    </nav>
-                   </div>
+                   </div> -->
 				</fieldset>
 				</form>
  		</div> 		
  		
-								<!---------------------------------- 3. Product Detail wise --------------------------------------->
- 		<div id="pro" class="tab-pane ">
+<!-------------------------------------------------- Product Detail Wise Starts Here -------------------------------------------------->
+ 		<div id="pro" class="tab-pane">
  				<div class="row"></div>
  		
  				<form class="form-horizontal" method="post" action="" name="fertiBill">
 					<fieldset>
-				         <div class="row form-group" style="margin-top: 20px">
-								<label class="col-md-3 control-label" for="fk_cat_id">Product Category<sup>*</sup></label>  
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="	glyphicon glyphicon-list-alt"></i>
-							</span>
+				<div class="shopform-margin">     
+				 	<div class="row">
+						<div class="form-group">
+							<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+								<label class="control-label" for="fk_cat_id">Product Category<sup>*</sup></label>  
+           					</div>
+           					<div class="col-lg-3 col-md-3 col-sm-8">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-list-alt"></i>
+									</span>
               				
 							<!-- Following code is to get categories from "categories" table of "fertilizer" DB -->
 							<!-- getAllMainCat() is implemented in  CategoryDetailsDao with return type List-->
@@ -434,30 +460,31 @@
            						List cList9 =cdd9.getAllMainCat(request);
 							
 							%>
-							<input list="cat_drop" id="fk_cat_id" name="fk_cat_id" class="form-control" placeholder="Product Category"
+									<input list="cat_drop" id="fk_cat_id" name="fk_cat_id" class="form-control" placeholder="Product Category"
 								   onchange="pro.getAllProduct()">
-						<datalist id="cat_drop">
+									<datalist id="cat_drop">
 							<%
 					           for(int i=0;i<cList9.size();i++){
 					        	   CategoryDetailsBean cat9=(CategoryDetailsBean)cList9.get(i);
 							%>
 		
-							<option data-value="<%=cat9.getCatId()%>" value="<%=cat9.getCategoryName()%>">
+										<option data-value="<%=cat9.getCatId()%>" value="<%=cat9.getCategoryName()%>">
 							<%
 				      			}
 				    		%>
 			              	
-            			</datalist>
-            			</div>
-            		</div>
-					
-					 <label class="col-md-2 control-label" for="product">Product Name<sup>*</sup></label>  
-          					  <div class="col-md-3">
+            						</datalist>
+            					</div>
+            				</div>
+							<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+					 			<label class="control-label" for="product">Product Name<sup>*</sup></label>  
+          					</div>
+          					<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 								<div class="input-group">
 									<span class="input-group-addon">
 										<i class="	glyphicon glyphicon-list-alt"></i>
 									</span>
-									   <select class="form-control" id="proName"  name="proName">
+									<select class="form-control" id="proName" name="proName">
 									</select>  
 									 
 									
@@ -467,22 +494,18 @@
 								
 								</div>
 							</div> 
-							
-							
-					  </div>
-					   <div class="row form-group" style="padding-top:2%">
-						     <div class="col-md-3 col-md-offset-5">
-								<div class="input-group">
-														  
-								 <input type="button"  id="btn" name="save" class="btn  btn-success " style="height: 38px; width: 121px;font-size: 18"
+						</div>	
+					</div>
+				</div>
+					
+					<div class="row buttons-margin" align="center">
+						<input type="button" id="btn" name="save" class="btn btn-success"
 										onclick="purchaseReportAsPerProductNameValidate()" value="Search"/>
-														     									
-								</div>
-							</div>	
-						</div>
-						<div class="container">
-						<div class="table-responsive" style="padding-top:2%">
-						<table class= "table table-bordered table-striped table-condensed  cf" id="purchaseAsPerProduct11"
+					</div>
+					
+						<div class="">
+						<div id="demo_jui" style="padding-top:2%">
+						<table class="table table-bordered table-striped table-condensed  cf" id="purchaseAsPerProduct11"
 						 class="display"  >
 						<thead>
 							<tr>
@@ -511,46 +534,51 @@
 							</tr>
 						</tfoot>						 -->
 					</table>
-					 <div class="pagination-page" >
+					 <!-- <div class="pagination-page" >
                     <nav aria-label="...">
                         <ul class="pagination" style="margin-top:-10px;">
                             <li class="page-item disabled">
                                <a class="page-link" href="#">Previous</a>
                              </li>
-                             <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                              <li class="page-item">
                                 <span class="page-link">
                                     1
                                 <span class="sr-only">(current)</span>
                                 </span>
                              </li>
-                            <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                              <li class="page-item">
                                 <a class="page-link" href="#">Next</a>
                              </li>
                          </ul>
                    </nav>
-                   </div>
+                   </div> -->
 					</div>
 					</div>
 				</fieldset>
 				</form>
  		
  		</div>
+<!-------------------------------------------------- Product Details Wise Ends Here -------------------------------------------------->
  		
-				 <!------------------------------------------------- Supplier Name Wise ---------------------------------------------> 		
+<!-------------------------------------------------- Supplier Name Wise Starts Here -------------------------------------------------->	
  		<div id="sup" class="tab-pane ">
  			<div class="row"></div>
  		
  				<form class="form-horizontal" method="post" action="" name="fertiBill">
 					<fieldset>
-				         <div class="row form-group" style="margin-top: 2%; ">
-									<label class="col-md-2  col-md-offset-3 control-label" for="supplier">Supplier Name<sup>*</sup></label>  
-		          					  <div class="col-md-3">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="glyphicon glyphicon-user"></i>
-											</span>
+				    <div class="shopform-margin">    
+				        <div class="row">
+							<div class="form-group">
+								<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+									<label class="control-label" for="supplier">Supplier Name<sup>*</sup></label>  
+		          				</div>	
+		          				<div class="col-lg-3 col-md-3 col-sm-8">
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="glyphicon glyphicon-user"></i>
+										</span>
 											
 									
 												
@@ -563,36 +591,33 @@
 									
 									%>
 									
-									<input list="sup_drop" id="fkSupplierId" name="fkSupplierId" placeholder="Supplier Name" class="form-control">
-						<datalist id="sup_drop">
+										<input list="sup_drop" id="fkSupplierId" name="fkSupplierId" placeholder="Supplier Name" class="form-control">
+										<datalist id="sup_drop">
 									
 									<%
 							           for(int i=0;i<sList.size();i++){
 							        	   SupplierDetailsBean sup =(SupplierDetailsBean)sList.get(i);
 									%>
 				
-									<option data-value="<%=sup.getSupId()%>" value="<%=sup.getDealerName() %>">
+											<option data-value="<%=sup.getSupId()%>" value="<%=sup.getDealerName() %>">
 									<%
 						      			}
 						    		%>
-								</datalist>           	
-							</div>
-		           		</div> 
+										</datalist>           	
+									</div>
+		           				</div> 
+		           			</div>
 		           		</div>
-			
-					  <div class="row">
-				     <div class="col-md-3 col-md-offset-5" style="padding-top:2%">
-						<div class="input-group">
-												  
-								<input type="button"  id="btn" name="save" class="btn  btn-success " style="height: 38px; width: 121px;font-size: 18"
+					</div>
+					
+					 <div class="row buttons-margin" align="center">
+				     	<input type="button" id="btn" name="save" class="btn btn-success"
 								       onclick="supplierWisePurchaseReportValidate()" value="Search"/>
-												     									
-						</div>
-					</div>	
-				</div>	
-						<div class="container">
-						<div class="table-responsive" style="padding-top:3%">	
-						<table class= "table table-bordered table-striped table-condensed cf" id="purchase3" class="display" row="10">
+					 </div>	
+					
+						<div class="">
+						<div id="demo_jui" style="padding-top:3%">	
+						<table class="table table-bordered table-striped table-condensed cf" id="purchase3" class="display" row="10">
 						<thead>
 							<tr>
 								<th>Supplier</th>
@@ -629,67 +654,78 @@
 					</table>
 					</div>
 					</div>
-					 <div class="pagination-page">
+					 <!-- <div class="pagination-page">
                     <nav aria-label="...">
                         <ul class="pagination" style="margin-top:10px;margin-right: 35px;">
                             <li class="page-item disabled">
                                <a class="page-link" href="#">Previous</a>
                              </li>
-                             <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                              <li class="page-item">
                                 <span class="page-link">
                                     1
                                 <span class="sr-only">(current)</span>
                                 </span>
                              </li>
-                            <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                              <li class="page-item">
                                 <a class="page-link" href="#">Next</a>
                              </li>
                          </ul>
                    </nav>
-                   </div>
+                   </div> -->
 					
 				</fieldset>
 				</form>
  		
  		</div>
- 		
-		<!---------------------------------------------		SHOP NAME WISE	---------------------------------------------------> 		
+<!-------------------------------------------------- Supplier Name Wise Ends Here --------------------------------------------------> 	
+	
+<!-------------------------------------------------- Shop Name Wise Starts Here -------------------------------------------------->		
  		
  		<div id="shp" class="tab-pane ">
  			<div class="row"></div>
  		
  				<form class="form-horizontal" method="post" action="" name="fertiBill">
 					<fieldset>
-					<div class="row form-group" style="margin-top: 20px">
-							<label class="col-md-3 control-label" for=""> Start Purchase Date:<sup>*</sup></label>  
-				           			 <div class="col-md-3">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="glyphicon glyphicon-calendar"></i>
-											</span>
-				           		 			  <input type="date" id="fisDate9" placeholder="Start Date" class="form-control input-md" type="text" >
-				           		 		</div>
-									</div>
-				
-				           	 <label class="col-md-3 control-label" for="">End Purchase Date:<sup>*</sup></label>
-				           	 	<div class="col-md-3">
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="glyphicon glyphicon-calendar"></i>
-										</span>
-				         	   			  <input type="date" id="endDate9" placeholder="End Date" class="form-control input-md ac_district"  type="text">
-				          		  	</div>
-								</div>
-				          </div>
-				         <div class="row form-group" style="margin-top: 20px">
-									<label class="col-md-3 control-label" for="shop">Shop Name<sup>*</sup></label>  
-		          					  <div class="col-md-3">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="	glyphicon glyphicon-user"></i>
-											</span>
+				<div class="shopform-margin">
+					<div class="row">
+						<div class="form-group">
+							<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+								<label class="control-label" for=""> Start Purchase Date:<sup>*</sup></label>  
+				           	</div>
+				           	<div class="col-lg-3 col-md-3 col-sm-8">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+				           		  	<input type="date" id="fisDate9" placeholder="Start Date" class="form-control input-md" type="text" >
+				           		 </div>
+							</div>
+				           	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+				           		<label class="control-label" for="">End Purchase Date:<sup>*</sup></label>
+				           	</div>
+				           	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+				         		  	<input type="date" id="endDate9" placeholder="End Date" class="form-control input-md ac_district"  type="text">
+				          		</div>
+							</div>
+				        </div>
+				    </div>
+				    
+				    <div class="row">
+						<div class="form-group">
+							<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+								<label class="control-label" for="shop">Shop Name<sup>*</sup></label>  
+		          			</div>
+		          			<div class="col-lg-3 col-md-3 col-sm-8">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-user"></i>
+									</span>
 											
 									
 												
@@ -703,34 +739,32 @@
 									%>
 									
 									<input list="shp_drop" id="fkShopId"  class="form-control" placeholder="Shop Name">
-						<datalist id="shp_drop">
+										<datalist id="shp_drop">
 									
 									<%
 							           for(int i=0;i<spList.size();i++){
 							        	   shopDetailsBean shp =(shopDetailsBean)spList.get(i);
 									%>
 				
-									<option data-value="<%=shp.getShopId()%>" value="<%=shp.getShopName() %>">
+											<option data-value="<%=shp.getShopId()%>" value="<%=shp.getShopName() %>">
 									<%
 						      			}
 						    		%>
-								</datalist>           	
-							</div>
-		           		</div> 
-					</div>
-					  
-					  <div class="row">
-				     <div class="col-md-3 col-md-offset-5" style="padding-top:2%">
-						<div class="input-group">
-												  
-								<input type="button"  id="btn" name="save" class="btn  btn-success " style="height: 38px; width: 121px;font-size: 18"
-								onclick="shopWisePurchaseReportValidate()" value="Search"/>
-												     									
+										</datalist>           	
+								</div>
+		           			</div> 
 						</div>
+					</div>
+				
+				</div>
+					  
+					<div class="row buttons-margin" align="center">
+				    	<input type="button" id="btn" name="save" class="btn btn-success"
+								onclick="shopWisePurchaseReportValidate()" value="Search"/>
 					</div>	
-				</div>	
+				
 				<div class="container">
-				<div class="table-responsive" style="padding-top:3%">	
+				<div class="" style="padding-top:3%">	
 						<table class= "table table-bordered table-striped table-condensed cf" id="purchase4" class="display"
 						 >
 						<thead>
@@ -764,33 +798,33 @@
 							</tr>
 						</tfoot>
 					</table>
-					 <div class="pagination-page" >
+					 <!-- <div class="pagination-page" >
                     <nav aria-label="...">
                         <ul class="pagination" style="margin-top:-10px;">
                             <li class="page-item disabled">
                                <a class="page-link" href="#">Previous</a>
                              </li>
-                             <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                              <li class="page-item">
                                 <span class="page-link">
                                     1
                                 <span class="sr-only">(current)</span>
                                 </span>
                              </li>
-                            <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                              <li class="page-item">
                                 <a class="page-link" href="#">Next</a>
                              </li>
                          </ul>
                    </nav>
-                   </div>
+                   </div> -->
 					</div>
 					</div>
 				</fieldset>
 				</form>
  		
  		</div>
- 		
+<!-------------------------------------------------- Shop Name Wise Ends Here --------------------------------------------------> 		
  		
  <!-- 		shop Wise -->
 <%--  
@@ -868,53 +902,54 @@
 				</form>
  		</div>		 --%>
  		
-		<!------------------------------------------------------ GST WISE ----------------------------------------------------->
+<!-------------------------------------------------- Gst Wise Starts Here -------------------------------------------------->
 
  		<div id="gst" class="tab-pane ">
  		<div class="row"></div>
  		
  		<form class="form-horizontal" method="post" action="" name="gstRepo">
 				<fieldset>
-				
-				<div class="row form-group" style="margin-top: 20px">
-							<label class="col-md-2 control-label" for=""> Start Date:<sup>*</sup></label>  
-				           			 <div class="col-md-2">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="glyphicon glyphicon-calendar"></i>
-											</span>
-				           		 			  <input type="date" id="gstFisDate" placeholder="Start Date" class="form-control input-md" type="text" >
-				           		 		</div>
-									</div>
-				
-				           	 <label class="col-md-2 control-label" for="" >End Date:<sup>*</sup></label>
-				           	 	<div class="col-md-2">
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="glyphicon glyphicon-calendar"></i>
-										</span>
-				         	   			  <input type="date" id="gstEndDate" placeholder="End Date" class="form-control input-md ac_district"  type="text">
-				          		  	</div>
-								</div>
-								
-								</div>
+			<div class="shopform-margin">	
+				<div class="row">
+					<div class="form-group">
+						<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+							<label class="control-label" for=""> Start Date:<sup>*</sup></label>  
+				        </div>   			 
+				        <div class="col-lg-3 col-md-3 col-sm-8">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="glyphicon glyphicon-calendar"></i>
+								</span>
+				        	  	<input type="date" id="gstFisDate" placeholder="Start Date" class="form-control input-md" type="text" >
+				           	</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+				           	<label class="control-label" for="" >End Date:<sup>*</sup></label>
+				        </div>
+				        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="glyphicon glyphicon-calendar"></i>
+								</span>
+				        	  	<input type="date" id="gstEndDate" placeholder="End Date" class="form-control input-md ac_district"  type="text">
+				          	</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
 								 
-								  <div class="row" style="padding-top:2%" >
-									<div align="center" class="col-md-3 col-md-offset-3" >
-												  
-										<input type="button"  id="gstBtn" name="save" class="btn  btn-success" style="height: 38px; width: 121px;font-size: 18"
+				<div class="row buttons-margin" align="center">
+					<input type="button" id="gstBtn" name="save" class="btn btn-success"
 										onclick="purchaseReportAsPerGSTValidate()" value="Search"/>
-												     									
-									</div>
-							
-				          </div>
+				</div>
 					  
 				      		 	
 				
 				<!-- <div class="table-responsive"> -->
 				<div class="container">
-				<div class="table-responsive" style="padding-top:2%">
-					<table class= "table table-bordered table-striped table-condensed cf" id="gstPurchaseReportTable"
+				<div class="" style="padding-top:2%">
+					<table class="table table-bordered table-striped table-condensed cf" id="gstPurchaseReportTable"
 					 >
 						<thead>
 								<tr>
@@ -964,75 +999,78 @@
 					</table>
 					 </div>
 					 </div>
-					 <div class="pagination-page" id="gstPurchaseReportTable">
+					 <!-- <div class="pagination-page" id="gstPurchaseReportTable">
                     <nav aria-label="...">
                         <ul class="pagination" style="margin-top: 10px;margin-right: 41px;">
                             <li class="page-item disabled">
                                <a class="page-link" href="#">Previous</a>
                              </li>
-                             <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                              <li class="page-item">
                                 <span class="page-link">
                                     1
                                 <span class="sr-only">(current)</span>
                                 </span>
                              </li>
-                            <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                              <li class="page-item">
                                 <a class="page-link" href="#">Next</a>
                              </li>
                          </ul>
                    </nav>
                   
-					</div>
+					</div> -->
 					
 				<!-- </div> -->
 				</fieldset>
 				</form>
  	</div>
-			 	<!-----------------------------------------------------BILL NUMBER WISE BETWEEN 2 DATES-------------------------------->
-			 	
-			 	
+<!-------------------------------------------------- Gst Wise Ends Here -------------------------------------------------->
+
+
+<!-------------------------------------------------- Bill Wise Starts Here --------------------------------------------------> 	
 			 	
 			 	<div id="rangeWise2Dates" class="tab-pane ">
  		<div class="row"></div>
  		
  		<form class="form-horizontal" method="post" action="" name="rangeWise2DatesForm">
 				<fieldset>
-				
-				<div class="row form-group" style="margin-top: 20px">
-							<label class="col-md-3 control-label" for=""> Start Date:<sup>*</sup></label>  
-				           			 <div class="col-md-2">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="glyphicon glyphicon-calendar"></i>
-											</span>
-				           		 			  <input type="date" id="FirstDate7" placeholder="Start Date" class="form-control input-md" type="text" >
-				           		 		</div>
-									</div>
-				
-				           	 <label class="col-md-3 control-label" for="">End Date:<sup>*</sup></label>
-				           	 	<div class="col-md-2">
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="glyphicon glyphicon-calendar"></i>
-										</span>
-				         	   			  <input type="date" id="EndDate7" placeholder="End Date" class="form-control input-md ac_district" type="text">
-				          		  	</div>
-								</div>
-								</div>
+			<div class="shopform-margin">
+				<div class="row">
+					<div class="form-group">	
+						<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+							<label class="control-label" for=""> Start Date:<sup>*</sup></label>  
+				        </div>
+				        <div class="col-lg-3 col-md-3 col-sm-8">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="glyphicon glyphicon-calendar"></i>
+								</span>
+				           	  	<input type="date" id="FirstDate7" placeholder="Start Date" class="form-control input-md" type="text" >
+				           	</div>
+						</div>
+				      	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+				      		<label class="control-label" for="">End Date:<sup>*</sup></label>
+				        </div>
+				        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="glyphicon glyphicon-calendar"></i>
+								</span>
+				        	  	<input type="date" id="EndDate7" placeholder="End Date" class="form-control input-md ac_district" type="text">
+				          	</div>
+						</div>
+					</div>
+				</div>
+			</div>
 								
-								<div class="row" style="padding-top:2%">
-									<div  class="col-md-3 col-md-offset-5" >
-												  
-										<input type="button" id="gstBtn" name="save" class="btn  btn-success"  style="height: 38px; width: 121px;font-size: 20"
+				<div class="row buttons-margin" align="center">
+					<input type="button" id="gstBtn" name="save" class="btn btn-success"
 										       onclick="rangeWiseBillPaidUnpaid()" value="Search"/>
-												     									
-									</div>
-							
-				          </div>
+				</div>
+				
 				<!-- <div class="table-responsive"> -->
-				<div class="table-responsive" style="padding-top:3%">
+				<div class="" style="padding-top:3%">
 					<table class= "table table-bordered table-striped table-condensed cf" id="rangeWiseBillReportTable"
 					 >
 						<thead>
@@ -1053,36 +1091,38 @@
 								<th></th>
 								<th></th>
 							    <th></th>
+							    <th></th>
 							</tr>
 						</tfoot>
 					</table>
-					 <div class="pagination-page">
+					<!--  <div class="pagination-page">
                     <nav aria-label="...">
                         <ul class="pagination" style="margin-top: -12px;margin-right: 17px;">
                             <li class="page-item disabled">
                                <a class="page-link" href="#">Previous</a>
                              </li>
-                             <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                              <li class="page-item">
                                 <span class="page-link">
                                     1
                                 <span class="sr-only">(current)</span>
                                 </span>
                              </li>
-                            <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                              <li class="page-item">
                                 <a class="page-link" href="#">Next</a>
                              </li>
                          </ul>
                    </nav>
-                   </div>
+                   </div> -->
 					</div>
 				<!-- </div> -->
 				</fieldset>
 				</form>
  	</div>
+<!-------------------------------------------------- Bill Wise Ends Here --------------------------------------------------> 
  				 	
- <!----------------------------------------------------PURCHASE RETURN---------------------------------------------------> 
+<!-------------------------------------------------- Purchase Return Starts Here -------------------------------------------------->
  						
  		<div id="purchaseReturn" class="tab-pane ">
  			<div class="row"></div>
@@ -1114,14 +1154,17 @@
 				          </div>  -->
 						
 						
-					
-				         <div class="row form-group" style="margin-top: 20px" >
-									<label class="col-md-2 col-md-offset-3 control-label" for="supplier">Supplier Name<sup>*</sup></label>  
-		          					  <div class="col-md-3">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="	glyphicon glyphicon-user"></i>
-											</span>
+				<div class="shopform-margin">	
+				   	<div class="row">
+						<div class="form-group">
+							<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+								<label class="control-label" for="supplier">Supplier Name<sup>*</sup></label>  
+		          			</div>
+		          			<div class="col-lg-3 col-md-3 col-sm-8">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-user"></i>
+									</span>
 											
 									
 												
@@ -1135,36 +1178,32 @@
 									%>
 									
 									<input list="sup_drop_Purchase_return" id="pr_fk_Supplier_Id" placeholder="Supplier Name" class="form-control">
-						<datalist id="sup_drop_Purchase_return">
+									<datalist id="sup_drop_Purchase_return">
 									
 									<%
 							           for(int i=0;i<suplierList.size();i++){
 							        	   SupplierDetailsBean supBean =(SupplierDetailsBean)suplierList.get(i);
 									%>
 				
-									<option data-value="<%=supBean.getSupId()%>" value="<%=supBean.getDealerName() %>">
+										<option data-value="<%=supBean.getSupId()%>" value="<%=supBean.getDealerName() %>">
 									<%
 						      			}
 						    		%>
-								</datalist>           	
-							</div>
-		           		</div> 
+									</datalist>           	
+								</div>
+		           			</div> 
 						</div>
+					</div>
+				</div>
 					  
-					  <div class="row" style="padding-top:2%">
-				     <div class="col-md-3 col-md-offset-5">
-						<div class="input-group">
-												  
-					<input type="button"  id="btn" name="save" class="btn  btn-success " style="height: 38px; width: 121px;font-size: 20"
-					onclick="supplierWisePurchaseReturnReportValidate()" value="Search"/>
-												     									
-						</div>
-					</div>	
+					<div class="row buttons-margin" align="center">												  
+						<input type="button" id="btn" name="save" class="btn btn-success"
+							onclick="supplierWisePurchaseReturnReportValidate()" value="Search"/>
 					</div>
 			
-				 	<div class="container">
-				     <div class="table-responsive" style="padding-top:3%">	
-						<table class= "table table-bordered table-striped table-condensed cf" id="purchaseReturnTable" class="display">
+				 	<div class="">
+				     <div id="demo_jui" style="padding-top:3%">	
+						<table class="table table-bordered table-striped table-condensed cf" id="purchaseReturnTable" class="display">
 						<thead>
 							<tr>
 								<th>Supplier</th>
@@ -1195,69 +1234,78 @@
 						</tfoot>
 					</table>
 					</div>
-					 <div class="pagination-page" >
+					 <!-- <div class="pagination-page" >
                     <nav aria-label="...">
                         <ul class="pagination" style="margin-top: -10px;">
                             <li class="page-item disabled">
                                <a class="page-link" href="#">Previous</a>
                              </li>
-                             <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                              <li class="page-item">
                                 <span class="page-link">
                                     1
                                 <span class="sr-only">(current)</span>
                                 </span>
                              </li>
-                            <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                              <li class="page-item">
                                 <a class="page-link" href="#">Next</a>
                              </li>
                          </ul>
                    </nav>
-                   </div>
+                   </div> -->
 					
 					</div>
 				</fieldset>
 				</form>
  			</div>
+<!-------------------------------------------------- Purchase Return Ends Here -------------------------------------------------->
  			
- <!----------------------------------------------------PURCHASE ORDER--------------------------------------------------->
+ <!-------------------------------------------------- Purchase Order Starts Here -------------------------------------------------->
  
- <div id="purchaseOrder" class="tab-pane ">
+ <div id="purchaseOrder" class="tab-pane">
  			<div class="row"></div>
  		
  				<form class="form-horizontal" method="post" action="" name="fertiBill">
 					<fieldset>
-					
-				         <div class="row form-group" style="margin-top: 20px">
-							<label class="col-md-3 control-label" for=""> Start PO Date:<sup>*</sup></label>  
-				           			 <div class="col-md-3">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="glyphicon glyphicon-calendar"></i>
-											</span>
-				           		 			  <input type="date" id="fisDatePO" placeholder="Start Date" class="form-control input-md" type="text" >
-				           		 		</div>
-									</div>
-				
-				           	 <label class="col-md-3 control-label" for="">End PO Date:<sup>*</sup></label>
-				           	 	<div class="col-md-3">
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="glyphicon glyphicon-calendar"></i>
-										</span>
-				         	   			  <input type="date" id="endDatePO" placeholder="End Date" class="form-control input-md ac_district"  type="text">
-				          		  	</div>
-								</div>
-				          </div>
-				          
-				        <div class="row form-group" style="margin-top: 20px">
-									<label class="col-md-3 control-label" for="supplier">Supplier Name<sup>*</sup></label>  
-		          					  <div class="col-md-3">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="glyphicon glyphicon-user"></i>
-											</span>
+				<div class="shopform-margin">	
+				    <div class="row">
+						<div class="form-group">
+							<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+								<label class="control-label" for=""> Start PO Date:<sup>*</sup></label>  
+				           	</div>
+				           	<div class="col-lg-3 col-md-3 col-sm-8">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+				           		  	<input type="date" id="fisDatePO" placeholder="Start Date" class="form-control input-md" type="text" >
+				           		 </div>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+				           		<label class="control-label" for="">End PO Date:<sup>*</sup></label>
+				           	</div>
+				           	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+				         	   	  	<input type="date" id="endDatePO" placeholder="End Date" class="form-control input-md ac_district"  type="text">
+				          		</div>
+							</div>
+				         </div>
+				     </div>
+				      
+				     <div class="row">
+						 <div class="form-group">
+						 	<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+								<label class="control-label" for="supplier">Supplier Name<sup>*</sup></label>  
+		          			</div>
+		          			<div class="col-lg-3 col-md-3 col-sm-8">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-user"></i>
+									</span>
 										
 									<%
 										SupplierDetailsDao sdd1 = new SupplierDetailsDao();
@@ -1266,48 +1314,45 @@
 									%>
 									
 									<input list="sup_dropPO" id="fkSupplierIdPO" name="fkSupplierId" placeholder="Supplier Name" class="form-control" onchange="getAllPo();">
-						<datalist id="sup_dropPO">
+									<datalist id="sup_dropPO">
 									
 									<%
 							           for(int i=0;i<sList.size();i++){
 							        	   SupplierDetailsBean sup =(SupplierDetailsBean)sList1.get(i);
 									%>
 				
-									<option data-value="<%=sup.getSupId()%>" value="<%=sup.getDealerName() %>">
+										<option data-value="<%=sup.getSupId()%>" value="<%=sup.getDealerName() %>">
 									<%
 						      			}
 						    		%>
-								</datalist>           	
-							</div>
-		           		</div> 
-		           		
-		           		 <label class="col-md-3 control-label" for=""> PO No :<sup>*</sup></label>
-				           	 	<div class="col-md-3">
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="glyphicon glyphicon-calendar"></i>
-										</span>
+									</datalist>           	
+								</div>
+		           			</div> 
+		           			<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+		           		 		<label class="control-label" for=""> PO No :<sup>*</sup></label>
+				           	</div>
+				           	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
 <!-- 				         	   			  <input type="text" id="POno" placeholder="select PO no." class="form-control input-md ac_district"> -->
 									<select id="POno" name="POno" class="form-control input-md ac_district">
 									</select>
-				          		  	</div>
-								</div>
+				          		</div>
+							</div>
 		           		</div>
+		           	</div>
+				</div>
 					  
-					  <div class="row" style="padding-top:2%">
-				     <div class="col-md-3 col-md-offset-5">
-						<div class="input-group">
-												  
-					<input type="button"  id="btn" name="save" class="btn  btn-success " style="height: 38px; width: 121px;font-size: 20"
-					onclick="purchaseOrderReportValidate()" value="Search"/>
-												     									
-						</div>
-					</div>	
+					<div class="row buttons-margin" align="center">
+						<input type="button"  id="btn" name="save" class="btn btn-success"
+								onclick="purchaseOrderReportValidate()" value="Search"/>
 					</div>
 			
-				 	<div class="container">
-				     <div class="table-responsive" style="padding-top:3%">	
-						<table class= "table table-bordered table-striped table-condensed cf" id="purchaseOrderTable" class="display">
+				 	<div class="">
+				     <div id="demo_jui" style="padding-top:3%">	
+						<table class="table table-bordered table-striped table-condensed cf" id="purchaseOrderTable" class="display">
 						<thead>
 							<tr>
 								<th>Supplier Name</th>
@@ -1335,32 +1380,32 @@
 						</tfoot>
 					</table>
 					</div>
-					 <div class="pagination-page">
+					<!--  <div class="pagination-page">
                     <nav aria-label="...">
                         <ul class="pagination" style="margin-top: -10px;margin-right: 36px;">
                             <li class="page-item disabled">
                                <a class="page-link" href="#">Previous</a>
                              </li>
-                             <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                              <li class="page-item">
                                 <span class="page-link">
                                     1
                                 <span class="sr-only">(current)</span>
                                 </span>
                              </li>
-                            <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                              <li class="page-item">
                                 <a class="page-link" href="#">Next</a>
                              </li>
                          </ul>
                    </nav>
-                   </div>
+                   </div> -->
 					
 					</div>
 				</fieldset>
 				</form>
  			</div>
- 			
+<!-------------------------------------------------- Purchase Order Ends Here --------------------------------------------------> 			
  			
  	
  </div>

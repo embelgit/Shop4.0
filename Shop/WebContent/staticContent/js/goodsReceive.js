@@ -1486,7 +1486,7 @@ function purchaseReportBetweenTwoDates() {
 
 				destroy : true,
 				searching : true,
-				"scrollY": 500,
+				"scrollY": 300,
 		        "scrollX": true,
 		        "paging":   false,
 
@@ -2522,7 +2522,7 @@ function purchaseReportAsPerProductName()
 							
 							destroy: true,
 							searching: true,
-							"scrollX": 300,
+							"scrollY": 300,
 					        "scrollX": true,
 					        "paging":   false,
 							
@@ -3416,7 +3416,7 @@ function purchaseReportAsPerGST() {
 
 																destroy : true,
 																searching : true,
-																 "scrollY": 400,
+																 "scrollY": 300,
 															        "scrollX": true,
 															        "paging":   false,
 

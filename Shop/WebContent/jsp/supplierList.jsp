@@ -16,8 +16,12 @@
 	<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
 		<script type="text/javascript" src="/Shop/staticContent/js/supplier.js"></script>
+<<<<<<< HEAD
 		<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 	
+=======
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">	
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 	
 <html>
 	<head>
@@ -36,11 +40,18 @@
   			
   		</script>
 		
+<<<<<<< HEAD
 <!-- <style>
 .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
  {
     border-radius:23px;
+=======
+<style>
+.container-fluid {
+	overflow: hidden;
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 }
+<<<<<<< HEAD
 
 
 </style> -->
@@ -48,13 +59,18 @@
 .container-fluid {
 	overflow: hidden;
 }
+=======
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 </style>
 
 	</head>
 	
 	<script type="text/javascript"> 
 		$(document).ready(function () {
-	         var table=$("#list").dataTable();
+	         var table=$("#list").dataTable({
+	        	 "scrollX": true,
+	        	 "scrollY": 300,
+	         });
 			 var tableTools = new $.fn.dataTable.TableTools(table, {
 				 'sSwfPath':'//cdn.datatables.net/tabletools/2.2.4/swf/copy_csv_xls_pdf.swf',
 				 	'aButtons':['copy','print','csv',{
@@ -69,19 +85,39 @@
 	</script>
 
 <body id="dt_example" style="min-height:300px;">
+<<<<<<< HEAD
 		<div class="container-fluid">	
 		
+=======
+	<div class="container-fluid">		
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 		
+<<<<<<< HEAD
 		<div class="row" align="center">
 				    <div align="center" style="margin-top:70px">
 				  		<h2 class="form-name style_heading">Supplier List</h2>
 				  	</div>
+=======
+		
+		<div class="row">
+		    <div align="center" style="margin-top:70px">
+		  		<h2 class="form-name style_heading">Supplier List</h2>
+		  	</div>
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 				 	
+<<<<<<< HEAD
 			     <div class="row" >
 					     <div class="hr-width">
 							  		<hr class="style-one">
 					     </div>	
 			   		 </div>
+=======
+	     <div class="row" align="center">
+		     <div class="hr-width">
+		  		<hr class="style-one">
+		     </div>	
+		 </div>
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 		</div>
 			    
 	<%
@@ -89,7 +125,11 @@
 	List list12=dao.getSupplierList();
 	%>
 	
+<<<<<<< HEAD
 	<div id="date"align="right" >
+=======
+	<div id="date" align="right">
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 		<label id="demo"></label>
 		<script>
 			var date = new Date();
@@ -130,7 +170,7 @@
 					<td class="align"><%=sr.getAddress()%></td>
 					<td class="align"><%=sr.getTin()%></td>
 <%-- 					<td class="align"><button id="<%=sr.getPksuppID()%>" onclick="del(this.id);return false;">Delete</button></td> --%>
-					<td class="align"><i class="glyphicon glyphicon-trash" style="font-size:30px;margin-left:20px" id="<%=sr.getPksuppID()%>,<%=sr.getDealerName()%>" onclick="del(this.id);return false;"></i></td>					
+					<td class="align"><i class="glyphicon glyphicon-trash" id="<%=sr.getPksuppID()%>,<%=sr.getDealerName()%>" onclick="del(this.id);return false;"></i></td>					
 				</tr>
 	
 				<%
@@ -139,11 +179,20 @@
 			</tbody>
 		</table>
 	</div>
+<<<<<<< HEAD
 	<!-- </div>  -->
 	<div class="row buttons-margin" align="center">
 		<input type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
 		<!-- <input type="button" style="width: 200px; height: 65px; font-size: 25px" value="Delete Supplier" id="listBtn2" class="btn btn-large btn-danger button-height-width" onclick="deletSupplier()" /> -->
 			</div>
+=======
+	
+	<div class="row buttons-margin" align="center">
+		<input type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
+		<!-- <input type="button" style="width: 200px; height: 65px; font-size: 25px" value="Delete Supplier" id="listBtn2" class="btn btn-large btn-danger button-height-width" onclick="deletSupplier()" /> -->
+	</div>
+	
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 	</div>
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>

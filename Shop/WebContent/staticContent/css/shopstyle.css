@@ -20,6 +20,9 @@ body {
 .goodsreceive {
 	width: 180px;
 }
+.gstbilling {
+	width: 160px;
+}
 .input-group-addon {
 	background-color: transparent !important;
 	border-radius: 6px !important;
@@ -105,6 +108,32 @@ h3.quotationno {
 	font-weight: 700;
 	margin-right: 10%;
 }
+h3.billnumber {
+	color: red;
+	font-size: 24px;
+	font-weight: 700;
+	margin-right: 10%;
+}
+#demo {
+	color: red;
+	font-size: 22px;
+	font-weight: 700;
+	margin-right: 2%;
+}
+h3.cashbooktransaction {
+	color: red;
+	font-size: 24px;
+	font-weight: 700;
+	margin-right: 10%;
+	margin-top: 0px;
+    margin-bottom: 0px;
+}
+.prodsearmargin {
+	margin-top: 2%;
+}
+.cashbooktabs {
+    margin-top: 8%;
+}
 /*---------------------------------------------------- Form Css Ends Here ----------------------------------------------------*/
 
 /*---------------------------------------------------- Tab Css Starts Here ----------------------------------------------------*/
@@ -166,6 +195,126 @@ h3.quotationno {
 .purchasereturn li {
     margin: 0 5px;
 }
+
+.stock-report li a {
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 12px;
+    width: 170px;
+    text-align: center;
+}
+.stock-report ul {
+    display: flex;
+    justify-content: center;
+}
+.stock-report li {
+    margin: 0 5px;
+}
+
+.cashbooktabs li a {
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 12px !important;
+    width: 170px;
+    text-align: center;
+}
+.cashbooktabs ul {
+    display: flex;
+    justify-content: center;
+}
+.cashbooktabs li {
+    margin: 0 5px;
+}
+.tax-reports {
+	margin-bottom: 2%;
+}
+.tax-reports li a {
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 12px !important;
+    width: 150px;
+    text-align: center;
+    padding: 8px 15px;
+}
+.tax-reports ul {
+    display: flex;
+    justify-content: center;
+}
+.tax-reports li {
+    margin: 0 5px;
+}
+
+.productbuy_sale {
+	margin-bottom: 2%;
+}
+.productbuy_sale li a {
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 12px !important;
+    width: 150px;
+    text-align: center;
+    padding: 8px 15px;
+}
+.productbuy_sale ul {
+    display: flex;
+    justify-content: center;
+}
+.productbuy_sale li {
+    margin: 0 5px;
+}
+
+.gstreturn li a {
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 12px !important;
+    width: 170px;
+    text-align: center;
+}
+.gstreturn ul {
+    display: flex;
+    justify-content: center;
+}
+.gstreturn li {
+    margin: 0 5px;
+}
+.gstrange li a {
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 12px !important;
+    width: 170px;
+    text-align: center;
+}
+.gstrange ul {
+    display: flex;
+    justify-content: center;
+}
+.gstrange li {
+    margin: 0 5px;
+}
+.gstrange {
+	margin-bottom: 2%;
+}
+
+.reppurchase li a {
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 12px !important;
+    width: 86%;
+    text-align: center;
+}
+.reppurchase ul {
+    display: inline-block;
+    justify-content: center;
+}
+.reppurchase li {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    width: 19%;
+}
+.reppurchase {
+	margin-bottom: 2%;
+}
 /*---------------------------------------------------- Tab Css Starts Here ----------------------------------------------------*/
 
 /*---------------------------------------------------- Footer Css Starts Here ----------------------------------------------------*/ 
@@ -182,6 +331,22 @@ h3.quotationno {
 }
 /*---------------------------------------------------- Footer Css Ends Here ----------------------------------------------------*/
 
+<<<<<<< HEAD
+=======
+/*---------------------------------------------------- Header Css Starts Here ----------------------------------------------------*/
+ .embelbackgroundimg {   
+    width: 40%;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    z-index: -1;
+}
+/*---------------------------------------------------- Header Css Ends Here ----------------------------------------------------*/
+
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 /*---------------------------------------------------- DataTable Css Starts Here ----------------------------------------------------*/
 #demo_jui {
     margin: 0 15px;
@@ -307,6 +472,26 @@ h3.purchasereturnno {
     right: 6%;
     top: 40%;
 }
+.cashbooktabs {
+    margin-top: 12%;
+}
+.cashbooktabs li a {
+    font-size: 16px;
+    width: 80%;
+    text-align: center;
+}
+.cashbooktabs li {
+    margin: 5px;
+    display: flex;
+    width: 32%;
+    justify-content: center;
+}
+.cashbooktabs ul {
+    display: inline-block;
+}
+.reppurchase li {
+    width: 32%;
+}
 }
 /*-------------------------------------------------- 1180px to 993px Ends Here ------------------------*/
 
@@ -320,7 +505,22 @@ h3.purchasereturnno {
 }
 .formspaceinput {
     margin-top: 15px;
+}
+.cashbooktabs li a {
+    width: 98%;
+}
+.cashbooktabs li {
+    width: 31%;
+}
+.cashbooktabs {
+    margin-top: 18%;
 }	
+.reppurchase li {
+    width: 48%;
+}
+.reppurchase li a {
+    width: 75%;
+}
 }
 /*-------------------------------------------------- 992px to 768px Ends Here ------------------------*/
 
@@ -334,6 +534,30 @@ h3.purchasereturnno {
 }
 .customerbillcopy li a {
     width: 220px;
+}
+.embelbackgroundimg {
+    width: 50%;
+}
+.cashbooktabs li a {
+    width: 95%;
+}
+.stock-report li {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    width: 48%;
+}
+.stock-report li a {
+    width: 90%;
+}
+.stock-report ul {
+    display: inline-block;
+}
+.reppurchase li {
+    width: 48%;
+}
+.reppurchase li a {
+    font-size: 16px;
 }		
 }
 /*-------------------------------------------------- 767px to 581px Ends Here ------------------------*/
@@ -349,7 +573,19 @@ h3.purchasereturnno {
 .purchasereturn li a {
     width: 212px;
     font-size: 16px;
+}
+.nongstcreditradio {
+    width: 150px;
+}
+.stock-report li {
+    width: 47%;
 }	
+.reppurchase li a {
+    width: 90%;
+}
+.reppurchase li {
+    width: 47%;
+}
 }
 /*-------------------------------------------------- 580px to 481px Ends Here ------------------------*/
 
@@ -373,6 +609,12 @@ h3.challanshopid {
 h3.quotationno {
 	font-size: 18px;	
 }
+h3.billnumber {
+	font-size: 18px;
+}
+h3.cashbooktransaction {
+	font-size: 18px;
+}
 .customerbillcopy li a {
     width: 150px;
 }
@@ -393,6 +635,47 @@ h3.purchasereturnno {
 }
 .purchasereturn {
     margin-bottom: 10%;
+}
+.nongstcreditradio {
+    padding: 10px !important;
+    width: 120px !important;
+}
+.gstcashradio {
+	padding: 10px !important;
+	width: 120px !important;
+}
+.embelbackgroundimg {
+    width: 60%;
+}
+.dataTables_filter input {
+    width: 70%;
+}
+#demo {
+    font-size: 18px;
+}
+.tax-reports {
+	margin-bottom: 3%;
+}
+.cashbooktabs li {
+    width: 46%;
+}
+.cashbooktabs li a {
+    height: 65px;
+}
+.stock-report li {
+    width: 100%;
+}
+.stock-report li a {
+    width: 65%;
+}
+.cashbooktabs {
+    margin-top: 22%;
+}
+.reppurchase li {
+    width: 100%;
+}
+.reppurchase li a {
+    width: 65%;
 }
 }
 /*-------------------------------------------------- 480px to 350px Starts Here ------------------------*/

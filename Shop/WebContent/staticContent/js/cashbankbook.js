@@ -1505,8 +1505,8 @@ function supplierReportForSingleDate() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -1907,8 +1907,8 @@ function getSupplierDetailsBetweenTwoDates() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -2326,8 +2326,8 @@ function getBillWiseReport() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -2546,6 +2546,7 @@ function getSupNameWiseReport() {
 				    //"bFilter": false, //hide Search bar
 				    "bInfo": false, // hide showing entries
 				    
+				    
 											fnRowCallback : function(
 													nRow,
 													aData,
@@ -2629,8 +2630,8 @@ function getSupNameWiseReport() {
 
 											destroy : true,
 											searching : true,
-											"scrollY" : 500,
-											"scrollX" : false,
+											"scrollY" : 300,
+											"scrollX" : true,
 											"paging" : false,
 
 											columns : [
@@ -2973,8 +2974,8 @@ function getCreditCustomerReportNameWise() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -3374,8 +3375,8 @@ function getBillWiseCreditReport() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -3681,8 +3682,8 @@ function creditCustReportForSingleDate() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -4472,8 +4473,8 @@ function getpayDetailsBetweenTwoDates() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -4826,8 +4827,8 @@ function employeePaymentReportForSingleDate() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -5170,8 +5171,8 @@ function getEmpPaymentDetailsBetTwoDays() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -8909,8 +8910,8 @@ function getSupplierDetailspaymode1() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -9252,8 +9253,8 @@ function getEmpPaymentmodeValidate1() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [

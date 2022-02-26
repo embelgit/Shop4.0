@@ -40,12 +40,9 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
 
 <script src="/Shop/staticContent/js/stockDetails.js"></script>
-
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
-}
+
 </style>
 </head>
 
@@ -61,21 +58,21 @@ function openBilling() {
 <br/>
 <br/>
 <br/>
-<div class="container col-md-offset-1" align="center"> 		
+<div class="container" align="center"> 		
  	<div class="row">
-				    <div align="le">
-				  		<h2 class="form-name style_heading">Day Closure Reports</h2>
-				  	</div>
+		<div align="le">
+			<h2 class="form-name style_heading">Day Closure Reports</h2>
+		</div>
 				  	
-				  	 <div class="row">
-					     <div class="col-sm-offset-1 col-md-10">
-							  		<hr style="border-top-color:#c1b1b1;">
-					     </div>	
-			   		 </div>
+		<div class="row">
+			<div class="hr-width">
+				<hr class="style-one">
+		    </div>	
+		</div>
 	</div>
  		 		
- 	<div id="lowStockReport" align="center" style="padding-top:1%">
-    	<div id="lowStock" style="text-align: center">
+ 	<div id="lowStockReport" align="center">
+    	<div id="lowStock" align="right">
 			<label id="demo" ></label>
 			<script>
 			   var date = new Date();
@@ -94,7 +91,7 @@ function openBilling() {
 
 		            destroy: true,
 			        searching: false,
-			        "scrollY": 600,
+			        "scrollY": 300,
 			        "scrollX": true,
 			        "paging":   false,
 			      				
@@ -130,7 +127,7 @@ function openBilling() {
 		GoodsReceiveDao gDao=new GoodsReceiveDao();
 		List Lis1 = gDao.dayclosure(request);	
 	%>
-	<br/>
+	
 	<div id="demo_jui" align="center" style="text-align-last: center;">
 		<table class= "table table-bordered table-striped table-condensed cf" style="text-align: center;align-content: center;" id="list" class="display" border="1">
 			<thead>

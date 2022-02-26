@@ -15,8 +15,12 @@
 	<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
 	<script type="text/javascript" src="/Shop/staticContent/js/categoryDetails.js"></script>
+<<<<<<< HEAD
 	<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 
 	
+=======
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">	
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 	
 	
 <html>
@@ -38,11 +42,18 @@
   			
   		</script>
 		
+<<<<<<< HEAD
 <!-- <style>
 .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
  {
     border-radius:23px;
+=======
+<style>
+.container-fluid {
+	overflow: hidden;
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 }
+<<<<<<< HEAD
 
 
 </style> -->
@@ -50,6 +61,8 @@
 .container-fluid {
 	overflow: hidden;
 }
+=======
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 </style>
 
 	</head>
@@ -58,7 +71,10 @@
 
 	<script type="text/javascript"> 
 		$(document).ready(function () {
-	         var table=$("#list").dataTable();
+	         var table=$("#list").dataTable({
+	        	 "scrollX": true,
+	        	 "scrollY": 300,
+	         });
 			 var tableTools = new $.fn.dataTable.TableTools(table, {
 				 'sSwfPath':'//cdn.datatables.net/tabletools/2.2.4/swf/copy_csv_xls_pdf.swf',
 				 	'aButtons':['copy','print','csv',{
@@ -73,7 +89,11 @@
 	</script>
 
 <body id="dt_example" style="min-height:300px;">
+<<<<<<< HEAD
 		<div class="container-fluid">
+=======
+<div class="container-fluid">	
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 		
 		
 		<div class="row">
@@ -81,11 +101,19 @@
 				  		<h2 class="form-name style_heading">Sub Category List</h2>
 				  	</div>
 				 	
+<<<<<<< HEAD
 			     <div class="row" align="center">
 					     <div class="hr-width">
 							  		<hr class="style-one">
 					     </div>	
 			   		 </div>
+=======
+			<div class="row" align="center">
+				<div class="hr-width">
+					<hr class="style-one">
+				</div>	
+			</div>
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 		</div>
 		
 			    
@@ -129,7 +157,7 @@
 				<td class="align"><%=sr.getSrNo()%></td>
 				<td class="align"><%=sr.getCategoryName()%></td>
 				<td class="align"><%=sr.getSubcategoryName()%></td>
-<td class="align"><i class="glyphicon glyphicon-trash" style="font-size:27px;margin-left:50px" 
+<td class="align"><i class="glyphicon glyphicon-trash" 
                    id="<%=sr.getSubcatId()%>					
                     <%=sr.getCategoryName()%>,
 					 <%=sr.getSubcategoryName()%>" 
@@ -152,7 +180,12 @@
 <!-- 		<input type="button" style="wid
 <!-- 				<input type="button" style="width: 128px; height: 53px; font-size: 25px" value="Delete" id="listBtn" class="btn btn-success" onclick="del()" />  -->
 	</div>
+<<<<<<< HEAD
 	</div>
+=======
+
+</div>	
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>
 </html>

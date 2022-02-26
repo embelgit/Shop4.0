@@ -24,7 +24,7 @@
 		
 <html>
 	<head>
-	
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">	
 		<title>Credit Customer List</title>
 		
   		
@@ -41,26 +41,35 @@
   			
   		</script>
 		 
+<<<<<<< HEAD
 <!-- <style>
 .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
  {
     border-radius:23px;
+=======
+<style>
+.container-fluid {
+	overflow: hidden;
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 }
+<<<<<<< HEAD
 </style> -->
 
 <style>
 .container-fluid {
 	overflow: hidden;
 }
+=======
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 </style>
           		
 	</head>
-
-	
-
 	<script type="text/javascript"> 
 		$(document).ready(function () {
-	         var table=$("#list").dataTable();
+	         var table=$("#list").dataTable({
+	        	 "scrollX": true,
+	        	 "scrollY": 300,
+	         });
 			 var tableTools = new $.fn.dataTable.TableTools(table, {
 				 'sSwfPath':'//cdn.datatables.net/tabletools/2.2.4/swf/copy_csv_xls_pdf.swf',
 				 	'aButtons':['copy','print','csv',{
@@ -75,6 +84,7 @@
 	</script>
 
 <body id="dt_example" style="min-height:300px;">
+<<<<<<< HEAD
 		<div class="container-fluid">
 		
 		
@@ -88,6 +98,19 @@
 							  		<hr class="style-one">
 					     </div>	
 			   		 </div>
+=======
+	<div class="container-fluid">		
+		
+			<div class="row">
+		    <div align="center" style="margin-top:70px">
+		  		<h2 class="form-name style_heading">Credit Customer List</h2>
+		  	</div>
+		    <div class="row" align="center">
+				<div class="hr-width">
+					<hr class="style-one">
+				</div>	
+			</div>
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 		</div>
 			    
 	<%
@@ -141,7 +164,7 @@
 					<td class="align"><%=sr.getAddress()%></td>
 					<td class="align"><%=sr.getZipCode()%></td>
 <%-- 					<td class="align"><button id="<%=sr.getPksuppid()%>" onclick="delcust(this.id);return false;">Delete</button></td> --%>
-					<td class="align"><i class="glyphicon glyphicon-trash" style="font-size:30px;margin-left:70px" id="<%=sr.getPksuppid()%>,<%=sr.getFirstName()%>,<%=sr.getLastName()%>" onclick="delcust(this.id);return false;"></i></td>										
+					<td class="align"><i class="glyphicon glyphicon-trash" id="<%=sr.getPksuppid()%>,<%=sr.getFirstName()%>,<%=sr.getLastName()%>" onclick="delcust(this.id);return false;"></i></td>										
 					
 				</tr>
 				<%
@@ -158,7 +181,12 @@
 	</div>
 	
 	<%-- <%@include file="commons/newFooter.jsp" %> --%>
+<<<<<<< HEAD
 	</div>
+=======
+
+	</div>	
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>
 

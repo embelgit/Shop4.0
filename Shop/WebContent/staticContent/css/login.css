@@ -37,7 +37,7 @@ h3.panel-title {
     height: 36px;
     padding: 4px 12px;
     border-radius: 8px;
-    border: 1px solid #df8222;
+    border: 1px solid #e2808f;
     font-size: 16px;
     /* line-height: 1.42857143; */
     color: #555;
@@ -50,7 +50,8 @@ h3.panel-title {
 }
 .panel-default>.panel-heading {
     color: #333;
-    background-color: #e59011;
+    /* background-color: #e59011; */
+    background: linear-gradient(45deg, #f55555, #fccf31);
     border-color: #eb7c0a;
 }
 .form-group {

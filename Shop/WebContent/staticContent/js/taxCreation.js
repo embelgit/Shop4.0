@@ -828,7 +828,8 @@ function taxFromSaleBetweenTwoDate(){
 	            
 		    	destroy: true,
 		        searching: false,
-		        
+		        "scrollX": true,
+		        "scrollY": 300,
 		      
 		columns: [
 		          			
@@ -986,7 +987,8 @@ function taxReportForPurchaseSingleDate()
 	            
 		    	destroy: true,
 		        searching: false,
-		        
+		        "scrollX": true,
+		        "scrollY": 300,
 		      
 		columns: [
 		          			{"data": "supplier", "width": "5%"},

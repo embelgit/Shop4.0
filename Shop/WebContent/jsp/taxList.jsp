@@ -15,12 +15,16 @@
     <script src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
 	<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
+<<<<<<< HEAD
 	<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 
 	
 	
 	
+=======
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">	
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 <html>
-	<head>
+<head>
 	
 		<title>Tax List</title>
 		
@@ -33,11 +37,19 @@
   			
   			
   		</script>
+<<<<<<< HEAD
 <!-- 		<style>
 .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
  {
     border-radius:23px;
+=======
+
+<style>
+.container-fluid {
+	overflow: hidden;
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 }
+<<<<<<< HEAD
 
 
 </style> -->
@@ -45,15 +57,19 @@
 .container-fluid {
 	overflow: hidden;
 }
+=======
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 </style>
-
-	</head>
+</head>
 
 	
 
 	<script type="text/javascript"> 
 		$(document).ready(function () {
-	         var table=$("#list").dataTable();
+	         var table=$("#list").dataTable({
+	        	 "scrollX": true,
+	        	 "scrollY": 300,
+	         });
 			 var tableTools = new $.fn.dataTable.TableTools(table, {
 				 'sSwfPath':'//cdn.datatables.net/tabletools/2.2.4/swf/copy_csv_xls_pdf.swf',
 				 	'aButtons':['copy','print','csv',{
@@ -68,20 +84,35 @@
 	</script>
 
 <body id="dt_example" style="min-height:300px;">
+<<<<<<< HEAD
 		<div class="container-fluid">	
+=======
+<div class="container-fluid">		
 		
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 		
-		<div class="row">
-				    <div align="center" style="margin-top:70px">
-				  		<h2 class="form-name style_heading">Tax List</h2>
-				  	</div>
+	<div class="row">
+	    <div align="center" style="margin-top:70px">
+	  		<h2 class="form-name style_heading">Tax List</h2>
+	  	</div>
+	</div>	
 				 	
+<<<<<<< HEAD
 			     <div class="row" align="center">
 					     <div class="hr-width">
 							  		<hr class="style-one">
 					     </div>	
 			   		 </div>
 		</div>
+=======
+     <div class="row" align="center">
+	     <div class="hr-width">
+	  		<hr class="style-one">
+	     </div>	
+	 </div>
+
+		
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 			    
 	<%
 	TaxCreationDao dao=new TaxCreationDao();
@@ -90,7 +121,11 @@
 	<div class="container">
 	<div class="row">
 	
+<<<<<<< HEAD
 	<div id="date"  align="right">
+=======
+	<div id="date" align="right">
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 		<label id="demo"></label>
 		<script>
 			var date = new Date();
@@ -137,8 +172,13 @@
 	<div class="row buttons-margin" align="center">
 		<input type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
 	</div>
+<<<<<<< HEAD
 	
 	</div>
+=======
+
+</div>	
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>
 </html>

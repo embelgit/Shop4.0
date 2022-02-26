@@ -45,7 +45,7 @@
 	 <script type="text/javascript" src="/Shop/staticContent/js/fertilizerBill.js"></script>
 	 <script type="text/javascript" src="/Shop/staticContent/js/customerDetails.js"></script>
 	 
-		  	
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">		  	
 <script type="text/javascript">
     function mypopup(url)
     {
@@ -496,77 +496,107 @@ function calrtn1(){
 </script>
 
 <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
+.container-fluid {
+	overflow: hidden;
 }
-.btn-mm {
+
+/* .nongstradio label {
     transition: all 0.2s ease;
-    background-color: white ;
-    border: 2px solid !important;
-    box-shadow: 0 3px  !important;
-    border-radius: 23px;
-    font-size:16;
-     width:79px;
-      height:30px;
-   
-     
+    background: red;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    border-radius: 10px;
+    font-size:16px;
+    width: 100px;
+    height: 35px;   
 }
 input[type="radio"] {
-     position: absolute;
-  visibility: hidden;
+    position: absolute;
+  	visibility: hidden;
 }
 input[type="radio"] + div {
     position: relative;
 }
-input[type="radio"]:checked + div {
-  background-color: #ffa500;
+.nongstradio input[type="radio"]:checked + div {
+  	background: #f79d2ead !important;
 }
-input[type="radio"]:checked + div>span {
-  color: white;
+.nongstradio input[type="radio"]:checked + div>span {
+  	color: white;
+  	background: orange;
 }
 input[type="radio"] + div>span {
-position: relative;
-top: 25%;}
+	position: relative;
+	top: 25%;
+} */
 
 .container-fluid {
 	overflow: hidden;
 	}
 
+
+.nongstradio input[type="radio"] {
+	position: absolute;
+	visibility: hidden;
+}
+.nongstradio input[type="radio"]:checked + div {
+    background: #f39c30;
+    border: none;
+}
+.nongstradio label {
+    display: inline-block;
+    max-width: 100%;
+    margin: 4px 8px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.nongstcreditradio {
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    background: #f79d2ead;
+    width: 150px;
+    text-align: center;
+}
+
 </style>
 </head>
 	
  <body onload="pageLoad();getProductName();getProductNameForCredit();"> 
+ <div class="container-fluid">
 <!-- <body onload="pageLoad();"> -->
 <div class="container-fluid">
 <br>
 	<div class="row">
-	<div class="col-10 col-md-6 col-lg-6 col-lg-offset-3">
-	<div class="row header_margin_top">
-			    <div align="center">
-					<h2 class="form-name style_heading">Non-GST Billing</h2>  		
-			  	</div>
-    </div>
-    </div>
-    </div>
- 	<p align="right"  style="font-size: 20px; padding-right: 150px" >Bill Number : <%=billNumber%></p>
-    <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+		<div class="row header_margin_top">
+		    <div align="center">
+				<h2 class="form-name style_heading">Non-GST Billing</h2>  		
+		  	</div>
+    	</div>
     </div>
     
-    <div class="container col-md-offset-5 " id="my_styles" >
-	<div class="textalign">
-   			 <label>
-       		    <input type="radio" checked name="customertype" value="Cash" id="customertype1" checked="checked"
-				onclick="openCashCustomerBilling();"> 
-                <div class="btn1 btn-mm text-center"><span>Cash</span></div> </label>
-             <label>
-        		<input type="radio" name="customertype" value="Credit" id="customertype2"
-				onclick="openCreditCustomerBilling();"> 
-                <div class="btn1 btn-mm text-center"><span>Credit</span></div></label>
-       </div>		
+    <div align="right">
+ 		<h3 class="billnumber">Bill Number : <%=billNumber%></h3>
+    </div>
+    
+    <div class="row" align="center">
+		<div class="hr-width">
+			<hr class="style-one">
+		</div>	
+    </div>
+    
+    <div class="container" id="my_styles" >
+		<div class="nongstradio" align="center">
+   			<label>
+       		 	<input type="radio" checked name="customertype" value="Cash" id="customertype1" checked="checked" onclick="openCashCustomerBilling();"> 
+                <div class="nongstcreditradio"><span>Cash</span></div>
+            </label>
+            <label>
+        		<input type="radio" name="customertype" value="Credit" id="customertype2" onclick="openCreditCustomerBilling();"> 
+                <div class="nongstcreditradio"><span>Credit</span></div>
+            </label>
+       	</div>		
 	 </div>
    	<!-------------------------------------------------------  CODE FOR Non-GST CUSTOMER  ---------------------------------------------->
 		
@@ -574,27 +604,29 @@ top: 25%;}
        <form class="form-horizontal" method="post" action="" name="fertiBill">
 			<fieldset>
 			
+			<div class="shopform-margin">
 			
 			
-			
-         <div class="row form-group" id="ccash">
-
- <div class="row form-group">
-			<label class="col-md-3 control-label" for="customerName">Firm Name</label>  
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
-							</span>
-<!--            		 			  <input id="customerName" name="customerName" placeholder="Cash Customer Name" class="form-control input-md" type="text" > -->
+    <div id="ccash">
+ 		<div class="row">
+			<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					<label class="control-label" for="customerName">Firm Name</label>  
+           		</div>
+           		<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-user"></i>
+						</span>
+<!--            	 			  <input id="customerName" name="customerName" placeholder="Cash Customer Name" class="form-control input-md" type="text" > -->
            		 								<%
 							CustomerDetailsDao daoaa = new CustomerDetailsDao();
            						List cust11 = daoaa.getAllcashCustomer(request);
 							%>
-							<input type="text" id="firmName" list="firmName_drop1" placeholder="Firm Name" class="form-control">
+						<input type="text" id="firmName" list="firmName_drop1" placeholder="Firm Name" class="form-control">
 							                                                                                                      <!-- onchange="custDetail.getVillageName()" custDetail.getContactNo();custDetail.getName() -->
-				         <datalist id="firmName_drop1">
-							<%
+				        <datalist id="firmName_drop1">
+						<%
 					           for(int i=0;i<cust11.size();i++){
 					        	   cashCustomerHibernate bean =(cashCustomerHibernate)cust11.get(i);
 							%>
@@ -603,16 +635,16 @@ top: 25%;}
 				      			}
 				    		%>
 						</datalist>
-           		 	
-           		 	
-           		 		</div>
-					</div></div>	
-			<label class="col-md-3 control-label" for="customerName">Customer Name</label>  
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
-							</span>
+           		 	</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+					<label class="control-label" for="customerName">Customer Name</label>  
+           		</div>
+           		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-user"></i>
+						</span>
 							
 							
 <!--          		 			  <input id="customerName" name="customerName" placeholder="Customer Name" class="form-control input-md" type="text" >  -->
@@ -620,71 +652,76 @@ top: 25%;}
 							CustomerDetailsDao daoa = new CustomerDetailsDao();
            						List cust1 = daoa.getAllcashCustomer(request);
 							%>
-							<input type="text" id="customerName" list="customerName_drop1" placeholder="Cash Customer Name" class="form-control" onchange="getVillageNamecash()">
+						<input type="text" id="customerName" list="customerName_drop1" placeholder="Cash Customer Name" class="form-control" onchange="getVillageNamecash()">
 							                                                                                                      <!-- onchange="custDetail.getVillageName()" custDetail.getContactNo();custDetail.getName() -->
-				         <datalist id="customerName_drop1">
+				        	<datalist id="customerName_drop1">
 							<%
 					           for(int i=0;i<cust1.size();i++){
 					        	   cashCustomerHibernate bean =(cashCustomerHibernate)cust1.get(i);
 							%>
-							<option data-value="<%=bean.getCustId()%>"><%=bean.getFirstName()%> <%=bean.getLastName()%></option>
+								<option data-value="<%=bean.getCustId()%>"><%=bean.getFirstName()%> <%=bean.getLastName()%></option>
 							<%
 				      			}
 				    		%>
-						</datalist>
-           		 	
-
-
-
-           		 		</div>
-					</div>
-
-					
-
-           	 <label class="col-md-2 control-label" for="village">Address </label>
-           	 	<div class="col-md-3">
+							</datalist>
+           			</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">		
+          			<label class="control-label" for="village">Address </label>
+           		</div>
+           		<div class="col-lg-3 col-md-3 col-sm-8">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="glyphicon glyphicon-map-marker"></i>
 						</span>
-         	   			  <input id="village" name="village" placeholder="Address" class="form-control input-md ac_district"  type="text">
-          		  	</div>
+         	   	  		<input id="village" name="village" placeholder="Address" class="form-control input-md ac_district"  type="text">
+          			</div>
 				</div>
-          </div>
-	  
-	  
-	           <div class="row form-group" id="ccredit">
-	                     <div class="row form-group">
-			<label class="col-md-3 control-label" for="customerName">Firm Name</label>  
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
-							</span>
+			</div>
+        </div>
+    </div>
+		  
+	<div id="ccredit">
+	    <div class="row">
+	        <div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+					<label class="control-label" for="customerName">Firm Name</label>  
+           		</div>
+           		<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-user"></i>
+						</span>
 <!--            		 			  <input id="customerName" name="customerName" placeholder="Cash Customer Name" class="form-control input-md" type="text" > -->
            		 								<%
            		 							CustomerDetailsDao daoa2 = new CustomerDetailsDao();
            		           						List custs11 = daoa2.getAllCustomer(request);
 							%>
-							<input type="text" id="CfirmName" list="CfirmName_drop1" placeholder="Firm Name" class="form-control">
+						<input type="text" id="CfirmName" list="CfirmName_drop1" placeholder="Firm Name" class="form-control">
 							                                                                                                      <!-- onchange="custDetail.getVillageName()" custDetail.getContactNo();custDetail.getName() -->
-				         <datalist id="CfirmName_drop1">
+					         <datalist id="CfirmName_drop1">
 							<%
 					           for(int i=0;i<custs11.size();i++){
 					        	   CustomerDetailsBean bean =(CustomerDetailsBean)custs11.get(i);
 							%>
-							<option data-value="<%=bean.getCustId()%>"><%=bean.getFirmname()%></option>
+								<option data-value="<%=bean.getCustId()%>"><%=bean.getFirmname()%></option>
 							<%
 				      			}
 				    		%>
-						</datalist>
+							</datalist>
            		 	
            		 	
-           		 		</div>
-					</div></div> 
-			<label class="col-md-3 control-label" for="creditcustomerName">Customer Name</label>  
-				 <div id="customerfresh">
-           			 <div class="col-md-3">
+           		 	</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+					<label class="control-label" for="creditcustomerName">Customer Name</label>  
+				</div>
+				<div id="customerfresh">
+           			<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
@@ -695,46 +732,55 @@ top: 25%;}
 							%>
 							<input type="text" id="creditcustomerName" list="customerName_drop" name="customerName" placeholder="Credit Customer Name" class="form-control" onchange="getVillageNamecredit()">
 							                                                                                                     
-				         <datalist id="customerName_drop">
+				        	<datalist id="customerName_drop">
 							<%
 					           for(int i=0;i<cust.size();i++){
 					        	   CustomerDetailsBean bean =(CustomerDetailsBean)cust.get(i);
 							%>
-							<option data-value="<%=bean.getCustId()%>"><%=bean.getFirstName()%> <%=bean.getLastName()%></option>
+								<option data-value="<%=bean.getCustId()%>"><%=bean.getFirstName()%> <%=bean.getLastName()%></option>
 							<%
 				      			}
 				    		%>
-						</datalist>
+							</datalist>
 							<span class="input-group-addon">
-							<button type="button" onclick="customerDetailsDivAction(1)">
-								 <span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
-							</button>
-						</span>
+								<button type="button" onclick="customerDetailsDivAction(1)">
+									<span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
+								</button>
+							</span>
 							
 <!--            		 			  <input id="customerName" name="customerName" placeholder="Customer Name" class="form-control input-md" type="text" > -->
            		 		</div>
 					</div>
-</div>					
-
-           	 <label class="col-md-2 control-label" for="village">Address </label>
-           	 	<div class="col-md-3">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">					
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					<label class="control-label" for="village">Address </label>
+           		</div>
+           		<div class="col-lg-3 col-md-3 col-sm-8">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="glyphicon glyphicon-map-marker"></i>
 						</span>
-         	   			  <input id="ccvillage" name="ccvillage" placeholder="Address" class="form-control input-md ac_district"  type="text">
-          		  	</div>
+         	   	  		<input id="ccvillage" name="ccvillage" placeholder="Address" class="form-control input-md ac_district"  type="text">
+          			</div>
 				</div>
-          </div>
+			</div>
+        </div>
+	</div>	  
 	  
-	  
-	  <div class="row form-group">
-			<label class="col-md-3 control-label" for="creditCustomerName"> Shop Name</label>  
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
-							</span>
+		<div class="row">
+			<div class="form-group">	
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+					<label class="control-label" for="creditCustomerName">Shop Name</label>  
+           		</div>
+           		<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-user"></i>
+						</span>
 									
 							<%
 								shopDetailsDao dao1 = new shopDetailsDao();
@@ -742,9 +788,9 @@ top: 25%;}
 							
 							%>
 							
-							<input id="shopId" name="shopId" value="<%=shopId%>" type="hidden" class="form-control" >
-							<input type="text" id="shopName" name="shopName" value="<%=shopName1%>" readonly="readonly" list="shop_drop1" class="form-control">
-						    <datalist id="shop_drop1">
+						<input id="shopId" name="shopId" value="<%=shopId%>" type="hidden" class="form-control" >
+						<input type="text" id="shopName" name="shopName" value="<%=shopName1%>" readonly="readonly" list="shop_drop1" class="form-control">
+					    <datalist id="shop_drop1">
 							
 							<%
 					           for(int i=0;i<shop.size();i++){
@@ -755,82 +801,99 @@ top: 25%;}
 				      			}
 				    		%>
 						</datalist>
-						</div>
 					</div>
-
-           	 <label class="col-md-2 control-label" for="gstNo">GST No</label>
-           	 	<div class="col-md-3">
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+					<label class="control-label" for="gstNo">GST No</label>
+           	 	</div>
+           	 	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">
 						<span class="input-group-addon">
-							No
+							<span class="glyphicon nogyphicon">No</span>
 						</span>
-         	   			  <input id="gstNo" name="gstNo"  placeholder="GST No" class="form-control input-md ac_district"  type="text">
+         	   		  	<input id="gstNo" name="gstNo"  placeholder="GST No" class="form-control input-md ac_district"  type="text">
           		  	</div>
 				</div>
-         </div>
+         	</div>
+        </div>
          
-	      <div class="row form-group">
-			<label class="col-md-3 control-label" for="contactNo">Contact No.</label>  
-           	 		<div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-earphone"></i>
-							</span>
-              				<input id="contactNo2" name="contactNo2" placeholder="Contact No" class="form-control input-md" type="text" maxlength="10">
-            			</div>
+	    <div class="row">
+	    	<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					<label class="control-label" for="contactNo">Contact No.</label>  
+           	 	</div>	
+           	 	<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-earphone"></i>
+						</span>
+              			<input id="contactNo2" name="contactNo2" placeholder="Contact No" class="form-control input-md" type="text" maxlength="10">
             		</div>
-			<label class="col-md-2 control-label" for="saleDate">Sale Date</label>  
-          					  <div class="col-md-3">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-calendar"></i>
-									</span>									
-	              					  <input type="date" id="saleDate" name="saleDate" value="<%=todayDate%>" placeholder="sale Date" class="form-control input-md">
-								</div>
-							</div>
+            	</div>
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+					<label class="control-label" for="saleDate">Sale Date</label>  
+          		</div>
+          		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="	glyphicon glyphicon-calendar"></i>
+						</span>									
+	            	  	<input type="date" id="saleDate" name="saleDate" value="<%=todayDate%>" placeholder="sale Date" class="form-control input-md">
+					</div>
+				</div>
 			</div>
+		</div>
 			
-			<div class="row form-group">
-              	<label class="col-md-3 control-label" for="productName">Barcode No:</label>  
-            			<div class="col-md-3">
-							<div class="input-group">
-									<span class="input-group-addon">
-										No
-									</span>           
-									 <input type="text" id="barcodeNo" name="barcodeNo" placeholder="Enter Barcode No" class="form-control input-md" onchange="getProductDetailsByProductNamefornonGSTbilling()">
-									 <!-- getProductDetailsByBarcodeNo() -->            				</div>
-        			  	</div> 
-        			  	 
-        			  	 <label class="col-md-2 control-label" for="email">Email ID</label>  
-          					  <div class="col-md-3">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-calendar"></i>
-									</span>									
-	              					  <input type="text" id="email" name="email" placeholder="Email ID" class="form-control input-md">
-								</div>
-							</div>
+		<div class="row">
+        	<div class="form-group">
+        		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+        	  		<label class="control-label" for="productName">Barcode No:</label>  
+            	</div>	
+            	<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">No</span>
+						</span>           
+					 	<input type="text" id="barcodeNo" name="barcodeNo" placeholder="Enter Barcode No" class="form-control input-md" onchange="getProductDetailsByProductNamefornonGSTbilling()">
+									 <!-- getProductDetailsByBarcodeNo() -->            				
+					</div>
+        		</div>       			  	 
+        		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+        			<label class="control-label" for="email">Email ID</label>  
+          		</div>			  
+          		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-calendar"></i>
+						</span>									
+	            	  	<input type="text" id="email" name="email" placeholder="Email ID" class="form-control input-md">
+					</div>
+				</div>
         			  	 
         			<!--  <label class="col-md-2 control-label" for="productName">Bill Type<sup>*</sup></label>   -->
-            			<div class="col-md-3">
-							<div class="input-group">
+            	<div class="col-md-3">
+					<div class="input-group">
 									<!-- <span class="input-group-addon">
 										No
 									</span>      -->      
-									 <input type="hidden" id="billtype" name="billtype" value="NoGST" class="form-control input-md">
-									 <!-- getProductDetailsByBarcodeNo() -->            				</div>
-        			  	</div>
-        	  </div>
+						 <input type="hidden" id="billtype" name="billtype" value="NoGST" class="form-control input-md">
+									 <!-- getProductDetailsByBarcodeNo() -->            				
+					</div>
+        		</div>
+        	</div>
+        </div>
         	 
 			
-        	 <div class="row form-group">
-              	<label class="col-md-3 control-label" for="productName">Product Name<sup>*</sup></label>  
-
-            			<div class="col-md-8">
-							<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-list-alt"></i>
-									</span>
+        <div class="row">
+        	<div class="form-group">
+        		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+        			<label class="control-label" for="productName">Product Name<sup>*</sup></label>  
+				</div>
+            	<div class="col-lg-8 col-md-8 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="	glyphicon glyphicon-list-alt"></i>
+						</span>
 									
 							<%-- <%
 							    ProductDetailsDao cdd = new ProductDetailsDao();
@@ -852,7 +915,7 @@ top: 25%;}
 					        	   
 					        	   
 					         %>
-									<option data-value="" value="<%=gpd.getProductName()%> => <%=gpd.getBarcodeNo()%> => <%=gpd.getCompanyName()%> => Stock => <%=gpd.getQuantity()%> => <%=gpd.getWeight()%> => <%=gpd.getUnit() %>  => <%=gpd.getSubCatId()%> => <%=gpd.getCatID()%> => <%=gpd.getUpdateDate()%> => <%=gpd.getPack_type()%> => <%=gpd.getProductId()%>">		         
+								<option data-value="" value="<%=gpd.getProductName()%> => <%=gpd.getBarcodeNo()%> => <%=gpd.getCompanyName()%> => Stock => <%=gpd.getQuantity()%> => <%=gpd.getWeight()%> => <%=gpd.getUnit() %>  => <%=gpd.getSubCatId()%> => <%=gpd.getCatID()%> => <%=gpd.getUpdateDate()%> => <%=gpd.getPack_type()%> => <%=gpd.getProductId()%>">		         
 <%-- 			main					<option data-value="" value="<%=gpd.getProduct()%> => <%=gpd.getBarcodeNo()%> => <%=gpd.getManufacturer()%> => Stock => <%=gpd.getQuantityDouble()%> => <%=gpd.getWeight()%> => <%=gpd.getUnitName() %>  => <%=gpd.getFkSubCatId()%> => <%=gpd.getFkCatId()%> => <%=gpd.getExpiryDate()%>"> --%>
 							
 							
@@ -865,46 +928,49 @@ top: 25%;}
 									
 						<!-- <select class="form-control" id="proName" name="proName" onchange="getProductDetailsByProductName()"></select> -->
             				</div>
-            			</div>
-        	  </div>  
+            	</div>
+       		</div>
+       	</div>  
         	          
-          <div class="table-responsive row" align="center" style="margin-left: 90px;width:1200px;">
-				<table id="list4" ></table>
+        <div class="table-responsive row" align="center" style="margin-left: 90px;width:1200px;">
+			<table id="list4" ></table>
 				<div id="jqGridPager"></div>
-		  </div>
+		</div>
 
           <div class="row form-group" >
           
           </div>
           
-          	<div class="row form-group" >
-					<div class="col-md-3 control-label">
-	           				<label for="paymentMode">Payment Mode</label>  
-	           		</div>
-	           		
-	           		<div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-										<i class="glyphicon glyphicon-usd"></i>
-								</span>
-	           					<select class="form-control" id="paymentMode">
-										<option value="cash">Cash</option>
-										<option value="UPI Payment">UPI Payment</option>										
-										<option value="cheque">Cheque</option>
-										<option value="card">Card</option>
-										<option value="neft">NEFT</option>
-								</select>	
-	           				</div>
-						</div>
-						<label class="col-md-2 control-label"  for="total" ><b>Total</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="totalWithExpense" placeholder="Total" readonly="readonly" class="form-control input-md" type="text" onchange="changeDisAndHamali();">
-	            			</div>
-	            		</div>
+	<div class="row">
+		<div class="form-group">		
+			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+	        	<label class="control-label" for="paymentMode">Payment Mode</label>  
+	        </div>
+	        <div class="col-lg-3 col-md-3 col-sm-8">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-usd"></i>
+					</span>
+	           		<select class="form-control" id="paymentMode">
+						<option value="cash">Cash</option>
+						<option value="UPI Payment">UPI Payment</option>										
+						<option value="cheque">Cheque</option>
+						<option value="card">Card</option>
+						<option value="neft">NEFT</option>
+					</select>	
+	           	</div>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+				<label class="control-label"  for="total"><b>Total</b></label>  
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<span class="glyphicon nogyphicon">Rs</span>
+					</span>
+	            	<input id="totalWithExpense" placeholder="Total" readonly="readonly" class="form-control input-md" type="text" onchange="changeDisAndHamali();">
+	            </div>
+	        </div>
 	 <!-- <script>
 		
 		$(document).ready(function(){
@@ -949,7 +1015,8 @@ top: 25%;}
 	   }).change();
 		});	
 		</script> -->					
-</div>  
+		</div>
+	</div>  
           <!-- 	<div class="row form-group" >
 
      			<div id="cheque_no" >
@@ -999,44 +1066,57 @@ top: 25%;}
 								</select>
 	            			</div> 
 	            		</div>-->
-	           <div class="row form-group">
-          	    <label class="col-md-3 control-label"  for="total" ><b>Remark</b></label>  
-			           	 <div class="col-md-3">
+	           	<div class="row">
+          	   		<div class="form-group">
+          	   			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+          	   				<label class="control-label" for="total"><b>Remark</b></label>  
+			           	</div>
+			           	<div class="col-md-3">
 							<div class="input-group">
 								
 	              				<!-- <input id="totalWithExpense" placeholder="Remark" class="form-control input-md" type="text" onchange="changeDisAndHamali();"> -->
-	            			<textarea id="description" name="description" class="form-control" placeholder="Enter Description" rows="3" cols="30"></textarea>
+	            				<textarea id="description" name="description" class="form-control" placeholder="Enter Description" rows="3" cols="30"></textarea>
 	            			</div>
 	            		</div>
+	            	</div>
+	            </div>
           		
-				 <label class="col-md-2 col-md-offset- control-label" for="discount" ><b>Discount Amt</b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group" style="margin-right: -70px;">
+          		<div class="row">
+          			<div class="form-group">
+				 		<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+				 			<label class="control-label" for="discount"><b>Discount Amt</b></label>  
+			           	</div>
+			           	<div class="col-lg-2 col-md-2 col-sm-4">
+							<div class="input-group">
 								<span class="input-group-addon">
-									Rs
+									<span class="glyphicon nogyphicon">Rs</span>
 								</span>
-	              				<input  id="discountAmount" name="discountAmount" placeholder="Disc Amt"  class="form-control input-md" type="text" onchange="discountCalculation()">
+	              				<input id="discountAmount" name="discountAmount" placeholder="Disc Amt" class="form-control input-md" type="text" onchange="discountCalculation()">
 	            			</div>
 	            		</div>
-	            		
-	            		<label class="col-md-1 control-label" for="discount" ><b></b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group" style="margin-left: -70px;">
+	            		<label class="control-label" for="discount" ><b></b></label>  
+			           	<div class="col-lg-2 col-md-2 col-sm-4">
+							<div class="input-group">
 								<span class="input-group-addon">
-									%
+									<span class="glyphicon percentage">%</span>
 								</span>
-	              				<input id="discount" name="discount" placeholder="Disc %" style=" width: 117px;" class="form-control input-md" type="text" readonly="readonly"/>
+	              				<input id="discount" name="discount" placeholder="Disc %" class="form-control input-md" type="text" readonly="readonly"/>
 	            			</div>
 	            		</div>
+	            	</div>
+	            </div>
 	            
-					
-					<label class="col-md-2 col-md-offset- control-label"  for="hamaliExpence" style="margin-top:9px" ><b>Labour Expenses</b></label>  
-			           	 <div class="col-sm-1" style="margin-top:9px">
+	            <div class="row">
+	            	<div class="form-group">
+	            		<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+	            			<label class="control-label" for="hamaliExpence"><b>Labour Expenses</b></label>  
+			           	</div>
+			           	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 							<div class="input-group"> 
 								<span class="input-group-addon" >
-									Rs
+									<span class="glyphicon nogyphicon">Rs</span>
 								</span>
-	              				<input id="hamaliExpence2" name="hamaliExpence2" style=" width: 271px;" placeholder="Labour Expenses" class="form-control input-md" type="text" onchange="hamaliExpenseAddingToGross()"/>
+	              				<input id="hamaliExpence2" name="hamaliExpence2" placeholder="Labour Expenses" class="form-control input-md" type="text" onchange="hamaliExpenseAddingToGross()"/>
 	            			</div>
 	            		</div>
 	            		<!-- <label  class="col-md-1" for="hamaliExpence" ><b></b></label>  
@@ -1049,54 +1129,68 @@ top: 25%;}
 	            			</div>
 	            		</div> -->
 					</div>
+				</div>
 
-          		<div class="row form-group">
-					<label class="col-md-offset-6  col-md-2 control-label"  for="grossTotal" style="padding-left: 116px;padding-top: 19px;"><h4><b>Gross Total</b></h4></label>  
-			           	 <div class="col-md-3">
+          		<div class="row">
+					<div class="form-group">	
+						<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+							<label class="control-label" for="grossTotal"><h4><b>Gross Total</b></h4></label>  
+			           	</div>
+			           	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 							<div class="input-group">
 								<span class="input-group-addon">
-									Rs
+									<span class="glyphicon nogyphicon">Rs</span>
 								</span>
 	              				<input readonly="readonly" id="grossTotal" name="grossTotal" placeholder="Gross Total" class="form-control input-md" type="text" style="font-size: 25px;  height: 55px;">
 	            			</div>
 	            		</div>
+	            	</div>
             	</div>
      	
-     	<div class="row form-group" style="padding-top: 35px;">
-					<label class="col-md-offset-6 col-md-2 control-label" style="padding-top: 20px;"><h4><b>Amount Received</b></h4></label>  
-			           	 <div class="col-md-3" style="padding-bottom: 10px;">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="amtrx1" name="amtrx1" placeholder="Amount Received" class="form-control input-md" type="text" style="font-size: 15px;  height: 55px;" onkeyup="calrtn1();">
-	            			</div>
-	            		</div>
+     	<div class="row">
+			<div class="form-group">
+				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+					<label class="control-label"><h4><b>Amount Received</b></h4></label>  
+			    </div>   	 
+			    <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	              		<input id="amtrx1" name="amtrx1" placeholder="Amount Received" class="form-control input-md" type="text" style="font-size: 15px;  height: 55px;" onkeyup="calrtn1();">
+	            	</div>
+	            </div>
+            </div>
+        </div>
             	
-            	<label class="col-md-offset-6 col-md-2 control-label" style="padding-top: 20px;"><h4><b>Change Return</b></h4></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input readonly="readonly" id="chnge1" name="chnge1" placeholder="Change Return" class="form-control input-md" type="text" style="font-size: 15px;  height: 55px;">
-	            			</div>
-	            		</div>
-            	
-            	</div>
-     	
-     	
-     		<div class="row form-group buttons_margin_top ">
-					<div align="center">
-						  
-						<input type="button" id="billingCashbtn" style="font-size: 20px;width: 150px;height: 54px;" class="btn btn-large btn-success button-height-width" name="billingCashbtn" onclick="nonGSTbillingV()" value="Save&Print Bill">
-           				<input type="reset" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-danger  button-height-width" id="save" name="btn" onclick="cancle()" value="Cancel">
-						<input type="button" id="btn" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock ">	
-		 	    <input   id="save" name="btn" style="width: 128px; height: 53px;font-size: 25" class="btn  btn-primary "  type="button"  onclick="pay()" value="Payment">        		            									
-					</div>
-			</div>	
-				</fieldset>
+       <div class="row">
+            <div class="form-group">
+            	<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">	
+            		<label class="control-label"><h4><b>Change Return</b></h4></label>  
+			    </div>
+			    <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input readonly="readonly" id="chnge1" name="chnge1" placeholder="Change Return" class="form-control input-md" type="text" style="font-size: 15px;  height: 55px;">
+	            	</div>
+	            </div>
+            </div>
+     	</div>
+    
+    </div>
+    </fieldset>
 				</form>
+     	
+     	<div class="row buttons-margin" align="center">
+			<input type="button" id="billingCashbtn" class="btn gstbilling btn-large btn-success button-height-width" name="billingCashbtn" onclick="nonGSTbillingV()" value="Save&Print Bill">
+           	<input type="reset" class="btn gstbilling btn-large btn-danger button-height-width" id="save" name="btn" onclick="cancle()" value="Cancel">
+			<input type="button" id="btn" class="btn gstbilling btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock ">	
+		 	<input id="save" name="btn" class="btn gstbilling btn-primary" type="button" onclick="pay()" value="Payment">        		            									
+		</div>	
+		
+				
        </div>
        
        <!-- ====================================================== CUSTOMER DETAILS POP UP ================================================================ -->
@@ -1218,5 +1312,9 @@ top: 25%;}
 
 <!-- ====================================================== END CUSTOMER DETAILS POP UP ================================================================ -->
 </div>
+<<<<<<< HEAD
  </body>
+=======
+</body>
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 <jsp:include page="commons/footer.jsp"></jsp:include>

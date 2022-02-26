@@ -34,14 +34,35 @@
 <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.print.min.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"> 
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
+
+
+
+
+<link href="/Shop/WebContent/staticContent/css/dataTa.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/Shop/staticContent/css/dataTables.jqueryui.min.css"  rel="stylesheet" type="text/css" media="all">
+	<link rel="stylesheet" href="/Shop/staticContent/css/tabDemo.css">
+ 	<link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css">
+    
+    <script src="/Shop/staticContent/js/jquery.min.js"></script>
+    <script src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
+	<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>	
+
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
+.container-fluid {
+	overflow: hidden;
 }
-
-
-
+table.table.table-bordered.table-striped.table-condensed.cf.dataTable {
+    width: 100% !important;
+}
+.dataTables_scrollFootInner {
+    width: 100% !important;
+}
+.dataTables_scrollFoot.ui-state-default {
+    width: 100% !important;
+}
 </style>
 </head>
 <script src="/Shop/staticContent/js/saleReports.js"></script>
@@ -58,17 +79,18 @@
 
 <body>
 <div class="container-fluid" > 
-<div class="row" style="min-height:300px;">
-    <div  class="col-md-12">
-        <h3>Left Tabs</h3>
-        <hr/>
-        <div class="col-md-2">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#saleGSTReturnReport" data-toggle="tab"  style=" border-radius:23px;">Sale GST Return</a></li>
-                <li><a href="#purchaseGSTReturnReport" data-toggle="tab"  style=" border-radius:23px;">Purchase GST Return</a></li>
-           </ul>
-        </div>
-				<div class="col-xs-9">
+	<div class="row" style="min-height:300px;">
+    	<div  class="col-md-12">
+       <!--  <h3>Left Tabs</h3>
+        <hr/> -->
+        	<div class="gstreturn">
+            	<ul class="nav nav-tabs">
+                	<li class="active"><a href="#saleGSTReturnReport" data-toggle="tab">Sale GST Return</a></li>
+                	<li><a href="#purchaseGSTReturnReport" data-toggle="tab">Purchase GST Return</a></li>
+           		</ul>
+        	</div>
+			
+			<div class="">
 					<!-- Tab panes -->
 					<div class="tab-content">
 
@@ -80,73 +102,72 @@
 				  <h2 class="form-name style_heading">GST Return</h2>
 			</div>
 				 	
-			 <div class="row">
-				<div class="col-sm-offset-1 col-md-10">
-						<hr style="border-top-color:#c1b1b1;">
+			 <div class="row" align="center">
+				<div class="hr-width">
+					<hr class="style-one">
 				</div>	
-			  </div>
+			 </div>
 		</div>	 
 		
-		
- 	 <ul class="nav nav-tabs">
-	   <!-- <li><a data-toggle="tab" href="#purchaseGSTReturnReport"><h4 style="color:blue">Datewise</h4></a></li> -->
-	    <li class="active"><a data-toggle="tab" href="#saleGSTReturnReport" style=" border-radius:23px;"><h4>Range</h4></a></li>
-	     <!-- <li><a data-toggle="tab" href="#twoYears"><h4 style="color:blue">Between Two Years</h4></a></li> -->
- 	 </ul>
+		<div class="gstrange">
+		 	 <ul class="nav nav-tabs">
+			   <!-- <li><a data-toggle="tab" href="#purchaseGSTReturnReport"><h4 style="color:blue">Datewise</h4></a></li> -->
+			 	<li class="active"><a data-toggle="tab" href="#saleGSTReturnReport">Range</a></li>
+			     <!-- <li><a data-toggle="tab" href="#twoYears"><h4 style="color:blue">Between Two Years</h4></a></li> -->
+		 	 </ul>
+		</div>
  
- 	<div class="tab-content" style="float: left">
+ 	<div class="tab-content">
    
      
- 																			<!-- SALE GST RETURN REPORTS BETWEEN TEWO DATES-->
+<!-------------------------------------------------- SALE GST RETURN REPORTS BETWEEN TEWO DATES Starts Here -------------------------------------------------->
  																			
  	<div id="saleGSTReturnReport" class="tab-pane fade in active">
  		<div class="row"></div>
  				 <form class="form-horizontal" method="post" action="" name="saleGstReturn">
 					<fieldset>
 					
-
-					
-					
-					<div class="row form-group" style="margin-top: 20px">
-							<label class="col-md-3 control-label" for=""> Start Date:<sup>*</sup></label>  
-				           			 <div class="col-md-2 Col-sm-offset-0">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="glyphicon glyphicon-calendar"></i>
-											</span>
-				           		 			  <input type="date" id="saleGstFisDate1" placeholder="Start Date" class="form-control input-md" type="text" >
-				           		 		</div>
-									</div>
-				
-				           	 <label class="col-md-3 control-label" for="">End Date:<sup>*</sup></label>
-				           	 	<div class="col-md-2 Col-sm-offset-0">
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="glyphicon glyphicon-calendar"></i>
-										</span>
-				         	   			  <input type="date" id="saleGstEndDate1" placeholder="End Date" class="form-control input-md ac_district"  type="text">
-				          		  	</div>
-								</div>
- 				          </div>
- 					<div class="row form-group" style="padding-top: 3%"> 
-				     <div class="col-md-2 Col-sm-offset-5">
-						<div class="input-group">
-								<!-- <input type="button" style="align:center"  id="btn" name="save" class="btn btn-lg btn-success btn-md button_hw button_margin_right" onclick="gstSummaryReportRange();gstPurchaseSummaryReportRange()" value="Search"/> -->
-								<input type="button" 
-								id="btn" name="save" class="btn  btn-success " style="height:38px; width: 121px; font-size: 18" 
-								onclick="saleGSTReturnReportValidation()" value="Search"/>
+			<div class="shopform-margin">
+				<div class="row">
+					<div class="form-group">
+						<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+							<label class="control-label" for=""> Start Date:<sup>*</sup></label>  
+				        </div>   	
+				        <div class="col-lg-3 col-md-3 col-sm-8">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="glyphicon glyphicon-calendar"></i>
+								</span>
+				        	  	<input type="date" id="saleGstFisDate1" placeholder="Start Date" class="form-control input-md" type="text" >
+				           	</div>
 						</div>
-					</div>
-					</div>					
+						<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+				           	 <label class="control-label" for="">End Date:<sup>*</sup></label>
+				        </div>
+				        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="glyphicon glyphicon-calendar"></i>
+								</span>
+				        	 	<input type="date" id="saleGstEndDate1" placeholder="End Date" class="form-control input-md ac_district"  type="text">
+				          	</div>
+						</div>
+ 				    </div>
+ 				</div>
+ 			</div>
+ 			    
+ 				<div class="row buttons-margin" align="center"> 
+								<!-- <input type="button" style="align:center"  id="btn" name="save" class="btn btn-lg btn-success btn-md button_hw button_margin_right" onclick="gstSummaryReportRange();gstPurchaseSummaryReportRange()" value="Search"/> -->
+					<input type="button" id="btn" name="save" class="btn btn-success" onclick="saleGSTReturnReportValidation()" value="Search"/>
+				</div>
+				
+										
 					
-					<div class="row" style="padding-top:5%">
-					<div class="col-md-9 col-md-offset-1" align="center" >
-			 		<h2  class="form-name style_heading">Sale</h2> 
-			 		<br/>
-			 		</div>
+					<div class="row" align="center">
+						<h2  class="form-name style_heading">Sale</h2> 
 			 		</div>
 			 		
-			 		<div class="table-responsive" style="padding-top:5%">
+			 		<div id="demo_jui">
 					<table class= "table table-bordered table-striped table-condensed cf" id="gstSummary" class="display " >
 						<thead>
 								<tr>
@@ -173,7 +194,10 @@
 				</fieldset>
 				</form>
  		</div>
- 																			<!-- PURCHASE GST RETURN REPORTS BETWEEN TEWO DATES-->
+
+<!-------------------------------------------------- SALE GST RETURN REPORTS BETWEEN TWO DATES Ends Here -------------------------------------------------->
+
+<!-------------------------------------------------- PURCHASE GST RETURN REPORTS BETWEEN TEWO DATES Starts Here -------------------------------------------------->
 					
 <!-- 	<div id="purchaseGSTReturnReport" class="tab-pane fade in active"> -->
 	<div id="purchaseGSTReturnReport" class="tab-pane">
@@ -181,17 +205,17 @@
  				 <form class="form-horizontal" method="post" action="" name="purchaseGstReturn">
 					<fieldset>
 					
-					
-					
-					
-										
-				<div class="row form-group">
-        	        <label class="col-md-3 control-label" for="supplier">Supplier Name<sup>*</sup></label>  
-          					  <div class="col-md-3">
-								<div class="input-group" id="goodrrrr">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-user"></i>
-									</span>
+		<div class="shopform-margin">									
+			<div class="row">
+        		<div class="form-group">
+        			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+        				<label class="control-label" for="supplier">Supplier Name<sup>*</sup></label>  
+          			</div>	
+          			<div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group" id="goodrrrr">
+							<span class="input-group-addon">
+								<i class="	glyphicon glyphicon-user"></i>
+							</span>
 									
 							
 										
@@ -213,63 +237,61 @@
 					        	   SupplierDetailsBean sup =(SupplierDetailsBean)sList.get(i);
 							%>
 		
-							<option data-value="<%=sup.getSupId()%>" value="<%=sup.getDealerName() %>">
+								<option data-value="<%=sup.getSupId()%>" value="<%=sup.getDealerName() %>">
 							<%
 				      			}
 				    		%>
-						</datalist>
-
-					</div>
-					
-           		</div>
-                  		
-			</div>
-					
-					
-					
-					<div class="row form-group" style="margin-top: 30px">
-							<label class="col-md-3 control-label" for=""> Start Date:<sup>*</sup></label>  
-				           			 <div class="col-md-3 Col-sm-offset-0">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="glyphicon glyphicon-calendar"></i>
-											</span>
-				           		 			  <input type="date" id="purchaseGstFisDate1" placeholder="Start Date" class="form-control input-md" type="text" >
-				           		 		</div>
-									</div>
-				
-				           	 <label class="col-md-2 control-label" for="">End Date:<sup>*</sup></label>
-				           	 	<div class="col-md-3 Col-sm-offset-0">
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="glyphicon glyphicon-calendar"></i>
-										</span>
-				         	   			  <input type="date" id="purchaseGstEndDate1" placeholder="End Date" class="form-control input-md ac_district"  type="text">
-				          		  	</div>
-								</div>
-				          </div>
- 					<div class="row form-group" style="padding-top: 3%"> 
-				     <div class="col-md-2 Col-sm-offset-5">
-						<div class="input-group">
-								<!-- <input type="button" style="align:center"  id="btn" name="save" class="btn btn-lg btn-success btn-md button_hw button_margin_right" onclick="gstSummaryReportRange();gstPurchaseSummaryReportRange()" value="Search"/> -->
-								<input type="button"  id="btn" name="save" class="btn  btn-success " style="height: 38px; width: 121px;font-size: 18"
-								onclick="purchaseGSTReturnReportValidation()" value="Search"/>
+							</datalist>
 						</div>
 					</div>
+					<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+						<label class="control-label" for=""> Start Date:<sup>*</sup></label>  
+				    </div>
+				    <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-calendar"></i>
+							</span>
+				           	<input type="date" id="purchaseGstFisDate1" placeholder="Start Date" class="form-control input-md" type="text" >
+				        </div>
 					</div>
+               	</div>
+			</div>		
+					
+					
+			<div class="row">
+				<div class="form-group">			
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+				    	<label class="control-label" for="">End Date:<sup>*</sup></label>
+				    </div>    
+				    <div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-calendar"></i>
+							</span>
+				    	  	<input type="date" id="purchaseGstEndDate1" placeholder="End Date" class="form-control input-md ac_district"  type="text">
+				        </div>
+					</div>
+				 </div>
+			</div>
+		
+		</div>
+			
+ 			<div class="row buttons-margin" align="center"> 
+								<!-- <input type="button" style="align:center"  id="btn" name="save" class="btn btn-lg btn-success btn-md button_hw button_margin_right" onclick="gstSummaryReportRange();gstPurchaseSummaryReportRange()" value="Search"/> -->
+				<input type="button" id="btn" name="save" class="btn btn-success" onclick="purchaseGSTReturnReportValidation()" value="Search"/>
+			</div>
 					
 					<!-- <div class="col-md-10" align="center">
 			 		<h3 align="center" class="form-name style_heading">Purchase</h3> 
 					<table class= "table table-bordered table-striped table-condensed cf" id="purchaseGSTReturnReport" class="display table table-boardered"" style=" border: 2px solid black;border-collapse: collapse;">
 						<thead> -->
 						
-					<div class="row"style="padding-top:5%">
-						<div class="col-md-9 col-md-offset-1" align="center" >
-			 		<h2  class="form-name style_heading">Purchase</h2>
-			 		<br/>
+					<div class="row" align="center">
+						<h2  class="form-name style_heading">Purchase</h2>
 			 		</div>
-			 		</div>
-			 		<div class="table-responsive" style="padding-top:5%">
+			 		
+			 		<div id="demo_jui">
 					<table class= "table table-bordered table-striped table-condensed cf" id="purchaseGSTReturnReportDataTableId" class="display" >
 						<thead>
 							<tr>
@@ -296,7 +318,7 @@
 				</fieldset>
 				</form>
 					</div>
- 		
+<!-------------------------------------------------- PURCHASE GST RETURN REPORTS BETWEEN TEWO DATES Ends Here --------------------------------------------------> 		
  		
 <!--  <!------ Yearly ------>
  		
@@ -309,5 +331,8 @@
  	</div>
  </div>
  
+		</div> 
+	</div>
+</div>
  <jsp:include page="commons/footer.jsp"></jsp:include>
- </div>
+ 

@@ -63,17 +63,19 @@
 <link rel="stylesheet"
 	href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
 
+
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
+
 <script src="/Shop/staticContent/js/saleReports.js">
 	function cancle() {
 		location.reload()
 	}
 </script>
 <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
+.container-fluid {
+	overflow: hidden;
 }
-.pagination {
+/* .pagination {
     float: right !important;
 }
 .pagination a{
@@ -87,20 +89,22 @@
 .pagination span{
     font-weight: 700;
     font-size: 16px;
-}
+} */
 
 </style>
 </head>
 <body>
+	<div class="container-fluid">
+	
 				<div class="tab-pane active" id="home">
 					<div class="row">
-						<div align="center" style="padding-top: 2%;">
+						<div align="center" style="margin-top: 70px">
 							<h2 class="form-name style_heading">Product Transfer Reports</h2>
 						</div>
 
-						<div class="row">
-							<div class="col-sm-offset-1 col-md-10">
-								<hr style="border-top-color: #c1b1b1;">
+						<div class="row" align="center">
+							<div class="hr-width">
+								<hr class="style-one">
 							</div>
 						</div>
 					</div>
@@ -112,49 +116,42 @@
 						
 						<div id="supplierBetweenTwoDate">
 
-
-
 							<form class="form-horizontal" method="post" action="" name="saleReportFormRange">
 								<fieldset>
-									<div class="row form-group" style="margin-top: 30px">
-
-									<div class="row form-group" >
-										<label class="col-md-3 control-label" for="customerName">
-											Start Date:<sup>*</sup>
-										</label>
-										<div class="col-md-3">
+							<div class="shopform-margin">
+								
+								<div class="row">
+									<div class="form-group" >
+										<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+											<label class="control-label" for="customerName">Start Date:<sup>*</sup></label>
+										</div>
+										<div class="col-lg-3 col-md-3 col-sm-8">
 											<div class="input-group">
-												<span class="input-group-addon"> <i
-													class="glyphicon glyphicon-calendar"></i>
+												<span class="input-group-addon">
+													<i class="glyphicon glyphicon-calendar"></i>
 												</span> 
-												<input type="date" id="fisDate" placeholder="Start Date"
-													class="form-control input-md" type="text">
+												<input type="date" id="fisDate" placeholder="Start Date" class="form-control input-md" type="text">
 											</div>
 										</div>
-
-										<label class="col-md-2 control-label" for="endDate">End	Date:<sup>*</sup>
-										</label>
-										<div class="col-md-3">
+										<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+											<label class="control-label" for="endDate">End Date:<sup>*</sup></label>
+										</div>
+										<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 											<div class="input-group">
-												<span class="input-group-addon"> <i
-													class="glyphicon glyphicon-calendar"></i>
+												<span class="input-group-addon">
+													<i class="glyphicon glyphicon-calendar"></i>
 												</span> 
-												<input type="date" id="endDate" placeholder="End Date"
-													class="form-control input-md ac_district" type="text">
+												<input type="date" id="endDate" placeholder="End Date" class="form-control input-md ac_district" type="text">
 											</div>
 										</div>
 									</div>
+								</div>
 
-									<div class="row form-group" style="padding-top:2%">
-										<div class="col-md-2 col-md-offset-5">
-											<div class="input-group">
-												<input type="button" id="btn" name="save" class="btn  btn-success " style="height: 38px; width: 121px;font-size: 18"
-													   onclick="producttxReportBetweenTwoDates()"
-													value="Search" />
-											</div>
-										</div>
-									</div>
-										<div class="container">
+							<div class="row buttons-margin" align="center">
+								<input type="button" id="btn" name="save" class="btn btn-success" onclick="producttxReportBetweenTwoDates()" value="Search" />
+							</div>
+									
+										<div class="prodsearmargin">
 <!-- 									<div class="table-responsive" style="padding-top:2%"> -->
 										<table
 											class="table table-bordered table-striped table-condensed cf"
@@ -177,26 +174,28 @@
 
 											
 										</table>
-										<div class="pagination-page">
+										
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
 									</div>
 									<!-- </div> -->
 									</div>
@@ -206,9 +205,6 @@
 							</div>
 						</div>
 				
-
-				
-
-
+	</div>
 </body>
 </html>

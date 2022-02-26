@@ -54,99 +54,101 @@
 <link rel="stylesheet" href="/Fertilizer/staticContent/datatable_To_Other_File/jquery.dataTables.min.css"> 
 <link rel="stylesheet" href="/Fertilizer/staticContent/datatable_To_Other_File/buttons.dataTables.min.css">  -->
 <script src="/Shop/staticContent/js/profitAndLoss.js"></script>
+
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
+.container-fluid {
+	overflow: hidden;
 }
-
-
 </style>
 </head>
 
 <script type="text/javascript">
 </script>
- <div class="container"> 
+<div class="container-fluid"> 
  		
  		<div class="row">
 			<div align="center" style="margin-top: 75px">
 				  <h2 class="form-name style_heading">Profit & Loss Reports</h2>
 			</div>
 				 	
-			 <div class="row">
-				<div class="col-sm-offset-1 col-md-10">
-						<hr style="border-top-color:#c1b1b1;">
+			 <div class="row" align="center">
+				<div class="hr-width">
+					<hr class="style-one">
 				</div>	
-			  </div>
+			 </div>
 		</div>
 		 
 <!--  	<div class="tab-content" style="float: left"> -->
  		
-				 <!---------------------------- 2.BETWEEN TWO DATE	------------------------------>
+<!---------------------------- 2.BETWEEN TWO DATE	------------------------------>
  		
- 		<div id="twoDates" class="tab-pane " class="table-responsive">
+	<div id="twoDates" class="tab-pane " class="table-responsive">
  		<div class="row"></div>
- 				<form class="form-horizontal" method="post" action="" name="fertiBill">
-					<fieldset>
-				         <div class="row form-group" style="margin-top: 30px">
-							<label class="col-md-3 control-label" for=""> Start Date:<sup>*</sup></label>  
-				           			 <div class="col-md-3">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="glyphicon glyphicon-calendar"></i>
-											</span>
-				           		 			  <input type="date" name="fisDate2" id="fisDate2" placeholder="Start Date" class="form-control input-md" type="text" >
-				           		 		</div>
-									</div>
-				
-				           	 <label class="col-md-2 control-label" for="">End Date:<sup>*</sup></label>
-				           	 	<div class="col-md-3">
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="glyphicon glyphicon-calendar"></i>
-										</span>
-				         	   			  <input type="date" name="endDate2" id="endDate2" placeholder="End Date" class="form-control input-md ac_district"  type="text">
-				          		  	</div>
-								</div>
-				          </div>
-					  
-				      		 <div class="row form-group buttons_margin_top ">
-									<div align="center">
-												  
-										<input type="button"  id="btn" name="save" class="btn  btn-success "  style="height: 38px; width: 121px;font-size: 18"
-										onclick="profitAndLossBetweenTwoDatesValidate()" value="Search"/>
-																						     									
-									</div>
-							</div >	
+ 			<form class="form-horizontal" method="post" action="" name="fertiBill">
+				<fieldset>
+			    <div class="shopform-margin">    
+			        <div class="row">
+						<div class="form-group">
+							<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+								<label class="control-label" for="">Start Date:<sup>*</sup></label>  
+				           	</div>
+				           	<div class="col-lg-3 col-md-3 col-sm-8">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+				           		  	<input type="date" name="fisDate2" id="fisDate2" placeholder="Start Date" class="form-control input-md" type="text" >
+				           		 </div>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+					           	 <label class="control-label" for="">End Date:<sup>*</sup></label>
+				           	</div>
+				           	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+				         	   	  	<input type="date" name="endDate2" id="endDate2" placeholder="End Date" class="form-control input-md ac_district"  type="text">
+				          		</div>
+							</div>
+				     	</div>
+					</div>  
+			</div>
+				      	
+				    <div class="row buttons-margin" align="center">
+						<input type="button" id="btn" name="save" class="btn btn-success" onclick="profitAndLossBetweenTwoDatesValidate()" value="Search"/>
+					</div >	
 							
 						<!-- <table class= "table table-bordered table-striped table-condensed cf" id="profitAndLossBetweenTwoDates" class="display"> -->
-						<div class="table-responsive" style="padding-top:2%">
-						<table class= "table table-bordered table-striped table-condensed cf" class="display">
+					
+					<div class="table-responsive" style="padding-top:2%">
+						<table class="table table-bordered table-striped table-condensed cf" class="display">
 						<thead>
-							<tr>
-								<th style="color: black">Expense Name</th>
-								<th style="color: black">Amount (Rs.)</th>
+							<tr style="">
+								<th style="color: black; text-align: center">Expense Name</th>
+								<th style="color: black; text-align: center">Amount (Rs.)</th>
 							</tr>
 							<tr>
-								<th>Purchase</th>
+								<th style="text-align: center">Purchase</th>
 								<th><input style="background: #f0f0f0; border: 2px;" id="purchaseAmount" type="text" readonly="readonly"/></th>
 							</tr>
 							<tr>
-								<th>Transport and Labour Expanse</th>
+								<th style="text-align: center">Transport and Labour Expanse</th>
 								<th><input style="background: #f0f0f0; border: 2px;" id="tAndLExpense" type="text" readonly="readonly"/></th>
 							</tr>
 							<tr>
-								<th>Other Expenses</th>
+								<th style="text-align: center">Other Expenses</th>
 								<th><input style="background: #f0f0f0; border: 2px;" id="otherExpense" type="text" readonly="readonly"/></th>
 							</tr>
 						</thead>
 						<thead>
 							<tr>
-								<th style="color: black">Sale</th>
+								<th style="color: black;text-align: center">Sale</th>
 								<th></th>
 							</tr>
 							<tr>
-								<th>Total sale</th>
+								<th style="text-align: center">Total sale</th>
 								<th><input style="background: #f0f0f0; border: 2px;" id="totalSaleAmount" type="text" readonly="readonly"/></th>
 							</tr>
 						</thead>

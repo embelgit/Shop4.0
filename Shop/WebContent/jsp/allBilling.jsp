@@ -44,11 +44,15 @@
      
 	 <script type="text/javascript" src="/Shop/staticContent/js/fertilizerBill.js"></script>
 	 <script type="text/javascript" src="/Shop/staticContent/js/customerDetails.js"></script>
+<<<<<<< HEAD
 	 
 	<!--  <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> -->
 	 
 	 
 	 
+=======
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 	 
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 		  	
 <script type="text/javascript">
     function mypopup(url)
@@ -595,21 +599,19 @@ function calrtn1(){
 </script>
 
 <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
+.container-fluid {
+	overflow: hidden;
 }
-.btn-mm {
+
+/* .btn-mm {
     transition: all 0.2s ease;
     background-color: white ;
     border: 2px solid !important;
     box-shadow: 0 3px  !important;
     border-radius: 23px;
     font-size:16;
-     width:79px;
-      height:30px;
-   
-     
+    width:79px;
+    height:30px;    
 }
 input[type="radio"] {
      position: absolute;
@@ -627,7 +629,32 @@ input[type="radio"]:checked + div>span {
 input[type="radio"] + div>span {
 position: relative;
 top: 25%;}
-
+ */
+ 
+.gstradio input[type="radio"] {
+	position: absolute;
+	visibility: hidden;
+}
+.gstradio input[type="radio"]:checked + div {
+    background: #f39c30;
+    border: none;
+}
+.gstradio label {
+    display: inline-block;
+    max-width: 100%;
+    margin: 4px 8px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.gstcashradio {
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    background: #f79d2ead;
+    width: 150px;
+    text-align: center;
+}
 
 .container-fluid {
 	overflow: hidden;
@@ -640,48 +667,65 @@ top: 25%;}
  <body onload="pageLoad();getProductName();getProductNameForCredit();"> 
 <!-- <body onload="pageLoad();"> -->
 <div class="container-fluid">
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 <br>
 
 
 	<div class="row">
+<<<<<<< HEAD
     <div class="col-10 col-md-6 col-lg-6 col-lg-offset-3">
 	<div class="row header_margin_top">
+=======
+		<div class="col-10 col-md-6 col-lg-6 col-lg-offset-3">
+			<div class="row header_margin_top">
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 			    <div align="center">
 					<h2 class="form-name style_heading">GST Billing</h2>  		
 			  	</div>
+    		</div>
+    	</div>
     </div>
-    </div>
-    </div>
- 	<p align="right"  style="font-size: 20px; padding-right: 150px" >Bill Number : <%=billNumber%></p>
-    <div class="row">
-		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
-		     </div>	
+ 	
+ 	<div align="right">
+ 		<h3 class="billnumber">Bill Number : <%=billNumber%></h3>
     </div>
     
-     <!---------------------------------------------------Cash and Credit Button--------------------------------------------------------------> 
+    <div class="row" align="center">
+	    <div class="hr-width">
+			<hr class="style-one">
+	    </div>	
+    </div>
+    
+<!-------------------------------------------------- Cash and Credit Button Starts Here --------------------------------------------------> 
 				
-	<div class="container col-md-offset-5 " id="my_styles" >
-	<div class="textalign">
+	<div class="container" id="my_styles" >
+		<div class="gstradio" align="center">
    			 <label>
        		    <input type="radio" checked name="customertype" id="customertype" checked="checked"
 					   onclick="openCashCustomerBilling()" > 
-                <div class="btn1 btn-mm text-center"><span>Cash</span></div> </label>
+                <div class="gstcashradio"><span>Cash</span></div>
+             </label>
              <label>
         		<input type="radio" name="customertype" id="customertype"
 					   onclick="openCreditCustomerBilling()"> 
-                <div class="btn1 btn-mm text-center"><span>Credit</span></div></label>
+                <div class="gstcashradio"><span>Credit</span></div>
+             </label>
        </div>		
 	 </div>
+<!-------------------------------------------------- Cash and Credit Button Ends Here -------------------------------------------------->
 	              	
-		<!-------------------------------------------------------  CODE FOR CASH CUSTOMER  ---------------------------------------------->
+<!-------------------------------------------------- CODE FOR CASH CUSTOMER Starts Here -------------------------------------------------->
 		
      <div id="CashCustDetail" style="padding-top:2%">
-       <form class="form-horizontal" method="post" action="" name="fertiBill">
+       	<form class="form-horizontal" method="post" action="" name="fertiBill">
 			<fieldset>
+		<div class="shopform-margin">
 
+<<<<<<< HEAD
 
 
            			
@@ -693,14 +737,26 @@ top: 25%;}
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
 							</span>
+=======
+        <div class="row">
+			<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					<label class="control-label" for="customerName">Firm Name</label>  
+           		</div>
+           		<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-user"></i>
+						</span>
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 <!--            		 			  <input id="customerName" name="customerName" placeholder="Cash Customer Name" class="form-control input-md" type="text" > -->
            		 								<%
 							CustomerDetailsDao daoaa = new CustomerDetailsDao();
            						List cust11 = daoaa.getAllcashCustomer(request);
 							%>
-							<input type="text" id="firmName" list="firmName_drop1" placeholder="Firm Name" class="form-control" >
-							                                                                                                      <!-- onchange="custDetail.getVillageName()" custDetail.getContactNo();custDetail.getName() -->
-				         <datalist id="firmName_drop1">
+						<input type="text" id="firmName" list="firmName_drop1" placeholder="Firm Name" class="form-control" >
+				            <!-- onchange="custDetail.getVillageName()" custDetail.getContactNo();custDetail.getName() -->
+				        <datalist id="firmName_drop1">
 							<%
 					           for(int i=0;i<cust11.size();i++){
 					        	   cashCustomerHibernate bean =(cashCustomerHibernate)cust11.get(i);
@@ -709,26 +765,30 @@ top: 25%;}
 							<%
 				      			}
 				    		%>
-						</datalist>
-           		 	
-           		 	
-           		 		</div>
-					</div></div>		
-         <div class="row form-group">
-			<label class="col-md-3 control-label" for="customerName">Customer Name</label>  
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
-							</span>
+						</datalist>         		 	
+           		 	</div>
+				</div>
+			</div>
+		</div>
+				
+        <div class="row">
+			<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					<label class="control-label" for="customerName">Customer Name</label>  
+           		</div>	 
+           		<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-user"></i>
+						</span>
 <!--            		 			  <input id="customerName" name="customerName" placeholder="Cash Customer Name" class="form-control input-md" type="text" > -->
            		 								<%
 							CustomerDetailsDao daoa = new CustomerDetailsDao();
            						List cust1 = daoa.getAllcashCustomer(request);
 							%>
-							<input type="text" id="customerName" list="customerName_drop1" placeholder="Cash Customer Name" class="form-control" onchange="getVillageNamecash1()">
-							                                                                                                      <!-- onchange="custDetail.getVillageName()" custDetail.getContactNo();custDetail.getName() -->
-				         <datalist id="customerName_drop1">
+						<input type="text" id="customerName" list="customerName_drop1" placeholder="Cash Customer Name" class="form-control" onchange="getVillageNamecash1()">
+						                                                                                                      <!-- onchange="custDetail.getVillageName()" custDetail.getContactNo();custDetail.getName() -->
+				        <datalist id="customerName_drop1">
 							<%
 					           for(int i=0;i<cust1.size();i++){
 					        	   cashCustomerHibernate bean =(cashCustomerHibernate)cust1.get(i);
@@ -738,125 +798,144 @@ top: 25%;}
 				      			}
 				    		%>
 						</datalist>
-           		 	
-           		 	
-           		 		</div>
-					</div>
-
-           	 <label class="col-md-2 control-label" for="village">Address </label>
-           	 	<div class="col-md-3">
+           			</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+						<label class="control-label" for="village">Address </label>
+           	 	</div>
+           	 	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="glyphicon glyphicon-map-marker"></i>
 						</span>
-         	   			  <input id="village" name="village" placeholder="Address" class="form-control input-md ac_district"  type="text">
+         	   		  	<input id="village" name="village" placeholder="Address" class="form-control input-md ac_district"  type="text">
           		  	</div>
 				</div>
-          </div>
+          	</div>
+        </div> 
 	  
-	  <div class="row form-group" style="display:none;">
+	  	<div class="row form-group" style="display:none;">
 			<label class="col-md-3 control-label">Type<sup>*</sup></label>  
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
-							</span>
-           		 			  <input id="type" name="type" placeholder="type" value="Cash" class="form-control input-md" type="text" >
-           		 		</div>
-					</div></div>
-	  <div class="row form-group">
-			<label class="col-md-3 control-label" for="creditCustomerName"> Shop Name</label>  
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
-							</span>
+        		 <div class="col-md-3">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-user"></i>
+						</span>
+           			    <input id="type" name="type" placeholder="type" value="Cash" class="form-control input-md" type="text" >
+           		 	</div>
+				 </div>
+		</div>
+	  
+	<div class="row">
+		<div class="form-group">
+			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+				<label class="control-label" for="creditCustomerName"> Shop Name</label>  
+           	</div>	
+           	<div class="col-lg-3 col-md-3 col-sm-8">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-user"></i>
+					</span>
 									
 							<%
 								shopDetailsDao dao1 = new shopDetailsDao();
            						List shop =dao1.getAllShop(request);
 							
 							%>
-							
-							<input id="shopId" name="shopId" value="<%=shopId%>" type="hidden" class="form-control" >
-							<input type="text" id="shopName" name="shopName" value="<%=shopName1%>" readonly="readonly" list="shop_drop1" class="form-control">
-						    <datalist id="shop_drop1">
+					<input id="shopId" name="shopId" value="<%=shopId%>" type="hidden" class="form-control" >
+					<input type="text" id="shopName" name="shopName" value="<%=shopName1%>" readonly="readonly" list="shop_drop1" class="form-control">
+				    <datalist id="shop_drop1">
 							
 							<%
 					           for(int i=0;i<shop.size();i++){
 					        	   shopDetailsBean bean =(shopDetailsBean)shop.get(i);
 							%>
-							<option data-value="<%=bean.getShopId()%>" value="<%=bean.getShopName() %>" >
+						<option data-value="<%=bean.getShopId()%>" value="<%=bean.getShopName() %>" >
 							<%
 				      			}
 				    		%>
-						</datalist>
-						</div>
-					</div>
-
-           	 <label class="col-md-2 control-label" for="gstNo">GST No</label>
-           	 	<div class="col-md-3">
+					</datalist>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+           	 	<label class="control-label" for="gstNo">GST No</label>
+           	</div> 	
+           	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<span class="glyphicon nogyphicon">No</span>
+					</span>
+         	      	<input id="gstNo" name="gstNo"  placeholder="GST No" class="form-control input-md ac_district"  type="text">
+          		</div>
+			</div>
+        </div>
+   </div>
+         
+	    <div class="row">
+			<div class="form-group">	
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					<label class="control-label" for="contactNo">Contact No.</label>  
+           	 	</div>	
+           	 	<div class="col-lg-3 col-md-3 col-sm-8">
 					<div class="input-group">
 						<span class="input-group-addon">
-							No
+							<i class="glyphicon glyphicon-earphone"></i>
 						</span>
-         	   			  <input id="gstNo" name="gstNo"  placeholder="GST No" class="form-control input-md ac_district"  type="text">
-          		  	</div>
-				</div>
-         </div>
-         
-	      <div class="row form-group">
-			<label class="col-md-3 control-label" for="contactNo">Contact No.</label>  
-           	 		<div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-earphone"></i>
-							</span>
-              				<input id="contactNo2" name="contactNo2" placeholder="Contact No" class="form-control input-md" type="text" maxlength="10">
-            			</div>
+              			<input id="contactNo2" name="contactNo2" placeholder="Contact No" class="form-control input-md" type="text" maxlength="10">
             		</div>
-			<label class="col-md-2 control-label" for="saleDate">Sale Date</label>  
-          					  <div class="col-md-3">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-calendar"></i>
-									</span>									
-	              					  <input type="date" id="saleDate" name="saleDate" value="<%=todayDate%>" placeholder="sale Date" class="form-control input-md">
-								</div>
-							</div>
+            	</div>
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+					<label class="control-label" for="saleDate">Sale Date</label>  
+          		</div>	
+          		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="	glyphicon glyphicon-calendar"></i>
+						</span>									
+	            	    <input type="date" id="saleDate" name="saleDate" value="<%=todayDate%>" placeholder="sale Date" class="form-control input-md">
+					</div>
+				</div>
 			</div>
+		</div>
 			
-			<div class="row form-group">
-              	<label class="col-md-3 control-label" for="productName">Barcode No:</label>  
-            			<div class="col-md-3">
-							<div class="input-group">
-									<span class="input-group-addon">
-										No
-									</span>           
-									 <input type="text" id="barcodeNo" name="barcodeNo" placeholder="Enter Barcode No" class="form-control input-md" onchange="getProductDetailsByProductName()">
-									 <!-- getProductDetailsByBarcodeNo() -->            				</div>
-        			  	</div>  
-        			  	
-        			  				<label class="col-md-2 control-label" for="email">Email ID</label>  
-          					  <div class="col-md-3">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-calendar"></i>
-									</span>									
-	              					  <input type="text" id="email" name="email" placeholder="Email ID" class="form-control input-md">
-								</div>
-							</div>
-        	  </div>
+		<div class="row">
+        	<div class="form-group">
+        		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+        			<label class="control-label" for="productName">Barcode No:</label>  
+            	</div>	
+            	<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">No</span>
+						</span>           
+						 <input type="text" id="barcodeNo" name="barcodeNo" placeholder="Enter Barcode No" class="form-control input-md" onchange="getProductDetailsByProductName()">
+							 <!-- getProductDetailsByBarcodeNo() -->            				
+					</div>
+        		</div>  
+        		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+        			<label class="control-label" for="email">Email ID</label>  
+          		</div>	
+          		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="	glyphicon glyphicon-calendar"></i>
+						</span>									
+	            	    <input type="text" id="email" name="email" placeholder="Email ID" class="form-control input-md">
+					</div>
+				</div>
+        	</div>
+        </div>
         	 
-			
-        	 <div class="row form-group">
-              	<label class="col-md-3 control-label" for="productName">Product Name<sup>*</sup></label>  
-
-            			<div class="col-md-8">
-							<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-list-alt"></i>
-									</span>
+		<div class="row">
+        	<div class="form-group">
+        		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+        			<label class="control-label" for="productName">Product Name<sup>*</sup></label>  
+				</div>
+            	<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="	glyphicon glyphicon-list-alt"></i>
+						</span>
 									
 							<%-- <%
 							    ProductDetailsDao cdd = new ProductDetailsDao();
@@ -869,9 +948,7 @@ top: 25%;}
 								
 							%>
 							
-							
-							
-							<input list="product_dropCash" id="productIdCash" placeholder="Product Name" class="form-control" onchange="getProductDetailsByProductName(),clearGridSelect()" >
+						<input list="product_dropCash" id="productIdCash" placeholder="Product Name" class="form-control" onchange="getProductDetailsByProductName(),clearGridSelect()" >
 				            <datalist id="product_dropCash">
 							<%-- <%
 					           for(int i=0;i<pList.size();i++)
@@ -898,9 +975,10 @@ top: 25%;}
             			</datalist>
 									
 						<!-- <select class="form-control" id="proName" name="proName" onchange="getProductDetailsByProductName()"></select> -->
-            				</div>
-            			</div>
-        	  </div>  
+            		</div>
+            	</div>
+        	</div>
+       	</div>  
         	          
           <div class="table-responsive row" align="center" style="margin-left: 1px">
 				<table id="list4" ></table>
@@ -911,26 +989,25 @@ top: 25%;}
           
           </div>
           
-          	<div class="row form-group" >
-					<div class="col-md-3 control-label">
-	           				<label for="paymentMode">Payment Mode</label>  
-	           		</div>
-	           		
-	           		<div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-										<i class="glyphicon glyphicon-usd"></i>
-								</span>
-	           					<select class="form-control" id="paymentMode">
-	           					
-										<option value="cash">Cash</option>
-										<option value="UPI Payment">UPI Payment</option>
-										<option value="cheque">Cheque</option>
-										<option value="card">Card</option>
-										<option value="neft">NEFT</option>
-								</select>	
-	           				</div>
-						</div>
+    <div class="row">
+		<div class="form-group">
+			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+	        	<label class="control-label" for="paymentMode">Payment Mode</label>  
+	        </div>
+	        <div class="col-lg-3 col-md-3 col-sm-8">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-usd"></i>
+					</span>
+	        		<select class="form-control" id="paymentMode">
+	        			<option value="cash">Cash</option>
+						<option value="UPI Payment">UPI Payment</option>
+						<option value="cheque">Cheque</option>
+						<option value="card">Card</option>
+						<option value="neft">NEFT</option>
+					</select>	
+	        	</div>
+			</div>
 	 <!-- <script>
 		
 		$(document).ready(function(){
@@ -974,8 +1051,9 @@ top: 25%;}
 	       });
 	   }).change();
 		});	
-		</script>	 -->				
-</div>  
+		</script>	 -->
+		</div>				
+	</div>  
         <!--   	<div class="row form-group" >
 
             					<div id="cheque_no" >
@@ -1009,118 +1087,151 @@ top: 25%;}
 												</div>
 											</div> -->
           
-         <div class="row form-group">
-         <label class="col-md-3 control-label"  for="gstForExpence" ><b>GST for Expense</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									%
-								</span>
-								<select class="form-control" id="gstForExpense" onchange="changeDisAndHamaliCash()">
-										<option value="0">--Select Type--</option>
-										<option value="5">5 %</option>
-										<option value="12">12 %</option>
-										<option value="18">18 %</option>
-										<option value="28">28 %</option>
-								</select>
-	            			</div> 
-	            		</div>
-          	    <label class="col-md-2 control-label"  for="total" ><b>Total</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="totalWithExpense" placeholder="Total" readonly="readonly" class="form-control input-md" type="text" onchange="changeDisAndHamali();">
-	            			</div>
-	            		</div>
+         <div class="row">
+         	<div class="form-group">
+         		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+         			<label class="control-label"  for="gstForExpence" ><b>GST for Expense</b></label>  
+			    </div>
+			    <div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon percentage">%</span>
+						</span>
+						<select class="form-control" id="gstForExpense" onchange="changeDisAndHamaliCash()">
+							<option value="0">--Select Type--</option>
+							<option value="5">5 %</option>
+							<option value="12">12 %</option>
+							<option value="18">18 %</option>
+							<option value="28">28 %</option>
+						</select>
+	            	</div> 
+	            </div>
+          	    <div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+          	    	<label class="control-label" for="total"><b>Total</b></label>  
+			    </div>    
+			    <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="totalWithExpense" placeholder="Total" readonly="readonly" class="form-control input-md" type="text" onchange="changeDisAndHamali();">
+	            	</div>
+	            </div>
           	</div>
+        </div>
           	
-          		<div class="row form-group">
-          		 <label class="col-md-3 control-label"  for="total" ><b>Remark</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								
-	            			<textarea id="description" name="description" class="form-control" placeholder="Enter Description" rows="3" cols="30"></textarea>
-	            			</div>
-	            		</div>
-	            		
-				 <label class="col-md-2 col-md-offset- control-label" for="discount" ><b>Discount</b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group" style="margin-right: -70px;">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input  id="discountAmount" name="discountAmount" placeholder="Disc Amt"  class="form-control input-md" type="text" onchange="discountCalculation()">
-	            			</div>
-	            		</div>
-	            		
-	            		<label class="col-md-1 control-label" for="discount" ><b></b></label>  
-			           	<div class="col-sm-1">
-							<div class="input-group" style="margin-left: -70px;">
-								<span class="input-group-addon">
-									%
-								</span>
-	              				<input id="discount" name="discount" placeholder="Disc %" style=" width: 117px;" class="form-control input-md" type="text" readonly="readonly"/>
-	            			</div>
-	            		</div>
-	            						
-					<label class="col-md-2 col-md-offset- control-label"  for="hamaliExpence" style="margin-top:9px"><b>Labour Expenses</b></label>  
-			           	 <div class="col-sm-1" style="margin-top:9px;">
-							<div class="input-group"> 
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="hamaliExpence2" name="hamaliExpence2" style=" width: 112px;" placeholder="Lab Exp" class="form-control input-md" type="text" onchange="hamaliExpenseAddingToGross()"/>
-	            			</div>
-	            		</div>
-	            		<label  class="col-md-1" for="hamaliExpence" ><b></b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group" style="margin-left: -70;margin-top:9px;">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="hamaliExpence" name="hamaliExpence" placeholder="GST Amt" class="form-control input-md" type="text" readonly="readonly">
-	            			</div>
-	            		</div>
-	            	
-					</div>
+        <div class="row">
+        	<div class="form-group">  		 
+          		 <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+          		 	<label class="control-label" for="total"><b>Remark</b></label>  
+			     </div>      	 
+			     <div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<textarea id="description" name="description" class="form-control" placeholder="Enter Description" rows="3"></textarea>
+	            	</div>
+	            </div>
+	        </div>
+	    </div>
+	            
+	    <div class="row">
+	       <div class="form-group">     
+	           <div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">	
+	           		<label class="control-label" for="discount">Discount</label>  
+			   </div>   	 
+			   <div class="col-lg-2 col-md-2 col-sm-4">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="discountAmount" name="discountAmount" placeholder="Disc Amt" class="form-control input-md" type="text" onchange="discountCalculation()">
+	            	</div>
+	            </div>
+	            <label class="control-label" for="discount" ><b></b></label>  
+			    <div class="col-lg-2 col-md-2 col-sm-4">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon percentage">%</span>
+						</span>
+	            		<input id="discount" name="discount" placeholder="Disc %" class="form-control input-md" type="text" readonly="readonly"/>
+	            	</div>
+	            </div>
+	        </div>
+	    </div>						
+					
+		<div class="row">
+			<div class="form-group">			
+				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+					<label class="control-label" for="hamaliExpence">Labour Expenses</label>  
+			    </div>    
+			    <div class="col-lg-2 col-md-2 col-sm-4">
+					<div class="input-group"> 
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="hamaliExpence2" name="hamaliExpence2" placeholder="Lab Exp" class="form-control input-md" type="text" onchange="hamaliExpenseAddingToGross()"/>
+	            	</div>
+	            </div>
+	            <label class="control-label" for="hamaliExpence" ><b></b></label>  
+			    <div class="col-lg-2 col-md-2 col-sm-4">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="hamaliExpence" name="hamaliExpence" placeholder="GST Amt" class="form-control input-md" type="text" readonly="readonly">
+	            	</div>
+	            </div>
+	        </div>
+	     </div>
                   	
-          		<div class="row form-group">
-					<label class="col-md-offset-6 col-md-2 control-label"  for="grossTotal" style="padding-left: 116px;padding-top: 19px;"><h4><b>Gross Total</b></h4></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input readonly="readonly" id="grossTotal" name="grossTotal" placeholder="Gross Total" class="form-control input-md" type="text" style="font-size: 25px;  height: 55px;">
-	            			</div>
+          	<div class="row">
+          		<div class="form-group">	
+					<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+						<label class="control-label" for="grossTotal">Gross Total</label>  
+			        </div>   	
+			        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">Rs</span>
+							</span>
+	              			<input readonly="readonly" id="grossTotal" name="grossTotal" placeholder="Gross Total" class="form-control input-md" type="text">
 	            		</div>
+	            	</div>
             	</div>
+            </div>
      	
-     	    		<div class="row form-group" style="padding-top: 35px;">
-					<label class="col-md-offset-6 col-md-2 control-label" style="padding-top: 20px;"><h4><b>Amount Received</b></h4></label>  
-			           	 <div class="col-md-3" style="padding-bottom: 10px;">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="amtrx" name="amtrx" placeholder="Amount Received" class="form-control input-md" type="text" style="font-size: 15px;  height: 55px;" onkeyup="calrtn();">
-	            			</div>
+     	    <div class="row">
+				<div class="form-group">
+					<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">	
+						<label class="control-label">Amount Received</label>  
+			        </div>   	
+			        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">Rs</span>
+							</span>
+	              			<input id="amtrx" name="amtrx" placeholder="Amount Received" class="form-control input-md" type="text" onkeyup="calrtn();">
 	            		</div>
-            	
-            	<label class="col-md-offset-6 col-md-2 control-label" style="padding-top: 20px;"><h4><b>Change Return</b></h4></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input readonly="readonly" id="chnge" name="chnge" placeholder="Change Return" class="form-control input-md" type="text" style="font-size: 15px;  height: 55px;">
-	            			</div>
+	            	</div>
+	            </div>
+	        </div>
+	        
+	        <div class="row">
+            	<div class="form-group">
+            		<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">	
+            			<label class="control-label">Change Return</label>  
+			        </div>   	
+			        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">Rs</span>
+							</span>
+	              			<input readonly="readonly" id="chnge" name="chnge" placeholder="Change Return" class="form-control input-md" type="text" style="font-size: 15px;  height: 55px;">
 	            		</div>
-            	
+	            	</div>
             	</div>
+            </div>
      	
+<<<<<<< HEAD
      	
      		 <div class="row form-group buttons_margin_top" style="margin-bottom: 50px;"> 
 					<div align="center"> 
@@ -1137,18 +1248,42 @@ top: 25%;}
 				</div>
 			</div>	 
 				</fieldset>
+=======
+     	</div>
+     	</fieldset>
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 				</form>
+     	
+     		<div class="row buttons-margin" align="center">
+				<input type="button" id="billingCashbtn" class="btn gstbilling btn-large btn-success button-height-width" name="billingCashbtn" onclick="fertilizerBill()" value="Save&Print Bill">
+           		<input type="reset" class="btn gstbilling btn-large btn-danger button-height-width" id="save" name="btn" onclick="cancle()" value="Cancel">
+				<input type="button" id="btn" class="btn gstbilling btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock ">	
+		 	    <input id="save" name="btn" class="btn gstbilling btn-primary" type="button" onclick="pay()" value="Payment">        		            				
+			</div>	
+			
+			
        </div>
+ <!-------------------------------------------------- CODE FOR CASH CUSTOMER Ends Here -------------------------------------------------->
                
- <!----------------------------------------------------------- CODE FOR CREDIT CUSTOMER ---------------------------------------------------------->
+ <!-------------------------------------------------- CODE FOR CREDIT CUSTOMER Starts Here -------------------------------------------------->
            
        <div id="CreditCustDetail" style="padding-top:2%">
-       	<form class="form-horizontal" method="post" action="" name="creditFertiBill1">
+       		<form class="form-horizontal" method="post" action="" name="creditFertiBill1">
 			<fieldset>
+<<<<<<< HEAD
 			          
 			                  <div class="row form-group">
 			<label class="col-md-3 control-label" for="customerName">Firm Name <sup>*</sup></label>  
            			 <div class="col-md-3">
+=======
+			  <div class="shopform-margin">        
+			<div class="row">
+				<div class="form-group">
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="customerName">Firm Name</label>  
+           			</div>
+           			<div class="col-lg-3 col-md-3 col-sm-8">
+>>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
@@ -1159,25 +1294,29 @@ top: 25%;}
            		           						List custs11 = daoa2.getAllCustomer(request);
 							%>
 							<input type="text" id="CfirmName" list="CfirmName_drop1" placeholder="Firm Name" class="form-control">
-							                                                                                                      <!-- onchange="custDetail.getVillageName()" custDetail.getContactNo();custDetail.getName() -->
-				         <datalist id="CfirmName_drop1">
+					   <!-- onchange="custDetail.getVillageName()" custDetail.getContactNo();custDetail.getName() -->
+				     	    <datalist id="CfirmName_drop1">
 							<%
 					           for(int i=0;i<custs11.size();i++){
 					        	   CustomerDetailsBean bean =(CustomerDetailsBean)custs11.get(i);
 							%>
-							<option data-value="<%=bean.getCustId()%>"><%=bean.getFirmname()%></option>
+								<option data-value="<%=bean.getCustId()%>"><%=bean.getFirmname()%></option>
 							<%
 				      			}
 				    		%>
-						</datalist>
-           		 	
-           		 	
+							</datalist>          		 	
            		 		</div>
-					</div></div>      
-	 	 <div class="row form-group">
-			<label class="col-md-3 control-label" for="creditCustomerName"> Customer Name</label>  
-			      <div id="customerfresh">
-           			 <div class="col-md-3">
+					</div>
+				</div>
+			</div> 
+				     
+	 	 <div class="row">
+			<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					<label class="control-label" for="creditCustomerName"> Customer Name</label>  
+			    </div>
+			    <div id="customerfresh">
+           			<div class="col-lg-3 col-md-3 col-sm-8">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
@@ -1188,54 +1327,60 @@ top: 25%;}
 							%>
 							<input type="text" id="creditCustomer" list="cust_drop1" placeholder="Credit Customer Name" class="form-control" onchange="custDetail.getVillageName()" >
 							                                                                                                      <!--  custDetail.getContactNo();custDetail.getName() -->
-				         <datalist id="cust_drop1">
+				    	    <datalist id="cust_drop1">
 							<%
 					           for(int i=0;i<cust.size();i++){
 					        	   CustomerDetailsBean bean =(CustomerDetailsBean)cust.get(i);
 							%>
-							<option data-value="<%=bean.getCustId()%>"><%=bean.getFirstName()%> <%=bean.getLastName()%></option>
+								<option data-value="<%=bean.getCustId()%>"><%=bean.getFirstName()%> <%=bean.getLastName()%></option>
 							<%
 				      			}
 				    		%>
-						</datalist>
-						<span class="input-group-addon">
-							<button type="button" onclick="customerDetailsDivAction(1)">
-								 <span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
-							</button>
-						</span>
+							</datalist>
+							<span class="input-group-addon">
+								<button type="button" onclick="customerDetailsDivAction(1)">
+									<span class="glyphicon glyphicon-plus"  style="color: #393836;"></span>
+								</button>
+							</span>
 						</div>
 					</div>
 				</div>
-
-           	 <label class="col-md-2 control-label" for="village1">Address </label>
-           	 	<div class="col-md-3">
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+					<label class="control-label" for="village1">Address</label>
+           	 	</div>
+           	 	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="glyphicon glyphicon-map-marker"></i>
 						</span>
-         	   			  <input id="village1" name="village1" placeholder="Address" class="form-control input-md ac_district"  type="text">
+         	   			<input id="village1" name="village1" placeholder="Address" class="form-control input-md ac_district"  type="text">
           		  	</div>
 				</div>
+         	</div>
          </div>
                  
-                 <div class="row form-group" style="display:none;">
+        <div class="row form-group" style="display:none;">
 			<label class="col-md-3 control-label">Type<sup>*</sup></label>  
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
-							</span>
-           		 			  <input id="type1" name="type1" value="Credit" class="form-control input-md" type="text" >
-           		 		</div>
-					</div></div>
+         		<div class="col-md-3">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-user"></i>
+						</span>
+           			    <input id="type1" name="type1" value="Credit" class="form-control input-md" type="text" >
+           		 	</div>
+				</div>
+		</div>
                  
-         <div class="row form-group">
-			<label class="col-md-3 control-label" for="creditCustomerName"> Shop Name</label>  
-           			 <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
-							</span>
+        <div class="row">
+			<div class="form-group">	
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+					<label class="control-label" for="creditCustomerName"> Shop Name</label>  
+           		</div>
+           		<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-user"></i>
+						</span>
 						
 							<%
 							shopDetailsDao dao2 = new shopDetailsDao();
@@ -1243,8 +1388,8 @@ top: 25%;}
 							
 							%>
 							
-							<input type="text" id="shopName2" list="shop_drop2" value="<%=shopName1%>" readonly="readonly" class="form-control" >
-				<datalist id="shop_drop2">
+						<input type="text" id="shopName2" list="shop_drop2" value="<%=shopName1%>" readonly="readonly" class="form-control" >
+						<datalist id="shop_drop2">
 							
 							<%
 					           for(int i=0;i<shop1.size();i++){
@@ -1255,79 +1400,90 @@ top: 25%;}
 				      			}
 				    		%>
 						</datalist>
-						</div>
 					</div>
-
-           	 <label class="col-md-2 control-label" for="village1">GST No</label>
-           	 	<div class="col-md-3">
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+					<label class="control-label" for="village1">GST No</label>
+           	 	</div>
+           	 	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">
 						<span class="input-group-addon">
-							No
+							<span class="glyphicon nogyphicon">No</span>
 						</span>
-         	   			  <input id="gstNo2" name="gstNo2"  placeholder="GST No" class="form-control input-md ac_district"  type="text">
+         	   		  	<input id="gstNo2" name="gstNo2"  placeholder="GST No" class="form-control input-md ac_district"  type="text">
           		  	</div>
 				</div>
+         	</div>
          </div>   
          
-            <div class="row form-group">
-			<label class="col-md-3 control-label" for="contactNo1">Contact No.</label>  
-           	 		<div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-earphone"></i>
-							</span>
-              				<input id="contactNo1" name="contactNo1" placeholder="Contact No" class="form-control input-md" type="text" maxlength="10">
-            			</div>
+         <div class="row">
+			<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+					<label class="control-label" for="contactNo1">Contact No.</label>  
+           	 	</div>	
+           	 	<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-earphone"></i>
+						</span>
+              			<input id="contactNo1" name="contactNo1" placeholder="Contact No" class="form-control input-md" type="text" maxlength="10">
             		</div>
-            		<label class="col-md-2 control-label" for="saleDate">Sale Date</label>  
-          					  <div class="col-md-3">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-calendar"></i>
-									</span>
-	              					  <input type="date"  id="saleDate2" name="saleDate2" value="<%=todayDate%>" placeholder="sale Date" class="form-control input-md">
-								
-								</div>
-							</div>          
+            	</div>
+            	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	
+            		<label class="control-label" for="saleDate">Sale Date</label>  
+          		</div>			  
+          		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-calendar"></i>
+						</span>
+	              		<input type="date" id="saleDate2" name="saleDate2" value="<%=todayDate%>" placeholder="sale Date" class="form-control input-md">
+					</div>
+				</div>          
+	 		</div>
 	 	</div>
 	 	
-	 	   	<div class="row form-group">
-              	<label class="col-md-3 control-label" for="productName">Barcode No:</label>  
-
-            			<div class="col-md-3">
-							<div class="input-group">
-									<span class="input-group-addon">
-										No
-									</span>
-									 <input type="text" id="barcodeNo1" name="barcodeNo1" placeholder="Enter Barcode No" class="form-control input-md" onchange="getProductDetailsByProductNameForCredit()">
-									<!-- getProductDetailsByBarcodeNo1() -->
-						
-            				</div>
-        			  </div>  
-        			  
-        		<label class="col-md-2 control-label" for="saleDate">Challan No</label>  
-          					  <div class="col-md-3">
-								<div class="input-group">
-									<span class="input-group-addon">
-										No
-									</span>
-	              					  <input type="text" id="challanNo" name="challanNo" placeholder="Ch. No" class="form-control input-md" onchange="getProductDetailsBynonGridDataForchallan();getProductDetailsByProductNameForchallan()">
-								
-								</div>
-							</div>          
-        	  </div>
+	 	<div class="row">
+        	<div class="form-group">
+        		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+        			<label class="control-label" for="productName">Barcode No:</label>  
+				</div>
+            	<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">No</span>
+						</span>
+					    <input type="text" id="barcodeNo1" name="barcodeNo1" placeholder="Enter Barcode No" class="form-control input-md" onchange="getProductDetailsByProductNameForCredit()">
+						<!-- getProductDetailsByBarcodeNo1() -->
+					</div>
+        		</div>  
+        		<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">	  
+        			<label class="control-label" for="saleDate">Challan No</label>  
+          		</div>			 
+          		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">No</span>
+						</span>
+	              	    <input type="text" id="challanNo" name="challanNo" placeholder="Ch. No" class="form-control input-md" onchange="getProductDetailsBynonGridDataForchallan();getProductDetailsByProductNameForchallan()">
+					</div>
+				</div>          
+        	</div>
+        </div>
 	 	
-
-	 	<div class="row form-group">
-              	<label class="col-md-3 control-label" for="productName">Product Name<sup>*</sup></label>  
-           			<div class="col-md-8">
-							<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-list-alt"></i>
-									</span>
+	 	<div class="row">
+        	<div class="form-group">
+        	    <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+        	      	<label class="control-label" for="productName">Product Name<sup>*</sup></label>  
+           		</div>	
+           		<div class="col-lg-8 col-md-8 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="	glyphicon glyphicon-list-alt"></i>
+						</span>
             						<!-- <select class="form-control" id="proName2" name="proName2" onchange="getProductDetailsByProductNameForCredit()"></select> -->
-            						<input list="product_dropCredit" id="productIdCredit" placeholder="Product Name" class="form-control" onchange="getProductDetailsByProductNameForCredit(),clearGridSelect()">
-						 <datalist id="product_dropCredit">
+            			<input list="product_dropCredit" id="productIdCredit" placeholder="Product Name" class="form-control" onchange="getProductDetailsByProductNameForCredit(),clearGridSelect()">
+						<datalist id="product_dropCredit">
 							<%-- <%
 					           for(int i=0;i<pList.size();i++)
 					           {
@@ -1345,7 +1501,7 @@ top: 25%;}
 					         %>
 	<%-- 							<option data-value="" value="<%=gpd.getProduct()%> => <%=gpd.getBarcodeNo()%> => <%=gpd.getManufacturer()%> => Stock => <%=gpd.getQuantityDouble()%> => <%=gpd.getWeight()%> => <%=gpd.getUnitName() %>  => <%=gpd.getFkSubCatId()%> => <%=gpd.getFkCatId()%> => <%=gpd.getExpiryDate()%>"> --%>
 							
-									<option data-value="" value="<%=gpd.getProductName()%> => <%=gpd.getBarcodeNo()%> => <%=gpd.getCompanyName()%> => Stock => <%=gpd.getQuantity()%> => <%=gpd.getWeight()%> => <%=gpd.getUnit() %>  => <%=gpd.getSubCatId()%> => <%=gpd.getCatID()%> => <%=gpd.getUpdateDate()%> => <%=gpd.getPack_type()%> => <%=gpd.getProductId()%>">						
+							<option data-value="" value="<%=gpd.getProductName()%> => <%=gpd.getBarcodeNo()%> => <%=gpd.getCompanyName()%> => Stock => <%=gpd.getQuantity()%> => <%=gpd.getWeight()%> => <%=gpd.getUnit() %>  => <%=gpd.getSubCatId()%> => <%=gpd.getCatID()%> => <%=gpd.getUpdateDate()%> => <%=gpd.getPack_type()%> => <%=gpd.getProductId()%>">						
 							
 							
 									
@@ -1358,10 +1514,10 @@ top: 25%;}
 					           }
 				    		%>			              	
             			</datalist>
-            				</div>
-            			</div>
-            		
-        	  </div> 
+            		</div>
+            	</div>
+            </div>
+       </div> 
            			
          <div class="table-responsive row" style="margin-left: 1px" >
 				<table id="credit" ></table>
@@ -1373,37 +1529,41 @@ top: 25%;}
           
           </div>
           
-         <div class="row form-group">
-	 	<label class="col-md-3 control-label" for="email1">Email ID</label>  
-          					  <div class="col-md-3">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="	glyphicon glyphicon-calendar"></i>
-									</span>									
-	              					  <input type="text" id="email1" name="email1" placeholder="Email ID" class="form-control input-md">
-								</div>
-							</div>
+         <div class="row">
+	 		<div class="form-group">
+	 			<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+	 				<label class="control-label" for="email1">Email ID</label>  
+          		</div>	
+          		<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-calendar"></i>
+						</span>									
+	            	    <input type="text" id="email1" name="email1" placeholder="Email ID" class="form-control input-md">
+					</div>
 				</div>
+			</div>
+		</div>
 				
-          <div class="row form-group" >
-					<div class="col-md-3 control-label">
-	           				<label for="paymentModeCredit">Payment Mode</label>  
+        <div class="row">
+			<div class="form-group">
+				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+					<label class="control-label" for="paymentModeCredit">Payment Mode</label>  
+	           	</div>
+	           	<div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-usd"></i>
+						</span>
+	           			<select class="form-control" id="paymentModeCredit">
+							<option value="cash1">Cash</option>
+							<option value="UPI Payment">UPI Payment</option>											
+							<option value="cheque1">Cheque</option>
+							<option value="card1">Card</option>
+							<option value="neft1">NEFT</option>
+						</select>	
 	           		</div>
-	           		
-	           		<div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-										<i class="glyphicon glyphicon-usd"></i>
-								</span>
-	           					<select class="form-control" id="paymentModeCredit">
-										<option value="cash1">Cash</option>
-										<option value="UPI Payment">UPI Payment</option>											
-										<option value="cheque1">Cheque</option>
-										<option value="card1">Card</option>
-										<option value="neft1">NEFT</option>
-								</select>	
-	           				</div>
-						</div>			    	
+				</div>			    	
 	 <!-- <script>
 		
 		$(document).ready(function(){
@@ -1446,7 +1606,8 @@ top: 25%;}
 	   }).change();
 		});	
 		</script>	 -->
-</div>
+		</div>
+	</div>
       	<!-- <div class="row form-group" >
 
         	<div id="cheque_no1" >
@@ -1479,150 +1640,185 @@ top: 25%;}
 				</div>
 			</div> -->
        
-         <div class="row form-group"><label class="col-md-3  control-label"  for="gstForExpence" ><b>GST for Expense</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									%
-								</span>
-								<select class="form-control" id="gstForExpense1"  onchange="changeDisAndHamaliCredit()">
-										<option value="0">--Select Type--</option>
-										<option value="5">5 %</option>
-										<option value="12">12 %</option>
-										<option value="18">18 %</option>
-										<option value="28">28 %</option>
-								</select>
-	            			</div>
-	            		</div>
-         	        
-            <label class="col-md-3 control-label" style="display:none" for="customerNameHidden">Customer Name</label>  
-           	 		<div class="col-md-3" style="display:none">
+         <div class="row">
+         	<div class="form-group">
+         		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
+         			<label class="control-label" for="gstForExpence"><b>GST for Expense</b></label>  
+			    </div>       	 
+			    <div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon percentage">%</span>
+						</span>
+						<select class="form-control" id="gstForExpense1"  onchange="changeDisAndHamaliCredit()">
+							<option value="0">--Select Type--</option>
+							<option value="5">5 %</option>
+							<option value="12">12 %</option>
+							<option value="18">18 %</option>
+							<option value="28">28 %</option>
+						</select>
+	            	</div>
+	            </div>
+         	    <div class="">
+         	    	<label class="control-label" style="display:none" for="customerNameHidden">Customer Name</label>  
+           	 	</div>	
+           	 	<div class="col-md-3" style="display:none">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-user"></i>
+						</span>
+              			<input  id="customerNameHidden" name="customerNameHidden"  class="form-control input-md" type="text" >
+            		</div>
+            	</div>  
+  				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+  					<label class="control-label" for="total"><b>Total</b></label>  
+			    </div>    
+			    <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="totalWithExpense1" class="form-control input-md" placeholder="Total" type="text" readonly="readonly" ondragover="GrossTotalWithoutExpenseForCredit()" onchange="callFunction()">
+	            	</div>
+	            </div>
+          	</div>
+        </div>
+          	       	
+  		<div class="row">
+  			<div class="form-group">
+  				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+  					<label class="control-label" for="total"><b>Remark</b></label>  
+			    </div>    
+			    <div class="col-lg-3 col-md-3 col-sm-8">
+					<div class="input-group">
+					<!-- <input id="totalWithExpense" placeholder="Remark" class="form-control input-md" type="text" onchange="changeDisAndHamali();"> -->
+	            		<textarea id="description1" name="description1" class="form-control" placeholder="Enter Description" rows="3" cols="30"></textarea>
+	            	</div>
+	            </div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="form-group">	
+				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+					<label class="control-label" for="discount"><b>Discount</b></label>  
+			    </div>    
+			    <div class="col-lg-2 col-md-2 col-sm-4">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="discountAmount1" name="discountAmount" placeholder="Disc Amt" class="form-control input-md" type="text" onchange="discountCalculationForCredit()">
+	            	</div>
+	            </div>
+	            <label class="control-label" for="discount"><b></b></label>  
+			    <div class="col-lg-2 col-md-2 col-sm-4">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon percentage">%</span>
+						</span>
+	            		<input id="discount1" name="discount" placeholder="Disc %" class="form-control input-md" type="text" readonly="readonly"/>
+	            	</div>
+	            </div>
+	  		</div>
+	  	</div>
+	  	
+	  	<div class="row">
+	  		<div class="form-group">
+	  			<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+	          		<label class="control-label" for="hamaliExpence"><b>Labour Expenses</b></label>  
+			    </div>	
+			    <div class="col-lg-2 col-md-2 col-sm-4">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="hamaliExpence3" name="hamaliExpence" placeholder="Lab Exp" class="form-control input-md" type="text"  onchange="hamaliExpenseAddingToGrossForCredit()">
+	            	</div>
+	            </div>
+				<label class="control-label" for="hamaliExpence"><b></b></label>  
+			        <div class="col-lg-2 col-md-2 col-sm-4">
 						<div class="input-group">
 							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
+								<span class="glyphicon nogyphicon">Rs</span>
 							</span>
-              				<input  id="customerNameHidden" name="customerNameHidden"  class="form-control input-md" type="text" >
-            			</div>
-            		</div>  
-         
-          	   <label class="col-md-2  control-label"  for="total" ><b>Total</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="totalWithExpense1" class="form-control input-md" placeholder="Total" type="text" readonly="readonly" ondragover="GrossTotalWithoutExpenseForCredit()" onchange="callFunction()">
-	            			</div>
+	              			<input id="hamaliExpence1" name="hamaliExpence" placeholder="GST Amt" class="form-control input-md" type="text" readonly="readonly">
 	            		</div>
-          	</div>
-          	       	
-  		<div class="row form-group">
-  		          <label class="col-md-3 control-label"  for="total" ><b>Remark</b></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								
-	              				<!-- <input id="totalWithExpense" placeholder="Remark" class="form-control input-md" type="text" onchange="changeDisAndHamali();"> -->
-	            			<textarea id="description1" name="description1" class="form-control" placeholder="Enter Description" rows="3" cols="30"></textarea>
-	            			</div>
-	            		</div>
-				 <label class="col-md-2 col-md-offset- control-label" for="discount" ><b>Discount</b></label>  
-			           	<div class="col-sm-1">
-							<div class="input-group" style="margin-right: -70px;">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input  id="discountAmount1" name="discountAmount" placeholder="Disc Amt"  class="form-control input-md" type="text" onchange="discountCalculationForCredit()">
-	            			</div>
-	            		</div>
-	            		
-	            		<label class="col-md-1 control-label" for="discount" ><b></b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group" style="margin-left: -70px;">
-								<span class="input-group-addon">
-									%
-								</span>
-	              				<input id="discount1" name="discount" placeholder="Disc %" style=" width: 117px;" class="form-control input-md" type="text" readonly="readonly"/>
-	            			</div>
-	            		</div>
-	          	 
-					 <label class="col-md-2 col-md-offset- control-label"  for="hamaliExpence" style="margin-top:9px"><b>Labour Expenses </b></label>  
-			           	 <div class="col-sm-1" style="margin-top:9px">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="hamaliExpence3" name="hamaliExpence" placeholder="Lab Exp" style=" width: 112px;" class="form-control input-md" type="text"  onchange="hamaliExpenseAddingToGrossForCredit()">
-	            			</div>
-	            		</div>
-					<label class="col-md-1  control-label"  for="hamaliExpence" ><b></b></label>  
-			           	 <div class="col-sm-1">
-							<div class="input-group" style="margin-left: -70;margin-top:9px">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="hamaliExpence1" name="hamaliExpence" placeholder="GST Amt" class="form-control input-md" type="text" readonly="readonly">
-	            			</div>
-	            		</div>
-					
-          	  	</div>
-          		<div class="row form-group">
-					<label class="col-md-offset-6 col-md-2 control-label"  for="grossTotal1" style="padding-left: 116px;padding-top: 19px;"><h4><b>Gross Total</b></h4></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input readonly="readonly" id="grossTotal1" name="grossTotal1" placeholder="Gross Total" class="form-control input-md"  type="text" style="font-size: 25px;  height: 55px;" >
-	            			</div>
-	            			</div>
+	            	</div>
+			</div>
+		</div>
+			
+        <div class="row">
+			<div class="form-group">
+				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">		
+					<label class="control-label" for="grossTotal1"><h4><b>Gross Total</b></h4></label>  
+			    </div>
+			    <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input readonly="readonly" id="grossTotal1" name="grossTotal1" placeholder="Gross Total" class="form-control input-md"  type="text" style="font-size: 25px;  height: 55px;" >
+	            	</div>
+	            </div>
 					<!-- <label class="col-md-offset-6 col-md-2 control-label"  for="firstPaidAmtCreditCustomer"><h4><b>Net Pay Amount</b></h4></label> -->  
-			           	 <div class="col-md-3">
-	            			<div class="input-group">
+			    <div class="col-md-3">
+	            	<div class="input-group">
 								<!-- <span class="input-group-addon">
 									Rs
 								</span> -->
-	              				<input id="firstPaidAmtCreditCustomer" name="firstPaidAmtCreditCustomer" placeholder="Pay Amount" class="form-control input-md"  type="hidden" style="font-size: 25px;  height: 55px;" >
-	            			</div>
-	            		</div>	            			
-            	</div>
+	            		<input id="firstPaidAmtCreditCustomer" name="firstPaidAmtCreditCustomer" placeholder="Pay Amount" class="form-control input-md"  type="hidden" style="font-size: 25px;  height: 55px;" >
+	            	</div>
+	            </div>	            			
+            </div>
+        </div>
 	 		 	
-	 		 	<div class="row form-group" style="padding-top: 35px;">
-					<label class="col-md-offset-6 col-md-2 control-label" style="padding-top: 20px;"><h4><b>Amount Received</b></h4></label>  
-			           	 <div class="col-md-3" style="padding-bottom: 10px;">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input id="amtrx1" name="amtrx1" placeholder="Amount Received" class="form-control input-md" type="text" style="font-size: 15px;  height: 55px;" onkeyup="calrtn1();">
-	            			</div>
-	            		</div>
-            	
-            	<label class="col-md-offset-6 col-md-2 control-label" style="padding-top: 20px;"><h4><b>Change Return</b></h4></label>  
-			           	 <div class="col-md-3">
-							<div class="input-group">
-								<span class="input-group-addon">
-									Rs
-								</span>
-	              				<input readonly="readonly" id="chnge1" name="chnge1" placeholder="Change Return" class="form-control input-md" type="text" style="font-size: 15px;  height: 55px;">
-	            			</div>
-	            		</div>
-            	
-            	</div>
-     	
-     	
+	 	<div class="row">
+			<div class="form-group">
+				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+					<label class="control-label"><h4><b>Amount Received</b></h4></label>  
+			    </div>    
+			    <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input id="amtrx1" name="amtrx1" placeholder="Amount Received" class="form-control input-md" type="text" style="font-size: 15px;  height: 55px;" onkeyup="calrtn1();">
+	            	</div>
+	            </div>
+	        </div>
+	     </div>
+	     
+	     <div class="row">
+	     	<div class="form-group">
+				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">	     	
+            		<label class="control-label"><h4><b>Change Return</b></h4></label>  
+			    </div>
+			    <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon nogyphicon">Rs</span>
+						</span>
+	            		<input readonly="readonly" id="chnge1" name="chnge1" placeholder="Change Return" class="form-control input-md" type="text" style="font-size: 15px;  height: 55px;">
+	            	</div>
+	            </div>
+            </div>
+        </div>
+     
+     </div>	
+     </fieldset>	 		
+	 	</form>	
 	 		 	
-		<div class="row form-group" style="padding-top: 28px;margin-bottom: 50px;">
-				<div align="center">
-					
-					<input type="button" id="billingCreditBtn" style="font-size: 20px;width: 150px;height: 54px;" class="btn btn-large btn-success button-height-width" name="billingCreditBtn" onclick="fertilizerBillForCreditCustomer()" value="Save&Print Bill">
-		           	<input type="reset"  id="save" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-danger  button-height-width" name="btn" onclick="cancle()" value="Cancel">	  
-					<input type="button" id="btn" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock ">		  				 	
-     		 	    <input   id="save" name="btn" style="width: 128px; height: 53px;font-size: 25" class="btn  btn-primary "  type="button"  onclick="pay()" value="Payment">        		            				         			 
-				</div>
-			</div>	
-	 		</fieldset>	 		
-	 	</form>
+		<div class="row buttons-margin" align="center">
+			<input type="button" id="billingCreditBtn" class="btn gstbilling btn-large btn-success button-height-width" name="billingCreditBtn" onclick="fertilizerBillForCreditCustomer()" value="Save&Print Bill">
+		    <input type="reset" id="save" class="btn gstbilling btn-large btn-danger button-height-width" name="btn" onclick="cancle()" value="Cancel">	  
+			<input type="button" id="btn" class="btn gstbilling btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock ">		  				 	
+     		<input id="save" name="btn" class="btn gstbilling btn-primary" type="button" onclick="pay()" value="Payment">        		            				         			 
+		</div>	
+	 	
+	 		
 	 </div>
+<!-------------------------------------------------- CODE FOR CREDIT CUSTOMER Ends Here -------------------------------------------------->
 	 
 <!-- ====================================================== CUSTOMER DETAILS POP UP ================================================================ -->
 
@@ -1742,5 +1938,6 @@ top: 25%;}
 </div>
 </div>
 <!-- ====================================================== END CUSTOMER DETAILS POP UP ================================================================ -->	
+</div>
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>

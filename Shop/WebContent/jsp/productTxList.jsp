@@ -15,9 +15,7 @@
     <script src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
 	<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
-	
-	
-	
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">	
 <html>
 	<head>
 
@@ -31,13 +29,10 @@
   			}
   			
   		</script>
-		<style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
- {
-    border-radius:23px;
+<style>
+.container-fluid {
+	overflow: hidden;
 }
-
-
 </style>
 
 	</head>
@@ -59,7 +54,8 @@
 				    "bPaginate": false, //hide pagination
 				    //"bFilter": false, //hide Search bar
 				    "bInfo": false, // hide showing entries
-	    		         
+					"scrollX": true,
+					"scrollY": 300,
 	    		     });
 	        
 	         
@@ -78,6 +74,8 @@
 	</script>
 
 <body id="dt_example">
+	<div class="container-fluid">
+
 		<div class="row" style="margin-top:70px">
 				    <div align="center">
 				  		<h2 class="form-name style_heading " >Product Transfer List</h2>
@@ -97,7 +95,7 @@
 	<div class="container">
 	<div class="row">
 	
-	<div id="date" style="padding-top:2%">
+	<div id="date" align="right">
 		<label id="demo"></label>
 		<script>
 			var date = new Date();
@@ -147,11 +145,12 @@
 	</div>
 	</div>
 	
-	<div class="wrapper" align="center" style="padding-top:2%">
-		<input type="button" style="width: 128px; height: 53px; font-size: 25px" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
+	<div class="row buttons-margin" align="center">
+		<input type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
 		<!-- <input type="button" style="width: 200px; height: 65px; font-size: 25px" value="Delete Product" id="listBtn2" class="btn btn-large btn-danger button-height-width" onclick="deletProduct()" /> -->
 	</div>
 	
+	</div>
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>
 </html>

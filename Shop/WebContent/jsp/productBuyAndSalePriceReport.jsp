@@ -20,7 +20,7 @@
 	
 	 -->
 	
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
+<!-- 	<script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
 <script type="text/javascript"
 	src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript"
@@ -45,77 +45,110 @@
 	
 	
 	
-	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
-	
+	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script> -->
+
+
+<link href="/Shop/WebContent/staticContent/css/dataTa.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/Shop/staticContent/css/dataTables.jqueryui.min.css"  rel="stylesheet" type="text/css" media="all">
+	<link rel="stylesheet" href="/Shop/staticContent/css/tabDemo.css">
+ 	<link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css">
+    
+    <script src="/Shop/staticContent/js/jquery.min.js"></script>
+    <script src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
+	<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>	
 	
 <script src="/Shop/staticContent/js/productDetail.js"></script>
-
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 <!-- <script>
 	     $(document).ready(function(){
 	    	 prodReports();
 		}); 
 	</script>
 	 -->
-
-
+<script type="text/javascript"> 
+		$(document).ready(function () {
+	         var table=$("#prodReports").dataTable({
+	        	 "scrollX": true,
+	        	 "scrollY": 300,
+	         });
+			 var tableTools = new $.fn.dataTable.TableTools(table, {
+				 'sSwfPath':'//cdn.datatables.net/tabletools/2.2.4/swf/copy_csv_xls_pdf.swf',
+				 	'aButtons':['copy','print','csv',{
+					 'sExtends':'xls',
+					 'sFileName':'Data.xls',
+					 'sButtonText': 'Save to Excel'
+						}
+					]
+				});
+					$(tableTools.fnContainer()).insertBefore('#list_wrapper');
+			});
+	</script>
+<style>
+.container-fluid {
+	overflow: hidden;
+}
+</style>
 
 </head>
 <body>
- <div class="container col-md-offset-1" style="float: left"> 
+ <div class="container-fluid"> 
  		
  		<div class="row">
 			<div align="center" style="margin-top: 75px">
 				  <h2 class="form-name style_heading">Product Buy And Sale Price Reports</h2>
 			</div>
 				 	
-			 <div class="row">
-				<div class="col-sm-offset-1 col-md-10">
-						<hr style="border-top-color:#c1b1b1;">
+			 <div class="row" align="center">
+				<div class="hr-width">
+					<hr class="style-one">
 				</div>	
-			  </div>
+			 </div>
 		</div>
-	<ul class="nav nav-tabs">
-	    <li class="active"><a data-toggle="tab" href="#home" style=" border-radius:23px;margin-left: 77px;"><h4 >All Products</h4></a></li>
+		
+	<div class="productbuy_sale">
+		<ul class="nav nav-tabs">
+	    	<li class="active"><a data-toggle="tab" href="#home">All Products</a></li>
 	<!--   <li><a data-toggle="tab" href="#cat"><h4 style="color:blue">As Per Category</h4></a></li>  -->
- 	 </ul>
+ 	 	</ul>
+ 	 </div>
  
- 	<div class="tab-content" style="float: left">
+ 	<div class="tab-content">
    
     <!-------- All Categories ---------->
    <%
 		GoodsReceiveDao gDao=new GoodsReceiveDao();
 		List Lis1 = gDao.AllBuyandSaleReport();	
 	%>
-<div id="dataTab">
-<div class="table-responsive" style="margin-left: 290px;">
-		<table class="table table-bordered table-striped table-condensed cf"
-					id="prodReports" class="display"
-					>
-					<thead>
-								<tr>
-								    <th>Product Name</th>
-	                                <th>Manufacturing Company</th>
-					                <th>Buy Price</th>
-					                <th>Sale Price</th>
-						   </tr>
-						</thead>
-			<tbody>
-   				<%
-					for(int i=0;i<Lis1.size();i++){
-						GoodsReceiveBean sdBean = (GoodsReceiveBean)Lis1.get(i);
-				%>
-				<tr>
-				    <td class="align"><%=sdBean.getProductName()%></td>
-					<td class="align"><%=sdBean.getCompanyName()%></td>
-					<td class="align"><%=sdBean.getBuyPrice()%></td>
-					<td class="align"><%=sdBean.getSalePrice()%></td>
-				</tr>
-				<%
-					}
-				%>				
-			</tbody>
-					</table>
-					</div>
+	<div id="demo_jui">
+		<div class="table-responsive">
+			<table class="table table-bordered table-striped table-condensed cf" id="prodReports" class="display">
+				<thead>
+					<tr>
+					    <th>Product Name</th>
+	                    <th>Manufacturing Company</th>
+				        <th>Buy Price</th>
+				        <th>Sale Price</th>
+				   	</tr>
+				</thead>
+				<tbody>
+	   				<%
+						for(int i=0;i<Lis1.size();i++){
+							GoodsReceiveBean sdBean = (GoodsReceiveBean)Lis1.get(i);
+					%>
+					<tr>
+					    <td class="align"><%=sdBean.getProductName()%></td>
+						<td class="align"><%=sdBean.getCompanyName()%></td>
+						<td class="align"><%=sdBean.getBuyPrice()%></td>
+						<td class="align"><%=sdBean.getSalePrice()%></td>
+					</tr>
+					<%
+						}
+					%>				
+				</tbody>
+			</table>
+		</div>
  <%--  <div id="home" class="tab-pane fade in active">
    	<div id="report" style="text-align: center">
 		<label id="demo" align=></label>
@@ -222,7 +255,7 @@
 	</div>
  </div>
  --%>
- 	</div>
+ 		</div>
 </div>
 </div>
 </body>

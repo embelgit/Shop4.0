@@ -17,25 +17,31 @@
     <script src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
 	<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
+<style>
+.container-fluid {
+	overflow: hidden;
+}
+</style>
 </head>
 
- <div class="container col-md-offset-1" style="float: left"> 
+ <div class="container-fluid"> 
  		
  		<div class="row">
 			<div align="center" style="margin-top: 75px">
 				  <h2 class="form-name style_heading">Supplier Payment details</h2>
 			</div>
 				 	
-			 <div class="row">
-				<div class="col-sm-offset-1 col-md-10">
-						<hr style="border-top-color:#c1b1b1;">
+			 <div class="row" align="center">
+				<div class="hr-width">
+					<hr class="style-one">
 				</div>	
 			  </div>
 		</div>
    
     <!-------- All Credit Customers ---------->
    
-   	<div id="report" style="padding-top:3%">
+   	<div id="report" align="right">
 		<label id="demo" ></label>
 		<script>
 		   var date = new Date();
@@ -47,6 +53,9 @@
 		$(document).ready(function ()
 		{
 			var table=$("#list").dataTable({
+				
+				"scrollX": true,
+				"scrollY": 300,
 				
 				 fnRowCallback : function(nRow, aData, iDisplayIndex){
 		                $("th:first", nRow).html(iDisplayIndex +1);
@@ -101,7 +110,7 @@
 	List Lis1=dao.getSupplierPaymentDetailForReport();
 	
 	%>
-	<div id="demo_jui" style="padding-top:3%">
+	<div id="demo_jui">
 		<table id="list" class="display" border="1">
 			<thead>
 				<tr>
