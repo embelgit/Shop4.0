@@ -226,8 +226,8 @@
  			<div class="row buttons-margin" align="center">            	
             	<!--  "employeedetails()" function is implemented in employeeDetails.js  -->
     	          	
-    	          	 <input type="button" id="save" name="btn" class="btn btn-success" onclick="editEmployee()" value="Submit">
-	           		 <input id="save" name="btn" class="btn btn-danger" type="reset"  onclick="reset()" value="Cancel">
+    	          	 <input type="button" id="edtempbtn" name="btn" class="btn btn-success" onclick="editEmployee()" value="Submit">
+	           		 <input id="save" name="btn1" class="btn btn-danger" type="reset"  onclick="reset()" value="Cancel">
     	          	
     	          	
     	          	<!-- <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="updateEmployeeDetails()"><h4> Update</h4></button>

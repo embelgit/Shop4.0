@@ -41,7 +41,7 @@
       if(type.equals("admin")){
     	  
      %>
-<script type="text/javascript">
+	<script type="text/javascript">
 	    function ChooseContact(){
 	        <%
 	        UserDetailsHelper usrHelper = new UserDetailsHelper();
@@ -69,6 +69,8 @@
 <meta charset="utf-8">
 <head>
 
+	<script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
 
 <script type="text/javascript" src="/Shop/staticContent/js/accessControl.js"></script>
 	<script type="text/javascript">
@@ -119,7 +121,7 @@
            						List cList11 =cdd11.getAllUsers();
 							
 							%>
-							<input list="EmpName_drop" id="EmpName" placeholder="Select Employee Name" class="form-control" onchange="getUserDetails()">
+							<input list="EmpName_drop" id="EmpName" name="EmpName" placeholder="Select Employee Name" class="form-control" onchange="getUserDetails()">
 							<datalist id="EmpName_drop">
 							<%
 					           for(int i=0;i<cList11.size();i++){
@@ -169,7 +171,7 @@
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
 							</span>
-              			 	<select class="form-control" id="type">
+              			 	<select class="form-control" id="type" name="type">
 								<option value="selected">--Select Type--</option>
 								<option value="admin">Admin</option>
 								<option value="deo">DEO</option>
@@ -252,7 +254,7 @@
             	
             		 <!--  userDetails() function is implemented in  userDetails.js -->
             		 
-            		 <input type="button" id="btn" class="btn btn-large btn-success" name="btn"  onclick="AddAccessControlDetails()" value="Submit">
+            		 <input type="button" id="accsbtn" class="btn btn-large btn-success" name="btn"  onclick="AddAccessControlValidations()" value="Submit">
 		             <input type="reset"  id="save" class="btn btn-large btn-danger"  name="btn"  onclick="reset()" value="Cancel" >
         	   		 <input type="button" id="btn1" class="btn btn-large btn-success" name="btn1" onclick="openLogin()" value="Login">
         	    </div>

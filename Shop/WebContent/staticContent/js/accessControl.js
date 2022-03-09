@@ -34,11 +34,97 @@ function getUserDetails(){
 
 }
 
+
+function AddAccessControlValidations() {
+	
+	if(document.usd.EmpName.value == "")
+	{
+		var msg="Please Select Employee Name";
+		var dialog = bootbox.dialog({
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+	
+	if(document.usd.type.value == "")
+	{
+		var msg="Please Select User Type";
+		var dialog = bootbox.dialog({
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+	
+	if(document.usd.shopname.value == "")
+	{
+		var msg="Please Select Shop Name";
+		var dialog = bootbox.dialog({
+			message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+			message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+	
+	if(document.usd.email.value == "")
+	{
+		var msg="Please Enter Email Id";
+		var dialog = bootbox.dialog({
+			message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+			message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+	
+	if(document.usd.pass.value == "")
+	{
+		var msg="Please Enter Password";
+		var dialog = bootbox.dialog({
+			message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+			message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+	
+	AddAccessControlDetails();
+	
+}
+
 //save Access Control
 function AddAccessControlDetails(){
 
-	//document.getElementById("save").disabled = true;
-	document.usd.btn.disabled = true;
+	document.getElementById("accsbtn").disabled = true;
 	
 	
 	var EmpName = $('#EmpName').val();
@@ -82,20 +168,7 @@ function AddAccessControlDetails(){
 		alert(data);
 		location.reload();
 		
-		
-		/*var msg=data;
-				var dialog = bootbox.dialog({
-			    message: '<p class="text-center">'+msg.fontcolor("green").fontsize(5)+'</p>',
-			    closeButton: false
-				});
-				
-				setTimeout(function() {
-					dialog.modal('hide');
-					location.reload();
-				}, 1500);
-		
-			document.usd.btn.disabled = false;*/
-			
+		document.getElementById("accsbtn").disabled = true;
 			
 	}).error(function(jqXHR, textStatus, errorThrown){
 		if(textStatus==="timeout") {

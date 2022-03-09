@@ -943,7 +943,7 @@ function clearfeild() {
 							<span class="input-group-addon">
 								<span class="glyphicon nogyphicon">No</span>
 							</span>
-<!-- 	              				<input id="booking" name="booking" placeholder="PO No" class="form-control input-md" type="text" 
+				<!-- 	<input id="booking" name="booking" placeholder="PO No" class="form-control input-md" type="text" 
 	              				       onchange="productDetailInGridasperPO();productDetailnonGridasperPO()" > checkBookingno() 
 	              				<datalist id="booking_drop"></datalist> -->
 	              				
@@ -956,7 +956,7 @@ function clearfeild() {
 				</div>
 			</div>	
 									
-	<div class="row" style="margin-left: -170px;" >
+	<div class="row" style="align:center; margin-left: 60px;" >
 		<div class="table-responsive " style="width:1350px;" > 
 			<table id="jqGrid" ></table>
 			<div id="jqGridPager"></div>
@@ -1278,7 +1278,7 @@ function clearfeild() {
 			</div>
 
 			<div class="row form-group">
-				<label class="col-md-3 control-label" for="contactNo"> Contact Number</label>
+				<label class="col-md-3 control-label" for="contactNo">Contact Number</label>
 				<div class="col-md-3">
 					<div class="input-group">
 						<span class="input-group-addon">

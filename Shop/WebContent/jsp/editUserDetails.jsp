@@ -201,7 +201,7 @@
       </form>	
 								
  			<div class="row buttons-margin" align="center">            	
-           		<input type="button" id="save" class="btn btn-large btn-success" name="btn1" onclick="updateuserDetails()" value="Submit">
+           		<input type="button" id="usredtbtn" class="btn btn-large btn-success" name="btn1" onclick="updateuserDetails()" value="Update">
 		        <input type="reset" id="save1" class="btn btn-large btn-danger" name="btn2" onclick="reset()" value="Cancel">
 		     	<input type="button" id="listBtn" class="btn btn-primary" name="btn3" onclick="Back()" value="Back" />
 		    </div>

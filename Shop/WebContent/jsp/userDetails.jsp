@@ -331,7 +331,7 @@
 			 
  				<div class="row buttons-margin" align="center">
             	 <!--  userDetails() function is implemented in  userDetails.js -->
-            		 <input type="button" id="btn" class="btn btn-success" name="btn" onclick="return regUserDetails();" value="Submit"/>
+            		 <input type="button" id="svbtn" class="btn btn-success" name="btn" onclick="return regUserDetails();" value="Submit"/>
 		             <input type="reset" id="save" class="btn btn-danger" name="btn" onclick="reset()" value="Cancel"/>
             	     <input type="button" id="listBtn" class="btn btn-primary" name="btn" onclick="userlist()" value="List"/>
             	     <input type="button" id="listBtn1" class="btn btn-primary" name="btn" onclick="editUser()" value="Edit" />

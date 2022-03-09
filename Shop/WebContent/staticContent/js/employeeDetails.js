@@ -802,7 +802,7 @@ function editEmployee(){
 }
 function updateEmployeeDetails(){
 	
-	document.empd1.btn.disabled = true;
+	document.getElementById("edtempbtn").disabled = true;
 	
 	var input = document.getElementById('employee'),
     list = document.getElementById('emp_drop'),
@@ -850,7 +850,7 @@ function updateEmployeeDetails(){
 				{
 					document.empd1.reset();
 				}	
-				document.empd1.btn.disabled =false;
+				document.getElementById("edtempbtn").disabled = false;
 			}
  	    	).error(function(jqXHR, textStatus, errorThrown){
  	    		

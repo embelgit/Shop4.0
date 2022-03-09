@@ -504,7 +504,7 @@ function updateshopDetails(){
 
 function updtshopDetails(){
 
-document.shop1.btn1.disabled = true;
+document.getElementById("shpedtbtn").disabled = true;
 	
 	var input = document.getElementById('shop'),
         list = document.getElementById('shop_drop'),
@@ -543,7 +543,8 @@ document.shop1.btn1.disabled = true;
 			{
 				document.shop1.reset();
 			}	
-			document.shop1.btn1.disabled =false;
+			
+			document.getElementById("shpedtbtn").disabled = false;
 		}
 	    	).error(function(jqXHR, textStatus, errorThrown){
 	    		

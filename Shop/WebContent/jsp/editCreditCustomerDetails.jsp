@@ -4,11 +4,25 @@
 %>
 <%@include file="commons/header.jsp"%>
 <head>
-<script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
-<script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
+
+	 <script type="text/javascript" src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
+	 <link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
+     <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css">
+     <link rel="stylesheet" href="/Shop/staticContent/y_css/jquery-ui.css">
+     <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.css">
+     <script type="text/javascript" src="/Shop/staticContent/js/jquery.min.js"></script>
+   	 <script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
+   	 <script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
+   	<!--  <script type="text/javascript" src="/Shop/staticContent/js/jquery-ui-min.js"></script> -->
+   	 <script type="text/javascript" src="/Shop/staticContent/js/jquery-ui.min.js"></script>
+     <script type="text/javascript" src="/Shop/staticContent/js/jquery-ui.js"></script>
+     <script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
+     <script type="text/javascript" src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
+
 
 <script type="text/javascript" src="/Shop/staticContent/js/customerDetails.js"></script>
 <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 
+
  	<script type="text/javascript">
   			function Back()
   			{
@@ -243,7 +257,7 @@
 		</form>
 			
 			<div class="row buttons-margin" align="center">           		
-				<button id="update" name="btn" class="btn btn-large btn-success" onclick="updateCustomerDetailsValidation()"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("submit") %> <%}%> <%if(abc.equals("english")){%>Update<%}%></button>
+				<button id="updtbtn" name="updtbtn" class="btn btn-large btn-success" onclick="updateCustomerDetailsValidation()"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("submit") %> <%}%> <%if(abc.equals("english")){%>Update<%}%></button>
               	<button class="btn btn-large btn-danger" type="reset" onclick="reset()"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("cancel") %> <%}%> <%if(abc.equals("english")){%>Cancel<%}%></button>
 				<input type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 			
 			</div>

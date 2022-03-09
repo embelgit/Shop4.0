@@ -393,8 +393,8 @@ function updateCustomerDetailsValidation()
 
 function updateCustomerDetails(){
 
-	
-	document.cstd1.btn.disabled = true;
+	//document.cstd1.updtbtn.disabled = true;
+	document.getElementById("updtbtn").disabled=true;
 	
 	var input = document.getElementById('creditCustomer'),
     list = document.getElementById('cust_drop'),
@@ -417,18 +417,6 @@ function updateCustomerDetails(){
 	var emailId = $('#emailId').val();
 	var zipCode = $('#zipCode').val();
 	
-	
-/*	alert("ID    : "+fkRootCustId);
-	alert("firstName    : "+firstName);
-	alert("middleName    : "+middleName);
-	alert("lastName    : "+lastName);
-	alert("address    : "+address);
-	alert("contactNo    : "+contactNo);
-	alert("gstNo    : "+gstNo);
-	alert("emailId    : "+emailId);
-	alert("zipCode    : "+zipCode);
-	
-	*/
 	
 	var params = {};
 	
@@ -465,7 +453,7 @@ function updateCustomerDetails(){
 				{
 					document.cstd1.reset();
 				}	
-				document.cstd1.btn.disabled =false;
+				document.getElementById("updtbtn").disabled=false;
 			}
  	    	).error(function(jqXHR, textStatus, errorThrown){
  	    		

@@ -171,7 +171,7 @@ function regUserDetails(){
         		
 function usrDetails(){
 
-    document.usd.btn.disabled = true;
+    document.getElementById("svbtn").disabled = true;
 	
     var params = {};
 
@@ -215,7 +215,7 @@ function usrDetails(){
 			location.reload();
 		}, 1500);
 		
-		document.usd.btn.disabled =false;
+		document.getElementById("svbtn").disabled = false;
 	}
 	).error(function(jqXHR, textStatus, errorThrown){
 		if(textStatus==="timeout") {
@@ -430,7 +430,7 @@ function updateuserDetails(){
 
 function updtuserDetails(){
 
-	document.user1.btn1.disabled = true;
+	document.getElementById("usredtbtn").disabled = true;
 		
 		var input = document.getElementById('user'),
 	        list = document.getElementById('user_drop'),
@@ -472,7 +472,7 @@ function updtuserDetails(){
 				{
 					document.user1.reset();
 				}	
-				document.user1.btn1.disabled =false;
+				document.getElementById("usredtbtn").disabled = false;
 			}
 		    	).error(function(jqXHR, textStatus, errorThrown){
 		    				    		
