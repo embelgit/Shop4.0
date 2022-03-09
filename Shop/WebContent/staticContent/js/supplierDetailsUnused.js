@@ -514,6 +514,23 @@ function updateSupplierDetails()
 		return false;
 	}	
 	
+		if(document.spld1.dealerName.value == "")
+	{
+		var msg="Please Enter Supplier Name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+	
 	/*if(document.spld1.contactNo.value == "")
 	{
 		alert("Please Enter Contact No");

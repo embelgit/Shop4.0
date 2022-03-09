@@ -41,7 +41,7 @@
   			
   		</script>
 		 
-<<<<<<< HEAD
+
 <!-- <style>
 .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
  {
@@ -59,8 +59,7 @@
 .container-fluid {
 	overflow: hidden;
 }
-=======
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
 </style>
           		
 	</head>
@@ -84,11 +83,11 @@
 	</script>
 
 <body id="dt_example" style="min-height:300px;">
-<<<<<<< HEAD
+
 		<div class="container-fluid">
 		
 		
-		<div class="row">
+		<!-- <div class="row">
 				    <div align="center" style="margin-top:70px">
 				  		<h2 class="form-name style_heading">Credit Customer List</h2>
 				  	</div>
@@ -97,8 +96,8 @@
 					     <div class="hr-width">
 							  		<hr class="style-one">
 					     </div>	
-			   		 </div>
-=======
+			   		 </div> -->
+
 	<div class="container-fluid">		
 		
 			<div class="row">
@@ -110,7 +109,7 @@
 					<hr class="style-one">
 				</div>	
 			</div>
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
 		</div>
 			    
 	<%
@@ -181,12 +180,12 @@
 	</div>
 	
 	<%-- <%@include file="commons/newFooter.jsp" %> --%>
-<<<<<<< HEAD
+
 	</div>
-=======
+
 
 	</div>	
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>
 

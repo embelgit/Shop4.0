@@ -667,7 +667,16 @@ function allReportBetweenTwoDates1()
 		
 		if(catmap == null || catmap == "")
 		{
-			alert("Sale Reports are Not Available");
+			/*alert("Sale Reports are Not Available");*/
+			var msg="Sale Reports are Not Available ";
+			var dialog = bootbox.dialog({
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
 			return false;
 		}
 		
@@ -5533,7 +5542,22 @@ function packingReportBetweenTwoDates1()
 		
 		if(catmap == null || catmap == "")
 		{
-			alert("Packing Reports are Not Available for \nStart Date = "+startdateA+"\nEnd Date = "+enddateA);
+			/*alert("Packing Reports are Not Available for \nStart Date = "+startdateA+"\nEnd Date = "+enddateA);*/
+			
+			var msg="Packing Reports are Not Available for ";
+			var dialog = bootbox.dialog({
+		    /*message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',*/
+		    message: ("Packing Reports are Not Available for \nStart Date = "+startdateA+"\nEnd Date = "+enddateA),
+		    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			return false;
+			
+			
+			
 			return false;
 		}
 		

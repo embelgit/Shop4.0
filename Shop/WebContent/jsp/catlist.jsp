@@ -15,15 +15,13 @@
 	<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
 	<script type="text/javascript" src="/Shop/staticContent/js/categoryDetails.js"></script>
-<<<<<<< HEAD
+
 	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script> 
 	<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 
 	
-=======
 <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">	
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
-	
+
 <html>
 	<head>
 	
@@ -72,14 +70,11 @@
 	</script>
 
 <body id="dt_example" style="min-height:300px;">
-<<<<<<< HEAD
+
 	<div class="container-fluid">	
-=======
+
 <div class="container-fluid">		
 		
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
-		
-<<<<<<< HEAD
 		
 		<div class="row">
 				    <div align="center" style="margin-top:70px">
@@ -91,8 +86,8 @@
 							  		<hr class="style-one">
 					     </div>	
 			   		 </div>
-=======
-	<div class="row">
+
+	<!-- <div class="row">
 	    <div align="center" style="margin-top:70px">
 	  		<h2 class="form-name style_heading">Category List</h2>
 	  	</div>
@@ -100,9 +95,9 @@
 		    <div class="hr-width">
 		  		<hr class="style-one">
 		    </div>	
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
 		</div>
-	</div>
+	</div> -->
 			    
 	<%
 	
@@ -162,12 +157,12 @@
 		<input type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
 <!-- 				<input type="button" style="width: 128px; height: 53px; font-size: 25px" value="Delete" id="listBtn" class="btn btn-success" onclick="del()" />  -->
 	</div>
-<<<<<<< HEAD
+
 	</div>
-=======
+
 
 </div>	
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>
 </html>

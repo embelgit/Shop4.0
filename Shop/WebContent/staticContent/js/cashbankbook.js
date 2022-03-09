@@ -7087,11 +7087,7 @@ function creditdebitForBetTowDate() {
 
 	params["methodName"] = "creditdebitForBetTowDate";
 
-	$
-			.post(
-					'/Shop/jsp/utility/controller.jsp',
-					params,
-					function(data) {
+	$.post('/Shop/jsp/utility/controller.jsp',params,function(data) {
 						// To clear Table
 						$('#example5').dataTable().fnClearTable();
 
@@ -7102,11 +7098,7 @@ function creditdebitForBetTowDate() {
 								|| catmap == undefined) {
 						}
 
-						$(document)
-								.ready(
-										function() {
-											$('#example5')
-													.DataTable(
+						$(document).ready(function() {$('#example5').DataTable(
 															{
 																fnRowCallback : function(
 																		nRow,

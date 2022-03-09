@@ -40,6 +40,7 @@ function AddAccessControlDetails(){
 	//document.getElementById("save").disabled = true;
 	document.usd.btn.disabled = true;
 	
+	
 	var EmpName = $('#EmpName').val();
 	var userid= EmpName.split(",")[0];
 	var employeeName = EmpName.split(",")[1];
@@ -79,19 +80,22 @@ function AddAccessControlDetails(){
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data) {
 		
 		alert(data);
+		location.reload();
+		
+		
 		/*var msg=data;
-		var dialog = bootbox.dialog({
-	    message: '<p class="text-center">'+msg.fontcolor("green").fontsize(5)+'</p>',
-	    closeButton: false
-		});
+				var dialog = bootbox.dialog({
+			    message: '<p class="text-center">'+msg.fontcolor("green").fontsize(5)+'</p>',
+			    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+					location.reload();
+				}, 1500);
 		
-		setTimeout(function() {
-			dialog.modal('hide');
-			location.reload();
-		}, 1500);*/
-		
-			document.usd.btn.disabled = false;
-			location.reload();
+			document.usd.btn.disabled = false;*/
+			
 			
 	}).error(function(jqXHR, textStatus, errorThrown){
 		if(textStatus==="timeout") {
@@ -100,3 +104,30 @@ function AddAccessControlDetails(){
 		}
 	});
 }
+
+/*function AddAccessControlDetails1(){
+	
+	
+	var EmpName = document.getElementById("EmpName").value;
+	
+	if(EmpName == "")
+	{
+		var msg="Please Enter EmpName ";
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	
+
+	AddAccessControlDetails();
+	
+}
+*/

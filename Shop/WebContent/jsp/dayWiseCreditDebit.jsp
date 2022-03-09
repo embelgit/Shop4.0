@@ -18,19 +18,24 @@
 <link href="/Shop/staticContent/css/button.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
 <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css">
+
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
+
 <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
+/* .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
  {
     border-radius:23px;
-}
+} */
 
+.container-fluid {
+	overflow: hidden;
+}
 
 </style>
 </head>
 <script src="/Shop/staticContent/js/cashbankbook.js"></script>
-
-
-
+<body>
+ <div class="container-fluid"> 
  <div class="container col-md-offset-1" style="float: left"> 
  		
  		<div class="row">
@@ -209,8 +214,10 @@
 <!--  <!------ Yearly ------>
  		
  		
- 		
- 		
  	</div>
  </div>
+ 
+ </div>
+ 
+ </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>

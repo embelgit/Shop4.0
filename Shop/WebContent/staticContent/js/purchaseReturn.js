@@ -979,6 +979,56 @@ function fetchDataForPurchase() {
 
 ////////////////storing purchase Return data in database //////////////////
 
+	function purchaseReturnTable1(){
+
+		var supplierName=$('#supplier').val();
+	   var bill_no=$('#bill_no').val();
+		
+		if(supplierName == "" || supplierName==null || supplierName==undefined)
+	{
+		var msg="Please Enter supplierName ";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+	
+			
+				if(bill_no == "" || bill_no==null || bill_no==undefined)
+	{
+		var msg="Please Enter bill_no ";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+	
+		
+		
+		purchaseReturnTable();
+	
+	}
+
+
+
+
+
 function purchaseReturnTable(){
 	
 	document.getElementById("btn").disabled = false;
@@ -1083,9 +1133,22 @@ function purchaseReturnTable(){
 
 	$.post('/Shop/jsp/utility/controller.jsp', params, function(data) {
 		
-       	alert(data);
-		location.reload();
+       	/*alert(data);
+		location.reload();*/
 		// returntMinusFromStockPurchase();
+		 var msg="Data Added successfully "
+				var dialog = bootbox.dialog({
+					
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);				
+				document.getElementById("save").disabled = false;
+				return false;
+		
 	}).error(function(jqXHR, textStatus, errorThrown) {
 		if (textStatus === "timeout") {
 			$(loaderObj).hide();

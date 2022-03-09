@@ -846,7 +846,9 @@ function hamaliExpenseAddingToGross()
 		
 			<div class="row buttons-margin" align="center">
 													<!-- good receive -->	
-		        <input type="button" class="btn btn-large btn-success button-height-width" id="save" name="btn" value="Submit" onclick="addproducttx1()">
+		        <!-- <input type="button" class="btn btn-large btn-success button-height-width" id="save" name="btn" value="Submit" onclick="addproducttx1()"> -->
+		        <input type="button" class="btn btn-large btn-success button-height-width" id="save" name="btn" value="Submit" onclick="addproducttx()">
+		        
 		        <input type="button" class="btn btn-large btn-danger button-height-width" id="save" name="btn" value="Cancel" onclick="location.reload()">
 				<input type="button" value=" List" id="listBtn" class="btn btn-primary" onclick="productlist()" /> 
 		    </div> 

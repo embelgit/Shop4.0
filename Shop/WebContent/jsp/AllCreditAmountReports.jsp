@@ -18,27 +18,42 @@
 <link href="/Shop/staticContent/css/button.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
 <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css">
+
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
+
 <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
+
+ .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
  {
     border-radius:23px;
+} 
+
+.container-fluid {
+	overflow: hidden;
 }
 
 
 </style>
 </head>
 <body>
-<div class="row" style="min-height:300px;">
+
+ <div class="container-fluid"> 
+<div class="row">
     <div  class="col-md-12">
         <h3>Left Tabs</h3>
         <hr/>
-	<div class="col-md-2">
-		<ul class="nav nav-tabs tabs-left" >
-		    <li class="active"><a data-toggle="tab" href="#credit" style="border-radius:23px;">All Credit Amount</a></li>
-		    <li><a data-toggle="tab" href="#debit" style="border-radius:23px;">All Debit Amount</a></li>
-		     <!-- <li><a data-toggle="tab" href="#twoYears"><h4 style="color:blue">Between Two Years</h4></a></li> -->
+        
+	<!-- <div class="col-md-2"> -->
+		<div class="gstreturn">
+		<!-- <ul class="nav nav-tabs tabs-left" > -->
+		 <ul class="nav nav-tabs ">
+		    <li class="active"><a data-toggle="tab" href="#credit" >All Credit Amount</a></li>
+		    <li><a data-toggle="tab" href="#debit" >All Debit Amount</a></li>
+		    
+		   
  		 </ul>
- 		</div>
+ 		</div>	
+ 		
 
  <div class="container"  align="center"> 
  		
@@ -342,4 +357,6 @@
 	</div>
  	</div>
  </div>
+ </div>
+ </body>
 <%@include file="commons/footer.jsp" %>

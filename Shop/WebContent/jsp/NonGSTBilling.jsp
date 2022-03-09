@@ -1203,7 +1203,7 @@ input[type="radio"] + div>span {
 			</div>
 	    </div>
          	 <div class="row form-group" style="padding-top:6%">
-           		<label class="col-md-2 control-label" for="firstName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("firstName") %> <%}%> <%if(abc.equals("english")){%>First Name<%}%></label>  
+           		<label class="col-md-2 control-label" for="firstName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("firstName") %> <%}%> <%if(abc.equals("english")){%>First Name<%}%><sup>*</sup></label>  
            	 		<div class="col-md-3">
             			<div class="input-group">
 							<span class="input-group-addon">
@@ -1225,7 +1225,7 @@ input[type="radio"] + div>span {
 				</div>
 			
 			 <div class="row form-group">
-           		<label class="col-md-2 control-label" for="lastName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("lastName") %> <%}%> <%if(abc.equals("english")){%>Last Name<%}%></label>  
+           		<label class="col-md-2 control-label" for="lastName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("lastName") %> <%}%> <%if(abc.equals("english")){%>Last Name<%}%> <sup>*</sup></label>  
            	 		<div class="col-md-3">
             			<div class="input-group">
 							<span class="input-group-addon">
@@ -1258,7 +1258,7 @@ input[type="radio"] + div>span {
            			</div></div>
 			
 			<div class="row form-group">
-				<label class="col-md-2 control-label" for="contactNo"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("contactNumber") %> <%}%> <%if(abc.equals("english")){%>Contact No.<%}%></label>  
+				<label class="col-md-2 control-label" for="contactNo"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("contactNumber") %> <%}%> <%if(abc.equals("english")){%>ContactNo.<%}%> <sup>*</sup></label>  
            	 		<div class="col-md-3 ">
 						<div class="input-group">
 							<span class="input-group-addon">
@@ -1312,9 +1312,9 @@ input[type="radio"] + div>span {
 
 <!-- ====================================================== END CUSTOMER DETAILS POP UP ================================================================ -->
 </div>
-<<<<<<< HEAD
+
  </body>
-=======
+
 </body>
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
 <jsp:include page="commons/footer.jsp"></jsp:include>

@@ -45,6 +45,9 @@
     <script src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
 	<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
+	
+	<script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
+<script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
 
 <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 <style>

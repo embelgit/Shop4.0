@@ -1,0 +1,32 @@
+
+element.style {
+    text-align: center;
+    width: 30px;
+}
+td.ui-state-default.jqgrid-rownum {
+    background-color: white;
+    color: black;
+}
+
+
+<div class="container-fluid">
+
+
+
+#list2_wrapper {
+    background-color: #23527c;
+    color: white;
+        border-radius: 10px 10px 10px 10px;
+}
+tr {
+    background-color: #e87136;
+    color: white;
+}
+
+Todays task
+-Work On EmbelSoft project
+-Working On List Ui And Grid Ui
+
+Todays task
+-Work On EmbelSoft project
+-Working On List Ui And Grid Ui

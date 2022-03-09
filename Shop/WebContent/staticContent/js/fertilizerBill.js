@@ -11208,8 +11208,26 @@ function fertilizerBill()
 				
 					}//);		
 	 }*/
+	 
+	 		if(customerName == "" || customerName==null || customerName==undefined)
+	{
+		var msg="Please Enter Customer Name ";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+	 
 	
-	if(customerName != "")
+/*	if(customerName != "")
 	{
 	 var letterNumber = /^[a-zA-Z ]+$/;
 	 if(customerName.match(letterNumber))
@@ -11231,7 +11249,7 @@ function fertilizerBill()
 			
 			return false;
 		}
-	 }
+	 }*/
 	  if(contactNo != "")
 	  {
 		  var letterNumber = /^[0-9]{10}$/;
@@ -11256,6 +11274,9 @@ function fertilizerBill()
 					return false;
 			 }
 	  }
+
+	  
+	  
 	  if(proName == "" || proName == "Select product")
 	  {
 						
@@ -12100,6 +12121,59 @@ function creditCustFertilizerBill()
 
 function fertilizerBillForCreditCustomer()
 {
+	
+	var creditCustomerName = $('#creditCustomer').val();
+	var creditCustomerHiddenName = $('#customerNameHidden').val();
+	var village = $('#village1').val();
+	var contactNo = $('#contactNo1').val();
+	
+	
+	
+			if(creditCustomerName == "")
+	{
+			var msg="Please Select creditCustomerName  ";
+			var dialog = bootbox.dialog({
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			return false;
+	}
+	
+	/*		if(productIdCredit == "selected")
+	{
+			var msg="Please Enter 10 Digit contactNo  ";
+			var dialog = bootbox.dialog({
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			return false;
+		
+	}*/
+	
+			if(contactNo == "")
+	{
+			var msg="Please Enter 10 Digit contactNo  ";
+			var dialog = bootbox.dialog({
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			return false;
+		
+	}
+	
+	
 	/*if (document.creditFertiBill1.creditCustomer.value == "" )
 	 {
 		var msg="Please Enter Credit Customer Name";

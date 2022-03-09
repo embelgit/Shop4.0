@@ -1525,8 +1525,10 @@ function clearfeild() {
 					</div>
 					
 				</div>
+				
 				<div class="row form-group">
-					<label class="col-md-2 control-label" for="productName">
+				
+					<%-- <label class="col-md-2 control-label" for="productName">
 						<%
 							if (abc.equals("marathi")) {
 						%><%=PropertiesHelper.marathiProperties.getProperty("productName")%>
@@ -1544,9 +1546,33 @@ function clearfeild() {
 							<i class="	glyphicon glyphicon-list-alt"></i>
 							</span>
 							<input list="productName_drop" id="productName" placeholder="Product Name" 
+							       class="form-control " onblur="checkForDuplicateProductEntry()">
+						</div>
+					</div> --%>
+					
+							<label class="col-md-2 control-label" for="productName">
+						<%
+							if (abc.equals("marathi")) {
+						%><%=PropertiesHelper.marathiProperties.getProperty("productName")%>
+						<%
+							}
+						%> <%
+ 	if (abc.equals("english")) {
+ %>Product Name<%
+ 	}
+ %><sup>*</sup>
+					</label>
+					<div class="col-md-3">
+						<div class="input-group">
+							<span class="input-group-addon"> 
+							<i class="	glyphicon glyphicon-list-alt"></i>
+							</span>
+							<input list="productName_drop" id="productName" placeholder="Product Name" 
 							       class="form-control" onblur="checkForDuplicateProductEntry()">
 						</div>
 					</div>
+					
+					
 
 					<label class="col-md-3 control-label" for="manufacturingCompany">
 						<%
@@ -1570,7 +1596,10 @@ function clearfeild() {
 						</div>
 					</div>
 				</div>
-  <label class="col-md-2 control-label" style="margin-left: -9px;"	for="weight">
+				
+				
+				<div class="row form-group">
+  <label class="col-md-2 control-label"	for="weight">
 <%if (abc.equals("marathi")) {%><%=PropertiesHelper.marathiProperties.getProperty("weight")%><%
 	}%> <%	if (abc.equals("english")) {
             %>Weight<%
@@ -1582,8 +1611,9 @@ function clearfeild() {
 							class="	glyphicon glyphicon-hand-right"></i>
 						</span>
 
-							<input type="text" id="weight" name="weight" placeholder="Weight" class="form-control" value="1" onchange="checkForDuplicateProductEntry()" >
-							<%-- <%
+							<input type="text" id="weight" name="weight" placeholder="Weight" class="form-control " value="1" 
+							onchange="checkForDuplicateProductEntry()" >
+							<%--  <%
 								ProductDetailsDao productdao2 = new ProductDetailsDao();
 								List productList2 = productdao2.getAllProductDetails(request);
 							%>
@@ -1597,12 +1627,12 @@ function clearfeild() {
 									<%
 										}
 									%>
-							</datalist> --%>
+							</datalist>  --%>
 						</div>
 					</div>
 		   
-		<div class="row form-group">
-<label class="col-md-3 control-label" style="margin-left: 8px;" for="Unit">
+		
+<label class="col-md-3 control-label"  for="Unit">
 	<%if (abc.equals("marathi")) {%><%=PropertiesHelper.marathiProperties.getProperty("unit")%><%
 	}%> <% if (abc.equals("english")) {
       %>Buy Unit<%
@@ -1637,9 +1667,9 @@ function clearfeild() {
 							</datalist>
 					</div>
 				</div>
-
 				</div>
-
+				
+				
 
 <div class="row form-group">
 <label class="col-md-2 control-label" for="unitDescription">Sale Unit</label>  
@@ -1708,9 +1738,9 @@ function clearfeild() {
 
 
 				<div class="row form-group">
-					<label class="col-md-2 control-label" style="text-align: right"	for="fk_tax_id">Tax Name</label>
-					<div class="col-md-3" style="width: 292px;">
-						<div class="input-group" style="width: 100%;">
+					<label class="col-md-2 control-label" for="fk_tax_id">Tax Name <sup>*</sup></label>
+					<div class="col-md-3" >
+						<div class="input-group" >
 							<span class="input-group-addon"> 
 								<i class="	glyphicon glyphicon-list-alt"></i>
 							</span>
@@ -1721,7 +1751,7 @@ function clearfeild() {
 							%>
 							
 							<select class="form-control input-md" autofocus name="fk_tax_id" id="fk_tax_id" 
-								onChange="ChooseContact(this);salePriceWithoutTax();getcsgst();" style="width: 199px;">
+								onChange="ChooseContact(this);salePriceWithoutTax();getcsgst();" >
 								<option value="1">--Select Tax--</option>
 								<%
 									for (int i = 0; i < tList.size(); i++) {
@@ -1738,17 +1768,18 @@ function clearfeild() {
 						</div>
 					</div>
 			
-					<label class="col-md-2 control-label" style="margin-left: 73px;"
-						for="weight"> GST<sup></sup></label>
+					<label class="col-md-3 control-label" 
+						for="weight"> GST</label>
 
-					<div class="col-md-3" style="width: 263px;">
-						<div class="input-group" style="margin-left: -5px;">
+					<div class="col-md-3" >
+						<div class="input-group">
 							<span class="input-group-addon"> % </span> <input
 								id="taxPercentage" name="taxPercentage"
 								placeholder="GST %" class="form-control input-md"
 								type="text" readonly="readonly">
 						</div>
 					</div>
+				
 				</div>
 
 <div class="row form-group">
@@ -1829,7 +1860,7 @@ function clearfeild() {
 <%	} %> <%
  	if (abc.equals("english")) {
  %>Buy Price(Incl Tax)<%
- 	} %>
+ 	} %><sup>*</sup>
 	</label>
 
 					<div class="col-md-3">
@@ -1849,7 +1880,8 @@ function clearfeild() {
  %><%=PropertiesHelper.marathiProperties.getProperty("spwithoutgst")%>
 	<%	}%> <%
  	if (abc.equals("english")) {
- %>S.P(Excl Tax)<%	}%>
+ %>S.P(Excl Tax)<%	}%><sup>*</sup>
+ 
  </label>
 					<div class="col-md-3">
 						<div class="input-group">
@@ -1867,7 +1899,7 @@ function clearfeild() {
  %><%=PropertiesHelper.marathiProperties.getProperty("salePrice")%>
 	<% } %> <%
  	if (abc.equals("english")) {
- %>Sale Price/Unit(Incl Tax)<% } %>
+ %>Sale Price/Unit(Incl Tax)<% } %><sup>*</sup>
 	</label>
 	                <div class="col-md-3">
 						<div class="input-group">
@@ -1883,7 +1915,7 @@ function clearfeild() {
 
 
 				<div class="row form-group">
-					<label class="col-md-2 control-label" style="text-align: right;"
+					<label class="col-md-2 control-label" 
 						for="hsn">
 						<%
 							if (abc.equals("marathi")) {
@@ -1896,15 +1928,15 @@ function clearfeild() {
  	}
  %>
 					</label>
-					<div class="col-md-3" style="width: 292px;">
+					<div class="col-md-3" >
 						<div class="input-group">
 							<span class="input-group-addon"> No </span> 
 							<input id="hsn" name="hsn" placeholder="HSN Code"
-								class="form-control input-md" type="text" style="width: 196px;">
+								class="form-control input-md" type="text" >
 						</div>
 					</div>
 					
-					<label class="col-md-2 control-label" style="margin-left: 70px;" for="creditSalePrice">
+				<%-- 	<label class="col-md-2 control-label" for="creditSalePrice">
 						<%
 							if (abc.equals("marathi")) {
 						%><%=PropertiesHelper.marathiProperties.getProperty("shopName")%>
@@ -1916,14 +1948,40 @@ function clearfeild() {
  	}
  %>
 					</label>
-					<div class="col-md-3" style="width: 273px;">
+					 <div class="col-md-3" >
 						<div class="input-group">
 							<span class="input-group-addon"> <i
 								class="	glyphicon glyphicon-user"></i>
 							</span>
-						<input type="text" id="fk_shop_id" name="fk_shop_id"  value="<%=shopName1%>" readonly="readonly" list="shopNameList" class="form-control" >
+						<input type="text" id="fk_shop_id" name="fk_shop_id"  value="<%=shopName1%>" readonly="readonly" list="shopNameList" 
+						class="form-control input-md">
+						</div>
+					</div>  --%>
+					
+					<label class="col-md-3 control-label" for="creditSalePrice">
+	<%
+							if (abc.equals("marathi")) {
+						%><%=PropertiesHelper.marathiProperties.getProperty("shopName")%>
+						<%
+							}
+						%> <%
+ 	if (abc.equals("english")) {
+ %>Shop Name <%
+ 	}
+ %>
+	</label>
+
+					<div class="col-md-3">
+						<div class="input-group">
+							<span class="input-group-addon"> 
+							<i class="	glyphicon glyphicon-user"></i>
+							</span>
+						<input type="text" id="fk_shop_id" name="fk_shop_id"  value="<%=shopName1%>" readonly="readonly" list="shopNameList" 
+						class="form-control input-md" >
 						</div>
 					</div>
+					
+					
     			</div>
     			
     <div class="row form-group">

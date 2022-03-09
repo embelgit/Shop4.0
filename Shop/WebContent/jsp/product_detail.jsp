@@ -38,12 +38,12 @@
 <script type="text/javascript" src="/Shop/staticContent/js/categoryDetails.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/units.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/taxCreation.js"></script>
-<<<<<<< HEAD
+
 <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 
 
-=======
+
 <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
 <script type="text/javascript">
 function mypopup(url)
 {
@@ -738,7 +738,8 @@ function caldis(){
 
 <!-- <label class="col-md-2 control-label" for="weight" style="text-align: left;"> -->
 
-<label class="col-md-2 control-label" style="margin-left: -3px;" for="weight">
+<div class="row form-group">
+<label class="col-md-2 control-label" for="weight">
 <%
 	if (abc.equals("marathi")) {%><%=PropertiesHelper.marathiProperties.getProperty("weight")%><%}%> <%
  	if (abc.equals("english")) {
@@ -747,14 +748,15 @@ function caldis(){
  %>
 </label>
 				<div class="col-md-3">
-						<div class="input-group" style="margin-left: -8px;">
+						<div class="input-group" >
 						<!-- <div class="col-md-2">
 						<div class="input-group"> -->
 							<span class="input-group-addon"> 
 							<i class="	glyphicon glyphicon-hand-right"></i>
 						</span>
 
-							<input type="text" id="weight" name="weight" placeholder="Weight" class="form-control" value="1" readonly="readonly" onchange="checkForDuplicateProductEntry()" >
+							<input type="text" id="weight" name="weight" placeholder="Weight" class="form-control" value="1" readonly="readonly" 
+							onchange="checkForDuplicateProductEntry()" >
 							
 							
 							
@@ -780,7 +782,7 @@ function caldis(){
 						</div>
 					</div>
 
-<div class="row form-group">
+<!-- <div class="row form-group"> -->
 
 <label class="col-md-3 control-label" style="margin-left: 0px;" for="Unit">
 <%
@@ -1456,9 +1458,10 @@ function caldis(){
             			</div>
 					</div>
 			
+
 				<div class="row form-group" style="padding-top:6%;">
            				<label class="col-md-2 control-label" for="cgst">CGST<sup>*</sup></label>  
-		           	 <div class="col-md-3" style="padding-left: 24px;">
+		           	 <div class="col-md-3" style="padding-left: 24px;"> 
             			<div class="input-group">
 							<span class="input-group-addon">
 								%

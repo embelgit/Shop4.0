@@ -3,15 +3,55 @@ function saleReturnVal(){
 	var Customertype = $('#customerType').val();
 	var Billno = $('#billNo').val();
 	
-	if(Customertype == "selected"){
+	/*if(Customertype == "selected"){
 		alert("Please Select Customer Type");
+		
 		return false;
-	}
+	}*/
 	
-/*	if(document.catd.categoryName.value == "")*/
-/*	if(Customertype == "selected")
+		/*if(Customertype != null && Customertype != "")*/
+		if(Customertype == "selected")
+		
+		{
+			var msg="Please  Select Customer type ";
+			var dialog = bootbox.dialog({
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			return false;
+		}
+	
+
+	/*if(Billno == ""){
+		alert("Please Select Bill No");
+		return false;
+	}*/
+	
+		/*if(Billno != null && Billno != "")*/
+		if(Billno == "")
+		
+		{
+			var msg="Please Billno ";
+			var dialog = bootbox.dialog({
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			return false;
+		}
+	
+
+	
+/*					if(Billno != null && Billno != "")
 	{
-		var msg="Please Enter Category Name";
+		var msg="Please Enter Billno ";
 		
 		var dialog = bootbox.dialog({
 			//title: "Embel Technologies Says :",
@@ -24,13 +64,8 @@ function saleReturnVal(){
 		}, 1500);
 		
 		return false;
-	}	*/
+	}*/
 	
-
-	if(Billno == ""){
-		alert("Please Select Bill No");
-		return false;
-	}
 	saleReturn();
 }
 
@@ -38,6 +73,7 @@ function saleReturn(){
 
 	document.getElementById("save").disabled = true;
 	var params={};
+	
 	
     var billNo = $('#billNo').val();
     var grossTotal = $('#grossTotal').val();
@@ -123,22 +159,24 @@ function saleReturn(){
 	
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
  	    	{
- 				alert(data);
- 				location.reload();
- 		/*		var msg=data;
-		var dialog = bootbox.dialog({
-	    message: '<p class="text-center">'+msg.fontcolor("green").fontsize(5)+'</p>',
-	    closeButton: false
-		});
-		
-		setTimeout(function() {
-			dialog.modal('hide');
-			location.reload();
-		}, 1500);*/
-		/*document.catd.btn.disabled =false;*/
+ 				/*alert(data);
+ 				location.reload();*/
+ 	
  				
- 				//returntMinusFromStockPurchase();
- 				document.getElementById("save").disabled = false;
+ 				 /*var msg="Data Added successfully "*/
+ 				 var msg="data"
+				var dialog = bootbox.dialog({
+					
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);				
+				document.getElementById("save").disabled = false;
+				return false;
+ 				/*document.getElementById("save").disabled = false;*/
  				 				
  	    	}).error(function(jqXHR, textStatus, errorThrown){
  	    		if(textStatus==="timeout") {
@@ -215,9 +253,23 @@ function seedReturn(){
 	
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
  	    	{
- 				alert(data);
+ 				/*alert(data);
+ 				location.reload();	*/
+ 				
+ 					 var msg="data"
+				var dialog = bootbox.dialog({
+					
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);				
+				document.getElementById("save").disabled = false;
+				return false;
+ 				
  				//returntMinusFromStockPurchase();
- 				location.reload();	
  				
  	    	}
  	    	).error(function(jqXHR, textStatus, errorThrown){
@@ -2150,18 +2202,46 @@ function getProductBillNo(){
 
 function billchallanVal(){
 
-
 	var billNo = $('#billNo').val();
-	var billNoo = $('#billNoo').val();
+	/*var billNoo = $('#billNoo').val();*/
 		
-	if((billNo == "" || billNo ==null || billNo==undefined)){
+	/*if((billNo == "" || billNo ==null || billNo==undefined)){
 		alert("Please Select Challan No");
 		return false;
+	}*/
+		if(billNo == "")
+	{
+			var msg="Please Select Challan No ";
+			var dialog = bootbox.dialog({
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			return false;
+		
 	}
 	
-	
-	
-	
+	/*if(document.catd.categoryName.value == "")*/
+	/*if((billNo == "" || billNo ==null || billNo==undefined))
+	{
+		var msg="Please Enter billNo ";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}	*/
+
 	billchallanVal1();
 }
 //
@@ -2179,12 +2259,23 @@ function billchallanVal1(){
 	
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
  	    	{
- 				alert(data);
+ 				/*alert(data);
+ 				location.reload();*/
+ 					var msg=data;
+				var dialog = bootbox.dialog({
+			    message: '<p class="text-center">'+msg.fontcolor("green").fontsize(5)+'</p>',
+			    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+					location.reload();
+				}, 1500);
+	 			document.catd.btn1.disabled = false;
+	 			
  				//returntMinusFromStockPurchase();
- 				location.reload();
- //				document.getElementById("save").disabled = false; 				
- 	    	}
- 	    	).error(function(jqXHR, textStatus, errorThrown){
+	//		document.getElementById("save").disabled = false; 				
+ 	    	}).error(function(jqXHR, textStatus, errorThrown){
  	    		if(textStatus==="timeout") {
  	    			$(loaderObj).hide();
  	    			$(loaderObj).find('#errorDiv').show();
@@ -2199,9 +2290,28 @@ function billReturnVal(){
 	var billNo = $('#billNo').val();
 	var billNoo = $('#billNoo').val();
 		
-	if((billNo == "" || billNo ==null || billNo==undefined) && (billNoo == "" || billNoo ==null || billNoo==undefined)){
+	/*if((billNo == "" || billNo ==null || billNo==undefined) && (billNoo == "" || billNoo ==null || billNoo==undefined)){
 		alert("Please Select Bill No");
 		return false;
+	}*/
+	
+	/*if((billNo == "" || billNo ==null || billNo==undefined) && (billNoo == "" || billNoo ==null || billNoo==undefined))*/
+	/*if((billNo == "" || billNo ==null || billNo==undefined) && (billNoo == "" || billNoo ==null || billNoo==undefined))*/
+	
+	if(billNo == "")
+	{
+	
+			var msg="Please Select Bill No ";
+			var dialog = bootbox.dialog({
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			return false;
+		
 	}
 	
 	/*if(document.catd.categoryName.value == "")*/
@@ -2222,10 +2332,30 @@ function billReturnVal(){
 		return false;
 	}*/
 	
-	if((billNo != "" && billNoo != "" )){
+	/*if((billNo != "" && billNoo != "" )){
 		alert("Please Select Any one Bill No");
 		return false;
+	}*/
+	
+	
+	/*if((billNo != "" && billNoo != "" ))*/
+	if(billNoo == "")
+	{
+		
+			var msg="Please Select Any one Bill No";
+			var dialog = bootbox.dialog({
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			return false;
 	}
+	
+	
+	
 	
 	billReturnVal1();
 }
@@ -2256,10 +2386,10 @@ function billReturnVal1(){
 	
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
  	    	{
- 				alert(data);
- 				location.reload();
+ 				/*alert(data);
+ 				location.reload();*/
  				//returntMinusFromStockPurchase();
- 		/*		var msg=data;
+ 				var msg=data;
 		var dialog = bootbox.dialog({
 	    message: '<p class="text-center">'+msg.fontcolor("green").fontsize(5)+'</p>',
 	    closeButton: false
@@ -2269,7 +2399,7 @@ function billReturnVal1(){
 			dialog.modal('hide');
 			location.reload();
 		}, 1500);
- 				*/
+ 				
  				
  				
  //		document.getElementById("save").disabled = false; 				

@@ -77,13 +77,20 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"> 
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
 
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 
+
 <script src="/Shop/staticContent/js/saleReports.js">
 	function cancle() {
 		location.reload()
 	}
 </script>
 <style>
-.btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
+
+.container-fluid {
+	overflow: hidden;
+}
+
+/* .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
  {
     border-radius:23px;
 }
@@ -102,30 +109,60 @@
 .pagination span{
     font-weight: 700;
     font-size: 16px;
-}
+} */
 </style>
 </head>
-<div class="row" style="min-height: 300px;">
-	<div class="col-md-12">
-		<h3>Left Tabs</h3>
-		<hr />
-		<div class="col-md-2">
-			<ul class="nav nav-tabs tabs-left">
-				<li class="active"><a href="#home" data-toggle="tab" style=" border-radius:23px;">Category Wise Sale Reports</a></li>
-				<li><a href="#profile" data-toggle="tab" style=" border-radius:23px;">Product Name Wise Sale Reports</a></li>
-				<li><a href="#payment" data-toggle="tab" style=" border-radius:23px;">Payment Mode Wise Sale Reports</a></li>
-				<li><a href="#shopWise" data-toggle="tab" style=" border-radius:23px;">Shop Wise Sale Reports</a></li>
-				<li><a href="#userWise" data-toggle="tab" style=" border-radius:23px;">User Wise Sale Reports</a></li>
-				<li><a href="#GSTWise" data-toggle="tab" style=" border-radius:23px;">GST Wise Reports</a></li>
-				<li><a href="#nonGSTWise" data-toggle="tab" style=" border-radius:23px;">Non-GST Wise Reports</a></li>
-		     	<li><a href="#rangeWiseBillReport" data-toggle="tab" style=" border-radius:23px;">Bill Number Wise Report</a></li>
-				<li><a href="#cashCustomerSaleReport" data-toggle="tab" style=" border-radius:23px;">Cash Customer Sale Report</a></li>
-				<li><a href="#creditCustomerSaleReport" data-toggle="tab" style=" border-radius:23px;">Credit Customer Sale Report</a></li>
-				<li><a href="#saleReturnReport" data-toggle="tab" style=" border-radius:23px;"> Sale Return Report</a></li>
-		     	<li><a href="#billcancelReport" data-toggle="tab" style=" border-radius:23px;">Bill Cancel Report</a></li>
+<body>
+ <div class="container-fluid"> 
+
+
+ <div class="row" > 
+	   <div class="col-md-12">   
+	
+		   <h3>Left Tabs</h3>
+		<hr />  
+		
+		  
+		    <div class="reppurchase">
+			  <!-- <ul class="nav nav-tabs tabs-left">  -->
+			  <ul class="nav nav-tabs ">  
+			  
+				 <!-- <li class="active"><a href="#home" data-toggle="tab" style=" border-radius:12px;">Category Wise Sale Reports</a></li>
+				<li><a href="#profile" data-toggle="tab" style=" border-radius:12px;">Product Name Wise Sale Reports</a></li>
+				<li><a href="#payment" data-toggle="tab" style=" border-radius:12px;">Payment Mode Wise Sale Reports</a></li>
+				<li><a href="#shopWise" data-toggle="tab" style=" border-radius:12px;">Shop Wise Sale Reports</a></li>
+				<li><a href="#userWise" data-toggle="tab" style=" border-radius:12px;">User Wise Sale Reports</a></li>
+				<li><a href="#GSTWise" data-toggle="tab" style=" border-radius:12px;">GST Wise Reports</a></li>
+				<li><a href="#nonGSTWise" data-toggle="tab" style=" border-radius:12px;">Non-GST Wise Reports</a></li>
+		     	<li><a href="#rangeWiseBillReport" data-toggle="tab" style=" border-radius:12px;">Bill Number Wise Report</a></li>
+				<li><a href="#cashCustomerSaleReport" data-toggle="tab" style=" border-radius:12px;">Cash Customer Sale Report</a></li>
+				<li><a href="#creditCustomerSaleReport" data-toggle="tab" style=" border-radius:12px;">Credit Customer Sale Report</a></li>
+				<li><a href="#saleReturnReport" data-toggle="tab" style=" border-radius:12px;"> Sale Return Report</a></li>
+		     	<li><a href="#billcancelReport" data-toggle="tab" style=" border-radius:12px;">Bill Cancel Report</a></li>  -->
+		     	
+		     	
+		     	
+		     	 <li class="active"><a href="#home" data-toggle="tab" >Category Wise Report </a></li>
+				<li><a href="#profile" data-toggle="tab" >Product Name Wise </a></li>
+				<li><a href="#payment" data-toggle="tab" >Payment Mode Wise </a></li>
+				<li><a href="#shopWise" data-toggle="tab" >Shop Wise Report </a></li>
+				<li><a href="#userWise" data-toggle="tab" >User Wise Report </a></li>
+				<li><a href="#GSTWise" data-toggle="tab" >GST Wise Reports</a></li>
+				<li><a href="#nonGSTWise" data-toggle="tab" >Non-GST Wise Reports</a></li>
+		     	<li><a href="#rangeWiseBillReport" data-toggle="tab" >Bill Number Wise Report</a></li>
+				<li><a href="#cashCustomerSaleReport" data-toggle="tab" >Cash Customer Report </a></li>
+				<li><a href="#creditCustomerSaleReport" data-toggle="tab" >Credit Customer Report </a></li>
+				<li><a href="#saleReturnReport" data-toggle="tab" > Sale Return Report</a></li>
+		     	<li><a href="#billcancelReport" data-toggle="tab" >Bill Cancel Report</a></li>  
+		     	
            </ul>
-		</div>
-		<div class="col-xs-9">
+		</div> 
+		
+		
+		  <!-- <div class="col-xs-9">  --> 
+		  <div class="col-md-12"> 
+		
+		
 			<!-- Tab panes -->
 			<div class="tab-content">
 
@@ -142,6 +179,8 @@
 								<hr style="border-top-color: #c1b1b1;">
 							</div>
 						</div>
+							
+						
 					</div>
 
 					<ul class="nav nav-tabs">
@@ -151,7 +190,9 @@
 						    <h4	>Range</h4></a></li>
 					</ul>
 
-					<div class="tab-content" style="float: left">
+				   <div class="tab-content" style="float: left"> 
+					
+					
 
 	<!--    for single date -->
 	<!-- <script type="text/javascript"> 
@@ -179,13 +220,15 @@
 		    } );
 		} );</script> -->
 						<div id="supplierSingleDate" class="tab-pane active">
-							<!-- <div class="row">
-								<div class="col-sm-offset-1 col-md-10">
+							 <!-- <div class="row">
+								 <div class="col-sm-offset-1 col-md-10">
 									<hr style="border-top-color: #c1b1b1;">
-								</div>
-							</div> -->
+								</div> 
+							</div>  -->
 							<form class="form-horizontal" method="post" action="" name="saleReportForm22">
 								<fieldset>
+								
+								
 									<div class="row form-group" style="margin-top: 30px">
 										<!-- <label class="col-md-2 col-sm-offset-0 control-label" for="fk_cat_id">Product Category<sup>*</sup></label> -->
 										<label class="col-md-3 control-label" for="fk_cat_id">Product Category<sup>*</sup>
@@ -230,17 +273,23 @@
 											</div>
 										</div>
 									</div>
+									
+								
+									
 									<div class="row form-group" style="padding-top:2%">
 										<div class="col-md-2 col-md-offset-5">
 											<div class="input-group">
 												<div align="center">
-													<input type="button" id="btn" name="save" class="btn  btn-success " style="height: 38px; width: 121px;font-size: 18" onclick="saleReportForSingleDateAsPerCategory()" value="Search" />
+													<input type="button" id="btn" name="save" class="btn  btn-success " 
+													style="height: 38px; width: 121px;font-size: 18" onclick="saleReportForSingleDateAsPerCategory()" 
+													value="Search" />
 												</div>
 											</div>
 										</div>
 									</div>
-							<div class="container">
-<!-- 									<div class="table-responsive" style="padding-top:2%"> -->
+							 <div class="container">
+  									 <!-- <div class="table-responsive" style="padding-top:2%"> -->
+  									<!-- <div class="" style="padding-top:3%"> -->
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="sale1" class="display">
@@ -267,26 +316,29 @@
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
+                                       
                                        <br>
                                        <br>
 									</div>
@@ -409,26 +461,26 @@
 											</tfoot>
 										</table>
 									<!-- </div> -->
-									<div class="pagination-page">
+									<!--  <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
@@ -543,6 +595,7 @@
 											</div>
 										</div>
 									</div>
+									
 									<div class="container">
 <!-- 									<div class="table-responsive" style="padding-top:2%"> -->
 										<table class="table table-bordered table-striped table-condensed cf"
@@ -565,31 +618,29 @@
 												<tr>
 													<th colspan="8" style="text-align: right">Total Rs:</th>
 													<th></th>
-
-
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
@@ -719,26 +770,26 @@
 											</tr>
 										</tfoot>
 									</table>
-									<div class="pagination-page">
+									<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
@@ -963,26 +1014,26 @@
 										</table>
 									</div>
 									
-									<div class="pagination-page">
+									<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
                                        </div>
 								</fieldset>
 							</form>
@@ -1171,26 +1222,26 @@
 											</tfoot>
 										</table>
 									</div>
-									<div class="pagination-page">
+									<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
                                   </div>
 								</fieldset>
 							</form>
@@ -1452,26 +1503,26 @@
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px;margin-right: 20px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
@@ -1611,26 +1662,26 @@
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;margin-right: 15px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 									</div>
 								</fieldset>
 							</form>
@@ -1772,26 +1823,27 @@
 									</tfoot>
 								</table>
 							</div>
-							<div class="pagination-page">
+							<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;margin-right: 15px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
                                        </div>
 						</fieldset>
 					</form>
@@ -1910,26 +1962,26 @@
 									</tfoot>
 								</table>
 							</div>
-							<div class="pagination-page">
+							<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px; margin-right: 25px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                </div>
+                                </div> -->
                              </div>
 						</fieldset>
 					</form>
@@ -1965,7 +2017,7 @@
 		
 						<div id="#saleReturn1" class="tab-pane active">
 
-							< <div class="row">
+							 <div class="row">
 								<div class="col-sm-offset-1 col-md-10">
 									<hr style="border-top-color: #c1b1b1;">
 								</div>
@@ -2075,15 +2127,15 @@
 
 
 		<!-- ========================================= BILL WISE SALE REPORTS ============================================= -->
-				
+
 				<div class="tab-pane" id="rangeWiseBillReport">
 					<div class="row">
 						<div align="center">
-							<h2 class="form-name style_heading">Bill Wise Sale Reports</h2>
+							<h2 class="form-name style_heading">Bill Wise Sale Reports </h2>
 						</div>
 
 						 <div class="row">
-							<div class="col-sm-offset-0 col-md-10">
+							<div class="col-sm-offset-1 col-md-10">
 								<hr style="border-top-color: #c1b1b1;">
 							</div>
 						</div> 
@@ -2152,26 +2204,26 @@
 										</tfoot>
 									</table>
 								</div>
-								<div class="pagination-page">
+								<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;margin-right: 25px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
 								</div>
 							</fieldset>
 						</form>
@@ -2188,8 +2240,7 @@
 				<div class="tab-pane" id="creditCustomerSaleReport">
 					<div class="row">
 						<div align="center">
-							<h2 class="form-name style_heading">Credit Customer Sale
-								Reports</h2>
+							<h2 class="form-name style_heading">Credit Customer Sale Reports</h2>
 						</div>
 
 						<div class="row">
@@ -2200,9 +2251,8 @@
 					</div>
 
 					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab"
-							href="#creditCustomerSaleReportsSingleDateWise" style=" border-radius:23px;"><h4>Bill No. and Name Wise</h4></a></li>
-						<!--    <li><a data-toggle="tab" href="#creditCustomerSaleReportsDateRangeWise"><h4 style="color:blue">Range</h4></a></li> -->
+						<li class="active"><a data-toggle="tab" href="#creditCustomerSaleReportsSingleDateWise" style=" border-radius:23px;"> <h4> Bill No. and Name Wise</h4> </a></li>
+						<!--    <li><a data-toggle="tab" href="#creditCustomerSaleReportsDateRangeWise"><h4 style="color:blue">Range</h4> </a> </li> -->
 
 					</ul>
 
@@ -2317,26 +2367,28 @@
 											</tfoot>
 										</table>
 									</div>
-									<div class="pagination-page">
+									<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
+                                       
                                        </div>
 								</fieldset>
 							</form>
@@ -2356,7 +2408,7 @@
 								Reports</h2>
 						</div>
 
-						< <div class="row">
+						 <div class="row">
 							<div class="col-sm-offset-1 col-md-10">
 								<hr style="border-top-color: #c1b1b1;">
 							</div>
@@ -2365,8 +2417,8 @@
 
 					<ul class="nav nav-tabs">
 						<li class="active"><a data-toggle="tab"
-							href="#cashCustomerSaleReportsSingleDateWise" style=" border-radius:23px;"><h4
-									>Bill No and Name Wise</h4></a></li>
+							href="#cashCustomerSaleReportsSingleDateWise" style=" border-radius:23px;">
+							<h4> Bill No and Name Wise</h4></a></li>
 						<!--    <li><a data-toggle="tab" href="#creditCustomerSaleReportsDateRangeWise"><h4 style="color:blue">Range</h4></a></li> -->
 
 					</ul>
@@ -2482,26 +2534,27 @@
 											</tfoot>
 										</table>
 									</div>
-									<div class="pagination-page">
+									<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;margin-right: 15px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
                                        </div>
 								</fieldset>
 							</form>
@@ -2531,7 +2584,8 @@
 						name="saleReportForm">
 
 						
-							<ul class="nav nav-tabs" style="margin-top: -41px;">
+							<!-- <ul class="nav nav-tabs" style="margin-top: -41px;"> -->
+							<ul class="nav nav-tabs" >
 								<li class="active"><a data-toggle="tab"
 									href="#saleReturnReport" style=" border-radius:23px;"><h4>Range
 											Wise</h4></a></li>
@@ -2600,33 +2654,37 @@
 									</thead>
 									<tfoot>
 
-										<!-- <th colspan="7" style="text-align: right">Total Rs:</th> -->
-
-
+										<tr>
+													<th colspan="5" style="text-align: right">Total Rs:</th>
+													<th></th>
+													<th></th>
+													
+												</tr>
 									</tfoot>
 								</table>
-
 							</div>
-							<div class="pagination-page">
+							
+							<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
                                        </div>
 						</fieldset>
 						</form>
@@ -2736,10 +2794,11 @@
 						</div>
 
 						 <div class="row">
-							<div class="col-sm-offset-0 col-md-10">
+							<div class="col-sm-offset-1 col-md-10">
 								<hr style="border-top-color: #c1b1b1;">
 							</div>
 						</div> 
+						
 					</div>
 
 					<div id="billcancelReport" class="tab-pane">
@@ -2796,28 +2855,41 @@
 											</tr>
 										</thead>
 										
+										<tfoot>
+
+										    <tr>
+													
+													
+													<th colspan="6" style="text-align: right">Total Rs:</th>
+													<th></th>
+											</tr>
+									</tfoot>
+										
 									</table>
 								</div>
-								<div class="pagination-page">
+								
+								<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;margin-right:15px">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
+                                       
                                     </div>
 							</fieldset>
 						</form>
@@ -2826,14 +2898,29 @@
 				
 				
 				<!-- alll -->
+				</div>
 				
 				
 				
 				
+				
+				
+				 </div>  
+				
+				
+				
+				
+				 </div>  
+				
+				
+				
+				
+				
+				
+				
+				 </div>  
 				
 				</div>
-				</div>
-				</div>
-				</div>
+				</body>
 			
 			<jsp:include page="commons/footer.jsp"></jsp:include>

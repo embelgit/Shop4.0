@@ -1,7 +1,7 @@
 <% boolean isHome=false;%>
 <%@include file="commons/header.jsp"%>
 
-
+<head>
 
 <script src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/selectjj.js"></script>
@@ -23,9 +23,21 @@
 
 <script src="/Shop/staticContent/js/cashbankbook.js"></script>
 
+<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
+
+<style>
+/* 
+ .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
+ {
+    border-radius:23px;
+}  */
+
+.container-fluid {
+	overflow: hidden;
+}
 
 
-
+</style>
 
 <script type="text/javascript">
 
@@ -41,10 +53,10 @@ $(document).ready(function () {
 	});
 
 
-
-
-
 </script>
+</head>
+<body>
+ <div class="container-fluid"> 
 
  <div class="container col-md-offset-1" > 
  		
@@ -174,5 +186,8 @@ $(document).ready(function () {
 								</div>
  		       </div>
 </div>
+
+</div>
+</body>
 
 <jsp:include page="commons/footer.jsp"></jsp:include>

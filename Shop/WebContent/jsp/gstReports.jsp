@@ -79,14 +79,17 @@ table.table.table-bordered.table-striped.table-condensed.cf.dataTable {
 
 <body>
 <div class="container-fluid" > 
-	<div class="row" style="min-height:300px;">
+	<div class="row" >
     	<div  class="col-md-12">
-       <!--  <h3>Left Tabs</h3>
-        <hr/> -->
-        	<div class="gstreturn">
+         <h3>Left Tabs</h3>
+        <hr/> 
+        	 <div class="gstreturn"> 
+        	
             	<ul class="nav nav-tabs">
-                	<li class="active"><a href="#saleGSTReturnReport" data-toggle="tab">Sale GST Return</a></li>
+            	
+                	 <li class="active"><a href="#saleGSTReturnReport" data-toggle="tab">Sale GST Return</a></li>
                 	<li><a href="#purchaseGSTReturnReport" data-toggle="tab">Purchase GST Return</a></li>
+                	
            		</ul>
         	</div>
 			

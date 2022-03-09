@@ -15,14 +15,12 @@
     <script src="/Shop/staticContent/js/jquery.jqgrid.min.js"></script>
 	<script src="/Shop/staticContent/js/jquery.dataTables.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
-<<<<<<< HEAD
+
 	<link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 
 	
 	
-	
-=======
 <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">	
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
 <html>
 <head>
 	
@@ -37,12 +35,11 @@
   			
   			
   		</script>
-<<<<<<< HEAD
+
 <!-- 		<style>
 .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
  {
     border-radius:23px;
-=======
 
 <style>
 .container-fluid {
@@ -50,15 +47,13 @@
 >>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 }
 <<<<<<< HEAD
-
 
 </style> -->
 <style>
 .container-fluid {
 	overflow: hidden;
 }
-=======
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
 </style>
 </head>
 
@@ -84,12 +79,10 @@
 	</script>
 
 <body id="dt_example" style="min-height:300px;">
-<<<<<<< HEAD
-		<div class="container-fluid">	
-=======
+
+
 <div class="container-fluid">		
-		
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
 		
 	<div class="row">
 	    <div align="center" style="margin-top:70px">
@@ -97,23 +90,13 @@
 	  	</div>
 	</div>	
 				 	
-<<<<<<< HEAD
 			     <div class="row" align="center">
 					     <div class="hr-width">
 							  		<hr class="style-one">
 					     </div>	
 			   		 </div>
 		</div>
-=======
-     <div class="row" align="center">
-	     <div class="hr-width">
-	  		<hr class="style-one">
-	     </div>	
-	 </div>
-
-		
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
-			    
+		    
 	<%
 	TaxCreationDao dao=new TaxCreationDao();
 	List list12=dao.getTaxDetails();
@@ -121,11 +104,11 @@
 	<div class="container">
 	<div class="row">
 	
-<<<<<<< HEAD
+
 	<div id="date"  align="right">
-=======
+
 	<div id="date" align="right">
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
 		<label id="demo"></label>
 		<script>
 			var date = new Date();
@@ -172,13 +155,12 @@
 	<div class="row buttons-margin" align="center">
 		<input type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
 	</div>
-<<<<<<< HEAD
+
 	
 	</div>
-=======
 
-</div>	
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
+
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>
 </html>

@@ -41,7 +41,11 @@
 
 <script src="/Shop/staticContent/js/stockDetails.js"></script>
 <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
+
 <style>
+.container-fluid {
+	overflow: hidden;
+}
 
 </style>
 </head>
@@ -58,6 +62,7 @@ function openBilling() {
 <br/>
 <br/>
 <br/>
+ <div class="container-fluid"> 
 <div class="container" align="center"> 		
  	<div class="row">
 		<div align="le">
@@ -128,7 +133,7 @@ function openBilling() {
 		List Lis1 = gDao.dayclosure(request);	
 	%>
 	
-	<div id="demo_jui" align="center" style="text-align-last: center;">
+	<div id="demo_jui" align="center" style="text-align-last: center; padding-top:2%">
 		<table class= "table table-bordered table-striped table-condensed cf" style="text-align: center;align-content: center;" id="list" class="display" border="1">
 			<thead>
 				<tr>
@@ -165,6 +170,7 @@ function openBilling() {
 
 	</div>
     </div>
+   </div>
    </div>
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>

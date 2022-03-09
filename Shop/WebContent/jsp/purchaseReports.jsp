@@ -46,7 +46,9 @@
 
 
 <!-- For datatable to pdf,print,excel etc conversion -->
-<!--  <script src="/Fertilizer/staticContent/js/jquery-1.12.3.min.js"></script>
+
+
+<!--   <script src="/Fertilizer/staticContent/js/jquery-1.12.3.min.js"></script>
  <script type="text/javascript" src="/Fertilizer/staticContent/datatable_To_Other_File/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="/Fertilizer/staticContent/datatable_To_Other_File/dataTables.buttons.min.js"></script>
 <script type="text/javascript" src="/Fertilizer/staticContent/datatable_To_Other_File/buttons.flash.min.js"></script>
@@ -57,7 +59,9 @@
 <script type="text/javascript" src="/Fertilizer/staticContent/datatable_To_Other_File/buttons.html5.min.js"></script>
 <script type="text/javascript" src="/Fertilizer/staticContent/datatable_To_Other_File/buttons.print.min.js"></script>
 <link rel="stylesheet" href="/Fertilizer/staticContent/datatable_To_Other_File/jquery.dataTables.min.css"> 
-<link rel="stylesheet" href="/Fertilizer/staticContent/datatable_To_Other_File/buttons.dataTables.min.css">  -->
+<link rel="stylesheet" href="/Fertilizer/staticContent/datatable_To_Other_File/buttons.dataTables.min.css">  
+ -->
+
 <script type="text/javascript" src="/Shop/staticContent/js/goodsReceive.js"></script>
  <script type="text/javascript" src="/Shop/staticContent/js/podetails.js"></script>
  <script type="text/javascript" src="/Shop/staticContent/js/purchaseReturn.js"></script>
@@ -525,14 +529,13 @@
 							</tr>
 						</thead>
 						
-<!-- 						<tfoot>
+						<tfoot>
 							<tr>
-								<th colspan="14" style="text-align: right">Total Rs:</th>
-								<th></th>
-								<th></th>
+								<th colspan="12" style="text-align: right">Total Rs:</th>
 								<th></th>
 							</tr>
-						</tfoot>						 -->
+						</tfoot>
+												 
 					</table>
 					 <!-- <div class="pagination-page" >
                     <nav aria-label="...">
@@ -947,7 +950,7 @@
 				      		 	
 				
 				<!-- <div class="table-responsive"> -->
-				<div class="container">
+				<!-- <div class="container"> -->
 				<div class="" style="padding-top:2%">
 					<table class="table table-bordered table-striped table-condensed cf" id="gstPurchaseReportTable"
 					 >
@@ -998,7 +1001,7 @@
 						</tfoot>
 					</table>
 					 </div>
-					 </div>
+					<!--  </div> -->
 					 <!-- <div class="pagination-page" id="gstPurchaseReportTable">
                     <nav aria-label="...">
                         <ul class="pagination" style="margin-top: 10px;margin-right: 41px;">
@@ -1228,8 +1231,8 @@
 						</thead>
 						<tfoot>
 							<tr>
-								<!-- <th colspan="7" style="text-align: right">Total:</th>
-								<th></th> -->
+								 <th colspan="7" style="text-align: right">Total:</th>
+								<th></th>
 							</tr>
 						</tfoot>
 					</table>

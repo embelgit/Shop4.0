@@ -189,6 +189,8 @@ function StockDetailsReportAsPerCatValidate()
 			}, 1500);
 			return false;
 		}	
+			
+		
 		StockDetailsReportAsPerCat();
 }
 
@@ -222,6 +224,7 @@ function StockDetailsReportAsPerCat()
 		if(catmap == "" || catmap == null )
 			{
 				alert("NO Category Wise Stock Reports for\nCategory = "+category);
+				
 				return false;
 			}
 			

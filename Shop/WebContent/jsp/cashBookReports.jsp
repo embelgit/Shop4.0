@@ -54,7 +54,9 @@
 
 <!-- For datatable to pdf,print,excel etc conversion -->
 
-<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
+
+
+<!--  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>
 <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.flash.min.js"></script>
@@ -65,7 +67,11 @@
 <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"></script>
 <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.print.min.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css"> -->
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">  -->
+
+
+
+
 
 
 <link href="/Shop/WebContent/staticContent/css/dataTa.css" rel="stylesheet" type="text/css" media="all" />
@@ -120,8 +126,11 @@ $('#supplierNameWiseTable').DataTable( {
 	<div class="col-md-12">
 		<h3>Left Tabs</h3>
 		<hr />
-		<div class="col-md-2">
-			<ul class="nav nav-tabs tabs-left">
+		
+		<!-- <div class="col-md-2"> -->
+		<div class="reppurchase">
+			<!-- <ul class="nav nav-tabs tabs-left"> -->
+			<ul class="nav nav-tabs">
 				<li class="active"><a href="#home" data-toggle="tab">Supplier Payment Reports</a></li>
 				<li><a href="#profile" data-toggle="tab">Customer Payment Reports</a></li>
 				<li><a href="#messages" data-toggle="tab">Employee Payment Reports</a></li>
@@ -131,7 +140,7 @@ $('#supplierNameWiseTable').DataTable( {
 			</ul>
 		</div>
 		
-		<div class="col-md-9">
+		<div class="col-md-12">
 			<!-- Tab panes -->
 			<div class="tab-content">
 
@@ -151,12 +160,12 @@ $('#supplierNameWiseTable').DataTable( {
 					</div>
 
 					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#AllSupplier">All Supplier's</a></li>
-						<li><a data-toggle="tab" href="#supplierNAme">Supplier Name Wise</a></li>
-						<li><a data-toggle="tab" href="#supplierBillWise">Bill Number Wise</a></li>
-						<li><a data-toggle="tab" href="#supplierSingleDate">Datewise</a></li>
-						<li><a data-toggle="tab" href="#supplierBetweenTwoDate">Range</a></li>
-						<li><a data-toggle="tab" href="#supplierpaymentmode">Payment Mode</a></li>
+						<li class="active"><a data-toggle="tab" href="#AllSupplier" style=" border-radius:23px;">All Supplier's</a></li>
+						<li><a data-toggle="tab" href="#supplierNAme" style=" border-radius:23px;">Supplier Name Wise</a></li>
+						<li><a data-toggle="tab" href="#supplierBillWise" style=" border-radius:23px;">Bill Number Wise</a></li>
+						<li><a data-toggle="tab" href="#supplierSingleDate" style=" border-radius:23px;">Datewise</a></li>
+						<li><a data-toggle="tab" href="#supplierBetweenTwoDate" style=" border-radius:23px;">Range</a></li>
+						<li><a data-toggle="tab" href="#supplierpaymentmode" style=" border-radius:23px;">Payment Mode</a></li>
 					</ul>
 
 					<div class="tab-content">
@@ -350,14 +359,14 @@ $('#supplierNameWiseTable').DataTable( {
 											<th>Balance Amount</th>
 										</tr>
 									</thead>
-<!-- 									<tfoot>
+ 									<tfoot>
 										<tr>
 											<th colspan="5" style="text-align: right">Total:</th>
 											<th></th>
 											<th></th>
 											<th></th>
 										</tr>
-									</tfoot> -->
+									</tfoot> 
 
 									<tbody>
 										<%
@@ -443,7 +452,7 @@ $('#supplierNameWiseTable').DataTable( {
 										
 									</div>
 									
- 							<div class=""> 
+ 							<div class="" style="padding-top: 3%"> 
 <!-- 								<div class="table-responsive" align="center" style="padding-top:2%"> -->
 										<table
 											class="table table-bordered table-striped table-condensed cf"
@@ -560,7 +569,7 @@ $('#supplierNameWiseTable').DataTable( {
 										<input type="button" id="btn" name="save" class="btn btn-success" onclick="getBillWiseReportvalidation()" value="Search" />
 									</div>
 								
-																<div class="container">
+																<div class="container" style="padding-top: 3%">
 <!-- 									<div class="table-responsive" style="Padding-top: 2%"> -->
 										<table
 											class="table table-bordered table-striped table-condensed cf"
@@ -579,13 +588,13 @@ $('#supplierNameWiseTable').DataTable( {
 												</tr>
 											</thead>
 											<tfoot>
-<!-- 												<tr>
+ 												<tr>
 													<th colspan="5" style="text-align: right">Total:</th>
 													<th></th>
 													<th></th>
 													<th></th>
 													<th></th> 
-												</tr> -->
+												</tr> 
 											</tfoot>
 										</table>
 										<!-- <div class="pagination-page">
@@ -645,7 +654,7 @@ $('#supplierNameWiseTable').DataTable( {
 										<input type="button" id="btn" name="save" class="btn btn-success" onclick="supplierReportForSingleDate()" value="Search" />
 									</div>
 									
-									<div class="container">
+									<div class="container" style="padding-top: 3%">
 <!-- 									<div class="table-responsive" style="Padding-top: 3%"> -->
 										<table
 											class="table table-bordered table-striped table-condensed cf"
@@ -663,14 +672,14 @@ $('#supplierNameWiseTable').DataTable( {
 													<th>Balance Amount</th>
 												</tr>
 											</thead>
-<!-- 											<tfoot>
+ 											<tfoot>
 												<tr>
 													<th colspan="6" style="text-align: right">Total:</th>
 													<th></th>
 													<th></th>
 													<th></th>
 												</tr>
-											</tfoot> -->
+											</tfoot> 
 										</table>
 										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
@@ -781,7 +790,7 @@ $('#supplierNameWiseTable').DataTable( {
 												value="Search" />
 									</div>
 	
-									<div class="container">
+									<div class="container" style="padding-top: 3%">
 <!-- 									<div class="table-responsive" style="padding-top: 2%"> -->
 										<table
 											class="table table-bordered table-striped table-condensed cf"
@@ -896,7 +905,7 @@ $('#supplierNameWiseTable').DataTable( {
 												value="Search" />
 									</div>
 									
-													<div class="container">
+													<div class="container" style="padding-top: 3%">
 <!-- 									<div class="table-responsive" style="padding-top: 2%"> -->
 										<table
 											class="table table-bordered table-striped table-condensed  cf"
@@ -977,11 +986,11 @@ $('#supplierNameWiseTable').DataTable( {
 
 					<ul class="nav nav-tabs">
 						<!--  <li class="active"><a data-toggle="tab" href="#AllCustomer"><h4 style="color:blue">All Customer's</h4></a></li> -->
-						<li class="active"><a data-toggle="tab"	href="#customerNameWise">Customer Name wise</a></li>
-						<li><a data-toggle="tab" href="#customerBillWise">Bill Number Wise</a></li>
-						<li><a data-toggle="tab" href="#customerSingleDate">Datewise</a></li>
-						<li><a data-toggle="tab" href="#customerBetweenTwoDate">Range</a></li>
-					<li><a data-toggle="tab" href="#paymentBetweenTwoDate">Payment Mode</a></li>
+						<li class="active"><a data-toggle="tab"	href="#customerNameWise" style=" border-radius:23px;">Customer Name wise</a></li>
+						<li><a data-toggle="tab" href="#customerBillWise" style=" border-radius:23px;">Bill Number Wise</a></li>
+						<li><a data-toggle="tab" href="#customerSingleDate" style=" border-radius:23px;">Datewise</a></li>
+						<li><a data-toggle="tab" href="#customerBetweenTwoDate" style=" border-radius:23px;">Range</a></li>
+					<li><a data-toggle="tab" href="#paymentBetweenTwoDate" style=" border-radius:23px;">Payment Mode</a></li>
 					</ul>
 
 					<div class="tab-content">
@@ -1113,7 +1122,7 @@ $('#supplierNameWiseTable').DataTable( {
 							<form class="form-horizontal" method="post" action="" name="supReportBill">
 								<fieldset>
 									<div class="row">
-										<div class="form-group">
+										<div class="form-group" style="margin-top: 30px">
 											<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
 												<label class="control-label" for="customerName">Customer Name<sup>*</sup></label>
 											</div>
@@ -1146,10 +1155,30 @@ $('#supplierNameWiseTable').DataTable( {
 											</div>
 										</div>
 									</div>
-									<div class="row buttons-margin" align="center">
-										<input type="button" id="btn" name="save" class="btn btn-success" onclick="getCreditCustomerReportNameWiseValidation()"
+									
+									
+									<!-- <div class="row buttons-margin" align="center" >
+										<input type="button" id="btn" name="save" class="btn btn-success" 
+										onclick="getCreditCustomerReportNameWiseValidation()"
 													value="Search" />
+									</div> -->
+									
+									
+									<div class="row form-group" style="padding-top:2%">
+										<div class="col-md-2 col-md-offset-5">
+											<div class="input-group">
+												<div align="center">
+													<input type="button" id="btn" name="save" class="btn  btn-success " 
+													style="height: 38px; width: 121px;font-size: 18" onclick="getCreditCustomerReportNameWiseValidation()" 
+													value="Search" />
+												</div>
+											</div>
+										</div>
 									</div>
+									
+									
+									
+									
 									
 									<div class="" style="padding-top: 3%">
 										<table
@@ -1249,8 +1278,8 @@ $('#supplierNameWiseTable').DataTable( {
 												</datalist>
 											</div>
 										</div>
-
-
+										
+										<!-- </div> -->
 										<!-- PRODUCT CATEGORY CODE GOES HERE [[[[Credit Customer Payment Reports ---- Bill Number Wise ----- Product Category   -->
 
 
@@ -1264,10 +1293,29 @@ $('#supplierNameWiseTable').DataTable( {
 											</div>
 										</div>
 
-										<div class="row" align="center">
+										 <!-- <div class="row" align="center">
 											<input type="button" id="btn" name="save" class="btn btn-success" onclick="getBillWiseCreditReportValidation()"
 														value="Search" />
+										</div>  -->
+										
+										
+										
 										</div>
+										
+										 <div class="row form-group" style="padding-top:2%">
+										<div class="col-md-2 col-md-offset-5">
+											<div class="input-group">
+												<div align="center">
+													<input type="button" id="btn" name="save" class="btn  btn-success " 
+													style="height: 38px; width: 121px;font-size: 18" onclick="getBillWiseCreditReportValidation()"
+													value="Search" />
+												</div>
+											</div>
+										</div>
+									</div> 
+										
+										
+										
 										
 										<div class="" style="padding-top: 3%">
 											<table
@@ -1347,10 +1395,24 @@ $('#supplierNameWiseTable').DataTable( {
 										</div>
 									</div>
 
-									<div class="row" style="padding-top: 2%">
+									 <!-- <div class="row" style="padding-top: 2% ">
 										<input type="button" id="btn" name="save" class="btn btn-success"
 													onclick="creditCustReportForSingleDateValidate()"
 													value="Search" />
+									</div> -->
+									
+									
+									<div class="row form-group" style="padding-top:2%">
+										<div class="col-md-2 col-md-offset-5">
+											<div class="input-group">
+												<div align="center">
+													<input type="button" id="btn" name="save" class="btn  btn-success " 
+													style="height: 38px; width: 121px;font-size: 18"
+													 onclick="creditCustReportForSingleDateValidate()" 
+													value="Search" />
+												</div>
+											</div>
+										</div>
 									</div>
 									
 									<div class="" style="padding-top: 3%">
@@ -1422,8 +1484,7 @@ $('#supplierNameWiseTable').DataTable( {
 								name="custReport1">
 								<fieldset>
 									<div class="row form-group" style="padding-top: 30px">
-										<label class="col-md-3 control-label" for="customerName">Customer
-											Name <sup>*</sup></label>
+										<label class="col-md-3 control-label" for="customerName">Customer Name <sup>*</sup></label>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon"> <i
@@ -1680,9 +1741,9 @@ $('#supplierNameWiseTable').DataTable( {
 					</div>
 
 					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#employeeSingleDate">Datewise</a></li>
-						<li><a data-toggle="tab" href="#empBetweenTwoDate">Range</a></li>
-						<li><a data-toggle="tab" href="#emppaymode">Payment Mode</a></li>
+						<li class="active"><a data-toggle="tab" href="#employeeSingleDate" style=" border-radius:23px;">Datewise</a></li>
+						<li><a data-toggle="tab" href="#empBetweenTwoDate" style=" border-radius:23px;">Range</a></li>
+						<li><a data-toggle="tab" href="#emppaymode" style=" border-radius:23px;">Payment Mode</a></li>
 					</ul>
 
 					<div class="tab-content" style="float: left">
@@ -1713,10 +1774,25 @@ $('#supplierNameWiseTable').DataTable( {
 										</div>
 									</div>
 
-									<div class="row" style="padding-top: 2%">
+									<!-- <div class="row" style="padding-top: 2%" >
 										<input type="button" id="btn" name="save" class="btn btn-success"
 													onclick="employeePaymentReportForSingleDateValidate()" value="Search" />
+									</div> -->
+									
+									
+									
+									<div class="row" style="padding-top:2%;padding-bottom:1%">
+										<div class="col-md-3 col-md-offset-5">
+											<div class="input-group">
+												<input type="button" id="btn" name="save"
+													class="btn  btn-success " style="height: 38px; width: 121px;font-size: 18"
+													onclick="employeePaymentReportForSingleDateValidate()" 
+													value="Search" />
+											</div>
+										</div>
 									</div>
+									
+									
 									
 									<div class="" style="padding-top: 3%">
 										<table
@@ -1741,10 +1817,10 @@ $('#supplierNameWiseTable').DataTable( {
 													<th></th>
 													<th></th>
 
-
 												</tr>
 											</tfoot>
 										</table>
+										
 										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
@@ -1765,6 +1841,7 @@ $('#supplierNameWiseTable').DataTable( {
                                                </ul>
                                            </nav>
                                        </div> -->
+                                       
 									</div>
 								</fieldset>
 							</form>

@@ -6022,6 +6022,9 @@
 	
 	function addingAdvanvceBooking(){
 		
+	
+		
+		
 		if (document.goodsReceiveForm.supplier.value == "")
 		{		
 			var msg="Please Select Supplier Name";
@@ -6036,6 +6039,80 @@
 			}, 1500);
 			return false;
 		}
+		
+		if(document.goodsReceiveForm.fk_cat_id.value == "")
+	{
+		var msg="Please Enter Product Category";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+	
+			if(document.goodsReceiveForm.subCat.value == "")
+	{
+		var msg="Please Enter Product Category";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+		
+		
+		
+				if(document.goodsReceiveForm.proName.value == "")
+	{
+		var msg="Please Enter Product Name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+		
+				if(document.goodsReceiveForm.proName1.value == "")
+	{
+		var msg="Please Enter All Product Name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+		
+		
+		
+		
 		/*if (document.goodsReceiveForm.mailid.value == "")
 		{
 			var msg="Please Enter Email ID";
@@ -6069,7 +6146,7 @@
 			
 			return false;	
 		}*/
-		/*if (document.goodsReceiveForm.proName1.value == "")
+	/*	if (document.goodsReceiveForm.proName1.value == "")
 		{		
 			var msg="Please Select All Product Name";
 			var dialog = bootbox.dialog({

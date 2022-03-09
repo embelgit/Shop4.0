@@ -1,0 +1,16 @@
+div#empDetails_wrapper {
+    background-color: blue;
+}
+
+
+
+.dt-buttons {
+    padding-left: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+div#empDetails_filter {
+    padding-top: 7px;
+    color: blue;
+}

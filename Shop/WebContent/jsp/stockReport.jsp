@@ -12,7 +12,7 @@
 <head>
 <script src="/Shop/staticContent/js/stockDetails.js"></script>
 
-<!-- <script src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
+ <script src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/selectjj.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/buttom.js"></script>
 <script src="/Shop/staticContent/js/jquery.min.js"></script>
@@ -24,12 +24,12 @@
 <link href="/Shop/staticContent/css/select.css" rel="stylesheet" type="text/css" media="all">
 <link href="/Shop/staticContent/css/button.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
-<link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css"> -->
+<link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css"> 
 
 <!-- For datatable to pdf,print,excel etc conversion -->
 <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>  -->
 
-<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>
 <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.flash.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
@@ -40,7 +40,7 @@
 <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"></script>
 <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.print.min.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"> 
-<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css"> -->
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css"> 
 
 
 <link href="/Shop/WebContent/staticContent/css/dataTa.css" rel="stylesheet" type="text/css" media="all" />
@@ -87,38 +87,35 @@ function openBilling() {
 <<<<<<< HEAD
 }
 
-
-
 =======
 } */
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
 </style>
 </head>
 
 <body onload="getProductName()">
 <div class="container-fluid">
-<<<<<<< HEAD
-<div class="container col-md-offset-1" style="float: left"> 
-=======
 
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+<div class="container col-md-offset-1" style="float: left"> 
+
+
  		
  		<div class="row">
 			<div align="center" style="margin-top: 75px">
 				  <h2 class="form-name style_heading">Stock Reports</h2>
 			</div>
 				 	
-<<<<<<< HEAD
+
 			 <div class="row" align="center">
 				<div class="hr-width">
 						<hr class="style-one">
-=======
-			<div class="row" align="center">
+
+			<!--  <div class="row" align="center">
 				<div class="hr-width">
 					<hr class="style-one">
 >>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 				</div>	
-			</div>
+			</div> -->
 		</div>
 
 	<div class="stock-report">
@@ -587,13 +584,12 @@ function openBilling() {
 <!-------------------------------------------------- Shop WISE Ends Here -------------------------------------------------->
 
     </div>
-<<<<<<< HEAD
+
   </div>
   
   </div>
-=======
 
  </div>
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+</div>
 </body>
 <jsp:include page="commons/footer.jsp"></jsp:include>

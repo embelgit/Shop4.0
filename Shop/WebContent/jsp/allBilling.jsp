@@ -44,15 +44,7 @@
      
 	 <script type="text/javascript" src="/Shop/staticContent/js/fertilizerBill.js"></script>
 	 <script type="text/javascript" src="/Shop/staticContent/js/customerDetails.js"></script>
-<<<<<<< HEAD
-	 
-	<!--  <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> -->
-	 
-	 
-	 
-=======
 <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 	 
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 		  	
 <script type="text/javascript">
     function mypopup(url)
@@ -656,33 +648,16 @@ top: 25%;}
     text-align: center;
 }
 
-.container-fluid {
-	overflow: hidden;
-}
-
 </style>
-
 </head>
 	
  <body onload="pageLoad();getProductName();getProductNameForCredit();"> 
 <!-- <body onload="pageLoad();"> -->
 <div class="container-fluid">
-<<<<<<< HEAD
-
-
-=======
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 <br>
-
-
 	<div class="row">
-<<<<<<< HEAD
-    <div class="col-10 col-md-6 col-lg-6 col-lg-offset-3">
-	<div class="row header_margin_top">
-=======
 		<div class="col-10 col-md-6 col-lg-6 col-lg-offset-3">
 			<div class="row header_margin_top">
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 			    <div align="center">
 					<h2 class="form-name style_heading">GST Billing</h2>  		
 			  	</div>
@@ -710,7 +685,7 @@ top: 25%;}
                 <div class="gstcashradio"><span>Cash</span></div>
              </label>
              <label>
-        		<input type="radio" name="customertype" id="customertype"
+        		<input type="radio"  name="customertype" id="customertype"
 					   onclick="openCreditCustomerBilling()"> 
                 <div class="gstcashradio"><span>Credit</span></div>
              </label>
@@ -725,19 +700,6 @@ top: 25%;}
 			<fieldset>
 		<div class="shopform-margin">
 
-<<<<<<< HEAD
-
-
-           			
-
-            <div class="row form-group">
-			 <label class="col-md-3 control-label" for="customerName">Firm Name</label>
-           			  <div class="col-md-3">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-user"></i>
-							</span>
-=======
         <div class="row">
 			<div class="form-group">
 				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
@@ -748,7 +710,6 @@ top: 25%;}
 						<span class="input-group-addon">
 							<i class="glyphicon glyphicon-user"></i>
 						</span>
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 <!--            		 			  <input id="customerName" name="customerName" placeholder="Cash Customer Name" class="form-control input-md" type="text" > -->
            		 								<%
 							CustomerDetailsDao daoaa = new CustomerDetailsDao();
@@ -774,7 +735,7 @@ top: 25%;}
         <div class="row">
 			<div class="form-group">
 				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
-					<label class="control-label" for="customerName">Customer Name</label>  
+					<label class="control-label" for="customerName">Customer Name<sup>*</sup></label>  
            		</div>	 
            		<div class="col-lg-3 col-md-3 col-sm-8">
 					<div class="input-group">
@@ -1231,27 +1192,8 @@ top: 25%;}
             	</div>
             </div>
      	
-<<<<<<< HEAD
-     	
-     		 <div class="row form-group buttons_margin_top" style="margin-bottom: 50px;"> 
-					<div align="center"> 
-						  
-						<input type="button" id="billingCashbtn" style=" width: 150px; height: 40px; font-size: 18px; font-weight: 600; outline: none !important; border-radius: 10px;" class="btn btn-large btn-success button-height-width" name="billingCashbtn" onclick="fertilizerBill()" value="Save&Print Bill">
-           				<input type="reset" style=" width: 120px; height: 40px; font-size: 18px; font-weight: 600; outline: none !important; border-radius: 10px;" class="btn btn-large btn-danger  button-height-width" id="save" name="btn" onclick="cancle()" value="Cancel">
-						<input type="button" id="btn" style=" width: 120px; height: 40px; font-size: 18px; font-weight: 600; outline: none !important; border-radius: 10px;" class="btn btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock ">
-						<!-- <input type="button" id="btn" style="font-size: 25;width: 128px; height: 53px;" class="btn btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock "> -->	
-		 	            <input   id="save" name="btn" style=" width: 120px; height: 40px; font-size: 18px; font-weight: 600; outline: none !important; border-radius: 10px;" class="btn  btn-primary "  type="button"  onclick="pay()" value="Payment"> 
-		 	    <!-- <input   id="save" name="btn" style=" width: 120px; height: 40px; font-size: 18px; font-weight: 600; outline: none !important; border-radius: 10px;" class="btn  btn-primary "  type="button"  onclick="pay()" value="Payment">  -->
-		 	    
-		 	             	
-		 	             			            				
-				</div>
-			</div>	 
-				</fieldset>
-=======
      	</div>
      	</fieldset>
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 				</form>
      	
      		<div class="row buttons-margin" align="center">
@@ -1270,12 +1212,6 @@ top: 25%;}
        <div id="CreditCustDetail" style="padding-top:2%">
        		<form class="form-horizontal" method="post" action="" name="creditFertiBill1">
 			<fieldset>
-<<<<<<< HEAD
-			          
-			                  <div class="row form-group">
-			<label class="col-md-3 control-label" for="customerName">Firm Name <sup>*</sup></label>  
-           			 <div class="col-md-3">
-=======
 			  <div class="shopform-margin">        
 			<div class="row">
 				<div class="form-group">
@@ -1283,7 +1219,6 @@ top: 25%;}
 						<label class="control-label" for="customerName">Firm Name</label>  
            			</div>
            			<div class="col-lg-3 col-md-3 col-sm-8">
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
@@ -1313,7 +1248,7 @@ top: 25%;}
 	 	 <div class="row">
 			<div class="form-group">
 				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
-					<label class="control-label" for="creditCustomerName"> Customer Name</label>  
+					<label class="control-label" for="creditCustomerName"> Customer Name <sup>*</sup></label>  
 			    </div>
 			    <div id="customerfresh">
            			<div class="col-lg-3 col-md-3 col-sm-8">
@@ -1419,7 +1354,7 @@ top: 25%;}
          <div class="row">
 			<div class="form-group">
 				<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">	
-					<label class="control-label" for="contactNo1">Contact No.</label>  
+					<label class="control-label" for="contactNo1">Contact No. <sup>*</sup></label>  
            	 	</div>	
            	 	<div class="col-lg-3 col-md-3 col-sm-8">
 					<div class="input-group">
@@ -1751,39 +1686,46 @@ top: 25%;}
         <div class="row">
 			<div class="form-group">
 				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">		
-					<label class="control-label" for="grossTotal1"><h4><b>Gross Total</b></h4></label>  
+					<label class="control-label" for="grossTotal1"><b>Gross Total</b></label>  
 			    </div>
 			    <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<span class="glyphicon nogyphicon">Rs</span>
 						</span>
-	            		<input readonly="readonly" id="grossTotal1" name="grossTotal1" placeholder="Gross Total" class="form-control input-md"  type="text" style="font-size: 25px;  height: 55px;" >
+	            		<!-- <input readonly="readonly" id="grossTotal1" name="grossTotal1" placeholder="Gross Total" class="form-control input-md"  type="text" 
+	            		style="font-size: 25px;  height: 55px;" > -->
+	            		<input readonly="readonly" id="grossTotal1" name="grossTotal1" placeholder="Gross Total" class="form-control input-md"  type="text" >
 	            	</div>
 	            </div>
 					<!-- <label class="col-md-offset-6 col-md-2 control-label"  for="firstPaidAmtCreditCustomer"><h4><b>Net Pay Amount</b></h4></label> -->  
-			    <div class="col-md-3">
+			  <!--   <div class="col-md-3">
 	            	<div class="input-group">
-								<!-- <span class="input-group-addon">
+								<span class="input-group-addon">
 									Rs
-								</span> -->
-	            		<input id="firstPaidAmtCreditCustomer" name="firstPaidAmtCreditCustomer" placeholder="Pay Amount" class="form-control input-md"  type="hidden" style="font-size: 25px;  height: 55px;" >
+								</span>
+	            		 <input id="firstPaidAmtCreditCustomer" name="firstPaidAmtCreditCustomer" placeholder="Pay Amount" class="form-control input-md"  
+	            		type="hidden" style="font-size: 25px;  height: 55px;" >
 	            	</div>
-	            </div>	            			
+	            </div> -->	            			
             </div>
         </div>
 	 		 	
 	 	<div class="row">
 			<div class="form-group">
 				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
-					<label class="control-label"><h4><b>Amount Received</b></h4></label>  
+					<label class="control-label"><b>Amount Received</b></label>  
 			    </div>    
 			    <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<span class="glyphicon nogyphicon">Rs</span>
 						</span>
-	            		<input id="amtrx1" name="amtrx1" placeholder="Amount Received" class="form-control input-md" type="text" style="font-size: 15px;  height: 55px;" onkeyup="calrtn1();">
+	            		<!-- <input id="amtrx1" name="amtrx1" placeholder="Amount Received" class="form-control input-md" type="text" 
+	            		style="font-size: 15px;  height: 55px;" onkeyup="calrtn1();"> -->
+	            		
+	            		<input id="amtrx1" name="amtrx1" placeholder="Amount Received" class="form-control input-md" type="text" 
+	            		onkeyup="calrtn1();">
 	            	</div>
 	            </div>
 	        </div>
@@ -1792,14 +1734,14 @@ top: 25%;}
 	     <div class="row">
 	     	<div class="form-group">
 				<div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">	     	
-            		<label class="control-label"><h4><b>Change Return</b></h4></label>  
+            		<label class="control-label"><b>Change Return</b></label>  
 			    </div>
 			    <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<span class="glyphicon nogyphicon">Rs</span>
 						</span>
-	            		<input readonly="readonly" id="chnge1" name="chnge1" placeholder="Change Return" class="form-control input-md" type="text" style="font-size: 15px;  height: 55px;">
+	            		<input readonly="readonly" id="chnge1" name="chnge1" placeholder="Change Return" class="form-control input-md" type="text">
 	            	</div>
 	            </div>
             </div>
@@ -1809,14 +1751,13 @@ top: 25%;}
      </fieldset>	 		
 	 	</form>	
 	 		 	
-		<div class="row buttons-margin" align="center">
+		 <div class="row buttons-margin " align="center">
 			<input type="button" id="billingCreditBtn" class="btn gstbilling btn-large btn-success button-height-width" name="billingCreditBtn" onclick="fertilizerBillForCreditCustomer()" value="Save&Print Bill">
 		    <input type="reset" id="save" class="btn gstbilling btn-large btn-danger button-height-width" name="btn" onclick="cancle()" value="Cancel">	  
 			<input type="button" id="btn" class="btn gstbilling btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock ">		  				 	
      		<input id="save" name="btn" class="btn gstbilling btn-primary" type="button" onclick="pay()" value="Payment">        		            				         			 
-		</div>	
-	 	
-	 		
+		</div> 
+	
 	 </div>
 <!-------------------------------------------------- CODE FOR CREDIT CUSTOMER Ends Here -------------------------------------------------->
 	 
@@ -1830,7 +1771,7 @@ top: 25%;}
 			</div>
 	    </div>
          	 <div class="row form-group" style="padding-top:6%">
-           		<label class="col-md-2 control-label" for="firstName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("firstName") %> <%}%> <%if(abc.equals("english")){%>First Name<%}%></label>  
+           		<label class="col-md-2 control-label" for="firstName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("firstName") %> <%}%> <%if(abc.equals("english")){%>First Name<%}%> <sup>*</sup></label>  
            	 		<div class="col-md-3">
             			<div class="input-group">
 							<span class="input-group-addon">
@@ -1852,7 +1793,7 @@ top: 25%;}
 				</div>
 			
 			 <div class="row form-group">
-           		<label class="col-md-2 control-label" for="lastName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("lastName") %> <%}%> <%if(abc.equals("english")){%>Last Name<%}%></label>  
+           		<label class="col-md-2 control-label" for="lastName"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("lastName") %> <%}%> <%if(abc.equals("english")){%>Last Name<%}%> <sup>*</sup></label>  
            	 		<div class="col-md-3">
             			<div class="input-group">
 							<span class="input-group-addon">
@@ -1885,7 +1826,9 @@ top: 25%;}
            			</div></div>
 			
 			<div class="row form-group">
-				<label class="col-md-2 control-label" for="contactNo"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("contactNumber") %> <%}%> <%if(abc.equals("english")){%>Contact No.<%}%></label>  
+			<label class="col-md-2 control-label" for="contactNo"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("contactNumber") %> <%}%> <%if(abc.equals("english")){%>ContactNo.<%}%> <sup>*</sup></label>
+			
+	   <%-- <label class="col-md-2 control-label" for="contactNo"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("contactNumber") %> <%}%> <%if(abc.equals("english")){%>Contact No.<%}%></label> --%>  
            	 		<div class="col-md-3 ">
 						<div class="input-group">
 							<span class="input-group-addon">
@@ -1931,12 +1874,18 @@ top: 25%;}
  		<div class="form-group row" style="padding-top:4%">
             <div class="col-md-6 text-center col-md-offset-3">
                 <input style="height: 53px; width: 128px; font-size: 25" type="button" id="save1" name="btn" class="btn btn-success" value="Submit" onclick="customerDetails();">
-				<input style="height: 53px; width: 128px; font-size: 25" type="reset"  id="save"  name="btn" class="btn btn-danger"  value="Cancel" onclick="reset()">  
+				<input style="height: 53px; width: 128px; font-size: 25" type="reset"  id="save"  name="btn" class="btn btn-danger"  value="Cancel" 
+				onclick="reset()">  
 		    </div>
         </div>
+        
+       
+        
+        
+        
   </form>
 </div>
-</div>
+
 <!-- ====================================================== END CUSTOMER DETAILS POP UP ================================================================ -->	
 </div>
 </body>

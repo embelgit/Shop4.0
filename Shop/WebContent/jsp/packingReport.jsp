@@ -76,6 +76,9 @@
 	<script type="text/javascript" src="/Shop/staticContent/js/jqueryUi.js"></script>
 	<script type="text/javascript" src="/Shop/staticContent/js/categoryDetails.js"></script>
 	
+	       <script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
+<script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
+	
 <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css">
 
 <script src="/Shop/staticContent/js/saleReports.js">

@@ -534,14 +534,50 @@ for (i = 0; i < list.options.length; ++i) {
 		var pro = $('#proName1').val();
 		var shop = $('#shopName_id').val();
 		
+		
 		/*if(pro=="" || pro==null || pro==undefined){
 			alert("Please select product");
 			return false;
 		}*/
-		if(shop=="" || shop==null || shop==undefined){
+		
+				if(document.goodsReceiveForm.proName1.value == "")
+	{
+		var msg="Please Enter Product Name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+	
+				if(document.goodsReceiveForm.shopName_id.value == "")
+	{
+		var msg="Please Enter shopName Name";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+	
+		/*if(shop=="" || shop==null || shop==undefined){
 			alert("Please select Shop Name");
 			return false;
-		}
+		}*/
 		
 		addproducttx1();
 		/*addproducttx();*/
@@ -629,8 +665,22 @@ for (i = 0; i < list.options.length; ++i) {
 			params["methodName"] = "addingproductTx";
 		 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
 		 	    	{
-				 		alert(data)
-				 		location.reload();
+			
+			      var msg="Data Added successfully "
+				var dialog = bootbox.dialog({
+					
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);				
+				document.getElementById("save").disabled = false;
+				return false;
+			
+				 		/*alert(data)*/
+				 		/*location.reload();*/
 				
 		 			}
 		 		
