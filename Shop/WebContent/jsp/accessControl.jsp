@@ -8,6 +8,8 @@
 
 <%boolean isHome = false;%>
 
+<!--  -->
+
 <%@include file="commons/header.jsp"%>
 
 <%
