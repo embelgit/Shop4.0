@@ -62,9 +62,9 @@
  {
     border-radius:23px;
 }
-=======
+
 <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> -->
->>>>>>> branch 'master' of https://github.com/embelgit/Shop4.0
+
 
 <link href="/Shop/WebContent/staticContent/css/dataTa.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="/Shop/staticContent/css/dataTables.jqueryui.min.css"  rel="stylesheet" type="text/css" media="all">

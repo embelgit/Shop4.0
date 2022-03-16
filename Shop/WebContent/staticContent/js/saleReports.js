@@ -113,6 +113,7 @@ function saleReportForSingleDateAsPerCat()
 			                }, 0 ); 
 			 			console.log(total); */
 			            // Total over this page
+			            
 			            pageTotal = api
 			                .column( 8 )
 			                .data()
@@ -132,9 +133,9 @@ function saleReportForSingleDateAsPerCat()
 		    
 		    	
 		    	destroy: true,
-		        searching: false,
+		        searching: true,
 		        "scrollY": 500,
-		        "scrollX": false,
+		        "scrollX": true,
 		        "paging":   false,
 		        
 		      
@@ -357,7 +358,7 @@ function saleReportBetweenTwoDatesAsPerCat()
 		    	destroy: true,
 		        searching: true,
 		        "scrollY": 400,
-		        "scrollX": false,
+		        "scrollX": true,
 		        "paging":   false,
 		        
 		      
@@ -1523,6 +1524,7 @@ function saleReportforSingleDateAsPerPro()
 		    
 		    	destroy: true,
 		        searching: false,
+		        "scrollY": true,
 		        
 		      
 		columns: [
@@ -1757,6 +1759,8 @@ function saleReportforBetweenTwoAsPerPro()
 		    	    	
 		    	destroy: true,
 		        searching: false,
+		        "scrollX": true,
+		        
 		        
 		      
 		columns: [
@@ -4732,6 +4736,7 @@ function rangeAndPaymentModeWise()
 		    	
 		    	destroy: true,
 		        searching: false,
+		        
 		        
 		      
 		columns: [

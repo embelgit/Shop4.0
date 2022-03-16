@@ -2710,7 +2710,7 @@ $('#supplierNameWiseTable').DataTable( {
 					</div>
 
 					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#partnerWiseReport"><Partner Wise Report</a></li>
+						<li class="active"><a data-toggle="tab" href="#partnerWiseReport">Partner Wise Report</a></li>
 					</ul>
 
 					<div class="tab-content" style="float: left">

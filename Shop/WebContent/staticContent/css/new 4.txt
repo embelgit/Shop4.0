@@ -1,4 +1,29 @@
+//////////////////////////////////////////////////
 
+@media (min-width: 768px)
+.form-horizontal .control-label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 14px;
+}
+
+
+
+
+.wrap-login100 {
+    width: 534px;
+    height: 473px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+
+/////////////////////////////////////////////////
 element.style {
     text-align: center;
     width: 30px;
@@ -25,8 +50,25 @@ tr {
 
 Todays task
 -Work On EmbelSoft project
--Working On List Ui And Grid Ui
+-Working On List Ui And Grid Ui And website responsive
+
 
 Todays task
 -Work On EmbelSoft project
--Working On List Ui And Grid Ui
+-Working On List Ui And Grid Ui 
+///////////////////////////////////////////
+
+.container-login100 {
+    width: 100%;
+    min-height: 93vh;
+}
+
+////////////////////////////////////////////
+grid----ui
+
+.ui-jqgrid-jquery-ui.ui-jqgrid .ui-jqgrid-bdiv tr.ui-row-ltr>td, .ui-jqgrid-jquery-ui.ui-jqgrid .ui-jqgrid-bdiv tr.ui-row-rtl>td {
+    background-color: white;
+    border-color: inherit;
+    color: black;
+    font-size: 24;
+}

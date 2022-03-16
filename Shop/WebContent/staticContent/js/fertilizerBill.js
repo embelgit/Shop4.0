@@ -11209,7 +11209,7 @@ function fertilizerBill()
 					}//);		
 	 }*/
 	 
-	 		if(customerName == "" || customerName==null || customerName==undefined)
+	/* 		if(customerName == "" || customerName==null || customerName==undefined)
 	{
 		var msg="Please Enter Customer Name ";
 		
@@ -11224,7 +11224,7 @@ function fertilizerBill()
 		}, 1500);
 		
 		return false;
-	}
+	}*/
 	 
 	
 /*	if(customerName != "")
@@ -11250,7 +11250,9 @@ function fertilizerBill()
 			return false;
 		}
 	 }*/
-	  if(contactNo != "")
+	
+	
+	/*  if(contactNo != "")
 	  {
 		  var letterNumber = /^[0-9]{10}$/;
 			 if(contactNo.match(letterNumber))
@@ -11262,7 +11264,7 @@ function fertilizerBill()
 				    var msg="Please Enter Valid 10 Digit Contact Number";
 					var dialog = bootbox.dialog({
 						//title: "Embel Technologies Says :",
-					   /* message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',*/
+					    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'<img src="/Shop/staticContent/images/s1.jpg" height="50" width="50"/></p>',
 					    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 					    closeButton: false
 					});
@@ -11273,7 +11275,7 @@ function fertilizerBill()
 					
 					return false;
 			 }
-	  }
+	  }*/
 
 	  
 	  
@@ -12233,7 +12235,7 @@ function fertilizerBillForCreditCustomer()
 			 }
 			 else
 			 {
-				    var msg="Please Enter Valid 10 Digit Contact Number";
+				    var msg="Please Enter Contact Number";
 					var dialog = bootbox.dialog({
 						//title: "Embel Technologies Says :",
 					    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',

@@ -612,9 +612,31 @@ function updateCategoryDetails()
 	
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
 		 	{
-					alert(data);
+					/*alert(data);
 					location.reload();
-
+*/
+		
+		
+		
+		var msg=data;
+		var dialog = bootbox.dialog({
+	    message: '<p class="text-center">'+msg.fontcolor("green").fontsize(5)+'</p>',
+	   
+	    closeButton: false
+		});
+						
+		setTimeout(function() {
+			dialog.modal('hide');
+			location.reload();
+		}, 1500);
+			
+		
+		
+		
+		
+		
+		
+		
 					document.getElementById("save").disabled=false; 
 		 				 			}
 		 	    	).error(function(jqXHR, textStatus, errorThrown){

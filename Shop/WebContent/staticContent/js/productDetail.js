@@ -746,6 +746,41 @@ function productDetails1(){
 			
 			return false;
 		}
+			
+			/*if(document.prd.fk_tax_id.value == "")
+			{
+				var msg="Enter Tax Name Company";
+				var dialog = bootbox.dialog({
+					//title: "Embel Technologies Says :",
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);
+				
+				return false;
+			}*/
+			
+			
+			if(document.prd.fk_tax_id.value == "")
+			{
+				var msg="Please Enter fk_tax_id";
+				var dialog = bootbox.dialog({
+					//title: "Embel Technologies Says :",
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);
+			
+				return false;
+			}
+			
+			
 	/*			if(document.prd.weight.value == "")
 		{
 				var msg="Please Select Packing";
@@ -829,7 +864,12 @@ function productDetails1(){
 			
 	    	return false;
 		}*/
-		if(document.prd.fk_tax_id.value == "" )
+			
+			
+			
+			
+			
+		/*if(document.prd.fk_tax_id.value == "" )
 		{
 			var msg="Please Select Tax Type";
 			var dialog = bootbox.dialog({
@@ -843,7 +883,13 @@ function productDetails1(){
 			}, 1500);
 			
 	    	return false;
-		}
+		}*/
+			
+			
+			
+			
+			
+			
 		/*if(document.prd.taxPercentage.value == "" )
 		{
 			var msg="Please Enter Tax Percentage";

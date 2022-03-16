@@ -190,7 +190,7 @@
 						    <h4	>Range</h4></a></li>
 					</ul>
 
-				   <div class="tab-content" style="float: left"> 
+				   <div class="tab-content" > 
 					
 					
 
@@ -219,7 +219,7 @@
 		        ]
 		    } );
 		} );</script> -->
-						<div id="supplierSingleDate" class="tab-pane active">
+						<div id="supplierSingleDate" class="tab-pane active ">
 							 <!-- <div class="row">
 								 <div class="col-sm-offset-1 col-md-10">
 									<hr style="border-top-color: #c1b1b1;">
@@ -277,17 +277,20 @@
 								
 									
 									<div class="row form-group" style="padding-top:2%">
-										<div class="col-md-2 col-md-offset-5">
+										<div class="col-md-2 col-md-offset-5 text-center">
 											<div class="input-group">
 												<div align="center">
 													<input type="button" id="btn" name="save" class="btn  btn-success " 
 													style="height: 38px; width: 121px;font-size: 18" onclick="saleReportForSingleDateAsPerCategory()" 
-													value="Search" />
+													value="Search" >
 												</div>
 											</div>
 										</div>
 									</div>
-							 <div class="container">
+									
+							 <!-- <div class="container "> -->
+							 <div class="table-responsive" style="padding-top:1%">
+							 
   									 <!-- <div class="table-responsive" style="padding-top:2%"> -->
   									<!-- <div class="" style="padding-top:3%"> -->
 										<table
@@ -431,7 +434,7 @@
 										</div>
 									</div>
 									<div class="container">
-									<!-- <div class="table-responsive" style="padding-top:2%"> -->
+									 <div class="table-responsive" >
 									
 										<table
 											class="table table-bordered table-striped table-condensed cf"
@@ -460,7 +463,7 @@
 												</tr>
 											</tfoot>
 										</table>
-									<!-- </div> -->
+									 </div> 
 									<!--  <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;">
@@ -514,7 +517,7 @@
 
 					</ul>
 
-					<div class="tab-content" style="float: left">
+					<div class="tab-content" >
 
 						<!--    for single date -->
 						<div id="customerSingleDate" class="tab-pane active">
@@ -566,6 +569,8 @@
 												<span class="input-group-addon"> <i
 													class="	glyphicon glyphicon-list-alt"></i>
 												</span> <select class="form-control" id="proName" name="proName" placeholder="Product	Name">
+												
+												
 												</select>
 
 											</div>
@@ -596,7 +601,7 @@
 										</div>
 									</div>
 									
-									<div class="container">
+									<div class="container table-responsive">
 <!-- 									<div class="table-responsive" style="padding-top:2%"> -->
 										<table class="table table-bordered table-striped table-condensed cf"
 											id="sale3" class="display">
@@ -743,7 +748,7 @@
 
 										</div>
 									</div>
-									<div class="container">
+									<div class="container table-responsive">
 <!-- 									<div class="table-responsive" style="padding-top:2%"> -->
 									<table
 										class="table table-bordered table-striped table-condensed cf"
@@ -822,7 +827,7 @@
 
 					</ul>
 
-					<div class="tab-content" style="float: left">
+					<div class="tab-content" >
 						<!--  Category Wise -->
 						<%--   <div id="catWisePaymentMode" class="tab-pane">
 		 		<form class="form-horizontal" method="post" action="" name="pay">
@@ -985,7 +990,7 @@
 										</div>
 									</div>
 									<div class="container">
-									<div class="table-responsive" style="padding-top:2%">
+									<div class="table-responsive" style="padding-top:1%">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="SinglePayment" class="display"
@@ -1272,7 +1277,7 @@
 
 					</ul>
 
-					<div class="tab-content" style="float: left">
+					<div class="tab-content" >
 
 						<!--    for single date -->
 						<!-- <script type="text/javascript"> 
@@ -1473,7 +1478,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="container">
+									<div class="container table-responsive">
 <!-- 									<div class="table-responsive" style="padding-top:2%"> -->
 										<table
 											class="table table-bordered table-striped table-condensed cf"
@@ -1553,7 +1558,7 @@
 
 					</ul>
 
-					<div class="tab-content" style="float: left">
+					<div class="tab-content" >
 
 						<div id="#shopBetweenTwoDate" class="tab-pane active">
 
@@ -1633,7 +1638,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="container">
+									<div class="container table-responsive">
 <!-- 									<div class="table-responsive" style="padding-top:2%"> -->
 										<table
 											class="table table-bordered table-striped table-condensed cf"
@@ -2010,7 +2015,7 @@
 
 					</ul>
 
-					<div class="tab-content" style="float: left">
+					<div class="tab-content" >
 
 
 		<!-------------------------------------------- 	Between Two Dates  -------------------------------------------------->
@@ -2256,7 +2261,7 @@
 
 					</ul>
 
-					<div class="tab-content" style="float: left">
+					<div class="tab-content" >
 
 
 						<div id="creditCustomerSaleReportsSingleDateWise"
@@ -2423,7 +2428,7 @@
 
 					</ul>
 
-					<div class="tab-content" style="float: left">
+					<div class="tab-content" >
 
 						<div id="cashCustomerSaleReportsSingleDateWise"
 							class="tab-pane active">
@@ -2577,7 +2582,7 @@
 							</div>
 						</div>
 					</div>
-							<div class="tab-content" style="float: left">
+							<div class="tab-content" >
 							
 							<div id="saleReturnReport" class="tab-pane active">
 					<form class="form-horizontal" method="post" action=""

@@ -24,6 +24,11 @@
 <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css"> -->
 
 <!-- For datatable to pdf,print,excel etc conversion -->
+
+
+
+
+<!-- 
  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.js"></script> 
  <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>
@@ -39,7 +44,13 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
 
 <script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
-<script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script>
+<script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script> -->
+
+
+
+
+
+
 
 <!-- <link rel="stylesheet" href="https://code.jquery.com/jquery-3.5.1.js">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js">  -->
@@ -86,7 +97,10 @@
 .container-fluid {
 	overflow: hidden;
 }
-/* .pagination {
+
+
+/* 
+ .pagination {
     float: right !important;
    
 }
@@ -101,7 +115,7 @@
 .pagination span{
     font-weight: 700;
     font-size: 16px;
-} */
+} */ 
 
 
 </style>
@@ -141,7 +155,7 @@
  
 <!-------------------------------------------------- Date Wise Starts Here -------------------------------------------------->   
   
-    	<div id="home" class="tab-pane fade in active">
+    	<div id="home" class="tab-pane fade in active"> 
  <!--    	<script>
     	$('#purchase1').DataTable( {
     buttons: [
@@ -184,17 +198,19 @@
 					<input type="button" id="btn" name="save" class="btn btn-success"
 									   onclick="purchaseReportForSingleDateValidate()" value="Search" />
 				</div>
+				
+			
+					<div class="table-responsive"> 
+					<table class="table table-bordered table-striped table-condensed  cf" id="purchase1">
 					
-					<div class="">
-					<div class="" style="padding-top:2%">
-					<table class="table table-bordered table-striped table-condensed  cf" id="purchase1" class="display " >
+					
 						<thead>
 							<tr >
 								<th>Bill Number</th>
 								<th>Purchase Date</th>
 								<th>Product Name</th>
 								<th> Company Name</th>
-								<!-- <th>DC No</th> -->
+								                         <!-- <th>DC No</th> -->
 								<th>Batch No</th> 
 								<th>Barcode No</th>
 								<th>Buy Price</th>
@@ -220,8 +236,9 @@
 								<th></th>	
 							</tr>
 						</tfoot>
-						
 					</table>
+				</div> 
+					
 					<!-- <div class="pagination">
 					<div id="listingTable"></div>
                      <a href="#" id="prev" style="padding: 0 17px;">Prev</a>
@@ -248,8 +265,10 @@
                          </ul>
                    </nav>
                    </div> -->
-				</div>	
-				</div>			
+                                  
+				<!-- </div>	  -->
+
+					
 				</fieldset>
 			</form>
  		</div>
@@ -293,7 +312,8 @@
 							<input type="button" id="btn" name="save" class="btn btn-success" onclick="purchaseReportBetweenTwoDatesValidate()" value="Search"/>
 						</div >	
 						
-					<div class="">
+						<div class="table-responsive">
+						
 						<table class="table table-bordered table-striped table-condensed  cf" id="purchaseRange" class="display" 
 						>
 						<thead>
@@ -328,6 +348,7 @@
 							</tr>
 						</tfoot>
 					</table>
+					</div>
 					<!--  <div class="pagination-page" >
                     <nav aria-label="...">
                         <ul class="pagination" style="margin-top: -10px;">
@@ -348,7 +369,7 @@
                          </ul>
                    </nav>
                    </div> -->
-					</div>
+					
 				</fieldset>
 				</form>
  		</div>
@@ -356,7 +377,7 @@
  		
 			<!----------------------------------	Between Two Dates	------------------------------------->
  		
- 		<div id="GSTSummary" class="tab-pane" class="table-responsive">
+ 		<div id="GSTSummary" class="tab-pane" >
  		<div class="row"></div>
  				<form class="form-horizontal" method="post" action="" name="fertiBill">
 					<fieldset>
@@ -390,9 +411,10 @@
 				      	<div class="row buttons-margin" align="center">
 							<input type="button" id="btn" name="save" class="btn btn-success" onclick="GSTSummaryReportBetweenTwoDates()" value="Search"/>
 						</div>
+						
+						<div class="table-responsive">
 							
-						<table class="table table-bordered table-striped table-condensed cf" id="GSTSummaryRange" class="display"
-						 >
+						<table class="table table-bordered table-striped table-condensed cf" id="GSTSummaryRange" class="display" >
 						<thead>
 							<tr>
 								<th>Bill Number</th>
@@ -435,6 +457,8 @@
                          </ul>
                    </nav>
                    </div> -->
+                   
+                   </div>
 				</fieldset>
 				</form>
  		</div> 		
@@ -507,10 +531,10 @@
 										onclick="purchaseReportAsPerProductNameValidate()" value="Search"/>
 					</div>
 					
-						<div class="">
-						<div id="demo_jui" style="padding-top:2%">
+						<div class="table-responsive">
+						<div id="demo_jui" >
 						<table class="table table-bordered table-striped table-condensed  cf" id="purchaseAsPerProduct11"
-						 class="display"  >
+						 class="display"  row="10" >
 						<thead>
 							<tr>
 								<th>Bill Number</th>
@@ -618,8 +642,8 @@
 								       onclick="supplierWisePurchaseReportValidate()" value="Search"/>
 					 </div>	
 					
-						<div class="">
-						<div id="demo_jui" style="padding-top:3%">	
+						<div class="table-responsive">
+						<div id="demo_jui" >	
 						<table class="table table-bordered table-striped table-condensed cf" id="purchase3" class="display" row="10">
 						<thead>
 							<tr>
@@ -767,7 +791,7 @@
 					</div>	
 				
 				<div class="container">
-				<div class="" style="padding-top:3%">	
+				<div class="table-responsive" >	
 						<table class= "table table-bordered table-striped table-condensed cf" id="purchase4" class="display"
 						 >
 						<thead>
@@ -951,7 +975,7 @@
 				
 				<!-- <div class="table-responsive"> -->
 				<!-- <div class="container"> -->
-				<div class="" style="padding-top:2%">
+				<div class="table-responsive" >
 					<table class="table table-bordered table-striped table-condensed cf" id="gstPurchaseReportTable"
 					 >
 						<thead>
@@ -1073,8 +1097,8 @@
 				</div>
 				
 				<!-- <div class="table-responsive"> -->
-				<div class="" style="padding-top:3%">
-					<table class= "table table-bordered table-striped table-condensed cf" id="rangeWiseBillReportTable"
+				<div class="table-responsive" >
+					<table class= "table table-bordered table-striped table-condensed cf" id="rangeWiseBillReportTable" 
 					 >
 						<thead>
 								<tr>
@@ -1089,12 +1113,12 @@
 	
 						<tfoot>
 							<tr>
-								<th colspan="1" style="text-align: right">Total Rs:</th>
 								<th></th>
-								<th></th>
+								<th colspan="7" style="text-align: right">Total Rs:</th>
+								<!-- <th></th>
 								<th></th>
 							    <th></th>
-							    <th></th>
+							    <th></th> -->
 							</tr>
 						</tfoot>
 					</table>
@@ -1204,8 +1228,8 @@
 							onclick="supplierWisePurchaseReturnReportValidate()" value="Search"/>
 					</div>
 			
-				 	<div class="">
-				     <div id="demo_jui" style="padding-top:3%">	
+				 	<div class="table-responsive" >
+				     <div id="demo_jui" >	
 						<table class="table table-bordered table-striped table-condensed cf" id="purchaseReturnTable" class="display">
 						<thead>
 							<tr>
@@ -1353,8 +1377,8 @@
 								onclick="purchaseOrderReportValidate()" value="Search"/>
 					</div>
 			
-				 	<div class="">
-				     <div id="demo_jui" style="padding-top:3%">	
+				 	<div class="table-responsive">
+				     <div id="demo_jui">	
 						<table class="table table-bordered table-striped table-condensed cf" id="purchaseOrderTable" class="display">
 						<thead>
 							<tr>

@@ -1039,7 +1039,7 @@ function caldis(){
 						<div class="input-group">
 							<span class="input-group-addon"> Rs </span> <input id="buyPrice"
 								name="buyPrice" placeholder="Buy Price"
-								class="form-control input-md" type="text" value="0"  onchange="buyPriceWithTax()" onchange="buyPriceChecklessthanmrp()" >
+								class="form-control input-md" type="text" value=""  onchange="buyPriceWithTax()" onchange="buyPriceChecklessthanmrp()" >
 						</div>
 					</div>
 

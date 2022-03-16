@@ -372,7 +372,25 @@ function updatePartnerDetails() {
 
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
 	{
-		alert(data);
+		/*alert(data);*/
+		
+		var msg=data;
+		var dialog = bootbox.dialog({
+	    message: '<p class="text-center">'+msg.fontcolor("green").fontsize(5)+'</p>',
+	   
+	    closeButton: false
+		});
+						
+		setTimeout(function() {
+			dialog.modal('hide');
+			location.reload();
+		}, 1500);
+		
+		
+		
+		
+		
+		
 		if(document.partnm)
 		{
 			document.partnm.reset();

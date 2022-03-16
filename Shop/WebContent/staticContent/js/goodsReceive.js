@@ -1036,12 +1036,15 @@ function purchaseReportForSingleDate()
 				"bProcessing": true,
 			    "sAutoWidth": false,
 			    "bDestroy":true,
-			    "sPaginationType": "bootstrap", // full_numbers
+			    "sPaginationType": "bootstrap",
+			    // full_numbers
 			    "iDisplayStart ": 10,
 			    "iDisplayLength": 10,
-			    "bPaginate": false, //hide pagination
+			    "bPaginate": false, 
+			    //hide pagination
 			    //"bFilter": false, //hide Search bar
-			    "bInfo": true, // hide showing entries
+			    "bInfo": true,
+			    // hide showing entries
 				
 				/*dom : 'Bfrtip',
 				buttons : [ 'copy', ' csv', ' excel', 'pdf', 'print' ],*/
@@ -1074,10 +1077,16 @@ function purchaseReportForSingleDate()
 				
 				//for Total Rs:
 				
+				
+				
+				
 				 "footerCallback": function ( row, data, start, end, display ) {
 			            var api = this.api(), data;
 			 
 			            // Remove the formatting to get integer data for summation
+			            
+			            
+			            
 			            var intVal = function ( i ) 
 			            {
 			                return typeof i === 'string' ?
@@ -1085,6 +1094,13 @@ function purchaseReportForSingleDate()
 			                    typeof i === 'number' ?
 			                        i : 0;
 			            };
+				
+				
+				
+				
+				
+				
+				
 			 
 			            // Total over all pages
 	/*		          
@@ -1103,6 +1119,10 @@ function purchaseReportForSingleDate()
 			            );
 			            console.log( pageTotal);
 		*/	            
+				
+				
+				
+			
 			      pageTotal = api .column( 12 ).data() .reduce( function (a, b) 
 			      {
 		                    
@@ -1794,8 +1814,6 @@ function supplierWisePurchaseReport()
 			                    typeof i === 'number' ?
 			                        i : 0;
 			            };
-			            
-			            
 			            
 			            
 			            pageTotal = api.column( 13 ).data().reduce( function (a, b) {

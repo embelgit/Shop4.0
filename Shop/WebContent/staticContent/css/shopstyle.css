@@ -351,6 +351,23 @@ h3.cashbooktransaction {
 #demo_jui {
     margin: 0 15px;
 }
+
+/*  #demo_jui {
+    margin: 0 15px;
+    background: red;
+    border-radius: 10px;
+    
+        background: linear-gradient(45deg, #f55555, #fccf31);
+    border-radius: 10px;
+    text-align: center;
+    
+} */
+
+
+
+
+
+
 .dataTables_wrapper {
     /* background: linear-gradient(45deg, orange, transparent); */
     background: linear-gradient(45deg, #f55555, #fccf31);
@@ -419,6 +436,7 @@ table.table.table-bordered.table-striped.table-condensed.cf.dataTable.no-footer 
 }
 .fg-toolbar.ui-toolbar.ui-widget-header.ui-helper-clearfix.ui-corner-tl.ui-corner-tr {
     background: linear-gradient(45deg, #f55555, #fccf31);
+        width: 100%;
 }
 .fg-toolbar.ui-toolbar.ui-widget-header.ui-helper-clearfix.ui-corner-bl.ui-corner-br {
     background: linear-gradient(45deg, #f55555, #fccf31);

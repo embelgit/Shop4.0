@@ -113,7 +113,7 @@
 	                <th>Payment Mode</th>
  					<th>Credit Amount</th>
 	                <th>Debit Amount</th>
-	                					<th>Contact No</th> 
+	                <th>Contact No</th> 
 	                <th>Insert date</th> 
 	                <th>Shop Name</th>
 				</tr>

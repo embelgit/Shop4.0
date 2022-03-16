@@ -857,8 +857,9 @@ function hamaliExpenseAddingToGross()
 			</div>				
 					
 									
-	<div class="row" style="margin-left: -170px;" >
-		<div class="table-responsive " style="width:1300px" > 
+	<!-- <div class="row" style="margin-left: -170px;" > -->
+	<div class="row" style="align:center; margin-left: 60px;"  >
+		<div class="table-responsive " style="width:1350px;" > 
 			<table id="jqGrid" ></table>
 			<div id="jqGridPager"></div>
 		</div>

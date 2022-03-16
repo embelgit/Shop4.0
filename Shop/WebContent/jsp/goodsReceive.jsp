@@ -1584,7 +1584,7 @@ function clearfeild() {
  	if (abc.equals("english")) {
  %>Manufacturing Company<%
  	}
- %>
+ %><sup>*</sup>
 					</label>
 					<div class="col-md-3">
 						<div class="input-group">
@@ -1996,7 +1996,13 @@ function clearfeild() {
  %>Description<%
  	}
  %>	</label>
-					<div class="col-md-3">
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="col-md-3">
 						<div class="input-group">
 							<span class="input-group-addon">
 							<i class="	glyphicon glyphicon-list-alt"></i>
@@ -2014,6 +2020,35 @@ function clearfeild() {
 					     <input style="height: 53px; width: 128px; font-size: 25" type="reset"  id="save2"  name="save2" class="btn btn-danger"   value="Cancel" onclick="reset()">
 			    	</div>
 			  </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+					<!-- <div class="col-md-3">
+						<div class="input-group">
+							<span class="input-group-addon">
+							<i class="	glyphicon glyphicon-list-alt"></i>
+							</span>
+						
+							<input type="text" placeholder="Description" id="description" class="form-control">
+							
+						</div>
+					</div> 
+					</div>   			
+    			
+				<div class="form-group row" style="padding-top:2%">
+					<div align="center">
+						 <input style="height: 53px; width: 128px; font-size: 25" type="button" id="save1"  name="save1" class="btn btn-success " value="Submit" onclick="productDetails1()">
+					     <input style="height: 53px; width: 128px; font-size: 25" type="reset"  id="save2"  name="save2" class="btn btn-danger"   value="Cancel" onclick="reset()">
+			    	</div>
+			  </div> -->
            
 		</form>
     </div>
