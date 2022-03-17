@@ -211,7 +211,7 @@ function addMeasuringUnit1()
 
 function addUnit(){
 	
-	document.munits.save.disabled =true;
+	document.getElementById("save").disabled =true;
 	
 	var unitName = $('#unitName').val();
 //	unitName = unitName.toLowerCase();
@@ -243,8 +243,7 @@ function addUnit(){
 			}, 1500);*/
 			location.reload();
  				document.getElementById("save").disabled=false; 
-			//document.munits.save.disabled =false;
- 				 			}
+ 			}
  	    	).error(function(jqXHR, textStatus, errorThrown){
  	    		if(textStatus==="timeout") {
  	    			$(loaderObj).hide();
@@ -358,7 +357,6 @@ function updateMeasuringUnit()
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
 		 	{
 					var msg=data;
-					alert(msg);
 					var dialog = bootbox.dialog({
 				    message: '<p class="text-center">'+msg.fontcolor("green").fontsize(5)+'</p>',
 				    closeButton: false

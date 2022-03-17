@@ -138,7 +138,7 @@
 				%>
 				<tr>
 					<td class="align"><%=pro.getSupplierName()%></td>
-					<td class="align"><%=pro.getBillNo()%></td>
+					<td class="align"><%=pro.getBill()%></td>
 					<td class="align"><%=pro.getTotalAmount()%></td>
 					<td class="align"><%=pro.getBalanceAmount()%></td>
 					<td class="align"><%=pro.getPaymentType()%></td>

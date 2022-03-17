@@ -662,7 +662,8 @@ function fetchDataForPurchase() {
 						datatype : "local",
 		
 						colNames : [
-								"Product ID",
+								"pk_goods_receive_id",
+								"PkStockId",
 								"product_Id22",
 								"Category_Id",
 								"Barcode<br>No",
@@ -689,6 +690,10 @@ function fetchDataForPurchase() {
 						        colModel : [
 								{
 									name : "pk_goods_receive_id",
+									hidden : true
+								},
+								{
+									name : "PkStockId",
 									hidden : true
 								},
 								
@@ -860,20 +865,25 @@ function fetchDataForPurchase() {
 							*/
 									
 							 var total=0;
+							 var tot1=0;
+							 var taxAmount=0;
+							 var BpwTax=0;
+							 
 							 total=Number(quantity) * Number(sale_price);
 						     
 						 $("#jqGrid").jqGrid("setCell", rowId, "total", total);
-						
+						 
 						  var checkbuyPrice= /^[0-9]+\.?[0-9]*$/;
-						  if(price.match(checkbuyPrice))
+						  if(sale_price.match(checkbuyPrice))
 					      {
 					      	  if(quantity !=0)
 					      	  {   
-					      		  BpwTax = (price/(1+(tax_percentage/100)));
-					      		  taxAmount1 = (BpwTax*(tax_percentage/100));
-					      		  taxAmount = taxAmount1 * quantity;
-					      		  $("#jqGrid").jqGrid("setCell", rowId, "taxAmount",  taxAmount.toFixed(2));
-					          }else
+					      		  BpwTax = ((tax_percentage/100) * total);
+					      		  //taxAmount1 = BpwTax.toFixed(2);
+					      		  taxAmount = taxAmount + BpwTax;
+					      		$("#jqGrid").jqGrid("setCell", rowId, "taxAmount",taxAmount.toFixed(2));
+					          }
+					      else
 					          {
 						    	 var setZero = 0;
 		                   		
@@ -1052,6 +1062,12 @@ function purchaseReturnTable(){
 	var flag=0;
 	for (var i = 0; i < count; i++)
 	{
+		var pk_goods_receive_id= allRowsInGrid[i].pk_goods_receive_id;
+		params["pk_goods_receive_id" + i] = pk_goods_receive_id;
+		
+		var PkStockId= allRowsInGrid[i].PkStockId;
+		params["PkStockId" + i] = PkStockId;
+		
 		var product_name= allRowsInGrid[i].product_name;
 		params["product_name" + i] = product_name;
 
@@ -1132,11 +1148,10 @@ function purchaseReturnTable(){
 	params["methodName"] = "PurchaseReturn";
 
 	$.post('/Shop/jsp/utility/controller.jsp', params, function(data) {
-		
-       	/*alert(data);
-		location.reload();*/
+	
 		// returntMinusFromStockPurchase();
-		 var msg="Data Added successfully "
+		// var msg="Data Added successfully "
+		 var msg=data;
 				var dialog = bootbox.dialog({
 					
 				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
@@ -1147,7 +1162,8 @@ function purchaseReturnTable(){
 					dialog.modal('hide');
 				}, 1500);				
 				document.getElementById("save").disabled = false;
-				return false;
+				//return false;
+				location.reload();
 		
 	}).error(function(jqXHR, textStatus, errorThrown) {
 		if (textStatus === "timeout") {

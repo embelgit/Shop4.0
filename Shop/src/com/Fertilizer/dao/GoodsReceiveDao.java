@@ -998,7 +998,7 @@ public List getAllIetmByBillNo(String bill_no, String supplier, HttpServletReque
 	 session=hbu.getHibernateSession();
 	 
 	 //Query query=session.createSQLQuery("SELECT p.pk_goods_receive_id ,s.supplier_name,p.dc_number,p.product_name,p.buy_price,p.sale_price,p.weight,p.quantity,p.batch_no,p.fkCategoryId,p.purchaseDate,p.mrp,p.tax_percentage,p.barcodeNo,p.company_Name,p.dupQuantity,c.cat_name,p.fk_product_id from goods_receive p left JOIN supplier_details s on p.fk_supplier_id = s.pk_supplier_id left JOIN categories c on p.fkCategoryId = c.pk_cat_id WHERE p.bill_number=:bill_no AND p.fk_supplier_id=:supplier AND dupQuantity>0");
-	 Query query=session.createSQLQuery("SELECT p.pk_goods_receive_id ,s.supplier_name,p.product_name,p.buy_price,p.sale_price,p.weight,p.quantity,p.batch_no,p.fkCategoryId,p.purchaseDate,p.mrp,p.tax_percentage,p.barcodeNo,p.company_Name, sd.avail_Quantity, c.cat_name, p.fk_product_id,ps.saleunit,ps.unitvalue FROM goods_receive p LEFT JOIN supplier_details s ON p.fk_supplier_id = s.pk_supplier_id LEFT JOIN categories c ON p.fkCategoryId = c.pk_cat_id LEFT JOIN stock_detail sd ON sd.productId = p.fk_product_id LEFT JOIN product_details ps ON sd.productId=ps.pk_product_id WHERE p.bill_number='"+bill_no+"' AND p.fk_supplier_id='"+supplier+"' AND p.fk_shop_id ='"+shopid+"' AND dupQuantity > 0");
+	 Query query=session.createSQLQuery("SELECT p.pk_goods_receive_id ,s.supplier_name,p.product_name,p.buy_price,p.sale_price,p.weight,p.quantity,p.batch_no,p.fkCategoryId,p.purchaseDate,p.mrp,p.tax_percentage,p.barcodeNo,p.company_Name, sd.avail_Quantity, c.cat_name, p.fk_product_id,ps.saleunit,ps.unitvalue, sd.PkStockId FROM goods_receive p LEFT JOIN supplier_details s ON p.fk_supplier_id = s.pk_supplier_id LEFT JOIN categories c ON p.fkCategoryId = c.pk_cat_id LEFT JOIN stock_detail sd ON sd.productId = p.fk_product_id LEFT JOIN product_details ps ON sd.productId=ps.pk_product_id WHERE p.bill_number='"+bill_no+"' AND p.fk_supplier_id='"+supplier+"' AND p.fk_shop_id ='"+shopid+"' AND dupQuantity > 0");
 
 	 //query.setParameter("bill_no", bill_no);
 	 //query.setParameter("supplier", supplier);
@@ -3358,8 +3358,8 @@ for (Object[] object : list) {
 	
 SaleReports reports = new SaleReports();
 System.out.println("rslt - "+Arrays.toString(object));
-reports.setCustomerBill(Integer.parseInt(object[0].toString()));
-System.out.println("bill no - "+reports.getCustomerBill());
+reports.setBillNo(object[0].toString());
+System.out.println("bill no - "+reports.getBillNo());
 String unit = object[15].toString();
 reports.setUnit(unit);
 System.out.println("UNIT FOR CREDIT CUSTOMER SALE REPORTS ==========> "+unit);

@@ -579,7 +579,7 @@ function salePriceWithoutTax11()
 	</div>
 		
 		<div class="row buttons-margin" align="center">            
-           		<input type="button" value="Update" id="save" name="btn" class="btn btn-success"onclick="updateProductDetails()" /> 
+           		<input type="button" value="Update" id="updtbtn" name="btn" class="btn btn-success"onclick="updateProductDetails()" /> 
              	<input type="reset" value="Cancel" id="save" name="btn" class="btn btn-danger" onclick="reset()" /> 
            		<input type="button" value="Back" id="listBtn" name="btn" class="btn btn-primary" onclick="Back()" />            
           </div>

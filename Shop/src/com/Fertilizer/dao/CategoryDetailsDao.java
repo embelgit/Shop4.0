@@ -447,7 +447,7 @@ public List getsubCatDetails(){
 	hbu = HibernateUtility.getInstance();
 	session = hbu.getHibernateSession();
 
-	Query query=session.createSQLQuery("SELECT c.cat_name,s.sub_cat_name,s.pk_subcat_id from categories c LEFT JOIN sub_categories s on c.pk_cat_id=s.fk_cat_id");
+	Query query=session.createSQLQuery("SELECT c.cat_name,s.sub_cat_name,s.pk_subcat_id from sub_categories s LEFT JOIN categories c on c.pk_cat_id=s.fk_cat_id");
 	
 	List<Object[]> list = query.list();
     

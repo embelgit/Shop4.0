@@ -289,10 +289,11 @@ function mypopup()
 	window.location = "popUpcategoryDetails.jsp";
 }
 
-<!-- function clearGridSelect()
+/*  function clearGridSelect()
 {
 	document.getElementById("proName").value = "";	
-}-->
+} */
+
 </script>
 		<%
 	  		HttpSession session1 = request.getSession();
@@ -817,7 +818,7 @@ function hamaliExpenseAddingToGross()
 								</div>
 							</div>
 						  	<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
-						  		<label class="control-label" for="proName">All Product Name<sup>*</sup></label>  
+						  		<label class="control-label" for="proName1">All Product Name<sup>*</sup></label>  
           					</div>  
           					<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 								<div class="input-group">

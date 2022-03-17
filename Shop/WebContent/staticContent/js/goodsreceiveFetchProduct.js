@@ -5840,7 +5840,7 @@
 								var rowId = ids[j];
 								var rowData = jQuery('#jqGrid').jqGrid('getRowData',rowId);
 		
-							if (prodName1 == jsonData[i].prodName && com1 == jsonData[i].company && packing1 == jsonData[i].packing) 
+							if (prodName1 == jsonData[i].prodName) 
 							{
 		
 								         newrow = false;
@@ -6076,43 +6076,6 @@
 		
 		
 		
-				if(document.goodsReceiveForm.proName.value == "")
-	{
-		var msg="Please Enter Product Name";
-		
-		var dialog = bootbox.dialog({
-			//title: "Embel Technologies Says :",
-		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-		    closeButton: false
-		});
-		
-		setTimeout(function() {
-			dialog.modal('hide');
-		}, 1500);
-		
-		return false;
-	}
-		
-				if(document.goodsReceiveForm.proName1.value == "")
-	{
-		var msg="Please Enter All Product Name";
-		
-		var dialog = bootbox.dialog({
-			//title: "Embel Technologies Says :",
-		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-		    closeButton: false
-		});
-		
-		setTimeout(function() {
-			dialog.modal('hide');
-		}, 1500);
-		
-		return false;
-	}
-		
-		
-		
-		
 		/*if (document.goodsReceiveForm.mailid.value == "")
 		{
 			var msg="Please Enter Email ID";
@@ -6200,6 +6163,22 @@ function addAdvanvceBooking(){
 	var fk_subCat_id = splitText[1];
 		
 	var count = jQuery("#jqGrid").jqGrid('getGridParam', 'records');
+	
+	if (count == null)
+	{		
+		var msg="Please Select Product Name";
+		var dialog = bootbox.dialog({
+					   
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		return false;
+	}
+	
 	var allRowsInGrid = $('#jqGrid').getGridParam('data');// to get all rows of grid
 	var AllRows = JSON.stringify(allRowsInGrid);
 	for (var i = 0; i < count; i++)

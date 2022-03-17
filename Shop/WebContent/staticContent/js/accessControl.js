@@ -53,7 +53,7 @@ function AddAccessControlValidations() {
 		return false;
 	}
 	
-	if(document.usd.type.value == "")
+	if(document.usd.type.value == "selected")
 	{
 		var msg="Please Select User Type";
 		var dialog = bootbox.dialog({

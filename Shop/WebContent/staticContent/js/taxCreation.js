@@ -487,7 +487,7 @@ function editTax(){
       alert("Please Enter Tax Percentage");
       return false;
 	 }*/
-	 		  if(document.txc.taxPercentage.value == "")
+	 if(document.txc.taxPercentage.value == "")
 	{
 		var msg="Please Enter Tax Percentage";
 		
@@ -505,10 +505,10 @@ function editTax(){
 	}
 	 
 	 
-	 var letterNumber = /^\d+(\.\d+)?$/;
-	  		  if(document.txc.taxPercentage.value.match(letterNumber) )
+/*	 var letterNumber = /^\d+(\.\d+)?$/;
+	 if(document.txc.taxPercentage.value.match(letterNumber) )
 	{
-		var msg="Please Enter Tax Percentage";
+		var msg="Please Enter Valid Tax Percentage";
 		
 		var dialog = bootbox.dialog({
 			//title: "Embel Technologies Says :",
@@ -521,7 +521,7 @@ function editTax(){
 		}, 1500);
 		
 		return false;
-	}
+	}*/
 
 	/* if(document.txc.taxPercentage.value.match(letterNumber) )
 	 {

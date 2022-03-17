@@ -372,7 +372,8 @@ public class SupplierPaymentDao {
 				reports.setBalanceAmount(Double.parseDouble(o[3].toString()));
 				reports.setPaymentType(o[4].toString());
 				reports.setPaymentAmount(Double.parseDouble(o[5].toString()));
-				 if(paymentType.equals("credit")){
+				 
+				if(paymentType.equals("credit")){
 				    	reports.setCreditAmount(Double.parseDouble(o[5].toString()));
 				    	reports.setDebitAmount(0.0);
 				    }
@@ -380,7 +381,9 @@ public class SupplierPaymentDao {
 				    	reports.setDebitAmount(Double.parseDouble(o[5].toString()));
 				    	reports.setCreditAmount(0.0);
 				    }
+				  
 				reports.setPaymentMode(o[6].toString());
+				
 				reports.setAccountantName(o[7].toString());
 				
 				productList.add(reports);		

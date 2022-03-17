@@ -151,7 +151,7 @@
 				<td class="align"><%=sr.getSrNo()%></td>
 				<td class="align"><%=sr.getCategoryName()%></td>
 				<td class="align"><%=sr.getSubcategoryName()%></td>
-<td class="align"><i class="glyphicon glyphicon-trash" 
+				<td class="align"><i class="glyphicon glyphicon-trash" 
                    id="<%=sr.getSubcatId()%>					
                     <%=sr.getCategoryName()%>,
 					 <%=sr.getSubcategoryName()%>" 

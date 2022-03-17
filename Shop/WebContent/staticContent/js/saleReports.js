@@ -741,7 +741,7 @@ function allReportBetweenTwoDates1()
 		      
 		columns: [
 		            
-		          	{"data": "customerBill", "width": "5%"},
+		          	{"data": "billNo", "width": "5%"},
 		            {"data": "itemName", "width": "5%"},
 		            {"data": "soldDate", "width": "5%"},
 		            {"data": "SalePrice" , "width": "5%"},		           

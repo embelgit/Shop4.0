@@ -1699,16 +1699,18 @@ top: 25%;}
 	            		<input readonly="readonly" id="grossTotal1" name="grossTotal1" placeholder="Gross Total" class="form-control input-md"  type="text" >
 	            	</div>
 	            </div>
-					<!-- <label class="col-md-offset-6 col-md-2 control-label"  for="firstPaidAmtCreditCustomer"><h4><b>Net Pay Amount</b></h4></label> -->  
-			  <!--   <div class="col-md-3">
+	            
+	            <div class="col-lg-offset-5 col-md-offset-5 col-lg-2 col-md-2 col-sm-4">
+			 <label class="control-label"  for="firstPaidAmtCreditCustomer"><b>Net Pay Amount</b></label>  
+			   </div>
+			   <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 	            	<div class="input-group">
 								<span class="input-group-addon">
 									Rs
 								</span>
-	            		 <input id="firstPaidAmtCreditCustomer" name="firstPaidAmtCreditCustomer" placeholder="Pay Amount" class="form-control input-md"  
-	            		type="hidden" style="font-size: 25px;  height: 55px;" >
+	            	<input type="text" id="firstPaidAmtCreditCustomer" name="firstPaidAmtCreditCustomer" placeholder="Pay Amount" value="00.00" class="form-control input-md" >
 	            	</div>
-	            </div> -->	            			
+	            </div> 	            			
             </div>
         </div>
 	 		 	

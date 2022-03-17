@@ -93,7 +93,7 @@
             	<div class="row">
             		<div class="form-group">
             	  		<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
-            	  			<label class="control-label" for="taxPercentage">SGST<sup>*</sup></label>  
+            	  			<label class="control-label" for="sgst">SGST<sup>*</sup></label>  
             			</div>
             			<div class="col-lg-3 col-md-3 col-sm-8">
             				<div class="input-group">

@@ -35,8 +35,16 @@ public class GetPurchaseProduct {
 	private String saleunit;
 	private Double unitvalue;
 	
+	private Long PkStockId;
 	
 	
+	
+	public Long getPkStockId() {
+		return PkStockId;
+	}
+	public void setPkStockId(Long pkStockId) {
+		PkStockId = pkStockId;
+	}
 	public String getSaleunit() {
 		return saleunit;
 	}

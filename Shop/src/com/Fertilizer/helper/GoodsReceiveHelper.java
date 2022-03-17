@@ -1316,6 +1316,7 @@ public class GoodsReceiveHelper
 				bean.setPkPOId(Long.parseLong(o[16].toString()));
 				bean.setSaleunit(o[17].toString());
 				bean.setUnitvalue(Double.parseDouble(o[18].toString()));
+				bean.setPkStockId(Long.parseLong(o[19].toString()));
 				bean.setDupQuantity(0d);
 				bean.setTaxAmount(0d);
 				bean.setTotal(0d);

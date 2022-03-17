@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.velocity.runtime.directive.Parse;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -20,6 +21,7 @@ import org.jfree.util.Log;
 import com.Fertilizer.hibernate.CreditNoteConversionBean;
 import com.Fertilizer.hibernate.FertilizerBillBean;
 import com.Fertilizer.hibernate.GoodsReceiveBean;
+import com.Fertilizer.hibernate.Stock;
 import com.Fertilizer.hibernate.UserDetailsBean;
 import com.Fertilizer.hibernate.purchaseReturnBean;
 import com.Fertilizer.utility.HibernateUtility;
@@ -75,6 +77,9 @@ public class PurchaseReturnHelper {
 			String barcodeNo = request.getParameter("barcodeNo" + i);
 			//String status ="Done";
 			
+			String pk_goods_receive_id = request.getParameter("pk_goods_receive_id" + i);
+			String PkStockId = request.getParameter("PkStockId" + i);
+			
 			purchaseReturnDao dao = new purchaseReturnDao();
 			purchaseReturnBean bean = new purchaseReturnBean();
 
@@ -124,6 +129,60 @@ public class PurchaseReturnHelper {
 				e1.printStackTrace();
 			}
 			// bean.setPurchaseDate(purchaseDate1);
+			
+/*------------------------------------------------- After Purchase Return change the Quantity in Good recieve -----------------------------------------------*/
+			
+			HibernateUtility hbu4 = null;
+			Session session4 = null;
+			Transaction transaction4 = null;
+			
+			try{
+				hbu4 = HibernateUtility.getInstance();
+				session4 = hbu4.getHibernateSession();
+				transaction4 = session4.beginTransaction();
+				
+				Long pk_goods_receive_id1 = Long.parseLong(pk_goods_receive_id);
+							
+				GoodsReceiveBean updateqty = (GoodsReceiveBean) session4.get(GoodsReceiveBean.class, new Long(pk_goods_receive_id1));
+   		        
+				Double qty = updateqty.getQuantity();
+				
+					Double updatedQty = qty + Double.parseDouble(dupQuantity);
+					System.out.println("Quantity in Good Recieve After Purchase Return :: "+updatedQty);
+					updateqty.setQuantity(updatedQty);
+				
+   		        session4.saveOrUpdate(updateqty);
+   		        transaction4.commit();					
+
+			
+/*------------------------------------------------- After Purchase Return change the Quantity in Stocks -----------------------------------------------*/
+	
+				Long PkStockId1 = Long.parseLong(PkStockId);
+							
+				Stock updatestck = (Stock) session4.get(Stock.class, new Long(PkStockId1));
+   		        
+				Double stock = updatestck.getQuantity();
+				
+					Double updatedStock = stock + Double.parseDouble(dupQuantity);
+					System.out.println("Avail Quantity in Stock After Purchase Return :: "+updatedStock);
+					updatestck.setQuantity(updatedStock);
+				
+   		        session4.saveOrUpdate(updatestck);
+   		        transaction4.commit();					
+   		}
+			
+		catch(RuntimeException e){
+			try{
+				transaction4.rollback();
+			}catch(RuntimeException rbe)
+			{
+				Log.error("Couldn't roll back tranaction",rbe);
+			}	
+		}finally{
+			hbu4.closeSession(session4);
+		}
+			
+			
 
 			String onlyShopName = "";
 			

@@ -159,12 +159,9 @@ function saleReturn(){
 	
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
  	    	{
- 				/*alert(data);
- 				location.reload();*/
- 	
- 				
  				 /*var msg="Data Added successfully "*/
- 				 var msg="data"
+		
+ 				var msg=data;
 				var dialog = bootbox.dialog({
 					
 				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
@@ -256,7 +253,7 @@ function seedReturn(){
  				/*alert(data);
  				location.reload();	*/
  				
- 					 var msg="data"
+ 					 var msg=data;
 				var dialog = bootbox.dialog({
 					
 				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',

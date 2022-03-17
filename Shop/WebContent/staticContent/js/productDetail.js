@@ -1634,7 +1634,7 @@ $('#example1').dataTable().fnAddData(mydata);
 											
  function addEditedProductDetails(){
 	 
-		document.prd1.btn.disabled = true;
+		document.getElementById("updtbtn").disabled = true;
 		
 		 var input1 = document.getElementById('fk_product_id'),
 			list = document.getElementById('pro_drop'),
@@ -1720,7 +1720,7 @@ $('#example1').dataTable().fnAddData(mydata);
 					}, 1500);	
 	 				//alert(data);
 	 				//location.reload();
-	 				document.prd1.save.disabled = false;
+					document.getElementById("updtbtn").disabled = false;
 	 			}
 	 	    	).error(function(jqXHR, textStatus, errorThrown){
 	 	    		
