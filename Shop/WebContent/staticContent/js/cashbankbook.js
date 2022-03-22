@@ -7857,36 +7857,36 @@ function partnerWiseReport()
 																		{
 																			extend : 'print',
 																			orientation : 'landscape',
-																			title : "",
+																			title : "getPartnersTransactionAsPerExpName",
 																			footer : true,
 																			pageSize : 'LEGAL'
 																		},
 																		{
 																			extend : 'copyHtml5',
 																			orientation : 'landscape',
-																			title : "",
+																			title : "getPartnersTransactionAsPerExpName",
 																			footer : true,
 																			pageSize : 'LEGAL'
 																		},
 																		{
 																			extend : 'excelHtml5',
 																			orientation : 'landscape',
-																			title : "",
-																			messageTop : "",
+																			title : "getPartnersTransactionAsPerExpName",
+																			//messageTop : "",
 																			footer : true,
 																			pageSize : 'LEGAL'
 																		},
 																		{
 																			extend : 'csvHtml5',
 																			orientation : 'landscape',
-																			title : "",
+																			title : "getPartnersTransactionAsPerExpName",
 																			footer : true,
 																			pageSize : 'LEGAL'
 																		},
 																		{
 																			extend : 'pdfHtml5',
 																			orientation : 'landscape',
-																			title : "",
+																			title : "getPartnersTransactionAsPerExpName",
 																			footer : true,
 																			pageSize : 'LEGAL'
 																		} ]

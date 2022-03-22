@@ -6534,4 +6534,34 @@ for (Object[] o : list) {
 
 }
 
+
+public List getAllGoods(String shopid)
+{
+	System.out.println("fkshopIdTx - "+shopid);
+	HibernateUtility hbu=null;
+	Session session=null;
+	List list=null;
+	try{
+	 hbu = HibernateUtility.getInstance();
+	 session = hbu.getHibernateSession();
+	 Query query = session.createQuery("from GoodsReceiveBean where fk_shop_id ='"+shopid+"'");
+	 
+	 list = query.list();
+	System.out.println("GoodsReceiveBean query list - "+query.list().size());
+	}
+		catch(Exception e){	
+			e.printStackTrace();
+	}
+		finally
+		{
+				if(session!=null){
+				hbu.closeSession(session);
+			}
+		}
+	
+return list;
+}
+
+
+
 }

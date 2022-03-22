@@ -109,10 +109,8 @@ public class PurchaseReturnHelper {
 				bean.setDupQuantity(Double.parseDouble(dupQuantity));
 			}
 
-			// bean.setDupQuantity(Double.parseDouble(dupQuantity));
 			bean.setTaxAmount(Double.parseDouble(taxAmount));
 			bean.setTotal(Double.parseDouble(total));
-			// bean.setPurchaseDate(purchaseDate);
 			bean.setBarcodeNo(Long.parseLong(barcodeNo));
 
 			String purchaseDate = request.getParameter("purchaseDate" + i);
@@ -125,10 +123,8 @@ public class PurchaseReturnHelper {
 				purchaseDate1 = format.parse(purchaseDate);
 				bean.setPurchaseDate(purchaseDate1);
 			} catch (ParseException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-			// bean.setPurchaseDate(purchaseDate1);
 			
 /*------------------------------------------------- After Purchase Return change the Quantity in Good recieve -----------------------------------------------*/
 			
@@ -147,7 +143,7 @@ public class PurchaseReturnHelper {
    		        
 				Double qty = updateqty.getQuantity();
 				
-					Double updatedQty = qty + Double.parseDouble(dupQuantity);
+					Double updatedQty = qty - Double.parseDouble(dupQuantity);
 					System.out.println("Quantity in Good Recieve After Purchase Return :: "+updatedQty);
 					updateqty.setQuantity(updatedQty);
 				
@@ -163,7 +159,7 @@ public class PurchaseReturnHelper {
    		        
 				Double stock = updatestck.getQuantity();
 				
-					Double updatedStock = stock + Double.parseDouble(dupQuantity);
+					Double updatedStock = stock - Double.parseDouble(dupQuantity);
 					System.out.println("Avail Quantity in Stock After Purchase Return :: "+updatedStock);
 					updatestck.setQuantity(updatedStock);
 				

@@ -266,10 +266,10 @@ public class FertilizerBillHelper
 				bean.setGrossTotal(Double.parseDouble(grossTotal));
 
 				if (customerType.equals("NORMALCUSTOMER")) {
-					bean.setBillPaymentPending(0.0);
-				} else if (customerType.equals("CREDITCUSTOMER")) {
-					bean.setBillPaymentPending(
-							Double.parseDouble(grossTotal) - Double.parseDouble(firstPaidAmtCreditCustomer));
+					bean.setBillPaymentPending(Double.parseDouble(grossTotal));
+				} 
+				else if (customerType.equals("CREDITCUSTOMER")) {
+					bean.setBillPaymentPending(Double.parseDouble(grossTotal) - Double.parseDouble(firstPaidAmtCreditCustomer));
 
 					System.out.println("Pending Balance ================= "
 							+ (Double.parseDouble(grossTotal) - Double.parseDouble(firstPaidAmtCreditCustomer)));
@@ -775,30 +775,40 @@ public class FertilizerBillHelper
 				try {
 					Long PkGoodRecId;
 					Double dupQuantity;
+					Double qtity;
 					Double newQuantity=0.0;
 					
 				
 					hbu3 = HibernateUtility.getInstance();
 					session3 = hbu3.getHibernateSession();
 					transaction3 = session3.beginTransaction();
+					
+					Long PkGoodreceiveId1 = Long.parseLong(PkGoodreceiveId);
+					System.out.println("PkGoodreceiveId for GoodsReceive's Update Quantity======"+PkGoodreceiveId1);
 				
-					Query query3 = session3.createSQLQuery("select dupQuantity, total_amount, pk_goods_receive_id from goods_receive where pk_goods_receive_id ='"+PkGoodreceiveId+"'");
+					Query query3 = session3.createSQLQuery("select quantity, total_amount, pk_goods_receive_id, dupQuantity from goods_receive where pk_goods_receive_id ='"+PkGoodreceiveId1+"'");
 				
 					List<Object[]> list3 = query3.list();
 				
 					for (Object[] object : list3)
 					{
-						dupQuantity = Double.parseDouble(object[0].toString());
+						qtity = Double.parseDouble(object[0].toString());
 						PkGoodRecId = Long.parseLong(object[2].toString());
-						Double quty = Double.parseDouble(quantity);
+						dupQuantity = Double.parseDouble(object[3].toString());
+						
+						//Double quty = Double.parseDouble(quantity);
 				
 						GoodsReceiveBean goodRec = (GoodsReceiveBean)session3.load(GoodsReceiveBean.class, new Long(PkGoodRecId));
 				
-						newQuantity = dupQuantity - quty;
-				
-						goodRec.setDupQuantity(newQuantity);
-												
-						System.out.println("===================== UPDATING Good Rec dupQuantity ====================");
+						Double newdupQuantity = dupQuantity - Double.parseDouble(quantity);
+						Double newqtity = qtity - Double.parseDouble(quantity);
+						
+						goodRec.setQuantity(newqtity);
+						goodRec.setDupQuantity(newdupQuantity);
+						
+						System.out.println("===================== UPDATING Good Rec dupQuantity ==================== "+newdupQuantity);
+						System.out.println("===================== UPDATING Good Rec Quantity ==================== "+newqtity);
+						
 						session3.saveOrUpdate(goodRec);
 						transaction3.commit();
 						System.out.println("Success ");
@@ -810,7 +820,7 @@ public class FertilizerBillHelper
 				{
 					try 
 					{
-						System.out.println("========IN CATCH TRY BLOCK OF STOCK UPDATE=========");
+						System.out.println("========IN CATCH TRY BLOCK OF STOCK UPDATE========="+e);
 						transaction3.rollback();
 						}
 					catch (RuntimeException rbe) 
@@ -944,7 +954,7 @@ public class FertilizerBillHelper
 					Stock.setQuantity(updateTotalKg);
 					Stock.setTotalKgLtrPieceQuantity(updateTotalKg);					
 					
-					System.out.println("===================== UPDATING STOCK ====================");
+					System.out.println("===================== UPDATING STOCK ===================="+updateTotalKg);
 					session1.saveOrUpdate(Stock);
 					transaction1.commit();
 					System.out.println("Success ");
@@ -1002,31 +1012,37 @@ else
 			 System.out.println("expiryDate == "+expiryDate);
 			 
 			//PERSTOCKENTRY
-			Query query2 = session2.createSQLQuery("select pk_goods_receive_id, stockPerEntry from goods_receive where product_name='"+proName+"' AND company_Name='"+company+"' AND fkCategoryId='"+catId+"' AND expiry_date = '"+expiryDate+"'");
+			Query query2 = session2.createSQLQuery("select pk_goods_receive_id, stockPerEntry, quantity from goods_receive where product_name='"+proName+"' AND company_Name='"+company+"' AND fkCategoryId='"+catId+"' AND expiry_date = '"+expiryDate+"'");
 			System.out.println("catId in stock=" + catId);
 			System.out.println("sub_cat_id in stock=" + sub_cat_id);
 			list2 = query2.list();
 		
 		Long pk_goods_receive_id;
 		Double existedTotalstockPerEntry;
+		Double existedTotalQuant;
 	
 		for (Object[] object : list2)
 		{
 			pk_goods_receive_id = Long.parseLong(object[0].toString());
 			existedTotalstockPerEntry = Double.parseDouble(object[1].toString());
+			existedTotalQuant = Double.parseDouble(object[2].toString());
 			
 			System.out.println("produt ID == "+pk_goods_receive_id);
 			System.out.println("existedTotalstockPerEntry == "+existedTotalstockPerEntry);
 			
-			GoodsReceiveBean GoodsReceiveBean = (GoodsReceiveBean)session2.load(GoodsReceiveBean.class, new Long(pk_goods_receive_id));
+			Long PkGoodreceiveId2 = Long.parseLong(PkGoodreceiveId);
+			
+			GoodsReceiveBean GoodsReceiveBean = (GoodsReceiveBean)session2.load(GoodsReceiveBean.class, new Long(PkGoodreceiveId2));
 		
-			double totalQty = Double.parseDouble(freeQuantity) + Double.parseDouble(quantity);
+			double totalQty = Double.parseDouble(freeQuantity) - Double.parseDouble(quantity);
+			double totalQty2 = existedTotalQuant - Double.parseDouble(quantity);
 			
 			Double updatenewStockPerEntry = existedTotalstockPerEntry - totalQty;		
 			GoodsReceiveBean.setStockPerEntry(updatenewStockPerEntry);
+			GoodsReceiveBean.setQuantity(totalQty2);
 			
 			System.out.println("before update of good receive ====");
-			System.out.println("===================== UPDATING perStockEntry ====================");
+			System.out.println("===================== UPDATING perStockEntry ==================== "+updatenewStockPerEntry);
 			session2.saveOrUpdate(GoodsReceiveBean);
 			transaction2.commit();
 			System.out.println("Success ");
@@ -2022,28 +2038,19 @@ else
 				
 				//update goodsReceive
 				
-				Query query3 = session.createSQLQuery("SELECT dupQuantity,bill_number,gross_total FROM goods_receive WHERE pk_goods_receive_id ="+ PkGoodreceiveId);
+					Long PkGoodreceiveId1 = Long.parseLong(PkGoodreceiveId);
+								
+					GoodsReceiveBean updateqty = (GoodsReceiveBean) session.get(GoodsReceiveBean.class, new Long(PkGoodreceiveId1));
+	   		        
+					Double qty = updateqty.getQuantity();
+					
+						Double updatedQty = qty + Double.parseDouble(returnQuantity);
+						System.out.println("Quantity in Good Recieve After Purchase Return :: "+updatedQty);
+						updateqty.setQuantity(updatedQty);
+					
+	   		        session.saveOrUpdate(updateqty);
 				
 				
-				  list = query3.list(); 
-				  goodsReceiveList= new ArrayList<GoodsReceiveBean>(); 
-				  
-				  for(Object[] objects : list) 
-				  { 
-					   QuantityFromgoodRec = Double.parseDouble(objects[0].toString());
-				      //stockQuantity = (QuantityFromgoodRec);
-				  
-				  //String pkstock = objects[1].toString();
-				 // pkStockId = Long.parseLong(pkstock);
-				  }
-				  
-				  Double q1 = Double.parseDouble(returnQuantity);
-				  newStockQuantity = QuantityFromgoodRec + q;
-				  Query query4 = session.createSQLQuery("UPDATE goods_receive SET dupQuantity =" + newStockQuantity + " WHERE pk_goods_receive_id=" + PkGoodreceiveId);
-				  query4.executeUpdate();
-				 
-				
-			
 				// add Sale Return to sale_return table
 				SaleReturnBean bean = new SaleReturnBean();
 				
@@ -2106,6 +2113,7 @@ else
 								
 				session.save(bean);
 				transaction.commit();
+				
 			} catch (RuntimeException e) {
 				try {
 					transaction.rollback();
@@ -3152,6 +3160,7 @@ else
 				try {
 					Long PkGoodRecId;
 					Double dupQuantity;
+					Double qtity;
 					Double newQuantity=0.0;
 					
 				
@@ -3159,23 +3168,27 @@ else
 					session3 = hbu3.getHibernateSession();
 					transaction3 = session3.beginTransaction();
 				
-					Query query3 = session3.createSQLQuery("select dupQuantity, total_amount, pk_goods_receive_id from goods_receive where pk_goods_receive_id ='"+PkGoodreceiveId+"'");
+					Query query3 = session3.createSQLQuery("select quantity, total_amount, pk_goods_receive_id, dupQuantity from goods_receive where pk_goods_receive_id ='"+PkGoodreceiveId+"'");
 				
 					List<Object[]> list3 = query3.list();
 				
 					for (Object[] object : list3)
 					{
-						dupQuantity = Double.parseDouble(object[0].toString());
+						qtity = Double.parseDouble(object[0].toString());
 						PkGoodRecId = Long.parseLong(object[2].toString());
-						Double quty = Double.parseDouble(quantity);
+						dupQuantity = Double.parseDouble(object[3].toString());
 				
 						GoodsReceiveBean goodRec = (GoodsReceiveBean)session3.load(GoodsReceiveBean.class, new Long(PkGoodRecId));
 				
-						newQuantity = dupQuantity - quty;
-				
-						goodRec.setDupQuantity(newQuantity);
-												
-						System.out.println("===================== UPDATING Good Rec dupQuantity ====================");
+						Double newdupQuantity = dupQuantity - Double.parseDouble(quantity);
+						Double newqtity = qtity - Double.parseDouble(quantity);
+						
+						goodRec.setQuantity(newqtity);
+						goodRec.setDupQuantity(newdupQuantity);
+						
+						System.out.println("===================== UPDATING Good Rec dupQuantity ==================== "+newdupQuantity);
+						System.out.println("===================== UPDATING Good Rec Quantity ==================== "+newqtity);
+						
 						session3.saveOrUpdate(goodRec);
 						transaction3.commit();
 						System.out.println("Success ");
@@ -3376,31 +3389,37 @@ else
 			 System.out.println("expiryDate == "+expiryDate);
 			 
 			//PERSTOCKENTRY
-			Query query2 = session2.createSQLQuery("select pk_goods_receive_id, stockPerEntry from goods_receive where product_name='"+proName+"' AND company_Name='"+company+"' AND fkCategoryId='"+catId+"' AND expiry_date = '"+expiryDate+"'");
+			Query query2 = session2.createSQLQuery("select pk_goods_receive_id, stockPerEntry, quantity from goods_receive where product_name='"+proName+"' AND company_Name='"+company+"' AND fkCategoryId='"+catId+"' AND expiry_date = '"+expiryDate+"'");
 			System.out.println("catId in stock=" + catId);
 			System.out.println("sub_cat_id in stock=" + sub_cat_id);
 			list2 = query2.list();
 		
 		Long pk_goods_receive_id;
 		Double existedTotalstockPerEntry;
+		Double existedTotalQuant;
 	
 		for (Object[] object : list2)
 		{
 			pk_goods_receive_id = Long.parseLong(object[0].toString());
 			existedTotalstockPerEntry = Double.parseDouble(object[1].toString());
+			existedTotalQuant = Double.parseDouble(object[2].toString());
 			
 			System.out.println("produt ID == "+pk_goods_receive_id);
 			System.out.println("existedTotalstockPerEntry == "+existedTotalstockPerEntry);
 			
-			GoodsReceiveBean GoodsReceiveBean = (GoodsReceiveBean)session2.load(GoodsReceiveBean.class, new Long(pk_goods_receive_id));
+			Long PkGoodreceiveId2 = Long.parseLong(PkGoodreceiveId);
+			
+			GoodsReceiveBean GoodsReceiveBean = (GoodsReceiveBean)session2.load(GoodsReceiveBean.class, new Long(PkGoodreceiveId2));
 		
-			double totalQty = Double.parseDouble(freeQuantity) + Double.parseDouble(quantity);
+			double totalQty = Double.parseDouble(freeQuantity) - Double.parseDouble(quantity);
+			double totalQty2 = existedTotalQuant - Double.parseDouble(quantity);
 			
 			Double updatenewStockPerEntry = existedTotalstockPerEntry - totalQty;		
 			GoodsReceiveBean.setStockPerEntry(updatenewStockPerEntry);
+			GoodsReceiveBean.setQuantity(totalQty2);
 			
 			System.out.println("before update of good receive ====");
-			System.out.println("===================== UPDATING perStockEntry ====================");
+			System.out.println("===================== UPDATING perStockEntry ==================== "+updatenewStockPerEntry);
 			session2.saveOrUpdate(GoodsReceiveBean);
 			transaction2.commit();
 			System.out.println("Success ");
@@ -3676,8 +3695,10 @@ else
         	String cust = st.getCust_type();
         	Double gross = st.getGrossTotal();
         	Date sale = st.getSaleDate();
-System.out.println("bil ytpe - "+billtype+" cust - "+cust+" gross -  "+gross+" sale =  "+sale);
+          System.out.println("bil ytpe - "+billtype+" cust - "+cust+" gross -  "+gross+" sale =  "+sale);
+          
 			billcancelbean bb = new billcancelbean();
+			
 			SimpleDateFormat dateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
 			Date dateobj = new Date();
 			System.out.println(dateFormat1.format(dateobj)+" dateobj - "+dateobj);
@@ -3752,10 +3773,50 @@ System.out.println("bil ytpe - "+billtype+" cust - "+cust+" gross -  "+gross+" s
                		 
               		 updateStock.setQuantity(updatequnty);
                		 updateStock.setTotalKgLtrPieceQuantity(updatequnty);
-
+               		System.out.println("Quantity in Stock=====" +updatequnty);
                		 
                		session.saveOrUpdate(updateStock);
                		System.out.println(" ````````````` ````````````` stock updated !!");
+               		transaction.commit();
+               		//break;
+               	}
+                	
+                   	//get Goods Recieve
+            		GoodsReceiveDao dao101 = new GoodsReceiveDao();
+                    List stkList03  = dao101.getAllGoods(shopid);
+                	
+                	com.Fertilizer.hibernate.GoodsReceiveBean sd101 = (com.Fertilizer.hibernate.GoodsReceiveBean)stkList03.get(k);
+                	Long catid101 = sd101.getFkCategoryId();
+                   	String unit101 = sd101.getUnit();
+                	Long subcatid101 = sd101.getFk_subCat_id();
+                	//String proid101 = sd101.getProductName();
+                	String proname101 = sd101.getProductName();
+                 	Double wt101 = sd101.getWeight();
+                 	
+         System.out.println(" Stock table data -  catid -  "+catid101+" , subcatid -  "+subcatid101+" , product -  "+proname101+"  , weight - "+wt101+" unit - "+unit101);           
+                	
+                	if(catid.equals(catid101) && unit.equals(unit101) && product.equals(proname101) && wt.equals(wt101)){
+               		 Double qunty101 = sd101.getQuantity();
+               		 Long pkid101 = sd101.getPkGoodsReceiveId();
+               		 
+              System.out.println("in if condititon -   quantity -   "+qunty101+" pkid - "+pkid101); 		 
+               		 
+               		 Double updatequnty101 = (double) (qunty101 + quan);
+               		 System.out.println("for loop stock update Quantity----------   -  "+updatequnty101+"  qunty from stock =   "+qunty101+"  plus quanty from fertilizer - "+quan);
+               				 
+               		 
+               		 HibernateUtility hbu = HibernateUtility.getInstance();
+               		 Session session = hbu.getHibernateSession();
+               		 Transaction transaction = session.beginTransaction();
+               		 
+               		GoodsReceiveBean updateGoodRcv = (GoodsReceiveBean) session.get(GoodsReceiveBean.class, new Long(pkid101));
+               		 
+               		updateGoodRcv.setQuantity(updatequnty101);
+               		updateGoodRcv.setDupQuantity(updatequnty101);
+               		System.out.println("Quantity in Goods Recieve=====" +updatequnty101);
+               		 
+               		session.saveOrUpdate(updateGoodRcv);
+               		System.out.println(" ````````````` ````````````` Goods Recieve updated !!");
                		transaction.commit();
                		break;
                	}

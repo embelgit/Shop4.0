@@ -2287,57 +2287,8 @@ function billReturnVal(){
 	var billNo = $('#billNo').val();
 	var billNoo = $('#billNoo').val();
 		
-	/*if((billNo == "" || billNo ==null || billNo==undefined) && (billNoo == "" || billNoo ==null || billNoo==undefined)){
-		alert("Please Select Bill No");
-		return false;
-	}*/
-	
-	/*if((billNo == "" || billNo ==null || billNo==undefined) && (billNoo == "" || billNoo ==null || billNoo==undefined))*/
-	/*if((billNo == "" || billNo ==null || billNo==undefined) && (billNoo == "" || billNoo ==null || billNoo==undefined))*/
-	
-	if(billNo == "")
-	{
-	
-			var msg="Please Select Bill No ";
-			var dialog = bootbox.dialog({
-		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-		    closeButton: false
-			});
-			
-			setTimeout(function() {
-				dialog.modal('hide');
-			}, 1500);
-			return false;
-		
-	}
-	
-	/*if(document.catd.categoryName.value == "")*/
-	/*if((billNo == "" || billNo ==null || billNo==undefined) && (billNoo == "" || billNoo ==null || billNoo==undefined))
-	{
-		var msg="Please Select Bill No";
-		
-		var dialog = bootbox.dialog({
-			//title: "Embel Technologies Says :",
-		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
-		    closeButton: false
-		});
-		
-		setTimeout(function() {
-			dialog.modal('hide');
-		}, 1500);
-		
-		return false;
-	}*/
-	
-	/*if((billNo != "" && billNoo != "" )){
-		alert("Please Select Any one Bill No");
-		return false;
-	}*/
-	
-	
-	/*if((billNo != "" && billNoo != "" ))*/
-	if(billNoo == "")
-	{
+	if((billNo == "" || billNo ==null || billNo==undefined) && (billNoo == "" || billNoo ==null || billNoo==undefined))
+		{
 		
 			var msg="Please Select Any one Bill No";
 			var dialog = bootbox.dialog({
@@ -2350,9 +2301,6 @@ function billReturnVal(){
 			}, 1500);
 			return false;
 	}
-	
-	
-	
 	
 	billReturnVal1();
 }
@@ -2368,15 +2316,15 @@ function billReturnVal1(){
 	
     if(billNo == "" || billNo ==null || billNo==undefined)
     {
-	params["billno"] = billnoo;
+	var billNo = billnoo;
     }
     
     else if(billnoo == "" || billnoo ==null || billnoo==undefined)
-  //  else
     {
-	params["billno"] = billNo;
+	var billNo = billNo;
     }
     
+	params["billno"] = billNo;
 	
     params["methodName"] = "billreturn";
    /* params["methodName"] = "billReturnVal1";*/
@@ -2396,8 +2344,6 @@ function billReturnVal1(){
 			dialog.modal('hide');
 			location.reload();
 		}, 1500);
- 				
- 				
  				
  //		document.getElementById("save").disabled = false; 				
  	    	}

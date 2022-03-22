@@ -9673,7 +9673,7 @@ function getProductDetailsByProductName()
 						'Total',
 						'totalKgLtrPiece',
 						'stockPerEntry',
-						'PkGoodReceiveId',
+						'PkGoodreceiveId',
 						'Product ID',
 						'Barcode ID',
 						],
@@ -15912,17 +15912,19 @@ function nonGSTbilling(){
 		if(cc=='Credit'){
 			var village = $('#ccvillage').val();
 			var customerName = $('#creditcustomerName').val();
+			var firmName = $('#CfirmName').val();
+			
 	var input = document.getElementById('creditcustomerName'),
 	list = document.getElementById('customerName_drop'),
            i,creditCust;
-for (i = 0; i < list.options.length; ++i) {
-if (list.options[i].value === input.value) {
-	creditCust = list.options[i].getAttribute('data-value');
+	for (i = 0; i < list.options.length; ++i) {
+		if (list.options[i].value === input.value) {
+		creditCust = list.options[i].getAttribute('data-value');
 	}
-}
+	}
 
-var firmName = $('#CfirmName').val();
-		}
+
+	}
 		
 	var fkcustid = creditCust;
 	
