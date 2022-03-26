@@ -558,7 +558,7 @@ function StockDetailsReportAsPerProductNameValidate()
 		else
 		{
 			/*var msg="Please Select Product";*/ 
-			var msg="Please Select Category";
+			var msg="Please Select Product";
 			var dialog = bootbox.dialog({
 		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 		    closeButton: false

@@ -686,7 +686,7 @@ function productDetails1(){
 	
 	var fk_unit_id=$('#fk_unit_id').val();
 		
-	if(document.prd.fk_cat_id1.value == "")
+/*	if(document.prd.fk_cat_id1.value == "")
 	{
 		var msg="Please Select Product Category";
 		var dialog = bootbox.dialog({
@@ -700,7 +700,7 @@ function productDetails1(){
 		}, 1500);
 		
 		return false;
-	}	
+	}*/	
 	if(document.prd.subCat1.value == "")
 	{
 		var msg="Please Select Product Sub Category";
@@ -746,6 +746,22 @@ function productDetails1(){
 			
 			return false;
 		}
+			
+			if(document.prd.fk_tax_id.value == "0")
+			{
+				var msg="Please Select Tax Name";
+				var dialog = bootbox.dialog({
+					
+				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				    closeButton: false
+				});
+				
+				setTimeout(function() {
+					dialog.modal('hide');
+				}, 1500);
+				
+				return false;
+			}
 			
 			/*if(document.prd.fk_tax_id.value == "")
 			{
@@ -1434,7 +1450,8 @@ $('#example1').dataTable().fnAddData(mydata);
 			
 				return false;
 			}
-			if(document.prd1.newHsn.value == "")
+			
+			/*if(document.prd1.newHsn.value == "")
 			{
 				var msg="Please Enter New HSN ";
 				var dialog = bootbox.dialog({
@@ -1448,7 +1465,7 @@ $('#example1').dataTable().fnAddData(mydata);
 				}, 1500);
 			
 				return false;
-			}
+			}*/
 			
 			if(document.prd1.salePrice.value == "")
 			{

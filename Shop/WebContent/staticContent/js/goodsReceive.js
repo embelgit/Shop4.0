@@ -975,7 +975,34 @@ function addbookedGoodReceive() {
 function purchaseReportForSingleDateValidate()
 {
 	var fDate = $("#fDate").val();
-	if(fDate != null && fDate != "")
+	
+	if ( fDate == "" )
+		
+	{
+		purchaseReportForSingleDate();
+	}
+	else
+		
+	 {
+		/*var msg="Please Enter Date ";*/
+		var msg="Data is not available ";
+		
+		
+		var dialog = bootbox.dialog({
+			
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+     return false;
+	 }
+	
+	
+	/*if(fDate != null && fDate != "")
 		{
 			purchaseReportForSingleDate();
 		}
@@ -990,7 +1017,7 @@ function purchaseReportForSingleDateValidate()
 				dialog.modal('hide');
 			}, 1500);
 			return false;
-		}
+		}*/
 }
 
 function purchaseReportForSingleDate()
@@ -1012,7 +1039,8 @@ function purchaseReportForSingleDate()
 		if(catmap == "" || catmap == null)
 		{
 			//alert("No date Wise Purchase Reports for\nDate = "+fDate);
-			var msg="Data is not available";
+			/*var msg="Data is not available";*/
+			var msg="Please Enter Date";
 			var dialog = bootbox.dialog({
 		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 		    closeButton: false
@@ -1506,7 +1534,7 @@ function purchaseReportBetweenTwoDates() {
 
 				destroy : true,
 				searching : true,
-				"scrollY": 300,
+				"scrollY": false,
 		        "scrollX": true,
 		        "paging":   false,
 
@@ -1750,6 +1778,28 @@ function supplierWisePurchaseReportValidate()
 		return false;
 		
 	}
+	
+	/*if(fkSupplierId == "")
+	{ 
+       var msg="Please Select Category Name.";
+		
+		var dialog = bootbox.dialog({
+			//title: "Embel Technologies Says :",
+		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+		    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		
+		return false;
+	}
+	
+	supplierWisePurchaseReport();*/
+	
+	
+	
 }
 
 function supplierWisePurchaseReport()
@@ -1918,7 +1968,7 @@ function supplierWisePurchaseReport()
 
 				destroy : true,
 				searching : true,
-				"scrollY": 300,
+				"scrollY": false,
 		        "paging":   false,
 		        "scrollX": true,
 		       
@@ -2229,7 +2279,8 @@ function shopWisePurchaseReport()
 
 				destroy : true,
 				searching : true,
-				"scrollY": 300,
+			/*	"scrollY": 300,*/
+				"scrollY": false,
 		        "scrollX": true,
 		        "paging":   false,
 
@@ -2390,6 +2441,8 @@ function purchaseReportAsPerProductNameValidate()
 			}, 1500);
 			return false;
 		}
+
+	
 }
 
 function purchaseReportAsPerProductName()
@@ -2433,6 +2486,18 @@ function purchaseReportAsPerProductName()
 					if(catmap == "" || catmap == null)
 					{
 						alert("No Product Details Wise Purchase Reports for\nCartegory = "+category+"\nProduct Name = "+proName);
+						
+						
+						
+						/*var msg=msg;
+						var dialog = bootbox.dialog({
+						message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+						closeButton: false
+						});			
+						setTimeout(function() {
+							dialog.modal('hide');
+						}, 1500);
+						*/
 						return false;
 					}
 					
@@ -2540,7 +2605,7 @@ function purchaseReportAsPerProductName()
 							
 							destroy: true,
 							searching: true,
-							"scrollY": 300,
+							"scrollY": false,
 					        "scrollX": true,
 					        "paging":   false,
 							
@@ -3434,7 +3499,7 @@ function purchaseReportAsPerGST() {
 
 																destroy : true,
 																searching : true,
-																 "scrollY": 300,
+																 "scrollY": false,
 															        "scrollX": true,
 															        "paging":   false,
 

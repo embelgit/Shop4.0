@@ -1383,7 +1383,7 @@ function hamaliExpenseAddingToGross()
 							
 							<select class="form-control input-md" autofocus name="fk_tax_id" id="fk_tax_id" 
 								onChange="ChooseContact(this);salePriceWithoutTax();getcsgst();" style="width: 199px;">
-								<option value="1">--Select Tax--</option>
+								<option value="0">--Select Tax--</option>
 								<%
 									for (int i = 0; i < tList.size(); i++) {
 										TaxCreationBean tax = (TaxCreationBean) tList.get(i);

@@ -9,7 +9,11 @@
 <%@include file="commons/header.jsp"%>
 <%@page import="java.util.List"%>
 <head>
-<!-- <script src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
+
+
+
+
+<script src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/selectjj.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/buttom.js"></script>
 <script src="/Shop/staticContent/js/jquery.min.js"></script>
@@ -21,14 +25,14 @@
 <link href="/Shop/staticContent/css/select.css" rel="stylesheet" type="text/css" media="all">
 <link href="/Shop/staticContent/css/button.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" href="/Shop/staticContent/css/jquery-ui.min.css">
-<link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css"> -->
+<link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css"> 
 
 <!-- For datatable to pdf,print,excel etc conversion -->
 
 
 
 
-<!-- 
+ 
  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.js"></script> 
  <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>
@@ -44,22 +48,19 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
 
 <script type="text/javascript" src="/Shop/staticContent/js/bootbox.min.js"></script>
-<script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script> -->
+<script type="text/javascript" src="/Shop/staticContent/js/bootstrap.js"></script> 
 
 
+<!-- add -->
 
-
-
-
-
-<!-- <link rel="stylesheet" href="https://code.jquery.com/jquery-3.5.1.js">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js">  -->
+ <link rel="stylesheet" href="https://code.jquery.com/jquery-3.5.1.js">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js">  
 
 
 <!-- For datatable to pdf,print,excel etc conversion -->
 
 
-<!--   <script src="/Fertilizer/staticContent/js/jquery-1.12.3.min.js"></script>
+ <script src="/Fertilizer/staticContent/js/jquery-1.12.3.min.js"></script>
  <script type="text/javascript" src="/Fertilizer/staticContent/datatable_To_Other_File/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="/Fertilizer/staticContent/datatable_To_Other_File/dataTables.buttons.min.js"></script>
 <script type="text/javascript" src="/Fertilizer/staticContent/datatable_To_Other_File/buttons.flash.min.js"></script>
@@ -71,7 +72,9 @@
 <script type="text/javascript" src="/Fertilizer/staticContent/datatable_To_Other_File/buttons.print.min.js"></script>
 <link rel="stylesheet" href="/Fertilizer/staticContent/datatable_To_Other_File/jquery.dataTables.min.css"> 
 <link rel="stylesheet" href="/Fertilizer/staticContent/datatable_To_Other_File/buttons.dataTables.min.css">  
- -->
+ 
+ 
+ 
 
 <script type="text/javascript" src="/Shop/staticContent/js/goodsReceive.js"></script>
  <script type="text/javascript" src="/Shop/staticContent/js/podetails.js"></script>

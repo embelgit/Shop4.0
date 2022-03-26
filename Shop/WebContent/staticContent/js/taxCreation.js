@@ -205,8 +205,9 @@ function calculateTax1()
 	    	
 	    	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
 	    	{
-	    		alert(data);
-	    		location.reload();
+	    		/*alert(data);
+	    		location.reload();*/
+	    		
 	    		var msg=data;
 	    		
 	    		var dialog = bootbox.dialog({

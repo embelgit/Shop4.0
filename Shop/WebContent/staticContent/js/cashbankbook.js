@@ -2630,7 +2630,7 @@ function getSupNameWiseReport() {
 
 											destroy : true,
 											searching : true,
-											"scrollY" : 300,
+											"scrollY" : false,
 											"scrollX" : true,
 											"paging" : false,
 
@@ -3147,7 +3147,20 @@ function getBillWiseCreditReportValidation() {
 		 * } else { alert("Please Enter Category"); }
 		 */
 	} else {
-		alert("Please Enter Customer Name");
+		
+		var msg = "Select customerName";
+		var dialog = bootbox.dialog({
+			message : '<p class="text-center">'
+					+ msg.fontcolor("red").fontsize(5) + '</p>',
+			closeButton : false
+		});
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		return false;
+		
+		
+		/*alert("Please Enter Customer Name");*/
 	}
 }
 
@@ -3375,7 +3388,7 @@ function getBillWiseCreditReport() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																"scrollY" : false,
 																"scrollX" : true,
 																"paging" : false,
 
@@ -7668,7 +7681,7 @@ function partnerWiseReport()
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
 			{
 						// To clear Table
-						$('#partnerWiseReportDataTable').dataTable().fnClearTable();
+		$('#partnerWiseReportDataTable').dataTable().fnClearTable();
 
 						var jsonData = $.parseJSON(data);
 						var catmap = jsonData.list;
@@ -7794,8 +7807,8 @@ function partnerWiseReport()
 
 																destroy : true,
 																searching : true,
-																"scrollY" : true,
-																"scrollX" : true,
+																"scrollY" : false,
+																"scrollX" : false,
 																"paging" : false,
 
 																columns : [

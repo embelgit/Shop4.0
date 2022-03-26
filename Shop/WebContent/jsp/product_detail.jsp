@@ -1457,6 +1457,8 @@ function caldis(){
 							
             			</div>
 					</div>
+					
+					</div>
 			
 
 				<div class="row form-group" style="padding-top:6%;">
@@ -1499,7 +1501,7 @@ function caldis(){
             			</div>
 					</div>
 				</div>
-			</div>
+			<!-- </div> -->
 				
 			<div class="form-group row" style="padding-top:2%">
 				 <div class="col-md-6 text-center col-md-offset-3">

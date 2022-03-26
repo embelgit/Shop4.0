@@ -112,6 +112,14 @@
     font-weight: 700;
     font-size: 16px;
 }
+
+
+table.table.table-bordered.table-striped.table-condensed.cf.dataTable {
+    width: 100% !important;
+}
+
+
+
 </style>
 
 <script>
@@ -174,8 +182,9 @@ $('#supplierNameWiseTable').DataTable( {
 					
 <!-------------------------------------------------- Supplier Payment [ ALL Supplier ] Starts Here -------------------------------------------------->
 	
-						<div id="AllSupplier" class="tab-pane fade in active"
-							style="padding-top: 3%">
+						<div id="AllSupplier" class="tab-pane fade in active">
+							<!-- style="padding-top: 3%"> -->
+							
 							<div id="" align="right">
 								<label id="demo"></label>
 								<script>
@@ -450,15 +459,17 @@ $('#supplierNameWiseTable').DataTable( {
 									</div>
 								</div>
 								
-									<div class="row buttons-margin" align="center">
+									<!-- <div class="row buttons-margin" align="center">
 										
-									</div>
+									</div> -->
 									
- 							<div class="" style="padding-top: 3%"> 
+									<div class="container ">
+ 							 <div class="table-responsive" > 
 <!-- 								<div class="table-responsive" align="center" style="padding-top:2%"> -->
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="supplierNameWiseTable" class="display">
+											
 											<thead>
 												<tr>
 													<th>Supplier Name</th>
@@ -502,6 +513,7 @@ $('#supplierNameWiseTable').DataTable( {
                                                </ul>
                                            </nav>
                                        </div> -->
+                                       </div>
 									</div>
 								</fieldset>
 							</form>
@@ -2114,7 +2126,7 @@ $('#supplierNameWiseTable').DataTable( {
 
 					<ul class="nav nav-tabs">
 						<li class="active"><a data-toggle="tab" href="#expenseSingleDate">Datewise</a></li>
-						<li><a data-toggle="tab" href="#expenseBetweenTwoDate">>Range</a></li>
+						<li><a data-toggle="tab" href="#expenseBetweenTwoDate">Range</a></li>
 						<li><a data-toggle="tab" href="#expenseBetweenTwoDateAsPerExpense">Expenditure Name Wise</a></li>
 						<li><a data-toggle="tab" href="#expenseBetweenType">Expenditure Type Wise</a></li>
 						<li><a data-toggle="tab" href="#paymodeType">Payment Mode</a></li>
@@ -2148,7 +2160,7 @@ $('#supplierNameWiseTable').DataTable( {
 										</div>
 									</div>
 
-									<div class="row" style="padding-top: 2%">
+									<div class="row" style="padding-top: 2%; padding-bottom: 2%;">
 										<div class="col-md-3 col-md-offset-5">
 											<div class="input-group">
 												<input type="button" id="btn" name="save"
@@ -2159,7 +2171,7 @@ $('#supplierNameWiseTable').DataTable( {
 											</div>
 										</div>
 									</div>
-									<div class="table-responsive" style="padding-top: 3%">
+									<div class="table-responsive" style="padding-top: 0%">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="expenseSingleDatetable" class="display">
@@ -2184,26 +2196,28 @@ $('#supplierNameWiseTable').DataTable( {
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
 									</div>
 								</fieldset>
 							</form>
@@ -2245,7 +2259,7 @@ $('#supplierNameWiseTable').DataTable( {
 										</div>
 									</div>
 
-									<div class="row form-group" style="padding-top: 2%">
+									<div class="row form-group" style="padding-top: 2%; padding-bottom: 2%;">
 										<div align="center">
 
 											<input type="button" id="btn" name="save"
@@ -2256,7 +2270,7 @@ $('#supplierNameWiseTable').DataTable( {
 
 									.	</div>
 									</div>
-									<div class="table-responsive" style="padding-top: 3%">
+									<div class="table-responsive">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="expenseBetweenTwoDates" class="display">
@@ -2284,26 +2298,28 @@ $('#supplierNameWiseTable').DataTable( {
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
 										</div>
 								</fieldset>
 							</form>
@@ -2388,7 +2404,7 @@ $('#supplierNameWiseTable').DataTable( {
 											</div>
 										</div>
 									</div>
-									<div class="row" style="padding-top: 2%">
+									<div class="row" style="padding-top: 2%; padding-bottom: 2%;">
 										<div class="col-md-3 col-md-offset-5">
 											<input type="button" id="btn" name="save"
 												style="height: 38px; width: 121px; font-size: 18"
@@ -2398,7 +2414,7 @@ $('#supplierNameWiseTable').DataTable( {
 										</div>
 
 									</div>
-									<div class="table-responsive" style="padding-top: 3%">
+									<div class="table-responsive" >
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="expenseBetweenTwoDatesAsPerSelectedName" class="display">
@@ -2427,26 +2443,28 @@ $('#supplierNameWiseTable').DataTable( {
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
 									</div>
 								</fieldset>
 							</form>
@@ -2508,7 +2526,7 @@ $('#supplierNameWiseTable').DataTable( {
 											</div>
 										</div>
 									</div>
-									<div class="row" style="padding-top: 2%">
+									<div class="row" style="padding-top: 2%; padding-bottom: 2%;">
 										<div class="col-md-3 col-md-offset-5">
 											<input type="button" id="btn" name="save"
 												style="height: 38px; width: 121px; font-size: 18"
@@ -2518,7 +2536,7 @@ $('#supplierNameWiseTable').DataTable( {
 										</div>
 
 									</div>
-									<div class="table-responsive" style="padding-top: 3%">
+									<div class="table-responsive" >
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="expenseBetweenTypeTable" class="display">
@@ -2547,26 +2565,28 @@ $('#supplierNameWiseTable').DataTable( {
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
 									</div>
 								</fieldset>
 							</form>
@@ -2630,7 +2650,7 @@ $('#supplierNameWiseTable').DataTable( {
 										</div>
 									</div>
 
-									<div class="row" style="padding-top: 2%">
+									<div class="row" style="padding-top: 2%; padding-bottom: 2%;">
 										<div class="col-md-3 col-md-offset-5">
 											<div class="input-group">
 												<input type="button" id="btn" name="save"
@@ -2641,7 +2661,7 @@ $('#supplierNameWiseTable').DataTable( {
 											</div>
 										</div>
 									</div>
-									<div class="table-responsive" style="padding-top: 3%">
+									<div class="table-responsive">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="expensepaymode" class="display">
@@ -2666,26 +2686,29 @@ $('#supplierNameWiseTable').DataTable( {
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
+                                       
 									</div>
 								</fieldset>
 							</form>
@@ -2765,7 +2788,7 @@ $('#supplierNameWiseTable').DataTable( {
 										</div>
 									</div>
 
-									<div class="row" style="padding-top: 2%">
+									<div class="row" style="padding-top: 2%; padding-bottom: 2%;">
 										<div class="col-md-3 col-md-offset-5">
 											<div class="input-group">
 												<input type="button" id="btn" name="save"
@@ -2776,7 +2799,7 @@ $('#supplierNameWiseTable').DataTable( {
 											</div>
 										</div>
 									</div>
-									<div class="table-responsive" style="padding-top: 3%">
+									<div class="table-responsive">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="partnerWiseReportDataTable" class="display">
@@ -2786,7 +2809,6 @@ $('#supplierNameWiseTable').DataTable( {
 													<th>Total Amount</th>
 													<th>Credit Amount</th>
 													<th>Debit Amount</th>
-
 													<th>Date</th>
 													<th>Payment Mode</th>
 												</tr>
@@ -2802,7 +2824,8 @@ $('#supplierNameWiseTable').DataTable( {
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
@@ -2821,7 +2844,9 @@ $('#supplierNameWiseTable').DataTable( {
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
+                                       
 									</div>
 								</fieldset>
 							</form>
@@ -2894,7 +2919,7 @@ $('#supplierNameWiseTable').DataTable( {
 										</div>
 									</div>
 
-									<div class="row" style="padding-top: 2%">
+									<div class="row" style="padding-top: 2%; padding-bottom: 2%;">
 										<div class="col-md-3 col-md-offset-5">
 											<div class="input-group">
 												<input type="button" id="btn" name="save"
@@ -2905,7 +2930,7 @@ $('#supplierNameWiseTable').DataTable( {
 											</div>
 										</div>
 									</div>
-									<div class="table-responsive" style="padding-top: 3%">
+									<div class="table-responsive">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="bankWiseReportDataTable" class="display">
@@ -2929,26 +2954,28 @@ $('#supplierNameWiseTable').DataTable( {
 												</tr>
 											</tfoot>
 										</table>
-										<div class="pagination-page">
+										
+										<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
 									</div>
 								</fieldset>
 							</form>

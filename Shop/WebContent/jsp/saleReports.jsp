@@ -90,6 +90,13 @@
 	overflow: hidden;
 }
 
+div.dt-buttons {
+    position: relative;
+    float: left;
+    padding-left: 7px;
+    padding-top: 10px;
+}
+
 /* .btn-default,.btn-primary,.btn-success,.btn-info,.btn-warning,.btn-danger
  {
     border-radius:23px;
@@ -289,7 +296,7 @@
 									</div>
 									
 							 <!-- <div class="container "> -->
-							 <div class="table-responsive" style="padding-top:1%">
+							 <div class="table-responsive" >
 							 
   									 <!-- <div class="table-responsive" style="padding-top:2%"> -->
   									<!-- <div class="" style="padding-top:3%"> -->
@@ -990,7 +997,7 @@
 										</div>
 									</div>
 									<div class="container">
-									<div class="table-responsive" style="padding-top:1%">
+									<div class="table-responsive" >
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="SinglePayment" class="display"
@@ -1200,7 +1207,7 @@
 										</div>
 									</div>
 									<div class="container">
-									<div class="table-responsive" style="padding-top:3%">
+									<div class="table-responsive" >
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="rangeWisePaymentTypePaymentModeDataTable" class="display"
@@ -1782,7 +1789,7 @@
 								</div>
 							</div>
 							<div class= "container">
-							<div class="table-responsive" style="padding-top:2%">
+							<div class="table-responsive" >
 								<table
 									class="table table-bordered table-striped table-condensed cf"
 									id="gstSale" class="display table table-boardered"
@@ -1940,7 +1947,7 @@
 								</div>
 							</div>
 							<div class="container">
-							<div class="table-responsive" style="padding-top:2%">
+							<div class="table-responsive">
 								<table class="table table-bordered table-striped table-condensed cf"
 									id="nongstSale" class="display table table-boardered">
 									<thead>
@@ -2075,7 +2082,7 @@
 										</div>
 									</div>
 									<div class="container">
-									<div class="table-responsive" style="padding-top:2%">
+									<div class="table-responsive">
 										<table class="table table-bordered table-striped table-condensed cf"
 											id="salereturn" class="display"
 											>
@@ -2102,26 +2109,28 @@
 											</tfoot>
 										</table>
 									</div>
-									<div class="pagination-page">
+									
+									<!-- <div class="pagination-page">
                                             <nav aria-label="...">
                                                <ul class="pagination" style="margin-top: 10px; margin-bottom: 40px;">
                                                    <li class="page-item disabled">
                                                         <a class="page-link" href="#">Previous</a>
                                                    </li>
-                                                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
                                                    <li class="page-item">
                                                         <span class="page-link">
                                                                 1
                                                        <span class="sr-only">(current)</span>
                                                        </span>
                                                    </li>
-                                                <!--  <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                    <li class="page-item">
                                                         <a class="page-link" href="#">Next</a>
                                                    </li>
                                                </ul>
                                            </nav>
-                                       </div>
+                                       </div> -->
+                                       
                                        </div>
 								</fieldset>
 							</form>
@@ -2183,7 +2192,7 @@
 								</div>
 								<div class="form-group row"></div>
                                 <div class="container">
-								<div class="table-responsive" style="padding-top:1%">
+								<div class="table-responsive">
 									<table
 										class="table table-bordered table-striped table-condensed cf"
 										id="rangeWiseBillReportDataTable" class="display"
@@ -2339,7 +2348,7 @@
 										</div>
 									</div>
                                     <div class="container">
-									<div class=" table-responsive " style="padding-top:2%">
+									<div class=" table-responsive ">
 										<table class="table table-bordered table-striped table-condensed cf" id="creditCustSaleReportSingledate"
 											class="display " 
 											>
@@ -2505,7 +2514,7 @@
 										</div>
 									</div>
                                     <div class="container">
-									<div class="table-responsive" style="padding-top:2%">
+									<div class="table-responsive">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="cashCustSaleReportSingledate" class="display"
@@ -2642,7 +2651,7 @@
 
                                
                            <div class="container">
-							<div class="table-responsive" style="padding-top:1%">
+							<div class="table-responsive">
 								<table class="table table-bordered table-striped table-condensed cf" id="saleReturnTable" class="display"
 									>
 									<thead>
@@ -2843,7 +2852,7 @@
 								</div>
 								<div class="form-group row"></div>
                                 <div class="container">
-								<div class="table-responsive" style="padding-top:1%">
+								<div class="table-responsive">
 									<table
 										class="table table-bordered table-striped table-condensed cf"
 										id="billTable" class="display"

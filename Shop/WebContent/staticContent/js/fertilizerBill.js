@@ -15607,6 +15607,7 @@ function nonGSTbillingV(){
 	var shopName = $("#shopName").val();
 	var contactNo = $("#contactNo2").val();
 	var proName  = $("#proName").val();
+	var CfirmName  = $("#CfirmName").val();
 	
 /*	if (customerName == "")
 	{
@@ -15676,6 +15677,27 @@ function nonGSTbillingV(){
 					return false;
 			 }
 	  }*/
+	
+	/* if(CfirmName == "")*/
+		 if ( CfirmName == "" )
+		 {
+			var msg="Please Enter firmName ";
+			
+			var dialog = bootbox.dialog({
+				
+			    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+			    closeButton: false
+			});
+			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			
+	      return false;
+		 }
+	
+	
+	
 	  if(proName == "" || proName == "Select product")
 	  {
 						

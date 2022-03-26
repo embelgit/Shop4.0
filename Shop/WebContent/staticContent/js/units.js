@@ -230,8 +230,10 @@ function addUnit(){
  	{        
 		
 		
-			var msg=data;
+			/*var msg=data;
 			alert(data);
+			location.reload();*/
+		
 			/*var dialog = bootbox.dialog({
 		    message: '<p class="text-center">'+msg.fontcolor("green").fontsize(5)+'</p>',
 		    closeButton: false
@@ -241,8 +243,21 @@ function addUnit(){
 				dialog.modal('hide');
 				location.reload();
 			}, 1500);*/
+		
+		var msg=data;
+		
+		var dialog = bootbox.dialog({
+	    message: '<p class="text-center">'+msg.fontcolor("green").fontsize(5)+'</p>',
+	    closeButton: false
+		});
+		
+		setTimeout(function() {
+			dialog.modal('hide');
 			location.reload();
- 				document.getElementById("save").disabled=false; 
+		}, 1500);
+		
+		
+ 				/*document.getElementById("save").disabled=false; */
  			}
  	    	).error(function(jqXHR, textStatus, errorThrown){
  	    		if(textStatus==="timeout") {
