@@ -3218,7 +3218,7 @@ console.log( pageTotal);*/
 		    	
 		    	destroy: true,
 		        searching: false,
-		        "scrollY": 300,
+		        "scrollY": true,
 		        "scrollX": true,
 		        "paging":   false,
 		        

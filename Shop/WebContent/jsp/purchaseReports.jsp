@@ -977,7 +977,7 @@
 				      		 	
 				
 				<!-- <div class="table-responsive"> -->
-				<!-- <div class="container"> -->
+				 <div class="container"> 
 				<div class="table-responsive" >
 					<table class="table table-bordered table-striped table-condensed cf" id="gstPurchaseReportTable"
 					 >
@@ -1028,6 +1028,10 @@
 						</tfoot>
 					</table>
 					 </div>
+					 
+					 
+					 </div>
+					 
 					<!--  </div> -->
 					 <!-- <div class="pagination-page" id="gstPurchaseReportTable">
                     <nav aria-label="...">
@@ -1099,7 +1103,7 @@
 										       onclick="rangeWiseBillPaidUnpaid()" value="Search"/>
 				</div>
 				
-				<!-- <div class="table-responsive"> -->
+			
 				<div class="table-responsive" >
 					<table class= "table table-bordered table-striped table-condensed cf" id="rangeWiseBillReportTable" 
 					 >
@@ -1145,8 +1149,9 @@
                          </ul>
                    </nav>
                    </div> -->
+                   
 					</div>
-				<!-- </div> -->
+				
 				</fieldset>
 				</form>
  	</div>
@@ -1231,8 +1236,11 @@
 							onclick="supplierWisePurchaseReturnReportValidate()" value="Search"/>
 					</div>
 			
+			
 				 	<div class="table-responsive" >
-				     <div id="demo_jui" >	
+				 	
+				     <!-- <div id="demo_jui" > -->	
+				     
 						<table class="table table-bordered table-striped table-condensed cf" id="purchaseReturnTable" class="display">
 						<thead>
 							<tr>
@@ -1258,12 +1266,17 @@
 						</thead>
 						<tfoot>
 							<tr>
-								 <th colspan="7" style="text-align: right">Total:</th>
-								<th></th>
+							     <th></th>
+								 <th colspan="14" style="text-align: right">Total:</th>
+								
 							</tr>
 						</tfoot>
 					</table>
-					</div>
+					
+					
+					<!-- </div> -->
+					
+					
 					 <!-- <div class="pagination-page" >
                     <nav aria-label="...">
                         <ul class="pagination" style="margin-top: -10px;">
@@ -1380,9 +1393,21 @@
 								onclick="purchaseOrderReportValidate()" value="Search"/>
 					</div>
 			
-				 	<div class="table-responsive">
-				     <div id="demo_jui">	
-						<table class="table table-bordered table-striped table-condensed cf" id="purchaseOrderTable" class="display">
+				 
+				 	
+				 	
+				 	
+				 	<!-- <div class="table-responsive">
+						
+						<table class="table table-bordered table-striped table-condensed  cf" id="purchaseRange" class="display" 
+						> -->
+				 	
+				 	
+				 	   <div class="table-responsive">
+				     <!-- <div id="demo_jui"> -->	
+						<table class="table table-bordered table-striped table-condensed cf" id="purchaseOrderTable" class="display" 
+						style="width:100%;"
+						>
 						<thead>
 							<tr>
 								<th>Supplier Name</th>
@@ -1404,12 +1429,17 @@
 						</thead>
 						<tfoot>
 							<tr>
-								<!-- <th colspan="7" style="text-align: right">Total:</th>
-								<th></th> -->
+							     <th colspan="11" style="text-align: right">Total:</th>
+							     <th></th>
+							    
+								
 							</tr>
 						</tfoot>
 					</table>
-					</div>
+					<!-- </div> -->
+					
+					
+					
 					<!--  <div class="pagination-page">
                     <nav aria-label="...">
                         <ul class="pagination" style="margin-top: -10px;margin-right: 36px;">
@@ -1430,6 +1460,8 @@
                          </ul>
                    </nav>
                    </div> -->
+					
+					
 					
 					</div>
 				</fieldset>

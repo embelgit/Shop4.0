@@ -8,6 +8,10 @@ body {
 	background-color: transparent;
 }
 
+/* tr {
+    background-color: #d7ebf9 ;
+}  */
+
 /*---------------------------------------------------- Form Css Starts Here ----------------------------------------------------*/
 .btn {
     width: 120px;
@@ -469,7 +473,8 @@ tr.odd {
     background-color: #fff !important;
 }
 tr.even {
-    background-color: #e2dede !important;
+    /* background-color: #e2dede !important; */
+    background-color: #fcf8e3 !important;
 }
 td.sorting_1 {
     background: none !important;

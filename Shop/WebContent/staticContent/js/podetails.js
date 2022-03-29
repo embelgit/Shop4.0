@@ -1147,6 +1147,8 @@
 				}, 1500);
 				return false;
 			}
+		
+		/*purchaseOrderReports();*/
 	}
 	
 	function purchaseOrderReports(){

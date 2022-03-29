@@ -15678,8 +15678,8 @@ function nonGSTbillingV(){
 			 }
 	  }*/
 	
-	/* if(CfirmName == "")*/
-		 if ( CfirmName == "" )
+	
+		/* if ( CfirmName == "" )
 		 {
 			var msg="Please Enter firmName ";
 			
@@ -15694,7 +15694,7 @@ function nonGSTbillingV(){
 			}, 1500);
 			
 	      return false;
-		 }
+		 }*/
 	
 	
 	

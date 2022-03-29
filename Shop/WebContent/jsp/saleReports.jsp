@@ -74,9 +74,11 @@
 <script type="text/javascript" src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/vfs_fonts.js"></script>
 <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"></script>
 <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.print.min.js"></script>
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"> 
+
+<!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">  -->
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
 
+<link rel="stylesheet" href="/Shop/staticContent/css/dataTables.jqueryui.min.css"> 
 <link rel="stylesheet" href="/Shop/staticContent/css/shopstyle.css"> 
 
 <script src="/Shop/staticContent/js/saleReports.js">
@@ -349,8 +351,7 @@ div.dt-buttons {
                                        </div> -->
                                        
                                        
-                                       <br>
-                                       <br>
+                                    
 									</div>
 								</fieldset>
 							</form>
@@ -1790,10 +1791,16 @@ div.dt-buttons {
 							</div>
 							<div class= "container">
 							<div class="table-responsive" >
-								<table
+								<!-- <table
 									class="table table-bordered table-striped table-condensed cf"
 									id="gstSale" class="display table table-boardered"
+									 > -->
+									 
+									 <table
+									class="table table-bordered table-striped table-condensed cf"
+									id="gstSale" class="display" 
 									 >
+									 
 									<thead>
 										<tr>
 											<th>Sr No</th>
@@ -1818,7 +1825,7 @@ div.dt-buttons {
 									</thead>
 									<tfoot>
 										<tr>
-											<th colspan="5" style="text-align: right">Total Rs:</th>
+									
 											<th></th>
 											<th></th>
 											<th></th>
@@ -1831,6 +1838,13 @@ div.dt-buttons {
 											<th></th>
 											<th></th>
 											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th> 
+											<th colspan="5" style="text-align: right">Total Rs:</th> 
+													
+											
 										</tr>
 									</tfoot>
 								</table>
