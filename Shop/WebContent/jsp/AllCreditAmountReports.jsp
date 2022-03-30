@@ -123,7 +123,7 @@
 									<div class="table-responsive" style="padding-top:2%">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
-											id="example1" class="display">
+											id="example11" class="display">
 						<!-- <table id="example1" class="display"> -->
 						<thead>
 							<tr>
@@ -331,6 +331,7 @@
 									<th>Employee Name</th>
 									<th>Payment Reason</th>
 									<th>Paid Amount</th>
+									<!--  <th>Payment Mode</th> -->
 							</tr>
 						</thead>
 						<tfoot>

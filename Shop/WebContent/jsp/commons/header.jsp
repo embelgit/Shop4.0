@@ -21,8 +21,7 @@
 						     name1 = (String) session.getAttribute("user");
 						     shopName = (String) session.getAttribute("shopName");	
 						     
-			            	 System.out.println("====================header ===========  "+shopName);
-			            	 
+			            	 System.out.println("=============================== "+shopName);
 				             HibernateUtility hbu1=HibernateUtility.getInstance();
 				             Session session2=hbu1.getHibernateSession();
 				             
@@ -65,9 +64,8 @@
 
 
 
-<% String  contextPath=request.getContextPath(); %>
-<%-- <% String path="";if(isHome)path="jsp\\"; %> --%>
-<% String path="";if(isHome)path="jsp\\"; %>
+<% String  contextPath=request.getContextPath();%>
+<% String path="";if(isHome)path="jsp\\";%>
 <%@page import="org.hibernate.Session"%>
 
 <%@page import="com.Fertilizer.dao.GoodsReceiveDao"%>
@@ -80,9 +78,6 @@
 
 <html>
 	<head>
-	
-	
-	
 		<meta name="viewport" content="width=device-width , initial-scale=1">
  		<title><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("Embel") %> <%}%> <%if(abc.equals("english")){%>Embel Technologies Pvt Ltd.<%}%></title>
 		<script src="/Shop/staticContent/js/logout.js"></script>
@@ -530,19 +525,27 @@ nav {
 
 .menu li>ul ul:hover { transform: initial; }
 }
+.fix-header .navbar-static-top {
+		position: fixed;
+		z-index: 1010
+	}
+	.fix-header #page-wrapper {
+		margin-top: 60px
+	}
 </style>
 </head>
             	
-<body style="margin-bottom:125px;height: 981px;">
-<img alt="" src="/Shop/staticContent/images/company-logo.png" class="embelbackgroundimg"/>
-<nav class="navbar navbar-fixed-top"> 
+<body  class="fix-header" >
+<nav class="navbar navbar-fixed-top navbar-static-top "> 
 <a id="resp-menu" class="responsive-menu" href="#"><i class="fa fa-reorder"></i><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("menu") %> <%}%> <%if(abc.equals("english")){%>Menu<%}%>  </a>
   <ul class="menu">
+  
+             
     <li><a class="homer" href="<%=path%>indexNew.jsp"><i class="fa fa-home"></i><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("home") %> <%}%> <%if(abc.equals("english")){%>HOME<%}%></a>
      
     </li>
       <%
-    			  if(type1.equals("account") || type1.equals("admin")){
+    			  if(type1.equals("account")||type1.equals("admin")||type1.equals("salesman"))	  {	
     	  
       %>	
     <li><a href="<%=path%>categoryDetails.jsp" ><i class="fa fa-address-book-o"></i><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("master") %> <%}%> <%if(abc.equals("english")){%>Master<%}%></a>
@@ -553,7 +556,7 @@ nav {
       			<li><a href="<%=path%>measuringUnits.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("measuringUnits") %> <%}%> <%if(abc.equals("english")){%>Measuring Units<%}%></a></li>
       			<li><a href="<%=path%>product_detail.jsp" accesskey="q"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("productDetails") %> <%}%> <%if(abc.equals("english")){%>Product Details<%}%></a></li>
       			<li><a href="<%=path%>supplierdetails.jsp" accesskey="r"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("supplierdetails") %> <%}%> <%if(abc.equals("english")){%>Supplier Details<%}%></a></li>
-      			<li><a href="<%=path%>cashcustomerdetail.jsp" accesskey="r"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("cashdetails") %> <%}%> <%if(abc.equals("english")){%>Cash Customer Details<%}%></a></li>
+       			<li><a href="<%=path%>cashcustomerdetail.jsp" accesskey="t"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("customerdetails") %> <%}%> <%if(abc.equals("english")){%>Cash Customer Details<%}%></a></li>
        			<li><a href="<%=path%>customer_detail.jsp" accesskey="t"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("customerdetails") %> <%}%> <%if(abc.equals("english")){%>Credit Customer Details<%}%></a></li>
 				<li><a href="<%=path%>expenditureDetails.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("expenditureDetails") %> <%}%> <%if(abc.equals("english")){%>Expenditure Details<%}%></a></li>
 				<li><a href="<%=path%>partnerDetails.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("partnerDetails") %> <%}%> <%if(abc.equals("english")){%>Partner Details<%}%></a></li>
@@ -569,28 +572,29 @@ nav {
       </ul>
     </li>
     <%}%>
-       <% if(type1.equals("admin")){ %>
+       <% if(type1.equals("admin") || type1.equals("salesman")){ %>
      <li><a  href="<%=path%>goodsReceive.jsp"><i class="fa fa-user-secret"></i><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("purchase") %> <%}%> <%if(abc.equals("english")){%>Purchase<%}%> </a>
      			 <ul class="sub-menu">
         						<%-- <li><a href="<%=path%>purchaseOrderDetails.jsp"  accesskey="n"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("advanceBooking") %> <%}%> <%if(abc.equals("english")){%>Advance Booking <%}%></a></li> --%>
 								<%-- <li><a href="<%=path%>updateDCNumber.jsp"  >Update DC Number </a></li> --%>
-								<li><a href="<%=path%>advanceBooking.jsp"  ><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("purchaseOrder") %> <%}%> <%if(abc.equals("english")){%> Purchase Order <%}%></a></li>
-								<li><a href="<%=path%>goodsReceive.jsp"  ><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("goodsReceive") %> <%}%> <%if(abc.equals("english")){%> Goods Receive <%}%></a></li>	
-								<li><a href="<%=path%>packing.jsp"  ><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("packing") %> <%}%> <%if(abc.equals("english")){%> Packing<%}%></a></li>
+								<li><a href="<%=path%>advanceBooking.jsp"  ><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("purchaseOrder") %> <%}%> <%if(abc.equals("english")){%>Purchase Order<%}%></a></li>
+								<li><a href="<%=path%>goodsReceive.jsp"  ><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("goodsReceive") %> <%}%> <%if(abc.equals("english")){%>Goods Receive<%}%></a></li>	
+								<li><a href="<%=path%>packing.jsp"  ><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("packing") %> <%}%> <%if(abc.equals("english")){%> Packing<%}%></a></li>						   
 						        <li><a href="<%=path%>product_transfer.jsp" ><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("productTransfer") %> <%}%> <%if(abc.equals("english")){%>Transfer to Store<%}%></a></li>	
-						        <li><a href="<%=path%>purchase_return.jsp" ><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("purchaseReturn") %> <%}%> <%if(abc.equals("english")){%> Purchase Return <%}%></a></li>	
+						        <li><a href="<%=path%>purchase_return.jsp" ><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("purchaseReturn") %> <%}%> <%if(abc.equals("english")){%>Purchase Return<%}%></a></li>	
 
-
-				 </ul>
+							 </ul>
 		</li>
 	<%}%>
-     <%-- <li><a  href="<%=path%>packing.jsp"><i class="fa fa-user-secret"></i><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("packing") %> <%}%> <%if(abc.equals("english")){%>Packing<%}%> </a>
+    
+    <%-- <li><a  href="<%=path%>packing.jsp"><i class="fa fa-user-secret"></i><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("packing") %> <%}%> <%if(abc.equals("english")){%>Packing<%}%> </a>
      			 <ul class="sub-menu">
 
 
 				 </ul>
 		</li> --%>
-    <% if(type1.equals("salesman")|| type1.equals("admin") || type1.equals("account") ){ %>	
+    
+    <% if(type1.equals("admin") || type1.equals("salesman") ){ %>	
     <li><a href="<%=path%>allBilling.jsp" accesskey="b" ><i class="fa fa-sitemap"></i><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("billing") %> <%}%> <%if(abc.equals("english")){%>Billing<%}%> </a>
       <ul class="sub-menu">
        <li><a href="<%=path%>allBilling.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("fertiBill") %> <%}%> <%if(abc.equals("english")){%>GST Billing<%}%></a> </li>
@@ -598,8 +602,7 @@ nav {
        <li><a href="<%=path%>quotationBilling.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("quotationBill") %> <%}%> <%if(abc.equals("english")){%>Quotation<%}%></a></li>
        <li><a href="<%=path%>challanBill.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("challanBill") %> <%}%> <%if(abc.equals("english")){%>Challan<%}%></a> </li>
        <li><a href="<%=path%>salereturn.jsp"  ><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("saleReturn") %> <%}%> <%if(abc.equals("english")){%>Sale Return<%}%></a></li>
-       <li><a href="<%=path%>billreturn.jsp"  ><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("billReturn") %> <%}%> <%if(abc.equals("english")){%>Bill Cancel<%}%></a></li>    
-    <li><a href="<%=path%>challancancel.jsp"  ><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("billReturn") %> <%}%> <%if(abc.equals("english")){%>Challan Cancel<%}%></a></li>        
+       <li><a href="<%=path%>billreturn.jsp"  ><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("billReturn") %> <%}%> <%if(abc.equals("english")){%>Bill Cancel<%}%></a></li>        
      </ul>
     </li>
     <%}%>
@@ -614,7 +617,7 @@ nav {
 		</li>
 	<%}%>	 --%>
 	 <% if(type1.equals("admin") || type1.equals("account")){ %>	  
-		  <li><a  href="<%=path%>allstockreport.jsp"><i class="fa fa-user-secret"></i>Stock </a>
+		  <li><a  href="<%=path%>stockReport.jsp"><i class="fa fa-user-secret"></i>Stock</a>
      			 <ul class="sub-menu">
      						    <li><a href="<%=path%>allstockreport.jsp"  accesskey="n">All Stock</a></li>
         						<li><a href="<%=path%>stockReport.jsp"  accesskey="n">Stock Reports</a></li>
@@ -635,7 +638,7 @@ nav {
 						<li><a href="<%=path%>supplierAccountDetails.jsp"  accesskey="n"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("supplierAccountDetail") %> <%}%> <%if(abc.equals("english")){%>Supplier Account Details<%}%></a></li>
 			 </ul>
         </li> --%>
-        <% if(type1.equals("admin") || type1.equals("account")){ %>
+        <% if(type1.equals("admin") || type1.equals("salesman")){ %>
         <li><a  href="<%=path%>purchaseReports.jsp"><i class="fa fa-bar-chart"></i><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("reports") %> <%}%> <%if(abc.equals("english")){%>Reports<%}%> </a>
       <ul class="sub-menu">
       				<li><a><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("purchase and sale") %> <%}%> <%if(abc.equals("english")){%>Purchase And Sale<%}%> </a>
@@ -643,15 +646,15 @@ nav {
 								<li><a href="<%=path%>purchaseReports.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("purchase") %> <%}%> <%if(abc.equals("english")){%>Purchase <%}%></a></li>
 								<li><a href="<%=path%>saleReports.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("sale") %> <%}%> <%if(abc.equals("english")){%>Sale<%}%></a></li>
 								<li><a href="<%=path%>profitAndLoss.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("profit and loss") %> <%}%> <%if(abc.equals("english")){%>Profit & Loss<%}%></a></li>
-								<li><a href="<%=path%>allcustreport.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("All Customer Report") %> <%}%> <%if(abc.equals("english")){%>All Customer Report<%}%></a></li>	
+							
+									<li><a href="<%=path%>allcustreport.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("All Customer Report") %> <%}%> <%if(abc.equals("english")){%>All Customer Report<%}%></a></li>	
 								
 						<li><a href="<%=path%>packingReport.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("Packing Report") %> <%}%> <%if(abc.equals("english")){%>Packing Report<%}%></a></li>	
-						<li><a href="<%=path%>productTransferReport.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("Product Transfer Report") %> <%}%> <%if(abc.equals("english")){%>Product Transfer Report<%}%></a></li>	
-																								
+						<li><a href="<%=path%>productTransferReport.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("Product Transfer Report") %> <%}%> <%if(abc.equals("english")){%>Product Transfer Report<%}%></a></li>							
 							</ul>
 					</li>
 					
-										<li><a href="<%=path%>dayclosurereport.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("Day Closure Report") %> <%}%> <%if(abc.equals("english")){%>Day Closure Report <%}%></a></li>			
+								<li><a href="<%=path%>dayclosurereport.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("Day Closure Report") %> <%}%> <%if(abc.equals("english")){%>Day Closure Report <%}%></a></li>			
 								<li><a href="<%=path%>cashBookReports.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("cashBook") %> <%}%> <%if(abc.equals("english")){%>CashBook<%}%></a></li>
 								<%-- <li><a href="<%=path%>gstSummaryReport.jsp">GST Summary Report</a></li> --%>
 					<li><a><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("all tax reports") %> <%}%> <%if(abc.equals("english")){%>All Tax Reports<%}%> </a>
@@ -664,7 +667,8 @@ nav {
 								<li><a href="<%=path%>creditCustomerPaymentDetailReport.jsp">Credit Customer Payment details</a></li>
 								<li><a href="<%=path%>supplierPaymentDetailReport.jsp">Supplier Payment details</a></li>
 								<li><a href="<%=path%>productBuyAndSalePriceReport.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("buyAndSalePrice") %> <%}%> <%if(abc.equals("english")){%>Buy And sale Price<%}%></a></li>
-					<li><a><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("All Credit/Debit") %> <%}%> <%if(abc.equals("english")){%>All Credit/Debit<%}%> </a>
+								
+								<li><a><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("all Credit/Debit") %> <%}%> <%if(abc.equals("english")){%>All Credit/Debit<%}%> </a>	
 								<ul class="sub-menu">
 								<li><a href="<%=path%>AllCreditAmountReports.jsp">All Credit/Debit</a></li>
 								<li><a href="<%=path%>todayCreditDebitReport.jsp">Today Credit/Debit</a></li>

@@ -1,5 +1,4 @@
-<%@page import="com.embelSoft.bean.GetVendorDetailsBean"%>
-<%@page import="com.embelSoft.dao.VendorDetailsDao"%>
+
 <% boolean isHome=false;%>
 <%@include file="commons/header.jsp"%>
 <html>

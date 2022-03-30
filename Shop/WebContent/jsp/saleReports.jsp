@@ -158,7 +158,7 @@ div.dt-buttons {
 				<li><a href="#userWise" data-toggle="tab" >User Wise Report </a></li>
 				<li><a href="#GSTWise" data-toggle="tab" >GST Wise Reports</a></li>
 				<li><a href="#nonGSTWise" data-toggle="tab" >Non-GST Wise Reports</a></li>
-		     	<li><a href="#rangeWiseBillReport" data-toggle="tab" >Bill Number Wise Report</a></li>
+		     	<li><a href="#rangeWiseBillReport" data-toggle="tab" >Range Wise Report</a></li>
 				<li><a href="#cashCustomerSaleReport" data-toggle="tab" >Cash Customer Report </a></li>
 				<li><a href="#creditCustomerSaleReport" data-toggle="tab" >Credit Customer Report </a></li>
 				<li><a href="#saleReturnReport" data-toggle="tab" > Sale Return Report</a></li>
@@ -2159,7 +2159,7 @@ div.dt-buttons {
 				<div class="tab-pane" id="rangeWiseBillReport">
 					<div class="row">
 						<div align="center">
-							<h2 class="form-name style_heading">Bill Wise Sale Reports </h2>
+							<h2 class="form-name style_heading">Range Wise Sale Reports </h2>
 						</div>
 
 						 <div class="row">

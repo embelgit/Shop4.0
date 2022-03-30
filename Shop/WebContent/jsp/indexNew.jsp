@@ -94,7 +94,31 @@ jQuery(document).ready( function() {
 		  	String shopName1 = shopN.trim();
 	  		HttpSession session2 = request.getSession();
 		  	session2.setAttribute("shopId", shopId);
-		%>
+			
+				         if (session.getAttribute("user") != null)
+				         {
+						     name1 = (String) session.getAttribute("user");
+						     shopName = (String) session.getAttribute("shopName");	
+						     
+			            	 System.out.println("=============================== "+shopName);
+				             HibernateUtility hbu1=HibernateUtility.getInstance();
+				             Session session3=hbu1.getHibernateSession();
+				             
+				             String ShopNameWithoutId = shopName.substring(4);
+				             onlyShopName = ShopNameWithoutId.trim();
+				   
+				             org.hibernate.Query query1 = session3.createQuery("from AccessControlBean where userName =:usr");
+				             query1.setParameter("usr", name1);
+				             AccessControlBean userDetail1 = (AccessControlBean) query1.uniqueResult();
+				             type1 = userDetail1.getType();
+				             type2 = userDetail1.getType();
+				     	}
+					    else
+				        {
+					    	response.sendRedirect("/Shop/jsp/login.jsp");
+					     	out.println("Please Login ");
+				        }
+	           %>
   
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="/Shop/staticContent/vendor/bootstrap/css/bootstrap.min.css">
@@ -140,11 +164,27 @@ jQuery(document).ready( function() {
         <!-- Sidebar Navigation Menus-->
         <div class="main-menu">
          <!--  <h1 class="sidenav-heading">Main</h1> -->
-          <ul id="side-main-menu" class="side-menu list-unstyled">                  
-            <li><a href="allBilling.jsp"> <i class="" aria-hidden="true"></i>
-            <span class="hidden-sm hidden-xs">Home</span>  </a></li>
-            <li><a href="indexNew.jsp"> <i class="" aria-hidden="true"></i>
-            <span class="hidden-sm hidden-xs"> Dashboard</span> </a></li>
+          <ul id="side-main-menu" class="side-menu list-unstyled"> 
+          
+ 			<%
+    			  if(type1.equals("admin")){
+    	  
+     		 %>                          
+            <li>
+            <a href="allBilling.jsp"> <i class="" aria-hidden="true"></i>
+            <span class="hidden-sm hidden-xs">Home</span>  </a>
+            </li>
+            
+            <%} %>
+            
+            <%
+    			  if(type1.equals("account") || type1.equals("admin") || type1.equals("salesman")){
+    	  
+     		 %>
+            <li>
+            <a href="indexNew.jsp"> <i class="" aria-hidden="true"></i>
+            <span class="hidden-sm hidden-xs"> Dashboard</span> </a>
+            </li>
             <li class="link"><a href="purchaseReports.jsp"> <i class=""></i>
             <span class="hidden-sm hidden-xs">Purchase Reports</span>
                   <span class="label label-success pull-right hidden-sm hidden-xs"></span>  </a>
@@ -173,8 +213,10 @@ jQuery(document).ready( function() {
                 </li>
             <li><a href="saleReports.jsp"> <i class=""></i> 
             <span class="hidden-sm hidden-xs">Sales Reports</span>
-                  <span class="label label-success pull-right hidden-sm hidden-xs"></span></a></li>
+                  <span class="label label-success pull-right hidden-sm hidden-xs"></span></a>
+            </li>
            
+           <%} %>
            
           </ul>
         </div>

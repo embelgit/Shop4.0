@@ -976,7 +976,7 @@ function purchaseReportForSingleDateValidate()
 {
 	var fDate = $("#fDate").val();
 	
-	if ( fDate == "" )
+	if ( fDate != "" )
 		
 	{
 		purchaseReportForSingleDate();

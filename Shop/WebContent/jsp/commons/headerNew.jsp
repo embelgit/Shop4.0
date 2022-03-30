@@ -545,7 +545,7 @@ nav {
      
     </li>
       <%
-    			  if(type1.equals("account")|| type1.equals("admin")){
+    			  if(type1.equals("account")||type1.equals("admin")||type1.equals("salesman"))	  {	
     	  
       %>	
     <li><a href="<%=path%>categoryDetails.jsp" ><i class="fa fa-address-book-o"></i><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("master") %> <%}%> <%if(abc.equals("english")){%>Master<%}%></a>
@@ -572,7 +572,7 @@ nav {
       </ul>
     </li>
     <%}%>
-       <% if(type1.equals("admin")){ %>
+       <% if(type1.equals("admin") || type1.equals("salesman")){ %>
      <li><a  href="<%=path%>goodsReceive.jsp"><i class="fa fa-user-secret"></i><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("purchase") %> <%}%> <%if(abc.equals("english")){%>Purchase<%}%> </a>
      			 <ul class="sub-menu">
         						<%-- <li><a href="<%=path%>purchaseOrderDetails.jsp"  accesskey="n"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("advanceBooking") %> <%}%> <%if(abc.equals("english")){%>Advance Booking <%}%></a></li> --%>
@@ -594,7 +594,7 @@ nav {
 				 </ul>
 		</li> --%>
     
-    <% if(type1.equals("salesman")|| type1.equals("admin") || type1.equals("account") ){ %>	
+    <% if(type1.equals("admin") || type1.equals("salesman") ){ %>	
     <li><a href="<%=path%>allBilling.jsp" accesskey="b" ><i class="fa fa-sitemap"></i><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("billing") %> <%}%> <%if(abc.equals("english")){%>Billing<%}%> </a>
       <ul class="sub-menu">
        <li><a href="<%=path%>allBilling.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("fertiBill") %> <%}%> <%if(abc.equals("english")){%>GST Billing<%}%></a> </li>
@@ -638,7 +638,7 @@ nav {
 						<li><a href="<%=path%>supplierAccountDetails.jsp"  accesskey="n"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("supplierAccountDetail") %> <%}%> <%if(abc.equals("english")){%>Supplier Account Details<%}%></a></li>
 			 </ul>
         </li> --%>
-        <% if(type1.equals("admin") || type1.equals("account")){ %>
+        <% if(type1.equals("admin") || type1.equals("salesman")){ %>
         <li><a  href="<%=path%>purchaseReports.jsp"><i class="fa fa-bar-chart"></i><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("reports") %> <%}%> <%if(abc.equals("english")){%>Reports<%}%> </a>
       <ul class="sub-menu">
       				<li><a><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("purchase and sale") %> <%}%> <%if(abc.equals("english")){%>Purchase And Sale<%}%> </a>
@@ -654,7 +654,7 @@ nav {
 							</ul>
 					</li>
 					
-															<li><a href="<%=path%>dayclosurereport.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("Day Closure Report") %> <%}%> <%if(abc.equals("english")){%>Day Closure Report <%}%></a></li>			
+								<li><a href="<%=path%>dayclosurereport.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("Day Closure Report") %> <%}%> <%if(abc.equals("english")){%>Day Closure Report <%}%></a></li>			
 								<li><a href="<%=path%>cashBookReports.jsp"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("cashBook") %> <%}%> <%if(abc.equals("english")){%>CashBook<%}%></a></li>
 								<%-- <li><a href="<%=path%>gstSummaryReport.jsp">GST Summary Report</a></li> --%>
 					<li><a><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("all tax reports") %> <%}%> <%if(abc.equals("english")){%>All Tax Reports<%}%> </a>

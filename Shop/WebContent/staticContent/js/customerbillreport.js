@@ -117,16 +117,16 @@ function getCreditAmountByBilling()
 			} );
 			
 		var mydata = catmap;
-	//	$('#example').dataTable().fnAddData(mydata);
+		$('#example').dataTable().fnAddData(mydata);
 			
-	//		}).error(function(jqXHR, textStatus, errorThrown){
-		//		if(textStatus==="timeout")
-			//	{
-				//	$(loaderObj).hide();
-					//$(loaderObj).find('#errorDiv').show();
-				//	$(loaderObj).find('#errorDiv').hide();
+			}).error(function(jqXHR, textStatus, errorThrown){
+				if(textStatus==="timeout")
+				{
+					$(loaderObj).hide();
+					$(loaderObj).find('#errorDiv').show();
+					$(loaderObj).find('#errorDiv').hide();
 				
-				//}
+				}
 			});
 	}
 
@@ -175,7 +175,7 @@ function getPaidAmountToSupplier()
 		
 		if(catmap == null || catmap == "")
 		{
-			alert("NO Credit Billing Available From "+startDate+" to "+endDate);
+			alert("NO Debit Billing Available From "+startDate+" to "+endDate);
 		}
 	
 			$(document).ready(function()
@@ -222,7 +222,7 @@ function getPaidAmountToSupplier()
 			columns: [
 			          
 			          	{"data": "soldDate", "width": "5%"},
-			          	{"data": "customerBill", "width": "5%"},
+			          	{"data": "billNo", "width": "5%"},
 			          	{"data": "cusomerName" , "width": "5%"},
 			            {"data": "totalAmount" , "width": "5%"},
 			            
@@ -233,14 +233,14 @@ function getPaidAmountToSupplier()
 			
 		var mydata = catmap;
 		
-		//$('#example3').dataTable().fnAddData(mydata);
+		$('#example3').dataTable().fnAddData(mydata);
 			
-			//}).error(function(jqXHR, textStatus, errorThrown){
-				//if(textStatus==="timeout") {
-					//$(loaderObj).hide();
-					$//(loaderObj).find('#errorDiv').show();
+			}).error(function(jqXHR, textStatus, errorThrown){
+				if(textStatus==="timeout") {
+					$(loaderObj).hide();
+					$(loaderObj).find('#errorDiv').show();
 				
-				//}
+			}
 			});
 }
 
@@ -288,8 +288,6 @@ function getPaidAmountToEmployee()
 	
 			$(document).ready(function() {
 				
-				
-				
 			    $('#example4').DataTable( {
 			    	fnRowCallback : function(nRow, aData, iDisplayIndex){
 		                $("th:first", nRow).html(iDisplayIndex +1);
@@ -334,24 +332,27 @@ function getPaidAmountToEmployee()
 			          	{"data": "soldDate", "width": "5%"},
 			          	{"data": "cusomerName" , "width": "5%"},
 			          	{"data": "reason" , "width": "5%"},
-			            {"data": "totalAmount" , "width": "5%"},
+			            {"data": "totalAmount" , "width": "5%"}
+			            /*{"data": "paymentMode" , "width": "5%"},*/
 			            
 			           
 			        ]
 			    } );
 			} );
 			
-		var mydata = catmap;
-		//$('#example4').dataTable().fnAddData(mydata);
 			
-			//}).error(function(jqXHR, textStatus, errorThrown){
-				//if(textStatus==="timeout") {
-					//$(loaderObj).hide();
-					//$(loaderObj).find('#errorDiv').show();
+			var mydata = catmap;
+			$('#example4').dataTable().fnAddData(mydata);
+			
 				
-				//}
-			});
-}
+				}).error(function(jqXHR, textStatus, errorThrown){
+					if(textStatus==="timeout") {
+						$(loaderObj).hide();
+						$(loaderObj).find('#errorDiv').show();
+					
+					}
+				});
+	}
 
 
 function getTotal()
@@ -974,7 +975,7 @@ function getCreditAmountByCreditCust()
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
 			{
 		
-		$('#example1').dataTable().fnClearTable();
+		$('#example11').dataTable().fnClearTable();
 		var jsonData = $.parseJSON(data);
 		var catmap = jsonData.list;
 		if(catmap == null || catmap == "")
@@ -983,7 +984,7 @@ function getCreditAmountByCreditCust()
 		}
 	
 			$(document).ready(function() {
-			    $('#example1').DataTable( {
+			    $('#example11').DataTable( {
 			    	fnRowCallback : function(nRow, aData, iDisplayIndex){
 		                $("th:first", nRow).html(iDisplayIndex +1);
 		               return nRow;
@@ -1034,21 +1035,18 @@ function getCreditAmountByCreditCust()
 			    } );
 			} );
 			
-		var mydata = catmap;
-		if(mydata == null || mydata == "")
-		{
 			
-		}
-		else
-			{
-		$('#example1').dataTable().fnAddData(mydata);
-			}}).error(function(jqXHR, textStatus, errorThrown){
-				if(textStatus==="timeout") {
-					$(loaderObj).hide();
-					$(loaderObj).find('#errorDiv').show();
+			var mydata = catmap;
+			$('#example11').dataTable().fnAddData(mydata);
 				
-				}
-			});
-}
-
+				}).error(function(jqXHR, textStatus, errorThrown){
+					if(textStatus==="timeout")
+					{
+						$(loaderObj).hide();
+						$(loaderObj).find('#errorDiv').show();
+						$(loaderObj).find('#errorDiv').hide();
+					
+					}
+				});
+		}
 

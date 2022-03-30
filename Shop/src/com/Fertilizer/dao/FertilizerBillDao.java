@@ -730,7 +730,7 @@ public List getCreditCustBIllAndClientNameFoerPestiBillCopy()
 
 						SaleReports reports = new SaleReports();
 						reports.setSoldDate(object[0].toString());
-						reports.setCustomerBill(Integer.parseInt(object[1].toString()));
+						reports.setBillNo(object[1].toString());
 						reports.setCusomerName(object[2].toString());
 						reports.setTotalAmount(Double.parseDouble(object[3].toString()));
 
@@ -752,8 +752,10 @@ public List getCreditCustBIllAndClientNameFoerPestiBillCopy()
 				try {
 					hbu = HibernateUtility.getInstance();
 					session = hbu.getHibernateSession();
-					// Query query2 =
-					Query query2 = session.createSQLQuery("select insert_date, first_name, reason, credit from employee_payment left join employee_details on employee_payment.fk_employee_id = employee_details.pk_empoyee_id where insert_date BETWEEN :stDate AND :edDate");
+					
+					String payType= "debit";
+					
+					Query query2 = session.createSQLQuery("select insert_date, first_name, reason, paymentType,payment from employee_payment left join employee_details on employee_payment.fk_employee_id = employee_details.pk_empoyee_id where insert_date BETWEEN :stDate AND :edDate AND paymentType='"+payType+"' ");
 					query2.setParameter("stDate", startDate);
 					query2.setParameter("edDate", endDate);
 					System.out.println(startDate);
@@ -767,7 +769,8 @@ public List getCreditCustBIllAndClientNameFoerPestiBillCopy()
 						reports.setSoldDate(object[0].toString());
 						reports.setCusomerName(object[1].toString());
 						reports.setReason(object[2].toString());
-						reports.setTotalAmount(Double.parseDouble(object[3].toString()));
+						reports.setPaymentMode(object[3].toString());
+						reports.setTotalAmount(Double.parseDouble(object[4].toString()));
 
 						saleList.add(reports);
 					}

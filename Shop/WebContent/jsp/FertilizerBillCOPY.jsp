@@ -3,7 +3,7 @@
 <%@page import="com.Fertilizer.dao.FertilizerBillDao"%>
 
 <% boolean isHome=false;%>
-<%@include file="commons/header.jsp"%>
+<%@include file="commons/headerNew.jsp"%>
 <head>
 <script src="/Shop/staticContent/js/generateSeedAndPesticidePDF.js"></script>
 

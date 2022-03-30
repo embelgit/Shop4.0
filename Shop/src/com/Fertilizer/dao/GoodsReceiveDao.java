@@ -4281,7 +4281,7 @@ public List<SaleReports> getSaleDetailsAsPerPaymentModeForSingleDate(
 		hbu = HibernateUtility.getInstance();
 		session = hbu.getHibernateSession();
 		
-		Query query = session.createSQLQuery("SELECT bill_no, payment_mode, total_amount, payment FROM credit_customer_payment ccp WHERE payment_mode = '"+paymentModeIdForDate+"' AND payment > 0.0 AND DATE(insert_date) = '"+singleDate+"'");
+		Query query = session.createSQLQuery("SELECT bill_no, payment_mode, total_per_product, gross_total FROM fertilizer_billing WHERE payment_mode = '"+paymentModeIdForDate+"' AND gross_total > 0.0 AND DATE(insert_date) = '"+singleDate+"'");
 //query.setParameter("paymentMode", paymentMode);
 List<Object[]> list = query.list();
  saleList= new ArrayList<SaleReports>(0);
@@ -4850,7 +4850,7 @@ public List<SaleReports> getSaleDetailsAsPerPaymentModeForRangesDao(
 		hbu = HibernateUtility.getInstance();
 		session = hbu.getHibernateSession();
 		
-		Query query = session.createSQLQuery("SELECT bill_no, payment_mode, total_amount, SUM(payment) FROM credit_customer_payment ccp WHERE payment_mode = '"+paymentModeId4+"' AND payment > 0.0 AND DATE(insert_date) BETWEEN '"+fisDateForPay4+"' AND '"+endDateForPay4+"' GROUP BY bill_no;");
+Query query = session.createSQLQuery("SELECT bill_no, payment_mode, total_per_product, SUM(gross_total) FROM fertilizer_billing WHERE payment_mode = '"+paymentModeId4+"' AND gross_total > 0.0 AND DATE(insert_date) BETWEEN '"+fisDateForPay4+"' AND '"+endDateForPay4+"' GROUP BY bill_no");
 //query.setParameter("paymentMode", paymentMode);
 List<Object[]> list = query.list();
  saleList= new ArrayList<SaleReports>(0);
