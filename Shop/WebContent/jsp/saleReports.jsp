@@ -1,6 +1,8 @@
 
 <%@page import="com.Fertilizer.bean.GetBillDetails"%>
 <%@page import="com.Fertilizer.hibernate.FertilizerBillBean"%>
+<%@page import="com.Fertilizer.bean.CustomerBean"%>
+<%@page import="com.Fertilizer.hibernate.SubCategoryDetailsBean"%>
 <%@page import="com.Fertilizer.dao.FertilizerBillDao"%>
 <%@page import="com.Fertilizer.hibernate.shopDetailsBean"%>
 <%@page import="com.Fertilizer.dao.shopDetailsDao"%>

@@ -2689,16 +2689,12 @@ function twoDatePaymentModeWiseSaleReport()
 		var jsonData = $.parseJSON(data);
 		var catmap = jsonData.list;
 		
-		if(catmap == null || catmap == "")
+		if(catmap == null || catmap <= 0)
 		{
 			alert("Sale Reports are Not Available for\nStart Date = "+startdate+"\nEnd Date = "+enddate);
 			return false;
 		}
 		
-		/*$(document).ready(function() {
-		    
-		} );
-		*/
 		
 		$(document).ready(function() {
 		 var total =   $('#TwoPayment').DataTable( {
@@ -2950,10 +2946,9 @@ function GSTWiseSaleReport(){
 		var jsonData = $.parseJSON(data);
 		var catmap = jsonData.list;
 		
-		if(catmap == null || catmap == "")
+		if(catmap == null || catmap <=0)
 		{
-			//alert("Sale Reports are Not Available for\nStart Date = "+startDate+"\nEnd Date = "+enddate+"\nProduct "+proValue);
-			var msg="Data is not available";
+			var msg="Data is not available From "+startDate+" To "+endDate;
 			var dialog = bootbox.dialog({
 		    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 		    closeButton: false
@@ -2962,34 +2957,18 @@ function GSTWiseSaleReport(){
 				dialog.modal('hide');
 			}, 1500);
 			
-			
 			return false;
 		}
 		
-		/*$(document).ready(function() {
-		    
-		} );
-		*/
-		
 		$(document).ready(function() {
 		 var total =   $('#gstSale').DataTable( {
-			 
-			    "bProcessing": true,
-			    "sAutoWidth": false,
-			    "bDestroy":true,
-			    "sPaginationType": "bootstrap", // full_numbers
-			    "iDisplayStart ": 10,
-			    "iDisplayLength": 10,
-			    "bPaginate": false, //hide pagination
-			    //"bFilter": false, //hide Search bar
-			    "bInfo": true, // hide showing entries
 			 
 			 fnRowCallback : function(nRow, aData, iDisplayIndex){
 	                $("th:first", nRow).html(iDisplayIndex +1);
 	               return nRow;
 	            },
 			
-	        	
+/*	        	
 				 "footerCallback": function ( row, data, start, end, display ) {
 			            var api = this.api(), data;
 			 
@@ -3066,89 +3045,7 @@ function GSTWiseSaleReport(){
                
             );
             console.log( pageTotal);
-/*        
-            // Quantity total
-            pageTotal = api
-            .column( 15 )
-            .data()
-            .reduce( function (a, b) {
-                return intVal(a) + intVal(b);
-            }, 0 );
 
-            
-        // Update footer
-        $( api.column( 15 ).footer() ).html(
-        		
-          parseFloat(pageTotal).toFixed(2)
-           
-        );
-        console.log( pageTotal);
-        
-        // Quantity total
-        pageTotal = api
-        .column( 16 )
-        .data()
-        .reduce( function (a, b) {
-            return intVal(a) + intVal(b);
-        }, 0 );
-
-    // Update footer
-    $( api.column( 16 ).footer() ).html(
-    		
-      parseFloat(pageTotal).toFixed(2)
-       
-    );
-    console.log( pageTotal);
-    
-    
-    pageTotal = api
-    .column( 17 )
-    .data()
-    .reduce( function (a, b) {
-        return intVal(a) + intVal(b);
-    }, 0 );
-
-// Update footer
-$( api.column( 17 ).footer() ).html(
-		
-  parseFloat(pageTotal).toFixed(2)
-   
-);
-console.log( pageTotal);
-
-// Quantity total
-pageTotal = api
-.column( 18 )
-.data()
-.reduce( function (a, b) {
-    return intVal(a) + intVal(b);
-}, 0 );
-
-// Update footer
-$( api.column( 18 ).footer() ).html(
-	
-parseFloat(pageTotal).toFixed(2)
-
-);
-console.log( pageTotal);
-
-// Quantity total
-pageTotal = api
-.column( 19 )
-.data()
-.reduce( function (a, b) {
-return intVal(a) + intVal(b);
-}, 0 );
-
-// Update footer
-$( api.column( 19 ).footer() ).html(
-
-parseFloat(pageTotal).toFixed(2)
-
-);
-console.log( pageTotal);
-
-*/
             
             
  pageTotal = api
@@ -3180,47 +3077,15 @@ $( api.column( 16 ).footer() ).html(
 parseFloat(pageTotal).toFixed(2)
 
 );
-/*console.log( pageTotal);
 
-// Quantity total
-pageTotal = api
-.column( 22 )
-.data()
-.reduce( function (a, b) {
-return intVal(a) + intVal(b);
-}, 0 );
 
-// Update footer
-$( api.column( 22 ).footer() ).html(
-
-parseFloat(pageTotal).toFixed(2)
-
-);
-console.log( pageTotal);
-
-//Quantity total
-pageTotal = api
-.column( 23 )
-.data()
-.reduce( function (a, b) {
-return intVal(a) + intVal(b);
-}, 0 );
-
-// Update footer
-$( api.column( 23 ).footer() ).html(
-
-parseFloat(pageTotal).toFixed(2)
-
-);
-console.log( pageTotal);*/
-
-},    
+},  */  
 		    	
-		    	destroy: true,
-		        searching: false,
-		        "scrollY": true,
-		        "scrollX": true,
-		        "paging":   false,
+				searching: true,
+				destroy: true,
+				"scrollY":"300px",
+				"scrollCollapse": true,
+				"paging":false,
 		        
 		      
 		columns: [
@@ -3232,10 +3097,6 @@ console.log( pageTotal);*/
 		            {"data": "hsnNumber" , "width": "5%", "defaultContent": ""},
 		            {"data": "itemName", "width": "5%", "defaultContent": ""},
 		            {"data": "SalePrice", "width": "5%", "defaultContent": ""},
-		          /*  {"data": "kg" , "width": "5%", "defaultContent": ""},
-		            {"data": "grams" , "width": "5%", "defaultContent": ""},
-		            {"data": "ltr" , "width": "5%", "defaultContent": ""},
-		            {"data": "mili" , "width": "5%", "defaultContent": ""},*/
 		            {"data": "quantityCCReports", "width": "5%", "defaultContent": ""},
 		            {"data": "unit", "width": "5%", "defaultContent": ""},
 		            {"data": "totalAmount" , "width": "5%", "defaultContent": ""},
@@ -3243,23 +3104,13 @@ console.log( pageTotal);*/
 		            {"data": "twelwePercentageGST", "width": "5%", "defaultContent": ""},
 		            {"data": "eighteenPercentageGST" , "width": "5%", "defaultContent": ""},
 		            {"data": "twentyEightPercentageGST", "width": "5%", "defaultContent": ""},
-		        /*  {"data": "iGSTFivePercentage", "width": "5%", "defaultContent": ""},
-		            {"data": "iGSTTwelwePercentage" , "width": "5%", "defaultContent": ""},
-		            {"data": "iGSTEighteenPercentage", "width": "5%", "defaultContent": ""},
-		            {"data": "iGSTTwentyeightPercentage", "width": "5%", "defaultContent": ""},*/
 		            {"data": "totalTaxAmount" , "width": "5%", "defaultContent": ""},
 		            {"data": "netAmount" , "width": "5%", "defaultContent": ""}
 		            
 		        ],
-		       /* dom: 'Bfrtip',
-	            buttons: [
-	                'copy', 'csv', 'excel', 'pdf', 'print'
-	            ]*/
-		        
 		        
 		        dom : 'Bfrtip',
 		        buttons : [
-		           //'print',
 
 		          {	extend: 'print',
 		        	    orientation: 'landscape',

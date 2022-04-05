@@ -9478,11 +9478,31 @@ function getProductDetailsByProductName()
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
  	   {
 		  var jsonData = $.parseJSON(data);
-//		   $("#list4").jqGrid("clearGridData", true).trigger("reloadGrid");    
+		  
 	     $.each(jsonData,function(i,v)
 		 { 
-	    	 
+	    	
 			  var gTotal=0;
+			  
+			//  var qtity = 0;
+/*			  qtity = v.totalQty;
+
+                     if(qtity <= 0.0 || qtity == 0){
+
+  					   var msg = "Available Stock "+qtity+" Pieces";
+                    	var dialog = bootbox.dialog({
+      				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+      				    closeButton: false
+                    	   });
+      				
+                    	   setTimeout(function()
+                    		{
+      					dialog.modal('hide');
+                    	   }, 1500);
+    			   
+                  }*/
+                   
+			  
 			  var aaa = document.getElementById("totalWithExpense").value;
 			  if(aaa=="" || aaa==null || aaa==undefined){
 				  aaa=0;
@@ -9493,16 +9513,11 @@ function getProductDetailsByProductName()
 					}
 			    	document.getElementById("totalWithExpense").value = aaa;  
 			    	document.getElementById("grossTotal").value = aaa;
-					//			    	document.getElementById("totalWithExpense").value = gTotal;  
-//			    	document.getElementById("grossTotal").value = gTotal;
 			    	
 	
 	        function sumFmatter (cellvalue, options, rowObject)
 	        {	 
-	        	//			var tot= (options.rowData.quantity * options.rowData.prrice);
-	        //	var toss=0;
-	        //	var tots= (options.rowData.total);
-             //   toss = toss+tots;
+	    
 	        	var jam=0;
 	        	var tot1=0;
 
@@ -9510,7 +9525,8 @@ function getProductDetailsByProductName()
 	        	var allRowsInGrid1 = $('#list4').getGridParam('data');
 	        	var AllRows=JSON.stringify(allRowsInGrid1);
 	        	for (var i = 0; i < count; i++)
-	        	{	        		
+	        	{	    
+	        	
 	        		var kg = allRowsInGrid1[i].kg;
 	        		params["kg"+i] = kg;
 	        		
@@ -9520,7 +9536,7 @@ function getProductDetailsByProductName()
 	        		var defQuantity = 1;	        		
 	            	var quantity = allRowsInGrid1[i].quantity;
 	            	params["quantity"+i] = quantity;
-	             	
+	            	
 	             	var sp = allRowsInGrid1[i].sp;
 	            	params["sp"+i] = sp;                        //sale Price
 	            	
@@ -9568,8 +9584,7 @@ function getProductDetailsByProductName()
 	         count = jQuery("#list4").jqGrid('getGridParam', 'records'); 
 		     var rowdata =$("#list4").jqGrid('getGridParam','data');
 		     var ids = jQuery("#list4").jqGrid('getDataIDs');
-		    // var allRowsInGrid11 = $('#list4').getGridParam('data');
-		     //var AllRowss=JSON.stringify(allRowsInGrid11);
+
 		     
 			  var prodName, com, packing, unit, expiryDate, barcodeno2,subcat,cat,proid,pack;
 			  var tot=0;

@@ -12,6 +12,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.jfree.util.Log;
 
+import com.Fertilizer.bean.CustomerBean;
 import com.Fertilizer.bean.GetTaxDetails;
 import com.Fertilizer.hibernate.CategoryDetailsBean;
 import com.Fertilizer.hibernate.Stock;
@@ -223,6 +224,36 @@ public class CategoryDetailsDao {
 			}
 			//
 			public List<CategoryDetailsBean> getAllMainCatsub(HttpServletRequest request)
+			{
+				HttpSession usersession = request.getSession(true);
+				String userid = (String)usersession.getAttribute("userid");
+				String shopid = (String)usersession.getAttribute("shopid");
+				
+				HibernateUtility hbu = null;
+				Session session =  null;
+				Query query = null;
+				 List list = null;
+				 try {
+					 hbu = HibernateUtility.getInstance();
+					 session = hbu.getHibernateSession();
+					 query = session.createQuery("from SubCategoryDetailsBean where fkshopid='"+shopid+"'");
+					 list = query.list(); 
+					 System.out.println("query -  "+query.list().size());
+				} catch (RuntimeException e) {
+					Log.error("Error in getAllMainCat", e);
+				}
+				 finally
+				 {
+					 if (session!=null) {
+						hbu.closeSession(session);
+					}
+				 }
+						return list;
+				
+			}
+			
+			
+			public List<CustomerBean> getAllMainSubCategories(HttpServletRequest request)
 			{
 				HttpSession usersession = request.getSession(true);
 				String userid = (String)usersession.getAttribute("userid");

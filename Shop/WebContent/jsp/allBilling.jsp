@@ -69,6 +69,7 @@
 		$('#customerfresh').load(document.URL +  ' #customerfresh');
 	}
 </script>
+
 	  	<%
 	  		HttpSession session1 = request.getSession();
 		  	String shop1234 = (String) session1.getAttribute("shopName");
@@ -922,14 +923,11 @@ top: 25%;}
 					           for(int i=0;i<pList.size();i++)
 					           {
 					        	    Stock gpd=(Stock)pList.get(i);
-					        	   
+					        
 					         %>
-	<%-- 							<option data-value="" value="<%=gpd.getProduct()%> => <%=gpd.getBarcodeNo()%> => <%=gpd.getManufacturer()%> => Stock => <%=gpd.getQuantityDouble()%> => <%=gpd.getWeight()%> => <%=gpd.getUnitName() %>  => <%=gpd.getFkSubCatId()%> => <%=gpd.getFkCatId()%> => <%=gpd.getExpiryDate()%>"> --%>
 							
 									<option data-value="" value="<%=gpd.getProductName()%> => <%=gpd.getBarcodeNo()%> => <%=gpd.getCompanyName()%> => Stock => <%=gpd.getQuantity()%> => <%=gpd.getWeight()%> => <%=gpd.getUnit() %>  => <%=gpd.getSubCatId()%> => <%=gpd.getCatID()%> => <%=gpd.getUpdateDate()%> => <%=gpd.getPack_type()%> => <%=gpd.getProductId()%>">						
 							
-							
-								<%-- <option data-value="" value="<%=gpd.getProduct()%> => <%=gpd.getExpiryDate()%> => <%=gpd.getWeight()%> => <%=gpd.getUnitName()%> => <%=gpd.getCatName()%> => <%=gpd.getManufacturer()%> =>  <%=gpd.getQuantityDouble()%> => <%=gpd.getSubCatName()%> => <%=gpd.getFkSubCatId()%> => <%=gpd.getStockInTotalKgLtrPiece()%> => <%=gpd.getUnitName()%> => <%=gpd.getFkCatId()%>"> --%>
 							<%
 				      			}
 				    		%>
