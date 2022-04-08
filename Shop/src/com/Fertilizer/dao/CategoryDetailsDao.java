@@ -240,7 +240,7 @@ public class CategoryDetailsDao {
 					 list = query.list(); 
 					 System.out.println("query -  "+query.list().size());
 				} catch (RuntimeException e) {
-					Log.error("Error in getAllMainCat", e);
+					Log.error("Error in getAllMainCatsub", e);
 				}
 				 finally
 				 {

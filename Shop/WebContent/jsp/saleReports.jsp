@@ -1747,8 +1747,8 @@ div.dt-buttons {
 									</div>
 								</div>
 							</div>
-
-
+							
+							
 							<div class="row form-group" >
 								<label class="col-md-3  control-label"
 									for="fk_cat_id_for_payment_mode">Product Category<sup>*</sup></label>
@@ -1764,7 +1764,7 @@ div.dt-buttons {
 											CategoryDetailsDao GSTcatdao = new CategoryDetailsDao();
 											List catListGST = GSTcatdao.getAllMainCat(request);
 										%>
-										<input list="cat_drop_For_GST" id="fk_cat_id_for_GST" class="form-control" placeholder="Product Category">
+										<input list="cat_drop_For_GST" id="fk_cat_id_for_GST" class="form-control" onchange="getAllProductforGSTwiseReports()" placeholder="Product Category">
 										<datalist id="cat_drop_For_GST">
 											<%
 												for (int i = 0; i < catListGST.size(); i++) {
@@ -1780,6 +1780,22 @@ div.dt-buttons {
 										</datalist>
 									</div>
 								</div>
+								
+								
+									<label class="col-md-2 control-label" for="gstwsproName">Product Name<sup>*</sup>
+										</label>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon"> <i
+													class="	glyphicon glyphicon-list-alt"></i>
+												</span> <select class="form-control" id="gstwsproName" name="gstwsproName">
+												
+												</select>
+
+											</div>
+										</div>
+								
+								
 								</div>
 								
 								<div class="row" style="padding-top:2%;padding-bottom:1%">

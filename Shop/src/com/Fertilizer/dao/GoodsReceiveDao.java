@@ -4354,12 +4354,13 @@ else if(mode.equals("neft"))
 
 }
 
-public List<SaleReports> getSaleDetailsAsGST(String cat,String fDate,String sDate) {
+public List<SaleReports> getSaleDetailsAsGST(String cat,String fDate,String sDate, String prodName) {
 	Double trans;
 	Double hamali;
-	System.out.println(cat+"Category in dao");
-System.out.println(fDate+"fDate in dao");
-System.out.println(sDate+"sDate in dao");
+	System.out.println("Category in dao =====> "+cat);
+System.out.println("fDate in dao ====> "+fDate);
+System.out.println("sDate in dao ====> "+sDate);
+System.out.println("prodName in dao ====> "+prodName);
 HibernateUtility hbu=null;
 Session session=null;
 List<SaleReports> saleList=null;
@@ -4373,14 +4374,7 @@ try
  NumberFormat formatter = new DecimalFormat("#0.00");
  
  /*Query query = session.createSQLQuery(" SELECT f.insert_date, f.customer_name, f.product_name,f.Without_Tax_Rate,f.quantity,f.tax_percentage,f.gross_total,f.bill_no,f.igstPercentage,f.hsn FROM fertilizer_billing f  WHERE cat_id ='"+cat+"'AND insert_date BETWEEN '"+fDate+"' AND '"+sDate+"'");*/
- Query query = session.createSQLQuery(" SELECT f.insert_date, f.customer_name, f.product_name, f.sale_price, f.quantity,f.tax_percentage,f.gross_total,f.bill_no,f.igstPercentage,f.hsn, f.kg, f.grams, f.ltr, f.mili, f.total_per_product, f.total_gst_tax_per_product, f.total_igst_tax_per_product, f.unit FROM fertilizer_billing f  WHERE cat_id ='"+cat+"' AND f.bill_Type = '"+status+"' AND f.tax_percentage > 0 OR f.igstPercentage > 0 AND insert_date BETWEEN '"+fDate+"' AND '"+sDate+"'");
- /* query.setParameter("cat", cat);	
-query.setParameter("fDate", fDate);
-query.setParameter("sDate", sDate);*/
-
-System.out.println(cat+"Category in dao");
-System.out.println(fDate+"fDate in dao");
-System.out.println(sDate+"sDate in dao");
+ Query query = session.createSQLQuery(" SELECT f.insert_date, f.customer_name, f.product_name, f.sale_price, f.quantity,f.tax_percentage,f.gross_total,f.bill_no,f.igstPercentage,f.hsn, f.kg, f.grams, f.ltr, f.mili, f.total_per_product, f.total_gst_tax_per_product, f.total_igst_tax_per_product, f.unit FROM fertilizer_billing f  WHERE product_name='"+prodName+"' AND f.bill_Type = '"+status+"' AND insert_date BETWEEN '"+fDate+"' AND '"+sDate+"' AND f.tax_percentage > 0 OR f.igstPercentage > 0"); //
 
 List<Object[]> list = query.list();
  saleList= new ArrayList<SaleReports>(0);

@@ -1770,10 +1770,11 @@ public Map getAllIetmBySupplierForCreditNoteConversion(HttpServletRequest reques
 				    String cat = request.getParameter("fk_cat_id");
 					String fDate = request.getParameter("startDate");
 					String sDate = request.getParameter("endDate");
+					String prodName = request.getParameter("prodName");
 			        Map<Long,SaleReports> map = new HashMap<Long,SaleReports>();
 			 		
 			        GoodsReceiveDao dao = new GoodsReceiveDao();
-			 		List<SaleReports> expList = dao.getSaleDetailsAsGST(cat,fDate,sDate);
+			 		List<SaleReports> expList = dao.getSaleDetailsAsGST(cat,fDate,sDate,prodName);
 			 		return expList;
 				}
             	

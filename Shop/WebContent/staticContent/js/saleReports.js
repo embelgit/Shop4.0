@@ -2914,6 +2914,20 @@ function gstWiseSaleReportValidation(){
 		}, 1500);
 		return false;
 	}
+	
+	if(document.gst.gstwsproName.value == "")
+	{
+		var msg="Please select Product Name";
+		var dialog = bootbox.dialog({
+	    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+	    closeButton: false
+		});			
+		setTimeout(function() {
+			dialog.modal('hide');
+		}, 1500);
+		return false;
+	}
+	
 	GSTWiseSaleReport();
 }
 
@@ -2932,9 +2946,20 @@ function GSTWiseSaleReport(){
 	var endDate = $("#gstEndDate").val();
 	var proValue = $("fk_cat_id_for_GST").val();
 	
+	
+	$("#gstwsproName option:selected").each(function()
+			{
+			   selectedVal = $(this).text();
+			});
+		
+		var splitText = selectedVal.split(",");
+		
+		var prodName = splitText[0];
+	
 	params["fk_cat_id"]= fk_cat_id;
 	params["startDate"]= startDate;
 	params["endDate"]= endDate;
+	params["prodName"]= prodName;
 	
 	params["methodName"] = "getSaleDetailsAsPerGST";
 
@@ -2968,7 +2993,7 @@ function GSTWiseSaleReport(){
 	               return nRow;
 	            },
 			
-/*	        	
+	        	
 				 "footerCallback": function ( row, data, start, end, display ) {
 			            var api = this.api(), data;
 			 
@@ -3079,7 +3104,7 @@ parseFloat(pageTotal).toFixed(2)
 );
 
 
-},  */  
+},  
 		    	
 				searching: true,
 				destroy: true,
@@ -6172,5 +6197,44 @@ function dayclosurereport()
 
 	);
 
-
 }
+
+
+//get All product name as per cat for GST Wise Sale Reports
+function getAllProductforGSTwiseReports(){
+
+		var params= {};
+		var input1 = document.getElementById('fk_cat_id_for_GST'),
+		list = document.getElementById('cat_drop_For_GST'),
+		i,fk_cat_id;
+		for (i = 0; i < list.options.length; ++i) {
+			if (list.options[i].value === input1.value) {
+				fk_cat_id = list.options[i].getAttribute('data-value');
+			}
+		}
+		
+		
+		$("#gstwsproName").empty();
+		$("#gstwsproName").append($("<option></option>").attr("value","").text("Select product"));
+		
+		
+		params["methodName"] = "getAllProductByCategoriesForAdvance";
+		
+		params["fk_cat_id"]= fk_cat_id;
+		
+		$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
+				{ var count = 1;
+				
+			var jsonData = $.parseJSON(data);
+			$.each(jsonData,function(i,v)
+					{
+				$("#gstwsproName").append($("<option></option>").attr("value",count).text(v.product)); 
+					count++;
+					});
+				}).error(function(jqXHR, textStatus, errorThrown){
+					if(textStatus==="timeout") {
+
+					}
+				});
+		
+	}
