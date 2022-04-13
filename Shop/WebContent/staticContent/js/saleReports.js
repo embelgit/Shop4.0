@@ -3108,7 +3108,7 @@ parseFloat(pageTotal).toFixed(2)
 		    	
 				searching: true,
 				destroy: true,
-				"scrollY":"300px",
+				"scrollY":false,
 				"scrollCollapse": true,
 				"paging":false,
 		        
