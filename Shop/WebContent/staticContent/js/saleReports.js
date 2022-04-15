@@ -2875,7 +2875,7 @@ function twoDatePaymentModeWiseSaleReport()
 }
 
 /*GST wise Sale Report*/
-function gstWiseSaleReportValidation(){
+function gstWiseSaleReportValidation1(){
 
 	if(document.gst.gstFisDate.value == "")
 	{
@@ -2928,10 +2928,10 @@ function gstWiseSaleReportValidation(){
 		return false;
 	}
 	
-	GSTWiseSaleReport();
+	GSTWiseSaleReport1();
 }
 
-function GSTWiseSaleReport(){
+function GSTWiseSaleReport1(){
 
 	var params= {};
 	var input1 = document.getElementById('fk_cat_id_for_GST'),
@@ -3109,6 +3109,7 @@ parseFloat(pageTotal).toFixed(2)
 				searching: true,
 				destroy: true,
 				"scrollY":false,
+				"scrollX":true,
 				"scrollCollapse": true,
 				"paging":false,
 		        
@@ -3120,6 +3121,7 @@ parseFloat(pageTotal).toFixed(2)
 		            {"data": "billNo", "width": "5%", "defaultContent": ""},
 		            {"data": "gstNumber", "width": "5%", "defaultContent": ""},
 		            {"data": "hsnNumber" , "width": "5%", "defaultContent": ""},
+		            
 		            {"data": "itemName", "width": "5%", "defaultContent": ""},
 		            {"data": "SalePrice", "width": "5%", "defaultContent": ""},
 		            {"data": "quantityCCReports", "width": "5%", "defaultContent": ""},

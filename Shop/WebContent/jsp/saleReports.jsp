@@ -1803,7 +1803,7 @@ div.dt-buttons {
 									<div class="input-group">
 										<input type="button" id="btn" name="save"
 											class="btn  btn-success " style="height: 38px; width: 121px;font-size: 18"
-											onclick="gstWiseSaleReportValidation()" value="Search" />
+											onclick="gstWiseSaleReportValidation1()" value="Search" />
 									</div>
 								</div>
 							</div>
