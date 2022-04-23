@@ -1395,7 +1395,7 @@ public String getVillageNameAndContactNoAndFirstNameByCustomer1(HttpServletReque
 		if(categories.size()>0){
 			Map<String, List> returnMap = new HashMap<String, List>();
 			returnMap.put("list", categories);
-			System.out.println("$$$$$$$$$$$$$$$$" + returnMap);
+			System.out.println("$$$$$$$$$$$$$$$$" + returnMap.toString());
 			return toJson(returnMap);
 		}else{
 			return toJson("No Data Available");
