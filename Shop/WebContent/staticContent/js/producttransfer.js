@@ -28,7 +28,7 @@ for (i = 0; i < list.options.length; ++i) {
 	itemparams["packweight"] = packweight;
 	itemparams["shop_id"] = shop_id;
 	itemparams["pack"] = pack;
-	document.getElementById('proName1').value = null;
+	//document.getElementById('proName1').value = null;
 
 	var count = 0;
 	var newrow;
@@ -41,10 +41,9 @@ for (i = 0; i < list.options.length; ++i) {
 		
 		var jsonData = $.parseJSON(data);
 		
-		
 	    $.each(jsonData,function(i, v)
 	    {		    
-						
+	    	
 						$("#jqGrid").jqGrid({
 							datatype : "local",
 	
@@ -540,7 +539,7 @@ for (i = 0; i < list.options.length; ++i) {
 			return false;
 		}*/
 		
-				if(document.goodsReceiveForm.proName1.value == "")
+	if(document.goodsReceiveForm.proName1.value == "")
 	{
 		var msg="Please Enter Product Name";
 		
@@ -666,7 +665,7 @@ for (i = 0; i < list.options.length; ++i) {
 		 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data)
 		 	    	{
 			
-			      var msg="Data Added successfully "
+			    var msg="Data Added successfully "
 				var dialog = bootbox.dialog({
 					
 				    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
@@ -675,14 +674,16 @@ for (i = 0; i < list.options.length; ++i) {
 				
 				setTimeout(function() {
 					dialog.modal('hide');
-				}, 1500);				
-				document.getElementById("save").disabled = false;
-				return false;
-			
-				 		/*alert(data)*/
-				 		/*location.reload();*/
+				}, 1500);	
 				
+				return false;
+				
+				document.getElementById("save").disabled = false;
+				location.reload();
+				
+			
 		 			}
+		 	
 		 		
 		 	    	).error(function(jqXHR, textStatus, errorThrown){
 		 	    		if(textStatus==="timeout") {

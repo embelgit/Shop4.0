@@ -509,12 +509,12 @@ div.dt-buttons {
 															<!-- 	<th>Discount Amount</th> -->
 														</thead>
 
-														<tfoot>
+														<!-- <tfoot>
 															<tr>
 																<th colspan="8" style="text-align: right">Total Rs:</th>
 																<th></th>
 															</tr>
-														</tfoot>
+														</tfoot> -->
 													</table>
 												</div>
 												<!--  <div class="pagination-page">

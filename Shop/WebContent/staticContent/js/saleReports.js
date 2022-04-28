@@ -725,9 +725,9 @@ function saleReportBetweenTwoDatesAsPerCat() {
 }
 //
 
-function allReportBetweenTwoDates() {
+function allcustReportBetweenTwoDates() {
 
-	if (document.saleReportFormRange.fisDate.value == "") {
+	if (document.custReportFormRange.fisDate.value == "") {
 		var msg = "Please Select Start Date";
 		var dialog = bootbox.dialog({
 			message : '<p class="text-center">'
@@ -739,7 +739,7 @@ function allReportBetweenTwoDates() {
 		}, 1500);
 		return false;
 	}
-	if (document.saleReportFormRange.endDate.value == "") {
+	if (document.custReportFormRange.endDate.value == "") {
 		var msg = "Please Select End Date";
 		var dialog = bootbox.dialog({
 			message : '<p class="text-center">'
@@ -751,12 +751,284 @@ function allReportBetweenTwoDates() {
 		}, 1500);
 		return false;
 	}
-	allReportBetweenTwoDates1();
+	allCustReportBetweenTwoDates1();
 }
 
-// function allReportBetweenTwoDates1()
+
+// all cust rert
+function allCustReportBetweenTwoDates1()
+// function all()
+{
+	var startdateA = $("#fisDate").val();
+	var enddateA = $("#endDate").val();
+
+	var params = {};
+
+	var fisDate = $("#fisDate").val();
+	var endDate = $("#endDate").val();
+
+	params["fisDate"] = fisDate;
+	params["endDate"] = endDate;
+	params["methodName"] = "getallDetailsBetweenTwoDates";
+
+	$
+			.post(
+					'/Shop/jsp/utility/controller.jsp',
+					params,
+					function(data) {
+
+						//$('#custsaleBetTwoDates').dataTable().fnClearTable();
+
+						var jsonData = $.parseJSON(data);
+						var catmap = jsonData.list;
+
+						if (catmap == null || catmap == "") {
+							/* alert("Sale Reports are Not Available"); */
+							var msg = "Sale Reports are Not Available ";
+							var dialog = bootbox.dialog({
+								message : '<p class="text-center">'
+										+ msg.fontcolor("red").fontsize(5)
+										+ '</p>',
+								closeButton : false
+							});
+
+							setTimeout(function() {
+								dialog.modal('hide');
+							}, 1500);
+							return false;
+						}
+
+						$(document)
+								.ready(
+										function() {
+											var total = $('#custsaleBetTwoDates')
+													.DataTable(
+															{
+
+																fnRowCallback : function(
+																		nRow,
+																		aData,
+																		iDisplayIndex) {
+																	$(
+																			"th:first",
+																			nRow)
+																			.html(
+																					iDisplayIndex + 1);
+																	return nRow;
+																},
+
+																"footerCallback" : function(
+																		row,
+																		data,
+																		start,
+																		end,
+																		display) {
+																	var api = this
+																			.api(), data;
+
+																	// Remove
+																	// the
+																	// formatting
+																	// to get
+																	// integer
+																	// data for
+																	// summation
+																	var intVal = function(
+																			i) {
+																		return typeof i === 'string' ? i
+																				.replace(
+																						/[\$,]/g,
+																						'') * 1
+																				: typeof i === 'number' ? i
+																						: 0;
+																	};
+
+																	pageTotal = api
+																			.column(
+																					8)
+																			.data()
+																			.reduce(
+																					function(
+																							a,
+																							b) {
+																						return intVal(a)
+																								+ intVal(b);
+																					},
+																					0);
+
+																	// Update
+																	// footer
+																	$(
+																			api
+																					.column(
+																							8)
+																					.footer())
+																			.html(
+
+																					parseFloat(
+																							pageTotal)
+																							.toFixed(
+																									2)
+
+																			);
+																	console
+																			.log(pageTotal);
+
+																},
+
+																destroy : true,
+																searching : false,
+																"scrollX" : true,
+
+																columns : [
+
+																		{
+																			"data" : "billNo",
+																			"width" : "5%"
+																		},
+																		{
+																			"data" : "itemName",
+																			"width" : "5%"
+																		},
+																		{
+																			"data" : "soldDate",
+																			"width" : "5%"
+																		},
+																		{
+																			"data" : "SalePrice",
+																			"width" : "5%"
+																		},
+																		{
+																			"data" : "quantityCCReports",
+																			"width" : "5%"
+																		},
+																		{
+																			"data" : "unit",
+																			"width" : "5%"
+																		},
+																		{
+																			"data" : "tax",
+																			"width" : "5%"
+																		},
+																		{
+																			"data" : "taxAmnt",
+																			"width" : "5%"
+																		},
+																		/*
+																		 * {"data":
+																		 * "discountAmount",
+																		 * "width":
+																		 * "5%"},
+																		 */
+																		{
+																			"data" : "totalAmount",
+																			"width" : "5%"
+																		},
+																		{
+																			"data" : "cusomerName",
+																			"width" : "5%"
+																		},
+																		{
+																			"data" : "billingtype",
+																			"width" : "5%"
+																		},
+																		{
+																			"data" : "email",
+																			"width" : "5%"
+																		}
+
+																],
+																/*
+																 * dom:
+																 * 'Bfrtip',
+																 * buttons: [
+																 * 'copy',
+																 * 'csv',
+																 * 'excel',
+																 * 'pdf',
+																 * 'print' ]
+																 */
+
+																dom : 'Bfrtip',
+																buttons : [
+																		// 'print',
+
+																		{
+																			extend : 'print',
+																			orientation : 'landscape',
+																			title : 'Product Category Wise Sale Reports Between 2 Dates ',
+																			footer : true,
+																			pageSize : 'LEGAL'
+																		},
+
+																		{
+																			extend : 'copyHtml5',
+																			orientation : 'landscape',
+																			title : 'Product Category Wise Sale Reports Between 2 Dates ',
+																			footer : true,
+																			pageSize : 'LEGAL'
+																		},
+
+																		{
+																			extend : 'excelHtml5',
+																			orientation : 'landscape',
+																			title : 'Product Category Wise Sale Reports Between 2 Dates ',
+																			messageTop : 'Product Category Wise Sale Reports Between 2 Dates ',
+																			footer : true,
+																			pageSize : 'LEGAL'
+																		},
+
+																		{
+																			extend : 'csvHtml5',
+																			orientation : 'landscape',
+																			title : 'Product Category Wise Sale Reports Between 2 Dates ',
+																			footer : true,
+																			pageSize : 'LEGAL'
+																		},
+
+																		// {
+																		// extend:
+																		// 'copyHtml5',
+																		// footer:
+																		// true
+																		// },
+																		// {
+																		// extend:
+																		// 'excelHtml5',
+																		// footer:
+																		// true
+																		// },
+																		// {
+																		// extend:
+																		// 'csvHtml5',
+																		// footer:
+																		// true
+																		// },
+
+																		{
+																			extend : 'pdfHtml5',
+																			orientation : 'landscape',
+																			title : 'Product Category Wise Sale Reports Between 2 Dates ',
+																			footer : true,
+																			pageSize : 'LEGAL'
+																		} ]
+
+															});
+										});
+
+						var mydata = catmap;
+						$('#custsaleBetTwoDates').dataTable().fnAddData(mydata);
+
+					}
+
+			);
+
+}
+
+
+
+
 function alll() {
-	// var categoryA = $("#fk_cat_id_for_payment_mode_two1").val();
 	var startdateA = $("#fisDate").val();
 	var enddateA = $("#endDate").val();
 
@@ -1058,295 +1330,6 @@ function alll() {
 
 }
 
-// all cust rert
-function allReportBetweenTwoDates1()
-// function all()
-{
-	var startdateA = $("#fisDate").val();
-	var enddateA = $("#endDate").val();
-
-	var params = {};
-
-	var fisDate = $("#fisDate").val();
-	var endDate = $("#endDate").val();
-
-	params["fisDate"] = fisDate;
-	params["endDate"] = endDate;
-	params["methodName"] = "getallDetailsBetweenTwoDates";
-
-	$
-			.post(
-					'/Shop/jsp/utility/controller.jsp',
-					params,
-					function(data) {
-
-						$('#allsaleBetTwoDates').dataTable().fnClearTable();
-
-						var jsonData = $.parseJSON(data);
-						var catmap = jsonData.list;
-
-						if (catmap == null || catmap == "") {
-							/* alert("Sale Reports are Not Available"); */
-							var msg = "Sale Reports are Not Available ";
-							var dialog = bootbox.dialog({
-								message : '<p class="text-center">'
-										+ msg.fontcolor("red").fontsize(5)
-										+ '</p>',
-								closeButton : false
-							});
-
-							setTimeout(function() {
-								dialog.modal('hide');
-							}, 1500);
-							return false;
-						}
-
-						$(document)
-								.ready(
-										function() {
-											var total = $('#allsaleBetTwoDates')
-													.DataTable(
-															{
-
-																// "paging":
-																// false,
-
-																"bProcessing" : true,
-																"sAutoWidth" : false,
-																"bDestroy" : true,
-																"sPaginationType" : "bootstrap", // full_numbers
-																"iDisplayStart " : 10,
-																"iDisplayLength" : 10,
-																"bPaginate" : false, // hide
-																						// pagination
-																// "bFilter":
-																// false, //hide
-																// Search bar
-																"bInfo" : true, // hide
-																				// showing
-																				// entries
-
-																fnRowCallback : function(
-																		nRow,
-																		aData,
-																		iDisplayIndex) {
-																	$(
-																			"th:first",
-																			nRow)
-																			.html(
-																					iDisplayIndex + 1);
-																	return nRow;
-																},
-
-																"footerCallback" : function(
-																		row,
-																		data,
-																		start,
-																		end,
-																		display) {
-																	var api = this
-																			.api(), data;
-
-																	// Remove
-																	// the
-																	// formatting
-																	// to get
-																	// integer
-																	// data for
-																	// summation
-																	var intVal = function(
-																			i) {
-																		return typeof i === 'string' ? i
-																				.replace(
-																						/[\$,]/g,
-																						'') * 1
-																				: typeof i === 'number' ? i
-																						: 0;
-																	};
-
-																	pageTotal = api
-																			.column(
-																					8)
-																			.data()
-																			.reduce(
-																					function(
-																							a,
-																							b) {
-																						return intVal(a)
-																								+ intVal(b);
-																					},
-																					0);
-
-																	// Update
-																	// footer
-																	$(
-																			api
-																					.column(
-																							8)
-																					.footer())
-																			.html(
-
-																					parseFloat(
-																							pageTotal)
-																							.toFixed(
-																									2)
-
-																			);
-																	console
-																			.log(pageTotal);
-
-																},
-
-																destroy : true,
-																searching : true,
-																"scrollY" : 300,
-																"scrollX" : true,
-																"paging" : false,
-
-																columns : [
-
-																		{
-																			"data" : "billNo",
-																			"width" : "5%"
-																		},
-																		{
-																			"data" : "itemName",
-																			"width" : "5%"
-																		},
-																		{
-																			"data" : "soldDate",
-																			"width" : "5%"
-																		},
-																		{
-																			"data" : "SalePrice",
-																			"width" : "5%"
-																		},
-																		{
-																			"data" : "quantityCCReports",
-																			"width" : "5%"
-																		},
-																		{
-																			"data" : "unit",
-																			"width" : "5%"
-																		},
-																		{
-																			"data" : "tax",
-																			"width" : "5%"
-																		},
-																		{
-																			"data" : "taxAmnt",
-																			"width" : "5%"
-																		},
-																		/*
-																		 * {"data":
-																		 * "discountAmount",
-																		 * "width":
-																		 * "5%"},
-																		 */
-																		{
-																			"data" : "totalAmount",
-																			"width" : "5%"
-																		},
-																		{
-																			"data" : "cusomerName",
-																			"width" : "5%"
-																		},
-																		{
-																			"data" : "billingtype",
-																			"width" : "5%"
-																		},
-																		{
-																			"data" : "email",
-																			"width" : "5%"
-																		}
-
-																],
-																/*
-																 * dom:
-																 * 'Bfrtip',
-																 * buttons: [
-																 * 'copy',
-																 * 'csv',
-																 * 'excel',
-																 * 'pdf',
-																 * 'print' ]
-																 */
-
-																dom : 'Bfrtip',
-																buttons : [
-																		// 'print',
-
-																		{
-																			extend : 'print',
-																			orientation : 'landscape',
-																			title : 'Product Category Wise Sale Reports Between 2 Dates ',
-																			footer : true,
-																			pageSize : 'LEGAL'
-																		},
-
-																		{
-																			extend : 'copyHtml5',
-																			orientation : 'landscape',
-																			title : 'Product Category Wise Sale Reports Between 2 Dates ',
-																			footer : true,
-																			pageSize : 'LEGAL'
-																		},
-
-																		{
-																			extend : 'excelHtml5',
-																			orientation : 'landscape',
-																			title : 'Product Category Wise Sale Reports Between 2 Dates ',
-																			messageTop : 'Product Category Wise Sale Reports Between 2 Dates ',
-																			footer : true,
-																			pageSize : 'LEGAL'
-																		},
-
-																		{
-																			extend : 'csvHtml5',
-																			orientation : 'landscape',
-																			title : 'Product Category Wise Sale Reports Between 2 Dates ',
-																			footer : true,
-																			pageSize : 'LEGAL'
-																		},
-
-																		// {
-																		// extend:
-																		// 'copyHtml5',
-																		// footer:
-																		// true
-																		// },
-																		// {
-																		// extend:
-																		// 'excelHtml5',
-																		// footer:
-																		// true
-																		// },
-																		// {
-																		// extend:
-																		// 'csvHtml5',
-																		// footer:
-																		// true
-																		// },
-
-																		{
-																			extend : 'pdfHtml5',
-																			orientation : 'landscape',
-																			title : 'Product Category Wise Sale Reports Between 2 Dates ',
-																			footer : true,
-																			pageSize : 'LEGAL'
-																		} ]
-
-															});
-										});
-
-						var mydata = catmap;
-						$('#allsaleBetTwoDates').dataTable().fnAddData(mydata);
-
-					}
-
-			);
-
-}
 
 /*
  * +++++++++++++++++ Sale report between two dates as per category
@@ -8244,7 +8227,7 @@ function billReportBetweenTwoDate1() {
 
 }
 
-function allReportForSingleDate() {
+function allcustReportForSingleDate() {
 
 	if (document.saleReportForm22.fDate.value == "") {
 		var msg = "Please Select Date"
@@ -8258,7 +8241,7 @@ function allReportForSingleDate() {
 		}, 1500);
 		return false;
 	}
-	allReportForSingleDate1();
+	allcustReportForSingleDate1();
 }
 function allReportsss() {
 	// var category = $("#fk_cat_id6").val();
@@ -8594,7 +8577,7 @@ function allReportsss() {
 }
 
 // all cust date wise
-function allReportForSingleDate1() {
+function allcustReportForSingleDate1() {
 	var date = $("#fDate").val();
 
 	var params = {};
@@ -8604,13 +8587,9 @@ function allReportForSingleDate1() {
 	params["fDate"] = fDate;
 	params["methodName"] = "getallcustForSingleDate";
 
-	$
-			.post(
-					'/Shop/jsp/utility/controller.jsp',
-					params,
-					function(data) {
+	$.post('/Shop/jsp/utility/controller.jsp',params,function(data) {
 
-						$('#sale1').dataTable().fnClearTable();
+						//$('#sale1').dataTable().fnClearTable();
 
 						var jsonData = $.parseJSON(data);
 						var catmap = jsonData.list;
@@ -8626,24 +8605,6 @@ function allReportForSingleDate1() {
 											var total = $('#sale1')
 													.DataTable(
 															{
-
-																// "paging":
-																// false,
-
-																"bProcessing" : true,
-																"sAutoWidth" : false,
-																"bDestroy" : true,
-																"sPaginationType" : "bootstrap", // full_numbers
-																"iDisplayStart " : 10,
-																"iDisplayLength" : 10,
-																"bPaginate" : false, // hide
-																						// pagination
-																// "bFilter":
-																// false, //hide
-																// Search bar
-																"bInfo" : true, // hide
-																				// showing
-																				// entries
 
 																fnRowCallback : function(
 																		nRow,
@@ -8717,10 +8678,8 @@ function allReportForSingleDate1() {
 																},
 
 																destroy : true,
-																searching : true,
-																"scrollY" : 300,
+																searching : false,
 																"scrollX" : true,
-																"paging" : false,
 
 																columns : [
 

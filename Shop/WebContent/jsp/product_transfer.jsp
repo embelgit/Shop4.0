@@ -744,7 +744,7 @@ function hamaliExpenseAddingToGross()
 					        	   ProductDetailsBean cat=(ProductDetailsBean)pdList.get(i);
 							%>		
 							<option data-value="<%=cat.getCatname()%>"
-							        value="<%=cat.getCatname()%> :::>>> <%=cat.getSubcatname()%> :::>>> <%=cat.getProductName()%> :::>>> <%=cat.getWeight()%> :::>>> <%=cat.getPack_type()%>"
+							        value="<%=cat.getCatname()%> :::>>> <%=cat.getSubcatname()%> :::>>> <%=cat.getProductName()%> :::>>> <%=cat.getStockAvailQuantity()%> :::>>> <%=cat.getWeight()%> :::>>> <%=cat.getPack_type()%>"
 						            myvalue ="<%=cat.getProductName()%>"
 						            myvalue1="<%=cat.getFk_cat_id()%>"
 									myvalue2="<%=cat.getFk_subCat_id()%>"

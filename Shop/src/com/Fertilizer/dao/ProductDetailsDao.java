@@ -109,7 +109,7 @@ public List<ProductDetailsBean> getAllMainProdInfo(HttpServletRequest request)
 //	query = session.createSQLQuery("SELECT p.pk_product_id, p.fk_cat_id, p.fk_subCat_id, c.cat_name, sc.sub_cat_name, p.product_name, p.weight from product_details p LEFT JOIN categories c ON p.fk_cat_id = c.pk_cat_id JOIN sub_categories sc ON p.fk_subCat_id = sc.pk_subcat_id WHERE p.fk_shop_id = '"+shopid+"'");
 	
 //	query = session.createSQLQuery("SELECT p.productId, p.FkCatId, p.FkSubCatId, c.cat_name, sc.sub_cat_name, p.ProductName, p.Weight,p.packing_type from stock_detail p LEFT JOIN categories c ON p.FkCatId = c.pk_cat_id JOIN sub_categories sc ON p.FkSubCatId = sc.pk_subcat_id WHERE p.fk_shop_id = '"+shopid+"'");
-	query = session.createSQLQuery("SELECT p.pk_product_id, p.fk_cat_id, p.fk_subCat_id, c.cat_name, sc.sub_cat_name, p.product_name, p.weight from product_details p LEFT JOIN categories c ON p.fk_cat_id = c.pk_cat_id JOIN sub_categories sc ON p.fk_subCat_id = sc.pk_subcat_id WHERE p.fk_shop_id = '"+shopid+"'");
+	query = session.createSQLQuery("SELECT p.pk_product_id, p.fk_cat_id, p.fk_subCat_id, c.cat_name, sc.sub_cat_name, p.product_name, p.weight, sd.avail_Quantity, gr.quantity from product_details p LEFT JOIN categories c ON p.fk_cat_id = c.pk_cat_id JOIN sub_categories sc ON p.fk_subCat_id = sc.pk_subcat_id RIGHT JOIN stock_detail sd ON p.pk_product_id=sd.productId LEFT JOIN goods_receive gr ON p.pk_product_id=gr.fk_product_id WHERE p.fk_shop_id ='"+shopid+"'");
 	
 	list = query.list();
 	
@@ -127,6 +127,8 @@ public List<ProductDetailsBean> getAllMainProdInfo(HttpServletRequest request)
 		bean.setSubcatname(o[4].toString());
 		bean.setProductName(o[5].toString());
 		bean.setWeight(Double.parseDouble(o[6].toString()));
+		bean.setStockAvailQuantity(Double.parseDouble(o[7].toString()));
+		bean.setGoodRecieveQuantity(Double.parseDouble(o[8].toString()));
 		bean.setPack_type("unpacked");
 		//System.out.println("Packing Weight =======>"+bean.getWeight());
 			
@@ -1306,7 +1308,7 @@ System.out.println("weight - "+packweight);
 		 hbu=HibernateUtility.getInstance();
 		 session=hbu.getHibernateSession();		 
 		 
-		 sqlQuery=("select PkStockId,FkCatId,FkSubCatId,fk_shop_id ,ProductName,CompanyName,avail_Quantity,unit,shop_name,productId,packing_type,Weight from stock_detail WHERE FkCatId ='"+fk_cat_id+"' AND FkSubCatId='"+fk_subCat_id+"' AND productId='"+productId+"' AND ProductName='"+proName+"' AND packing_type = '"+pack+"' AND Weight = '"+packweight+"' AND fk_shop_id = '"+shop_id+"'");
+		 sqlQuery=("select PkStockId,FkCatId,FkSubCatId,fk_shop_id ,ProductName,CompanyName,avail_Quantity,unit,shop_name,productId,packing_type,Weight from stock_detail WHERE FkCatId ='"+fk_cat_id+"' AND FkSubCatId='"+fk_subCat_id+"' AND productId='"+productId+"' AND ProductName='"+proName+"' AND packing_type = '"+pack+"' AND Weight = '"+packweight+"' AND fk_shop_id = '"+shop_id+"' AND avail_Quantity >0 ");
 		
 
 		 Query query = session.createSQLQuery(sqlQuery);

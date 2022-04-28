@@ -164,46 +164,10 @@
 		    } );
 		} );</script> -->
 						<div id="supplierSingleDate" class="tab-pane active">
-							<!-- <div class="row">
-								<div class="col-sm-offset-1 col-md-10">
-									<hr style="border-top-color: #c1b1b1;">
-								</div>
-							</div> -->
+							
 							<form class="form-horizontal" method="post" action="" name="saleReportForm22">
 								<fieldset>
-								<div class="shopform-margin">
-									<div class="row" style="margin-top: 30px">
-										<!-- <label class="col-md-2 col-sm-offset-0 control-label" for="fk_cat_id">Product Category<sup>*</sup></label> -->
-										<%-- <label class="col-md-3 control-label" for="fk_cat_id">Product Category<sup>*</sup>
-										</label>
-										<div class="col-md-3">
-											<div class="input-group">
-												<span class="input-group-addon"> <i
-													class="	glyphicon glyphicon-list-alt"></i>
-												</span>
-
-												<!-- Following code is to get categories from "categories" table of "fertilizer" DB -->
-												<!-- getAllMainCat() is implemented in  CategoryDetailsDao with return type List-->
-												<%
-													CategoryDetailsDao cdd = new CategoryDetailsDao();
-													List cList = cdd.getAllMainCat(request);
-												%>
-												<input list="cat_drop6" id="fk_cat_id6" class="form-control" placeholder="Product Category">
-												<datalist id="cat_drop6">
-													<%
-														for (int i = 0; i < cList.size(); i++) {
-															CategoryDetailsBean cat = (CategoryDetailsBean) cList.get(i);
-													%>
-
-													<option data-value="<%=cat.getCatId()%>"
-														value="<%=cat.getCategoryName()%>">
-														<%
-															}
-														%>
-													
-												</datalist>
-											</div>
-										</div> --%>
+							
 									<div class="form-group">
 										<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
 											<label class="control-label" for="">Enter Date:<sup>*</sup></label>
@@ -217,13 +181,11 @@
 											</div>
 										</div>
 									</div>
-								</div>
-							</div>
-						</fieldset>
-							</form>	
+						
+						
 								
 								<div class="row buttons-margin" align="center">
-									<input type="button" id="btn" name="save" class="btn btn-success" onclick="allReportForSingleDate()" value="Search" />
+									<input type="button" id="btn" name="save" class="btn btn-success" onclick="allcustReportForSingleDate()" value="Search" />
 								</div>
                                 
                                      <div class="table-responsive" id="" style="padding-top: 2%">
@@ -253,31 +215,16 @@
 												<tr>
 													<th colspan="8" style="text-align: right">Total Rs:</th>
 													<th></th>
-													<th></th><th></th>
+													<th></th>
+													<th></th>
 												</tr>
 											</tfoot>
 										</table>
-										<!-- <div class="pagination-page">
-                                            <nav aria-label="...">
-                                               <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
-                                                   <li class="page-item disabled">
-                                                        <a class="page-link" href="#">Previous</a>
-                                                   </li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                   <li class="page-item">
-                                                        <span class="page-link">
-                                                                1
-                                                       <span class="sr-only">(current)</span>
-                                                       </span>
-                                                   </li>
-                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                   <li class="page-item">
-                                                        <a class="page-link" href="#">Next</a>
-                                                   </li>
-                                               </ul>
-                                           </nav>
-                                       </div> -->
+										
 									</div>
+									
+									</fieldset>
+							</form>	
 								
 						</div>
 
@@ -285,113 +232,90 @@
 						
 						<div id="supplierBetweenTwoDate" class="tab-pane fade">
 
-							<!-- <div class="row">
-								<div class="col-sm-offset-1 col-md-10">
-									<hr style="border-top-color: #c1b1b1;">
-								</div>
-							</div> -->
-
-
 							<form class="form-horizontal" method="post" action=""
-								name="saleReportFormRange">
-								<fieldset>
-								<div class="shopform-margin">
-									<div class="row form-group" style="margin-top: 30px">
+										name="custReportFormRange">
+										<fieldset>
 
-									<div class="row">
-										<div class="form-group">
-											<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
-												<label class="control-label" for="customerName">Start Date:<sup>*</sup></label>
-											</div>
-											<div class="col-lg-3 col-md-3 col-sm-8">
-												<div class="input-group">
-													<span class="input-group-addon">
-														<i class="glyphicon glyphicon-calendar"></i>
-													</span> 
-													<input type="date" id="fisDate" placeholder="Start Date" class="form-control input-md" type="text">
+											<div class="row form-group">
+												<label class="col-md-3 control-label" for="customerName">
+													Start Date:<sup>*</sup>
+												</label>
+												<div class="col-md-3">
+													<div class="input-group">
+														<span class="input-group-addon"> <i
+															class="glyphicon glyphicon-calendar"></i>
+														</span> <input type="date" id="fisDate" placeholder="Start Date"
+															class="form-control input-md" type="text">
+													</div>
+												</div>
+
+												<label class="col-md-2 control-label" for="endDate">End
+													Date:<sup>*</sup>
+												</label>
+												<div class="col-md-3">
+													<div class="input-group">
+														<span class="input-group-addon"> <i
+															class="glyphicon glyphicon-calendar"></i>
+														</span> <input type="date" id="endDate" placeholder="End Date"
+															class="form-control input-md ac_district" type="text">
+													</div>
 												</div>
 											</div>
-											<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
-												<label class="control-label" for="endDate">End Date:<sup>*</sup></label>
-											</div>
-											<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
-												<div class="input-group">
-													<span class="input-group-addon">
-														<i class="glyphicon glyphicon-calendar"></i>
-													</span> 
-													<input type="date" id="endDate" placeholder="End Date" class="form-control input-md ac_district" type="text">
+
+											<div class="row form-group" style="padding-top: 2%">
+												<div class="col-md-2 col-md-offset-5">
+													<div class="input-group">
+														<input type="button" id="btn" name="save"
+															class="btn  btn-success "
+															style="height: 38px; width: 121px; font-size: 18"
+															onclick="allcustReportBetweenTwoDates()"
+															value="Search" />
+													</div>
 												</div>
 											</div>
-										</div>
-									</div>
-						</div>
-						</div>
-						</fieldset>
-							</form>	
-						
-								<div class="row buttons-margin" align="center">
-									<input type="button" id="btn" name="save" class="btn btn-success" onclick="allReportBetweenTwoDates()" value="Search" />
-								</div>
-									
-									<div class="" id="demo_jui" style="padding-top: 2%">
-<!-- 									<div class="table-responsive" style="padding-top:2%"> -->
-										<table class="table table-bordered table-striped table-condensed cf"
-											id="allsaleBetTwoDates" class="display">
-											
-											<thead>
-												<tr>
-													<th>Customer Bill No</th>
-													<th>Product Name</th>
-													<th>Sold Date</th>
-													<th>Sale Price</th>
-													<th>qty</th>
-													<th>Unit</th>
-													<th>Tax Percentage</th>
-													<th>Tax Amount</th>
-													<th>Total Amount Inc. Tax</th>
-													<th>Customer Name</th>
-													<th>Billing Type</th>
-												</tr>
-													<!-- 	<th>Discount Amount</th> -->
-											</thead>
+											<div class="container">
+												<div class="table-responsive">
 
-											<tfoot>
-												<tr>
-													<th colspan="8" style="text-align: right">Total Rs:</th>
-													<th></th>
-													<th></th>
-													<th></th>
-												</tr>
-											</tfoot>
-										</table>
-										<!-- <div class="pagination-page">
-                                            <nav aria-label="...">
-                                               <ul class="pagination" style="margin-top:-10px; margin-bottom: 40px;">
-                                                   <li class="page-item disabled">
-                                                        <a class="page-link" href="#">Previous</a>
-                                                   </li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                   <li class="page-item">
-                                                        <span class="page-link">
-                                                                1
-                                                       <span class="sr-only">(current)</span>
-                                                       </span>
-                                                   </li>
-                                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                   <li class="page-item">
-                                                        <a class="page-link" href="#">Next</a>
-                                                   </li>
-                                               </ul>
-                                           </nav>
-                                       </div> -->
-									</div>
+													<table
+														class="table table-bordered table-striped table-condensed cf"
+														id="custsaleBetTwoDates" class="display">
+
+														<thead>
+															<tr>
+																<th>Customer Bill No</th>
+																<th>Product Name</th>
+																<th>Sold Date</th>
+																<th>Sale Price</th>
+																<th>qty</th>
+																<th>Unit</th>
+																<th>Tax Percentage</th>
+																<th>Tax Amount</th>
+																<th>Total Amount Inc. Tax</th>
+																<th>Customer Name</th>
+																<th>Billing Type</th>
+															</tr>
+															<!-- 	<th>Discount Amount</th> -->
+														</thead>
+ 
+														<tfoot>
+															<tr>
+																<th colspan="8" style="text-align: right">Total Rs:</th>
+																<th></th>
+															</tr>
+														</tfoot>
+													</table>
+												</div>
 							
-						</div>
+											</div>
+										</fieldset>
+									</form>
+							
+									</div>
+							</div>
 					</div>
 
 				</div>
 
 
-	</div>
 </body>
 </html>

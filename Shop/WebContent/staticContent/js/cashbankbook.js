@@ -7688,7 +7688,7 @@ function partnerWiseReport()
 
 						if (catmap == "" || catmap == null)
 						{
-							var msg="Select Partner Name";
+							var msg="Transaction is Not Available For this Partner Name";
 							var dialog = bootbox.dialog({
 						    message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
 						    closeButton: false

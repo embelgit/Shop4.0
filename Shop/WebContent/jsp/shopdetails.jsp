@@ -123,7 +123,7 @@ function checkForDuplicateShopEntry(){
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-earphone"></i>
 							</span>
-              				<input id="contactNumber" name="contactNumber" placeholder="Contact Number" class="form-control input-md" type="text" >
+              				<input id="contactNumber" name="contactNumber" placeholder="Contact Number" maxlength="10" class="form-control input-md" type="text" >
             			</div>
             		</div>
 				</div>
