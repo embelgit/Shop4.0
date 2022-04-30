@@ -2941,7 +2941,7 @@ function purchaseReportAsPerGST() {
 	$.post(	'/Shop/jsp/utility/controller.jsp',
 					params,
 					function(data) {
-						$('#gstPurchaseReportTable').dataTable().fnClearTable();
+						//$('#gstPurchaseReportTable').dataTable().fnClearTable();
 
 						var jsonData = $.parseJSON(data);
 						var catmap = jsonData.list;
@@ -2967,18 +2967,20 @@ function purchaseReportAsPerGST() {
 													'#gstPurchaseReportTable')
 													.DataTable(
 															{
-
-
-															    "bProcessing": true,
-															    "sAutoWidth": false,
-															    "bDestroy":true,
-															    "sPaginationType": "bootstrap", // full_numbers
-															    "iDisplayStart ": 10,
-															    "iDisplayLength": 10,
-															    "bPaginate": false, //hide pagination
-															    //"bFilter": false, //hide Search bar
-															    "bInfo": true, // hide showing entries
-																
+																"bProcessing" : true,
+																"sAutoWidth" : false,
+																"bDestroy" : true,
+																"sPaginationType" : "bootstrap", // full_numbers
+																"iDisplayStart " : 10,
+																"iDisplayLength" : 10,
+																"bPaginate" : false, // hide
+																						// pagination
+																// "bFilter":
+																// false, //hide
+																// Search bar
+																"bInfo" : true, // hide
+																				// showing
+																				// entries
 																
 																fnRowCallback : function(
 																		nRow,
@@ -3018,124 +3020,7 @@ function purchaseReportAsPerGST() {
 																						: 0;
 																	};
 
-																	// Total
-																	// over all
-																	// pages
-						/*													total = api
-																			.column(
-																					6)
-																			.data()
-																			.reduce(
-																					function(
-																							a,
-																							b) {
-																						return intVal(a)
-																								+ intVal(b);
-																					},
-																					0);
-																	console
-																			.log(total);
-																	// Total
-																	// over this
-																	// page
-																	// for item
-																	// Rate
-																	// total
-																	pageTotal = api.column(7)
-																			.data()
-																			.reduce(
-																					function(
-																							a,
-																							b) {
-																						return intVal(a)
-																								+ intVal(b);
-																					},
-																					0);
 
-																	// Update
-																	// footer
-																	$(
-																			api
-																					.column(
-																							7)
-																					.footer())
-																			.html(
-
-																					parseFloat(
-																							pageTotal)
-																							.toFixed(
-																									2)
-
-																			);
-																	console
-																			.log(pageTotal);
-
-																	// Quantity
-																	// total
-																	pageTotal = api
-																			.column(
-																					8)
-																			.data()
-																			.reduce(
-																					function(
-																							a,
-																							b) {
-																						return intVal(a)
-																								+ intVal(b);
-																					},
-																					0);
-
-																	// Update
-																	// footer
-																	$(
-																			api
-																					.column(
-																							8)
-																					.footer())
-																			.html(
-
-																					parseFloat(
-																							pageTotal)
-																							.toFixed(
-																									2)
-
-																			);
-																	console
-																			.log(pageTotal);
-
-																	// Quantity
-																	// total
-																	pageTotal = api
-																			.column(
-																					9)
-																			.data()
-																			.reduce(
-																					function(
-																							a,
-																							b) {
-																						return intVal(a)
-																								+ intVal(b);
-																					},
-																					0);
-
-																	// Update
-																	// footer
-																	$(
-																			api
-																					.column(
-																							9)
-																					.footer())
-																			.html(
-
-																					parseFloat(
-																							pageTotal)
-																							.toFixed(
-																									2)
-
-																			);
-																	console
-																			.log(pageTotal);
-*/
 																	pageTotal = api
 																			.column(
 																					12)
@@ -3498,10 +3383,10 @@ function purchaseReportAsPerGST() {
 																},
 
 																destroy : true,
-																searching : true,
-																 "scrollY": false,
-															        "scrollX": true,
-															        "paging":   false,
+																searching : false,
+																"scrollY" : 300,
+																"scrollX" : true,
+																"paging" : false,
 
 																columns : [
 																		{

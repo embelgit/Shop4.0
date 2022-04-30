@@ -4655,7 +4655,7 @@ Double sp = Double.parseDouble(o[3].toString());
 Double qunti = Double.parseDouble(o[4].toString());
 Double total = sp * qunti;
 reports.setTotalAmount(total);
-if(tax.equals("5")){
+if(tax.equals("5.00")){
 Double tx = Double.parseDouble(tax);
 Double taxAmt = (tx/100)*(sp);
 Double totalTaxAmount = qunti * taxAmt;
@@ -4669,7 +4669,7 @@ reports.setTotalTaxAmount(totalTaxAmount);
 reports.setNetAmount(totalAmount);
 System.out.println("5 % GST Amount"+taxAmt);
 }
-else if(tax.equals("12")){
+else if(tax.equals("12.00")){
 Double tx = Double.parseDouble(tax);
 Double taxAmt = (tx/100)*(sp);
 Double totalTaxAmount = qunti * taxAmt;
@@ -4684,7 +4684,7 @@ reports.setNetAmount(totalAmount);
 System.out.println("12 % GST Amount"+taxAmt);
 	
 }
-else if(tax.equals("18")){
+else if(tax.equals("18.00")){
 Double tx = Double.parseDouble(tax);
 Double taxAmt = (tx/100)*(sp);
 Double totalTaxAmount = qunti * taxAmt;
@@ -5001,7 +5001,7 @@ public List getPurchaseReportsASPerGST(
 		Long k = 0l;
 		hbu = HibernateUtility.getInstance();
 		session = hbu.getHibernateSession();
-		NumberFormat formatter = new DecimalFormat("#0.00");
+		 NumberFormat formatter = new DecimalFormat("#0.00");
 
 Query query = session.createSQLQuery("SELECT g.purchaseDate, s.supplier_name, g.product_name, g.buy_price, g.quantity, g.tax_percentage, g.bill_number, g.iGstPercentage, p.hsn, s.tin_no, g.Per_Product_Total, discount_amount, su.unit_name, g.weight FROM goods_receive g LEFT JOIN product_details p on p.pk_product_id = fk_product_id LEFT JOIN supplier_details s on s.pk_supplier_id = fk_supplier_id JOIN sold_units su on p.fk_unit_id = su.pk_unit_id WHERE purchaseDate between '" + fDate +"' and '"+tDate+"'");
 //query.setParameter("paymentMode", paymentMode);
@@ -5086,7 +5086,7 @@ System.out.println("0 % igstTax Amount"+taxAmt);
  }			
 
 
-else if(igstTax.equals("5")){
+else if(igstTax.equals("5.00")){
 Double tx = Double.parseDouble(igstTax);
 Double taxAmt = (tx/100)*(sp);
 Double totalTaxAmount = qunti * taxAmt;
@@ -5117,7 +5117,7 @@ System.out.println("5 % igstTax Amount"+taxAmt);
 	reports.setTwentyEightPercentageGST(0.0);
 	
 }
-else if(igstTax.equals("12")){
+else if(igstTax.equals("12.00")){
 Double tx = Double.parseDouble(igstTax);
 Double taxAmt = (tx/100)*(sp);
 Double totalTaxAmount = qunti * taxAmt;
@@ -5149,7 +5149,7 @@ System.out.println("12 % iGST Amount"+taxAmt);
 	reports.setTwentyEightPercentageGST(0.0);
 	
 }
-else if(igstTax.equals("18")){
+else if(igstTax.equals("18.00")){
 Double tx = Double.parseDouble(igstTax);
 Double taxAmt = (tx/100)*(sp);	
 Double newSalePrice = sp + taxAmt;
@@ -5177,7 +5177,7 @@ reports.setTotalTaxAmount(reportTotalTaxAmount);
 	reports.setEighteenPercentageGST(0.0);
 	reports.setTwentyEightPercentageGST(0.0);
 }
-else if(igstTax.equals("28")){
+else if(igstTax.equals("28.00")){
 Double tx = Double.parseDouble(igstTax);
 Double taxAmt = (tx/100)*(sp);
 Double totalTaxAmount = qunti * taxAmt;
@@ -5217,7 +5217,7 @@ reports.setTwentyEightPercentageGST(0.0);
 			*/
 
 	
-else if(tax.equals("5")){
+else if(tax.equals("5.00")){
 Double tx = Double.parseDouble(tax);
 Double taxAmt = (tx/100)*(sp);
 Double roundedTaxAmt = (double )Math.round(taxAmt);
@@ -5249,7 +5249,7 @@ System.out.println("5 % GST Amount"+roundedTaxAmt);
 	reports.setiGSTEighteenPercentage(0.0);
 	reports.setiGSTTwentyeightPercentage(0.0);
 }
-else if(tax.equals("12")){
+else if(tax.equals("12.00")){
 Double tx = Double.parseDouble(tax);
 Double taxAmt = (tx/100)*(sp);
 Double roundedTaxAmt = (double )Math.round(taxAmt);
@@ -5282,7 +5282,7 @@ System.out.println("12 % GST Amount"+roundedTaxAmt);
 	reports.setiGSTTwentyeightPercentage(0.0);
 	
 }
-else if(tax.equals("18")){
+else if(tax.equals("18.00")){
 Double tx = Double.parseDouble(tax);
 Double taxAmt = (tx/100)*(sp);
 Double roundedTaxAmt = (double )Math.round(taxAmt);
@@ -5312,7 +5312,7 @@ System.out.println("18 % GST Amount"+roundedTaxAmt);
 	reports.setiGSTEighteenPercentage(0.0);
 	reports.setiGSTTwentyeightPercentage(0.0);
 }
-else if(tax.equals("28")){
+else if(tax.equals("28.00")){
 Double tx = Double.parseDouble(tax);
 Double taxAmt = (tx/100)*(sp);
 Double roundedTaxAmt = (double )Math.round(taxAmt);

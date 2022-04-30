@@ -1012,8 +1012,8 @@
 	
 						<tfoot>
 							<tr>
-								<th colspan="12" style="text-align: right">Total Rs:</th>
-								<th></th>
+								<th colspan="23" style="text-align: right">Total Rs:</th>
+						<!-- 		<th></th>
 								<th></th>
 								<th></th>
 								<th></th>
@@ -1023,7 +1023,7 @@
 	 							<th></th>
 								<th></th>
 								<th></th>
-								<th></th>
+								<th></th> -->
 							</tr>
 						</tfoot>
 					</table>
