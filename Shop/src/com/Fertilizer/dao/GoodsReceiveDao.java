@@ -3060,7 +3060,7 @@ try
 {	
 	 hbu = HibernateUtility.getInstance();
 	 session = hbu.getHibernateSession();
-	 Query query = session.createSQLQuery("SELECT bill_no, product_name, DATE(insert_date), sale_price, quantity, Discount_amount, Tax_amount, total_per_product, tax_percentage, igstPercentage, kg, grams, ltr, mili, total_gst_tax_per_product, hamali_expense, unit, cat_id,customer_name,bill_Type,email FROM fertilizer_billing WHERE  DATE(insert_date)='"+fDate+"'");
+	 Query query = session.createSQLQuery("SELECT bill_no, product_name, DATE(insert_date), sale_price, quantity, Discount_amount, Tax_amount, total_per_product, tax_percentage, igstPercentage, kg, grams, ltr, mili, total_gst_tax_per_product, hamali_expense, unit, cat_id,customer_name,bill_Type,email,COUNT(bill_no) FROM fertilizer_billing WHERE  DATE(insert_date)='"+fDate+"'");
 
 // query.setParameter("fDate", fDate);
 // query.setParameter("cat", cat);
@@ -3073,20 +3073,11 @@ try
 	{
 		 SaleReports reports = new SaleReports();
 		 System.out.println("rslt - "+Arrays.toString(object));
-		 Integer billNo =  Integer.parseInt(object[0].toString());
-		
-		 hbu2 = HibernateUtility.getInstance();
-		 session2 = hbu2.getHibernateSession();
 		 
-		 Query query2 = session2.createSQLQuery("select bill_no, COUNT(bill_no) from fertilizer_billing where bill_no = "+billNo+" GROUP BY bill_no");			 
- 
- List<Object[]> templist = query2.list();
- 
- for (Object[] object2 : templist)
- {
-	 cmpBillNo = Integer.parseInt(object2[0].toString());
-	 billCount = Integer.parseInt(object2[1].toString());
- }
+		 Integer billNo =  Integer.parseInt(object[0].toString());
+		 billCount =  Integer.parseInt(object[21].toString());
+		 
+		
  
  Double hamali1 = (Double.parseDouble(object[15].toString()));
 	if(hamali1 != null)
@@ -3144,7 +3135,7 @@ if(unit.equalsIgnoreCase("ltr"))
 //	reports.setQuantityCCReports(Double.toString(ltrAndMili));
 	//System.out.println(unit+" == Assign to ==> "+reports.getQuantityCCReports());
 }			
-	reports.setCustomerBill(Integer.parseInt(object[0].toString()));
+	reports.setCustomerBill(billNo);
 	reports.setItemName(object[1].toString());
 	reports.setSoldDate(object[2].toString());
 	reports.setSalePrice(Double.parseDouble(object[3].toString()));
@@ -3187,7 +3178,8 @@ else {*/
 				 * if(tax == 0.00){ reports.setTaxPerc(igst); } else{ reports.setTaxPerc(tax); }
 				 */
 			saleList.add(reports);
-	}}
+	}
+	}
 	catch(Exception e)
 	{
 		e.printStackTrace();	

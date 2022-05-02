@@ -777,7 +777,7 @@ function allCustReportBetweenTwoDates1()
 					params,
 					function(data) {
 
-						//$('#custsaleBetTwoDates').dataTable().fnClearTable();
+						$('#custsaleBetTwoDates').dataTable().fnClearTable();
 
 						var jsonData = $.parseJSON(data);
 						var catmap = jsonData.list;
@@ -817,7 +817,7 @@ function allCustReportBetweenTwoDates1()
 																	return nRow;
 																},
 
-																"footerCallback" : function(
+																/*"footerCallback" : function(
 																		row,
 																		data,
 																		start,
@@ -874,16 +874,18 @@ function allCustReportBetweenTwoDates1()
 																	console
 																			.log(pageTotal);
 
-																},
+																},*/
 
 																destroy : true,
 																searching : false,
+																"scrollY" : 300,
 																"scrollX" : true,
+																"paging" : false,
 
 																columns : [
 
 																		{
-																			"data" : "billNo",
+																			"data" : "customerBill",
 																			"width" : "5%"
 																		},
 																		{
@@ -8589,7 +8591,7 @@ function allcustReportForSingleDate1() {
 
 	$.post('/Shop/jsp/utility/controller.jsp',params,function(data) {
 
-						//$('#sale1').dataTable().fnClearTable();
+						$('#sale1').dataTable().fnClearTable();
 
 						var jsonData = $.parseJSON(data);
 						var catmap = jsonData.list;
@@ -8618,7 +8620,7 @@ function allcustReportForSingleDate1() {
 																	return nRow;
 																},
 
-																"footerCallback" : function(
+																/*"footerCallback" : function(
 																		row,
 																		data,
 																		start,
@@ -8675,11 +8677,13 @@ function allcustReportForSingleDate1() {
 																	console
 																			.log(pageTotal);
 
-																},
+																},*/
 
 																destroy : true,
 																searching : false,
+																"scrollY" : 300,
 																"scrollX" : true,
+																"paging" : false,
 
 																columns : [
 
