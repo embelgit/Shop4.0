@@ -963,7 +963,8 @@ span.ui-jqgrid-cell-wrapper {
 
 .ui-jqdialog .fm-button {
 	display: inline-block;
-	padding: .4em .5em;
+	/* padding: .4em .5em; */
+	padding: .8em .8em;
 	text-decoration: none;
 	cursor: pointer;
 	position: relative;
@@ -972,7 +973,10 @@ span.ui-jqgrid-cell-wrapper {
 }
 
 .ui-jqdialog .fm-button .fm-button-text {
-	padding: 0 .2em
+	/* padding: 0 .0em; */
+	padding: 0 0.3em;
+	margin-top: -10px !important;
+	/* margin-top: -10px; */
 }
 
 .delmsg {
