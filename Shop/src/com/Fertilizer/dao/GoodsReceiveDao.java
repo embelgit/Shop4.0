@@ -3160,13 +3160,14 @@ Double TaxAmnt =reports.getTaxAmnt();
 
 reports.setCusomerName((object[18].toString()));
 reports.setBillingtype((object[19].toString()));
-/*if(object[20]==null)
+
+if(object[20]==null)
 {
 	reports.setEmail("N/A");	
 }
-else {*/
+else {
 	reports.setEmail(object[20].toString());
-//}
+}
 
 //Double total = ((totalWithoutExpense - disValue) + TaxAmnt + perProducthamaliExp);
 //reports.setTotalAmount((double)Math.round(total*100)/100);

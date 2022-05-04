@@ -211,6 +211,7 @@
 													<th>Total Amount Inc. Tax</th>
 													<th>Customer Name</th>
 												<th>Billing Type</th>
+												<th>Email</th>
 												</tr>
 											</thead>
 										<!-- 	<tfoot>
@@ -293,6 +294,7 @@
 																<th>Total Amount Inc. Tax</th>
 																<th>Customer Name</th>
 																<th>Billing Type</th>
+																<th>Email</th>
 															</tr>
 															<!-- 	<th>Discount Amount</th> -->
 														</thead>
