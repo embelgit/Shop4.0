@@ -4044,8 +4044,8 @@ function getCreditCustomerDetailsBetweenTwoDates() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -5534,8 +5534,8 @@ function expensePaymentReportForSingleDate() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -5880,8 +5880,8 @@ function getExpensePaymentDetailsBetTwoDays() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -6266,8 +6266,8 @@ function expenseReportAsPerExpenditureName() {
 
 										destroy : true,
 										searching : true,
-										"scrollY" : 500,
-										"scrollX" : false,
+										"scrollY" : 300,
+										"scrollX" : true,
 										"paging" : false,
 
 										columns : [
@@ -8139,8 +8139,8 @@ function expenseReportAsPerExpenditureType()
 
 										destroy : true,
 										searching : true,
-										"scrollY" : 500,
-										"scrollX" : false,
+										"scrollY" : 300,
+										"scrollX" : true,
 										"paging" : false,
 
 										columns : [
@@ -9645,8 +9645,8 @@ function expensePaymentReportpaymode1() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [

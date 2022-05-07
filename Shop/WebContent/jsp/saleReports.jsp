@@ -110,6 +110,9 @@
 .container-fluid {
 	overflow: hidden;
 }
+.container {
+	padding-bottom:100px;
+}
 
 div.dt-buttons {
 	position: relative;
@@ -663,7 +666,9 @@ div.dt-buttons {
 												</div>
 											</div>
 
-											<div class="container table-responsive">
+											<div class="container">
+											<div class="table-responsive">
+											
 												<!-- 									<div class="table-responsive" style="padding-top:2%"> -->
 												<table
 													class="table table-bordered table-striped table-condensed cf"
@@ -709,6 +714,7 @@ div.dt-buttons {
                                                </ul>
                                            </nav>
                                        </div> -->
+											</div>
 											</div>
 										</fieldset>
 									</form>
@@ -819,7 +825,8 @@ div.dt-buttons {
 
 												</div>
 											</div>
-											<div class="container table-responsive">
+											<div class="container">
+											<div class="table-responsive">
 												<!-- 									<div class="table-responsive" style="padding-top:2%"> -->
 												<table
 													class="table table-bordered table-striped table-condensed cf"
@@ -865,6 +872,7 @@ div.dt-buttons {
                                                </ul>
                                            </nav>
                                        </div> -->
+											</div>
 											</div>
 										</fieldset>
 									</form>

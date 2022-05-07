@@ -29,7 +29,26 @@
 
 .container-fluid {
 	overflow: hidden;
+	padding-bottom:150px;
 }
+
+div#example3_wrapper {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+div#example4_wrapper {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+table#example5 {
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+div#example6_wrapper {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
 
 </style>
 </head>
@@ -81,14 +100,14 @@
 						<div class="col-md-2 col-md-offset-5">
 							<div class="input-group">
 								<input type="button" id="btn" name="save"
-									class="btn btn-success" style="height: 38px; width: 121px;font-size: 18"
-									onclick="creditdebitForsingleDate(); creditdebitForsingleDate1();" value="Search" />
+									class="btn btn-success" style="height: 38px; width: 121px;font-size: 18;margin-bottom: 15px;"
+									onclick="creditdebitForsingleDate(); creditdebitForsingleDate1();" value="Search"/>
 							</div>
 						</div>
 					</div>
-					<div class="table-responsive" style="padding-top:3%">
-					<div class="col-md-offset-3 col-md-5">
-					<table id="example3" class="display	">
+					<div class="table-responsive">
+					<!-- <div class="col-md-offset-3 col-md-5"> -->
+					<table   id="example3" class="display">
 						<thead>
 							<tr>
 							    <th>Name</th>
@@ -105,9 +124,14 @@
 							</tr>
 						</tfoot>
 					</table>
+					<!-- </div> -->
+					
 					</div>
 					
-					<div class="col-md-5">
+					
+					<div class="table-responsive">
+					
+					<!-- <div class="col-md-5"> -->
 					<table id="example4" class="display	">
 						<thead>
 							<tr>
@@ -125,7 +149,7 @@
 							</tr>
 						</tfoot>
 					</table>
-					</div>
+					<!-- </div> -->
 				</div>
 				</fieldset>
 			</form>
@@ -161,13 +185,13 @@
 				       <div class="row form-group buttons_margin_top ">
 												<div align="center">
 												  
-												    <input type="button"  id="btn" name="save"   style="height: 38px; width: 121px;font-size: 18"
+												    <input type="button"  id="btn" name="save"   style="height: 38px; width: 121px;font-size: 18;margin-bottom: 15px;"
 												     class="btn btn-success " onclick="creditdebitForBetTowDate(); creditdebitForBetTowDate1();" value="Search"/>
 												     									
 												</div>
 									</div>	
-						<div	class="table-responsive" style="padding-top:3%">
-					<div class="col-md-offset-3 col-md-5">
+						<div class="table-responsive">
+					<!-- <div class="col-md-offset-3 col-md-5"> -->
 					<table id="example5" class="display	">
 						<thead>
 							<tr>
@@ -185,9 +209,10 @@
 							</tr>
 						</tfoot>
 					</table>
+					<!-- </div> -->
 					</div>
 					
-					<div class="col-md-5">
+					<div class="table-responsive">
 					<table id="example6" class="display	">
 						<thead>
 							<tr>
@@ -205,7 +230,6 @@
 							</tr>
 						</tfoot>
 					</table>
-					</div>
 				</div>
 				</fieldset>
 				</form>

@@ -1621,8 +1621,8 @@ function saleReportBetweenTwoDatesAsPerShop() {
 
 																destroy : true,
 																searching : false,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -2357,6 +2357,7 @@ function saleReportforSingleDateAsPerPro() {
 																destroy : true,
 																searching : false,
 																"scrollY" : true,
+																"scrollX" : true,
 
 																columns : [
 																		{
@@ -7274,6 +7275,7 @@ function billWiseSaleReportForGrossTotal() {
 																searching : true,
 																destroy : true,
 																"scrollY" : "300px",
+																"scrollX" : true,
 																"scrollCollapse" : true,
 																"paging" : false,
 
@@ -9715,8 +9717,8 @@ function saleReportBetweenTwoDatesAsPeruser1() {
 
 																destroy : true,
 																searching : false,
-																"scrollY" : 500,
-																"scrollX" : false,
+																"scrollY" : 300,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [

@@ -34,8 +34,18 @@
 
 .container-fluid {
 	overflow: hidden;
+	padding-bottom: 100px;
 }
 
+div#example1_wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+div#example2_wrapper {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
 
 </style>
 
@@ -58,7 +68,7 @@ $(document).ready(function () {
 <body>
  <div class="container-fluid"> 
 
- <div class="container col-md-offset-1" > 
+ <div class="container col-md-offset-1 pb-5" > 
  		
  		<div class="row">
 			<div align="center" style="margin-top: 75px">
@@ -73,10 +83,9 @@ $(document).ready(function () {
 		</div>
  	
  
- 	
+ 	           <!-- <div class="col-md-offset-3 col-md-5"> -->
 					<div	class="table-responsive">
-					<div class="col-md-offset-3 col-md-5">
-					<table id="example1" class="display	">
+					<table class="table table-bordered table-striped table-condensed cf" id="example1" class="display	">
 						<thead>
 							<tr>
 							    <th>Name</th>
@@ -88,6 +97,7 @@ $(document).ready(function () {
 							<tr>
 								<!-- <th colspan="0" style="text-align: right">Total:</th> -->
 								<th></th>
+								<!-- <th colspan="0" style="text-align: right">Total:</th> -->
 								<th></th>
 			
 			
@@ -96,8 +106,12 @@ $(document).ready(function () {
 					</table>
 					</div>
 					
-					<div class="col-md-5">
-					<table id="example2" class="display	">
+					<!-- </div> -->
+					
+					
+					 <!-- <div class="col-md-5"> -->
+					<div	class="table-responsive">
+					<table class="table table-bordered table-striped table-condensed cf" id="example2" class="display	">
 						<thead>
 							<tr>
 							    <th>Name</th>
@@ -116,7 +130,7 @@ $(document).ready(function () {
 						</tfoot>
 					</table>
 					</div>
-				</div>
+				 <!-- </div>  -->
 				
 				 
 				<div class="row form-group" style="padding-top:4%">

@@ -375,7 +375,7 @@ h3.cashbooktransaction {
 
 .dataTables_wrapper {
     /* background: linear-gradient(45deg, orange, transparent); */
-    background: linear-gradient(45deg, #f55555, #fccf31);
+     background: linear-gradient(45deg, #f55555, #fccf31); 
     border-radius: 10px;
     text-align: center;
 }
