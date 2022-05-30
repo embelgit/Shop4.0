@@ -1812,6 +1812,9 @@
 	itemparams["packweight"] = packweight;
 	itemparams["booking"] = booking;
 	
+	document.getElementById('fk_cat_id').value = null;
+	document.getElementById('subCat').value = null;
+	document.getElementById('proName').value = null;
 	document.getElementById('proName1').value = null;
 	document.getElementById('booking').value = null;
 	var count = 0;
@@ -2116,7 +2119,7 @@
 											sortorder : 'desc',
 											loadonce : false,
 											viewrecords : true,
-											//width : 1400,
+											width : 1500,
 											shrinkToFit : true,
 											hoverrows : true,
 											rownumbers : true,
@@ -4872,6 +4875,9 @@
 		itemparams["productId"] = productId;
 		itemparams["packweight"] = packweight;
 		
+		document.getElementById('fk_cat_id').value = null;
+		document.getElementById('subCat').value = null;
+		document.getElementById('proName').value = null;
 		document.getElementById('proName1').value = null;
 		var count = 0;
 		var newrow;
@@ -5040,7 +5046,7 @@
 														},
 														{
 															name : 'TotalExTax',
-															width : 70,
+															width : 80,
 															hidden:false,
 															align : 'center',
 														},
@@ -5061,7 +5067,7 @@
 												sortorder : 'desc',
 												loadonce : false,
 												viewrecords : true,
-												//width : 1400,
+												width : 1500,
 												shrinkToFit : true,
 												hoverrows : true,
 												rownumbers : true,
@@ -6020,11 +6026,8 @@
 	
 	/*----------------validation for advance booking-----------------*/
 	
-	function addingAdvanvceBooking(){
-		
-	
-		
-		
+	function addingAdvanvceBooking()
+	{
 		if (document.goodsReceiveForm.supplier.value == "")
 		{		
 			var msg="Please Select Supplier Name";
@@ -6034,6 +6037,28 @@
 			    closeButton: false
 			});
 			
+			setTimeout(function() {
+				dialog.modal('hide');
+			}, 1500);
+			return false;
+		}
+		
+		var input = document.getElementById('supplier'), 
+		list = document.getElementById('sup_drop'), i, supplier;
+		
+		for (i = 0; i < list.options.length; ++i) {
+			if (list.options[i].value === input.value) {
+			supplier = list.options[i].getAttribute('data-value');
+			}
+		}
+		var supplierId = supplier;
+		if(supplierId == undefined)
+		{
+			var msg="Please Select Supplier Name Only Do Not Type";
+				var dialog = bootbox.dialog({
+				   message: '<p class="text-center">'+msg.fontcolor("red").fontsize(5)+'</p>',
+				   closeButton: false
+			});
 			setTimeout(function() {
 				dialog.modal('hide');
 			}, 1500);

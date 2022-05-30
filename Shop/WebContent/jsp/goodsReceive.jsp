@@ -775,9 +775,43 @@ function clearfeild() {
 							</div>
 						</div>
            				<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
-        	     			<label class="control-label" for="billNum"><b>Bill Number<sup>*</sup></b></label>  
+           					<label class="control-label" for="booking" ><b>PO No</b></label>
 			           	</div>
-			           	<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+	            		<div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon nogyphicon">No</span>
+							</span>
+				<!-- 	<input id="booking" name="booking" placeholder="PO No" class="form-control input-md" type="text" 
+	              				       onchange="productDetailInGridasperPO();productDetailnonGridasperPO()" > checkBookingno() 
+	              				<datalist id="booking_drop"></datalist> -->
+	              				
+	              			<select id="booking" name="booking" placeholder="PO No" class="form-control input-md"
+	              				onchange="productDetailInGridasperPO();productDetailnonGridasperPO()" >
+	              				
+	              			</select>
+	            		</div>
+	            	</div>
+           			</div>			 
+           		</div>
+           		
+         		<div class="row">
+				<div class="form-group">	  			
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
+						<label class="control-label" for="purchaseDate">Purchase  Date<sup>*</sup></label>  
+          			</div>		  
+          			<div class="col-lg-3 col-md-3 col-sm-8">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-calendar"></i>
+							</span>
+	              			<input type="date"  id="purchaseDate" name="purchaseDate" value="<%=todayDate%>" placeholder="Purchase Date" class="form-control input-md">
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
+						<label class="control-label" for="billNum"><b>Bill Number<sup>*</sup></b></label>
+			        </div>
+			        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
 							<div class="input-group">
 								<span class="input-group-addon">
 									<span class="glyphicon nogyphicon">No</span>
@@ -785,9 +819,9 @@ function clearfeild() {
 	              				<input id="billNum" name="billNum" placeholder="Enter Bill Number" class="form-control input-md" 
 	              				       onchange="checkForDuplicateBillNoEntry()" type="text">
 	            			</div>
-	            		</div>
-           			</div>			 
-           		</div>
+	            	</div>
+				</div>
+			</div>
 		
 		<div class="row">
 		 	<div class="form-group">
@@ -921,43 +955,10 @@ function clearfeild() {
 			    	</div>	
 				</div>	
 			</div>	
-							
-			<div class="row">
-				<div class="form-group">	  			
-					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-4">
-						<label class="control-label" for="purchaseDate">Purchase  Date<sup>*</sup></label>  
-          			</div>		  
-          			<div class="col-lg-3 col-md-3 col-sm-8">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-calendar"></i>
-							</span>
-	              			<input type="date"  id="purchaseDate" name="purchaseDate" value="<%=todayDate%>" placeholder="Purchase Date" class="form-control input-md">
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-2 col-sm-4 formspacelabel">
-						<label class="control-label" for="booking" ><b>PO No</b></label>  
-			        </div>
-			        <div class="col-lg-3 col-md-3 col-sm-8 formspaceinput">
-						<div class="input-group">
-							<span class="input-group-addon">
-								<span class="glyphicon nogyphicon">No</span>
-							</span>
-				<!-- 	<input id="booking" name="booking" placeholder="PO No" class="form-control input-md" type="text" 
-	              				       onchange="productDetailInGridasperPO();productDetailnonGridasperPO()" > checkBookingno() 
-	              				<datalist id="booking_drop"></datalist> -->
-	              				
-	              			<select id="booking" name="booking" placeholder="PO No" class="form-control input-md"
-	              				onchange="productDetailInGridasperPO();productDetailnonGridasperPO()" >
-	              				
-	              			</select>
-	            		</div>
-	            	</div>
-				</div>
-			</div>	
+				
 									
-	<div class="row" style="align:center; margin-left: 60px;" >
-		<div class="table-responsive " style="width:1350px;" > 
+	<div class="row" style="align:center; margin-left: 60px; margin-right: 10px;" >
+		<div class="table-responsive " > 
 			<table id="jqGrid" ></table>
 			<div id="jqGridPager"></div>
 		</div>
