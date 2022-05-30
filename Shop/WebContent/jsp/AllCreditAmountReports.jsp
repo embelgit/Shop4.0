@@ -120,7 +120,7 @@
 												     									
 												</div>
 									</div>	
-									<div class="table-responsive" style="padding-top:2%">
+									<div class="table-responsive" >
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="example11" class="display">
@@ -182,7 +182,7 @@
 												</div>
 									</div>	
 									
-									<div class="table-responsive" style="padding-top:2%">
+									<div class="table-responsive">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="example" class="display">
@@ -260,7 +260,7 @@
 												     									
 												</div>
 									</div>	
-									<div class="table-responsive" style="padding-top:2%">
+									<div class="table-responsive">
 							<table class="table table-bordered table-striped table-condensed cf"
 											id="example3" class="display">
 						
@@ -321,7 +321,7 @@
 												</div>
 									</div>
 									
-							<div class="table-responsive" style="padding-top:2%">
+							<div class="table-responsive">
 								<table class="table table-bordered table-striped table-condensed cf"
 							id="example4" class="display">	
 						

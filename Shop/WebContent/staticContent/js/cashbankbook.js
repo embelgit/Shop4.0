@@ -1340,6 +1340,14 @@ function supplierReportForSingleDate() {
 													'#supplierSingleDatetable')
 													.DataTable(
 															{
+																"bProcessing" : true,
+																"sAutoWidth" : false,
+																"bDestroy" : true,
+																"sPaginationType" : "bootstrap", // full_numbers
+																"iDisplayStart " : 10,
+																"iDisplayLength" : 10,
+																"scrollX" : true,
+																"bPaginate" : false, 
 
 																fnRowCallback : function(
 																		nRow,
@@ -1505,7 +1513,7 @@ function supplierReportForSingleDate() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -1743,6 +1751,15 @@ function getSupplierDetailsBetweenTwoDates() {
 											$('#supplierBetweenTwoDatestable')
 													.DataTable(
 															{
+																/*"bProcessing" : true,
+																"sAutoWidth" : false,
+																"bDestroy" : true,
+																"sPaginationType" : "bootstrap", // full_numbers
+																"iDisplayStart " : 10,
+																"iDisplayLength" : 10,
+																"scrollX" : true,
+																"bPaginate" : false, */
+																
 																fnRowCallback : function(
 																		nRow,
 																		aData,
@@ -1907,7 +1924,7 @@ function getSupplierDetailsBetweenTwoDates() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -2326,7 +2343,7 @@ function getBillWiseReport() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -2974,7 +2991,7 @@ function getCreditCustomerReportNameWise() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -3513,6 +3530,14 @@ function creditCustReportForSingleDate() {
 													'#customerSingleDatetable')
 													.DataTable(
 															{
+																"bProcessing" : true,
+																"sAutoWidth" : false,
+																"bDestroy" : true,
+																"sPaginationType" : "bootstrap", // full_numbers
+																"iDisplayStart " : 10,
+																"iDisplayLength" : 10,
+																"scrollX" : true,
+																"bPaginate" : false,
 
 																fnRowCallback : function(
 																		nRow,
@@ -3695,7 +3720,7 @@ function creditCustReportForSingleDate() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -4044,7 +4069,7 @@ function getCreditCustomerDetailsBetweenTwoDates() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -4486,7 +4511,7 @@ function getpayDetailsBetweenTwoDates() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -4715,6 +4740,7 @@ function employeePaymentReportForSingleDate() {
 													.DataTable(
 															{
 
+
 																fnRowCallback : function(
 																		nRow,
 																		aData,
@@ -4840,7 +4866,7 @@ function employeePaymentReportForSingleDate() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -5534,7 +5560,7 @@ function expensePaymentReportForSingleDate() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -5745,6 +5771,8 @@ function getExpensePaymentDetailsBetTwoDays() {
 											$('#expenseBetweenTwoDates')
 													.DataTable(
 															{
+																
+																"scrollX" : true,
 																fnRowCallback : function(
 																		nRow,
 																		aData,
@@ -5880,7 +5908,7 @@ function getExpensePaymentDetailsBetTwoDays() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -6131,6 +6159,7 @@ function expenseReportAsPerExpenditureName() {
 							$('#expenseBetweenTwoDatesAsPerSelectedName')
 							.DataTable(
 									{
+										"scrollX" : true,
 										fnRowCallback : function(
 												nRow,
 												aData,
@@ -6266,7 +6295,7 @@ function expenseReportAsPerExpenditureName() {
 
 										destroy : true,
 										searching : true,
-										"scrollY" : 300,
+										/*"scrollY" : 300,*/
 										"scrollX" : true,
 										"paging" : false,
 
@@ -6537,7 +6566,7 @@ function getTodayCreditDebitReport() {
 																},
 
 																destroy : true,
-																searching : false,
+																searching : true,
 
 																columns : [
 
@@ -6693,7 +6722,7 @@ function getTodayCreditDebitReport1() {
 																},
 
 																destroy : true,
-																searching : false,
+																searching : true,
 
 																columns : [
 																		{
@@ -7808,7 +7837,7 @@ function partnerWiseReport()
 																destroy : true,
 																searching : true,
 																"scrollY" : false,
-																"scrollX" : false,
+																"scrollX" : true,
 																"paging" : false,
 
 																columns : [
@@ -8004,6 +8033,7 @@ function expenseReportAsPerExpenditureType()
 							$('#expenseBetweenTypeTable')
 							.DataTable(
 									{
+										"scrollX" : true,
 										fnRowCallback : function(
 												nRow,
 												aData,
@@ -8139,7 +8169,7 @@ function expenseReportAsPerExpenditureType()
 
 										destroy : true,
 										searching : true,
-										"scrollY" : 300,
+										/*"scrollY" : 300,*/
 										"scrollX" : true,
 										"paging" : false,
 
@@ -8515,6 +8545,7 @@ function bankNameWiseReport()
 											$('#bankWiseReportDataTable')
 													.DataTable(
 															{
+																"scrollX" : true,
 																fnRowCallback : function(
 																		nRow,
 																		aData,
@@ -8915,7 +8946,7 @@ function getSupplierDetailspaymode1() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -9151,6 +9182,27 @@ function getEmpPaymentmodeValidate1() {
 											$('#emppaymodes')
 													.DataTable(
 															{
+																
+																// "paging":
+																// false,
+
+																"bProcessing" : true,
+																"sAutoWidth" : false,
+																"bDestroy" : true,
+																"sPaginationType" : "bootstrap", // full_numbers
+																"iDisplayStart " : 10,
+																"iDisplayLength" : 10,
+																"scrollX" : true,
+																"bPaginate" : false, // hide
+																						// pagination
+																// "bFilter":
+																// false, //hide
+																// Search bar
+																"bInfo" : true, // hide
+																				// showing
+																				// entries
+
+																
 																fnRowCallback : function(
 																		nRow,
 																		aData,
@@ -9258,7 +9310,7 @@ function getEmpPaymentmodeValidate1() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -9510,6 +9562,7 @@ function expensePaymentReportpaymode1() {
 													'#expensepaymode')
 													.DataTable(
 															{
+																"scrollX" : true,
 
 																fnRowCallback : function(
 																		nRow,
@@ -9645,7 +9698,7 @@ function expensePaymentReportpaymode1() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 300,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 

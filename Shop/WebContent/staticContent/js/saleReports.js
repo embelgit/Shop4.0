@@ -79,20 +79,9 @@ function saleReportForSingleDateAsPerCat() {
 													.DataTable(
 															{
 
-																"bProcessing" : true,
-																"sAutoWidth" : false,
-																"bDestroy" : true,
-																"sPaginationType" : "bootstrap", // full_numbers
-																"iDisplayStart " : 10,
-																"iDisplayLength" : 10,
-																"bPaginate" : false, // hide
-																						// pagination
-																// "bFilter":
-																// false, //hide
-																// Search bar
-																"bInfo" : true, // hide
-																				// showing
-																				// entries
+																
+																/*"scrollX" : true, */
+																
 
 																fnRowCallback : function(
 																		nRow,
@@ -188,7 +177,7 @@ function saleReportForSingleDateAsPerCat() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 500,
+														     	/*"scrollY" : 500,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -450,6 +439,7 @@ function saleReportBetweenTwoDatesAsPerCat() {
 																"sPaginationType" : "bootstrap", // full_numbers
 																"iDisplayStart " : 10,
 																"iDisplayLength" : 10,
+																"scrollX" : true,
 																"bPaginate" : false, // hide
 																						// pagination
 																// "bFilter":
@@ -553,7 +543,7 @@ function saleReportBetweenTwoDatesAsPerCat() {
 
 																destroy : true,
 																searching : true,
-																"scrollY" : 400,
+  																/*"scrollY" : 400,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -1620,8 +1610,8 @@ function saleReportBetweenTwoDatesAsPerShop() {
 																},
 
 																destroy : true,
-																searching : false,
-																"scrollY" : 300,
+																searching : true,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -2254,6 +2244,7 @@ function saleReportforSingleDateAsPerPro() {
 																"iDisplayStart " : 10,
 																"iDisplayLength" : 10,
 																"bPaginate" : false, // hide
+																"scrollX": true,
 																						// pagination
 																// "bFilter":
 																// false, //hide
@@ -2355,7 +2346,7 @@ function saleReportforSingleDateAsPerPro() {
 																},
 
 																destroy : true,
-																searching : false,
+																searching : true,
 																"scrollY" : true,
 																"scrollX" : true,
 
@@ -3919,7 +3910,9 @@ function singleDatePaymentModeWiseSaleReport() {
 																"iDisplayStart " : 10,
 																"iDisplayLength" : 10,
 																"bPaginate" : false, // hide
-																						// pagination
+																				
+																"scrollX": true,
+																// pagination
 																// "bFilter":
 																// false, //hide
 																// Search bar
@@ -4150,7 +4143,8 @@ function singleDatePaymentModeWiseSaleReport() {
 																},
 
 																destroy : true,
-																searching : false,
+																searching : true,
+																"scrollX": true,
 
 																columns : [
 																		{
@@ -5058,8 +5052,8 @@ function GSTWiseSaleReport1() {
 																},
 
 																destroy : true,
-																searching : false,
-																"scrollY" : 300,
+																searching : true,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -5577,8 +5571,8 @@ function nonGSTWiseSaleReport() {
 																},
 
 																destroy : true,
-																searching : false,
-																"scrollY" : 300,
+																searching : true,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -6250,7 +6244,7 @@ function creditCustomerSaleReportBillAndNameWise() {
 																		}
 
 																],
-																"scrollY" : 200,
+																/*"scrollY" : 200,*/
 																"scrollX" : true,
 																"paging" : false,
 															});
@@ -6499,7 +6493,7 @@ function saleGSTReturnReport() {
 																destroy : true,
 																searching : true,
 																scrollX : true,
-																scrollY : 300,
+																/*scrollY : 300,*/
 
 																columns : [
 
@@ -6933,6 +6927,7 @@ function cashCustomerSaleReportBillAndNameWise() {
 
 																destroy : true,
 																searching : true,
+															/*	 "scrollX": true,*/
 
 																columns : [
 																		{
@@ -7095,7 +7090,7 @@ function cashCustomerSaleReportBillAndNameWise() {
 																		}
 
 																],
-																"scrollY" : 200,
+																/*"scrollY" : 200,*/
 																"scrollX" : true,
 																"paging" : false,
 															});
@@ -7689,7 +7684,14 @@ function rangeAndPaymentModeWise() {
 																},
 
 																destroy : true,
-																searching : false,
+																searching : true,
+																"scrollX": true,
+																
+																
+																
+																
+																
+																
 
 																columns : [
 																		{
@@ -7903,6 +7905,7 @@ function saleReturnReportBetweenTwoDate() {
 				"sPaginationType" : "bootstrap", // full_numbers
 				"iDisplayStart " : 10,
 				"iDisplayLength" : 10,
+				"scrollX" : true,
 				"bPaginate" : false, // hide pagination
 				// "bFilter": false, //hide Search bar
 				"bInfo" : true, // hide showing entries
@@ -7913,8 +7916,8 @@ function saleReturnReportBetweenTwoDate() {
 				},
 
 				destroy : true,
-				searching : false,
-				"scrollY" : 300,
+				searching : true,
+				/*"scrollY" : 300,*/
 				"scrollX" : true,
 				"paging" : false,
 
@@ -8115,8 +8118,8 @@ function billReportBetweenTwoDate1() {
 				},
 
 				destroy : true,
-				searching : false,
-				"scrollY" : 400,
+				searching : true,
+				/*"scrollY" : 400,*/
 				"scrollX" : true,
 				"paging" : false,
 
@@ -9716,8 +9719,8 @@ function saleReportBetweenTwoDatesAsPeruser1() {
 																},
 
 																destroy : true,
-																searching : false,
-																"scrollY" : 300,
+																searching : true,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 

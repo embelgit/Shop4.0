@@ -73,7 +73,8 @@
 		$(document).ready(function () {
 	         var table=$("#list").dataTable({
 	        	 "scrollX": true,
-	        	 "scrollY": 300,
+	        	 "search": true,
+	        	 /* "scrollY": 300, */
 	         });
 			 var tableTools = new $.fn.dataTable.TableTools(table, {
 				 'sSwfPath':'//cdn.datatables.net/tabletools/2.2.4/swf/copy_csv_xls_pdf.swf',
@@ -128,6 +129,11 @@
 			document.getElementById("demo").innerHTML = date.toDateString();
 		</script>
 	</div>
+	
+	
+
+	
+	
 
 	<div id="demo_jui">
 		<table id="list" class="display" border="1">

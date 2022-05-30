@@ -375,13 +375,16 @@ h3.cashbooktransaction {
 
 .dataTables_wrapper {
     /* background: linear-gradient(45deg, orange, transparent); */
-     background: linear-gradient(45deg, #f55555, #fccf31); 
+     background: linear-gradient(45deg, #f55555, #fccf31);  
     border-radius: 10px;
     text-align: center;
 }
 .dataTables_scrollBody {
     background: linear-gradient(45deg, orange, transparent) !important;
-}
+        /* display: contents; */
+} 
+
+
 .dataTables_wrapper thead {
     color: #2779aa;
     background: #d7ebf9 url(images/ui-bg_glass_80_d7ebf9_1x400.png) 50% 50% repeat-x;
@@ -407,7 +410,8 @@ table.table.table-bordered.table-striped.table-condensed.cf.dataTable.no-footer 
     font-weight: 600;
 }
 .dataTables_filter input {
-    padding: 7px;
+    /* padding: 7px; */
+        padding: 4px;
     border-radius: 18px;
     outline: none;
     border: none;
@@ -421,7 +425,7 @@ table.table.table-bordered.table-striped.table-condensed.cf.dataTable.no-footer 
     padding-right: 0%;
 }
 .dataTables_filter {
-	padding: 10px;
+	 padding: 10px;
 	margin-right: 10px;
 }
 .dataTables_wrapper .ui-toolbar {
@@ -705,3 +709,20 @@ h3.purchasereturnno {
 /*-------------------------------------------------- 480px to 350px Starts Here ------------------------*/
 
 /*---------------------------------------------------- Media Query Css Ends Here ----------------------------------------------------*/
+
+/* search bar add */
+
+div#taxList {
+    background-color: #d7ebf9;
+    color: #2779aa;
+    margin: 0px 15px;
+    text-align: right;
+}
+input.searchinput {
+    color: black;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

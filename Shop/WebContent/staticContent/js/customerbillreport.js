@@ -100,7 +100,7 @@ function getCreditAmountByBilling()
 			        },
 			    	
 			    	destroy: true,
-			        searching: false,
+			        searching: true,
 			       
 			      
 			columns: [
@@ -216,7 +216,8 @@ function getPaidAmountToSupplier()
 			        },
 			    	
 			    	destroy: true,
-			        searching: false,
+			        searching: true,
+			        /*"scrollX": true,*/
 			       
 			      
 			columns: [
@@ -324,7 +325,7 @@ function getPaidAmountToEmployee()
 			        },
 			    	
 			    	destroy: true,
-			        searching: false,
+			        searching: true,
 			       
 			      
 			columns: [
@@ -1020,7 +1021,8 @@ function getCreditAmountByCreditCust()
 			        },
 			    	
 			    	destroy: true,
-			        searching: false,
+			        searching: true,
+			        
 			        
 			      
 			columns: [

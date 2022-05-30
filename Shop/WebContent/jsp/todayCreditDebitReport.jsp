@@ -37,15 +37,15 @@
 	padding-bottom: 100px;
 }
 
-div#example1_wrapper {
+/* div#example1_wrapper {
     padding-top: 20px;
     padding-bottom: 20px;
-}
+} */
 
-div#example2_wrapper {
+/* div#example2_wrapper {
     padding-bottom: 20px;
     padding-top: 20px;
-}
+} */
 
 </style>
 

@@ -60,7 +60,8 @@
 				    //"bFilter": false, //hide Search bar
 				    "bInfo": false, // hide showing entries
 	    		    "scrollX": true,
-	    		    "scrollY": 300,
+	    		    "search": true, 
+	    		    /* "scrollY": 300, */
 	    		     });
 	        
 	         

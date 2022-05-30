@@ -1808,7 +1808,7 @@ $('#supplierNameWiseTable').DataTable( {
 									
 									
 									
-									<div class="" style="padding-top: 3%">
+									<div class="container" style="padding-top: 3%">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="employeeSingleDatetable" class="display">
@@ -2053,7 +2053,7 @@ $('#supplierNameWiseTable').DataTable( {
 												value="Search" />
 									</div>
 									
-									<div class="" style="padding-top: 2%">
+									<div class="container" style="padding-top: 2%">
 										<table
 											class="table table-bordered table-striped table-condensed cf"
 											id="emppaymodes" class="display">

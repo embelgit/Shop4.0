@@ -61,7 +61,8 @@
 				    //"bFilter": false, //hide Search bar
 				    "bInfo": false, // hide showing entries
 	    		     "scrollX": true,
-	    		     "scrollY": 300,
+	    		     "search": true,
+	    		     /* "scrollY": 300, */
 	    		     });
 	        
 	         
@@ -108,6 +109,11 @@
 			document.getElementById("demo").innerHTML = date.toDateString();
 		</script>
 	</div>
+	
+
+	
+	
+	
 
 	<div id="demo_jui">
 		<table id="list" class="display" border="1">

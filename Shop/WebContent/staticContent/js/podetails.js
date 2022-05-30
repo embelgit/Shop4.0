@@ -1013,7 +1013,7 @@
 		    	destroy: true,
 		        searching: true,
 		        scrollX: true,
-		        scrollY: 300,
+		        /*scrollY: 300,*/
 		      
 		columns: [
 		          					
@@ -1283,7 +1283,7 @@
 
 					destroy : true,
 					searching : true,
-					"scrollY": 300,
+//					"scrollY": 300,
 			        "scrollX": true,
 			        "paging":   false,
 

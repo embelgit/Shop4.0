@@ -1228,7 +1228,7 @@ function purchaseReportForSingleDate()
 					
 				destroy : true,
 				searching : true,
-				"scrollY": 300,
+				/*"scrollY": 300,*/
 		        "scrollX": true,
 		        "paging":   false,
 
@@ -3383,8 +3383,8 @@ function purchaseReportAsPerGST() {
 																},
 
 																destroy : true,
-																searching : false,
-																"scrollY" : 300,
+																searching : true,
+																/*"scrollY" : 300,*/
 																"scrollX" : true,
 																"paging" : false,
 
@@ -3921,9 +3921,9 @@ function supplierWisePurchaseReturnReport() {
 					 },
 					destroy : true,
 					searching : true,
-					"scrollY": 300,
+//					"scrollY": 300,
 			        "scrollX": true,
-			        "paging":   false,
+			        "paging":  false,
 
 					columns : [ 
 						{"data" : "billNo", "width" : "5%"},

@@ -341,7 +341,7 @@ div.dt-buttons {
 												</div>
 											</div>
 
-											<!-- <div class="container "> -->
+											 <!-- <div class="container "> -->
 											<div class="table-responsive">
 
 												<!-- <div class="table-responsive" style="padding-top:2%"> -->
@@ -395,7 +395,7 @@ div.dt-buttons {
                                        </div> -->
 
 
-
+                                           <!-- </div> -->
 											</div>
 										</fieldset>
 									</form>
@@ -2658,7 +2658,7 @@ div.dt-buttons {
 							</div>
 						</div> -->
 											<!-- </div> -->
-											<div class="row form-group" style="padding-top: 2%">
+											<div class="row form-group">
 												<div class="col-md-3 col-md-offset-5 ">
 													<div class="input-group">
 														<div align="center">

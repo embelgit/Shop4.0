@@ -55,7 +55,7 @@
 			var table=$("#list").dataTable({
 				
 				"scrollX": true,
-				"scrollY": 300,
+				/* "scrollY": 300, */
 				
 				 fnRowCallback : function(nRow, aData, iDisplayIndex){
 		                $("th:first", nRow).html(iDisplayIndex +1);

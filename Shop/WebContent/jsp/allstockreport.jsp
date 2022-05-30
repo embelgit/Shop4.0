@@ -124,9 +124,10 @@ function openBilling() {
 		            },
 
 		            destroy: true,
-			        searching: false,
-			        "scrollY": 300,
+			        searching: true,
+			        /* "scrollY": 300, */
 			        "scrollX": true,
+			        "search": true,
 			        /* "paging":   false, */
 			      				
 				  "footerCallback": function ( row, data, start, end, display ) {

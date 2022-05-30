@@ -101,7 +101,7 @@ function StockDetailsReportAsPerCompanyName(){
     	
 	        destroy: true,
 	        searching: true,
-	        "scrollY": 300,
+	        /*"scrollY": 300,*/
 	        "scrollX": true,
 	        "paging":   false,
 		      
@@ -238,7 +238,7 @@ function StockDetailsReportAsPerCat()
 			    "sPaginationType": "bootstrap", // full_numbers
 			    "iDisplayStart ": 10,
 			    "scrollX": true,
-			    "scrollY": 300,
+			   /* "scrollY": 300,*/
 			    "iDisplayLength": 10,
 			    "bPaginate": false, //hide pagination
 			    //"bFilter": false, //hide Search bar
@@ -311,7 +311,7 @@ function StockDetailsReportAsPerCat()
 		    		        
 		        destroy: true,
 		        searching: true,
-		        "scrollY": 300,
+		        /*"scrollY": 300,*/
 		        "scrollX": true,
 		        "paging":   false,
 		        
@@ -453,7 +453,7 @@ function getShopWiseReport()
 			
 	            destroy: true,
 		        searching: true,
-		        "scrollY": 300,
+		        /*"scrollY": 300,*/
 		        "scrollX": true,
 		        "paging":   false,
 		        
@@ -653,7 +653,7 @@ function StockDetailsReportAsPerProductName(){
     	
 	        destroy: true,
 	        searching: true,
-	        "scrollY": 300,
+	        /*"scrollY": 300,*/
 	        "scrollX": true,
 	        "paging": false,
 		      

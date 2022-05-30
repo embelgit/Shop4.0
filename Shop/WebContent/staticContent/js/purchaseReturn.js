@@ -1465,6 +1465,7 @@ function supplierWisePurchaseReturnReport() {
 			    "sPaginationType": "bootstrap", // full_numbers
 			    "iDisplayStart ": 10,
 			    "iDisplayLength": 10,
+			    "scrollX": true,
 			    "bPaginate": false, //hide pagination
 			    //"bFilter": false, //hide Search bar
 			    "bInfo": false, // hide showing entries
@@ -1475,8 +1476,8 @@ function supplierWisePurchaseReturnReport() {
 				},
 
 				destroy : true,
-				searching : false,
-				"scrollY": 300,
+				searching : true,
+				/*"scrollY": 300,*/
 		        "scrollX": true,
 		        "paging":   false,
 

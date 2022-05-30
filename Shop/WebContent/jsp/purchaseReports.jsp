@@ -11,8 +11,6 @@
 <head>
 
 
-
-
 <script src="/Shop/staticContent/js/jquery-1.12.3.min.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/selectjj.js"></script>
 <script type="text/javascript" src="/Shop/staticContent/js/buttom.js"></script>
@@ -28,9 +26,6 @@
 <link rel="stylesheet" href="/Shop/staticContent/css/ui.jqgrid.min.css"> 
 
 <!-- For datatable to pdf,print,excel etc conversion -->
-
-
-
 
  
  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.js"></script> 
@@ -1120,8 +1115,9 @@
 	
 						<tfoot>
 							<tr>
-								<th></th>
-								<th colspan="7" style="text-align: right">Total Rs:</th>
+								 <th></th>
+								 <th colspan="7" style="text-align: right">Total Rs:</th>
+								
 								<!-- <th></th>
 								<th></th>
 							    <th></th>
