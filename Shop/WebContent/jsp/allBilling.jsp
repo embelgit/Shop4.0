@@ -660,7 +660,7 @@ top: 25%;}
 		<div class="col-10 col-md-6 col-lg-6 col-lg-offset-3">
 			<div class="row header_margin_top">
 			    <div align="center">
-					<h2 class="form-name style_heading">GST Billing One</h2>  		
+					<h2 class="form-name style_heading">GST Billing </h2>  		
 			  	</div>
     		</div>
     	</div>
