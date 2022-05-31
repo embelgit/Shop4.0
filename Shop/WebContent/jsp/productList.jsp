@@ -51,15 +51,20 @@
 	         var table=$("#list").dataTable({
 
 
-				    "bProcessing": true,
+				    /* "bProcessing": true,
 				    "sAutoWidth": false,
 				    "bDestroy":true,
-				    "sPaginationType": "bootstrap", // full_numbers
+				    "sPaginationType": "bootstrap", 
 				    "iDisplayStart ": 10,
 				    "iDisplayLength": 10,
-				    "bPaginate": false, //hide pagination
+				    "bInfo": false, 
+				    "bPaginate": false,  */
+				 // full_numbers
+				    //hide pagination
 				    //"bFilter": false, //hide Search bar
-				    "bInfo": false, // hide showing entries
+				    // hide showing entries
+				    
+				    
 	    		     "scrollX": true,
 	    		     "search": true,
 	    		     /* "scrollY": 300, */
