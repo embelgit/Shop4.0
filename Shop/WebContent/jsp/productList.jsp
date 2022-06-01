@@ -49,8 +49,7 @@
 		$(document).ready(function () 
 		{
 	         var table=$("#list").dataTable({
-
-
+	        	 
 				    /* "bProcessing": true,
 				    "sAutoWidth": false,
 				    "bDestroy":true,
@@ -59,7 +58,7 @@
 				    "iDisplayLength": 10,
 				    "bInfo": false, 
 				    "bPaginate": false,  */
-				 // full_numbers
+				     // full_numbers
 				    //hide pagination
 				    //"bFilter": false, //hide Search bar
 				    // hide showing entries
