@@ -1812,8 +1812,8 @@
 	itemparams["packweight"] = packweight;
 	itemparams["booking"] = booking;
 	
-	document.getElementById('fk_cat_id').value = null;
-	document.getElementById('subCat').value = null;
+	//document.getElementById('fk_cat_id').value = null;
+	//document.getElementById('subCat').value = null;
 	document.getElementById('proName').value = null;
 	document.getElementById('proName1').value = null;
 	document.getElementById('booking').value = null;
@@ -4875,8 +4875,8 @@
 		itemparams["productId"] = productId;
 		itemparams["packweight"] = packweight;
 		
-		document.getElementById('fk_cat_id').value = null;
-		document.getElementById('subCat').value = null;
+		//document.getElementById('fk_cat_id').value = null;
+		//document.getElementById('subCat').value = null;
 		document.getElementById('proName').value = null;
 		document.getElementById('proName1').value = null;
 		var count = 0;
